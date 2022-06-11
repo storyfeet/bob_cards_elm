@@ -1,6 +1,5 @@
 module MLists exposing (..)
---import Random exposing (Random)
-
+import Random
 insertAt :Int -> a -> List a -> List a
 insertAt pos v l =
     case (pos,l) of
@@ -42,6 +41,7 @@ shuffleInner gf iseed l =
                 (insertAt pos h ls ,seed2, len + 1)
 
 
+rgen mul add top seed max =
+    (Basics.modBy top ((seed * mul) + add) , Basics.modBy max seed)
 
-
-
+rgen1 = rgen 293 31 311 
