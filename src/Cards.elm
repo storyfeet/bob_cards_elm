@@ -48,8 +48,11 @@ type Cost
 
 payL : List (Resource, Int) -> Cost
 payL l =
-    And List.map (\(i,c) -> Pay i c)
+    l |> List.map (\(r,n) -> Pay r n) |> And
 
+payEq : Int ->  List Resource -> Cost
+payEq n l =
+    l |> List.map (\r-> Pay r n) |> And
 
 type Benefit
     = Movement Int
@@ -68,8 +71,14 @@ riverGather n = Job (In River Free) [Gather Gold n]
 foodMove : Int -> Int -> Job
 foodMove f d = Job (Pay Food f) [Movement d]
 
-scrapForFood : Int -> Job
-scrapForFood f = Job ScrapC [Gain Food f]
+woodMove : Int -> Int -> Job
+woodMove w d = Job (Pay Wood w) [Movement d]
+
+
+scrapFor : Resource -> Int -> Job
+scrapFor r n =
+    Job ScrapC [Gain r n]
+
 
 freeAttack : Int -> Job
 freeAttack a = Job Free [Attack a]
@@ -79,10 +88,18 @@ freeDefend d = Job Free [Defend d]
 
 -- Decks
 starterDeck : List (Card,Int)
-starterDeck = [(pan,2),(horse,2)]
+starterDeck = [(pan,2),(horse,2),(bow,2)]
 
 tradeRow : List (Card,Int)
-tradeRow = [(pan,3),(horse,2),(twinSwords,2) ,(wagon,3),(sword,3)]
+tradeRow = 
+    [(pan,3)
+    ,(horse,2)
+    ,(twinSwords,2) 
+    ,(wagon,3)
+    ,(sword,3)
+    ,(train,2)
+    ,(bow,3)
+    ]
 
 
 -- ACTUAL CARDS
@@ -104,7 +121,7 @@ shield = Card "Shield" TDefence
 horse:Card
 horse = Card "Horse" TMove
     (Or [In Prarie (Pay Food 3), In Town (Pay Gold 1)])
-    [foodMove 3 1, scrapForFood 5]
+    [foodMove 3 1, scrapFor Food 5]
 
 wagon:Card
 wagon = Card "Wagon" TMove
@@ -118,25 +135,23 @@ sword = Card "Sword" TAttack
     (payL [(Iron,1),(Wood,1)])
     [freeAttack 5 , freeDefend 1]
 
+train:Card
+train = Card "Train" TMove
+    (payL [(Iron,3),(Wood,1)])
+    [woodMove 1 3,scrapFor Wood 5 ] 
+
+
+bow:Card
+bow = Card "Bow" TAttack
+    (payEq 1 [Wood,Iron])
+    [Job (Pay Wood 1) [Gain Food 3]
+    ,Job (Pay Food 3) [Attack 3]
+    ]
+
+
+
 {--
 
-
-3*"Sword",Attack
-.cost : [[Iron , 1],[Wood , 1]]
-.jobs*$req : []
-.jobs.$for : [[Attack , 5],[Defence , 1]]
-
-2*"Train",Movement
-.cost : [[Iron , 3] , [Wood , 1]]
-.jobs*$req : [[Wood , 1]]
-.jobs.$for : [[Movement , 3]]
-.jobs*$req:[Scrap]
-.jobs.$for : [[Wood , 5]]
-
-5*"Bow",Attack
-.cost : [[Wood , 1] [Iron , 1]]
-.jobs*$req : [[Iron , 1]]
-.jobs.$for : [[Food , 3] , [Attack , 3]]
 
 3*"CrossBow",Attack
 .cost : [[Wood , 5] , [Iron , 3] , [Iron , 1]]
