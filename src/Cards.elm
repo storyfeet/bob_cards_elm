@@ -50,7 +50,7 @@ type Cost
 
 
 view : Card -> Html m
-view crd = div [] 
+view crd = div [style "background-color"( cTypeColor crd.ctype),style "border" "1px solid black"] 
     [ text crd.name
     , viewCost crd.cost
     ]
@@ -85,6 +85,16 @@ placeShortName pl =
         Water -> "Wtr"
         Village -> "Vlg"
 
+
+cTypeColor : CType -> String
+cTypeColor ct = 
+    case ct of
+       TAttack -> "red"
+       TDefence -> "light-grey"
+       TMove -> "light-blue"
+       TGold -> "gold"
+       TFood -> "light-green"
+       TCarry -> "Blue"
 
 placeColor: Place -> String
 placeColor pl = 

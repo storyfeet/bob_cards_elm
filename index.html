@@ -6022,6 +6022,8 @@ var $author$project$MLists$shuffle = F3(
 		return res;
 	});
 var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
+var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$json$Json$Encode$string = _Json_wrap;
@@ -6185,7 +6187,10 @@ var $author$project$Cards$viewCost = function (cst) {
 var $author$project$Cards$view = function (crd) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
+		_List_fromArray(
+			[
+				A2($elm$html$Html$Attributes$style, 'background-color', 'red')
+			]),
 		_List_fromArray(
 			[
 				$elm$html$Html$text(crd.name),
