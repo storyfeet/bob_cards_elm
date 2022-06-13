@@ -5219,9 +5219,311 @@ var $elm$core$Task$perform = F2(
 				A2($elm$core$Task$map, toMessage, task)));
 	});
 var $elm$browser$Browser$element = _Browser_element;
+var $author$project$MLists$spreadItem = F2(
+	function (_v0, l) {
+		spreadItem:
+		while (true) {
+			var a = _v0.a;
+			var n = _v0.b;
+			if (!n) {
+				return l;
+			} else {
+				var $temp$_v0 = _Utils_Tuple2(a, n - 1),
+					$temp$l = A2($elm$core$List$cons, a, l);
+				_v0 = $temp$_v0;
+				l = $temp$l;
+				continue spreadItem;
+			}
+		}
+	});
+var $author$project$MLists$spreadL = function (l) {
+	if (!l.b) {
+		return _List_Nil;
+	} else {
+		var _v1 = l.a;
+		var a = _v1.a;
+		var n = _v1.b;
+		var t = l.b;
+		return A2(
+			$author$project$MLists$spreadItem,
+			_Utils_Tuple2(a, n),
+			$author$project$MLists$spreadL(t));
+	}
+};
+var $author$project$Cards$Attack = function (a) {
+	return {$: 'Attack', a: a};
+};
+var $author$project$Cards$Card = F4(
+	function (name, ctype, cost, jobs) {
+		return {cost: cost, ctype: ctype, jobs: jobs, name: name};
+	});
+var $author$project$Cards$Food = {$: 'Food'};
+var $author$project$Cards$Forest = {$: 'Forest'};
+var $author$project$Cards$Gain = F2(
+	function (a, b) {
+		return {$: 'Gain', a: a, b: b};
+	});
+var $author$project$Cards$In = F2(
+	function (a, b) {
+		return {$: 'In', a: a, b: b};
+	});
+var $author$project$Cards$Iron = {$: 'Iron'};
+var $author$project$Cards$Job = F2(
+	function (req, _for) {
+		return {_for: _for, req: req};
+	});
+var $author$project$Cards$Pay = F2(
+	function (a, b) {
+		return {$: 'Pay', a: a, b: b};
+	});
+var $author$project$Cards$TAttack = {$: 'TAttack'};
+var $author$project$Cards$Wood = {$: 'Wood'};
+var $author$project$Cards$And = function (a) {
+	return {$: 'And', a: a};
+};
+var $author$project$Cards$payEq = F2(
+	function (n, l) {
+		return $author$project$Cards$And(
+			A2(
+				$elm$core$List$map,
+				function (r) {
+					return A2($author$project$Cards$Pay, r, n);
+				},
+				l));
+	});
+var $author$project$Cards$bow = A4(
+	$author$project$Cards$Card,
+	'Bow',
+	$author$project$Cards$TAttack,
+	A2(
+		$author$project$Cards$payEq,
+		1,
+		_List_fromArray(
+			[$author$project$Cards$Wood, $author$project$Cards$Iron])),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Cards$Job,
+			A2(
+				$author$project$Cards$In,
+				$author$project$Cards$Forest,
+				A2($author$project$Cards$Pay, $author$project$Cards$Wood, 1)),
+			_List_fromArray(
+				[
+					A2($author$project$Cards$Gain, $author$project$Cards$Food, 3)
+				])),
+			A2(
+			$author$project$Cards$Job,
+			A2($author$project$Cards$Pay, $author$project$Cards$Wood, 1),
+			_List_fromArray(
+				[
+					$author$project$Cards$Attack(3)
+				]))
+		]));
+var $author$project$Cards$Gold = {$: 'Gold'};
+var $author$project$Cards$Or = function (a) {
+	return {$: 'Or', a: a};
+};
+var $author$project$Cards$Prarie = {$: 'Prarie'};
+var $author$project$Cards$TMove = {$: 'TMove'};
+var $author$project$Cards$Village = {$: 'Village'};
+var $author$project$Cards$Movement = function (a) {
+	return {$: 'Movement', a: a};
+};
+var $author$project$Cards$foodMove = F2(
+	function (f, d) {
+		return A2(
+			$author$project$Cards$Job,
+			A2($author$project$Cards$Pay, $author$project$Cards$Food, f),
+			_List_fromArray(
+				[
+					$author$project$Cards$Movement(d)
+				]));
+	});
+var $author$project$Cards$ScrapC = {$: 'ScrapC'};
+var $author$project$Cards$scrapFor = F2(
+	function (r, n) {
+		return A2(
+			$author$project$Cards$Job,
+			$author$project$Cards$ScrapC,
+			_List_fromArray(
+				[
+					A2($author$project$Cards$Gain, r, n)
+				]));
+	});
+var $author$project$Cards$horse = A4(
+	$author$project$Cards$Card,
+	'Horse',
+	$author$project$Cards$TMove,
+	$author$project$Cards$Or(
+		_List_fromArray(
+			[
+				A2(
+				$author$project$Cards$In,
+				$author$project$Cards$Prarie,
+				A2($author$project$Cards$Pay, $author$project$Cards$Food, 3)),
+				A2(
+				$author$project$Cards$In,
+				$author$project$Cards$Village,
+				A2($author$project$Cards$Pay, $author$project$Cards$Gold, 1))
+			])),
+	_List_fromArray(
+		[
+			A2($author$project$Cards$foodMove, 3, 1),
+			A2($author$project$Cards$scrapFor, $author$project$Cards$Food, 5)
+		]));
+var $author$project$Cards$TGold = {$: 'TGold'};
+var $author$project$Cards$Free = {$: 'Free'};
+var $author$project$Cards$Gather = F2(
+	function (a, b) {
+		return {$: 'Gather', a: a, b: b};
+	});
+var $author$project$Cards$River = {$: 'River'};
+var $author$project$Cards$riverGather = function (n) {
+	return A2(
+		$author$project$Cards$Job,
+		A2($author$project$Cards$In, $author$project$Cards$River, $author$project$Cards$Free),
+		_List_fromArray(
+			[
+				A2($author$project$Cards$Gather, $author$project$Cards$Gold, n)
+			]));
+};
+var $author$project$Cards$pan = A4(
+	$author$project$Cards$Card,
+	'Pan',
+	$author$project$Cards$TGold,
+	A2($author$project$Cards$Pay, $author$project$Cards$Iron, 1),
+	_List_fromArray(
+		[
+			$author$project$Cards$riverGather(1)
+		]));
+var $author$project$Cards$freeAttack = function (a) {
+	return A2(
+		$author$project$Cards$Job,
+		$author$project$Cards$Free,
+		_List_fromArray(
+			[
+				$author$project$Cards$Attack(a)
+			]));
+};
+var $author$project$Cards$Defend = function (a) {
+	return {$: 'Defend', a: a};
+};
+var $author$project$Cards$freeDefend = function (d) {
+	return A2(
+		$author$project$Cards$Job,
+		$author$project$Cards$Free,
+		_List_fromArray(
+			[
+				$author$project$Cards$Defend(d)
+			]));
+};
+var $author$project$Cards$sword = A4(
+	$author$project$Cards$Card,
+	'Sword',
+	$author$project$Cards$TAttack,
+	A2(
+		$author$project$Cards$payEq,
+		1,
+		_List_fromArray(
+			[$author$project$Cards$Iron, $author$project$Cards$Wood])),
+	_List_fromArray(
+		[
+			$author$project$Cards$freeAttack(5),
+			$author$project$Cards$freeDefend(1)
+		]));
+var $author$project$Cards$payL = function (l) {
+	return $author$project$Cards$And(
+		A2(
+			$elm$core$List$map,
+			function (_v0) {
+				var r = _v0.a;
+				var n = _v0.b;
+				return A2($author$project$Cards$Pay, r, n);
+			},
+			l));
+};
+var $author$project$Cards$woodMove = F2(
+	function (w, d) {
+		return A2(
+			$author$project$Cards$Job,
+			A2($author$project$Cards$Pay, $author$project$Cards$Wood, w),
+			_List_fromArray(
+				[
+					$author$project$Cards$Movement(d)
+				]));
+	});
+var $author$project$Cards$train = A4(
+	$author$project$Cards$Card,
+	'Train',
+	$author$project$Cards$TMove,
+	$author$project$Cards$payL(
+		_List_fromArray(
+			[
+				_Utils_Tuple2($author$project$Cards$Iron, 3),
+				_Utils_Tuple2($author$project$Cards$Wood, 1)
+			])),
+	_List_fromArray(
+		[
+			A2($author$project$Cards$woodMove, 1, 3),
+			A2($author$project$Cards$scrapFor, $author$project$Cards$Wood, 5)
+		]));
+var $author$project$Cards$twinSwords = A4(
+	$author$project$Cards$Card,
+	'Twin Swords',
+	$author$project$Cards$TAttack,
+	$author$project$Cards$payL(
+		_List_fromArray(
+			[
+				_Utils_Tuple2($author$project$Cards$Iron, 3),
+				_Utils_Tuple2($author$project$Cards$Wood, 2)
+			])),
+	_List_fromArray(
+		[
+			$author$project$Cards$freeAttack(12),
+			$author$project$Cards$freeDefend(5)
+		]));
+var $author$project$Cards$Draw = function (a) {
+	return {$: 'Draw', a: a};
+};
+var $author$project$Cards$wagon = A4(
+	$author$project$Cards$Card,
+	'Wagon',
+	$author$project$Cards$TMove,
+	A2($author$project$Cards$Pay, $author$project$Cards$Wood, 2),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Cards$Job,
+			$author$project$Cards$ScrapC,
+			_List_fromArray(
+				[
+					A2($author$project$Cards$Gain, $author$project$Cards$Wood, 2),
+					A2($author$project$Cards$Gain, $author$project$Cards$Food, 2),
+					$author$project$Cards$Draw(2)
+				])),
+			A2(
+			$author$project$Cards$Job,
+			$author$project$Cards$Free,
+			_List_fromArray(
+				[
+					A2($author$project$Cards$Gain, $author$project$Cards$Wood, 1),
+					A2($author$project$Cards$Gain, $author$project$Cards$Food, 1),
+					$author$project$Cards$Draw(1)
+				]))
+		]));
+var $author$project$Cards$tradeRow = _List_fromArray(
+	[
+		_Utils_Tuple2($author$project$Cards$pan, 3),
+		_Utils_Tuple2($author$project$Cards$horse, 2),
+		_Utils_Tuple2($author$project$Cards$twinSwords, 2),
+		_Utils_Tuple2($author$project$Cards$wagon, 3),
+		_Utils_Tuple2($author$project$Cards$sword, 3),
+		_Utils_Tuple2($author$project$Cards$train, 2),
+		_Utils_Tuple2($author$project$Cards$bow, 3)
+	]);
 var $author$project$Main$init = {
-	deck: _List_fromArray(
-		[1, 2, 3, 4, 5, 6]),
+	deck: $author$project$MLists$spreadL($author$project$Cards$tradeRow),
 	time: 0
 };
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
@@ -5719,20 +6021,183 @@ var $author$project$MLists$shuffle = F3(
 		var res = _v0.a;
 		return res;
 	});
+var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $elm$html$Html$Attributes$stringProperty = F2(
+	function (key, string) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			$elm$json$Json$Encode$string(string));
+	});
+var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$core$List$filter = F2(
+	function (isGood, list) {
+		return A3(
+			$elm$core$List$foldr,
+			F2(
+				function (x, xs) {
+					return isGood(x) ? A2($elm$core$List$cons, x, xs) : xs;
+				}),
+			_List_Nil,
+			list);
+	});
+var $elm$core$Tuple$second = function (_v0) {
+	var y = _v0.b;
+	return y;
+};
+var $elm$html$Html$Attributes$classList = function (classes) {
+	return $elm$html$Html$Attributes$class(
+		A2(
+			$elm$core$String$join,
+			' ',
+			A2(
+				$elm$core$List$map,
+				$elm$core$Tuple$first,
+				A2($elm$core$List$filter, $elm$core$Tuple$second, classes))));
+};
+var $author$project$Cards$resourceShortName = function (r) {
+	switch (r.$) {
+		case 'Gold':
+			return 'Gld';
+		case 'Wood':
+			return 'Wd';
+		case 'Iron':
+			return 'Ir';
+		default:
+			return 'Fd';
+	}
+};
+var $author$project$Cards$placeShortName = function (pl) {
+	switch (pl.$) {
+		case 'River':
+			return 'Rvr';
+		case 'Forest':
+			return 'Frt';
+		case 'Mountain':
+			return 'Mtn';
+		case 'Prarie':
+			return 'Pry';
+		case 'Water':
+			return 'Wtr';
+		default:
+			return 'Vlg';
+	}
+};
+var $author$project$Cards$viewPlace = function (plc) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('hex')
+			]),
+		_List_fromArray(
+			[
+				$elm$html$Html$text(
+				'in:' + $author$project$Cards$placeShortName(plc))
+			]));
+};
+var $author$project$Cards$viewCost = function (cst) {
+	switch (cst.$) {
+		case 'In':
+			var plac = cst.a;
+			var ch = cst.b;
+			return A2(
+				$elm$html$Html$div,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$author$project$Cards$viewPlace(plac),
+						$author$project$Cards$viewCost(ch)
+					]));
+		case 'Or':
+			var l = cst.a;
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$classList(
+						_List_fromArray(
+							[
+								_Utils_Tuple2('or_cost', true)
+							]))
+					]),
+				A2($elm$core$List$map, $author$project$Cards$viewCost, l));
+		case 'And':
+			var l = cst.a;
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$classList(
+						_List_fromArray(
+							[
+								_Utils_Tuple2('and_cost', true)
+							]))
+					]),
+				A2($elm$core$List$map, $author$project$Cards$viewCost, l));
+		case 'Discard':
+			var n = cst.a;
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('discard')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text(
+						$elm$core$String$fromInt(n))
+					]));
+		case 'Pay':
+			var r = cst.a;
+			var n = cst.b;
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('box')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text(
+						_Utils_ap(
+							$author$project$Cards$resourceShortName(r),
+							$elm$core$String$fromInt(n)))
+					]));
+		case 'ScrapC':
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('ellipse')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Scrp')
+					]));
+		default:
+			return A2($elm$html$Html$div, _List_Nil, _List_Nil);
+	}
+};
+var $author$project$Cards$view = function (crd) {
+	return A2(
+		$elm$html$Html$div,
+		_List_Nil,
+		_List_fromArray(
+			[
+				$elm$html$Html$text(crd.name),
+				$author$project$Cards$viewCost(crd.cost)
+			]));
+};
 var $author$project$Main$view = function (mod) {
 	var ls = A3($author$project$MLists$shuffle, $author$project$MLists$rgen1, mod.time, mod.deck);
 	return A2(
 		$elm$html$Html$p,
 		_List_Nil,
-		A2(
-			$elm$core$List$map,
-			function (s) {
-				return $elm$html$Html$text(
-					$elm$core$String$fromInt(s));
-			},
-			ls));
+		A2($elm$core$List$map, $author$project$Cards$view, ls));
 };
 var $author$project$Main$main = $elm$browser$Browser$element(
 	{

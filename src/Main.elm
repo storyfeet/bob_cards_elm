@@ -6,15 +6,16 @@ import Html.Events exposing (..)
 import Time
 import MLists
 import Task
+import Cards exposing (Card,tradeRow)
 
 
 type alias Model = 
-    { deck : List Int
+    { deck : List Card
     , time: Int
     }
 
 init = 
-    { deck = [1,2,3,4,5,6]
+    { deck = MLists.spreadL tradeRow
     , time = 0
     }
 
@@ -29,7 +30,7 @@ subscriptions _ =
 view mod = 
    let 
        ls = mod.deck |>  MLists.shuffle MLists.rgen1 mod.time 
-   in p [] (ls |> List.map (\s->s|>String.fromInt|> text))
+   in p [] (ls |> List.map Cards.view )
 
 
 -- UPDATE

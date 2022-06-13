@@ -1,4 +1,6 @@
 module Cards exposing (..)
+import Html exposing(..)
+import Html.Attributes exposing(..)
 
 type alias Card =
     { name : String
@@ -27,7 +29,7 @@ type Place
     = Water
     | Forest
     | Prarie
-    | Town
+    | Village
     | Mountain
     | River
 
@@ -45,6 +47,61 @@ type Cost
     | Pay Resource Int
     | ScrapC
     | Free
+
+
+view : Card -> Html m
+view crd = div [] 
+    [ text crd.name
+    , viewCost crd.cost
+    ]
+
+viewCost : Cost -> Html m
+viewCost cst = 
+   case cst of 
+    In plac ch -> div [] [viewPlace plac, viewCost ch]
+    Or l -> l |> List.map viewCost  |> div [classList[( "or_cost",True )]]
+    And l -> l |> List.map viewCost  |> div [classList [("and_cost",True)]]
+    Discard n -> div [class "discard"] [String.fromInt n |> text]
+    Pay r n -> div [class "box"] [resourceShortName r ++ String.fromInt n |> text]
+    ScrapC -> div [class "ellipse"] [text "Scrp"]
+    Free -> div [] [] 
+
+
+resourceShortName : Resource -> String
+resourceShortName r = 
+    case r of
+        Gold -> "Gld"
+        Wood -> "Wd"
+        Iron -> "Ir"
+        Food -> "Fd"
+
+placeShortName: Place -> String  
+placeShortName pl =
+    case pl of
+        River -> "Rvr"
+        Forest -> "Frt"
+        Mountain -> "Mtn"
+        Prarie -> "Pry"
+        Water -> "Wtr"
+        Village -> "Vlg"
+
+
+placeColor: Place -> String
+placeColor pl = 
+    case pl of
+        River -> "Cyan"
+        Forest -> "Green"
+        Mountain -> "Grey"
+        Prarie -> "Light Green"
+        Water -> "Blue"
+        Village -> "Yellow"
+        
+
+
+viewPlace : Place -> Html m
+viewPlace plc = 
+    div [class "hex"] [text ("in:" ++ placeShortName plc)]
+
 
 payL : List (Resource, Int) -> Cost
 payL l =
@@ -120,7 +177,7 @@ shield = Card "Shield" TDefence
 
 horse:Card
 horse = Card "Horse" TMove
-    (Or [In Prarie (Pay Food 3), In Town (Pay Gold 1)])
+    (Or [In Prarie (Pay Food 3), In Village (Pay Gold 1)])
     [foodMove 3 1, scrapFor Food 5]
 
 wagon:Card
@@ -132,7 +189,7 @@ wagon = Card "Wagon" TMove
 
 sword:Card
 sword = Card "Sword" TAttack
-    (payL [(Iron,1),(Wood,1)])
+    (payEq 1 [Iron,Wood])
     [freeAttack 5 , freeDefend 1]
 
 train:Card
@@ -144,8 +201,8 @@ train = Card "Train" TMove
 bow:Card
 bow = Card "Bow" TAttack
     (payEq 1 [Wood,Iron])
-    [Job (Pay Wood 1) [Gain Food 3]
-    ,Job (Pay Food 3) [Attack 3]
+    [Job (In Forest (Pay Wood 1)) [Gain Food 3]
+    ,Job (Pay Wood 1) [Attack 3]
     ]
 
 

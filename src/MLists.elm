@@ -41,6 +41,20 @@ shuffleInner gf iseed l =
                 (insertAt pos h ls ,seed2, len + 1)
 
 
+spreadItem: (a,Int) -> List a -> List a
+spreadItem (a,n) l =
+    case n of 
+        0 -> l
+        _ -> spreadItem (a ,n - 1) (a::l)
+
+
+spreadL: List (a, Int)-> List a
+spreadL l =
+    case l of
+        [] -> []
+        (a,n)::t->spreadItem (a,n) (spreadL t) 
+
+
 rgen mul add top seed max =
     (Basics.modBy top ((seed * mul) + add) , Basics.modBy max seed)
 
