@@ -1,6 +1,7 @@
 module Cards exposing (..)
 import Html exposing(..)
 import Html.Attributes exposing(..)
+import Css exposing (..)
 
 type alias Card =
     { name : String
@@ -50,9 +51,10 @@ type Cost
 
 
 view : Card -> Html m
-view crd = div [style "background-color"( cTypeColor crd.ctype),style "border" "1px solid black"] 
+view crd = div (cardStyle (cTypeColor crd.ctype))
     [ text crd.name
     , viewCost crd.cost
+
     ]
 
 viewCost : Cost -> Html m
@@ -90,10 +92,10 @@ cTypeColor : CType -> String
 cTypeColor ct = 
     case ct of
        TAttack -> "red"
-       TDefence -> "light-grey"
-       TMove -> "light-blue"
+       TDefence -> "lightgrey"
+       TMove -> "lightblue"
        TGold -> "gold"
-       TFood -> "light-green"
+       TFood -> "lightgreen"
        TCarry -> "Blue"
 
 placeColor: Place -> String
@@ -102,7 +104,7 @@ placeColor pl =
         River -> "Cyan"
         Forest -> "Green"
         Mountain -> "Grey"
-        Prarie -> "Light Green"
+        Prarie -> "LightGreen"
         Water -> "Blue"
         Village -> "Yellow"
         
@@ -110,7 +112,10 @@ placeColor pl =
 
 viewPlace : Place -> Html m
 viewPlace plc = 
-    div [class "hex"] [text ("in:" ++ placeShortName plc)]
+    div (hexStyle "black" 45)[
+        div (hexStyle (placeColor plc ) 39) [
+            text (placeShortName plc)]
+        ]
 
 
 payL : List (Resource, Int) -> Cost

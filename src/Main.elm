@@ -23,7 +23,7 @@ init =
 type Msg = Tick Time.Posix
 
 subscriptions _ = 
-    Time.every 1000 Tick
+    Time.every 10000 Tick
 
 
 -- VIEW
