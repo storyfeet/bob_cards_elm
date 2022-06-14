@@ -17,6 +17,7 @@ type CType
     | TGold
     | TFood
     | TCarry
+    | TWork
 
 
 
@@ -54,8 +55,18 @@ view : Card -> Html m
 view crd = div (cardStyle (cTypeColor crd.ctype))
     [ text crd.name
     , viewCost crd.cost
-
+    , crd.jobs |> List.map viewJob |> div [] 
     ]
+
+
+viewJob :Job -> Html m
+viewJob jb =
+    div [style "clear" "both"] 
+    ([ viewCost jb.req 
+    , div (itemStyle []) [text "=>"]]++
+     (List.map viewBenefit jb.for))
+     
+
 
 viewCost : Cost -> Html m
 viewCost cst = 
@@ -63,11 +74,38 @@ viewCost cst =
     In plac ch -> div [] [viewPlace plac, viewCost ch]
     Or l -> l |> List.map viewCost  |> div [classList[( "or_cost",True )]]
     And l -> l |> List.map viewCost  |> div [classList [("and_cost",True)]]
-    Discard n -> div [class "discard"] [String.fromInt n |> text]
+    Discard n -> viewDiscard n
     Pay r n -> div [class "box"] [resourceShortName r ++ String.fromInt n |> text]
-    ScrapC -> div [class "ellipse"] [text "Scrp"]
+    ScrapC -> viewEllipse "pink" [text "Scrp"]
     Free -> div [] [] 
 
+
+viewBenefit: Benefit -> Html m
+viewBenefit bn =
+    case bn of
+        Movement n -> viewEllipse "lightblue" (numItems "Mv" n)
+        Attack n -> viewEllipse "red" (numItems "Atk" n)
+        Defend n -> viewEllipse "Grey" (numItems  "Dfd" n)
+        Gain r n -> viewRect (resourceColor r) (numItems (resourceShortName r) n)
+        Gather r n -> viewEllipse (resourceColor r) (numItems (resourceShortName r)  n)
+        Draw n -> viewDraw n
+        ScrapB n-> viewEllipse "pink" (numItems "Scp" n)
+
+
+
+numItems : String -> Int -> List (Html m)
+numItems s n =
+    [ text s
+    , br [] []
+    , String.fromInt n |> text 
+    ]
+viewDiscard : Int -> Html m
+viewDiscard n = 
+    div (drawCardStyle "red" 30 40 |> itemStyle) [text ("-"++ String.fromInt n)]
+
+viewDraw : Int -> Html m
+viewDraw n = 
+    div (drawCardStyle "green" 30 40 |> itemStyle) [text ("+"++ String.fromInt n)]
 
 resourceShortName : Resource -> String
 resourceShortName r = 
@@ -96,6 +134,7 @@ cTypeColor ct =
        TMove -> "lightblue"
        TGold -> "gold"
        TFood -> "lightgreen"
+       TWork -> "LightBlue"
        TCarry -> "Blue"
 
 placeColor: Place -> String
@@ -108,14 +147,36 @@ placeColor pl =
         Water -> "Blue"
         Village -> "Yellow"
         
+resourceColor: Resource ->String
+resourceColor r = 
+    case r of 
+        Food -> "green"
+        Iron -> "silver"
+        Wood -> "Brown"
+        Gold -> "Gold"
+
 
 
 viewPlace : Place -> Html m
 viewPlace plc = 
-    div (hexStyle "black" 45)[
+    div (hexStyle "black" 45 |> itemStyle)[
         div (hexStyle (placeColor plc ) 39) [
             text (placeShortName plc)]
         ]
+
+viewEllipse:String -> List( Html m)  -> Html m
+viewEllipse col inner =
+    div (circleStyle  "black" 45 |> itemStyle) [
+        div (circleStyle col 39) 
+            inner
+        ]
+
+viewRect: String -> List (Html m) -> Html m
+viewRect col inner = 
+    div (squareStyle col 45 |> itemStyle ) inner
+
+
+
 
 
 payL : List (Resource, Int) -> Cost
@@ -133,7 +194,7 @@ type Benefit
     | Gain Resource Int
     | Gather Resource Int
     | Draw Int
-    | ScrapB
+    | ScrapB Int
 
 
 -- JOBS
@@ -165,6 +226,7 @@ starterDeck = [(pan,2),(horse,2),(bow,2)]
 tradeRow : List (Card,Int)
 tradeRow = 
     [(pan,3)
+    ,(saw, 2)
     ,(horse,2)
     ,(twinSwords,2) 
     ,(wagon,3)
@@ -218,6 +280,12 @@ bow = Card "Bow" TAttack
     (payEq 1 [Wood,Iron])
     [Job (In Forest (Pay Wood 1)) [Gain Food 3]
     ,Job (Pay Wood 1) [Attack 3]
+    ]
+
+saw:Card
+saw = Card "Saw" TWork 
+    (Pay Iron 1) 
+    [ Job (In Forest (Discard 1)) [Gain Wood 3] 
     ]
 
 

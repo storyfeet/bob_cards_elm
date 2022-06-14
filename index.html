@@ -5397,6 +5397,28 @@ var $author$project$Cards$pan = A4(
 		[
 			$author$project$Cards$riverGather(1)
 		]));
+var $author$project$Cards$Discard = function (a) {
+	return {$: 'Discard', a: a};
+};
+var $author$project$Cards$TWork = {$: 'TWork'};
+var $author$project$Cards$saw = A4(
+	$author$project$Cards$Card,
+	'Saw',
+	$author$project$Cards$TWork,
+	A2($author$project$Cards$Pay, $author$project$Cards$Iron, 1),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Cards$Job,
+			A2(
+				$author$project$Cards$In,
+				$author$project$Cards$Forest,
+				$author$project$Cards$Discard(1)),
+			_List_fromArray(
+				[
+					A2($author$project$Cards$Gain, $author$project$Cards$Wood, 3)
+				]))
+		]));
 var $author$project$Cards$freeAttack = function (a) {
 	return A2(
 		$author$project$Cards$Job,
@@ -5515,6 +5537,7 @@ var $author$project$Cards$wagon = A4(
 var $author$project$Cards$tradeRow = _List_fromArray(
 	[
 		_Utils_Tuple2($author$project$Cards$pan, 3),
+		_Utils_Tuple2($author$project$Cards$saw, 2),
 		_Utils_Tuple2($author$project$Cards$horse, 2),
 		_Utils_Tuple2($author$project$Cards$twinSwords, 2),
 		_Utils_Tuple2($author$project$Cards$wagon, 3),
@@ -6033,13 +6056,28 @@ var $author$project$Cards$cTypeColor = function (ct) {
 			return 'gold';
 		case 'TFood':
 			return 'lightgreen';
+		case 'TWork':
+			return 'LightBlue';
 		default:
 			return 'Blue';
 	}
 };
-var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
+var $author$project$Css$cardStyle = function (col) {
+	return _List_fromArray(
+		[
+			A2($elm$html$Html$Attributes$style, 'background-color', col),
+			A2($elm$html$Html$Attributes$style, 'border', '1px solid black'),
+			A2($elm$html$Html$Attributes$style, 'margin', '5px'),
+			A2($elm$html$Html$Attributes$style, 'width', '200px'),
+			A2($elm$html$Html$Attributes$style, 'height', '320px'),
+			A2($elm$html$Html$Attributes$style, 'float', 'left'),
+			A2($elm$html$Html$Attributes$style, 'position', 'relative'),
+			A2($elm$html$Html$Attributes$style, 'transform', 'rotate(20deg)')
+		]);
+};
+var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$json$Json$Encode$string = _Json_wrap;
@@ -6088,6 +6126,100 @@ var $author$project$Cards$resourceShortName = function (r) {
 			return 'Fd';
 	}
 };
+var $author$project$Css$drawCardStyle = F3(
+	function (col, w, h) {
+		var sw = $elm$core$String$fromInt(w) + 'px';
+		var sh = $elm$core$String$fromInt(h) + 'px';
+		return _List_fromArray(
+			[
+				A2($elm$html$Html$Attributes$style, 'background-color', 'blue'),
+				A2($elm$html$Html$Attributes$style, 'border-radius', '10%'),
+				A2($elm$html$Html$Attributes$style, 'border', '2px solid black'),
+				A2($elm$html$Html$Attributes$style, 'color', col),
+				A2($elm$html$Html$Attributes$style, 'width', sw),
+				A2($elm$html$Html$Attributes$style, 'height', sh),
+				A2($elm$html$Html$Attributes$style, 'text-align', 'right'),
+				A2($elm$html$Html$Attributes$style, 'font-size', '2em'),
+				A2($elm$html$Html$Attributes$style, 'margin', '3px'),
+				A2($elm$html$Html$Attributes$style, 'float', 'left')
+			]);
+	});
+var $author$project$Css$itemStyle = function (l) {
+	return A2(
+		$elm$core$List$cons,
+		A2($elm$html$Html$Attributes$style, 'margin', '3px'),
+		A2(
+			$elm$core$List$cons,
+			A2($elm$html$Html$Attributes$style, 'float', 'left'),
+			l));
+};
+var $author$project$Cards$viewDiscard = function (n) {
+	return A2(
+		$elm$html$Html$div,
+		$author$project$Css$itemStyle(
+			A3($author$project$Css$drawCardStyle, 'red', 30, 40)),
+		_List_fromArray(
+			[
+				$elm$html$Html$text(
+				'-' + $elm$core$String$fromInt(n))
+			]));
+};
+var $author$project$Css$circleStyle = F2(
+	function (col, sz) {
+		var ss = $elm$core$String$fromInt(sz) + 'px';
+		return _List_fromArray(
+			[
+				A2($elm$html$Html$Attributes$style, 'background-color', col),
+				A2($elm$html$Html$Attributes$style, 'clip-path', 'circle(50% at 50% 50%)'),
+				A2($elm$html$Html$Attributes$style, 'width', ss),
+				A2($elm$html$Html$Attributes$style, 'height', ss),
+				A2($elm$html$Html$Attributes$style, 'padding', '3px'),
+				A2($elm$html$Html$Attributes$style, 'text-align', 'center')
+			]);
+	});
+var $author$project$Cards$viewEllipse = F2(
+	function (col, inner) {
+		return A2(
+			$elm$html$Html$div,
+			$author$project$Css$itemStyle(
+				A2($author$project$Css$circleStyle, 'black', 45)),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$div,
+					A2($author$project$Css$circleStyle, col, 39),
+					inner)
+				]));
+	});
+var $author$project$Css$hexStyle = F2(
+	function (col, sz) {
+		var ss = $elm$core$String$fromInt(sz) + 'px';
+		return _List_fromArray(
+			[
+				A2($elm$html$Html$Attributes$style, 'background-color', col),
+				A2($elm$html$Html$Attributes$style, 'clip-path', 'polygon(20% 0%, 80% 0%, 100% 50%,80% 100%, 20% 100%, 0% 50% )'),
+				A2($elm$html$Html$Attributes$style, 'width', ss),
+				A2($elm$html$Html$Attributes$style, 'height', ss),
+				A2($elm$html$Html$Attributes$style, 'padding', '3px'),
+				A2($elm$html$Html$Attributes$style, 'text-align', 'center')
+			]);
+	});
+var $author$project$Cards$placeColor = function (pl) {
+	switch (pl.$) {
+		case 'River':
+			return 'Cyan';
+		case 'Forest':
+			return 'Green';
+		case 'Mountain':
+			return 'Grey';
+		case 'Prarie':
+			return 'LightGreen';
+		case 'Water':
+			return 'Blue';
+		default:
+			return 'Yellow';
+	}
+};
 var $author$project$Cards$placeShortName = function (pl) {
 	switch (pl.$) {
 		case 'River':
@@ -6107,14 +6239,21 @@ var $author$project$Cards$placeShortName = function (pl) {
 var $author$project$Cards$viewPlace = function (plc) {
 	return A2(
 		$elm$html$Html$div,
+		$author$project$Css$itemStyle(
+			A2($author$project$Css$hexStyle, 'black', 45)),
 		_List_fromArray(
 			[
-				$elm$html$Html$Attributes$class('hex')
-			]),
-		_List_fromArray(
-			[
-				$elm$html$Html$text(
-				'in:' + $author$project$Cards$placeShortName(plc))
+				A2(
+				$elm$html$Html$div,
+				A2(
+					$author$project$Css$hexStyle,
+					$author$project$Cards$placeColor(plc),
+					39),
+				_List_fromArray(
+					[
+						$elm$html$Html$text(
+						$author$project$Cards$placeShortName(plc))
+					]))
 			]));
 };
 var $author$project$Cards$viewCost = function (cst) {
@@ -6158,17 +6297,7 @@ var $author$project$Cards$viewCost = function (cst) {
 				A2($elm$core$List$map, $author$project$Cards$viewCost, l));
 		case 'Discard':
 			var n = cst.a;
-			return A2(
-				$elm$html$Html$div,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('discard')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text(
-						$elm$core$String$fromInt(n))
-					]));
+			return $author$project$Cards$viewDiscard(n);
 		case 'Pay':
 			var r = cst.a;
 			var n = cst.b;
@@ -6187,11 +6316,8 @@ var $author$project$Cards$viewCost = function (cst) {
 					]));
 		case 'ScrapC':
 			return A2(
-				$elm$html$Html$div,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('ellipse')
-					]),
+				$author$project$Cards$viewEllipse,
+				'pink',
 				_List_fromArray(
 					[
 						$elm$html$Html$text('Scrp')
@@ -6200,24 +6326,116 @@ var $author$project$Cards$viewCost = function (cst) {
 			return A2($elm$html$Html$div, _List_Nil, _List_Nil);
 	}
 };
+var $elm$html$Html$br = _VirtualDom_node('br');
+var $author$project$Cards$numItems = F2(
+	function (s, n) {
+		return _List_fromArray(
+			[
+				$elm$html$Html$text(s),
+				A2($elm$html$Html$br, _List_Nil, _List_Nil),
+				$elm$html$Html$text(
+				$elm$core$String$fromInt(n))
+			]);
+	});
+var $author$project$Cards$resourceColor = function (r) {
+	switch (r.$) {
+		case 'Food':
+			return 'green';
+		case 'Iron':
+			return 'silver';
+		case 'Wood':
+			return 'Brown';
+		default:
+			return 'Gold';
+	}
+};
+var $author$project$Cards$viewDraw = function (n) {
+	return A2(
+		$elm$html$Html$div,
+		$author$project$Css$itemStyle(
+			A3($author$project$Css$drawCardStyle, 'green', 30, 40)),
+		_List_fromArray(
+			[
+				$elm$html$Html$text(
+				'+' + $elm$core$String$fromInt(n))
+			]));
+};
+var $author$project$Cards$viewBenefit = function (bn) {
+	switch (bn.$) {
+		case 'Movement':
+			var n = bn.a;
+			return A2(
+				$author$project$Cards$viewEllipse,
+				'lightblue',
+				A2($author$project$Cards$numItems, 'Mv', n));
+		case 'Attack':
+			var n = bn.a;
+			return A2(
+				$author$project$Cards$viewEllipse,
+				'red',
+				A2($author$project$Cards$numItems, 'Atk', n));
+		case 'Defend':
+			var n = bn.a;
+			return A2(
+				$author$project$Cards$viewEllipse,
+				'Grey',
+				A2($author$project$Cards$numItems, 'Dfd', n));
+		case 'Gain':
+			var r = bn.a;
+			var n = bn.b;
+			return A2($elm$html$Html$div, _List_Nil, _List_Nil);
+		case 'Gather':
+			var r = bn.a;
+			var n = bn.b;
+			return A2(
+				$author$project$Cards$viewEllipse,
+				$author$project$Cards$resourceColor(r),
+				A2(
+					$author$project$Cards$numItems,
+					$author$project$Cards$resourceShortName(r),
+					n));
+		case 'Draw':
+			var n = bn.a;
+			return $author$project$Cards$viewDraw(n);
+		default:
+			var n = bn.a;
+			return A2(
+				$author$project$Cards$viewEllipse,
+				'pink',
+				A2($author$project$Cards$numItems, 'Scp', n));
+	}
+};
+var $author$project$Cards$viewJob = function (jb) {
+	return A2(
+		$elm$html$Html$div,
+		_List_Nil,
+		_Utils_ap(
+			_List_fromArray(
+				[
+					$author$project$Cards$viewCost(jb.req),
+					A2(
+					$elm$html$Html$div,
+					_List_Nil,
+					_List_fromArray(
+						[
+							$elm$html$Html$text('=>')
+						]))
+				]),
+			A2($elm$core$List$map, $author$project$Cards$viewBenefit, jb._for)));
+};
 var $author$project$Cards$view = function (crd) {
 	return A2(
 		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$Attributes$style,
-				'background-color',
-				$author$project$Cards$cTypeColor(crd.ctype)),
-				A2($elm$html$Html$Attributes$style, 'border', '1px solid black'),
-				A2($elm$html$Html$Attributes$style, 'width', '100px'),
-				A2($elm$html$Html$Attributes$style, 'height', '170px'),
-				A2($elm$html$Html$Attributes$style, 'float', 'left')
-			]),
+		$author$project$Css$cardStyle(
+			$author$project$Cards$cTypeColor(crd.ctype)),
 		_List_fromArray(
 			[
 				$elm$html$Html$text(crd.name),
-				$author$project$Cards$viewCost(crd.cost)
+				$author$project$Cards$viewCost(crd.cost),
+				A2(
+				$elm$html$Html$div,
+				_List_Nil,
+				A2($elm$core$List$map, $author$project$Cards$viewJob, crd.jobs))
 			]));
 };
 var $author$project$Main$view = function (mod) {

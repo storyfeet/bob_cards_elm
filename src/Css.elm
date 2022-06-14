@@ -25,3 +25,51 @@ hexStyle col sz =
     , style "padding" "3px"
     , style "text-align" "center"
     ]
+
+itemStyle: List (Html.Attribute msg) -> List (Html.Attribute msg)
+itemStyle l = 
+    (style "margin" "3px")::( style "float" "left")::l
+
+circleStyle: String -> Int -> List (Html.Attribute msg)
+circleStyle col sz = 
+    let ss = String.fromInt sz ++ "px"
+    in
+    [ style "background-color" col
+    , style "clip-path" "circle(50% at 50% 50%)"
+    , style "width" ss
+    , style "height" ss
+    , style "padding" "3px"
+    , style "text-align" "center"
+    ]
+
+drawCardStyle: String -> Int -> Int -> List (Html.Attribute msg)
+drawCardStyle col w h =
+    let
+        sw = (String.fromInt w) ++ "px" 
+        sh = (String.fromInt h) ++ "px"
+    in
+    [ style "background-color" "blue"
+    , style "border-radius" "10%"
+    , style "border" "2px solid black"
+    , style "color" col
+    , style "width" sw
+    , style "height" sh
+    , style "text-align" "right"
+    , style "font-size" "2em"
+    , style "margin" "3px"
+    , style "float" "left"
+    ]
+
+squareStyle: String -> Int -> List (Html.Attribute msg)
+squareStyle col s =
+    let
+        sh = (String.fromInt s) ++ "px"
+    in
+    [ style "background-color" col
+    , style "border" "2px solid black"
+    , style "width" sh
+    , style "height" sh
+    , style "margin" "3px"
+    , style "text-align" "center"
+    , style "float" "left"
+    ]
