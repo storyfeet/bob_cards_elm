@@ -54,9 +54,10 @@ type Cost
 view : Card -> Html m
 view crd = div (cardStyle (cTypeColor crd.ctype))
     [ text crd.name
-    , viewCost crd.cost
-    , crd.jobs |> List.map viewJob |> div [] 
+    , div [style "width" "30",style "position" "absolute", style "right" "0", style "top" "0"] [viewCost crd.cost]
+    , crd.jobs |> List.map viewJob |> div [style "position" "absolute" ,style "bottom" "0"] 
     ]
+
 
 
 viewJob :Job -> Html m
@@ -75,7 +76,7 @@ viewCost cst =
     Or l -> l |> List.map viewCost  |> div [classList[( "or_cost",True )]]
     And l -> l |> List.map viewCost  |> div [classList [("and_cost",True)]]
     Discard n -> viewDiscard n
-    Pay r n -> div [class "box"] [resourceShortName r ++ String.fromInt n |> text]
+    Pay r n -> viewRect (resourceColor r) (numItems (resourceShortName r) n )
     ScrapC -> viewEllipse "pink" [text "Scrp"]
     Free -> div [] [] 
 
@@ -101,11 +102,13 @@ numItems s n =
     ]
 viewDiscard : Int -> Html m
 viewDiscard n = 
-    div (drawCardStyle "red" 30 40 |> itemStyle) [text ("-"++ String.fromInt n)]
+    div (cardOuterStyle "red"|> itemStyle) 
+    [ div (cardInnerStyle  25 35) []  ,text ("-"++ String.fromInt n)]
 
 viewDraw : Int -> Html m
 viewDraw n = 
-    div (drawCardStyle "green" 30 40 |> itemStyle) [text ("+"++ String.fromInt n)]
+    div (cardOuterStyle "Green"|> itemStyle) 
+    [ div (cardInnerStyle  25 35) []  ,text ("+"++ String.fromInt n)]
 
 resourceShortName : Resource -> String
 resourceShortName r = 
@@ -159,21 +162,21 @@ resourceColor r =
 
 viewPlace : Place -> Html m
 viewPlace plc = 
-    div (hexStyle "black" 45 |> itemStyle)[
-        div (hexStyle (placeColor plc ) 39) [
+    div (hexStyle "black" 35 |> itemStyle)[
+        div (hexStyle (placeColor plc ) 31) [
             text (placeShortName plc)]
         ]
 
 viewEllipse:String -> List( Html m)  -> Html m
 viewEllipse col inner =
-    div (circleStyle  "black" 45 |> itemStyle) [
-        div (circleStyle col 39) 
+    div (circleStyle  "black" 35 |> itemStyle) [
+        div (circleStyle col 31) 
             inner
         ]
 
 viewRect: String -> List (Html m) -> Html m
 viewRect col inner = 
-    div (squareStyle col 45 |> itemStyle ) inner
+    div (squareStyle col 35 |> itemStyle ) inner
 
 
 

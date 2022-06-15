@@ -5,7 +5,6 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Time
 import MLists
-import Task
 import Cards exposing (Card,tradeRow)
 
 
@@ -14,6 +13,7 @@ type alias Model =
     , time: Int
     }
 
+init : Model
 init = 
     { deck = MLists.spreadL tradeRow
     , time = 0
@@ -23,7 +23,7 @@ init =
 type Msg = Tick Time.Posix
 
 subscriptions _ = 
-    Time.every 10000 Tick
+    Time.every 100000 Tick
 
 
 -- VIEW
@@ -35,6 +35,7 @@ view mod =
 
 -- UPDATE
 
+update: Msg -> {b|time :Int } -> ({b|time:Int} ,Cmd Msg)
 update mes mod =
     case mes of
         Tick t -> ({mod |time= Time.posixToMillis t},Cmd.none)

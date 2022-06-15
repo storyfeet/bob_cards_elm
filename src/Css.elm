@@ -22,7 +22,7 @@ hexStyle col sz =
     , style "clip-path" "polygon(20% 0%, 80% 0%, 100% 50%,80% 100%, 20% 100%, 0% 50% )"
     , style "width" ss
     , style "height" ss
-    , style "padding" "3px"
+    , style "padding" "2px"
     , style "text-align" "center"
     ]
 
@@ -38,12 +38,26 @@ circleStyle col sz =
     , style "clip-path" "circle(50% at 50% 50%)"
     , style "width" ss
     , style "height" ss
-    , style "padding" "3px"
+    , style "padding" "2px"
     , style "text-align" "center"
+    , style "line-height" "90%"
     ]
 
-drawCardStyle: String -> Int -> Int -> List (Html.Attribute msg)
-drawCardStyle col w h =
+cardOuterStyle : String -> List (Html.Attribute msg)
+cardOuterStyle col =
+    [ style "color" col
+    , style "text-align" "right"
+    , style "font-size" "1.5em"
+    , style "text-shadow" """-1px 1px 0 white,
+                              1px 1px 0 white,
+                              1px -1px 0 white,
+                              -1px -1px 0 white"""--}
+    ,style "position" "relative"
+    ]
+
+cardInnerStyle: Int ->  Int -> List (Html.Attribute msg)
+
+cardInnerStyle w h =
     let
         sw = (String.fromInt w) ++ "px" 
         sh = (String.fromInt h) ++ "px"
@@ -51,11 +65,14 @@ drawCardStyle col w h =
     [ style "background-color" "blue"
     , style "border-radius" "10%"
     , style "border" "2px solid black"
-    , style "color" col
     , style "width" sw
     , style "height" sh
-    , style "text-align" "right"
-    , style "font-size" "2em"
+    , style "margin-right" "-50px"
+    , style "transform" "rotate(20deg)"
+    , style "z-index" "-1"
+    --, style "-webkit-text-stroke" "1px white"
+    -- 
+    , style "position" "absolute"
     , style "margin" "3px"
     , style "float" "left"
     ]
@@ -72,4 +89,5 @@ squareStyle col s =
     , style "margin" "3px"
     , style "text-align" "center"
     , style "float" "left"
+    , style "line-height" "90%"
     ]

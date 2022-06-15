@@ -1,5 +1,4 @@
 module MLists exposing (..)
-import Random
 insertAt :Int -> a -> List a -> List a
 insertAt pos v l =
     case (pos,l) of
