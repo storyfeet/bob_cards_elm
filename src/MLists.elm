@@ -1,4 +1,6 @@
 module MLists exposing (..)
+import MRand exposing(..)
+
 insertAt :Int -> a -> List a -> List a
 insertAt pos v l =
     case (pos,l) of
@@ -21,23 +23,23 @@ sortL f l =
         [] -> []
         h::t -> insertSorted f (sortL f t) h
 
-type alias NGen = Int -> Int -> (Int,Int)
 
-shuffle: NGen -> Int-> List a -> List a
-shuffle gf iseed l = 
-    let (res ,_,_) = shuffleInner gf iseed l
+
+shuffle: GGen  -> List a -> List a
+shuffle gf l = 
+    let (res ,_,_) = shuffleInner gf l
     in res
 
-shuffleInner:NGen -> Int -> List a -> (List a,Int ,Int)
-shuffleInner gf iseed l =
+shuffleInner:GGen  -> List a -> (List a,GGen  ,Int)
+shuffleInner gg l =
     case l of
-        [] -> ([],iseed ,0)
+        [] -> ([],gg ,0)
         h::t -> 
             let 
-                (ls,seed,len) = shuffleInner gf iseed t
-                (seed2,pos) = gf seed (len + 1)
+                (ls,gg1,len) = shuffleInner gg t
+                (gg2,pos) = gnext gg1 (len + 1)
             in
-                (insertAt pos h ls ,seed2, len + 1)
+                (insertAt pos h ls ,gg2, len + 1)
 
 
 spreadItem: (a,Int) -> List a -> List a
@@ -54,7 +56,3 @@ spreadL l =
         (a,n)::t->spreadItem (a,n) (spreadL t) 
 
 
-rgen mul add top seed max =
-    (Basics.modBy top ((seed * mul) + add) , Basics.modBy max seed)
-
-rgen1 = rgen 293 31 311 

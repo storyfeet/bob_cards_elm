@@ -4,26 +4,32 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Time
-import MLists
+import MLists 
+import Task
 import Cards exposing (Card,tradeRow)
+import Deck exposing (Deck)
+import MRand exposing (GGen,gnext)
 
 
 type alias Model = 
-    { deck : List Card
-    , time: Int
+    { pcards: Deck Card
+    , tradeRow: Deck Card
+    , gen : GGen 
     }
 
 init : Model
 init = 
-    { deck = MLists.spreadL tradeRow
+    { pcards = Deck.new 
     , time = 0
     }
 
 
-type Msg = Tick Time.Posix
+type Msg = 
+    NewGame Time.Posix
 
 subscriptions _ = 
-    Time.every 100000 Tick
+    Sub.none
+    --Time.every 100000 Tick
 
 
 -- VIEW
@@ -35,10 +41,16 @@ view mod =
 
 -- UPDATE
 
-update: Msg -> {b|time :Int } -> ({b|time:Int} ,Cmd Msg)
+update: Msg -> Model -> (Model ,Cmd Msg)
 update mes mod =
     case mes of
-        Tick t -> ({mod |time= Time.posixToMillis t},Cmd.none)
+        NewGame t ->
+            let d = tradeRow |> MLists.spreadL |> MLists.shuffle MLists.rgen1 (Time.posixToMillis t)
+            in
+            ({ mod 
+            | time= Time.posixToMillis t 
+            , deck = d
+            } , Cmd.none)
 
 -- MAIN
 
@@ -46,7 +58,7 @@ update mes mod =
 main : Program () Model Msg
 main = 
     Browser.element 
-    { init = \_->(init,Cmd.none)
+    { init = \_->(init,Task.perform NewGame Time.now )
     , view =view 
     , subscriptions = subscriptions
     , update = update
