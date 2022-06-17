@@ -14,7 +14,7 @@ type CType
     = TAttack
     | TDefence
     | TMove
-    | TGold
+   | TGold
     | TFood
     | TCarry
     | TWork

@@ -6,9 +6,9 @@ import Html.Events exposing (..)
 import Time
 import MLists 
 import Task
-import Cards exposing (Card,tradeRow)
+import Cards exposing (Card,tradeRow,starterDeck)
 import Deck exposing (Deck)
-import MRand exposing (GGen,gnext)
+import MRand exposing (GGen,gzero,rgen1)
 
 
 type alias Model = 
@@ -19,8 +19,9 @@ type alias Model =
 
 init : Model
 init = 
-    { pcards = Deck.new 
-    , time = 0
+    { pcards = Deck.empty
+    , tradeRow = Deck.empty
+    , gen = gzero
     }
 
 
@@ -33,24 +34,32 @@ subscriptions _ =
 
 
 -- VIEW
+view : Model -> Html Msg
 view mod = 
-   let 
-       ls = mod.deck |>  MLists.shuffle MLists.rgen1 mod.time 
-   in p [] (ls |> List.map Cards.view )
+    div [] 
+    [ div [style "clear" "both"] ((text "Hand")::(mod.pcards.hand |> List.map Cards.view))
+    , div [style "clear" "both"] ((text "TradeRow")::(mod.tradeRow.hand |> List.map Cards.view))
+   ]
+
 
 
 -- UPDATE
 
 update: Msg -> Model -> (Model ,Cmd Msg)
-update mes mod =
+update mes _ =
     case mes of
         NewGame t ->
-            let d = tradeRow |> MLists.spreadL |> MLists.shuffle MLists.rgen1 (Time.posixToMillis t)
-            in
-            ({ mod 
-            | time= Time.posixToMillis t 
-            , deck = d
-            } , Cmd.none)
+            let
+                gg = MRand.gnew t
+                (gg1,trd) = Deck.fromNCardList gg 5 tradeRow
+                (gg2,pcards) = Deck.fromNCardList gg1 5 starterDeck 
+            in 
+                ({ gen = gg2
+                , pcards = pcards
+                ,tradeRow = trd
+                },Cmd.none) 
+                
+
 
 -- MAIN
 

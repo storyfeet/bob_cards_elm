@@ -1,4 +1,4 @@
-module MRand exposing (gnew,gnext,GGen)
+module MRand exposing (gnew,gzero,gnext,rgen1,rgen,GGen)
 import Time exposing (Posix,posixToMillis)
 
 rgen : Int -> Int -> Int -> Int ->Int -> (Int , Int)
@@ -12,6 +12,7 @@ type alias GGen =
     , next : Int -> Int -> (Int,Int)
     }
 
+
 gnext: GGen ->  Int -> (GGen ,Int)
 gnext gen rmax =
     let 
@@ -20,6 +21,11 @@ gnext gen rmax =
         ({gen | curr= rs },rn)
 
 
+gzero : GGen
+gzero =
+    { curr = 0
+    , next = rgen1
+    }
 gnew : Posix -> GGen
 gnew t = 
     { curr = posixToMillis t

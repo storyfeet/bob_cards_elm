@@ -27,19 +27,19 @@ sortL f l =
 
 shuffle: GGen  -> List a -> List a
 shuffle gf l = 
-    let (res ,_,_) = shuffleInner gf l
+    let (_,res ,_) = shuffleInner gf l
     in res
 
-shuffleInner:GGen  -> List a -> (List a,GGen  ,Int)
+shuffleInner:GGen  -> List a -> (GGen,List a  ,Int)
 shuffleInner gg l =
     case l of
-        [] -> ([],gg ,0)
+        [] -> (gg ,[],0)
         h::t -> 
             let 
-                (ls,gg1,len) = shuffleInner gg t
+                (gg1,ls,len) = shuffleInner gg t
                 (gg2,pos) = gnext gg1 (len + 1)
             in
-                (insertAt pos h ls ,gg2, len + 1)
+                (gg2, insertAt pos h ls , len + 1)
 
 
 spreadItem: (a,Int) -> List a -> List a
