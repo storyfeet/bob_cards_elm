@@ -1,5 +1,13 @@
 module Map exposing (..)
 import Dict exposing (..)
+import Canvas exposing (..)
+import Canvas.Settings exposing (..)
+import Color 
+import Message exposing( Msg)
+import Html.Attributes exposing (..)
+
+import Html exposing (..)
+
 
 gridPos w x y =
     y * w + x
@@ -35,5 +43,9 @@ type LType
     | Village
     | Mountain
 
-
+view: Html Msg
+view = 
+    Canvas.toHtml (300,400)
+    [style "width" "300px", style "height" "400px", style "border" "2px solid black", style "position" "absolute"]
+    [shapes [fill Color.black ] [rect (50,50) 200 100] ]
 

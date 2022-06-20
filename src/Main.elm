@@ -9,6 +9,8 @@ import Task
 import Cards exposing (Card,tradeRow,starterDeck)
 import Deck exposing (Deck)
 import MRand exposing (GGen,gzero,rgen1)
+import Message exposing (Msg)
+import Map
 
 
 type alias Model = 
@@ -25,8 +27,6 @@ init =
     }
 
 
-type Msg = 
-    NewGame Time.Posix
 
 subscriptions _ = 
     Sub.none
@@ -39,7 +39,9 @@ view mod =
     div [] 
     [ div [style "clear" "both"] ((text "Hand")::(mod.pcards.hand |> List.map Cards.view))
     , div [style "clear" "both"] ((text "TradeRow")::(mod.tradeRow.hand |> List.map Cards.view))
+    , Map.view
    ]
+
 
 
 
@@ -48,7 +50,7 @@ view mod =
 update: Msg -> Model -> (Model ,Cmd Msg)
 update mes _ =
     case mes of
-        NewGame t ->
+        Message.NewGame t ->
             let
                 gg = MRand.gnew t
                 (gg1,trd) = Deck.fromNCardList gg 5 tradeRow
@@ -67,7 +69,7 @@ update mes _ =
 main : Program () Model Msg
 main = 
     Browser.element 
-    { init = \_->(init,Task.perform NewGame Time.now )
+    { init = \_->(init,Task.perform Message.NewGame Time.now )
     , view =view 
     , subscriptions = subscriptions
     , update = update
