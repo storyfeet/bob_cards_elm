@@ -39,19 +39,6 @@ gridGet g x y =
     Dict.get pos g.g
 
 
-type alias Tile = 
-    { river : Bool
-     ,ltype : LType
-    }
-
-
-type LType
-    = Water
-    | Forest
-    | Prarie
-    | Village
-    | Mountain
-
 view: Html Msg
 view = 
     Canvas.toHtml (300,400)
@@ -78,5 +65,5 @@ hexPath x y w h =
     |> List.map lineTo
     |>path (xy xmid y )  
 
-    
 
+ 
