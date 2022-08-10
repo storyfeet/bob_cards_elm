@@ -1,37 +1,77 @@
 module PageSvg exposing (..)
 
 
+a4Page : String -> String
+a4Page = pageWrap "mm" 210 297
 pageWrap : String -> Int -> Int -> String -> String
 pageWrap u w h  m  = 
-    String.join "" 
-    [ """<svg version="1.1" 
-        width=\""""
-        , w |> String.fromInt
-        , u
-        , "\" height=\""
-        , h |> String.fromInt
-        , u 
-        , """\" viewBox="0 0 210 297" 
-            xmlns="http://www.w3.org/2000/svg"
-            > 
-        """
-        , m
-        , "\n</svg>"
-    ]
+    tag "svg" [iunit w u |> prop "width"
+        , iunit h u |> prop "height"
+        , prop "xmlns" "http://www.w3.org/2000/svg"
+        , prop "viewBox" ("0 0 "++ String.fromInt w ++ " " ++ String.fromInt h)
+    ] [m]
+
+----  TAGS ----
 
 etag : String -> List String -> String
-etag name props =
-    "<" ++ name ++ " " ++ (String.join " " props) ++ " />"
+etag name propl =
+    "<" ++ name ++ " " ++ (String.join " " propl) ++ " />"
 
 
 tag : String -> List String -> List String -> String
-tag name props children =
-    "<" ++ name ++ " " ++ (String.join " " props) ++ " >" ++ String.join "\n" children ++ "</" ++ name ++ ">"
+tag name propl children =
+    "<" ++ name ++ " " ++ (String.join " " propl) ++ " >" ++ String.join "\n" children ++ "</" ++ name ++ ">"
+
+rect: Float -> Float -> Float -> Float -> List String -> String
+rect x y w h pps =
+    etag "rect" ((xywh x y w h)::pps)
+
+---- Properties -----
+
+prop : String -> String -> String
+prop name val = 
+    name ++ "=\"" ++ val ++ "\""
+fprop : String -> Float -> String
+fprop name val = 
+    prop name (String.fromFloat val)
+
+funit : Float -> String -> String
+funit n u =
+    String.fromFloat n ++ u
+
+iunit : Int -> String -> String
+iunit n u =
+    String.fromInt n ++ u
 
 
+iprop : String -> Int -> String
+iprop name val =
+    prop name (String.fromInt val)
 
-a4Page : String -> String
-a4Page = pageWrap "mm" 210 297
+props : List String -> String
+props =
+    String.join " "
+
+xy : Float -> Float -> String
+xy x y =
+    props [ fprop "x" x , fprop "y" y]
+
+wh : Float -> Float -> String
+wh w h =
+    props [ fprop "width" w , fprop "height" h]
+xywh : Float -> Float -> Float -> Float -> String
+xywh x y w h =
+    props [xy x y, wh w h]
+
+flstk : String -> String -> Float ->String
+flstk f s w =
+    props 
+    [ prop "fill" f
+    , prop "stroke" s
+    , fprop "stroke-width" w
+    ]
+
+---- Layout ---- 
 
 nCardsFit : Float -> Float -> Float -> Float -> Int
 nCardsFit margin padding page card =
