@@ -25,6 +25,14 @@ tag name propl children =
 rect: Float -> Float -> Float -> Float -> List String -> String
 rect x y w h pps =
     etag "rect" ((xywh x y w h)::pps)
+text : String -> Float -> List String -> String -> String
+text fnt fsize pps txt = 
+    tag "text" ((font fnt fsize) :: pps) [txt]
+
+
+polygon : List Float -> List String -> String
+polygon pts pps =
+  etag "polygon" ((points pts) :: pps)
 
 ---- Properties -----
 
@@ -63,13 +71,33 @@ xywh : Float -> Float -> Float -> Float -> String
 xywh x y w h =
     props [xy x y, wh w h]
 
-flstk : String -> String -> Float ->String
-flstk f s w =
+flStk : String -> String -> Float ->String
+flStk f s w =
     props 
     [ prop "fill" f
     , prop "stroke" s
     , fprop "stroke-width" w
     ]
+
+strokeFirst : String
+strokeFirst = prop "style" "paint-order:stroke"
+
+txCenter : String
+txCenter = prop "text-anchor" "middle"
+
+flNoStk: String -> String
+flNoStk f =
+    flStk f "none" 0
+
+font : String -> Float -> String
+font nm sz =
+    props [prop "font-family" nm , fprop "font-size" sz ]
+
+points pts =
+    pts 
+    |> List.map String.fromFloat 
+    |> String.join " " 
+    |> prop "points"
 
 ---- Layout ---- 
 
