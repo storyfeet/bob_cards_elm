@@ -3,9 +3,9 @@ import PageSvg exposing (..)
 import Cards exposing (..)
 
 
-front :  Card -> List String
+front :  Card -> String
 front card =
-    [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "none" 0]
+    String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "none" 0]
     , rect 5 5 40 60 [flNoStk "White" , prop "opacity" "0.5" ]
     , text "Arial" 10 [xy 20 10,flStk "Black" "yellow" 0.5,strokeFirst,txCenter] card.name
     , jobs 55 card.jobs
@@ -30,7 +30,7 @@ costLen c =
         Free -> 0
         _ -> 10
 
-cost : Float-> Float -> Cost -> String
+cost : Float -> Float -> Cost -> String
 cost x y c = 
     case c of 
         In p inner -> place x y p ++ cost (x+10 ) y inner
@@ -39,9 +39,9 @@ cost x y c =
         Or (h::t) -> cost x y h ++ cost (x + 4 + costLen h)  y (Or t)
         And [] -> ""
         And (h::t) -> cost x y h ++ cost (x + costLen h) y (And t)
-        Discard n -> rect x y 6 10 [flStk "yellow" "black" 0,rxy 3 3  ] ++ text "Arial" 5 [xy 5 5] (String.fromInt n)
+        Discard n -> rect x y 6 10 [flStk "yellow" "black" 0,rxy 1 1 , rotate 30 (x+3) (y+5)  ] ++ text "Arial" 5 [xy 5 5] (String.fromInt n)
         Pay r n -> resource x y r n 
-        ScrapC  -> rect x y 6 10 [flStk "red" "black" 0,rxy 3 3  ] 
+        ScrapC  -> rect x y 6 10 [flStk "red" "black" 0,rxy 1 1,rotate 30 (x + 3) (y+5 )   ] 
         Free -> ""
             
 

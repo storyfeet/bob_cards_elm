@@ -103,6 +103,10 @@ points pts =
     |> String.join " " 
     |> prop "points"
 
+rotate : Float -> Float -> Float -> String
+rotate n x y = 
+    prop "transform" ("rotate(" ++ String.fromFloat n ++ "," ++ String.fromFloat x ++","++ String.fromFloat y ++")")
+
 ---- Layout ---- 
 
 nCardsFit : Float -> Float -> Float -> Float -> Int

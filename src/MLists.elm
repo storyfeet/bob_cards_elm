@@ -56,3 +56,11 @@ spreadL l =
         (a,n)::t->spreadItem (a,n) (spreadL t) 
 
 
+    
+mapEnumerated_ : (Int-> v -> t)-> Int ->List v -> List t
+mapEnumerated_ f n l =
+    case l of 
+        [] -> []
+        h::t -> (f n h ) :: (mapEnumerated_ f (n + 1) t)
+        
+
