@@ -64,6 +64,10 @@ xy : Float -> Float -> String
 xy x y =
     props [ fprop "x" x , fprop "y" y]
 
+rxy : Float -> Float -> String
+rxy x y =
+    props [fprop "rx" x , fprop "ry" y]
+
 wh : Float -> Float -> String
 wh w h =
     props [ fprop "width" w , fprop "height" h]
