@@ -29,6 +29,10 @@ text : String -> Float -> List String -> String -> String
 text fnt fsize pps txt = 
     tag "text" ((font fnt fsize) :: pps) [txt]
 
+circle: Float -> Float -> Float -> List String -> String
+circle x y r pps =
+    etag "ellipse" ((cenRad x y r r)::pps )
+
 
 polygon : List Float -> List String -> String
 polygon pts pps =
@@ -75,6 +79,20 @@ xywh : Float -> Float -> Float -> Float -> String
 xywh x y w h =
     props [xy x y, wh w h]
 
+cxy : Float -> Float -> String
+cxy x y =
+    props 
+    [ fprop "cx" x
+    , fprop "cy" y
+    ]
+
+cenRad : Float -> Float -> Float -> Float -> String
+cenRad cx cy rx ry =
+    props
+    [ cxy cx cy
+    , rxy rx ry
+    ]
+
 flStk : String -> String -> Float ->String
 flStk f s w =
     props 
@@ -97,6 +115,7 @@ font : String -> Float -> String
 font nm sz =
     props [prop "font-family" nm , fprop "font-size" sz ]
 
+points: List Float -> String
 points pts =
     pts 
     |> List.map String.fromFloat 

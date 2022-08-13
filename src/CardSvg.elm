@@ -19,7 +19,7 @@ jobs y l =
 
 job : Float -> Job -> String
 job y jb =
-    cost 0 y jb.req
+    cost 0 y jb.req 
 
 costLen : Cost -> Float
 costLen c =
@@ -39,9 +39,9 @@ cost x y c =
         Or (h::t) -> cost x y h ++ cost (x + 4 + costLen h)  y (Or t)
         And [] -> ""
         And (h::t) -> cost x y h ++ cost (x + costLen h) y (And t)
-        Discard n -> rect x y 6 10 [flStk "yellow" "black" 0,rxy 1 1 , rotate 30 (x+3) (y+5)  ] ++ text "Arial" 5 [xy 5 5] (String.fromInt n)
+        Discard n -> jobCard x y "yellow" "dsc" n 
         Pay r n -> resource x y r n 
-        ScrapC  -> rect x y 6 10 [flStk "red" "black" 0,rxy 1 1,rotate 30 (x + 3) (y+5 )   ] 
+        ScrapC  -> jobCard x y "red" "scp" 1
         Free -> ""
             
 
@@ -49,15 +49,61 @@ resource : Float -> Float ->Resource -> Int -> String
 resource x y r n =
     String.join "\n" 
         [ rect x y 10 10 [flStk (resourceColor r) "black" 1] 
-        , resText (x + 5) (y + 4) (resourceShortName r)
-        , resText (x + 5) (y + 9) (String.fromInt n)
+        , jobTextn x y (resourceShortName r) n
+        ]
+
+
+benefits:Float -> Float -> List Benefit -> String 
+benefits xend y bens = 
+    let x = xend - (toFloat (10 * (List.length bens   )))
+    in 
+        bens 
+        |> List.indexedMap (\n b -> benefit (x + (toFloat n* 10)) y b  )
+        |> String.join "\n"
+ 
+
+
+benefit : Float -> Float -> Benefit -> String
+benefit x y b = 
+    case b of 
+        Movement n -> jobCircle x y "Pink" "Mv" n
+        Attack n -> jobCircle x y "red" "Atk" n
+        Defend n -> jobCircle x y "Grey" "Dfd" n
+        Gain r n -> jobRect x y (resourceColor r) (resourceShortName r) n
+        _ -> ""
+            
+        
+jobCard : Float -> Float -> String -> String -> Int -> String
+jobCard x y col tx n =
+    String.join "\n" 
+         [ rect x y 6 10 
+            [flStk col "black" 0
+            , rxy 1 1
+            , rotate 30 (x + 3) (y+5 )   
+            ]        
+        , jobTextn x y tx n
+        ]
+
+        
+jobCircle : Float -> Float -> String -> String -> Int -> String
+jobCircle x y col tx n = 
+    String.join "\n" 
+        [ circle (x+5) (y+5) 5 [flStk col "Black" 1 ]
+        , jobTextn x y tx n
+        ]
+
+jobRect : Float -> Float -> String -> String -> Int -> String
+jobRect x y col tx n = 
+    String.join "\n" 
+        [ rect x y 10 10 [flStk col "Black" 1 ]
+        , jobTextn x y tx n
         ]
 
 place : Float -> Float -> Place ->  String
 place x y p =
     String.join "\n" 
         [ polygon (hexPoints x y 10 10) [flStk (placeColor p) "black" 1]
-        , resText (x + 5) (y + 4) (placeShortName p)
+        , jobText (x + 5) (y + 4) (placeShortName p)
         ]
 
 
@@ -78,7 +124,13 @@ hexPoints x y w h =
         , x , y1
         ]
 
+jobTextn : Float -> Float -> String ->Int -> String
+jobTextn x y tx n = 
+    String.join "\n" 
+        [ jobText (x + 5) (y + 4) (tx)
+        , jobText (x + 5) (y + 9) (String.fromInt n)
+        ]
 
-resText : Float -> Float -> String -> String
-resText x y str = text "Arial" 4 [xy x y,txCenter,flNoStk "black" ] str
+jobText : Float -> Float -> String -> String
+jobText x y str = text "Arial" 4 [xy x y,txCenter,flNoStk "black" ] str
 
