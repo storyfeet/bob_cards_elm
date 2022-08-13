@@ -19,7 +19,7 @@ jobs y l =
 
 job : Float -> Job -> String
 job y jb =
-    cost 0 y jb.req 
+    cost 5 y jb.req ++ "\n" ++ benefits 45 y jb.for
 
 costLen : Cost -> Float
 costLen c =
