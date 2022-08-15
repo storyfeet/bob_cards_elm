@@ -793,6 +793,66 @@ function _Utils_ap(xs, ys)
 
 
 
+// MATH
+
+var _Basics_add = F2(function(a, b) { return a + b; });
+var _Basics_sub = F2(function(a, b) { return a - b; });
+var _Basics_mul = F2(function(a, b) { return a * b; });
+var _Basics_fdiv = F2(function(a, b) { return a / b; });
+var _Basics_idiv = F2(function(a, b) { return (a / b) | 0; });
+var _Basics_pow = F2(Math.pow);
+
+var _Basics_remainderBy = F2(function(b, a) { return a % b; });
+
+// https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/divmodnote-letter.pdf
+var _Basics_modBy = F2(function(modulus, x)
+{
+	var answer = x % modulus;
+	return modulus === 0
+		? _Debug_crash(11)
+		:
+	((answer > 0 && modulus < 0) || (answer < 0 && modulus > 0))
+		? answer + modulus
+		: answer;
+});
+
+
+// TRIGONOMETRY
+
+var _Basics_pi = Math.PI;
+var _Basics_e = Math.E;
+var _Basics_cos = Math.cos;
+var _Basics_sin = Math.sin;
+var _Basics_tan = Math.tan;
+var _Basics_acos = Math.acos;
+var _Basics_asin = Math.asin;
+var _Basics_atan = Math.atan;
+var _Basics_atan2 = F2(Math.atan2);
+
+
+// MORE MATH
+
+function _Basics_toFloat(x) { return x; }
+function _Basics_truncate(n) { return n | 0; }
+function _Basics_isInfinite(n) { return n === Infinity || n === -Infinity; }
+
+var _Basics_ceiling = Math.ceil;
+var _Basics_floor = Math.floor;
+var _Basics_round = Math.round;
+var _Basics_sqrt = Math.sqrt;
+var _Basics_log = Math.log;
+var _Basics_isNaN = isNaN;
+
+
+// BOOLEANS
+
+function _Basics_not(bool) { return !bool; }
+var _Basics_and = F2(function(a, b) { return a && b; });
+var _Basics_or  = F2(function(a, b) { return a || b; });
+var _Basics_xor = F2(function(a, b) { return a !== b; });
+
+
+
 var _String_cons = F2(function(chr, str)
 {
 	return chr + str;
@@ -1102,66 +1162,6 @@ function _String_fromList(chars)
 	return _List_toArray(chars).join('');
 }
 
-
-
-
-// MATH
-
-var _Basics_add = F2(function(a, b) { return a + b; });
-var _Basics_sub = F2(function(a, b) { return a - b; });
-var _Basics_mul = F2(function(a, b) { return a * b; });
-var _Basics_fdiv = F2(function(a, b) { return a / b; });
-var _Basics_idiv = F2(function(a, b) { return (a / b) | 0; });
-var _Basics_pow = F2(Math.pow);
-
-var _Basics_remainderBy = F2(function(b, a) { return a % b; });
-
-// https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/divmodnote-letter.pdf
-var _Basics_modBy = F2(function(modulus, x)
-{
-	var answer = x % modulus;
-	return modulus === 0
-		? _Debug_crash(11)
-		:
-	((answer > 0 && modulus < 0) || (answer < 0 && modulus > 0))
-		? answer + modulus
-		: answer;
-});
-
-
-// TRIGONOMETRY
-
-var _Basics_pi = Math.PI;
-var _Basics_e = Math.E;
-var _Basics_cos = Math.cos;
-var _Basics_sin = Math.sin;
-var _Basics_tan = Math.tan;
-var _Basics_acos = Math.acos;
-var _Basics_asin = Math.asin;
-var _Basics_atan = Math.atan;
-var _Basics_atan2 = F2(Math.atan2);
-
-
-// MORE MATH
-
-function _Basics_toFloat(x) { return x; }
-function _Basics_truncate(n) { return n | 0; }
-function _Basics_isInfinite(n) { return n === Infinity || n === -Infinity; }
-
-var _Basics_ceiling = Math.ceil;
-var _Basics_floor = Math.floor;
-var _Basics_round = Math.round;
-var _Basics_sqrt = Math.sqrt;
-var _Basics_log = Math.log;
-var _Basics_isNaN = isNaN;
-
-
-// BOOLEANS
-
-function _Basics_not(bool) { return !bool; }
-var _Basics_and = F2(function(a, b) { return a && b; });
-var _Basics_or  = F2(function(a, b) { return a || b; });
-var _Basics_xor = F2(function(a, b) { return a !== b; });
 
 
 
@@ -2436,62 +2436,6 @@ var $elm$core$Set$toList = function (_v0) {
 	return $elm$core$Dict$keys(dict);
 };
 var $elm$core$Basics$GT = {$: 'GT'};
-var $elm$core$Basics$apR = F2(
-	function (x, f) {
-		return f(x);
-	});
-var $elm$core$Basics$append = _Utils_append;
-var $elm$core$Maybe$Just = function (a) {
-	return {$: 'Just', a: a};
-};
-var $elm$core$Maybe$Nothing = {$: 'Nothing'};
-var $elm$core$String$fromInt = _String_fromNumber;
-var $author$project$PageSvg$iunit = F2(
-	function (n, u) {
-		return _Utils_ap(
-			$elm$core$String$fromInt(n),
-			u);
-	});
-var $author$project$PageSvg$prop = F2(
-	function (name, val) {
-		return name + ('=\"' + (val + '\"'));
-	});
-var $elm$core$String$join = F2(
-	function (sep, chunks) {
-		return A2(
-			_String_join,
-			sep,
-			_List_toArray(chunks));
-	});
-var $author$project$PageSvg$tag = F3(
-	function (name, propl, children) {
-		return '<' + (name + (' ' + (A2($elm$core$String$join, ' ', propl) + (' >' + (A2($elm$core$String$join, '\n', children) + ('</' + (name + '>')))))));
-	});
-var $author$project$PageSvg$pageWrap = F4(
-	function (u, w, h, m) {
-		return A3(
-			$author$project$PageSvg$tag,
-			'svg',
-			_List_fromArray(
-				[
-					A2(
-					$author$project$PageSvg$prop,
-					'width',
-					A2($author$project$PageSvg$iunit, w, u)),
-					A2(
-					$author$project$PageSvg$prop,
-					'height',
-					A2($author$project$PageSvg$iunit, h, u)),
-					A2($author$project$PageSvg$prop, 'xmlns', 'http://www.w3.org/2000/svg'),
-					A2(
-					$author$project$PageSvg$prop,
-					'viewBox',
-					'0 0 ' + ($elm$core$String$fromInt(w) + (' ' + $elm$core$String$fromInt(h))))
-				]),
-			_List_fromArray(
-				[m]));
-	});
-var $author$project$PageSvg$a4Page = A3($author$project$PageSvg$pageWrap, 'mm', 210, 297);
 var $elm$core$Result$Err = function (a) {
 	return {$: 'Err', a: a};
 };
@@ -2515,9 +2459,22 @@ var $elm$json$Json$Decode$OneOf = function (a) {
 };
 var $elm$core$Basics$False = {$: 'False'};
 var $elm$core$Basics$add = _Basics_add;
+var $elm$core$Maybe$Just = function (a) {
+	return {$: 'Just', a: a};
+};
+var $elm$core$Maybe$Nothing = {$: 'Nothing'};
 var $elm$core$String$all = _String_all;
 var $elm$core$Basics$and = _Basics_and;
+var $elm$core$Basics$append = _Utils_append;
 var $elm$json$Json$Encode$encode = _Json_encode;
+var $elm$core$String$fromInt = _String_fromNumber;
+var $elm$core$String$join = F2(
+	function (sep, chunks) {
+		return A2(
+			_String_join,
+			sep,
+			_List_toArray(chunks));
+	});
 var $elm$core$String$split = F2(
 	function (sep, string) {
 		return _List_fromArray(
@@ -2744,6 +2701,10 @@ var $elm$core$Basics$apL = F2(
 	function (f, x) {
 		return f(x);
 	});
+var $elm$core$Basics$apR = F2(
+	function (x, f) {
+		return f(x);
+	});
 var $elm$core$Basics$eq = _Utils_equal;
 var $elm$core$Basics$floor = _Basics_floor;
 var $elm$core$Elm$JsArray$length = _JsArray_length;
@@ -2870,54 +2831,87 @@ var $elm$core$Result$isOk = function (result) {
 		return false;
 	}
 };
-var $elm$json$Json$Encode$string = _Json_wrap;
-var $author$project$SvgMaker$log = _Platform_outgoingPort('log', $elm$json$Json$Encode$string);
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
-var $elm$core$Platform$Sub$batch = _Platform_batch;
-var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
-var $author$project$PageSvg$nCardsFit = F4(
-	function (margin, padding, page, card) {
-		return $elm$core$Basics$floor((page - (margin * 2)) / (card + padding));
+var $author$project$SvgMaker$init = function (_v0) {
+	return _Utils_Tuple2(
+		{pos: 0},
+		$elm$core$Platform$Cmd$none);
+};
+var $author$project$SvgMaker$Next = {$: 'Next'};
+var $elm$json$Json$Decode$int = _Json_decodeInt;
+var $author$project$SvgMaker$nextPage = _Platform_incomingPort('nextPage', $elm$json$Json$Decode$int);
+var $author$project$SvgMaker$subscriptions = function (_v0) {
+	return $author$project$SvgMaker$nextPage(
+		function (_v1) {
+			return $author$project$SvgMaker$Next;
+		});
+};
+var $elm$json$Json$Decode$succeed = _Json_succeed;
+var $author$project$SvgMaker$Writer = F2(
+	function (fname, content) {
+		return {content: content, fname: fname};
 	});
-var $elm$core$String$fromFloat = _String_fromNumber;
-var $elm$core$Basics$modBy = _Basics_modBy;
-var $author$project$PageSvg$placeCardF = F5(
-	function (nwide, fx, fy, n, theCard) {
-		var y = (n / nwide) | 0;
-		var x = A2($elm$core$Basics$modBy, nwide, n);
-		return A2(
-			$elm$core$String$join,
-			'',
+var $elm$core$List$drop = F2(
+	function (n, list) {
+		drop:
+		while (true) {
+			if (n <= 0) {
+				return list;
+			} else {
+				if (!list.b) {
+					return list;
+				} else {
+					var x = list.a;
+					var xs = list.b;
+					var $temp$n = n - 1,
+						$temp$list = xs;
+					n = $temp$n;
+					list = $temp$list;
+					continue drop;
+				}
+			}
+		}
+	});
+var $author$project$PageSvg$iunit = F2(
+	function (n, u) {
+		return _Utils_ap(
+			$elm$core$String$fromInt(n),
+			u);
+	});
+var $author$project$PageSvg$prop = F2(
+	function (name, val) {
+		return name + ('=\"' + (val + '\"'));
+	});
+var $author$project$PageSvg$tag = F3(
+	function (name, propl, children) {
+		return '<' + (name + (' ' + (A2($elm$core$String$join, ' ', propl) + (' >' + (A2($elm$core$String$join, '\n', children) + ('</' + (name + '>')))))));
+	});
+var $author$project$PageSvg$pageWrap = F4(
+	function (u, w, h, m) {
+		return A3(
+			$author$project$PageSvg$tag,
+			'svg',
 			_List_fromArray(
 				[
-					'<g transform="translate(',
-					$elm$core$String$fromFloat(
-					fx(x)),
-					',',
-					$elm$core$String$fromFloat(
-					fy(y)),
-					')">',
-					theCard,
-					'</g>'
-				]));
+					A2(
+					$author$project$PageSvg$prop,
+					'width',
+					A2($author$project$PageSvg$iunit, w, u)),
+					A2(
+					$author$project$PageSvg$prop,
+					'height',
+					A2($author$project$PageSvg$iunit, h, u)),
+					A2($author$project$PageSvg$prop, 'xmlns', 'http://www.w3.org/2000/svg'),
+					A2(
+					$author$project$PageSvg$prop,
+					'viewBox',
+					'0 0 ' + ($elm$core$String$fromInt(w) + (' ' + $elm$core$String$fromInt(h))))
+				]),
+			_List_fromArray(
+				[m]));
 	});
-var $author$project$PageSvg$placeOneDir = F5(
-	function (numCards, padding, page, card, n) {
-		var step = card + padding;
-		var nf = numCards;
-		var start = ((page - (nf * card)) - ((nf - 1) * padding)) / 2;
-		return start + (n * step);
-	});
-var $author$project$PageSvg$placeCarder = F6(
-	function (margin, padding, pw, ph, cw, ch) {
-		var nwide = A4($author$project$PageSvg$nCardsFit, margin, padding, pw, cw);
-		var nhigh = A4($author$project$PageSvg$nCardsFit, margin, padding, ph, ch);
-		var fy = A4($author$project$PageSvg$placeOneDir, nhigh, padding, ph, ch);
-		var fx = A4($author$project$PageSvg$placeOneDir, nwide, padding, pw, cw);
-		return A3($author$project$PageSvg$placeCardF, nwide, fx, fy);
-	});
-var $author$project$SvgMaker$a444 = A6($author$project$PageSvg$placeCarder, 3, 0, 210, 297, 50, 70);
+var $author$project$PageSvg$a4Page = A3($author$project$PageSvg$pageWrap, 'mm', 210, 297);
 var $author$project$Cards$cTypeColor = function (ct) {
 	switch (ct.$) {
 		case 'TAttack':
@@ -2936,6 +2930,7 @@ var $author$project$Cards$cTypeColor = function (ct) {
 			return 'Blue';
 	}
 };
+var $elm$core$String$fromFloat = _String_fromNumber;
 var $author$project$PageSvg$fprop = F2(
 	function (name, val) {
 		return A2(
@@ -3572,6 +3567,88 @@ var $author$project$CardSvg$front = function (card) {
 				A2($author$project$CardSvg$jobs, 55, card.jobs)
 			]));
 };
+var $author$project$PageSvg$nCardsFit = F4(
+	function (margin, padding, page, card) {
+		return $elm$core$Basics$floor((page - (margin * 2)) / (card + padding));
+	});
+var $elm$core$Basics$modBy = _Basics_modBy;
+var $author$project$PageSvg$placeCardF = F5(
+	function (nwide, fx, fy, n, theCard) {
+		var y = (n / nwide) | 0;
+		var x = A2($elm$core$Basics$modBy, nwide, n);
+		return A2(
+			$elm$core$String$join,
+			'',
+			_List_fromArray(
+				[
+					'<g transform="translate(',
+					$elm$core$String$fromFloat(
+					fx(x)),
+					',',
+					$elm$core$String$fromFloat(
+					fy(y)),
+					')">',
+					theCard,
+					'</g>'
+				]));
+	});
+var $author$project$PageSvg$placeOneDir = F5(
+	function (numCards, padding, page, card, n) {
+		var step = card + padding;
+		var nf = numCards;
+		var start = ((page - (nf * card)) - ((nf - 1) * padding)) / 2;
+		return start + (n * step);
+	});
+var $author$project$PageSvg$placeCarder = F6(
+	function (margin, padding, pw, ph, cw, ch) {
+		var nwide = A4($author$project$PageSvg$nCardsFit, margin, padding, pw, cw);
+		var nhigh = A4($author$project$PageSvg$nCardsFit, margin, padding, ph, ch);
+		var fy = A4($author$project$PageSvg$placeOneDir, nhigh, padding, ph, ch);
+		var fx = A4($author$project$PageSvg$placeOneDir, nwide, padding, pw, cw);
+		return A3($author$project$PageSvg$placeCardF, nwide, fx, fy);
+	});
+var $author$project$SvgMaker$placeCard = A6($author$project$PageSvg$placeCarder, 3, 0, 210, 297, 50, 70);
+var $author$project$SvgMaker$listPage = function (l) {
+	return $author$project$PageSvg$a4Page(
+		A2(
+			$elm$core$String$join,
+			'\n',
+			A2(
+				$elm$core$List$indexedMap,
+				F2(
+					function (n, c) {
+						return A2($author$project$SvgMaker$placeCard, n, c);
+					}),
+				A2($elm$core$List$map, $author$project$CardSvg$front, l))));
+};
+var $elm$json$Json$Encode$object = function (pairs) {
+	return _Json_wrap(
+		A3(
+			$elm$core$List$foldl,
+			F2(
+				function (_v0, obj) {
+					var k = _v0.a;
+					var v = _v0.b;
+					return A3(_Json_addField, k, v, obj);
+				}),
+			_Json_emptyObject(_Utils_Tuple0),
+			pairs));
+};
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $author$project$SvgMaker$log = _Platform_outgoingPort(
+	'log',
+	function ($) {
+		return $elm$json$Json$Encode$object(
+			_List_fromArray(
+				[
+					_Utils_Tuple2(
+					'content',
+					$elm$json$Json$Encode$string($.content)),
+					_Utils_Tuple2(
+					'fname',
+					$elm$json$Json$Encode$string($.fname))
+				]));
+	});
 var $author$project$MLists$spreadItem = F2(
 	function (_v0, l) {
 		spreadItem:
@@ -3750,36 +3827,311 @@ var $author$project$Cards$starterDeck = _List_fromArray(
 		_Utils_Tuple2($author$project$Cards$horse, 2),
 		_Utils_Tuple2($author$project$Cards$bow, 2)
 	]);
-var $author$project$SvgMaker$starterPage = A2(
-	$elm$core$String$join,
-	'\n',
+var $author$project$Cards$Discard = function (a) {
+	return {$: 'Discard', a: a};
+};
+var $author$project$Cards$TWork = {$: 'TWork'};
+var $author$project$Cards$saw = A4(
+	$author$project$Cards$Card,
+	'Saw',
+	$author$project$Cards$TWork,
+	A2($author$project$Cards$Pay, $author$project$Cards$Iron, 1),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Cards$Job,
+			A2(
+				$author$project$Cards$In,
+				$author$project$Cards$Forest,
+				$author$project$Cards$Discard(1)),
+			_List_fromArray(
+				[
+					A2($author$project$Cards$Gain, $author$project$Cards$Wood, 3)
+				]))
+		]));
+var $author$project$Cards$freeAttack = function (a) {
+	return A2(
+		$author$project$Cards$Job,
+		$author$project$Cards$Free,
+		_List_fromArray(
+			[
+				$author$project$Cards$Attack(a)
+			]));
+};
+var $author$project$Cards$Defend = function (a) {
+	return {$: 'Defend', a: a};
+};
+var $author$project$Cards$freeDefend = function (d) {
+	return A2(
+		$author$project$Cards$Job,
+		$author$project$Cards$Free,
+		_List_fromArray(
+			[
+				$author$project$Cards$Defend(d)
+			]));
+};
+var $author$project$Cards$sword = A4(
+	$author$project$Cards$Card,
+	'Sword',
+	$author$project$Cards$TAttack,
 	A2(
-		$elm$core$List$indexedMap,
-		F2(
-			function (n, c) {
-				return A2($author$project$SvgMaker$a444, n, c);
-			}),
+		$author$project$Cards$payEq,
+		1,
+		_List_fromArray(
+			[$author$project$Cards$Iron, $author$project$Cards$Wood])),
+	_List_fromArray(
+		[
+			$author$project$Cards$freeAttack(5),
+			$author$project$Cards$freeDefend(1)
+		]));
+var $author$project$Cards$payL = function (l) {
+	return $author$project$Cards$And(
 		A2(
 			$elm$core$List$map,
-			$author$project$CardSvg$front,
-			$author$project$MLists$spreadL($author$project$Cards$starterDeck))));
-var $elm$json$Json$Decode$succeed = _Json_succeed;
+			function (_v0) {
+				var r = _v0.a;
+				var n = _v0.b;
+				return A2($author$project$Cards$Pay, r, n);
+			},
+			l));
+};
+var $author$project$Cards$woodMove = F2(
+	function (w, d) {
+		return A2(
+			$author$project$Cards$Job,
+			A2($author$project$Cards$Pay, $author$project$Cards$Wood, w),
+			_List_fromArray(
+				[
+					$author$project$Cards$Movement(d)
+				]));
+	});
+var $author$project$Cards$train = A4(
+	$author$project$Cards$Card,
+	'Train',
+	$author$project$Cards$TMove,
+	$author$project$Cards$payL(
+		_List_fromArray(
+			[
+				_Utils_Tuple2($author$project$Cards$Iron, 3),
+				_Utils_Tuple2($author$project$Cards$Wood, 1)
+			])),
+	_List_fromArray(
+		[
+			A2($author$project$Cards$woodMove, 1, 3),
+			A2($author$project$Cards$scrapFor, $author$project$Cards$Wood, 5)
+		]));
+var $author$project$Cards$twinSwords = A4(
+	$author$project$Cards$Card,
+	'Twin Swords',
+	$author$project$Cards$TAttack,
+	$author$project$Cards$payL(
+		_List_fromArray(
+			[
+				_Utils_Tuple2($author$project$Cards$Iron, 3),
+				_Utils_Tuple2($author$project$Cards$Wood, 2)
+			])),
+	_List_fromArray(
+		[
+			$author$project$Cards$freeAttack(12),
+			$author$project$Cards$freeDefend(5)
+		]));
+var $author$project$Cards$Draw = function (a) {
+	return {$: 'Draw', a: a};
+};
+var $author$project$Cards$wagon = A4(
+	$author$project$Cards$Card,
+	'Wagon',
+	$author$project$Cards$TMove,
+	A2($author$project$Cards$Pay, $author$project$Cards$Wood, 2),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Cards$Job,
+			$author$project$Cards$ScrapC,
+			_List_fromArray(
+				[
+					A2($author$project$Cards$Gain, $author$project$Cards$Wood, 2),
+					A2($author$project$Cards$Gain, $author$project$Cards$Food, 2),
+					$author$project$Cards$Draw(2)
+				])),
+			A2(
+			$author$project$Cards$Job,
+			$author$project$Cards$Free,
+			_List_fromArray(
+				[
+					A2($author$project$Cards$Gain, $author$project$Cards$Wood, 1),
+					A2($author$project$Cards$Gain, $author$project$Cards$Food, 1),
+					$author$project$Cards$Draw(1)
+				]))
+		]));
+var $author$project$Cards$tradeRow = _List_fromArray(
+	[
+		_Utils_Tuple2($author$project$Cards$pan, 3),
+		_Utils_Tuple2($author$project$Cards$saw, 2),
+		_Utils_Tuple2($author$project$Cards$horse, 2),
+		_Utils_Tuple2($author$project$Cards$twinSwords, 2),
+		_Utils_Tuple2($author$project$Cards$wagon, 3),
+		_Utils_Tuple2($author$project$Cards$sword, 3),
+		_Utils_Tuple2($author$project$Cards$train, 2),
+		_Utils_Tuple2($author$project$Cards$bow, 3)
+	]);
+var $author$project$SvgMaker$starterList = $author$project$MLists$spreadL(
+	_Utils_ap($author$project$Cards$starterDeck, $author$project$Cards$tradeRow));
+var $elm$core$List$takeReverse = F3(
+	function (n, list, kept) {
+		takeReverse:
+		while (true) {
+			if (n <= 0) {
+				return kept;
+			} else {
+				if (!list.b) {
+					return kept;
+				} else {
+					var x = list.a;
+					var xs = list.b;
+					var $temp$n = n - 1,
+						$temp$list = xs,
+						$temp$kept = A2($elm$core$List$cons, x, kept);
+					n = $temp$n;
+					list = $temp$list;
+					kept = $temp$kept;
+					continue takeReverse;
+				}
+			}
+		}
+	});
+var $elm$core$List$takeTailRec = F2(
+	function (n, list) {
+		return $elm$core$List$reverse(
+			A3($elm$core$List$takeReverse, n, list, _List_Nil));
+	});
+var $elm$core$List$takeFast = F3(
+	function (ctr, n, list) {
+		if (n <= 0) {
+			return _List_Nil;
+		} else {
+			var _v0 = _Utils_Tuple2(n, list);
+			_v0$1:
+			while (true) {
+				_v0$5:
+				while (true) {
+					if (!_v0.b.b) {
+						return list;
+					} else {
+						if (_v0.b.b.b) {
+							switch (_v0.a) {
+								case 1:
+									break _v0$1;
+								case 2:
+									var _v2 = _v0.b;
+									var x = _v2.a;
+									var _v3 = _v2.b;
+									var y = _v3.a;
+									return _List_fromArray(
+										[x, y]);
+								case 3:
+									if (_v0.b.b.b.b) {
+										var _v4 = _v0.b;
+										var x = _v4.a;
+										var _v5 = _v4.b;
+										var y = _v5.a;
+										var _v6 = _v5.b;
+										var z = _v6.a;
+										return _List_fromArray(
+											[x, y, z]);
+									} else {
+										break _v0$5;
+									}
+								default:
+									if (_v0.b.b.b.b && _v0.b.b.b.b.b) {
+										var _v7 = _v0.b;
+										var x = _v7.a;
+										var _v8 = _v7.b;
+										var y = _v8.a;
+										var _v9 = _v8.b;
+										var z = _v9.a;
+										var _v10 = _v9.b;
+										var w = _v10.a;
+										var tl = _v10.b;
+										return (ctr > 1000) ? A2(
+											$elm$core$List$cons,
+											x,
+											A2(
+												$elm$core$List$cons,
+												y,
+												A2(
+													$elm$core$List$cons,
+													z,
+													A2(
+														$elm$core$List$cons,
+														w,
+														A2($elm$core$List$takeTailRec, n - 4, tl))))) : A2(
+											$elm$core$List$cons,
+											x,
+											A2(
+												$elm$core$List$cons,
+												y,
+												A2(
+													$elm$core$List$cons,
+													z,
+													A2(
+														$elm$core$List$cons,
+														w,
+														A3($elm$core$List$takeFast, ctr + 1, n - 4, tl)))));
+									} else {
+										break _v0$5;
+									}
+							}
+						} else {
+							if (_v0.a === 1) {
+								break _v0$1;
+							} else {
+								break _v0$5;
+							}
+						}
+					}
+				}
+				return list;
+			}
+			var _v1 = _v0.b;
+			var x = _v1.a;
+			return _List_fromArray(
+				[x]);
+		}
+	});
+var $elm$core$List$take = F2(
+	function (n, list) {
+		return A3($elm$core$List$takeFast, 0, n, list);
+	});
+var $author$project$SvgMaker$update = F2(
+	function (ms, mod) {
+		if (ms.$ === 'Next') {
+			return _Utils_Tuple2(
+				_Utils_update(
+					mod,
+					{pos: mod.pos + 16}),
+				function () {
+					var _v1 = A2(
+						$elm$core$List$take,
+						16,
+						A2($elm$core$List$drop, mod.pos, $author$project$SvgMaker$starterList));
+					if (!_v1.b) {
+						return $elm$core$Platform$Cmd$none;
+					} else {
+						var l = _v1;
+						return $author$project$SvgMaker$log(
+							A2(
+								$author$project$SvgMaker$Writer,
+								'out' + ($elm$core$String$fromInt(mod.pos) + '.svg'),
+								$author$project$SvgMaker$listPage(l)));
+					}
+				}());
+		} else {
+			return _Utils_Tuple2(mod, $elm$core$Platform$Cmd$none);
+		}
+	});
 var $elm$core$Platform$worker = _Platform_worker;
 var $author$project$SvgMaker$main = $elm$core$Platform$worker(
-	{
-		init: function (_v0) {
-			return _Utils_Tuple2(
-				0,
-				$author$project$SvgMaker$log(
-					$author$project$PageSvg$a4Page($author$project$SvgMaker$starterPage)));
-		},
-		subscriptions: function (_v1) {
-			return $elm$core$Platform$Sub$none;
-		},
-		update: F2(
-			function (msg, model) {
-				return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
-			})
-	});
+	{init: $author$project$SvgMaker$init, subscriptions: $author$project$SvgMaker$subscriptions, update: $author$project$SvgMaker$update});
 _Platform_export({'SvgMaker':{'init':$author$project$SvgMaker$main(
 	$elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)}});}(this));
