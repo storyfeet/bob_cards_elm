@@ -1,6 +1,7 @@
 module CardSvg exposing (..)
 import PageSvg exposing (..)
 import Cards exposing (..)
+import Job exposing (..)
 
 
 front :  Card -> String
@@ -8,6 +9,7 @@ front card =
     String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "none" 0]
     , rect 5 5 40 60 [flNoStk "White" , prop "opacity" "0.5" ]
     , text "Arial" 10 [xy 20 10,flStk "Black" "yellow" 0.5,strokeFirst,txCenter] card.name
+    , vcost 40 5 card.cost
     , jobs 55 card.jobs
     ]
 
@@ -39,13 +41,24 @@ cost x y c =
         Or (h::t) -> cost x y h ++ cost (x + 4 + costLen h)  y (Or t)
         And [] -> ""
         And (h::t) -> cost x y h ++ cost (x + costLen h) y (And t)
-        Discard n -> jobCard x y "yellow" "dsc" n 
+        Discard n -> jobCard x y "blue" "dis" n 
         Pay r n -> resource x y r n 
-        ScrapC  -> jobCard x y "red" "scp" 1
+        ScrapC  -> jobCard x y "red" "scp" (N 1)
+        Starter n -> jobStar x y "white"  n
         Free -> ""
             
+vcost : Float -> Float -> Cost -> String
+vcost x y c = 
+    case c of 
+        In p inner -> place x y p ++ vcost x (y+10) inner
+        Or [] -> ""
+        Or (ic::[]) -> vcost x y ic
+        Or (h::t) -> vcost x y h ++ vcost x (y + 4 + costLen h)   (Or t)
+        And [] -> ""
+        And (h::t) -> vcost x y h ++ vcost x (y + costLen h) (And t)
+        _ -> cost x y c
 
-resource : Float -> Float ->Resource -> Int -> String
+resource : Float -> Float ->Resource -> JobNum -> String
 resource x y r n =
     String.join "\n" 
         [ rect x y 10 10 [flStk (resourceColor r) "black" 1] 
@@ -70,33 +83,41 @@ benefit x y b =
         Attack n -> jobCircle x y "red" "Atk" n
         Defend n -> jobCircle x y "Grey" "Dfd" n
         Gain r n -> jobRect x y (resourceColor r) (resourceShortName r) n
+        Draw n -> jobCard x y "Green" "+" n
         _ -> ""
             
         
-jobCard : Float -> Float -> String -> String -> Int -> String
+jobCard : Float -> Float -> String -> String -> JobNum -> String
 jobCard x y col tx n =
     String.join "\n" 
-         [ rect x y 6 10 
+         [ rect (x+2) y 6 10 
             [flStk col "black" 0
             , rxy 1 1
-            , rotate 30 (x + 3) (y+5 )   
+            , rotate 30 (x + 5) (y+5 )   
             ]        
         , jobTextn x y tx n
         ]
 
         
-jobCircle : Float -> Float -> String -> String -> Int -> String
+jobCircle : Float -> Float -> String -> String -> JobNum -> String
 jobCircle x y col tx n = 
     String.join "\n" 
         [ circle (x+5) (y+5) 5 [flStk col "Black" 1 ]
         , jobTextn x y tx n
         ]
 
-jobRect : Float -> Float -> String -> String -> Int -> String
+jobRect : Float -> Float -> String -> String -> JobNum -> String
 jobRect x y col tx n = 
     String.join "\n" 
         [ rect x y 10 10 [flStk col "Black" 1 ]
         , jobTextn x y tx n
+        ]
+
+jobStar : Float -> Float -> String ->  JobNum -> String
+jobStar x y col n =
+    String.join "\n"
+        [ polygon (starPoints x y 10 10) [flStk col "black" 1]
+        , jobText (x+5) (y + 6) (jnum n)
         ]
 
 place : Float -> Float -> Place ->  String
@@ -124,11 +145,32 @@ hexPoints x y w h =
         , x , y1
         ]
 
-jobTextn : Float -> Float -> String ->Int -> String
+starPoints : Float -> Float -> Float -> Float ->  List Float 
+starPoints x y w h =
+    let 
+         xx = (\n -> x + w * n * 0.1)
+         yy = (\n -> y + h * n * 0.1)
+    in
+        [ xx 5 , y  -- top
+        , xx 6 , yy 3
+        , xx 10 , yy 3 -- top right
+        , xx 7 , yy 7
+        , xx 6 , yy 10 -- bottom right
+        , xx 5 , yy 8
+        , xx 4 , yy 10 -- bottom left
+        , xx 3 , yy 7
+        , x , yy 3 -- top left
+        , xx 4, yy 3
+        ]
+
+
+
+
+jobTextn : Float -> Float -> String ->JobNum -> String
 jobTextn x y tx n = 
     String.join "\n" 
         [ jobText (x + 5) (y + 4) (tx)
-        , jobText (x + 5) (y + 9) (String.fromInt n)
+        , jobText (x + 5) (y + 9) (jnum n)
         ]
 
 jobText : Float -> Float -> String -> String

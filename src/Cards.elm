@@ -2,6 +2,7 @@ module Cards exposing (..)
 import Html exposing(..)
 import Html.Attributes exposing(..)
 import Css exposing (..)
+import Job exposing (..)
 
 type alias Card =
     { name : String
@@ -21,34 +22,6 @@ type CType
 
 
 
-type alias Job =
-    { req : Cost
-    , for : List Benefit
-    }
-
-
-type Place 
-    = Water
-    | Forest
-    | Prarie
-    | Village
-    | Mountain
-    | River
-
-type Resource  
-    = Gold
-    | Wood
-    | Iron
-    | Food
-
-type Cost
-    = In Place Cost
-    | Or (List Cost)
-    | And (List Cost)
-    | Discard Int
-    | Pay Resource Int
-    | ScrapC
-    | Free
 
 
 view : Card -> Html m
@@ -78,6 +51,7 @@ viewCost cst =
     Discard n -> viewDiscard n
     Pay r n -> viewRect (resourceColor r) (numItems (resourceShortName r) n )
     ScrapC -> viewEllipse "pink" [text "Scrp"]
+    Starter n -> viewEllipse "white" [text ("S" ++ jnum n)]
     Free -> div [] [] 
 
 
@@ -94,21 +68,21 @@ viewBenefit bn =
 
 
 
-numItems : String -> Int -> List (Html m)
+numItems : String -> JobNum -> List (Html m)
 numItems s n =
     [ text s
     , br [] []
-    , String.fromInt n |> text 
+    , jnum n |> text 
     ]
-viewDiscard : Int -> Html m
+viewDiscard : JobNum -> Html m
 viewDiscard n = 
     div (cardOuterStyle "red"|> itemStyle) 
-    [ div (cardInnerStyle  25 35) []  ,text ("-"++ String.fromInt n)]
+    [ div (cardInnerStyle  25 35) []  ,text ("-"++ jnum n)]
 
-viewDraw : Int -> Html m
+viewDraw : JobNum -> Html m
 viewDraw n = 
     div (cardOuterStyle "Green"|> itemStyle) 
-    [ div (cardInnerStyle  25 35) []  ,text ("+"++ String.fromInt n)]
+    [ div (cardInnerStyle  25 35) []  ,text ("+"++ jnum n)]
 
 resourceShortName : Resource -> String
 resourceShortName r = 
@@ -182,44 +156,29 @@ viewRect col inner =
 
 
 
-payL : List (Resource, Int) -> Cost
-payL l =
-    l |> List.map (\(r,n) -> Pay r n) |> And
 
-payEq : Int ->  List Resource -> Cost
-payEq n l =
-    l |> List.map (\r-> Pay r n) |> And
-
-type Benefit
-    = Movement Int
-    | Attack Int
-    | Defend Int
-    | Gain Resource Int
-    | Gather Resource Int
-    | Draw Int
-    | ScrapB Int
 
 
 -- JOBS
 riverGather : Int ->Job
-riverGather n = Job (In River Free) [Gather Gold n]
+riverGather n = Job (In River Free) [Gather Gold (N n)]
 
 foodMove : Int -> Int -> Job
-foodMove f d = Job (Pay Food f) [Movement d]
+foodMove f d = Job (Pay Food (N f)) [Movement (N d)]
 
 woodMove : Int -> Int -> Job
-woodMove w d = Job (Pay Wood w) [Movement d]
+woodMove w d = Job (pay Wood w) [Movement (N d) ]
 
 
 scrapFor : Resource -> Int -> Job
 scrapFor r n =
-    Job ScrapC [Gain r n]
+    Job ScrapC [gain r n]
 
 
 freeAttack : Int -> Job
-freeAttack a = Job Free [Attack a]
+freeAttack a = Job Free [attack a]
 freeDefend : Int -> Job
-freeDefend d = Job Free [Defend d]
+freeDefend d = Job Free [defend d]
 
 
 -- Decks
@@ -241,8 +200,15 @@ tradeRow =
 
 -- ACTUAL CARDS
 
+--STARTER CARDS
+
 pan : Card
-pan = Card "Pan" TGold (Pay Iron 1) [riverGather 1]
+pan = Card "Pan" TGold (Or [Starter (N 2), In Village Free]) [riverGather 1]
+
+boots : Card
+boots = Card "Boots" TMove (Starter (N 2)) 
+    [foodMove 1 1]
+
 
 
 twinSwords:Card
@@ -252,19 +218,19 @@ twinSwords = Card "Twin Swords" TAttack
 
 shield: Card
 shield = Card "Shield" TDefence
-    (Pay Iron 4)
+    (pay Iron 4)
     [freeDefend 10,freeAttack 5]
 
-horse:Card
+horse: Card
 horse = Card "Horse" TMove
-    (Or [In Prarie (Pay Food 3), In Village (Pay Gold 1)])
-    [foodMove 3 1, scrapFor Food 5]
+    (Or [In Prarie (pay Food 3), In Village (pay Gold 1)])
+    [foodMove 1 2, scrapFor Food 5]
 
 wagon:Card
 wagon = Card "Wagon" TMove
-    (Pay Wood 2)
-    [ Job ScrapC [Gain Wood 2,Gain Food 2,Draw 2]
-    , Job Free [Gain Wood 1, Gain Food 1, Draw 1]
+    (pay Wood 2)
+    [ Job ScrapC [gain Wood 2,gain Food 2,draw 2]
+    , Job Free [gain Wood 1, gain Food 1, draw 1]
     ]
 
 sword:Card
@@ -272,7 +238,7 @@ sword = Card "Sword" TAttack
     (payEq 1 [Iron,Wood])
     [freeAttack 5 , freeDefend 1]
 
-train:Card
+train : Card
 train = Card "Train" TMove
     (payL [(Iron,3),(Wood,1)])
     [woodMove 1 3,scrapFor Wood 5 ] 
@@ -281,14 +247,14 @@ train = Card "Train" TMove
 bow:Card
 bow = Card "Bow" TAttack
     (payEq 1 [Wood,Iron])
-    [Job (In Forest (Pay Wood 1)) [Gain Food 3]
-    ,Job (Pay Wood 1) [Attack 3]
+    [Job (In Forest (pay Wood 1)) [gain Food 3]
+    ,Job (pay Wood 1) [attack 3]
     ]
 
 saw:Card
 saw = Card "Saw" TWork 
-    (Pay Iron 1) 
-    [ Job (In Forest (Discard 1)) [Gain Wood 3] 
+    ( pay Iron 1) 
+    [ Job (In Forest (discard 1)) [gain Wood 3] 
     ]
 
 
