@@ -31,9 +31,9 @@ job y jb =
 
         (ax,ay) = if splitJob jb then
                     if clen > blen then
-                        (3 + clen ,costY)
-                    else 
                         (35 - blen , y)
+                    else 
+                        (3 + clen ,costY)
                 else
                     ((costLen jb.req + (45 - blen) - 3)*0.5  ,y)
 
