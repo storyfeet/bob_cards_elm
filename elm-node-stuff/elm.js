@@ -2952,6 +2952,9 @@ var $author$project$PageSvg$flStk = F3(
 var $author$project$PageSvg$flNoStk = function (f) {
 	return A3($author$project$PageSvg$flStk, f, 'none', 0);
 };
+var $author$project$CardSvg$benLen = function (l) {
+	return $elm$core$List$length(l) * 10;
+};
 var $author$project$Job$jnum = function (j) {
 	if (j.$ === 'N') {
 		var n = j.a;
@@ -3211,8 +3214,19 @@ var $author$project$CardSvg$benefit = F3(
 			case 'Draw':
 				var n = b.a;
 				return A5($author$project$CardSvg$jobCard, x, y, 'Green', '+', n);
+			case 'Gather':
+				var r = b.a;
+				var n = b.b;
+				return A5(
+					$author$project$CardSvg$jobCircle,
+					x,
+					y,
+					$author$project$Cards$resourceColor(r),
+					$author$project$Cards$resourceShortName(r),
+					n);
 			default:
-				return '';
+				var n = b.a;
+				return A5($author$project$CardSvg$jobCard, x, y, 'red', 'scp', n);
 		}
 	});
 var $author$project$CardSvg$benefits = F3(
@@ -3585,9 +3599,65 @@ var $author$project$CardSvg$cost = F3(
 			}
 		}
 	});
+var $author$project$CardSvg$jobArrowPoints = F4(
+	function (x, y, w, h) {
+		var yy = function (n) {
+			return y + ((h * n) * 0.1);
+		};
+		var xx = function (n) {
+			return x + ((w * n) * 0.1);
+		};
+		return _List_fromArray(
+			[
+				x,
+				yy(5),
+				xx(6),
+				yy(4),
+				xx(5),
+				yy(2),
+				xx(10),
+				yy(5),
+				xx(5),
+				yy(8),
+				xx(6),
+				yy(6)
+			]);
+	});
+var $author$project$PageSvg$strokeFirst = A2($author$project$PageSvg$prop, 'style', 'paint-order:stroke');
+var $author$project$CardSvg$jobArrow = F2(
+	function (x, y) {
+		return A2(
+			$author$project$PageSvg$polygon,
+			A4($author$project$CardSvg$jobArrowPoints, x, y, 7, 7),
+			_List_fromArray(
+				[
+					A3($author$project$PageSvg$flStk, 'red', 'white', 0.5),
+					A2($author$project$PageSvg$prop, 'class', 'arrow'),
+					$author$project$PageSvg$strokeFirst
+				]));
+	});
+var $author$project$CardSvg$splitJob = function (j) {
+	return ($author$project$CardSvg$benLen(j._for) + $author$project$CardSvg$costLen(j.req)) > 31;
+};
 var $author$project$CardSvg$job = F2(
 	function (y, jb) {
-		return A3($author$project$CardSvg$cost, 5, y, jb.req) + ('\n' + A3($author$project$CardSvg$benefits, 45, y, jb._for));
+		var costY = $author$project$CardSvg$splitJob(jb) ? (y - 10) : y;
+		var clen = $author$project$CardSvg$costLen(jb.req);
+		var blen = $author$project$CardSvg$benLen(jb._for);
+		var _v0 = $author$project$CardSvg$splitJob(jb) ? ((_Utils_cmp(clen, blen) > 0) ? _Utils_Tuple2(3 + clen, costY) : _Utils_Tuple2(35 - blen, y)) : _Utils_Tuple2(
+			(($author$project$CardSvg$costLen(jb.req) + (45 - blen)) - 3) * 0.5,
+			y);
+		var ax = _v0.a;
+		var ay = _v0.b;
+		return A2(
+			$elm$core$String$join,
+			'\n',
+			_List_fromArray(
+				[
+					A3($author$project$CardSvg$cost, 5, costY, jb.req),
+					A2($author$project$CardSvg$jobArrow, ax, ay),
+					A3($author$project$CardSvg$benefits, 45, y, jb._for)
+				]));
 	});
 var $author$project$CardSvg$jobs = F2(
 	function (y, l) {
@@ -3598,10 +3668,12 @@ var $author$project$CardSvg$jobs = F2(
 			var t = l.b;
 			return _Utils_ap(
 				A2($author$project$CardSvg$job, y, h),
-				A2($author$project$CardSvg$jobs, y - 10, t));
+				A2(
+					$author$project$CardSvg$jobs,
+					y - ($author$project$CardSvg$splitJob(h) ? 20 : 10),
+					t));
 		}
 	});
-var $author$project$PageSvg$strokeFirst = A2($author$project$PageSvg$prop, 'style', 'paint-order:stroke');
 var $author$project$CardSvg$vcost = F3(
 	function (x, y, c) {
 		vcost:
@@ -3958,7 +4030,7 @@ var $author$project$Cards$horse = A4(
 			])),
 	_List_fromArray(
 		[
-			A2($author$project$Cards$foodMove, 1, 1),
+			A2($author$project$Cards$foodMove, 1, 2),
 			A2($author$project$Cards$scrapFor, $author$project$Job$Food, 5)
 		]));
 var $author$project$Job$Free = {$: 'Free'};
@@ -3971,18 +4043,19 @@ var $author$project$Job$Gather = F2(
 		return {$: 'Gather', a: a, b: b};
 	});
 var $author$project$Job$River = {$: 'River'};
-var $author$project$Cards$riverGather = function (n) {
-	return A2(
-		$author$project$Job$Job,
-		A2($author$project$Job$In, $author$project$Job$River, $author$project$Job$Free),
-		_List_fromArray(
-			[
-				A2(
-				$author$project$Job$Gather,
-				$author$project$Job$Gold,
-				$author$project$Job$N(n))
-			]));
-};
+var $author$project$Cards$riverGather = F2(
+	function (r, n) {
+		return A2(
+			$author$project$Job$Job,
+			A2($author$project$Job$In, $author$project$Job$River, $author$project$Job$Free),
+			_List_fromArray(
+				[
+					A2(
+					$author$project$Job$Gather,
+					r,
+					$author$project$Job$N(n))
+				]));
+	});
 var $author$project$Cards$pan = A4(
 	$author$project$Cards$Card,
 	'Pan',
@@ -3996,7 +4069,7 @@ var $author$project$Cards$pan = A4(
 			])),
 	_List_fromArray(
 		[
-			$author$project$Cards$riverGather(1)
+			A2($author$project$Cards$riverGather, $author$project$Job$Gold, 1)
 		]));
 var $author$project$Cards$starterDeck = _List_fromArray(
 	[

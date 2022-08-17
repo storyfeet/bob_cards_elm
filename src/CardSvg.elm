@@ -17,11 +17,33 @@ jobs : Float -> List Job -> String
 jobs y l =
     case l of 
         [] -> ""
-        h::t -> job y h ++ jobs (y - 10 ) t
+        h::t -> job y h ++ jobs (y - (if splitJob h then 20 else 10) ) t
+
+splitJob : Job -> Bool 
+splitJob j = benLen j.for + costLen j.req > 31  
 
 job : Float -> Job -> String
 job y jb =
-    cost 5 y jb.req ++ "\n" ++ benefits 45 y jb.for
+    let 
+        clen = costLen jb.req
+        blen = benLen jb.for
+        costY = if splitJob jb then y - 10 else y
+
+        (ax,ay) = if splitJob jb then
+                    if clen > blen then
+                        (3 + clen ,costY)
+                    else 
+                        (35 - blen , y)
+                else
+                    ((costLen jb.req + (45 - blen) - 3)*0.5  ,y)
+
+    in 
+        String.join "\n" 
+            [cost 5 costY jb.req
+            , jobArrow ax ay 
+            , benefits 45 y jb.for
+            ]
+
 
 costLen : Cost -> Float
 costLen c =
@@ -84,8 +106,11 @@ benefit x y b =
         Defend n -> jobCircle x y "Grey" "Dfd" n
         Gain r n -> jobRect x y (resourceColor r) (resourceShortName r) n
         Draw n -> jobCard x y "Green" "+" n
-        _ -> ""
+        Gather r n -> jobCircle x y (resourceColor r) (resourceShortName r) n
+        ScrapB n -> jobCard x y "red" "scp" n
             
+benLen : List Benefit -> Float
+benLen l = toFloat (List.length l ) * 10
         
 jobCard : Float -> Float -> String -> String -> JobNum -> String
 jobCard x y col tx n =
@@ -98,6 +123,10 @@ jobCard x y col tx n =
         , jobTextn x y tx n
         ]
 
+
+jobArrow : Float -> Float -> String 
+jobArrow x y =
+    polygon (jobArrowPoints x y 7 7) [flStk "red" "white" 0.5,prop "class" "arrow",strokeFirst]
         
 jobCircle : Float -> Float -> String -> String -> JobNum -> String
 jobCircle x y col tx n = 
@@ -105,6 +134,7 @@ jobCircle x y col tx n =
         [ circle (x+5) (y+5) 5 [flStk col "Black" 1 ]
         , jobTextn x y tx n
         ]
+
 
 jobRect : Float -> Float -> String -> String -> JobNum -> String
 jobRect x y col tx n = 
@@ -163,6 +193,19 @@ starPoints x y w h =
         , xx 4, yy 3
         ]
 
+jobArrowPoints : Float -> Float -> Float -> Float -> List Float
+jobArrowPoints x y w h =
+    let 
+         xx = (\n -> x + w * n * 0.1)
+         yy = (\n -> y + h * n * 0.1)
+    in 
+        [ x , yy 5 
+        , xx 6 , yy 4
+        , xx 5 , yy 2
+        , xx 10 , yy 5
+        , xx 5 , yy 8
+        , xx 6 , yy 6
+        ]
 
 
 

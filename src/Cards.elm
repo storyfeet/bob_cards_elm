@@ -160,8 +160,8 @@ viewRect col inner =
 
 
 -- JOBS
-riverGather : Int ->Job
-riverGather n = Job (In River Free) [Gather Gold (N n)]
+riverGather : Resource -> Int ->Job
+riverGather r n = Job (In River Free) [Gather r (N n)]
 
 foodMove : Int -> Int -> Job
 foodMove f d = Job (Pay Food (N f)) [Movement (N d)]
@@ -203,7 +203,7 @@ tradeRow =
 --STARTER CARDS
 
 pan : Card
-pan = Card "Pan" TGold (Or [Starter (N 2), In Village Free]) [riverGather 1]
+pan = Card "Pan" TGold (Or [Starter (N 2), In Village Free]) [riverGather Gold 1]
 
 boots : Card
 boots = Card "Boots" TMove (Starter (N 2)) 
