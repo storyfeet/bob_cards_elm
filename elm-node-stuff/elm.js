@@ -3028,6 +3028,18 @@ var $author$project$CardSvg$jobTextn = F4(
 					$author$project$Job$jnum(n))
 				]));
 	});
+var $author$project$PageSvg$strokeFirst = A2($author$project$PageSvg$prop, 'style', 'paint-order:stroke');
+var $author$project$CardSvg$narrowStk = F2(
+	function (f, s) {
+		return A2(
+			$elm$core$String$join,
+			' ',
+			_List_fromArray(
+				[
+					A3($author$project$PageSvg$flStk, f, s, 0.5),
+					$author$project$PageSvg$strokeFirst
+				]));
+	});
 var $author$project$PageSvg$etag = F2(
 	function (name, propl) {
 		return '<' + (name + (' ' + (A2($elm$core$String$join, ' ', propl) + ' />')));
@@ -3091,7 +3103,7 @@ var $author$project$CardSvg$jobCard = F5(
 					10,
 					_List_fromArray(
 						[
-							A3($author$project$PageSvg$flStk, col, 'black', 0),
+							A2($author$project$CardSvg$narrowStk, col, 'white'),
 							A2($author$project$PageSvg$rxy, 1, 1),
 							A3($author$project$PageSvg$rotate, 30, x + 5, y + 5)
 						])),
@@ -3140,7 +3152,7 @@ var $author$project$CardSvg$jobCircle = F5(
 					5,
 					_List_fromArray(
 						[
-							A3($author$project$PageSvg$flStk, col, 'Black', 1)
+							A2($author$project$CardSvg$narrowStk, col, 'Black')
 						])),
 					A4($author$project$CardSvg$jobTextn, x, y, tx, n)
 				]));
@@ -3160,7 +3172,7 @@ var $author$project$CardSvg$jobRect = F5(
 					10,
 					_List_fromArray(
 						[
-							A3($author$project$PageSvg$flStk, col, 'Black', 1)
+							A2($author$project$CardSvg$narrowStk, col, 'Black')
 						])),
 					A4($author$project$CardSvg$jobTextn, x, y, tx, n)
 				]));
@@ -3390,16 +3402,16 @@ var $author$project$CardSvg$starPoints = F4(
 				yy(3),
 				xx(10),
 				yy(3),
-				xx(7),
-				yy(7),
-				xx(6),
+				xx(6.5),
+				yy(6),
+				xx(8),
 				yy(10),
 				xx(5),
 				yy(8),
-				xx(4),
+				xx(2),
 				yy(10),
-				xx(3),
-				yy(7),
+				xx(3.5),
+				yy(6),
 				x,
 				yy(3),
 				xx(4),
@@ -3418,7 +3430,7 @@ var $author$project$CardSvg$jobStar = F4(
 					A4($author$project$CardSvg$starPoints, x, y, 10, 10),
 					_List_fromArray(
 						[
-							A3($author$project$PageSvg$flStk, col, 'black', 1)
+							A2($author$project$CardSvg$narrowStk, col, 'black')
 						])),
 					A3(
 					$author$project$CardSvg$jobText,
@@ -3481,11 +3493,10 @@ var $author$project$CardSvg$place = F3(
 					A4($author$project$CardSvg$hexPoints, x, y, 10, 10),
 					_List_fromArray(
 						[
-							A3(
-							$author$project$PageSvg$flStk,
+							A2(
+							$author$project$CardSvg$narrowStk,
 							$author$project$Cards$placeColor(p),
-							'black',
-							1)
+							'black')
 						])),
 					A3(
 					$author$project$CardSvg$jobText,
@@ -3509,11 +3520,10 @@ var $author$project$CardSvg$resource = F4(
 					10,
 					_List_fromArray(
 						[
-							A3(
-							$author$project$PageSvg$flStk,
+							A2(
+							$author$project$CardSvg$narrowStk,
 							$author$project$Cards$resourceColor(r),
-							'black',
-							1)
+							'black')
 						])),
 					A4(
 					$author$project$CardSvg$jobTextn,
@@ -3623,7 +3633,6 @@ var $author$project$CardSvg$jobArrowPoints = F4(
 				yy(6)
 			]);
 	});
-var $author$project$PageSvg$strokeFirst = A2($author$project$PageSvg$prop, 'style', 'paint-order:stroke');
 var $author$project$CardSvg$jobArrow = F2(
 	function (x, y) {
 		return A2(
@@ -3631,9 +3640,63 @@ var $author$project$CardSvg$jobArrow = F2(
 			A4($author$project$CardSvg$jobArrowPoints, x, y, 7, 7),
 			_List_fromArray(
 				[
-					A3($author$project$PageSvg$flStk, 'red', 'white', 0.5),
-					A2($author$project$PageSvg$prop, 'class', 'arrow'),
-					$author$project$PageSvg$strokeFirst
+					A2($author$project$CardSvg$narrowStk, 'red', 'white'),
+					A2($author$project$PageSvg$prop, 'class', 'arrow')
+				]));
+	});
+var $author$project$CardSvg$jobCornerPath = F4(
+	function (x, y, w, h) {
+		var yy = function (n) {
+			return $elm$core$String$fromFloat(y + ((h * n) * 0.1));
+		};
+		var xx = function (n) {
+			return $elm$core$String$fromFloat(x + ((w * n) * 0.1));
+		};
+		return _List_fromArray(
+			[
+				'M',
+				xx(0),
+				yy(0),
+				'Q',
+				xx(0),
+				yy(5),
+				xx(7),
+				yy(6),
+				'L',
+				xx(6),
+				yy(4),
+				'L',
+				xx(10),
+				yy(7),
+				'L',
+				xx(6),
+				yy(10),
+				'L',
+				xx(7),
+				yy(8),
+				'Q',
+				xx(0),
+				yy(8),
+				xx(0),
+				yy(0)
+			]);
+	});
+var $author$project$CardSvg$jobCorner = F2(
+	function (x, y) {
+		return A2(
+			$author$project$PageSvg$etag,
+			'path',
+			_List_fromArray(
+				[
+					A2(
+					$author$project$PageSvg$prop,
+					'd',
+					A2(
+						$elm$core$String$join,
+						' ',
+						A4($author$project$CardSvg$jobCornerPath, x, y, 8, 8))),
+					A2($author$project$CardSvg$narrowStk, 'red', 'white'),
+					A2($author$project$PageSvg$prop, 'class', 'arrow')
 				]));
 	});
 var $author$project$CardSvg$splitJob = function (j) {
@@ -3642,20 +3705,18 @@ var $author$project$CardSvg$splitJob = function (j) {
 var $author$project$CardSvg$job = F2(
 	function (y, jb) {
 		var costY = $author$project$CardSvg$splitJob(jb) ? (y - 10) : y;
-		var clen = $author$project$CardSvg$costLen(jb.req);
 		var blen = $author$project$CardSvg$benLen(jb._for);
-		var _v0 = $author$project$CardSvg$splitJob(jb) ? ((_Utils_cmp(clen, blen) > 0) ? _Utils_Tuple2(3 + clen, costY) : _Utils_Tuple2(35 - blen, y)) : _Utils_Tuple2(
+		var ja = $author$project$CardSvg$splitJob(jb) ? A2($author$project$CardSvg$jobCorner, 35 - blen, y) : A2(
+			$author$project$CardSvg$jobArrow,
 			(($author$project$CardSvg$costLen(jb.req) + (45 - blen)) - 3) * 0.5,
 			y);
-		var ax = _v0.a;
-		var ay = _v0.b;
 		return A2(
 			$elm$core$String$join,
 			'\n',
 			_List_fromArray(
 				[
 					A3($author$project$CardSvg$cost, 5, costY, jb.req),
-					A2($author$project$CardSvg$jobArrow, ax, ay),
+					ja,
 					A3($author$project$CardSvg$benefits, 45, y, jb._for)
 				]));
 	});
@@ -3707,8 +3768,8 @@ var $author$project$CardSvg$vcost = F3(
 								A3($author$project$CardSvg$vcost, x, y, h),
 								A3(
 									$author$project$CardSvg$vcost,
-									x,
-									(y + 4) + $author$project$CardSvg$costLen(h),
+									x - 12,
+									y + 10,
 									$author$project$Job$Or(t)));
 						}
 					}
@@ -3766,16 +3827,15 @@ var $author$project$CardSvg$front = function (card) {
 				A4(
 				$author$project$PageSvg$text,
 				'Arial',
-				10,
+				6,
 				_List_fromArray(
 					[
 						A2($author$project$PageSvg$xy, 20, 10),
-						A3($author$project$PageSvg$flStk, 'Black', 'yellow', 0.5),
-						$author$project$PageSvg$strokeFirst,
+						A2($author$project$CardSvg$narrowStk, 'Black', 'yellow'),
 						$author$project$PageSvg$txCenter
 					]),
 				card.name),
-				A3($author$project$CardSvg$vcost, 40, 5, card.cost),
+				A3($author$project$CardSvg$vcost, 38, 2, card.cost),
 				A2($author$project$CardSvg$jobs, 55, card.jobs)
 			]));
 };

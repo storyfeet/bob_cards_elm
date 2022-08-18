@@ -8,8 +8,8 @@ front :  Card -> String
 front card =
     String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "none" 0]
     , rect 5 5 40 60 [flNoStk "White" , prop "opacity" "0.5" ]
-    , text "Arial" 10 [xy 20 10,flStk "Black" "yellow" 0.5,strokeFirst,txCenter] card.name
-    , vcost 40 5 card.cost
+    , text "Arial" 6 [xy 20 10,narrowStk "Black" "yellow" ,txCenter] card.name
+    , vcost 38 2 card.cost
     , jobs 55 card.jobs
     ]
 
@@ -25,22 +25,18 @@ splitJob j = benLen j.for + costLen j.req > 31
 job : Float -> Job -> String
 job y jb =
     let 
-        clen = costLen jb.req
         blen = benLen jb.for
         costY = if splitJob jb then y - 10 else y
 
-        (ax,ay) = if splitJob jb then
-                    if clen > blen then
-                        (35 - blen , y)
-                    else 
-                        (3 + clen ,costY)
+        ja = if splitJob jb then
+                    jobCorner (35 - blen) y
                 else
-                    ((costLen jb.req + (45 - blen) - 3)*0.5  ,y)
+                    jobArrow  ((costLen jb.req + (45 - blen) - 3)*0.5 ) y
 
     in 
         String.join "\n" 
             [cost 5 costY jb.req
-            , jobArrow ax ay 
+            , ja
             , benefits 45 y jb.for
             ]
 
@@ -75,7 +71,7 @@ vcost x y c =
         In p inner -> place x y p ++ vcost x (y+10) inner
         Or [] -> ""
         Or (ic::[]) -> vcost x y ic
-        Or (h::t) -> vcost x y h ++ vcost x (y + 4 + costLen h)   (Or t)
+        Or (h::t) -> vcost x y h ++ vcost (x - 12) (y + 10 )   (Or t)
         And [] -> ""
         And (h::t) -> vcost x y h ++ vcost x (y + costLen h) (And t)
         _ -> cost x y c
@@ -83,10 +79,16 @@ vcost x y c =
 resource : Float -> Float ->Resource -> JobNum -> String
 resource x y r n =
     String.join "\n" 
-        [ rect x y 10 10 [flStk (resourceColor r) "black" 1] 
+        [ rect x y 10 10 [narrowStk (resourceColor r) "black"] 
         , jobTextn x y (resourceShortName r) n
         ]
 
+narrowStk: String -> String -> String 
+narrowStk f s = 
+    String.join " " 
+    [ flStk f s 0.5
+    , strokeFirst
+    ]
 
 benefits:Float -> Float -> List Benefit -> String 
 benefits xend y bens = 
@@ -116,7 +118,7 @@ jobCard : Float -> Float -> String -> String -> JobNum -> String
 jobCard x y col tx n =
     String.join "\n" 
          [ rect (x+2) y 6 10 
-            [flStk col "black" 0
+            [narrowStk col "white" 
             , rxy 1 1
             , rotate 30 (x + 5) (y+5 )   
             ]        
@@ -126,12 +128,21 @@ jobCard x y col tx n =
 
 jobArrow : Float -> Float -> String 
 jobArrow x y =
-    polygon (jobArrowPoints x y 7 7) [flStk "red" "white" 0.5,prop "class" "arrow",strokeFirst]
+    polygon (jobArrowPoints x y 7 7) [narrowStk "red" "white" ,prop "class" "arrow"]
+
+jobCorner : Float -> Float -> String
+jobCorner x y =
+    etag "path" 
+    [ prop "d" (String.join " " (jobCornerPath x y 8 8))
+    , narrowStk "red" "white" 
+    , prop "class" "arrow"
+    ]
+
         
 jobCircle : Float -> Float -> String -> String -> JobNum -> String
 jobCircle x y col tx n = 
     String.join "\n" 
-        [ circle (x+5) (y+5) 5 [flStk col "Black" 1 ]
+        [ circle (x+5) (y+5) 5 [narrowStk col "Black"  ]
         , jobTextn x y tx n
         ]
 
@@ -139,21 +150,21 @@ jobCircle x y col tx n =
 jobRect : Float -> Float -> String -> String -> JobNum -> String
 jobRect x y col tx n = 
     String.join "\n" 
-        [ rect x y 10 10 [flStk col "Black" 1 ]
+        [ rect x y 10 10 [narrowStk col "Black"  ]
         , jobTextn x y tx n
         ]
 
 jobStar : Float -> Float -> String ->  JobNum -> String
 jobStar x y col n =
     String.join "\n"
-        [ polygon (starPoints x y 10 10) [flStk col "black" 1]
+        [ polygon (starPoints x y 10 10) [narrowStk col "black" ]
         , jobText (x+5) (y + 6) (jnum n)
         ]
 
 place : Float -> Float -> Place ->  String
 place x y p =
     String.join "\n" 
-        [ polygon (hexPoints x y 10 10) [flStk (placeColor p) "black" 1]
+        [ polygon (hexPoints x y 10 10) [narrowStk (placeColor p) "black" ]
         , jobText (x + 5) (y + 4) (placeShortName p)
         ]
 
@@ -184,11 +195,11 @@ starPoints x y w h =
         [ xx 5 , y  -- top
         , xx 6 , yy 3
         , xx 10 , yy 3 -- top right
-        , xx 7 , yy 7
-        , xx 6 , yy 10 -- bottom right
+        , xx 6.5 , yy 6
+        , xx 8 , yy 10 -- bottom right
         , xx 5 , yy 8
-        , xx 4 , yy 10 -- bottom left
-        , xx 3 , yy 7
+        , xx 2 , yy 10 -- bottom left
+        , xx 3.5 , yy 6
         , x , yy 3 -- top left
         , xx 4, yy 3
         ]
@@ -205,6 +216,22 @@ jobArrowPoints x y w h =
         , xx 10 , yy 5
         , xx 5 , yy 8
         , xx 6 , yy 6
+        ]
+
+jobCornerPath : Float -> Float -> Float -> Float -> List String
+jobCornerPath x y w h =
+    let
+        xx = (\n -> String.fromFloat (x + w * n * 0.1))
+        yy = (\n -> String.fromFloat (y + h * n * 0.1))
+
+    in
+        [ "M", xx 0 , yy 0 -- back
+        , "Q", xx 0, yy 5 , xx 7, yy 6
+        , "L", xx 6,yy 4 
+        , "L", xx 10, yy 7 -- Point
+        , "L", xx 6, yy 10
+        , "L", xx 7, yy 8
+        , "Q", xx 0, yy 8 , xx 0 , yy 0 --finish
         ]
 
 
