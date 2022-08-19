@@ -39,7 +39,7 @@ view mod =
     div [] 
     [ div [style "clear" "both"] ((text "Hand")::(mod.pcards.hand |> List.map Cards.view))
     , div [style "clear" "both"] ((text "TradeRow")::(mod.tradeRow.hand |> List.map Cards.view))
-    , Map.view
+    --, Map.view
    ]
 
 

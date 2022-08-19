@@ -21,7 +21,7 @@ startMap =
 
 
 
-viewMap mp =
+view mp =
     mp.g |> Dict.toList
 
 viewTileAt :Int -> Int -> c -> Shape
