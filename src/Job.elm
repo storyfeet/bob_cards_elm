@@ -67,6 +67,11 @@ gain : Resource -> Int -> Benefit
 gain r n =
     N n |> Gain r 
 
+gather : Resource -> Int -> Benefit
+gather r n =
+    Gather r (N n)
+    
+
 attack : Int -> Benefit
 attack n =
     Attack (N n)
@@ -89,7 +94,15 @@ trade a aN b bN =
     Job (Pay a (X aN) ) [Gain b (X bN)]
 
 riverGather : Resource -> Int ->Job
-riverGather r n = Job (In River Free) [Gather r (N n)]
+riverGather = gatherAt River
+
+gatherAt : Place -> Resource -> Int -> Job
+gatherAt p r n = 
+    Job (In p Free ) [Gather r (N n)  ]
+
+
+
+
 
 foodMove : Int -> Int -> Job
 foodMove f d = Job (Pay Food (N f)) [Movement (N d)]
@@ -103,6 +116,8 @@ scrapFor r n =
     Job ScrapC [gain r n]
 
 
+freebie : Benefit -> Job 
+freebie b = Job Free [b]
 freeAttack : Int -> Job
 freeAttack a = Job Free [attack a]
 freeDefend : Int -> Job

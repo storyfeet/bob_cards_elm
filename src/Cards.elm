@@ -178,26 +178,59 @@ tradeRow =
 pan : Card
 pan = Card "Pan" TGold (Or [Starter (N 2), In Village Free]) [riverGather Gold 1]
 
+
+
 boots : Card
 boots = Card "Boots" TMove (Starter (N 2)) 
     [foodMove 1 1]
 
+-- Buyable Cards
 
+bigPan : Card
+bigPan = Card "Big Pan" TGold (In Village (pay Gold 1))
+    [riverGather Gold 3]
 
+pickaxe : Card
+pickaxe = Card "Pickaxe" TGold (And [pay Iron 1,pay Wood 1])
+    [Job (In Mountain (discard 1)) [gather Iron 3]]
+
+drill : Card
+drill = Card "Dril" TWork (In Village (And [pay Iron 2,pay Gold 1 ]))
+    [Job (In Mountain (discard 1)) [gather Iron 5]]
+
+sword:Card
+sword = Card "Sword" TAttack
+    (payEq 1 [Iron,Wood])
+    [freeAttack 5 , freeDefend 2]
 twinSwords:Card
 twinSwords = Card "Twin Swords" TAttack 
-    (payL [(Iron, 3), (Wood, 2)]) 
-    [freeAttack 12, freeDefend 5]
+    (payEq 2 [Iron, Wood]) 
+    [freeAttack 8, freeDefend 4]
 
 shield: Card
 shield = Card "Shield" TDefence
-    (pay Iron 4)
-    [freeDefend 10,freeAttack 5]
+    (pay Iron 2)
+    [freeDefend 4,freeAttack 1]
 
 horse: Card
 horse = Card "Horse" TMove
     (Or [In Prarie (pay Food 3), In Village (pay Gold 1)])
     [foodMove 1 2, scrapFor Food 5]
+
+stalion:Card
+stalion = Card "Stalion" TMove 
+    (Or [In Prarie (pay Food 4), In Village (pay Gold 2)])
+    [ Job (Pay Food (X 2) ) [Movement (X 3)]
+    , scrapFor Food 6
+    ]
+
+cow: Card
+cow = Card "Cow" TFood 
+    (Or [In Prarie (pay Food 2), In Village (pay Gold 1)])
+    [ gain Food 2 |> freebie
+    , scrapFor Food 5 
+    ]
+
 
 wagon:Card
 wagon = Card "Wagon" TMove
@@ -206,11 +239,7 @@ wagon = Card "Wagon" TMove
     , Job Free [gain Wood 1, gain Food 1, draw 1]
     ]
 
-sword:Card
-sword = Card "Sword" TAttack
-    (payEq 1 [Iron,Wood])
-    [freeAttack 5 , freeDefend 1]
-
+-- TODO how to make railways
 train : Card
 train = Card "Train" TMove
     (payL [(Iron,3),(Wood,1)])
@@ -223,6 +252,11 @@ bow = Card "Bow" TAttack
     [Job (In Forest (pay Wood 1)) [gain Food 3]
     ,Job (pay Wood 1) [attack 3]
     ]
+
+crossbow:Card
+crossbow = Card "Crossbow" TAttack (And [pay Wood 3,pay Iron 2])
+    [Job (pay Wood 1) [attack 5]]
+
 
 saw:Card
 saw = Card "Saw" TWork 
