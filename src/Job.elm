@@ -83,3 +83,28 @@ discard : Int -> Cost
 discard n = 
     Discard (N n)
 
+-- JOBS
+trade : Resource -> Int -> Resource -> Int -> Job
+trade a aN b bN =
+    Job (Pay a (X aN) ) [Gain b (X bN)]
+
+riverGather : Resource -> Int ->Job
+riverGather r n = Job (In River Free) [Gather r (N n)]
+
+foodMove : Int -> Int -> Job
+foodMove f d = Job (Pay Food (N f)) [Movement (N d)]
+
+woodMove : Int -> Int -> Job
+woodMove w d = Job (pay Wood w) [Movement (N d) ]
+
+
+scrapFor : Resource -> Int -> Job
+scrapFor r n =
+    Job ScrapC [gain r n]
+
+
+freeAttack : Int -> Job
+freeAttack a = Job Free [attack a]
+freeDefend : Int -> Job
+freeDefend d = Job Free [defend d]
+

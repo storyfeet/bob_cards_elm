@@ -4,13 +4,11 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Time
-import MLists 
 import Task
 import Cards exposing (Card,tradeRow,starterDeck)
 import Deck exposing (Deck)
-import MRand exposing (GGen,gzero,rgen1)
+import MRand exposing (GGen,gzero)
 import Message exposing (Msg)
-import Map
 
 
 type alias Model = 
@@ -28,6 +26,7 @@ init =
 
 
 
+subscriptions: a -> Sub Msg
 subscriptions _ = 
     Sub.none
     --Time.every 100000 Tick
