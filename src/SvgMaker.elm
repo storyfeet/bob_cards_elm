@@ -5,6 +5,8 @@ import PageSvg exposing (..)
 import CardSvg exposing (..)
 import Cards exposing (..)
 import MLists exposing(spreadL)
+import Land exposing (Tile)
+import TileSvg
 
 
 port log : Writer -> Cmd msg
@@ -17,44 +19,64 @@ type alias Writer = { fname:String, content:String}
 placeCard : Int -> String -> String
 placeCard = placeCarder 3 0 210 297 50 70
 
+placeTile : Int -> String -> String
+placeTile = placeCarder 3 0 210 297 50 50
 
+type alias Placer = (Int -> String -> String)
 
+starterList : List Card
 starterList = (starterDeck ++ tradeRow)
     |> spreadL 
 
-listPage :List Card -> String 
-listPage l =
-    l |> List.map front 
-    |> List.indexedMap (\n c -> placeCard n c)
+listPage :(c -> String)-> Placer ->List c -> String 
+listPage fnt placer l =
+    l |> List.map fnt 
+    |> List.indexedMap placer
     |> String.join "\n"
     |> a4Page
 
 
+type PrintMode
+    = Cards
+    | Tiles
 
-type alias Model = {pos:Int}
+type alias Model = 
+    { pmode:PrintMode
+    , pos:Int
+    }
 
 type Msg
-    = Args 
-    | Next
+    = Next
 
 init : () -> (Model,Cmd Msg)
 init _ = 
-    ({pos=0} , Cmd.none)
+    ({pos=0,pmode = Cards } , Cmd.none)
 
 update: Msg -> Model -> (Model,Cmd Msg)
 update ms mod = 
-    case ms of 
-        Next -> ({mod | pos = mod.pos + 16}, 
-            case starterList |> List.drop mod.pos |> List.take 16 of
-                [] -> Cmd.none
-                l -> l 
-                    |> listPage 
-                    |> Writer ("out" ++String.fromInt mod.pos ++".svg") 
-                    |> log
-            )
-        Args -> (mod, Cmd.none) 
+    case (ms,mod.pmode) of 
+        (Next, Cards) -> case nextFront mod.pos starterList of
+            Nothing -> update Next {mod | pos = 0 , pmode = Tiles}
+            Just w -> ({mod | pos = mod.pos +1}, w |> log)
+        (Next, Tiles) -> case nextTile mod.pos (Land.tileDeck 30) of
+            Nothing -> (mod,Cmd.none)
+            Just w -> ({mod | pos = mod.pos +1 }, w|> log)
+            
 
+tryNextPage : Int -> (a -> String) -> Placer -> String -> Int -> List a -> Maybe Writer
+tryNextPage mul fronter placer name pos ls =
+    case ls |> List.drop (pos * mul) |> List.take mul of 
+        [] -> Nothing
+        l -> l |> listPage fronter placer 
+            |> Writer (String.join "" [name ,String.fromInt pos,".svg"])
+            |> Just
+            
 
+nextFront : Int->List Card -> Maybe Writer
+nextFront = tryNextPage 16 front placeCard "front" 
+
+nextTile : Int -> List Tile -> Maybe Writer
+nextTile = tryNextPage 24 TileSvg.front placeTile "tiles"
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =

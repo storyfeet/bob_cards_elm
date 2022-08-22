@@ -33,6 +33,10 @@ circle: Float -> Float -> Float -> List String -> String
 circle x y r pps =
     etag "ellipse" ((cenRad x y r r)::pps )
 
+img: Float ->Float -> Float -> Float -> String -> List String -> String
+img x y w h path pps =
+    etag "image" ((xywh x y w h)::(prop "xlink:href" path)::pps)
+
 
 polygon : List Float -> List String -> String
 polygon pts pps =
