@@ -2850,6 +2850,201 @@ var $author$project$SvgMaker$subscriptions = function (_v0) {
 };
 var $elm$json$Json$Decode$succeed = _Json_succeed;
 var $author$project$SvgMaker$Tiles = {$: 'Tiles'};
+var $author$project$Land$Tile = F2(
+	function (ltype, bandits) {
+		return {bandits: bandits, ltype: ltype};
+	});
+var $author$project$Land$Forest = function (a) {
+	return {$: 'Forest', a: a};
+};
+var $author$project$Land$Mountain = {$: 'Mountain'};
+var $author$project$Land$Prarie = function (a) {
+	return {$: 'Prarie', a: a};
+};
+var $author$project$Land$Water = {$: 'Water'};
+var $elm$core$Basics$modBy = _Basics_modBy;
+var $author$project$Land$intToLType = function (n) {
+	var _v0 = A2($elm$core$Basics$modBy, 6, n);
+	switch (_v0) {
+		case 0:
+			return $author$project$Land$Water;
+		case 1:
+			return $author$project$Land$Forest(false);
+		case 2:
+			return $author$project$Land$Forest(true);
+		case 3:
+			return $author$project$Land$Prarie(false);
+		case 4:
+			return $author$project$Land$Prarie(true);
+		default:
+			return $author$project$Land$Mountain;
+	}
+};
+var $author$project$Land$tile = function (n) {
+	var lt = $author$project$Land$intToLType(
+		A2($elm$core$Basics$modBy, 6, n));
+	var bandits = A2($elm$core$Basics$modBy, 12, n * 17);
+	return A2($author$project$Land$Tile, lt, bandits);
+};
+var $author$project$Land$basicTiles = function (n) {
+	if (!n) {
+		return _List_fromArray(
+			[
+				$author$project$Land$tile(0)
+			]);
+	} else {
+		var v = n;
+		return A2(
+			$elm$core$List$cons,
+			$author$project$Land$tile(v),
+			$author$project$Land$basicTiles(n - 1));
+	}
+};
+var $author$project$Land$Village = function (a) {
+	return {$: 'Village', a: a};
+};
+var $elm$core$List$foldrHelper = F4(
+	function (fn, acc, ctr, ls) {
+		if (!ls.b) {
+			return acc;
+		} else {
+			var a = ls.a;
+			var r1 = ls.b;
+			if (!r1.b) {
+				return A2(fn, a, acc);
+			} else {
+				var b = r1.a;
+				var r2 = r1.b;
+				if (!r2.b) {
+					return A2(
+						fn,
+						a,
+						A2(fn, b, acc));
+				} else {
+					var c = r2.a;
+					var r3 = r2.b;
+					if (!r3.b) {
+						return A2(
+							fn,
+							a,
+							A2(
+								fn,
+								b,
+								A2(fn, c, acc)));
+					} else {
+						var d = r3.a;
+						var r4 = r3.b;
+						var res = (ctr > 500) ? A3(
+							$elm$core$List$foldl,
+							fn,
+							acc,
+							$elm$core$List$reverse(r4)) : A4($elm$core$List$foldrHelper, fn, acc, ctr + 1, r4);
+						return A2(
+							fn,
+							a,
+							A2(
+								fn,
+								b,
+								A2(
+									fn,
+									c,
+									A2(fn, d, res))));
+					}
+				}
+			}
+		}
+	});
+var $elm$core$List$foldr = F3(
+	function (fn, acc, ls) {
+		return A4($elm$core$List$foldrHelper, fn, acc, 0, ls);
+	});
+var $elm$core$List$map = F2(
+	function (f, xs) {
+		return A3(
+			$elm$core$List$foldr,
+			F2(
+				function (x, acc) {
+					return A2(
+						$elm$core$List$cons,
+						f(x),
+						acc);
+				}),
+			_List_Nil,
+			xs);
+	});
+var $author$project$Job$Gold = {$: 'Gold'};
+var $author$project$Job$Job = F2(
+	function (req, _for) {
+		return {_for: _for, req: req};
+	});
+var $author$project$Job$ScrapDanger = function (a) {
+	return {$: 'ScrapDanger', a: a};
+};
+var $author$project$Job$X = function (a) {
+	return {$: 'X', a: a};
+};
+var $author$project$Job$Discard = function (a) {
+	return {$: 'Discard', a: a};
+};
+var $author$project$Job$N = function (a) {
+	return {$: 'N', a: a};
+};
+var $author$project$Job$discard = function (n) {
+	return $author$project$Job$Discard(
+		$author$project$Job$N(n));
+};
+var $author$project$Job$Gain = F2(
+	function (a, b) {
+		return {$: 'Gain', a: a, b: b};
+	});
+var $author$project$Job$gain = F2(
+	function (r, n) {
+		return A2(
+			$author$project$Job$Gain,
+			r,
+			$author$project$Job$N(n));
+	});
+var $author$project$Job$Pay = F2(
+	function (a, b) {
+		return {$: 'Pay', a: a, b: b};
+	});
+var $author$project$Job$pay = F2(
+	function (r, n) {
+		return A2(
+			$author$project$Job$Pay,
+			r,
+			$author$project$Job$N(n));
+	});
+var $author$project$Land$villageJobs = _List_fromArray(
+	[
+		A2(
+		$author$project$Job$Job,
+		$author$project$Job$discard(1),
+		_List_fromArray(
+			[
+				A2($author$project$Job$gain, $author$project$Job$Gold, 1)
+			])),
+		A2(
+		$author$project$Job$Job,
+		A2($author$project$Job$pay, $author$project$Job$Gold, 1),
+		_List_fromArray(
+			[
+				$author$project$Job$ScrapDanger(
+				$author$project$Job$X(1))
+			]))
+	]);
+var $author$project$Land$villageTiles = A2(
+	$elm$core$List$map,
+	function (j) {
+		return A2(
+			$author$project$Land$Tile,
+			$author$project$Land$Village(j),
+			0);
+	},
+	$author$project$Land$villageJobs);
+var $author$project$Land$fullDeck = _Utils_ap(
+	$author$project$Land$villageTiles,
+	$author$project$Land$basicTiles(30));
 var $elm$json$Json$Encode$object = function (pairs) {
 	return _Json_wrap(
 		A3(
@@ -2890,10 +3085,12 @@ var $author$project$Cards$cTypeColor = function (ct) {
 			return 'gold';
 		case 'TFood':
 			return 'lightgreen';
-		case 'TWork':
-			return 'LightBlue';
-		default:
+		case 'TWood':
+			return 'maroon';
+		case 'TCarry':
 			return 'Blue';
+		default:
+			return 'Orange';
 	}
 };
 var $elm$core$String$fromFloat = _String_fromNumber;
@@ -3156,11 +3353,13 @@ var $author$project$Cards$resourceColor = function (r) {
 		case 'Food':
 			return 'green';
 		case 'Iron':
-			return 'silver';
+			return 'Orange';
 		case 'Wood':
 			return 'Brown';
-		default:
+		case 'Gold':
 			return 'Gold';
+		default:
+			return 'White';
 	}
 };
 var $author$project$Cards$resourceShortName = function (r) {
@@ -3171,8 +3370,10 @@ var $author$project$Cards$resourceShortName = function (r) {
 			return 'Wd';
 		case 'Iron':
 			return 'Ir';
-		default:
+		case 'Food':
 			return 'Fd';
+		default:
+			return 'Any';
 	}
 };
 var $author$project$CardSvg$benefit = F3(
@@ -3210,9 +3411,12 @@ var $author$project$CardSvg$benefit = F3(
 					$author$project$Cards$resourceColor(r),
 					$author$project$Cards$resourceShortName(r),
 					n);
-			default:
+			case 'ScrapB':
 				var n = b.a;
 				return A5($author$project$CardSvg$jobCard, x, y, 'red', 'scp', n);
+			default:
+				var n = b.a;
+				return A5($author$project$CardSvg$jobCard, x, y, 'grey', 'sc d', n);
 		}
 	});
 var $author$project$CardSvg$benefits = F3(
@@ -3231,9 +3435,6 @@ var $author$project$CardSvg$benefits = F3(
 	});
 var $author$project$Job$And = function (a) {
 	return {$: 'And', a: a};
-};
-var $author$project$Job$N = function (a) {
-	return {$: 'N', a: a};
 };
 var $author$project$Job$Or = function (a) {
 	return {$: 'Or', a: a};
@@ -3272,75 +3473,6 @@ var $author$project$CardSvg$costLen = function (c) {
 			return 10;
 	}
 };
-var $elm$core$List$foldrHelper = F4(
-	function (fn, acc, ctr, ls) {
-		if (!ls.b) {
-			return acc;
-		} else {
-			var a = ls.a;
-			var r1 = ls.b;
-			if (!r1.b) {
-				return A2(fn, a, acc);
-			} else {
-				var b = r1.a;
-				var r2 = r1.b;
-				if (!r2.b) {
-					return A2(
-						fn,
-						a,
-						A2(fn, b, acc));
-				} else {
-					var c = r2.a;
-					var r3 = r2.b;
-					if (!r3.b) {
-						return A2(
-							fn,
-							a,
-							A2(
-								fn,
-								b,
-								A2(fn, c, acc)));
-					} else {
-						var d = r3.a;
-						var r4 = r3.b;
-						var res = (ctr > 500) ? A3(
-							$elm$core$List$foldl,
-							fn,
-							acc,
-							$elm$core$List$reverse(r4)) : A4($elm$core$List$foldrHelper, fn, acc, ctr + 1, r4);
-						return A2(
-							fn,
-							a,
-							A2(
-								fn,
-								b,
-								A2(
-									fn,
-									c,
-									A2(fn, d, res))));
-					}
-				}
-			}
-		}
-	});
-var $elm$core$List$foldr = F3(
-	function (fn, acc, ls) {
-		return A4($elm$core$List$foldrHelper, fn, acc, 0, ls);
-	});
-var $elm$core$List$map = F2(
-	function (f, xs) {
-		return A3(
-			$elm$core$List$foldr,
-			F2(
-				function (x, acc) {
-					return A2(
-						$elm$core$List$cons,
-						f(x),
-						acc);
-				}),
-			_List_Nil,
-			xs);
-	});
 var $author$project$PageSvg$points = function (pts) {
 	return A2(
 		$author$project$PageSvg$prop,
@@ -3817,7 +3949,6 @@ var $author$project$PageSvg$nCardsFit = F4(
 	function (margin, padding, page, card) {
 		return $elm$core$Basics$floor((page - (margin * 2)) / (card + padding));
 	});
-var $elm$core$Basics$modBy = _Basics_modBy;
 var $author$project$PageSvg$placeCardF = F5(
 	function (nwide, fx, fy, n, theCard) {
 		var y = (n / nwide) | 0;
@@ -4110,17 +4241,45 @@ var $author$project$TileSvg$tileLink = F2(
 		return root + ($author$project$TileSvg$tileName(tl) + '.svg');
 	});
 var $author$project$TileSvg$pLink = $author$project$TileSvg$tileLink('../pics/');
-var $author$project$TileSvg$front = function (t) {
-	return A6(
-		$author$project$PageSvg$img,
-		0,
-		0,
-		25,
-		25,
-		$author$project$TileSvg$pLink(t.ltype),
-		_List_Nil);
+var $author$project$TileSvg$job = function (j) {
+	var cx = 22.5 - ($author$project$CardSvg$costLen(j.req) * 0.5);
+	var bx = 22.5 + ($author$project$CardSvg$benLen(j._for) * 0.5);
+	return A2(
+		$elm$core$String$join,
+		'\n',
+		_List_fromArray(
+			[
+				A3($author$project$CardSvg$cost, cx, 5, j.req),
+				A3($author$project$CardSvg$benefits, bx, 32, j._for)
+			]));
 };
-var $author$project$SvgMaker$placeTile = A6($author$project$PageSvg$placeCarder, 3, 0, 210, 297, 50, 50);
+var $author$project$TileSvg$tileJob = function (t) {
+	var _v0 = t.ltype;
+	if (_v0.$ === 'Village') {
+		var j = _v0.a;
+		return $author$project$TileSvg$job(j);
+	} else {
+		return '';
+	}
+};
+var $author$project$TileSvg$front = function (t) {
+	return A2(
+		$elm$core$String$join,
+		'\n',
+		_List_fromArray(
+			[
+				A6(
+				$author$project$PageSvg$img,
+				0,
+				0,
+				45,
+				45,
+				$author$project$TileSvg$pLink(t.ltype),
+				_List_Nil),
+				$author$project$TileSvg$tileJob(t)
+			]));
+};
+var $author$project$SvgMaker$placeTile = A6($author$project$PageSvg$placeCarder, 3, 0, 210, 297, 45, 45);
 var $author$project$SvgMaker$nextTile = A4($author$project$SvgMaker$tryNextPage, 24, $author$project$TileSvg$front, $author$project$SvgMaker$placeTile, 'tiles');
 var $author$project$MLists$spreadItem = F2(
 	function (_v0, l) {
@@ -4157,94 +4316,8 @@ var $author$project$Cards$Card = F4(
 	function (name, ctype, cost, jobs) {
 		return {cost: cost, ctype: ctype, jobs: jobs, name: name};
 	});
-var $author$project$Job$Food = {$: 'Food'};
-var $author$project$Job$Forest = {$: 'Forest'};
-var $author$project$Job$In = F2(
-	function (a, b) {
-		return {$: 'In', a: a, b: b};
-	});
-var $author$project$Job$Iron = {$: 'Iron'};
-var $author$project$Job$Job = F2(
-	function (req, _for) {
-		return {_for: _for, req: req};
-	});
-var $author$project$Cards$TAttack = {$: 'TAttack'};
-var $author$project$Job$Wood = {$: 'Wood'};
-var $author$project$Job$Attack = function (a) {
-	return {$: 'Attack', a: a};
-};
-var $author$project$Job$attack = function (n) {
-	return $author$project$Job$Attack(
-		$author$project$Job$N(n));
-};
-var $author$project$Job$Gain = F2(
-	function (a, b) {
-		return {$: 'Gain', a: a, b: b};
-	});
-var $author$project$Job$gain = F2(
-	function (r, n) {
-		return A2(
-			$author$project$Job$Gain,
-			r,
-			$author$project$Job$N(n));
-	});
-var $author$project$Job$Pay = F2(
-	function (a, b) {
-		return {$: 'Pay', a: a, b: b};
-	});
-var $author$project$Job$pay = F2(
-	function (r, n) {
-		return A2(
-			$author$project$Job$Pay,
-			r,
-			$author$project$Job$N(n));
-	});
-var $author$project$Job$payEq = F2(
-	function (n, l) {
-		return $author$project$Job$And(
-			A2(
-				$elm$core$List$map,
-				function (r) {
-					return A2(
-						$author$project$Job$Pay,
-						r,
-						$author$project$Job$N(n));
-				},
-				l));
-	});
-var $author$project$Cards$bow = A4(
-	$author$project$Cards$Card,
-	'Bow',
-	$author$project$Cards$TAttack,
-	A2(
-		$author$project$Job$payEq,
-		1,
-		_List_fromArray(
-			[$author$project$Job$Wood, $author$project$Job$Iron])),
-	_List_fromArray(
-		[
-			A2(
-			$author$project$Job$Job,
-			A2(
-				$author$project$Job$In,
-				$author$project$Job$Forest,
-				A2($author$project$Job$pay, $author$project$Job$Wood, 1)),
-			_List_fromArray(
-				[
-					A2($author$project$Job$gain, $author$project$Job$Food, 3)
-				])),
-			A2(
-			$author$project$Job$Job,
-			A2($author$project$Job$pay, $author$project$Job$Wood, 1),
-			_List_fromArray(
-				[
-					$author$project$Job$attack(3)
-				]))
-		]));
-var $author$project$Job$Gold = {$: 'Gold'};
-var $author$project$Job$Prarie = {$: 'Prarie'};
 var $author$project$Cards$TMove = {$: 'TMove'};
-var $author$project$Job$Village = {$: 'Village'};
+var $author$project$Job$Food = {$: 'Food'};
 var $author$project$Job$Movement = function (a) {
 	return {$: 'Movement', a: a};
 };
@@ -4262,6 +4335,236 @@ var $author$project$Job$foodMove = F2(
 					$author$project$Job$N(d))
 				]));
 	});
+var $author$project$Job$Starter = function (a) {
+	return {$: 'Starter', a: a};
+};
+var $author$project$Job$starter = function (n) {
+	return $author$project$Job$Starter(
+		$author$project$Job$N(n));
+};
+var $author$project$Cards$boots = A4(
+	$author$project$Cards$Card,
+	'Boots',
+	$author$project$Cards$TMove,
+	$author$project$Job$starter(2),
+	_List_fromArray(
+		[
+			A2($author$project$Job$foodMove, 1, 1)
+		]));
+var $author$project$Job$Forest = {$: 'Forest'};
+var $author$project$Job$In = F2(
+	function (a, b) {
+		return {$: 'In', a: a, b: b};
+	});
+var $author$project$Cards$TAttack = {$: 'TAttack'};
+var $author$project$Job$Wood = {$: 'Wood'};
+var $author$project$Job$Attack = function (a) {
+	return {$: 'Attack', a: a};
+};
+var $author$project$Job$attack = function (n) {
+	return $author$project$Job$Attack(
+		$author$project$Job$N(n));
+};
+var $author$project$Job$Gather = F2(
+	function (a, b) {
+		return {$: 'Gather', a: a, b: b};
+	});
+var $author$project$Job$gather = F2(
+	function (r, n) {
+		return A2(
+			$author$project$Job$Gather,
+			r,
+			$author$project$Job$N(n));
+	});
+var $author$project$Cards$bow = A4(
+	$author$project$Cards$Card,
+	'Bow',
+	$author$project$Cards$TAttack,
+	$author$project$Job$starter(2),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Job$Job,
+			A2(
+				$author$project$Job$In,
+				$author$project$Job$Forest,
+				A2($author$project$Job$pay, $author$project$Job$Wood, 1)),
+			_List_fromArray(
+				[
+					A2($author$project$Job$gather, $author$project$Job$Food, 3)
+				])),
+			A2(
+			$author$project$Job$Job,
+			A2($author$project$Job$pay, $author$project$Job$Wood, 1),
+			_List_fromArray(
+				[
+					$author$project$Job$attack(3)
+				]))
+		]));
+var $author$project$Cards$TGold = {$: 'TGold'};
+var $author$project$Job$River = {$: 'River'};
+var $author$project$Job$Free = {$: 'Free'};
+var $author$project$Job$gatherAt = F3(
+	function (p, r, n) {
+		return A2(
+			$author$project$Job$Job,
+			A2($author$project$Job$In, p, $author$project$Job$Free),
+			_List_fromArray(
+				[
+					A2(
+					$author$project$Job$Gather,
+					r,
+					$author$project$Job$N(n))
+				]));
+	});
+var $author$project$Job$riverGather = $author$project$Job$gatherAt($author$project$Job$River);
+var $author$project$Cards$pan = A4(
+	$author$project$Cards$Card,
+	'Pan',
+	$author$project$Cards$TGold,
+	$author$project$Job$starter(2),
+	_List_fromArray(
+		[
+			A2($author$project$Job$riverGather, $author$project$Job$Gold, 1)
+		]));
+var $author$project$Job$Iron = {$: 'Iron'};
+var $author$project$Job$Mountain = {$: 'Mountain'};
+var $author$project$Cards$pickaxe = A4(
+	$author$project$Cards$Card,
+	'Pickaxe',
+	$author$project$Cards$TGold,
+	$author$project$Job$starter(2),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Job$Job,
+			A2(
+				$author$project$Job$In,
+				$author$project$Job$Mountain,
+				$author$project$Job$discard(1)),
+			_List_fromArray(
+				[
+					A2($author$project$Job$gather, $author$project$Job$Iron, 3)
+				]))
+		]));
+var $author$project$Job$Any = {$: 'Any'};
+var $author$project$Job$Village = {$: 'Village'};
+var $author$project$Cards$rookieTrader = A4(
+	$author$project$Cards$Card,
+	'Rookie Trader',
+	$author$project$Cards$TGold,
+	$author$project$Job$starter(2),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Job$Job,
+			A2(
+				$author$project$Job$In,
+				$author$project$Job$Village,
+				A2(
+					$author$project$Job$Pay,
+					$author$project$Job$Gold,
+					$author$project$Job$X(1))),
+			_List_fromArray(
+				[
+					A2(
+					$author$project$Job$Gain,
+					$author$project$Job$Any,
+					$author$project$Job$X(1))
+				])),
+			A2(
+			$author$project$Job$Job,
+			A2(
+				$author$project$Job$In,
+				$author$project$Job$Village,
+				A2(
+					$author$project$Job$Pay,
+					$author$project$Job$Any,
+					$author$project$Job$X(2))),
+			_List_fromArray(
+				[
+					A2(
+					$author$project$Job$Gain,
+					$author$project$Job$Gold,
+					$author$project$Job$X(1))
+				]))
+		]));
+var $author$project$Cards$TWood = {$: 'TWood'};
+var $author$project$Cards$saw = A4(
+	$author$project$Cards$Card,
+	'Saw',
+	$author$project$Cards$TWood,
+	$author$project$Job$starter(2),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Job$Job,
+			A2(
+				$author$project$Job$In,
+				$author$project$Job$Forest,
+				$author$project$Job$discard(1)),
+			_List_fromArray(
+				[
+					A2($author$project$Job$gain, $author$project$Job$Wood, 3)
+				]))
+		]));
+var $author$project$Cards$starterDeck = _List_fromArray(
+	[
+		_Utils_Tuple2($author$project$Cards$pan, 2),
+		_Utils_Tuple2($author$project$Cards$boots, 2),
+		_Utils_Tuple2($author$project$Cards$bow, 2),
+		_Utils_Tuple2($author$project$Cards$rookieTrader, 2),
+		_Utils_Tuple2($author$project$Cards$saw, 2),
+		_Utils_Tuple2($author$project$Cards$pickaxe, 2)
+	]);
+var $author$project$Cards$crossbow = A4(
+	$author$project$Cards$Card,
+	'Crossbow',
+	$author$project$Cards$TAttack,
+	$author$project$Job$And(
+		_List_fromArray(
+			[
+				A2($author$project$Job$pay, $author$project$Job$Wood, 3),
+				A2($author$project$Job$pay, $author$project$Job$Iron, 2)
+			])),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Job$Job,
+			A2($author$project$Job$pay, $author$project$Job$Wood, 1),
+			_List_fromArray(
+				[
+					$author$project$Job$attack(5)
+				]))
+		]));
+var $author$project$Cards$TIron = {$: 'TIron'};
+var $author$project$Cards$drill = A4(
+	$author$project$Cards$Card,
+	'Dril',
+	$author$project$Cards$TIron,
+	A2(
+		$author$project$Job$In,
+		$author$project$Job$Village,
+		$author$project$Job$And(
+			_List_fromArray(
+				[
+					A2($author$project$Job$pay, $author$project$Job$Iron, 2),
+					A2($author$project$Job$pay, $author$project$Job$Gold, 1)
+				]))),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Job$Job,
+			A2(
+				$author$project$Job$In,
+				$author$project$Job$Mountain,
+				$author$project$Job$discard(1)),
+			_List_fromArray(
+				[
+					A2($author$project$Job$gather, $author$project$Job$Iron, 5)
+				]))
+		]));
+var $author$project$Job$Prarie = {$: 'Prarie'};
 var $author$project$Job$ScrapC = {$: 'ScrapC'};
 var $author$project$Job$scrapFor = F2(
 	function (r, n) {
@@ -4294,77 +4597,6 @@ var $author$project$Cards$horse = A4(
 			A2($author$project$Job$foodMove, 1, 2),
 			A2($author$project$Job$scrapFor, $author$project$Job$Food, 5)
 		]));
-var $author$project$Job$Free = {$: 'Free'};
-var $author$project$Job$Starter = function (a) {
-	return {$: 'Starter', a: a};
-};
-var $author$project$Cards$TGold = {$: 'TGold'};
-var $author$project$Job$River = {$: 'River'};
-var $author$project$Job$Gather = F2(
-	function (a, b) {
-		return {$: 'Gather', a: a, b: b};
-	});
-var $author$project$Job$gatherAt = F3(
-	function (p, r, n) {
-		return A2(
-			$author$project$Job$Job,
-			A2($author$project$Job$In, p, $author$project$Job$Free),
-			_List_fromArray(
-				[
-					A2(
-					$author$project$Job$Gather,
-					r,
-					$author$project$Job$N(n))
-				]));
-	});
-var $author$project$Job$riverGather = $author$project$Job$gatherAt($author$project$Job$River);
-var $author$project$Cards$pan = A4(
-	$author$project$Cards$Card,
-	'Pan',
-	$author$project$Cards$TGold,
-	$author$project$Job$Or(
-		_List_fromArray(
-			[
-				$author$project$Job$Starter(
-				$author$project$Job$N(2)),
-				A2($author$project$Job$In, $author$project$Job$Village, $author$project$Job$Free)
-			])),
-	_List_fromArray(
-		[
-			A2($author$project$Job$riverGather, $author$project$Job$Gold, 1)
-		]));
-var $author$project$Cards$starterDeck = _List_fromArray(
-	[
-		_Utils_Tuple2($author$project$Cards$pan, 2),
-		_Utils_Tuple2($author$project$Cards$horse, 2),
-		_Utils_Tuple2($author$project$Cards$bow, 2)
-	]);
-var $author$project$Cards$TWork = {$: 'TWork'};
-var $author$project$Job$Discard = function (a) {
-	return {$: 'Discard', a: a};
-};
-var $author$project$Job$discard = function (n) {
-	return $author$project$Job$Discard(
-		$author$project$Job$N(n));
-};
-var $author$project$Cards$saw = A4(
-	$author$project$Cards$Card,
-	'Saw',
-	$author$project$Cards$TWork,
-	A2($author$project$Job$pay, $author$project$Job$Iron, 1),
-	_List_fromArray(
-		[
-			A2(
-			$author$project$Job$Job,
-			A2(
-				$author$project$Job$In,
-				$author$project$Job$Forest,
-				$author$project$Job$discard(1)),
-			_List_fromArray(
-				[
-					A2($author$project$Job$gain, $author$project$Job$Wood, 3)
-				]))
-		]));
 var $author$project$Job$freeAttack = function (a) {
 	return A2(
 		$author$project$Job$Job,
@@ -4390,6 +4622,19 @@ var $author$project$Job$freeDefend = function (d) {
 				$author$project$Job$defend(d)
 			]));
 };
+var $author$project$Job$payEq = F2(
+	function (n, l) {
+		return $author$project$Job$And(
+			A2(
+				$elm$core$List$map,
+				function (r) {
+					return A2(
+						$author$project$Job$Pay,
+						r,
+						$author$project$Job$N(n));
+				},
+				l));
+	});
 var $author$project$Cards$sword = A4(
 	$author$project$Cards$Card,
 	'Sword',
@@ -4490,67 +4735,16 @@ var $author$project$Cards$wagon = A4(
 		]));
 var $author$project$Cards$tradeRow = _List_fromArray(
 	[
-		_Utils_Tuple2($author$project$Cards$pan, 3),
-		_Utils_Tuple2($author$project$Cards$saw, 2),
 		_Utils_Tuple2($author$project$Cards$horse, 2),
 		_Utils_Tuple2($author$project$Cards$twinSwords, 2),
 		_Utils_Tuple2($author$project$Cards$wagon, 3),
 		_Utils_Tuple2($author$project$Cards$sword, 3),
 		_Utils_Tuple2($author$project$Cards$train, 2),
-		_Utils_Tuple2($author$project$Cards$bow, 3)
+		_Utils_Tuple2($author$project$Cards$crossbow, 3),
+		_Utils_Tuple2($author$project$Cards$drill, 2)
 	]);
 var $author$project$SvgMaker$starterList = $author$project$MLists$spreadL(
 	_Utils_ap($author$project$Cards$starterDeck, $author$project$Cards$tradeRow));
-var $author$project$Land$Tile = F2(
-	function (ltype, bandits) {
-		return {bandits: bandits, ltype: ltype};
-	});
-var $author$project$Land$Forest = function (a) {
-	return {$: 'Forest', a: a};
-};
-var $author$project$Land$Mountain = {$: 'Mountain'};
-var $author$project$Land$Prarie = function (a) {
-	return {$: 'Prarie', a: a};
-};
-var $author$project$Land$Water = {$: 'Water'};
-var $author$project$Land$intToLType = function (n) {
-	var _v0 = A2($elm$core$Basics$modBy, 5, n);
-	switch (_v0) {
-		case 0:
-			return $author$project$Land$Water;
-		case 1:
-			return $author$project$Land$Forest(false);
-		case 2:
-			return $author$project$Land$Forest(true);
-		case 3:
-			return $author$project$Land$Prarie(false);
-		case 4:
-			return $author$project$Land$Prarie(true);
-		default:
-			return $author$project$Land$Mountain;
-	}
-};
-var $author$project$Land$tile = function (n) {
-	var n2 = (n / 2) | 0;
-	var lt = $author$project$Land$intToLType(
-		A2($elm$core$Basics$modBy, 5, n2));
-	var bandits = A2($elm$core$Basics$modBy, 12, n);
-	return A2($author$project$Land$Tile, lt, bandits);
-};
-var $author$project$Land$tileDeck = function (n) {
-	if (!n) {
-		return _List_fromArray(
-			[
-				$author$project$Land$tile(0)
-			]);
-	} else {
-		var v = n;
-		return A2(
-			$elm$core$List$cons,
-			$author$project$Land$tile(v),
-			$author$project$Land$tileDeck(n - 1));
-	}
-};
 var $author$project$SvgMaker$update = F2(
 	function (ms, mod) {
 		update:
@@ -4579,10 +4773,7 @@ var $author$project$SvgMaker$update = F2(
 			} else {
 				var _v4 = _v0.a;
 				var _v5 = _v0.b;
-				var _v6 = A2(
-					$author$project$SvgMaker$nextTile,
-					mod.pos,
-					$author$project$Land$tileDeck(30));
+				var _v6 = A2($author$project$SvgMaker$nextTile, mod.pos, $author$project$Land$fullDeck);
 				if (_v6.$ === 'Nothing') {
 					return _Utils_Tuple2(mod, $elm$core$Platform$Cmd$none);
 				} else {

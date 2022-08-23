@@ -24,9 +24,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.71891835"
-     inkscape:cx="327.57545"
-     inkscape:cy="6.2594034"
+     inkscape:zoom="40.267575"
+     inkscape:cx="133.70559"
+     inkscape:cy="7.5619155"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -45,7 +45,7 @@
        transform="matrix(0.96936752,0,0,0.96936752,8.1529418,-0.28940312)">
       <g
          id="g1888"
-         transform="translate(-39.778695,-30.712233)">
+         transform="translate(-39.778695,-31.218391)">
         <g
            id="g2085-3"
            transform="translate(0.13952635,31.218391)">
@@ -64,7 +64,7 @@
         </g>
         <path
            style="fill:none;stroke:#0000ff;stroke-width:3.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-           d="m 50.562885,92.343329 c 0,0 0.996845,-24.857199 15.140312,-21.001254 C 79.846665,75.19802 84.519431,55.0434 83.357248,53.767597"
+           d="m 50.562885,92.343329 c 0,0 0.996845,-24.857199 15.140312,-21.001254 14.143468,3.855945 18.86219,-15.682239 17.700007,-16.958042"
            id="path2576-5"
            sodipodi:nodetypes="czc" />
       </g>

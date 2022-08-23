@@ -16,6 +16,7 @@ type Resource
     | Wood
     | Iron
     | Food
+    | Any
 
 type Cost
     = In Place Cost
@@ -47,12 +48,17 @@ type Benefit
     | Gather Resource JobNum
     | Draw JobNum
     | ScrapB JobNum
+    | ScrapDanger JobNum
 
+
+-- COSTS
 
 pay : Resource -> Int -> Cost
 pay r n = 
     N n |> Pay r
 
+starter : Int -> Cost
+starter n = Starter (N n)
 
 
 payL : List (Resource, Int) -> Cost

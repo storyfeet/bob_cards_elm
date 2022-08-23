@@ -1,5 +1,5 @@
 module Land exposing(..)
-import Job exposing (Job,Place)
+import Job exposing (..)
 type alias Tile = 
     { ltype : LType
     , bandits: Int
@@ -14,7 +14,7 @@ type LType
 
 intToLType: Int -> LType
 intToLType n =
-    case Basics.modBy 5 n of
+    case Basics.modBy 6 n of
         0 -> Water
         1 -> Forest False
         2 -> Forest True
@@ -45,16 +45,28 @@ intToBool n =
 tile: Int -> Tile
 tile n = 
     let 
-        n2 = n // 2
-        lt = Basics.modBy 5 n2|> intToLType
-        bandits = Basics.modBy 12 n
+        lt = Basics.modBy 6 n|> intToLType
+        bandits = Basics.modBy 12 (n * 17)
     in 
         Tile lt bandits
     
 
-tileDeck : Int -> List Tile
-tileDeck n =
+basicTiles : Int -> List Tile
+basicTiles n =
     case n of
         0 -> [tile 0]
-        v -> (tile v) :: (tileDeck (n - 1))
+        v -> (tile v) :: (basicTiles (n - 1))
+
+villageJobs : List Job
+villageJobs =
+    [ Job (discard 1 ) [gain Gold 1]
+    , Job (pay Gold 1) [ScrapDanger (X 1)]
+
+    ]
+
+villageTiles : List Tile
+villageTiles = villageJobs |> List.map (\j -> Tile (Village j) 0)
+
+fullDeck : List Tile
+fullDeck = villageTiles ++ (basicTiles 30)
 

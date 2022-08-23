@@ -20,7 +20,7 @@ placeCard : Int -> String -> String
 placeCard = placeCarder 3 0 210 297 50 70
 
 placeTile : Int -> String -> String
-placeTile = placeCarder 3 0 210 297 50 50
+placeTile = placeCarder 3 0 210 297 45 45 
 
 type alias Placer = (Int -> String -> String)
 
@@ -58,7 +58,7 @@ update ms mod =
         (Next, Cards) -> case nextFront mod.pos starterList of
             Nothing -> update Next {mod | pos = 0 , pmode = Tiles}
             Just w -> ({mod | pos = mod.pos +1}, w |> log)
-        (Next, Tiles) -> case nextTile mod.pos (Land.tileDeck 30) of
+        (Next, Tiles) -> case nextTile mod.pos (Land.fullDeck ) of
             Nothing -> (mod,Cmd.none)
             Just w -> ({mod | pos = mod.pos +1 }, w|> log)
             

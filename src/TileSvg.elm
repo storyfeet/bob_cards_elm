@@ -1,6 +1,8 @@
 module TileSvg exposing(..)
 import Land exposing (..)
 import PageSvg exposing(..)
+import CardSvg as CS
+import Job exposing (Job)
 
 wet : Bool -> String
 wet b = 
@@ -27,5 +29,27 @@ tileLink root tl =
 
 front : Tile->String
 front t =
-    img 0 0 25 25  (pLink t.ltype) []
+    String.join "\n" 
+    [ img 0 0 45 45  (pLink t.ltype) []
+    , tileJob t
+    ]
+
+tileJob : Tile -> String
+tileJob t =
+    case t.ltype of
+        Village j -> job j
+        _ -> ""
+
+job: Job -> String
+job j =
+    let 
+        cx = 22.5 - (CS.costLen j.req *0.5)
+        bx = 22.5 + (CS.benLen j.for * 0.5)
+        
+    in
+        String.join "\n"
+            [ CS.cost cx 5 j.req
+            , CS.benefits bx 32 j.for
+            ]
+
 

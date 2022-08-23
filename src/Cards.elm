@@ -18,7 +18,9 @@ type CType
     | TGold
     | TFood
     | TCarry
-    | TWork
+    | TWood
+    | TIron
+
 
 
 
@@ -65,6 +67,7 @@ viewBenefit bn =
         Gather r n -> viewEllipse (resourceColor r) (numItems (resourceShortName r)  n)
         Draw n -> viewDraw n
         ScrapB n-> viewEllipse "pink" (numItems "Scp" n)
+        ScrapDanger n-> viewEllipse "grey" (numItems "Sc d" n)
 
 
 
@@ -91,6 +94,7 @@ resourceShortName r =
         Wood -> "Wd"
         Iron -> "Ir"
         Food -> "Fd"
+        Any -> "Any"
 
 placeShortName: Place -> String  
 placeShortName pl =
@@ -111,8 +115,9 @@ cTypeColor ct =
        TMove -> "lightblue"
        TGold -> "gold"
        TFood -> "lightgreen"
-       TWork -> "LightBlue"
+       TWood -> "maroon"
        TCarry -> "Blue"
+       TIron -> "Orange"
 
 placeColor: Place -> String
 placeColor pl = 
@@ -128,9 +133,10 @@ resourceColor: Resource ->String
 resourceColor r = 
     case r of 
         Food -> "green"
-        Iron -> "silver"
+        Iron -> "Orange"
         Wood -> "Brown"
         Gold -> "Gold"
+        Any -> "White"
 
 
 
@@ -156,19 +162,20 @@ viewRect col inner =
 
 -- Decks
 starterDeck : List (Card,Int)
-starterDeck = [(pan,2),(horse,2),(bow,2)]
+starterDeck = [(pan,2),(boots,2),(bow,2),(rookieTrader ,2),(saw,2),(pickaxe,2)]
 
 tradeRow : List (Card,Int)
 tradeRow = 
-    [(pan,3)
-    ,(saw, 2)
-    ,(horse,2)
+    [(horse,2)
     ,(twinSwords,2) 
     ,(wagon,3)
     ,(sword,3)
     ,(train,2)
-    ,(bow,3)
+    ,(crossbow,3)
+    ,(drill,2)
     ]
+
+
 
 
 -- ACTUAL CARDS
@@ -176,13 +183,34 @@ tradeRow =
 --STARTER CARDS
 
 pan : Card
-pan = Card "Pan" TGold (Or [Starter (N 2), In Village Free]) [riverGather Gold 1]
+pan = Card "Pan" TGold (starter 2) [riverGather Gold 1]
 
+bow:Card
+bow = Card "Bow" TAttack
+    (starter 2)
+    [Job (In Forest (pay Wood 1)) [gather Food 3]
+    ,Job (pay Wood 1) [attack 3]
+    ]
 
+saw:Card
+saw = Card "Saw" TWood 
+    (starter 2) 
+    [ Job (In Forest (discard 1)) [gain Wood 3] 
+    ]
 
 boots : Card
-boots = Card "Boots" TMove (Starter (N 2)) 
+boots = Card "Boots" TMove (starter 2) 
     [foodMove 1 1]
+
+rookieTrader : Card
+rookieTrader = Card "Rookie Trader" TGold (starter 2)
+    [ Job (In Village (Pay Gold (X 1))) [Gain Any (X 1)]
+    , Job (In Village (Pay Any (X 2))) [Gain Gold (X 1)]
+    ]
+
+pickaxe : Card
+pickaxe = Card "Pickaxe" TGold (starter 2)
+    [Job (In Mountain (discard 1)) [gather Iron 3]]
 
 -- Buyable Cards
 
@@ -190,12 +218,9 @@ bigPan : Card
 bigPan = Card "Big Pan" TGold (In Village (pay Gold 1))
     [riverGather Gold 3]
 
-pickaxe : Card
-pickaxe = Card "Pickaxe" TGold (And [pay Iron 1,pay Wood 1])
-    [Job (In Mountain (discard 1)) [gather Iron 3]]
 
 drill : Card
-drill = Card "Dril" TWork (In Village (And [pay Iron 2,pay Gold 1 ]))
+drill = Card "Dril" TIron (In Village (And [pay Iron 2,pay Gold 1 ]))
     [Job (In Mountain (discard 1)) [gather Iron 5]]
 
 sword:Card
@@ -246,78 +271,12 @@ train = Card "Train" TMove
     [woodMove 1 3,scrapFor Wood 5 ] 
 
 
-bow:Card
-bow = Card "Bow" TAttack
-    (payEq 1 [Wood,Iron])
-    [Job (In Forest (pay Wood 1)) [gain Food 3]
-    ,Job (pay Wood 1) [attack 3]
-    ]
 
 crossbow:Card
 crossbow = Card "Crossbow" TAttack (And [pay Wood 3,pay Iron 2])
     [Job (pay Wood 1) [attack 5]]
 
 
-saw:Card
-saw = Card "Saw" TWork 
-    ( pay Iron 1) 
-    [ Job (In Forest (discard 1)) [gain Wood 3] 
-    ]
 
 
 
-{--
-
-
-3*"CrossBow",Attack
-.cost : [[Wood , 5] , [Iron , 3] , [Iron , 1]]
-.jobs*$req : [[Iron , 2]]
-.jobs.$for : [[Food , 3] , [Attack , 5] , [Defence , 0]]
-.jobs*$req:[Scrap]
-.jobs.$for : [[Wood, 2]]
-
-1*"Harpoon",Attack
-.cost : [[Wood , 1][Iron , 1]]
-.jobs*$req : []
-.jobs.$for : [[Food "2d6:L"] , [Card 1]]
-.jobs*$req:[Scrap]
-.jobs.$for : [[Attack , "2d6:H"]]
-
-5*"Trident",Food
-.cost : [[Iron , 5]]
-.jobs*$req : []
-.jobs.$for : [[Food , "2d6:H"] [Card 2]]
-.jobs*$req:[Scrap]
-.jobs.$for : [[Attack , "2d6+2"]]
-
-4*"Twin Shields",Attack
-.cost : [[Iron , 5]]
-.jobs*$req : []
-.jobs.$for : [[Defence , 15] , [Attack]]
-.jobs*$req:[Scrap]
-.jobs.$for : [Iron , 2]
-
-2*"Blue Gun",Attack
-.cost : [[Iron , 4] , [Wood , 7]]
-.jobs*$req : [[Iron , 3]]
-.jobs.$for : [[Attack , 20]]
-.jobs*$req:[Scrap]
-.jobs.$for : [[Iron , 2] , [Wood , 5]]
-
-3*"BuckShot",Attack
-.cost : [[Iron , 6]]
-.jobs*$req : [Iron]
-.jobs.$for : [[Attack , 20]]
-
-4*"Hammer",Construction
-.cost : [[Wood ,2]]
-.jobs*$req : []
-.jobs.$for : [[Wood , 10]]
-
-2*"Whip",Attack
-.cost : [Wood, 1]
-.jobs*$req : []
-.jobs.$for : [[Attack, 5]]
-
-
---}

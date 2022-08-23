@@ -110,6 +110,7 @@ benefit x y b =
         Draw n -> jobCard x y "Green" "+" n
         Gather r n -> jobCircle x y (resourceColor r) (resourceShortName r) n
         ScrapB n -> jobCard x y "red" "scp" n
+        ScrapDanger n -> jobCard x y "grey" "sc d" n
             
 benLen : List Benefit -> Float
 benLen l = toFloat (List.length l ) * 10
