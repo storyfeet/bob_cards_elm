@@ -64,6 +64,7 @@ cost x y c =
         ScrapC  -> jobCard x y "pink" "X" "red" Job.This
         Starter n -> jobStar x y "white"  n
         Player -> jobStar x y "blue" Job.This
+        Danger dt n-> dangerStar x y "grey" (dangerType dt) n
         Free -> ""
             
 vcost : Float -> Float -> Cost -> String
@@ -125,8 +126,7 @@ jobCard x y col tx tcol n =
             , rxy 1 1
             , rotate 30 (x + 5) (y+5 )   
             ]        
-        , text "Arial" 6 [xy (x + 3) (y+6) ,flStk tcol "white" 0.5, strokeFirst,bold] (tx ++ jnum n)
-        --, jobText (x + 5) (y + 9) (jnum n )
+        , gainText (x + 4) (y+6) tcol (tx ++ jnum n)
         ]
 
 
@@ -164,6 +164,17 @@ jobStar x y col n =
         [ polygon (starPoints x y 10 10) [narrowStk col "black" ]
         , jobText (x+5) (y + 6) (jnum n)
         ]
+
+dangerStar : Float -> Float -> String -> String -> JobNum -> String
+dangerStar x y col tx n =
+    String.join "\n"
+        [ polygon (starPoints x y 10 10) [narrowStk col "black" ]
+        , idText (x+ 2.5) ( y+7) "grey" (tx)
+        , case n of 
+            Job.None -> ""
+            _ -> gainText (x + 5) (y + 4 ) "Green" ("+" ++ jnum n)
+        ]
+
 
 place : Float -> Float -> Place ->  String
 place x y p =
@@ -249,4 +260,12 @@ jobTextn x y tx n =
 
 jobText : Float -> Float -> String -> String
 jobText x y str = text "Arial" 4 [xy x y,txCenter,flNoStk "black" ] str
+
+idText : Float -> Float -> String -> String -> String
+idText x y col tx =
+        text "Arial" 6 [xy x y ,flStk col "white" 0.5, strokeFirst,bold] (tx )
+
+gainText : Float -> Float -> String -> String -> String
+gainText x y col tx =
+        text "Arial" 5 [xy x y ,flStk col "white" 0.5, strokeFirst,bold] (tx )
 

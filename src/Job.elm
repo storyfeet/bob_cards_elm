@@ -27,21 +27,35 @@ type Cost
     | ScrapC
     | Starter JobNum
     | Player
+    | Danger DDanger JobNum
     | Free
 
 type JobNum 
     = N Int
     | X Int
     | This
+    | None
 
 jnum: JobNum -> String
 jnum j =
     case j of
-     --   N 1 -> ""
         X 1 -> "?"
         N n -> String.fromInt n
         X n -> String.fromInt n ++ "?"
         This -> "!"
+        None -> ""
+
+type DDanger
+    = Lack
+    | Pain
+    | Exhaustion
+
+dangerType: DDanger -> String
+dangerType d = 
+    case d of
+        Lack -> "L"
+        Pain -> "P"
+        Exhaustion -> "E"
 
 type Benefit
     = Movement JobNum

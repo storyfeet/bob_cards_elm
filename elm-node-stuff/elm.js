@@ -3091,8 +3091,10 @@ var $author$project$Cards$cTypeColor = function (ct) {
 			return 'Blue';
 		case 'TIron':
 			return 'Orange';
-		default:
+		case 'TPlayer':
 			return 'blue';
+		default:
+			return 'black';
 	}
 };
 var $elm$core$String$fromFloat = _String_fromNumber;
@@ -3125,6 +3127,56 @@ var $author$project$CardSvg$benLen = function (l) {
 	return $elm$core$List$length(l) * 10;
 };
 var $author$project$PageSvg$bold = A2($author$project$PageSvg$prop, 'font-weight', 'bold');
+var $author$project$PageSvg$strokeFirst = A2($author$project$PageSvg$prop, 'style', 'paint-order:stroke');
+var $author$project$PageSvg$font = F2(
+	function (nm, sz) {
+		return $author$project$PageSvg$props(
+			_List_fromArray(
+				[
+					A2($author$project$PageSvg$prop, 'font-family', nm),
+					A2($author$project$PageSvg$fprop, 'font-size', sz)
+				]));
+	});
+var $author$project$PageSvg$tag = F3(
+	function (name, propl, children) {
+		return '<' + (name + (' ' + (A2($elm$core$String$join, ' ', propl) + (' >' + (A2($elm$core$String$join, '\n', children) + ('</' + (name + '>')))))));
+	});
+var $author$project$PageSvg$text = F4(
+	function (fnt, fsize, pps, txt) {
+		return A3(
+			$author$project$PageSvg$tag,
+			'text',
+			A2(
+				$elm$core$List$cons,
+				A2($author$project$PageSvg$font, fnt, fsize),
+				pps),
+			_List_fromArray(
+				[txt]));
+	});
+var $author$project$PageSvg$xy = F2(
+	function (x, y) {
+		return $author$project$PageSvg$props(
+			_List_fromArray(
+				[
+					A2($author$project$PageSvg$fprop, 'x', x),
+					A2($author$project$PageSvg$fprop, 'y', y)
+				]));
+	});
+var $author$project$CardSvg$gainText = F4(
+	function (x, y, col, tx) {
+		return A4(
+			$author$project$PageSvg$text,
+			'Arial',
+			5,
+			_List_fromArray(
+				[
+					A2($author$project$PageSvg$xy, x, y),
+					A3($author$project$PageSvg$flStk, col, 'white', 0.5),
+					$author$project$PageSvg$strokeFirst,
+					$author$project$PageSvg$bold
+				]),
+			tx);
+	});
 var $author$project$Job$jnum = function (j) {
 	switch (j.$) {
 		case 'N':
@@ -3137,11 +3189,12 @@ var $author$project$Job$jnum = function (j) {
 				var n = j.a;
 				return $elm$core$String$fromInt(n) + '?';
 			}
-		default:
+		case 'This':
 			return '!';
+		default:
+			return '';
 	}
 };
-var $author$project$PageSvg$strokeFirst = A2($author$project$PageSvg$prop, 'style', 'paint-order:stroke');
 var $author$project$CardSvg$narrowStk = F2(
 	function (f, s) {
 		return A2(
@@ -3164,15 +3217,6 @@ var $author$project$PageSvg$wh = F2(
 				[
 					A2($author$project$PageSvg$fprop, 'width', w),
 					A2($author$project$PageSvg$fprop, 'height', h)
-				]));
-	});
-var $author$project$PageSvg$xy = F2(
-	function (x, y) {
-		return $author$project$PageSvg$props(
-			_List_fromArray(
-				[
-					A2($author$project$PageSvg$fprop, 'x', x),
-					A2($author$project$PageSvg$fprop, 'y', y)
 				]));
 	});
 var $author$project$PageSvg$xywh = F4(
@@ -3210,31 +3254,6 @@ var $author$project$PageSvg$rxy = F2(
 					A2($author$project$PageSvg$fprop, 'ry', y)
 				]));
 	});
-var $author$project$PageSvg$font = F2(
-	function (nm, sz) {
-		return $author$project$PageSvg$props(
-			_List_fromArray(
-				[
-					A2($author$project$PageSvg$prop, 'font-family', nm),
-					A2($author$project$PageSvg$fprop, 'font-size', sz)
-				]));
-	});
-var $author$project$PageSvg$tag = F3(
-	function (name, propl, children) {
-		return '<' + (name + (' ' + (A2($elm$core$String$join, ' ', propl) + (' >' + (A2($elm$core$String$join, '\n', children) + ('</' + (name + '>')))))));
-	});
-var $author$project$PageSvg$text = F4(
-	function (fnt, fsize, pps, txt) {
-		return A3(
-			$author$project$PageSvg$tag,
-			'text',
-			A2(
-				$elm$core$List$cons,
-				A2($author$project$PageSvg$font, fnt, fsize),
-				pps),
-			_List_fromArray(
-				[txt]));
-	});
 var $author$project$CardSvg$jobCard = F6(
 	function (x, y, col, tx, tcol, n) {
 		return A2(
@@ -3255,16 +3274,10 @@ var $author$project$CardSvg$jobCard = F6(
 							A3($author$project$PageSvg$rotate, 30, x + 5, y + 5)
 						])),
 					A4(
-					$author$project$PageSvg$text,
-					'Arial',
-					6,
-					_List_fromArray(
-						[
-							A2($author$project$PageSvg$xy, x + 3, y + 6),
-							A3($author$project$PageSvg$flStk, tcol, 'white', 0.5),
-							$author$project$PageSvg$strokeFirst,
-							$author$project$PageSvg$bold
-						]),
+					$author$project$CardSvg$gainText,
+					x + 4,
+					y + 6,
+					tcol,
 					_Utils_ap(
 						tx,
 						$author$project$Job$jnum(n)))
@@ -3568,6 +3581,60 @@ var $author$project$CardSvg$costLen = function (c) {
 			return 10;
 	}
 };
+var $author$project$CardSvg$idText = F4(
+	function (x, y, col, tx) {
+		return A4(
+			$author$project$PageSvg$text,
+			'Arial',
+			6,
+			_List_fromArray(
+				[
+					A2($author$project$PageSvg$xy, x, y),
+					A3($author$project$PageSvg$flStk, col, 'white', 0.5),
+					$author$project$PageSvg$strokeFirst,
+					$author$project$PageSvg$bold
+				]),
+			tx);
+	});
+var $author$project$CardSvg$dangerStar = F5(
+	function (x, y, col, tx, n) {
+		return A2(
+			$elm$core$String$join,
+			'\n',
+			_List_fromArray(
+				[
+					A2(
+					$author$project$PageSvg$polygon,
+					A4($author$project$CardSvg$starPoints, x, y, 10, 10),
+					_List_fromArray(
+						[
+							A2($author$project$CardSvg$narrowStk, col, 'black')
+						])),
+					A4($author$project$CardSvg$idText, x + 2.5, y + 7, 'grey', tx),
+					function () {
+					if (n.$ === 'None') {
+						return '';
+					} else {
+						return A4(
+							$author$project$CardSvg$gainText,
+							x + 5,
+							y + 4,
+							'Green',
+							'+' + $author$project$Job$jnum(n));
+					}
+				}()
+				]));
+	});
+var $author$project$Job$dangerType = function (d) {
+	switch (d.$) {
+		case 'Lack':
+			return 'L';
+		case 'Pain':
+			return 'P';
+		default:
+			return 'E';
+	}
+};
 var $author$project$CardSvg$hexPoints = F4(
 	function (x, y, w, h) {
 		var y3 = y + h;
@@ -3729,6 +3796,16 @@ var $author$project$CardSvg$cost = F3(
 					return A4($author$project$CardSvg$jobStar, x, y, 'white', n);
 				case 'Player':
 					return A4($author$project$CardSvg$jobStar, x, y, 'blue', $author$project$Job$This);
+				case 'Danger':
+					var dt = c.a;
+					var n = c.b;
+					return A5(
+						$author$project$CardSvg$dangerStar,
+						x,
+						y,
+						'grey',
+						$author$project$Job$dangerType(dt),
+						n);
 				default:
 					return '';
 			}
@@ -4312,14 +4389,44 @@ var $author$project$Cards$Card = F4(
 	function (name, ctype, cost, jobs) {
 		return {cost: cost, ctype: ctype, jobs: jobs, name: name};
 	});
+var $author$project$Job$Danger = F2(
+	function (a, b) {
+		return {$: 'Danger', a: a, b: b};
+	});
 var $author$project$Job$Free = {$: 'Free'};
-var $author$project$Job$GainStarter = function (a) {
-	return {$: 'GainStarter', a: a};
-};
 var $author$project$Job$In = F2(
 	function (a, b) {
 		return {$: 'In', a: a, b: b};
 	});
+var $author$project$Job$Lack = {$: 'Lack'};
+var $author$project$Job$None = {$: 'None'};
+var $author$project$Job$River = {$: 'River'};
+var $author$project$Job$ScrapB = function (a) {
+	return {$: 'ScrapB', a: a};
+};
+var $author$project$Cards$TDanger = {$: 'TDanger'};
+var $author$project$Cards$thirst = A4(
+	$author$project$Cards$Card,
+	'Thirst',
+	$author$project$Cards$TDanger,
+	A2($author$project$Job$Danger, $author$project$Job$Lack, $author$project$Job$None),
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Job$Job,
+			A2($author$project$Job$In, $author$project$Job$River, $author$project$Job$Free),
+			_List_fromArray(
+				[
+					$author$project$Job$ScrapB($author$project$Job$This)
+				]))
+		]));
+var $author$project$Cards$dangerDeck = _List_fromArray(
+	[
+		_Utils_Tuple2($author$project$Cards$thirst, 6)
+	]);
+var $author$project$Job$GainStarter = function (a) {
+	return {$: 'GainStarter', a: a};
+};
 var $author$project$Job$Movement = function (a) {
 	return {$: 'Movement', a: a};
 };
@@ -4350,41 +4457,30 @@ var $author$project$Cards$noobyNorris = A4(
 					$author$project$Job$N(1))
 				]))
 		]));
+var $author$project$Cards$stealySteve = A4(
+	$author$project$Cards$Card,
+	'Stealy Steve',
+	$author$project$Cards$TPlayer,
+	$author$project$Job$Player,
+	_List_fromArray(
+		[
+			A2(
+			$author$project$Job$Job,
+			A2(
+				$author$project$Job$Danger,
+				$author$project$Job$Lack,
+				$author$project$Job$N(1)),
+			_List_fromArray(
+				[
+					$author$project$Job$Movement(
+					$author$project$Job$N(1))
+				]))
+		]));
 var $author$project$Cards$playerDeck = _List_fromArray(
 	[
-		_Utils_Tuple2($author$project$Cards$noobyNorris, 1)
+		_Utils_Tuple2($author$project$Cards$noobyNorris, 1),
+		_Utils_Tuple2($author$project$Cards$stealySteve, 1)
 	]);
-var $author$project$MLists$spreadItem = F2(
-	function (_v0, l) {
-		spreadItem:
-		while (true) {
-			var a = _v0.a;
-			var n = _v0.b;
-			if (!n) {
-				return l;
-			} else {
-				var $temp$_v0 = _Utils_Tuple2(a, n - 1),
-					$temp$l = A2($elm$core$List$cons, a, l);
-				_v0 = $temp$_v0;
-				l = $temp$l;
-				continue spreadItem;
-			}
-		}
-	});
-var $author$project$MLists$spreadL = function (l) {
-	if (!l.b) {
-		return _List_Nil;
-	} else {
-		var _v1 = l.a;
-		var a = _v1.a;
-		var n = _v1.b;
-		var t = l.b;
-		return A2(
-			$author$project$MLists$spreadItem,
-			_Utils_Tuple2(a, n),
-			$author$project$MLists$spreadL(t));
-	}
-};
 var $author$project$Cards$TMove = {$: 'TMove'};
 var $author$project$Job$Food = {$: 'Food'};
 var $author$project$Job$foodMove = F2(
@@ -4464,7 +4560,6 @@ var $author$project$Cards$bow = A4(
 				]))
 		]));
 var $author$project$Cards$TGold = {$: 'TGold'};
-var $author$project$Job$River = {$: 'River'};
 var $author$project$Job$gatherAt = F3(
 	function (p, r, n) {
 		return A2(
@@ -4808,10 +4903,43 @@ var $author$project$Cards$tradeRow = _List_fromArray(
 		_Utils_Tuple2($author$project$Cards$crossbow, 3),
 		_Utils_Tuple2($author$project$Cards$drill, 2)
 	]);
-var $author$project$SvgMaker$starterList = $author$project$MLists$spreadL(
+var $author$project$Cards$allCards = _Utils_ap(
+	$author$project$Cards$starterDeck,
 	_Utils_ap(
-		$author$project$Cards$starterDeck,
-		_Utils_ap($author$project$Cards$tradeRow, $author$project$Cards$playerDeck)));
+		$author$project$Cards$tradeRow,
+		_Utils_ap($author$project$Cards$playerDeck, $author$project$Cards$dangerDeck)));
+var $author$project$MLists$spreadItem = F2(
+	function (_v0, l) {
+		spreadItem:
+		while (true) {
+			var a = _v0.a;
+			var n = _v0.b;
+			if (!n) {
+				return l;
+			} else {
+				var $temp$_v0 = _Utils_Tuple2(a, n - 1),
+					$temp$l = A2($elm$core$List$cons, a, l);
+				_v0 = $temp$_v0;
+				l = $temp$l;
+				continue spreadItem;
+			}
+		}
+	});
+var $author$project$MLists$spreadL = function (l) {
+	if (!l.b) {
+		return _List_Nil;
+	} else {
+		var _v1 = l.a;
+		var a = _v1.a;
+		var n = _v1.b;
+		var t = l.b;
+		return A2(
+			$author$project$MLists$spreadItem,
+			_Utils_Tuple2(a, n),
+			$author$project$MLists$spreadL(t));
+	}
+};
+var $author$project$SvgMaker$starterList = $author$project$MLists$spreadL($author$project$Cards$allCards);
 var $author$project$SvgMaker$update = F2(
 	function (ms, mod) {
 		update:

@@ -21,8 +21,7 @@ type CType
     | TWood
     | TIron
     | TPlayer
-
-
+    | TDanger
 
 
 
@@ -56,7 +55,7 @@ viewCost cst =
     ScrapC -> viewEllipse "pink" [text "Scrp"]
     Starter n -> viewEllipse "white" [text ("S" ++ jnum n)]
     Player -> viewEllipse "blue" []
-    Free -> div [] [] 
+    _ -> div [] [] 
 
 
 viewBenefit: Benefit -> Html m
@@ -122,6 +121,7 @@ cTypeColor ct =
        TCarry -> "Blue"
        TIron -> "Orange"
        TPlayer -> "blue"
+       TDanger -> "black"
 
 placeColor: Place -> String
 placeColor pl = 
@@ -165,6 +165,9 @@ viewRect col inner =
 
 
 -- Decks
+
+allCards : List (Card, Int)
+allCards = (starterDeck ++ tradeRow ++ playerDeck ++ dangerDeck)
 starterDeck : List (Card,Int)
 starterDeck = [(pan,2),(boots,2),(bow,2),(rookieTrader ,2),(saw,2),(pickaxe,2)]
 
@@ -181,16 +184,12 @@ tradeRow =
 
 playerDeck : List (Card,Int)
 playerDeck =
-    [(noobyNorris,1)]
-
--- Players
-noobyNorris : Card 
-noobyNorris = Card "Nooby Norris" TPlayer (Player)
-    [ Job Free [Movement (N 1)]
-    , Job (In Village Free) [ GainStarter (N 1)]
-    ]
+    [(noobyNorris,1) , (stealySteve,1)]
 
 
+dangerDeck : List (Card,Int)
+dangerDeck =
+    [(thirst,6)]
 
 
 -- ACTUAL CARDS
@@ -291,6 +290,26 @@ crossbow:Card
 crossbow = Card "Crossbow" TAttack (And [pay Wood 3,pay Iron 2])
     [Job (pay Wood 1) [attack 5]]
 
+
+-- Danger 
+
+thirst :Card
+thirst = Card "Thirst" TDanger (Danger Lack Job.None)
+    [Job (In River Free) [Job.ScrapB Job.This]]
+    
+
+
+
+-- Players
+noobyNorris : Card 
+noobyNorris = Card "Nooby Norris" TPlayer (Player)
+    [ Job Free [Movement (N 1)]
+    , Job (In Village Free) [ GainStarter (N 1)]
+    ]
+
+stealySteve : Card
+stealySteve = Card "Stealy Steve" TPlayer (Player)
+    [ Job (Danger Lack (N 1)) [Movement (N 1)]]
 
 
 
