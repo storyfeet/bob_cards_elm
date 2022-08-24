@@ -25,7 +25,7 @@ placeTile = placeCarder 3 0 210 297 45 45
 type alias Placer = (Int -> String -> String)
 
 starterList : List Card
-starterList = (starterDeck ++ tradeRow)
+starterList = (starterDeck ++ tradeRow ++ playerDeck)
     |> spreadL 
 
 listPage :(c -> String)-> Placer ->List c -> String 

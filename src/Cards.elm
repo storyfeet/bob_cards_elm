@@ -20,6 +20,7 @@ type CType
     | TCarry
     | TWood
     | TIron
+    | TPlayer
 
 
 
@@ -54,6 +55,7 @@ viewCost cst =
     Pay r n -> viewRect (resourceColor r) (numItems (resourceShortName r) n )
     ScrapC -> viewEllipse "pink" [text "Scrp"]
     Starter n -> viewEllipse "white" [text ("S" ++ jnum n)]
+    Player -> viewEllipse "blue" []
     Free -> div [] [] 
 
 
@@ -68,6 +70,7 @@ viewBenefit bn =
         Draw n -> viewDraw n
         ScrapB n-> viewEllipse "pink" (numItems "Scp" n)
         ScrapDanger n-> viewEllipse "grey" (numItems "Sc d" n)
+        GainStarter _ -> viewEllipse "pink" []
 
 
 
@@ -118,6 +121,7 @@ cTypeColor ct =
        TWood -> "maroon"
        TCarry -> "Blue"
        TIron -> "Orange"
+       TPlayer -> "blue"
 
 placeColor: Place -> String
 placeColor pl = 
@@ -173,6 +177,17 @@ tradeRow =
     ,(train,2)
     ,(crossbow,3)
     ,(drill,2)
+    ]
+
+playerDeck : List (Card,Int)
+playerDeck =
+    [(noobyNorris,1)]
+
+-- Players
+noobyNorris : Card 
+noobyNorris = Card "Nooby Norris" TPlayer (Player)
+    [ Job Free [Movement (N 1)]
+    , Job (In Village Free) [ GainStarter (N 1)]
     ]
 
 
@@ -259,7 +274,7 @@ cow = Card "Cow" TFood
 
 wagon:Card
 wagon = Card "Wagon" TMove
-    (pay Wood 2)
+    (And [pay Wood 4,pay Food 2]  )
     [ Job ScrapC [gain Wood 2,gain Food 2,draw 2]
     , Job Free [gain Wood 1, gain Food 1, draw 1]
     ]

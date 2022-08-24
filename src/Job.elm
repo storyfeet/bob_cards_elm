@@ -26,6 +26,7 @@ type Cost
     | Pay Resource JobNum
     | ScrapC
     | Starter JobNum
+    | Player
     | Free
 
 type JobNum 
@@ -51,6 +52,7 @@ type Benefit
     | Draw JobNum
     | ScrapB JobNum
     | ScrapDanger JobNum
+    | GainStarter JobNum
 
 
 -- COSTS

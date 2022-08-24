@@ -61,8 +61,9 @@ cost x y c =
         And (h::t) -> cost x y h ++ cost (x + costLen h) y (And t)
         Discard n -> jobCard x y "lightblue" "-" "blue" n 
         Pay r n -> resource x y r n 
-        ScrapC  -> jobCard x y "lightRed" "X" "red" Job.This
+        ScrapC  -> jobCard x y "pink" "X" "red" Job.This
         Starter n -> jobStar x y "white"  n
+        Player -> jobStar x y "blue" Job.This
         Free -> ""
             
 vcost : Float -> Float -> Cost -> String
@@ -111,6 +112,7 @@ benefit x y b =
         Gather r n -> jobCircle x y (resourceColor r) (resourceShortName r) n
         ScrapB n -> jobCard x y "lightblue" "X" "red" n
         ScrapDanger n -> jobCard x y "grey" "X" "red" n
+        GainStarter n -> jobStar x y "white" n
             
 benLen : List Benefit -> Float
 benLen l = toFloat (List.length l ) * 10
