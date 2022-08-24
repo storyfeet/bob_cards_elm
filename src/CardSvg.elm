@@ -59,9 +59,9 @@ cost x y c =
         Or (h::t) -> cost x y h ++ cost (x + 4 + costLen h)  y (Or t)
         And [] -> ""
         And (h::t) -> cost x y h ++ cost (x + costLen h) y (And t)
-        Discard n -> jobCard x y "blue" "dis" n 
+        Discard n -> jobCard x y "lightblue" "-" "blue" n 
         Pay r n -> resource x y r n 
-        ScrapC  -> jobCard x y "red" "scp" (N 1)
+        ScrapC  -> jobCard x y "lightRed" "X" "red" Job.This
         Starter n -> jobStar x y "white"  n
         Free -> ""
             
@@ -107,23 +107,24 @@ benefit x y b =
         Attack n -> jobCircle x y "red" "Atk" n
         Defend n -> jobCircle x y "Grey" "Dfd" n
         Gain r n -> jobRect x y (resourceColor r) (resourceShortName r) n
-        Draw n -> jobCard x y "Green" "+" n
+        Draw n -> jobCard x y "lightblue" "+" "green" n
         Gather r n -> jobCircle x y (resourceColor r) (resourceShortName r) n
-        ScrapB n -> jobCard x y "red" "scp" n
-        ScrapDanger n -> jobCard x y "grey" "sc d" n
+        ScrapB n -> jobCard x y "lightblue" "X" "red" n
+        ScrapDanger n -> jobCard x y "grey" "X" "red" n
             
 benLen : List Benefit -> Float
 benLen l = toFloat (List.length l ) * 10
         
-jobCard : Float -> Float -> String -> String -> JobNum -> String
-jobCard x y col tx n =
+jobCard : Float -> Float -> String -> String -> String -> JobNum -> String
+jobCard x y col tx tcol n =
     String.join "\n" 
          [ rect (x+2) y 6 10 
             [narrowStk col "white" 
             , rxy 1 1
             , rotate 30 (x + 5) (y+5 )   
             ]        
-        , jobTextn x y tx n
+        , text "Arial" 6 [xy (x + 3) (y+6) ,flStk tcol "white" 0.5, strokeFirst,bold] (tx ++ jnum n)
+        --, jobText (x + 5) (y + 9) (jnum n )
         ]
 
 

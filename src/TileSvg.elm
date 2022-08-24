@@ -38,8 +38,10 @@ tileJob : Tile -> String
 tileJob t =
     case t.ltype of
         Village j -> job j
-        _ -> ""
+        Water -> ""
+        _ -> CS.jobStar 30 5 "red" (Job.N t.bandits)
 
+    
 job: Job -> String
 job j =
     let 

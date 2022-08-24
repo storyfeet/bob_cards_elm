@@ -31,14 +31,16 @@ type Cost
 type JobNum 
     = N Int
     | X Int
+    | This
 
 jnum: JobNum -> String
 jnum j =
     case j of
      --   N 1 -> ""
-        X 1 -> "X"
+        X 1 -> "?"
         N n -> String.fromInt n
-        X n -> String.fromInt n ++ "x"
+        X n -> String.fromInt n ++ "?"
+        This -> "!"
 
 type Benefit
     = Movement JobNum

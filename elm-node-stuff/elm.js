@@ -3122,83 +3122,23 @@ var $author$project$PageSvg$flNoStk = function (f) {
 var $author$project$CardSvg$benLen = function (l) {
 	return $elm$core$List$length(l) * 10;
 };
+var $author$project$PageSvg$bold = A2($author$project$PageSvg$prop, 'font-weight', 'bold');
 var $author$project$Job$jnum = function (j) {
-	if (j.$ === 'N') {
-		var n = j.a;
-		return $elm$core$String$fromInt(n);
-	} else {
-		if (j.a === 1) {
-			return 'X';
-		} else {
+	switch (j.$) {
+		case 'N':
 			var n = j.a;
-			return $elm$core$String$fromInt(n) + 'x';
-		}
+			return $elm$core$String$fromInt(n);
+		case 'X':
+			if (j.a === 1) {
+				return '?';
+			} else {
+				var n = j.a;
+				return $elm$core$String$fromInt(n) + '?';
+			}
+		default:
+			return '!';
 	}
 };
-var $author$project$PageSvg$font = F2(
-	function (nm, sz) {
-		return $author$project$PageSvg$props(
-			_List_fromArray(
-				[
-					A2($author$project$PageSvg$prop, 'font-family', nm),
-					A2($author$project$PageSvg$fprop, 'font-size', sz)
-				]));
-	});
-var $author$project$PageSvg$tag = F3(
-	function (name, propl, children) {
-		return '<' + (name + (' ' + (A2($elm$core$String$join, ' ', propl) + (' >' + (A2($elm$core$String$join, '\n', children) + ('</' + (name + '>')))))));
-	});
-var $author$project$PageSvg$text = F4(
-	function (fnt, fsize, pps, txt) {
-		return A3(
-			$author$project$PageSvg$tag,
-			'text',
-			A2(
-				$elm$core$List$cons,
-				A2($author$project$PageSvg$font, fnt, fsize),
-				pps),
-			_List_fromArray(
-				[txt]));
-	});
-var $author$project$PageSvg$txCenter = A2($author$project$PageSvg$prop, 'text-anchor', 'middle');
-var $author$project$PageSvg$xy = F2(
-	function (x, y) {
-		return $author$project$PageSvg$props(
-			_List_fromArray(
-				[
-					A2($author$project$PageSvg$fprop, 'x', x),
-					A2($author$project$PageSvg$fprop, 'y', y)
-				]));
-	});
-var $author$project$CardSvg$jobText = F3(
-	function (x, y, str) {
-		return A4(
-			$author$project$PageSvg$text,
-			'Arial',
-			4,
-			_List_fromArray(
-				[
-					A2($author$project$PageSvg$xy, x, y),
-					$author$project$PageSvg$txCenter,
-					$author$project$PageSvg$flNoStk('black')
-				]),
-			str);
-	});
-var $author$project$CardSvg$jobTextn = F4(
-	function (x, y, tx, n) {
-		return A2(
-			$elm$core$String$join,
-			'\n',
-			_List_fromArray(
-				[
-					A3($author$project$CardSvg$jobText, x + 5, y + 4, tx),
-					A3(
-					$author$project$CardSvg$jobText,
-					x + 5,
-					y + 9,
-					$author$project$Job$jnum(n))
-				]));
-	});
 var $author$project$PageSvg$strokeFirst = A2($author$project$PageSvg$prop, 'style', 'paint-order:stroke');
 var $author$project$CardSvg$narrowStk = F2(
 	function (f, s) {
@@ -3222,6 +3162,15 @@ var $author$project$PageSvg$wh = F2(
 				[
 					A2($author$project$PageSvg$fprop, 'width', w),
 					A2($author$project$PageSvg$fprop, 'height', h)
+				]));
+	});
+var $author$project$PageSvg$xy = F2(
+	function (x, y) {
+		return $author$project$PageSvg$props(
+			_List_fromArray(
+				[
+					A2($author$project$PageSvg$fprop, 'x', x),
+					A2($author$project$PageSvg$fprop, 'y', y)
 				]));
 	});
 var $author$project$PageSvg$xywh = F4(
@@ -3259,8 +3208,33 @@ var $author$project$PageSvg$rxy = F2(
 					A2($author$project$PageSvg$fprop, 'ry', y)
 				]));
 	});
-var $author$project$CardSvg$jobCard = F5(
-	function (x, y, col, tx, n) {
+var $author$project$PageSvg$font = F2(
+	function (nm, sz) {
+		return $author$project$PageSvg$props(
+			_List_fromArray(
+				[
+					A2($author$project$PageSvg$prop, 'font-family', nm),
+					A2($author$project$PageSvg$fprop, 'font-size', sz)
+				]));
+	});
+var $author$project$PageSvg$tag = F3(
+	function (name, propl, children) {
+		return '<' + (name + (' ' + (A2($elm$core$String$join, ' ', propl) + (' >' + (A2($elm$core$String$join, '\n', children) + ('</' + (name + '>')))))));
+	});
+var $author$project$PageSvg$text = F4(
+	function (fnt, fsize, pps, txt) {
+		return A3(
+			$author$project$PageSvg$tag,
+			'text',
+			A2(
+				$elm$core$List$cons,
+				A2($author$project$PageSvg$font, fnt, fsize),
+				pps),
+			_List_fromArray(
+				[txt]));
+	});
+var $author$project$CardSvg$jobCard = F6(
+	function (x, y, col, tx, tcol, n) {
 		return A2(
 			$elm$core$String$join,
 			'\n',
@@ -3278,7 +3252,20 @@ var $author$project$CardSvg$jobCard = F5(
 							A2($author$project$PageSvg$rxy, 1, 1),
 							A3($author$project$PageSvg$rotate, 30, x + 5, y + 5)
 						])),
-					A4($author$project$CardSvg$jobTextn, x, y, tx, n)
+					A4(
+					$author$project$PageSvg$text,
+					'Arial',
+					6,
+					_List_fromArray(
+						[
+							A2($author$project$PageSvg$xy, x + 3, y + 6),
+							A3($author$project$PageSvg$flStk, tcol, 'white', 0.5),
+							$author$project$PageSvg$strokeFirst,
+							$author$project$PageSvg$bold
+						]),
+					_Utils_ap(
+						tx,
+						$author$project$Job$jnum(n)))
 				]));
 	});
 var $author$project$PageSvg$cxy = F2(
@@ -3308,6 +3295,36 @@ var $author$project$PageSvg$circle = F4(
 				$elm$core$List$cons,
 				A4($author$project$PageSvg$cenRad, x, y, r, r),
 				pps));
+	});
+var $author$project$PageSvg$txCenter = A2($author$project$PageSvg$prop, 'text-anchor', 'middle');
+var $author$project$CardSvg$jobText = F3(
+	function (x, y, str) {
+		return A4(
+			$author$project$PageSvg$text,
+			'Arial',
+			4,
+			_List_fromArray(
+				[
+					A2($author$project$PageSvg$xy, x, y),
+					$author$project$PageSvg$txCenter,
+					$author$project$PageSvg$flNoStk('black')
+				]),
+			str);
+	});
+var $author$project$CardSvg$jobTextn = F4(
+	function (x, y, tx, n) {
+		return A2(
+			$elm$core$String$join,
+			'\n',
+			_List_fromArray(
+				[
+					A3($author$project$CardSvg$jobText, x + 5, y + 4, tx),
+					A3(
+					$author$project$CardSvg$jobText,
+					x + 5,
+					y + 9,
+					$author$project$Job$jnum(n))
+				]));
 	});
 var $author$project$CardSvg$jobCircle = F5(
 	function (x, y, col, tx, n) {
@@ -3400,7 +3417,7 @@ var $author$project$CardSvg$benefit = F3(
 					n);
 			case 'Draw':
 				var n = b.a;
-				return A5($author$project$CardSvg$jobCard, x, y, 'Green', '+', n);
+				return A6($author$project$CardSvg$jobCard, x, y, 'lightblue', '+', 'green', n);
 			case 'Gather':
 				var r = b.a;
 				var n = b.b;
@@ -3413,10 +3430,10 @@ var $author$project$CardSvg$benefit = F3(
 					n);
 			case 'ScrapB':
 				var n = b.a;
-				return A5($author$project$CardSvg$jobCard, x, y, 'red', 'scp', n);
+				return A6($author$project$CardSvg$jobCard, x, y, 'lightblue', 'X', 'red', n);
 			default:
 				var n = b.a;
-				return A5($author$project$CardSvg$jobCard, x, y, 'grey', 'sc d', n);
+				return A6($author$project$CardSvg$jobCard, x, y, 'grey', 'X', 'red', n);
 		}
 	});
 var $author$project$CardSvg$benefits = F3(
@@ -3439,6 +3456,7 @@ var $author$project$Job$And = function (a) {
 var $author$project$Job$Or = function (a) {
 	return {$: 'Or', a: a};
 };
+var $author$project$Job$This = {$: 'This'};
 var $elm$core$Basics$negate = function (n) {
 	return -n;
 };
@@ -3694,19 +3712,13 @@ var $author$project$CardSvg$cost = F3(
 					}
 				case 'Discard':
 					var n = c.a;
-					return A5($author$project$CardSvg$jobCard, x, y, 'blue', 'dis', n);
+					return A6($author$project$CardSvg$jobCard, x, y, 'lightblue', '-', 'blue', n);
 				case 'Pay':
 					var r = c.a;
 					var n = c.b;
 					return A4($author$project$CardSvg$resource, x, y, r, n);
 				case 'ScrapC':
-					return A5(
-						$author$project$CardSvg$jobCard,
-						x,
-						y,
-						'red',
-						'scp',
-						$author$project$Job$N(1));
+					return A6($author$project$CardSvg$jobCard, x, y, 'lightRed', 'X', 'red', $author$project$Job$This);
 				case 'Starter':
 					var n = c.a;
 					return A4($author$project$CardSvg$jobStar, x, y, 'white', n);
@@ -4255,11 +4267,19 @@ var $author$project$TileSvg$job = function (j) {
 };
 var $author$project$TileSvg$tileJob = function (t) {
 	var _v0 = t.ltype;
-	if (_v0.$ === 'Village') {
-		var j = _v0.a;
-		return $author$project$TileSvg$job(j);
-	} else {
-		return '';
+	switch (_v0.$) {
+		case 'Village':
+			var j = _v0.a;
+			return $author$project$TileSvg$job(j);
+		case 'Water':
+			return '';
+		default:
+			return A4(
+				$author$project$CardSvg$jobStar,
+				30,
+				5,
+				'red',
+				$author$project$Job$N(t.bandits));
 	}
 };
 var $author$project$TileSvg$front = function (t) {

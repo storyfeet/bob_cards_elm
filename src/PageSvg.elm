@@ -108,6 +108,8 @@ flStk f s w =
 strokeFirst : String
 strokeFirst = prop "style" "paint-order:stroke"
 
+bold : String
+bold = prop "font-weight" "bold"
 txCenter : String
 txCenter = prop "text-anchor" "middle"
 
