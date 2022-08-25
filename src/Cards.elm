@@ -167,35 +167,22 @@ viewRect col inner =
 -- Decks
 
 allCards : List (Card, Int)
-allCards = (starterDeck ++ tradeRow ++ playerDeck ++ dangerDeck)
-starterDeck : List (Card,Int)
-starterDeck = [(pan,2),(boots,2),(bow,2),(rookieTrader ,2),(saw,2),(pickaxe,2)]
+allCards = (starterDeck ++ tradeDeck ++ playerDeck ++ dangerDeck)
 
-tradeRow : List (Card,Int)
-tradeRow = 
-    [(horse,2)
-    ,(twinSwords,2) 
-    ,(wagon,3)
-    ,(sword,3)
-    ,(train,2)
-    ,(crossbow,3)
-    ,(drill,2)
-    ]
 
 playerDeck : List (Card,Int)
 playerDeck =
     [(noobyNorris,1) , (stealySteve,1)]
 
 
-dangerDeck : List (Card,Int)
-dangerDeck =
-    [(thirst,6)]
 
 
 -- ACTUAL CARDS
 
 --STARTER CARDS
 
+starterDeck : List (Card,Int)
+starterDeck = [(pan,2),(boots,2),(bow,2),(rookieTrader ,2),(saw,2),(pickaxe,2)]
 pan : Card
 pan = Card "Pan" TGold (starter 2) [riverGather Gold 1]
 
@@ -228,6 +215,21 @@ pickaxe = Card "Pickaxe" TGold (starter 2)
 
 -- Buyable Cards
 
+tradeDeck : List (Card,Int)
+tradeDeck = 
+    [(horse,3)
+    ,(stalion,2)
+    ,(bigPan,2)
+    ,(drill,2)
+    ,(twinSwords,2) 
+    ,(wagon,3)
+    ,(sword,3)
+    ,(train,2)
+    ,(crossbow,3)
+    ,(drill,2)
+    ,(cow,3)
+    ,(shield,2)
+    ]
 bigPan : Card
 bigPan = Card "Big Pan" TGold (In Village (pay Gold 1))
     [riverGather Gold 3]
@@ -278,6 +280,8 @@ wagon = Card "Wagon" TMove
     , Job Free [gain Wood 1, gain Food 1, draw 1]
     ]
 
+
+
 -- TODO how to make railways
 train : Card
 train = Card "Train" TMove
@@ -293,10 +297,28 @@ crossbow = Card "Crossbow" TAttack (And [pay Wood 3,pay Iron 2])
 
 -- Danger 
 
+dangerDeck : List (Card,Int)
+dangerDeck =
+    [(thirst,6)
+    ,(hunger,6)
+    ]
+
 thirst :Card
 thirst = Card "Thirst" TDanger (Danger Lack Job.None)
     [Job (In River Free) [Job.ScrapB Job.This]]
-    
+
+hunger : Card
+hunger = Card "Hunger" TDanger (Danger Lack Job.None)
+    [Job (pay Food 1) [Job.ScrapB Job.This]]
+
+owie : Card
+owie = Card "Owie" TDanger (Danger Pain Job.None)
+    [Job (In Village (pay Gold 1)) [Job.ScrapB Job.This]]
+
+exhaustion : Card
+exhaustion = Card "Exhaustion" TDanger (Danger Exhaustion Job.None)
+    [Job (In Village (discard 1)) [Job.ScrapB Job.This]]
+ 
 
 
 
