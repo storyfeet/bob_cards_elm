@@ -59,8 +59,8 @@ basicTiles n =
 
 villageJobs : List Job
 villageJobs =
-    [ Job (discard 1 ) [gain Gold 1]
-    , Job (pay Gold 1) [ScrapDanger (X 1)]
+    [ [discard, gain Gold 1]
+    , [pay Gold 1, Scrap (TDanger DAny) (X 1)]
 
     ]
 

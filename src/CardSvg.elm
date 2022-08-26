@@ -9,7 +9,7 @@ front card =
     String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "none" 0]
     , rect 5 5 40 60 [flNoStk "White" , prop "opacity" "0.5" ]
     , text "Arial" 6 [xy 20 10,narrowStk "Black" "yellow" ,txCenter] card.name
-    , cost 2 38 2 card.cost
+    , costOrType card.cost card.ctype
     , jobs 55 card.jobs
     ]
 
@@ -17,7 +17,7 @@ jobs : Float -> List Job -> String
 jobs y l =
     case l of 
         [] -> ""
-        h::t -> job 5 y h ++ jobs (y - 10) t -- (if splitJob h then 20 else 10) ) 
+        h::t -> job 5 y h ++ jobs (y - 12) t -- (if splitJob h then 20 else 10) ) 
 
 
 job : Float -> Float -> Job -> String
@@ -29,7 +29,7 @@ job x y jb =
 
 
 jobLen : Job -> Float
-jobLen j = List.length j |> toFloat
+jobLen j = 10 * List.length j |> toFloat
 
 action : Float -> Float -> Action -> String
 action x y c = 
@@ -38,19 +38,24 @@ action x y c =
         Or -> ""
         Discard ct n -> jobCard x y ct "-" "orange" n 
         Draw n -> jobCard x y TAny "+" "green" n
-        Scrap ct n -> jobCard x y ct "x" "red" n
+        Scrap ct n -> jobCard x y ct "#" "red" n
         Take ct n -> jobCard x y ct "^" "blue" n
-        Pay r n -> resource x y r n 
         Starter n -> jobStar x y "white"  n
         Player -> jobStar x y "blue" Job.This
         Move n -> jobCircle x y "Pink" "Mv" n
         Attack n -> jobCircle x y "red" "Atk" n
         Defend n -> jobCircle x y "Grey" "Dfd" n
-        Gain r n -> jobRect x y (resourceColor r) (resourceShortName r) n
+        Pay r n -> resource x y r "Red" "-" n 
+        Gain r n -> resource x y r "Green" "+" n 
         Gather r n -> jobCircle x y (resourceColor r) (resourceShortName r) n
         BuildRail -> jobCircle x y "Orange" "Bld" (N 1)
 
             
+costOrType : Job -> CardType -> String
+costOrType j ct =
+    case j of
+        [] -> cardType ct
+        _ -> cost 2 38 2 j
 
 cost : Float -> Float -> Float -> Job -> String
 cost top x y c = 
@@ -59,11 +64,24 @@ cost top x y c =
         Or::t -> cost (top+10) (x - 12) (top + 10 ) t
         h::t -> action x y h ++ cost top x (y+10 ) t
 
-resource : Float -> Float ->Resource -> JobNum -> String
-resource x y r n =
+cardType : CardType -> String
+cardType ct = 
+    case ct of
+        TDanger d ->  
+            String.join "\n" 
+                [ qStar 38 2 "black" "white"
+                , idText 43 10 "red" (dangerType d)
+            ]
+        _ -> qStar 38 2 (cTypeColor ct) "black"
+
+
+
+resource : Float -> Float ->Resource -> String -> String -> JobNum -> String
+resource x y r tcol sym n =
     String.join "\n" 
         [ rect x y 10 10 [narrowStk (resourceColor r) "black"] 
-        , jobTextn x y (resourceShortName r) n
+        , gainText (x + 5) (y + 5) tcol (sym ++ jnum n)
+        , jobText (x + 5) (y + 9) (resourceShortName r)
         ]
 
 narrowStk: String -> String -> String 
@@ -79,12 +97,12 @@ jobCard : Float -> Float -> CardType -> String -> String -> JobNum -> String
 jobCard x y ct tx tcol n =
     String.join "\n" 
          [ rect (x+2) y 6 10 
-            [narrowStk (cTypeColor ct) "white" 
+            [narrowStk (cTypeColor ct) "black"
             , rxy 1 1
             , rotate 30 (x + 5) (y+5 )   
             ]        
-        , gainText (x + 4) (y+6) tcol (tx ++ jnum n)
-        , cardLetter (x + 2) (y + 9) ct
+        , cardLetter (x + 1) (y + 9) ct
+        , gainText (x + 6.5) (y+5) tcol (tx ++ jnum n)
 
         ]
 
@@ -125,9 +143,13 @@ jobRect x y col tx n =
 jobStar : Float -> Float -> String ->  JobNum -> String
 jobStar x y col n =
     String.join "\n"
-        [ polygon (starPoints x y 10 10) [narrowStk col "black" ]
+        [ qStar x y col "black"
         , jobText (x+5) (y + 6) (jnum n)
         ]
+
+qStar : Float -> Float -> String -> String -> String
+qStar  x y col oline= 
+    polygon (starPoints x y 10 10) [narrowStk col oline]
 
 dangerStar : Float -> Float -> String -> String -> JobNum -> String
 dangerStar x y col tx n =
@@ -227,9 +249,9 @@ jobText x y str = text "Arial" 4 [xy x y,txCenter,flNoStk "black" ] str
 
 idText : Float -> Float -> String -> String -> String
 idText x y col tx =
-        text "Arial" 6 [xy x y ,flStk col "white" 0.5, strokeFirst,bold] (tx )
+        text "Arial" 6 [xy x y ,flStk col "white" 0.5, strokeFirst,bold,txCenter] (tx )
 
 gainText : Float -> Float -> String -> String -> String
 gainText x y col tx =
-        text "Arial" 5 [xy x y ,flStk col "white" 0.5, strokeFirst,bold] (tx )
+        text "Arial" 5 [xy x y ,flStk col "white" 0.5, strokeFirst,bold,txCenter] (tx )
 

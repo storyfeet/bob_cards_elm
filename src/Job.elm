@@ -25,15 +25,16 @@ type JobNum
 jnum: JobNum -> String
 jnum j =
     case j of
-        X 1 -> "?"
+        X 1 -> "x"
         N n -> String.fromInt n
-        X n -> String.fromInt n ++ "?"
+        X n -> String.fromInt n ++ "x"
         This -> "!"
         None -> ""
 
 type CardType 
     = TAny
     | TStarter 
+    | THealth
     | TFight
     | TMove
     | TGather
@@ -83,6 +84,8 @@ starter : Int -> Action
 starter n = Starter (N n)
 
 
+scrapMe : Action
+scrapMe = Scrap TAny This
 
 payEq : Int ->  List Resource -> List Action
 payEq n l =
@@ -131,6 +134,8 @@ foodMove f d = [Pay Food (N f),Move(N d)]
 
 woodMove : Int -> Int -> Job
 woodMove w d = [pay Wood w, Move(N d) ]
+
+
 
 
 scrapFor : Resource -> Int -> Job

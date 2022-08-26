@@ -108,11 +108,12 @@ cTypeColor ct =
         TStarter -> "yellow"
         TFight -> "red"
         TMove -> "lightblue"
-        TGather -> "LightGreen"
+        TGather -> "fuchsia"
         TPlayer -> "blue"
         TDanger _ -> "black"
         TTrade -> "pink"
         TMake -> "orange"
+        THealth -> "Green"
 
          
 

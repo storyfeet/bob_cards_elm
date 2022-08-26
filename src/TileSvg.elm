@@ -45,13 +45,9 @@ tileJob t =
 job: Job -> String
 job j =
     let 
-        cx = 22.5 - (CS.costLen j.req *0.5)
-        bx = 22.5 + (CS.benLen j.for * 0.5)
+        x = ( 45 - (CS.jobLen j)) * 0.5
         
     in
-        String.join "\n"
-            [ CS.cost cx 5 j.req
-            , CS.benefits bx 32 j.for
-            ]
+         CS.job  x 32 j
 
 
