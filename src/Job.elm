@@ -22,9 +22,9 @@ type Cost
     = In Place Cost
     | Or (List Cost)
     | And (List Cost)
-    | Discard JobNum
+    | Discard CardType JobNum
+    | Scrap CardType JobNum
     | Pay Resource JobNum
-    | ScrapC
     | Starter JobNum
     | Player
     | Danger DDanger JobNum
@@ -45,12 +45,21 @@ jnum j =
         This -> "!"
         None -> ""
 
-type DDanger
+type CardType 
+    = TAny
+    | TFight
+    | TMove
+    | TGather
+    | TTrade
+    | TPlayer
+    | TDanger DangerType
+
+type DangerType
     = Lack
     | Pain
     | Exhaustion
 
-dangerType: DDanger -> String
+dangerType: DangerType -> String
 dangerType d = 
     case d of
         Lack -> "L"

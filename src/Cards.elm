@@ -6,22 +6,11 @@ import Job exposing (..)
 
 type alias Card =
     { name : String
-    , ctype : CType
+    , ctype : CardType
     , cost : Cost
     , jobs : List Job
     }
 
-type CType 
-    = TAttack
-    | TDefence
-    | TMove
-    | TGold
-    | TFood
-    | TCarry
-    | TWood
-    | TIron
-    | TPlayer
-    | TDanger
 
 
 
@@ -110,7 +99,7 @@ placeShortName pl =
         Village -> "Vlg"
 
 
-cTypeColor : CType -> String
+cTypeColor : CardType -> String
 cTypeColor ct = 
     case ct of
        TAttack -> "red"
