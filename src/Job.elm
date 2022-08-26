@@ -1,8 +1,5 @@
 module Job exposing (..)
-type alias Job =
-    { req : Cost
-    , for : List Benefit
-    }
+type alias Job = List Action
 type Place 
     = Water
     | Forest
@@ -18,17 +15,6 @@ type Resource
     | Food
     | Any
 
-type Cost
-    = In Place Cost
-    | Or (List Cost)
-    | And (List Cost)
-    | Discard CardType JobNum
-    | Scrap CardType JobNum
-    | Pay Resource JobNum
-    | Starter JobNum
-    | Player
-    | Danger DDanger JobNum
-    | Free
 
 type JobNum 
     = N Int
@@ -47,6 +33,7 @@ jnum j =
 
 type CardType 
     = TAny
+    | TStarter
     | TFight
     | TMove
     | TGather
@@ -66,97 +53,84 @@ dangerType d =
         Pain -> "P"
         Exhaustion -> "E"
 
-type Benefit
-    = Movement JobNum
+type Action
+    = Move JobNum
+    | Or 
+    | In Place
     | Attack JobNum
     | Defend JobNum
-    | BuildRail
     | Gain Resource JobNum
+    | Pay Resource JobNum
     | Gather Resource JobNum
     | Draw JobNum
-    | ScrapB JobNum
-    | DiscardDanger JobNum
-    | ScrapDanger JobNum
-    | GainStarter JobNum
-
+    | Scrap CardType JobNum
+    | Take CardType JobNum
+    | Discard CardType JobNum
+    | BuildRail
+    | Starter JobNum
+    | Player
 
 -- COSTS
 
-pay : Resource -> Int -> Cost
+pay : Resource -> Int -> Action
 pay r n = 
     N n |> Pay r
 
-starter : Int -> Cost
+starter : Int -> Action
 starter n = Starter (N n)
 
 
-payL : List (Resource, Int) -> Cost
-payL l =
-    l |> List.map (\(r,n) -> pay r n ) |> And
 
-payEq : Int ->  List Resource -> Cost
+payEq : Int ->  List Resource -> List Action
 payEq n l =
-    l |> List.map (\r-> Pay r (N n)) |> And
+    l |> List.map (\r-> Pay r (N n)) 
 
-gain : Resource -> Int -> Benefit
+gain : Resource -> Int -> Action
 gain r n =
     N n |> Gain r 
 
-gather : Resource -> Int -> Benefit
+gather : Resource -> Int -> Action
 gather r n =
     Gather r (N n)
     
 
-attack : Int -> Benefit
+attack : Int -> Action
 attack n =
     Attack (N n)
 
-defend : Int -> Benefit
+defend : Int -> Action
 defend n =
     Defend (N n)
 
-draw : Int -> Benefit
+draw : Int -> Action
 draw n =
     Draw (N n)
 
-discard : Int -> Cost
-discard n = 
-    Discard (N n)
+discard : Action
+discard = 
+    Discard TAny (N 1)
 
 -- JOBS
 trade : Resource -> Int -> Resource -> Int -> Job
 trade a aN b bN =
-    Job (Pay a (X aN) ) [Gain b (X bN)]
+    [Pay a (X aN) , Gain b (X bN)]
 
 riverGather : Resource -> Int ->Job
 riverGather = gatherAt River
 
 gatherAt : Place -> Resource -> Int -> Job
 gatherAt p r n = 
-    Job (In p Free ) [Gather r (N n)  ]
-
-
-
+    [In p,Gather r (N n)  ]
 
 
 foodMove : Int -> Int -> Job
-foodMove f d = Job (Pay Food (N f)) [Movement (N d)]
+foodMove f d = [Pay Food (N f),Move(N d)]
 
 woodMove : Int -> Int -> Job
-woodMove w d = Job (pay Wood w) [Movement (N d) ]
+woodMove w d = [pay Wood w, Move(N d) ]
 
 
 scrapFor : Resource -> Int -> Job
 scrapFor r n =
-    Job ScrapC [gain r n]
-
-
-free :List Benefit -> Job
-free b = Job Free b
-freebie : Benefit -> Job 
-freebie b = Job Free [b]
-freeAttack : Int -> Job
-freeAttack a = Job Free [attack a]
-freeDefend : Int -> Job
-freeDefend d = Job Free [defend d]
+    [Scrap TAny This, gain r n]
 

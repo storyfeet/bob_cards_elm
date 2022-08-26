@@ -7,7 +7,7 @@ import Job exposing (..)
 type alias Card =
     { name : String
     , ctype : CardType
-    , cost : Cost
+    , cost : List Action
     , jobs : List Job
     }
 
@@ -33,7 +33,7 @@ viewJob jb =
      
 
 
-viewCost : Cost -> Html m
+{--viewActin : Cost -> Html m
 viewCost cst = 
    case cst of 
     In plac ch -> div [] [viewPlace plac, viewCost ch]
@@ -61,6 +61,7 @@ viewBenefit bn =
         GainStarter _ -> viewEllipse "pink" []
         _ -> viewEllipse "Blue" [] -- TODO
 
+--}
 
 
 numItems : String -> JobNum -> List (Html m)
@@ -102,16 +103,13 @@ placeShortName pl =
 cTypeColor : CardType -> String
 cTypeColor ct = 
     case ct of
-       TAttack -> "red"
-       TDefence -> "lightgrey"
-       TMove -> "lightblue"
-       TGold -> "gold"
-       TFood -> "lightgreen"
-       TWood -> "maroon"
-       TCarry -> "Blue"
-       TIron -> "Orange"
-       TPlayer -> "blue"
-       TDanger -> "black"
+        TAny -> "white"
+        TStarter -> "yellow"
+        TFight -> "red"
+        TMove -> "lightblue"
+        TGather -> "LightGreen"
+        TPlayer -> "blue"
+        TDanger _ -> "black"
 
 placeColor: Place -> String
 placeColor pl = 
