@@ -61,10 +61,12 @@ type Benefit
     = Movement JobNum
     | Attack JobNum
     | Defend JobNum
+    | BuildRail
     | Gain Resource JobNum
     | Gather Resource JobNum
     | Draw JobNum
     | ScrapB JobNum
+    | DiscardDanger JobNum
     | ScrapDanger JobNum
     | GainStarter JobNum
 
@@ -140,6 +142,8 @@ scrapFor r n =
     Job ScrapC [gain r n]
 
 
+free :List Benefit -> Job
+free b = Job Free b
 freebie : Benefit -> Job 
 freebie b = Job Free [b]
 freeAttack : Int -> Job

@@ -4,9 +4,11 @@ import Platform exposing (worker)
 import PageSvg exposing (..)
 import CardSvg exposing (..)
 import Cards exposing (..)
+import Decks.All exposing (allCards)
 import MLists exposing(spreadL)
 import Land exposing (Tile)
 import TileSvg
+
 
 
 port log : Writer -> Cmd msg
