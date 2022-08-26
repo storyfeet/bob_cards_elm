@@ -170,9 +170,6 @@ allCards : List (Card, Int)
 allCards = (starterDeck ++ tradeDeck ++ playerDeck ++ dangerDeck)
 
 
-playerDeck : List (Card,Int)
-playerDeck =
-    [(noobyNorris,1) , (stealySteve,1)]
 
 
 
@@ -299,8 +296,10 @@ crossbow = Card "Crossbow" TAttack (And [pay Wood 3,pay Iron 2])
 
 dangerDeck : List (Card,Int)
 dangerDeck =
-    [(thirst,6)
-    ,(hunger,6)
+    [(thirst,4)
+    ,(hunger,4)
+    ,(owie,6)
+    ,(exhaustion,6)
     ]
 
 thirst :Card
@@ -323,6 +322,9 @@ exhaustion = Card "Exhaustion" TDanger (Danger Exhaustion Job.None)
 
 
 -- Players
+playerDeck : List (Card,Int)
+playerDeck =
+    [(noobyNorris,1) , (stealySteve,1)]
 noobyNorris : Card 
 noobyNorris = Card "Nooby Norris" TPlayer (Player)
     [ Job Free [Movement (N 1)]
