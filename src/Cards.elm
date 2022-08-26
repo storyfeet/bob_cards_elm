@@ -14,7 +14,7 @@ type alias Card =
 
 
 
-
+{--
 view : Card -> Html m
 view crd = div (cardStyle (cTypeColor crd.ctype))
     [ text crd.name
@@ -32,6 +32,7 @@ viewJob jb =
      (List.map viewBenefit jb.for))
      
 
+--}
 
 {--viewActin : Cost -> Html m
 viewCost cst = 
@@ -110,6 +111,10 @@ cTypeColor ct =
         TGather -> "LightGreen"
         TPlayer -> "blue"
         TDanger _ -> "black"
+        TTrade -> "pink"
+        TMake -> "orange"
+
+         
 
 placeColor: Place -> String
 placeColor pl = 

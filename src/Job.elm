@@ -33,10 +33,11 @@ jnum j =
 
 type CardType 
     = TAny
-    | TStarter
+    | TStarter 
     | TFight
     | TMove
     | TGather
+    | TMake
     | TTrade
     | TPlayer
     | TDanger DangerType
@@ -45,6 +46,7 @@ type DangerType
     = Lack
     | Pain
     | Exhaustion
+    | DAny
 
 dangerType: DangerType -> String
 dangerType d = 
@@ -52,6 +54,7 @@ dangerType d =
         Lack -> "L"
         Pain -> "P"
         Exhaustion -> "E"
+        DAny -> "*"
 
 type Action
     = Move JobNum

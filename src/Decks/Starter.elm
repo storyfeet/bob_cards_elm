@@ -14,38 +14,38 @@ starterDeck =
     ,(woodHammer,1)
     ]
 pan : Card
-pan = Card "Pan" TGold (starter 2) [riverGather Gold 1]
+pan = Card "Pan" TGather [starter 2] [riverGather Gold 1]
 
 bow:Card
-bow = Card "Bow" TAttack
-    (starter 2)
-    [Job (In Forest (pay Wood 1)) [gather Food 3]
-    ,Job (pay Wood 1) [attack 3]
+bow = Card "Bow" TFight
+    [starter 2]
+    [[In Forest, pay Wood 1, gather Food 3]
+    ,[pay Wood 1, attack 3]
     ]
 
 saw:Card
-saw = Card "Saw" TWood 
-    (starter 2) 
-    [ Job (In Forest (discard 1)) [gain Wood 3] 
+saw = Card "Saw" TGather 
+    [starter 2] 
+    [ [In Forest , discard , gain Wood 3] 
     ]
 
 boots : Card
-boots = Card "Boots" TMove (starter 2) 
+boots = Card "Boots" TMove [starter 2] 
     [foodMove 1 1]
 
 rookieTrader : Card
-rookieTrader = Card "Rookie Trader" TGold (starter 2)
-    [ Job (In Village (Pay Gold (X 1))) [Gain Any (X 1)]
-    , Job (In Village (Pay Any (X 2))) [Gain Gold (X 1)]
+rookieTrader = Card "Rookie Trader" TTrade [starter 2]
+    [ [In Village ,Pay Gold (X 1), Gain Any (X 1)]
+    , [In Village ,Pay Any (X 2), Gain Gold (X 1)]
     ]
 
 pickaxe : Card
-pickaxe = Card "Pickaxe" TGold (starter 1)
-    [Job (In Mountain (discard 1)) [gather Iron 3]]
+pickaxe = Card "Pickaxe" TGather [starter 1]
+    [[In Mountain,discard , gather Iron 3]]
 
 woodHammer : Card
-woodHammer = Card "Wood Hammer" TGold (starter 1)
-    [Job (And [pay Gold 1,pay Iron 1, pay Wood 1,discard 1] ) [BuildRail] ]
+woodHammer = Card "Wood Hammer" TMake [starter 1]
+    [[pay Gold 1,pay Iron 1, pay Wood 1,discard ,BuildRail]]
 
 -- Danger 
 
@@ -58,20 +58,20 @@ dangerDeck =
     ]
 
 thirst :Card
-thirst = Card "Thirst" TDanger (Danger Lack Job.None)
-    [Job (In River Free) [Job.ScrapB Job.This]]
+thirst = Card "Thirst" (TDanger Lack) []
+    [[In River,Scrap TAny Job.This]]
 
 hunger : Card
-hunger = Card "Hunger" TDanger (Danger Lack Job.None)
-    [Job (pay Food 1) [Job.ScrapB Job.This]]
+hunger = Card "Hunger" (TDanger Lack) []
+    [[pay Food 1,Scrap TAny Job.This]]
 
 owie : Card
-owie = Card "Owie" TDanger (Danger Pain Job.None)
-    [Job (In Village (pay Gold 1)) [Job.ScrapB Job.This]]
+owie = Card "Owie" (TDanger Pain) []
+    [[In Village,pay Gold 1,Scrap TAny Job.This]]
 
 exhaustion : Card
-exhaustion = Card "Exhaustion" TDanger (Danger Exhaustion Job.None)
-    [Job (In Village (discard 1)) [Job.ScrapB Job.This]]
+exhaustion = Card "Exhaustion" (TDanger Exhaustion) [] 
+    [[In Village,discard ,Scrap TAny Job.This]]
  
 
 
@@ -81,14 +81,14 @@ playerDeck : List (Card,Int)
 playerDeck =
     [(noobyNorris,1) , (stealySteve,1)]
 noobyNorris : Card 
-noobyNorris = Card "Nooby Norris" TPlayer (Player)
-    [ Job Free [Movement (N 1)]
-    , Job (In Village Free) [ GainStarter (N 1)]
+noobyNorris = Card "Nooby Norris" TPlayer []
+    [ [Move (N 1)]
+    , [In Village , Take TStarter (N 1)]
     ]
 
 stealySteve : Card
-stealySteve = Card "Stealy Steve" TPlayer (Player)
-    [ Job (Danger Lack (N 1)) [Movement (N 1)]]
+stealySteve = Card "Stealy Steve" TPlayer []
+    [ [Take (TDanger Exhaustion) (N 1) ,Move (N 1)]]
 
 
 

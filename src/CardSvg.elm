@@ -9,7 +9,7 @@ front card =
     String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "none" 0]
     , rect 5 5 40 60 [flNoStk "White" , prop "opacity" "0.5" ]
     , text "Arial" 6 [xy 20 10,narrowStk "Black" "yellow" ,txCenter] card.name
-    , vcost 38 2 card.cost
+    , cost 2 38 2 card.cost
     , jobs 55 card.jobs
     ]
 
@@ -17,66 +17,47 @@ jobs : Float -> List Job -> String
 jobs y l =
     case l of 
         [] -> ""
-        h::t -> job y h ++ jobs (y - (if splitJob h then 20 else 10) ) t
-
-splitJob : Job -> Bool 
-splitJob j = benLen j.for + costLen j.req > 31  
-
-job : Float -> Job -> String
-job y jb =
-    let 
-        blen = benLen jb.for
-        costY = if splitJob jb then y - 10 else y
-
-        ja = if splitJob jb then
-                    jobCorner (35 - blen) y
-                else
-                    jobArrow  ((costLen jb.req + (45 - blen) - 3)*0.5 ) y
-
-    in 
-        String.join "\n" 
-            [cost 5 costY jb.req
-            , ja
-            , benefits 45 y jb.for
-            ]
+        h::t -> job 5 y h ++ jobs (y - 10) t -- (if splitJob h then 20 else 10) ) 
 
 
-costLen : Cost -> Float
-costLen c =
-    case c of
-        In _ inner -> 10 + costLen inner
-        Or l -> List.foldl (\i n -> n +costLen i + 4) -4 l
-        And l -> List.foldl (\i n -> n +costLen i ) 0 l 
-        Free -> 0
-        _ -> 10
+job : Float -> Float -> Job -> String
+job x y jb =
+    case jb of
+        [] -> ""
+        h::t -> action x y h ++ job (x + 10 ) y t 
 
-cost : Float -> Float -> Cost -> String
-cost x y c = 
+
+
+jobLen : Job -> Float
+jobLen j = List.length j |> toFloat
+
+action : Float -> Float -> Action -> String
+action x y c = 
     case c of 
-        In p inner -> place x y p ++ cost (x+10 ) y inner
-        Or [] -> ""
-        Or (ic::[]) -> cost x y ic
-        Or (h::t) -> cost x y h ++ cost (x + 4 + costLen h)  y (Or t)
-        And [] -> ""
-        And (h::t) -> cost x y h ++ cost (x + costLen h) y (And t)
-        Discard n -> jobCard x y "lightblue" "-" "blue" n 
+        In p -> place x y p 
+        Or -> ""
+        Discard ct n -> jobCard x y ct "-" "orange" n 
+        Draw n -> jobCard x y TAny "+" "green" n
+        Scrap ct n -> jobCard x y ct "x" "red" n
+        Take ct n -> jobCard x y ct "^" "blue" n
         Pay r n -> resource x y r n 
-        ScrapC  -> jobCard x y "pink" "X" "red" Job.This
         Starter n -> jobStar x y "white"  n
         Player -> jobStar x y "blue" Job.This
-        Danger dt n-> dangerStar x y "grey" (dangerType dt) n
-        Free -> ""
+        Move n -> jobCircle x y "Pink" "Mv" n
+        Attack n -> jobCircle x y "red" "Atk" n
+        Defend n -> jobCircle x y "Grey" "Dfd" n
+        Gain r n -> jobRect x y (resourceColor r) (resourceShortName r) n
+        Gather r n -> jobCircle x y (resourceColor r) (resourceShortName r) n
+        BuildRail -> jobCircle x y "Orange" "Bld" (N 1)
+
             
-vcost : Float -> Float -> Cost -> String
-vcost x y c = 
+
+cost : Float -> Float -> Float -> Job -> String
+cost top x y c = 
     case c of 
-        In p inner -> place x y p ++ vcost x (y+10) inner
-        Or [] -> ""
-        Or (ic::[]) -> vcost x y ic
-        Or (h::t) -> vcost x y h ++ vcost (x - 12) (y + 10 )   (Or t)
-        And [] -> ""
-        And (h::t) -> vcost x y h ++ vcost x (y + costLen h) (And t)
-        _ -> cost x y c
+        [] -> ""
+        Or::t -> cost (top+10) (x - 12) (top + 10 ) t
+        h::t -> action x y h ++ cost top x (y+10 ) t
 
 resource : Float -> Float ->Resource -> JobNum -> String
 resource x y r n =
@@ -92,46 +73,26 @@ narrowStk f s =
     , strokeFirst
     ]
 
-benefits:Float -> Float -> List Benefit -> String 
-benefits xend y bens = 
-    let x = xend - (toFloat (10 * (List.length bens   )))
-    in 
-        bens 
-        |> List.indexedMap (\n b -> benefit (x + (toFloat n* 10)) y b  )
-        |> String.join "\n"
- 
 
 
-benefit : Float -> Float -> Benefit -> String
-benefit x y b = 
-    case b of 
-        Movement n -> jobCircle x y "Pink" "Mv" n
-        Attack n -> jobCircle x y "red" "Atk" n
-        Defend n -> jobCircle x y "Grey" "Dfd" n
-        Gain r n -> jobRect x y (resourceColor r) (resourceShortName r) n
-        Draw n -> jobCard x y "lightblue" "+" "green" n
-        Gather r n -> jobCircle x y (resourceColor r) (resourceShortName r) n
-        ScrapB n -> jobCard x y "lightblue" "X" "red" n
-        DiscardDanger n -> jobCard x y "grey" "-" "green" n
-        ScrapDanger n -> jobCard x y "grey" "X" "red" n
-        GainStarter n -> jobStar x y "white" n
-        BuildRail -> jobCircle x y "Orange" "Bld" (N 1)
-
-            
-benLen : List Benefit -> Float
-benLen l = toFloat (List.length l ) * 10
-        
-jobCard : Float -> Float -> String -> String -> String -> JobNum -> String
-jobCard x y col tx tcol n =
+jobCard : Float -> Float -> CardType -> String -> String -> JobNum -> String
+jobCard x y ct tx tcol n =
     String.join "\n" 
          [ rect (x+2) y 6 10 
-            [narrowStk col "white" 
+            [narrowStk (cTypeColor ct) "white" 
             , rxy 1 1
             , rotate 30 (x + 5) (y+5 )   
             ]        
         , gainText (x + 4) (y+6) tcol (tx ++ jnum n)
+        , cardLetter (x + 2) (y + 9) ct
+
         ]
 
+cardLetter : Float -> Float -> CardType -> String
+cardLetter x y ct =
+    case ct of
+        TDanger d -> idText x y "black" (dangerType d)
+        _ -> ""
 
 jobArrow : Float -> Float -> String 
 jobArrow x y =
