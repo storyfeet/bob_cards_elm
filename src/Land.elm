@@ -61,7 +61,12 @@ villageJobs : List Job
 villageJobs =
     [ [discard, gain Gold 1]
     , [pay Gold 1, Scrap (TDanger DAny) (X 1)]
-
+    , [Move (N 3)]
+    , [Discard TAny (X 1), Gain Iron (X 1)]
+    , [Draw (N 2)]
+    , [Discard (TDanger DAny) (X 1)]
+    , [Discard TAny (X 2), Gain Food (X 3)]
+    , [pay Gold 2, Draw (N 4)]
     ]
 
 villageTiles : List Tile

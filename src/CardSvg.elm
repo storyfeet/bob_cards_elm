@@ -10,21 +10,42 @@ front card =
     , rect 5 5 40 60 [flNoStk "White" , prop "opacity" "0.5" ]
     , text "Arial" 6 [xy 20 10,narrowStk "Black" "yellow" ,txCenter] card.name
     , costOrType card.cost card.ctype
-    , jobs 55 card.jobs
+    , jobs 65 card.jobs
     ]
 
 jobs : Float -> List Job -> String
 jobs y l =
     case l of 
         [] -> ""
-        h::t -> job 5 y h ++ jobs (y - 12) t -- (if splitJob h then 20 else 10) ) 
+        h::t -> job 5 (y - jobHeight h) h ++ jobs (y - jobHeight h) t 
 
 
 job : Float -> Float -> Job -> String
-job x y jb =
-    case jb of
-        [] -> ""
-        h::t -> action x y h ++ job (x + 10 ) y t 
+job x y jb = 
+    List.indexedMap (jobPlaceAction x y) jb
+    |> String.join "\n"
+    
+
+jobPlaceAction: Float -> Float -> Int -> Action -> String
+jobPlaceAction sx sy n a = 
+    let 
+        x = sx + 10 * (modBy 4 n |> toFloat) + if n >= 4 then 10 else 0
+        y = sy + 10 * (n // 4 |> toFloat)
+    in
+        if modBy 4 n == 0  && n > 0 then
+             jobCornerArrow (x - 10) y  ++ action x y a 
+        else
+            action x y a
+
+jobHeight : Job -> Float
+jobHeight j = 
+    jobLen j 
+    |> floor
+    |> \n -> (n // 41 ) + 1
+    |> \a -> a * 12
+    |> toFloat
+
+    
 
 
 
@@ -116,10 +137,10 @@ jobArrow : Float -> Float -> String
 jobArrow x y =
     polygon (jobArrowPoints x y 7 7) [narrowStk "red" "white" ,prop "class" "arrow"]
 
-jobCorner : Float -> Float -> String
-jobCorner x y =
+jobCornerArrow : Float -> Float -> String
+jobCornerArrow x y =
     etag "path" 
-    [ prop "d" (String.join " " (jobCornerPath x y 8 8))
+    [ prop "d" (String.join " " (jobCornerArrowPath x y 8 8))
     , narrowStk "red" "white" 
     , prop "class" "arrow"
     ]
@@ -219,8 +240,8 @@ jobArrowPoints x y w h =
         , xx 6 , yy 6
         ]
 
-jobCornerPath : Float -> Float -> Float -> Float -> List String
-jobCornerPath x y w h =
+jobCornerArrowPath : Float -> Float -> Float -> Float -> List String
+jobCornerArrowPath x y w h =
     let
         xx = (\n -> String.fromFloat (x + w * n * 0.1))
         yy = (\n -> String.fromFloat (y + h * n * 0.1))
