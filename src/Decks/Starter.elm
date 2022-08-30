@@ -59,11 +59,11 @@ dangerDeck =
 
 thirst :Card
 thirst = Card "Thirst" (TDanger Lack) []
-    [[In River,Scrap TAny Job.This]]
+    [[In River,discard,Scrap TAny Job.This]]
 
 hunger : Card
 hunger = Card "Hunger" (TDanger Lack) []
-    [[pay Food 1,Scrap TAny Job.This]]
+    [[pay Food 1,discard,Scrap TAny Job.This]]
 
 owie : Card
 owie = Card "Owie" (TDanger Pain) []
@@ -78,17 +78,37 @@ exhaustion = Card "Exhaustion" (TDanger Exhaustion) []
 
 -- Players
 playerDeck : List (Card,Int)
-playerDeck =
-    [(noobyNorris,1) , (stealySteve,1)]
+playerDeck = 
+    [(noobyNorris,2),(beginnerBen, 2),(noviceNiles,2) , (stealySteve,2)]
 noobyNorris : Card 
 noobyNorris = Card "Nooby Norris" TPlayer []
     [ [Move (N 1)]
     , [In Village , Take TStarter (N 1)]
+    , [Discard (TDanger DAny) (N 1)]
     ]
+
+beginnerBen : Card
+beginnerBen = Card "Beginner Ben" TPlayer []
+    [ [Draw (N 1)]
+    , [Discard TAny (X 1),Draw (X 1)]
+    , [pay Any 1,Scrap TAny (N 1)]
+    ]
+
+noviceNiles : Card
+noviceNiles = Card "Novie Niles" TPlayer []
+    [ [Draw (N 1)] 
+    , [MountainMove]
+    , [Discard (TDanger DAny) (N 1)]
+    ]
+
+
 
 stealySteve : Card
 stealySteve = Card "Stealy Steve" TPlayer []
-    [ [Take (TDanger Exhaustion) (N 1) ,Move (N 1)]]
+    [ [Take (TDanger Exhaustion) (N 1) ,Move (N 1)]
+    , [pay Any 1, Discard (TDanger DAny) (N 1)]
+    ]
+
 
 
 

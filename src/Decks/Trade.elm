@@ -15,7 +15,11 @@ explorerDeck =
     , (stalion, 2)
     , (cow, 3)
     , (wagon, 2)
-    , (train, 2)
+    , (telescope, 2)
+    , (potion, 2)
+    , (elixer , 2)
+    , (canoe ,2)
+    , (climbingBoots ,2)
     ]
 
 potion :  Card
@@ -57,10 +61,20 @@ wagon = Card "Wagon" TMove
     , [gain Wood 1, gain Food 1, draw 1]
     ]
 
-train : Card
-train = Card "Train" TMove
-    [pay Iron 3,pay Wood 1 ]
-    [woodMove 1 3,scrapFor Wood 5 ] 
+canoe: Card
+canoe = Card "Canoe" TMove
+    [pay Wood 3]
+    [[WaterMove]]
+
+climbingBoots: Card 
+climbingBoots = Card "Climbing Boots" TMove
+    [pay Iron 1]
+    [[MountainMove,Move (N 1)]]
+
+telescope: Card
+telescope = Card "Telescope" TMove
+    [pay Iron 1]
+    [[Reveal]]
 
 -- Digger Deck -- 
 diggerDeck : List (Card,Int)
@@ -69,6 +83,8 @@ diggerDeck =
     , (drill , 2)
     , (ironHammer , 2)
     , (jackHammer , 2)
+    , (roamingTrader ,1)
+    , (trader ,1)
     ]
 
 bigPan : Card
@@ -85,6 +101,17 @@ ironHammer = Card "Iron Hammer" TMake [pay Iron 2]
 jackHammer : Card
 jackHammer = Card "Jack Hammer" TMake [In Village ,pay Gold 2]
     [[pay Iron 1, pay Wood 2,BuildRail] ]
+
+trader : Card
+trader = Card "Trader"  TTrade [pay Gold 2]
+    [[In Village, Pay Any (X 1),Gain Any (X 1)]] 
+
+roamingTrader: Card
+roamingTrader = Card "Roaming Trader" TTrade  [pay Gold 2]
+    [ [Pay Gold (X 1), Gain Any (X 1)]
+    , [Pay Any (X 2), Gain Gold (X 1)]
+    ]
+
 
 -- Fighter Deck -- 
 fighterDeck : List (Card,Int)

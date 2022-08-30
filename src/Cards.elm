@@ -109,7 +109,7 @@ cTypeColor ct =
         TFight -> "red"
         TMove -> "lightblue"
         TGather -> "fuchsia"
-        TPlayer -> "blue"
+        TPlayer _ -> "blue"
         TDanger _ -> "black"
         TTrade -> "pink"
         TMake -> "orange"
@@ -131,7 +131,7 @@ resourceColor: Resource ->String
 resourceColor r = 
     case r of 
         Food -> "green"
-        Iron -> "Orange"
+        Iron -> "Grey"
         Wood -> "Brown"
         Gold -> "Gold"
         Any -> "White"

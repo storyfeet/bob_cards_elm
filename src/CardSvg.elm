@@ -6,9 +6,9 @@ import Job exposing (..)
 
 front :  Card -> String
 front card =
-    String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "none" 0]
-    , rect 5 5 40 60 [flNoStk "White" , prop "opacity" "0.5" ]
-    , text "Arial" 6 [xy 20 10,narrowStk "Black" "yellow" ,txCenter] card.name
+    String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "white" 0.5, fprop "opacity" 0.5]
+    , rect 5 5 40 60 [flNoStk "White" , fprop "opacity" 0.4 ]
+    , text "Arial" 5 [xy 20 10,narrowStk "Black" "yellow" ,txCenter] card.name
     , costOrType card.cost card.ctype
     , jobs 65 card.jobs
     ]
@@ -66,6 +66,9 @@ action x y c =
         Move n -> jobCircle x y "Pink" "Mv" n
         Attack n -> jobCircle x y "red" "Atk" n
         Defend n -> jobCircle x y "Grey" "Dfd" n
+        WaterMove -> jobCircle x y "blue" "sail" Job.None
+        MountainMove -> jobCircle x y "white" "Clim" Job.None
+        Reveal -> jobCircle x y "white" "See" Job.None
         Pay r n -> resource x y r "Red" "-" n 
         Gain r n -> resource x y r "Green" "+" n 
         Gather r n -> jobCircle x y (resourceColor r) (resourceShortName r) n

@@ -40,7 +40,7 @@ type CardType
     | TGather
     | TMake
     | TTrade
-    | TPlayer
+    | TPlayer Int
     | TDanger DangerType
 
 type DangerType
@@ -71,6 +71,9 @@ type Action
     | Take CardType JobNum
     | Discard CardType JobNum
     | BuildRail
+    | WaterMove
+    | MountainMove
+    | Reveal
     | Starter JobNum
     | Player
 
