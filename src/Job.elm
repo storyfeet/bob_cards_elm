@@ -44,15 +44,13 @@ type CardType
     | TDanger DangerType
 
 type DangerType
-    = Lack
-    | Pain
+    = Pain
     | Exhaustion
     | DAny
 
 dangerType: DangerType -> String
 dangerType d = 
     case d of
-        Lack -> "L"
         Pain -> "P"
         Exhaustion -> "E"
         DAny -> "*"

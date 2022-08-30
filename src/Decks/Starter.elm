@@ -56,15 +56,20 @@ dangerDeck =
     ,(owie,6)
     ,(exhaustion,6)
     ,(legWound,4)
+    ,(armWound,4)
     ]
 
 thirst :Card
-thirst = Card "Thirst" (TDanger Lack) []
+thirst = Card "Thirst" (TDanger Exhaustion) []
     [[In River,discard,scrapMe]]
 
 hunger : Card
-hunger = Card "Hunger" (TDanger Lack) []
+hunger = Card "Hunger" (TDanger Exhaustion) []
     [[pay Food 1,discard,scrapMe]]
+
+exhaustion : Card
+exhaustion = Card "Exhaustion" (TDanger Exhaustion) [] 
+    [[Discard TAny (N 2) ,scrapMe]]
 
 owie : Card
 owie = Card "Owie" (TDanger Pain) []
@@ -74,10 +79,13 @@ legWound : Card
 legWound =  Card "Leg Wound" (TDanger Pain) []
     [[In Village,Discard (TMove) (N 1) ,scrapMe]]
 
+armWound : Card
+armWound =  Card "Arm Wound" (TDanger Pain) []
+    [[In Village,Discard (TGather) (N 1) ,scrapMe]]
 
-exhaustion : Card
-exhaustion = Card "Exhaustion" (TDanger Exhaustion) [] 
-    [[Discard TAny (N 2) ,scrapMe]]
+
+
+
  
 
 
