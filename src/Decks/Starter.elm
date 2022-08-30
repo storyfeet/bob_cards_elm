@@ -1,4 +1,4 @@
-module Decks.Starter exposing (..)
+module Decks.Starter exposing (starterDeck,playerDeck,dangerDeck)
 import Cards exposing (..)
 import Job exposing (..)
 --STARTER CARDS
@@ -55,23 +55,29 @@ dangerDeck =
     ,(hunger,4)
     ,(owie,6)
     ,(exhaustion,6)
+    ,(legWound,4)
     ]
 
 thirst :Card
 thirst = Card "Thirst" (TDanger Lack) []
-    [[In River,discard,Scrap TAny Job.This]]
+    [[In River,discard,scrapMe]]
 
 hunger : Card
 hunger = Card "Hunger" (TDanger Lack) []
-    [[pay Food 1,discard,Scrap TAny Job.This]]
+    [[pay Food 1,discard,scrapMe]]
 
 owie : Card
 owie = Card "Owie" (TDanger Pain) []
-    [[In Village,pay Gold 1,Scrap TAny Job.This]]
+    [[In Village,pay Gold 1,scrapMe]]
+
+legWound : Card
+legWound =  Card "Leg Wound" (TDanger Pain) []
+    [[In Village,Discard (TMove) (N 1) ,scrapMe]]
+
 
 exhaustion : Card
 exhaustion = Card "Exhaustion" (TDanger Exhaustion) [] 
-    [[In Village,discard ,Scrap TAny Job.This]]
+    [[Discard TAny (N 2) ,scrapMe]]
  
 
 
@@ -81,21 +87,21 @@ playerDeck : List (Card,Int)
 playerDeck = 
     [(noobyNorris,2),(beginnerBen, 2),(noviceNiles,2) , (stealySteve,2)]
 noobyNorris : Card 
-noobyNorris = Card "Nooby Norris" TPlayer []
+noobyNorris = Card "Nooby Norris" (TPlayer 1) []
     [ [Move (N 1)]
     , [In Village , Take TStarter (N 1)]
     , [Discard (TDanger DAny) (N 1)]
     ]
 
 beginnerBen : Card
-beginnerBen = Card "Beginner Ben" TPlayer []
+beginnerBen = Card "Beginner Ben" (TPlayer 1)[]
     [ [Draw (N 1)]
     , [Discard TAny (X 1),Draw (X 1)]
     , [pay Any 1,Scrap TAny (N 1)]
     ]
 
 noviceNiles : Card
-noviceNiles = Card "Novie Niles" TPlayer []
+noviceNiles = Card "Novie Niles" (TPlayer 1) []
     [ [Draw (N 1)] 
     , [MountainMove]
     , [Discard (TDanger DAny) (N 1)]
@@ -104,7 +110,7 @@ noviceNiles = Card "Novie Niles" TPlayer []
 
 
 stealySteve : Card
-stealySteve = Card "Stealy Steve" TPlayer []
+stealySteve = Card "Stealy Steve" (TPlayer 2) []
     [ [Take (TDanger Exhaustion) (N 1) ,Move (N 1)]
     , [pay Any 1, Discard (TDanger DAny) (N 1)]
     ]
