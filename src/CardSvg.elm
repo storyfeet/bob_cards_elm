@@ -61,7 +61,7 @@ action x y c =
         Draw n -> jobCard x y TAny "+" "green" n
         Scrap ct n -> jobCard x y ct "#" "red" n
         Take ct n -> jobCard x y ct "^" "blue" n
-        Starter n -> jobStar x y "white"  n
+        Starter n -> jobStar x y "yellow"  n
         Player -> jobStar x y "blue" Job.This
         Move n -> jobCircle x y "Pink" "Mv" n
         Attack n -> jobCircle x y "red" "Atk" n
@@ -96,6 +96,7 @@ cardType ct =
                 [ qStar 38 2 "black" "white"
                 , idText 43 10 "red" (dangerType d)
             ]
+        TPlayer n -> jobStar 38 2 "blue" (N n)
         _ -> qStar 38 2 (cTypeColor ct) "black"
 
 
@@ -134,6 +135,8 @@ cardLetter : Float -> Float -> CardType -> String
 cardLetter x y ct =
     case ct of
         TDanger d -> idText x y "black" (dangerType d)
+        TStarter -> 
+            polygon (starPoints x (y - 4) 5 5 ) [narrowStk "yellow" "black"]
         _ -> ""
 
 jobArrow : Float -> Float -> String 

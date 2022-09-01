@@ -3,15 +3,15 @@ import Cards exposing (..)
 import Job exposing (..)
 --STARTER CARDS
 
-starterDeck : List (Card,Int)
-starterDeck = 
-    [(pan,2)
-    ,(boots,2)
-    ,(bow,2)
-    ,(rookieTrader ,2)
-    ,(saw,2)
-    ,(pickaxe,1)
-    ,(woodHammer,1)
+starterDeck :Int -> List (Card,Int)
+starterDeck n = 
+    [(pan, 2 * n )
+    ,(boots,2 * n )
+    ,(bow,2 * n)
+    ,(rookieTrader ,2 * n)
+    ,(saw,2 * n)
+    ,(pickaxe,n)
+    ,(woodHammer,n)
     ]
 pan : Card
 pan = Card "Pan" TGather [starter 2] [riverGather Gold 1]
@@ -49,44 +49,51 @@ woodHammer = Card "Wood Hammer" TMake [starter 1]
 
 -- Danger 
 
-dangerDeck : List (Card,Int)
-dangerDeck =
-    [(thirst,4)
-    ,(hunger,4)
-    ,(owie,6)
-    ,(exhaustion,6)
-    ,(legWound,4)
-    ,(armWound,4)
+dangerDeck :Int ->  List (Card,Int)
+dangerDeck n =
+    [(thirst,4 + 2* n)
+    ,(hunger,4 + 2* n)
+    ,(owie,6 + 3 * n)
+    ,(exhaustion,6 + 3 * n)
+    ,(legWound,4 + 2 * n)
+    ,(armWound,4 + 2* n)
     ]
 
 thirst :Card
 thirst = Card "Thirst" (TDanger Exhaustion) []
-    [[In River,discard,scrapMe]]
+    [ [In River,discardMe]
+    , [In River,discard,scrapMe]
+    ]
 
 hunger : Card
 hunger = Card "Hunger" (TDanger Exhaustion) []
-    [[pay Food 1,discard,scrapMe]]
+    [ [pay Any 1,discardMe]
+    , [pay Food 1,discard,scrapMe]
+    ]
 
 exhaustion : Card
 exhaustion = Card "Exhaustion" (TDanger Exhaustion) [] 
-    [[Discard TAny (N 2) ,scrapMe]]
+    [ [discard ,discardMe]
+    , [Discard TAny (N 2) ,scrapMe]
+    ]
 
 owie : Card
 owie = Card "Owie" (TDanger Pain) []
-    [[In Village,pay Gold 1,scrapMe]]
+    [ [pay Food 1,discardMe]
+    , [In Village,pay Gold 1,scrapMe]
+    ]
 
 legWound : Card
 legWound =  Card "Leg Wound" (TDanger Pain) []
-    [[In Village,Discard (TMove) (N 1) ,scrapMe]]
+    [ [ Discard (TMove) (N 1) ,discardMe]
+    , [In Village,Discard (TMove) (N 1) ,scrapMe]
+    ]
 
 armWound : Card
 armWound =  Card "Arm Wound" (TDanger Pain) []
-    [[In Village,Discard (TGather) (N 1) ,scrapMe]]
-
-
-
-
- 
+    [[ discard ,discardMe]
+    , [In Village,Discard (TGather) (N 1) ,scrapMe]
+    ]
 
 
 

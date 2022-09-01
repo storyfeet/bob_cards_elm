@@ -113,9 +113,13 @@ draw : Int -> Action
 draw n =
     Draw (N n)
 
+
 discard : Action
 discard = 
     Discard TAny (N 1)
+
+discardMe : Action
+discardMe = Discard TAny This
 
 -- JOBS
 trade : Resource -> Int -> Resource -> Int -> Job

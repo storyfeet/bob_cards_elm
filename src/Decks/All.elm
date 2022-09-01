@@ -2,9 +2,10 @@ module Decks.All exposing (..)
 import Cards 
 import Decks.Starter as ST
 import Decks.Trade as TR
-allCards : List (Cards.Card, Int)
-allCards = 
-    ( ST.starterDeck 
+
+allCards :Int -> List (Cards.Card, Int)
+allCards n = 
+    ( ST.starterDeck n
     ++ TR.tradeDeck 
     ++ ST.playerDeck 
-    ++ ST.dangerDeck)
+    ++ ST.dangerDeck n)
