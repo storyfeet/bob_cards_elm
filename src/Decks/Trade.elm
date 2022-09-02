@@ -1,4 +1,4 @@
-module Decks.Trade exposing (..)
+module Decks.Trade exposing (tradeDeck,explorerDeck,diggerDeck,fighterDeck)
 import Cards exposing (..)
 import Job exposing (..)
 
@@ -16,10 +16,12 @@ explorerDeck =
     , (cow, 3)
     , (wagon, 2)
     , (telescope, 2)
+    , (binoculars, 2)
     , (potion, 2)
     , (elixer , 2)
     , (canoe ,2)
     , (climbingBoots ,2)
+    , (forager, 2)
     ]
 
 potion :  Card
@@ -71,10 +73,15 @@ climbingBoots = Card "Climbing Boots" TMove
     [pay Iron 1]
     [[MountainMove,Move (N 1)]]
 
+binoculars: Card
+binoculars = Card "Binocular" TMove
+    [pay Iron 1]
+    [[Reveal (N 1)]]
+
 telescope: Card
 telescope = Card "Telescope" TMove
-    [pay Iron 1]
-    [[Reveal]]
+    [pay Iron 1,pay Wood 1]
+    [[Pay Any (X 1),Reveal (X 1)]]
 
 -- Digger Deck -- 
 diggerDeck : List (Card,Int)
@@ -85,6 +92,7 @@ diggerDeck =
     , (jackHammer , 2)
     , (roamingTrader ,1)
     , (trader ,1)
+    , (quickTrader,2)
     ]
 
 bigPan : Card
@@ -102,6 +110,11 @@ jackHammer : Card
 jackHammer = Card "Jack Hammer" TMake [In Village ,pay Gold 2]
     [[pay Iron 1, pay Wood 2,BuildRail] ]
 
+quickTrader : Card 
+quickTrader = Card "Quick Trader" TTrade [pay Any 3]
+    [[In Village, Pay Any (X 2),Gain Any (X 1)]]
+
+
 trader : Card
 trader = Card "Trader"  TTrade [pay Gold 2]
     [[In Village, Pay Any (X 1),Gain Any (X 1)]] 
@@ -111,6 +124,10 @@ roamingTrader = Card "Roaming Trader" TTrade  [pay Gold 2]
     [ [Pay Gold (X 1), Gain Any (X 1)]
     , [Pay Any (X 2), Gain Gold (X 1)]
     ]
+
+forager : Card
+forager = Card "Forager" TTrade [In Forest,pay Any 2]
+    [[Scrap TAny (X 1), Draw (X 1)]]
 
 
 -- Fighter Deck -- 

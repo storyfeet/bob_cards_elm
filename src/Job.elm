@@ -53,7 +53,7 @@ dangerType d =
     case d of
         Pain -> "P"
         Exhaustion -> "E"
-        DAny -> "*"
+        DAny -> ""
 
 type Action
     = Move JobNum
@@ -71,7 +71,7 @@ type Action
     | BuildRail
     | WaterMove
     | MountainMove
-    | Reveal
+    | Reveal JobNum
     | Starter JobNum
     | Player
 

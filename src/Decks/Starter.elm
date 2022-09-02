@@ -51,12 +51,12 @@ woodHammer = Card "Wood Hammer" TMake [starter 1]
 
 dangerDeck :Int ->  List (Card,Int)
 dangerDeck n =
-    [(thirst,4 + 2* n)
-    ,(hunger,4 + 2* n)
-    ,(owie,6 + 3 * n)
-    ,(exhaustion,6 + 3 * n)
-    ,(legWound,4 + 2 * n)
-    ,(armWound,4 + 2* n)
+    [(thirst,1 + 2* n)
+    ,(hunger,1 + 2* n)
+    ,(exhaustion,2 + 2 * n)
+    ,(owie,2 + 2 * n)
+    ,(legWound,2 + 2 * n)
+    ,(armWound,2 + 2* n)
     ]
 
 thirst :Card
@@ -96,29 +96,28 @@ armWound =  Card "Arm Wound" (TDanger Pain) []
     ]
 
 
-
 -- Players
 playerDeck : List (Card,Int)
 playerDeck = 
-    [(noobyNorris,2),(beginnerBen, 2),(noviceNiles,2) , (stealySteve,2)]
+    [(noobyNorris,2),(beginnerBen, 2),(noviceNiles,2) , (stealySteve,1)]
 noobyNorris : Card 
 noobyNorris = Card "Nooby Norris" (TPlayer 1) []
     [ [Move (N 1)]
-    , [In Village , Take TStarter (N 1)]
-    , [Discard (TDanger DAny) (N 1)]
+    , [Scrap TAny (N 1)]
+    , [Discard (TDanger DAny) (N 2)]
     ]
 
 beginnerBen : Card
 beginnerBen = Card "Beginner Ben" (TPlayer 1)[]
-    [ [Draw (N 1)]
+    [ [Take (TDanger Exhaustion) (N 1), Move (N 1)]
     , [Discard TAny (X 1),Draw (X 1)]
-    , [pay Any 1,Scrap TAny (N 1)]
+    , [Pay Any (X 1),Scrap TAny (X 2)]
     ]
 
 noviceNiles : Card
 noviceNiles = Card "Novie Niles" (TPlayer 1) []
     [ [Draw (N 1)] 
-    , [MountainMove]
+    , [Discard TAny (N 2) , MountainMove,Move (N 1)]
     , [Discard (TDanger DAny) (N 1)]
     ]
 

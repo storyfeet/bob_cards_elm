@@ -24,15 +24,15 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.0174524"
-     inkscape:cx="306.82261"
-     inkscape:cy="616.37143"
+     inkscape:zoom="2.3028327"
+     inkscape:cx="600.13043"
+     inkscape:cy="500.90482"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g4016"
      inkscape:lockguides="true">
     <inkscape:grid
        type="xygrid"
@@ -78,11 +78,11 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
          x="4.7062716"
          y="14.126582"
-         id="tspan8301">1) Draw to 5 cards</tspan><tspan
+         id="tspan8301">1) Draw to 6 cards</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
          x="4.7062716"
-         y="19.418245"
+         y="19.418243"
          id="tspan5757">2) Untap Character card</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
@@ -92,7 +92,7 @@
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
          x="4.7062716"
-         y="30.00157"
+         y="30.001568"
          id="tspan8305">3) May discard non danger cards</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
@@ -259,16 +259,6 @@
          stroke="none"
          stroke-width="0"
          id="text2429">Bld</text>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="175"
-         y="208.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text2431">1</text>
     </g>
     <text
        xml:space="preserve"
@@ -277,9 +267,9 @@
        style="font-weight:bold;font-size:26.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;white-space:pre;shape-inside:url(#rect4156);display:inline"><tspan
          x="79.201172"
          y="380.96454"
-         id="tspan18231"><tspan
+         id="tspan4510"><tspan
            dx="0 14.640013"
-           id="tspan18229">FO</tspan></tspan></text>
+           id="tspan4508">FO</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;white-space:pre;inline-size:109.066;display:inline;stroke-width:0.264583"
@@ -439,22 +429,33 @@
          id="tspan2380-1-0-2">Build a railway where you are</tspan></text>
     <text
        xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="265.99356"
+       y="154.73914"
+       id="text4162-37-36-3-2-6-2-5"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="265.99356"
+         y="154.73914"
+         id="tspan2380-1-0-2-6">Reveal n Adjacent tiles</tspan></text>
+    <text
+       xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:127.537;display:inline;stroke-width:0.264583"
        x="40.666729"
        y="192.82352"
        id="text4162-37-36-3-2-6-2-8"
-       transform="translate(-35.845263,0.42774294)"><tspan
+       transform="translate(-35.845263,4.1319098)"><tspan
          x="40.666729"
          y="192.82352"
-         id="tspan18235"><tspan
+         id="tspan4514"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18233">As Bandits Attack, but with steps 4 and 5 before 2 and 3
+           id="tspan4512">As Bandits Attack, but with steps 4 and 5 before 2 and 3
 </tspan></tspan><tspan
          x="40.666729"
          y="198.11517"
-         id="tspan18239"><tspan
+         id="tspan4518"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18237">(bandits counter after taking losses)</tspan></tspan></text>
+           id="tspan4516">(bandits counter after taking losses)</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:33.5614;display:inline;stroke-width:0.264583"
@@ -570,16 +571,16 @@
        transform="translate(145.25145,-109.30162)"><tspan
          x="122.66517"
          y="151.12054"
-         id="tspan18243"><tspan
+         id="tspan4522"><tspan
    style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan18241">Add a card to your</tspan><tspan
+   id="tspan4520">Add a card to your</tspan><tspan
    y="151.12054"
-   id="tspan18245"> </tspan></tspan><tspan
+   id="tspan4524"> </tspan></tspan><tspan
          x="122.66517"
          y="156.4122"
-         id="tspan18249"><tspan
+         id="tspan4528"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18247">discard pile</tspan></tspan></text>
+           id="tspan4526">discard pile</tspan></tspan></text>
     <g
        id="g2411"
        transform="translate(144.86265,-124.26141)">
@@ -804,22 +805,22 @@
          transform="translate(46.329102,6.1307638)"><tspan
            x="151.85593"
            y="77.782585"
-           id="tspan18253"><tspan
+           id="tspan4532"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan18251">Roll that many d6.
+             id="tspan4530">Roll that many d6.
 </tspan></tspan><tspan
            x="151.85593"
            y="83.074252"
-           id="tspan18257"><tspan
+           id="tspan4536"><tspan
    style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan18255">On 3,4,5 gain 1, on 6</tspan><tspan
+   id="tspan4534">On 3,4,5 gain 1, on 6</tspan><tspan
    y="83.074252"
-   id="tspan18259"> </tspan></tspan><tspan
+   id="tspan4538"> </tspan></tspan><tspan
            x="151.85593"
            y="88.365916"
-           id="tspan18263"><tspan
+           id="tspan4542"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan18261">gain 2 of that resource</tspan></tspan></text>
+             id="tspan4540">gain 2 of that resource</tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
@@ -991,14 +992,14 @@
          transform="translate(144.5788,-103.2455)"><tspan
            x="21.573603"
            y="152.67917"
-           id="tspan18267"><tspan
+           id="tspan4546"><tspan
    style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan18265">In a</tspan> </tspan><tspan
+   id="tspan4544">In a</tspan> </tspan><tspan
            x="21.573603"
            y="157.97082"
-           id="tspan18271"><tspan
+           id="tspan4550"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan18269">mountain
+             id="tspan4548">mountain
 </tspan></tspan></text>
       <text
          xml:space="preserve"
@@ -1220,19 +1221,19 @@
        transform="translate(0.201386)"><tspan
          x="208.25641"
          y="64.570274"
-         id="tspan18275"><tspan
+         id="tspan4554"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18273">Pay 2 of the </tspan></tspan><tspan
+           id="tspan4552">Pay 2 of the </tspan></tspan><tspan
          x="208.25641"
          y="69.861934"
-         id="tspan18279"><tspan
+         id="tspan4558"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18277">same any </tspan></tspan><tspan
+           id="tspan4556">same any </tspan></tspan><tspan
          x="208.25641"
          y="75.153598"
-         id="tspan18283"><tspan
+         id="tspan4562"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18281">resource</tspan></tspan></text>
+           id="tspan4560">resource</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
@@ -1246,7 +1247,7 @@
          y="8.9072599">Resources</tspan></text>
     <g
        id="g3478"
-       transform="translate(3.3891177,3.4922234)">
+       transform="translate(5.3758444,-1.498945)">
       <g
          id="g1188"
          transform="translate(-2.3596617,-9.8572601)">
@@ -1264,7 +1265,7 @@
            transform="rotate(30)"
            id="rect2196" />
         <polygon
-           points="19.25,49 20,51 18.5,50 17,51 17.75,49 16,47.5 18,47.5 18.5,46 19,47.5 21,47.5 "
+           points="20,51 18.5,50 17,51 17.75,49 16,47.5 18,47.5 18.5,46 19,47.5 21,47.5 19.25,49 "
            fill="#ffff00"
            stroke="#000000"
            stroke-width="0.5"
@@ -1344,14 +1345,14 @@
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="259.77759"
-         y="67.639839"
+         x="257.13171"
+         y="70.285675"
          id="text3017-3"><tspan
            sodipodi:role="line"
            id="tspan3015-6"
            style="font-size:4.93889px;stroke-width:0.264583"
-           x="259.77759"
-           y="67.639839">Card Types</tspan></text>
+           x="257.13171"
+           y="70.285675">Card Types</tspan></text>
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
@@ -1423,18 +1424,6 @@
            ry="1"
            transform="rotate(30)"
            id="rect1714-5" />
-        <text
-           font-family="Arial"
-           font-size="6px"
-           x="231.77541"
-           y="142.74875"
-           fill="#000000"
-           stroke="#ffffff"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           font-weight="bold"
-           text-anchor="middle"
-           id="text1716-3">*</text>
       </g>
       <rect
          x="245.11568"
@@ -1597,25 +1586,25 @@
          transform="translate(102.47079,-12.414772)"><tspan
            x="92.368088"
            y="136.69841"
-           id="tspan18287"><tspan
+           id="tspan4566"><tspan
    style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan18285">For every 2 of the</tspan><tspan
+   id="tspan4564">For every 2 of the</tspan><tspan
    y="136.69841"
-   id="tspan18289"> </tspan></tspan><tspan
+   id="tspan4568"> </tspan></tspan><tspan
            x="92.368088"
            y="141.99006"
-           id="tspan18295"><tspan
+           id="tspan4574"><tspan
    style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan18291">product you</tspan> <tspan
+   id="tspan4570">product you</tspan> <tspan
    style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan18293">pay,</tspan><tspan
+   id="tspan4572">pay,</tspan><tspan
    y="141.99006"
-   id="tspan18297"> </tspan></tspan><tspan
+   id="tspan4576"> </tspan></tspan><tspan
            x="92.368088"
            y="147.28172"
-           id="tspan18301"><tspan
+           id="tspan4580"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan18299">gain one gold</tspan></tspan></text>
+             id="tspan4578">gain one gold</tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:40.3044;display:inline;stroke-width:0.264583"
@@ -1625,23 +1614,23 @@
          transform="translate(104.58699,5.4852535)"><tspan
            x="92.368088"
            y="136.69841"
-           id="tspan18305"><tspan
+           id="tspan4584"><tspan
    style="font-weight:normal"
-   id="tspan18303">For every card you</tspan><tspan
+   id="tspan4582">For every card you</tspan><tspan
    y="136.69841"
-   id="tspan18307"> </tspan></tspan><tspan
+   id="tspan4586"> </tspan></tspan><tspan
            x="92.368088"
            y="141.99006"
-           id="tspan18311"><tspan
+           id="tspan4590"><tspan
    style="font-weight:normal"
-   id="tspan18309">discard, draw one</tspan><tspan
+   id="tspan4588">discard, draw one</tspan><tspan
    y="141.99006"
-   id="tspan18313"> </tspan></tspan><tspan
+   id="tspan4592"> </tspan></tspan><tspan
            x="92.368088"
            y="147.28172"
-           id="tspan18317"><tspan
+           id="tspan4596"><tspan
              style="font-weight:normal"
-             id="tspan18315">card</tspan></tspan></text>
+             id="tspan4594">card</tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
@@ -1663,39 +1652,39 @@
        transform="translate(-36.69075,0.57177797)"><tspan
          x="205.05368"
          y="166.27745"
-         id="tspan18321"><tspan
+         id="tspan4600"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18319">Move 1 space.  Most tiles cost One Movement to step onto. </tspan></tspan><tspan
+           id="tspan4598">Move 1 space.  Most tiles cost One Movement to step onto. </tspan></tspan><tspan
          x="205.05368"
          y="171.5691"
-         id="tspan18325"><tspan
+         id="tspan4604"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18323">Mountains cost 2, and Water Cannot be stepped on. 
+           id="tspan4602">Mountains cost 2, and Water Cannot be stepped on. 
 </tspan></tspan><tspan
          x="205.05368"
          y="176.86076"
-         id="tspan18329"><tspan
+         id="tspan4608"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18327"> - You can play multiple movement jobs together to achieve a </tspan></tspan><tspan
+           id="tspan4606"> - You can play multiple movement jobs together to achieve a </tspan></tspan><tspan
          x="205.05368"
          y="182.15242"
-         id="tspan18333"><tspan
+         id="tspan4612"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18331">certain level of movement.
+           id="tspan4610">certain level of movement.
 </tspan></tspan><tspan
          x="205.05368"
          y="187.44407"
-         id="tspan18337"><tspan
+         id="tspan4616"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18335"> - Land with a Railway on does not cost a Movement point, but </tspan></tspan><tspan
+           id="tspan4614"> - Land with a Railway on does not cost a Movement point, but </tspan></tspan><tspan
          x="205.05368"
          y="192.73573"
-         id="tspan18341"><tspan
+         id="tspan4620"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan18339">you must activate a movement to use it. </tspan></tspan></text>
+           id="tspan4618">you must activate a movement to use it. </tspan></tspan></text>
     <g
        id="g13570"
-       transform="translate(0,-6.3500003)">
+       transform="translate(0,-9.5250005)">
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
@@ -1716,20 +1705,31 @@
          transform="translate(-197.59283,-49.008761)"><tspan
            x="205.05368"
            y="166.27745"
-           id="tspan18345"><tspan
+           id="tspan4624"><tspan
              style="font-weight:normal"
-             id="tspan18343">For each group of bandits on the board Roll 1 d6.
+             id="tspan4622">For each group of bandits on the board Roll 1 d6.
 </tspan></tspan><tspan
            x="205.05368"
            y="171.5691"
-           id="tspan18349">On:<tspan
+           id="tspan4628">On:<tspan
    style="font-weight:normal"
-   id="tspan18347"> 1 - Move north , 2 - Move East, 3 - Move south, 4 or 5 - Move West. </tspan></tspan><tspan
+   id="tspan4626"> 1 - Move north , 2 - Move East, 3 - Move south, 4 or 5 - Move West. </tspan></tspan><tspan
            x="205.05368"
            y="176.86076"
-           id="tspan18353"><tspan
+           id="tspan4632"><tspan
              style="font-weight:normal"
-             id="tspan18351">6 - Add a bandit to the group</tspan></tspan></text>
+             id="tspan4630">6 - Add a bandit to the group
+</tspan></tspan><tspan
+           x="205.05368"
+           y="182.15242"
+           id="tspan4636"><tspan
+             style="font-weight:normal"
+             id="tspan4634">Bandits can move on any type of land (even unrevealed), but if they </tspan></tspan><tspan
+           x="205.05368"
+           y="187.44407"
+           id="tspan4640"><tspan
+             style="font-weight:normal"
+             id="tspan4638">would move off the map, add a bandit instead. </tspan></tspan></text>
     </g>
     <g
        id="g3151"
@@ -1753,6 +1753,39 @@
          stroke="none"
          stroke-width="0"
          id="text2781">Clim</text>
+    </g>
+    <g
+       id="g3151-3"
+       transform="translate(68.556052,30.325959)">
+      <circle
+         cx="165"
+         cy="124.5"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         id="ellipse2779-6"
+         r="5" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="165.08626"
+         y="128.87173"
+         text-anchor="middle"
+         fill="#000000"
+         stroke="none"
+         stroke-width="0"
+         id="text2119-5">n</text>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="165"
+         y="123.5"
+         text-anchor="middle"
+         fill="#000000"
+         stroke="none"
+         stroke-width="0"
+         id="text2781-7">see</text>
     </g>
     <g
        id="g5120"
@@ -1784,7 +1817,7 @@
        style="font-weight:bold;font-size:26.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;white-space:pre;shape-inside:url(#rect6282);display:inline" />
     <g
        id="g13563"
-       transform="translate(0,-6.6261166)">
+       transform="translate(0,-8.7427834)">
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
@@ -1805,24 +1838,24 @@
          transform="translate(-198.80993,-73.564969)"><tspan
            x="205.05368"
            y="166.27745"
-           id="tspan18357"><tspan
+           id="tspan4644"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan18355">Roll as many d12 as indicated by the  furthest along </tspan></tspan><tspan
+             id="tspan4642">Roll as many d12 as indicated by the  furthest along </tspan></tspan><tspan
            x="205.05368"
            y="171.5691"
-           id="tspan18361"><tspan
+           id="tspan4648"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan18359">tracker on the board. Then place a bandit counter in each </tspan></tspan><tspan
+             id="tspan4646">tracker on the board. Then place a bandit counter in each </tspan></tspan><tspan
            x="205.05368"
            y="176.86076"
-           id="tspan18365"><tspan
+           id="tspan4652"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan18363">tile matching that number. </tspan></tspan></text>
+             id="tspan4650">tile matching that number. </tspan></tspan></text>
       <g
          id="g8067-6"
          transform="matrix(0.59814781,0,0,0.59814781,95.326145,48.711386)">
         <polygon
-           points="33.5,11 30,8 34,8 35,5 36,8 40,8 36.5,11 38,15 35,13 32,15 "
+           points="36,8 40,8 36.5,11 38,15 35,13 32,15 33.5,11 30,8 34,8 35,5 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -1846,7 +1879,8 @@
       </g>
     </g>
     <g
-       id="g14513">
+       id="g14513"
+       transform="translate(0,6.3500003)">
       <g
          id="g4115"
          transform="translate(-64.872553,11.145914)">
@@ -1897,56 +1931,56 @@
          x="205.05368"
          y="166.27745"
          id="text1126-9-3"
-         transform="translate(-200.714,-18.140499)"><tspan
+         transform="translate(-200.714,-21.315501)"><tspan
            x="205.05368"
            y="166.27745"
-           id="tspan18371"><tspan
+           id="tspan4658"><tspan
              style="font-style:italic"
-             id="tspan18367">Battle dice are d6 and count 3,4,5 as 1 hit/save, and 6 as 2 hits/saves</tspan><tspan
+             id="tspan4654">Battle dice are d6 and count 3,4,5 as 1 hit/save, and 6 as 2 hits/saves</tspan><tspan
              style="font-weight:normal"
-             id="tspan18369">
+             id="tspan4656">
 </tspan></tspan><tspan
            x="205.05368"
            y="171.5691"
-           id="tspan18375"><tspan
+           id="tspan4662"><tspan
              style="font-weight:normal"
-             id="tspan18373">For each group of bandits on the same tile as any players:
+             id="tspan4660">For each group of bandits on the same tile as any players:
 </tspan></tspan><tspan
            x="205.05368"
            y="176.86076"
-           id="tspan18379"><tspan
+           id="tspan4666"><tspan
              style="font-weight:normal"
-             id="tspan18377">1) Players may activate as many defence or attack jobs as they like. 
+             id="tspan4664">1) Players may activate as many defence or attack jobs as they like. 
 </tspan></tspan><tspan
            x="205.05368"
            y="182.15242"
-           id="tspan18383"><tspan
+           id="tspan4670"><tspan
              style="font-weight:normal"
-             id="tspan18381">2) Bandits roll 1 dice per bandit, players roll 1 dice per Defence together.
+             id="tspan4668">2) Bandits roll 1 dice per bandit, players roll 1 dice per Defence together.
 </tspan></tspan><tspan
            x="205.05368"
            y="187.44407"
-           id="tspan18387"><tspan
+           id="tspan4674"><tspan
              style="font-weight:normal"
-             id="tspan18385">3) For every Hit above Saves, all players take 1 Pain (P) Card
+             id="tspan4672">3) For every Hit above Saves, all players take 1 Pain (P) Card
 </tspan></tspan><tspan
            x="205.05368"
            y="192.73573"
-           id="tspan18391"><tspan
+           id="tspan4678"><tspan
              style="font-weight:normal"
-             id="tspan18389">4) Players counter by rolling Attack, and Bandits rolling per bandit
+             id="tspan4676">4) Players counter by rolling Attack, and Bandits rolling per bandit
 </tspan></tspan><tspan
            x="205.05368"
            y="198.02738"
-           id="tspan18395"><tspan
+           id="tspan4682"><tspan
              style="font-weight:normal"
-             id="tspan18393">5) For every hit above Saves remove 1 bandit 
+             id="tspan4680">5) For every hit above Saves remove 1 bandit 
 </tspan></tspan><tspan
            x="205.05368"
            y="203.31904"
-           id="tspan18399"><tspan
+           id="tspan4686"><tspan
              style="font-weight:normal"
-             id="tspan18397"> </tspan></tspan></text>
+             id="tspan4684"> </tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
@@ -2007,12 +2041,12 @@
        xml:space="preserve"
        style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="21.185589"
-       y="186.746"
+       y="189.92096"
        id="text3017-35-1-0-6"><tspan
          sodipodi:role="line"
          id="tspan3015-62-2-9-1"
          style="font-size:4.93889px;stroke-width:0.264583"
          x="21.185589"
-         y="186.746">Players Attack</tspan></text>
+         y="189.92096">Players Attack</tspan></text>
   </g>
 </svg>

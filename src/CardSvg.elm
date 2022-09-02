@@ -68,11 +68,11 @@ action x y c =
         Defend n -> jobCircle x y "Grey" "Dfd" n
         WaterMove -> jobCircle x y "blue" "sail" Job.None
         MountainMove -> jobCircle x y "white" "Clim" Job.None
-        Reveal -> jobCircle x y "white" "See" Job.None
+        Reveal n -> jobCircle x y "white" "See" n
         Pay r n -> resource x y r "Red" "-" n 
         Gain r n -> resource x y r "Green" "+" n 
         Gather r n -> jobCircle x y (resourceColor r) (resourceShortName r) n
-        BuildRail -> jobCircle x y "Orange" "Bld" (N 1)
+        BuildRail -> jobCircle x y "Orange" "Bld" None
 
             
 costOrType : Job -> CardType -> String
