@@ -122,12 +122,12 @@ trader = Card "Trader"  TTrade [pay Gold 2]
 roamingTrader: Card
 roamingTrader = Card "Roaming Trader" TTrade  [pay Gold 2]
     [ [Pay Gold (X 1), Gain Any (X 1)]
-    , [Pay Any (X 2), Gain Gold (X 1)]
+    , [Pay Any (X 3), Gain Any (X 1)]
     ]
 
 forager : Card
 forager = Card "Forager" TTrade [In Forest,pay Any 2]
-    [[Scrap TAny (X 1), Draw (X 1)]]
+    [[Scrap TAny (X 1), Draw (X 2)]]
 
 
 -- Fighter Deck -- 
@@ -135,20 +135,47 @@ fighterDeck : List (Card,Int)
 fighterDeck =
     [ (sword ,2 )
     , (shield, 2)
-    , (twinSwords, 2)
-    , (crossbow,2)
+    , (bow ,2)
+    , (rifle, 2)
+    , (pistol,2)
+    , (revolver,2)
+    , (crossbow,1)
     ]
 
 
 sword:Card
 sword = Card "Sword" TFight
     (payEq 1 [Iron,Wood])
-    [[attack 5] , [defend 2]]
+    [[attack 2] , [defend 2]]
 
-twinSwords:Card
-twinSwords = Card "Twin Swords" TFight 
-    (payEq 2 [Iron, Wood]) 
-    [[attack 8],[ defend 4]]
+bow:Card
+bow = Card "Bow" TFight
+    [pay Wood 1]
+    [[In Forest, pay Wood 1, gather Food 3]
+    ,[pay Wood 1,defend 1, attack 3]
+    ]
+
+pistol: Card
+pistol= Card "Pistol" TFight [pay Iron 1]
+    [[attack 1], [defend 3]]
+
+
+revolver: Card 
+revolver = Card "Revolver" TFight [pay Iron 1, pay Wood 2]
+    [ [pay Wood 1,attack 6]
+    , [pay Wood 1,defend 6]
+    ]
+
+
+
+rifle : Card
+rifle = Card "Rifle" TFight [In Village, pay Iron 1, pay Gold 1]
+    [[pay Iron 1, attack 7 ]
+    , [pay Iron 1, defend 4, attack 4]
+    ]
+
+
+
 
 shield: Card
 shield = Card "Shield" TFight
@@ -156,7 +183,7 @@ shield = Card "Shield" TFight
     [[defend 4],[attack 1]]
 
 crossbow:Card
-crossbow = Card "Crossbow" TFight [pay Wood 3,pay Iron 2]
+crossbow = Card "Crossbow" TFight [pay Wood 1,pay Iron 1]
     [[pay Wood 1,attack 5]]
 
 

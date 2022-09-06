@@ -7,7 +7,7 @@ starterDeck :Int -> List (Card,Int)
 starterDeck n = 
     [(pan, 2 * n )
     ,(boots,2 * n )
-    ,(bow,2 * n)
+    ,(knife,2 * n)
     ,(rookieTrader ,2 * n)
     ,(saw,2 * n)
     ,(pickaxe,n)
@@ -16,12 +16,13 @@ starterDeck n =
 pan : Card
 pan = Card "Pan" TGather [starter 2] [riverGather Gold 1]
 
-bow:Card
-bow = Card "Bow" TFight
-    [starter 2]
-    [[In Forest, pay Wood 1, gather Food 3]
-    ,[pay Wood 1, attack 3]
+
+knife : Card
+knife = Card "Knife" TGather [starter 2] 
+    [ [In Forest , gather Food 2]
+    , [defend 1, attack 1]
     ]
+
 
 saw:Card
 saw = Card "Saw" TGather 
@@ -36,7 +37,7 @@ boots = Card "Boots" TMove [starter 2]
 rookieTrader : Card
 rookieTrader = Card "Rookie Trader" TTrade [starter 2]
     [ [In Village ,Pay Gold (X 1), Gain Any (X 1)]
-    , [In Village ,Pay Any (X 2), Gain Gold (X 1)]
+    , [In Village ,Pay Any (X 3), Gain Any (X 1)]
     ]
 
 pickaxe : Card
