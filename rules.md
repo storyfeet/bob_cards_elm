@@ -1,3 +1,4 @@
+{{@md}}
 Deck Goes West - Rules
 =============
 
@@ -25,5 +26,21 @@ The game is won by scoring a number of points by performing actions on the map.
     - Otherwise 2vp
 3. Remove the last bandit from an area.
     - 2vp
+
+
+Contents
+---------
+
+
+
+Setup
+-----
+Separate the cards into groups by the star in the right corner. If they have no star they belong to the trade row.
+
+
+| Blue star | Yellow Star | Cost | Black Star | 
+| ----------| ----------| -------| --------|
+| Character | Starter Card|  Trade Row| Exhaustion and Pain cards. Separate by letter  |
+
 
 
