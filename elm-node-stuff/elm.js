@@ -3136,7 +3136,7 @@ var $author$project$Cards$cTypeColor = function (ct) {
 		case 'TFight':
 			return 'red';
 		case 'TMove':
-			return 'lightblue';
+			return 'cyan';
 		case 'TGather':
 			return 'fuchsia';
 		case 'TPlayer':
@@ -3248,6 +3248,20 @@ var $author$project$Job$jnum = function (j) {
 			} else {
 				var n = j.a;
 				return $elm$core$String$fromInt(n) + 'x';
+			}
+		case 'D':
+			if (j.a === 1) {
+				return '?';
+			} else {
+				var n = j.a;
+				return $elm$core$String$fromInt(n) + '?';
+			}
+		case 'XD':
+			if (j.a === 1) {
+				return 'x?';
+			} else {
+				var n = j.a;
+				return $elm$core$String$fromInt(n) + 'x?';
 			}
 		case 'This':
 			return '!';
@@ -3758,16 +3772,6 @@ var $author$project$CardSvg$action = F3(
 				var r = c.a;
 				var n = c.b;
 				return A6($author$project$CardSvg$resource, x, y, r, 'Green', '+', n);
-			case 'Gather':
-				var r = c.a;
-				var n = c.b;
-				return A5(
-					$author$project$CardSvg$jobCircle,
-					x,
-					y,
-					$author$project$Cards$resourceColor(r),
-					$author$project$Cards$resourceShortName(r),
-					n);
 			default:
 				return A5($author$project$CardSvg$jobCircle, x, y, 'Orange', 'Bld', $author$project$Job$None);
 		}
@@ -4615,27 +4619,26 @@ var $author$project$Job$Forest = {$: 'Forest'};
 var $author$project$Job$Attack = function (a) {
 	return {$: 'Attack', a: a};
 };
+var $author$project$Job$D = function (a) {
+	return {$: 'D', a: a};
+};
 var $author$project$Job$attack = function (n) {
 	return $author$project$Job$Attack(
-		$author$project$Job$N(n));
+		$author$project$Job$D(n));
 };
 var $author$project$Job$Defend = function (a) {
 	return {$: 'Defend', a: a};
 };
 var $author$project$Job$defend = function (n) {
 	return $author$project$Job$Defend(
-		$author$project$Job$N(n));
+		$author$project$Job$D(n));
 };
-var $author$project$Job$Gather = F2(
-	function (a, b) {
-		return {$: 'Gather', a: a, b: b};
-	});
 var $author$project$Job$gather = F2(
 	function (r, n) {
 		return A2(
-			$author$project$Job$Gather,
+			$author$project$Job$Gain,
 			r,
-			$author$project$Job$N(n));
+			$author$project$Job$D(n));
 	});
 var $author$project$Decks$Starter$knife = A4(
 	$author$project$Cards$Card,
@@ -4664,9 +4667,9 @@ var $author$project$Job$gatherAt = F3(
 			[
 				$author$project$Job$In(p),
 				A2(
-				$author$project$Job$Gather,
+				$author$project$Job$Gain,
 				r,
-				$author$project$Job$N(n))
+				$author$project$Job$D(n))
 			]);
 	});
 var $author$project$Job$riverGather = $author$project$Job$gatherAt($author$project$Job$River);
@@ -5271,6 +5274,9 @@ var $author$project$Decks$Trade$pistol = A4(
 				$author$project$Job$defend(3)
 			])
 		]));
+var $author$project$Job$XD = function (a) {
+	return {$: 'XD', a: a};
+};
 var $author$project$Decks$Trade$revolver = A4(
 	$author$project$Cards$Card,
 	'Revolver',
@@ -5284,13 +5290,16 @@ var $author$project$Decks$Trade$revolver = A4(
 		[
 			_List_fromArray(
 			[
-				A2($author$project$Job$pay, $author$project$Job$Wood, 1),
-				$author$project$Job$attack(6)
+				A2(
+				$author$project$Job$Pay,
+				$author$project$Job$Wood,
+				$author$project$Job$X(1)),
+				$author$project$Job$Attack(
+				$author$project$Job$XD(3))
 			]),
 			_List_fromArray(
 			[
-				A2($author$project$Job$pay, $author$project$Job$Wood, 1),
-				$author$project$Job$defend(6)
+				$author$project$Job$defend(3)
 			])
 		]));
 var $author$project$Decks$Trade$rifle = A4(
@@ -5308,12 +5317,15 @@ var $author$project$Decks$Trade$rifle = A4(
 			_List_fromArray(
 			[
 				A2($author$project$Job$pay, $author$project$Job$Iron, 1),
-				$author$project$Job$attack(7)
+				$author$project$Job$Attack(
+				$author$project$Job$N(2)),
+				$author$project$Job$attack(4)
 			]),
 			_List_fromArray(
 			[
 				A2($author$project$Job$pay, $author$project$Job$Iron, 1),
-				$author$project$Job$defend(4),
+				$author$project$Job$Defend(
+				$author$project$Job$N(2)),
 				$author$project$Job$attack(4)
 			])
 		]));

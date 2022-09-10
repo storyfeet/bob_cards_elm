@@ -162,16 +162,16 @@ pistol= Card "Pistol" TFight [pay Iron 1]
 
 revolver: Card 
 revolver = Card "Revolver" TFight [pay Iron 1, pay Wood 2]
-    [ [pay Wood 1,attack 6]
-    , [pay Wood 1,defend 6]
+    [ [Pay Wood (X 1),Attack (XD 3)]
+    , [defend 3]
     ]
 
 
 
 rifle : Card
 rifle = Card "Rifle" TFight [In Village, pay Iron 1, pay Gold 1]
-    [[pay Iron 1, attack 7 ]
-    , [pay Iron 1, defend 4, attack 4]
+    [[pay Iron 1, Attack (N 2), attack 4 ]
+    , [pay Iron 1, Defend (N 2), attack 4]
     ]
 
 

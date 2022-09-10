@@ -71,7 +71,6 @@ action x y c =
         Reveal n -> jobCircle x y "white" "See" n
         Pay r n -> resource x y r "Red" "-" n 
         Gain r n -> resource x y r "Green" "+" n 
-        Gather r n -> jobCircle x y (resourceColor r) (resourceShortName r) n
         BuildRail -> jobCircle x y "Orange" "Bld" None
 
             

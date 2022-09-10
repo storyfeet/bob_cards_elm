@@ -19,6 +19,8 @@ type Resource
 type JobNum 
     = N Int
     | X Int
+    | D Int
+    | XD Int
     | This
     | None
 
@@ -26,8 +28,12 @@ jnum: JobNum -> String
 jnum j =
     case j of
         X 1 -> "x"
+        D 1 -> "?"
+        XD 1 -> "x?"
         N n -> String.fromInt n
         X n -> String.fromInt n ++ "x"
+        D n -> String.fromInt n ++ "?"
+        XD n-> String.fromInt n ++ "x?"
         This -> "!"
         None -> ""
 
@@ -63,7 +69,6 @@ type Action
     | Defend JobNum
     | Gain Resource JobNum
     | Pay Resource JobNum
-    | Gather Resource JobNum
     | Draw JobNum
     | Scrap CardType JobNum
     | Take CardType JobNum
@@ -98,16 +103,16 @@ gain r n =
 
 gather : Resource -> Int -> Action
 gather r n =
-    Gather r (N n)
+    Gain r (D n)
     
 
 attack : Int -> Action
 attack n =
-    Attack (N n)
+    Attack (D n)
 
 defend : Int -> Action
 defend n =
-    Defend (N n)
+    Defend (D n)
 
 draw : Int -> Action
 draw n =
@@ -131,7 +136,7 @@ riverGather = gatherAt River
 
 gatherAt : Place -> Resource -> Int -> Job
 gatherAt p r n = 
-    [In p,Gather r (N n)  ]
+    [In p,Gain r (D n)  ]
 
 
 foodMove : Int -> Int -> Job

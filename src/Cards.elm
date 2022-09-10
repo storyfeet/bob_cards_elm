@@ -107,7 +107,7 @@ cTypeColor ct =
         TAny -> "white"
         TStarter -> "yellow"
         TFight -> "red"
-        TMove -> "lightblue"
+        TMove -> "cyan"
         TGather -> "fuchsia"
         TPlayer _ -> "blue"
         TDanger _ -> "black"
