@@ -51,34 +51,63 @@ Contents
 Setup
 -----
 
-Choose the appropriate Score Board, and place it near the playing area.
+Choose a direction to represent East on the table. Take the appropriate Score board (Solo or Multiplayer) And place it at the east so it's top is towards east.
 
 Add a score counter for every player to the blue '0' on the Score board.
 
-    In solo games, also add a score counter for the bandits to the red '0' on the score board.
+In solo games, also add a score counter for the bandits to the red '0' on the score board.
 
+Give each player a Player Card. 
+    * In a solo game, choose the starter card you wish, Higher level Player cards will make the game more difficult
+    * In multiplayer, each player should have a level 1 card.
 
-Give each player a random level 1 Player Card. 
-
-    In a solo game, choose the starter card you wish, Higher level Player cards will make the game more difficult
-
-Separate the Starter cards by Item, and give each player the number indicated in the star of each.
+Sort the Starter cards by Name. Each Starter Card has a number in the yellow star, that is how many of that card each player should have. Distribute the cards like this. Each player should have 10 cards.
+Each player should shuffle these 10 cards, this will be thier Draw Deck.
 
 Sort the rest cards by their Type (Shown in contents) and shuffle each pile separately.
     * Place the Pain and Exhaustion cards face down by their star on the score board.
-    * Place the Trade Row cards next to that, and deal the top 5 cards face up next to it in a clear order.
-    * 
+    * Place the Trade Row cards West of the Score Board, and deal the top 5 cards in a row these. All players will need to be able to see these clearly.
+
+Choose a random Village Tile from the Land tiles and place that on the table West of the Trade Row, face up.
+
+Shuffle the rest of the tiles and then deal and lay out 5 tiles, face up, around the first. North,South and West, but not East.
+
+After that place 3 Tiles, face down, to the west of those tiles.
+
+Place a player counter for each player on the initial Village Tile.
+
+In a multiplayer game give one player the First Turn Marker.
+
+Order of Play - Multiplayer
+-----------
+
+1. Draw Cards
+
+All players draw cards from their own personal deck until they have 6 Cards in hand (If they have more they do not have to discard)
+
+2. Untap Player Card
+
+All players turn the Player Card to face forward
+
+3. Play and Buy Cards
+
+Players take turns to do one of the following actions.
+
+* Do a Card Job
+Choose a job on a card and perform all items in that Job. Place that card in your own 
+* Do a Character Card Job
+* Initiate a battle
+* Pass
 
 
-Shuffle the Pain and Exhaustion
 
 
 
-Separate the cards into their groups
-    * Place the 
-
-Separate the cards into groups by the star in the right corner. If they have no star they belong to the trade row.
+Starting with the First Player and Clockwise around the table players take it in turns to activate
 
 
+
+Order of Play - Solo
+---------------
 
 
