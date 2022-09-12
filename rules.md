@@ -78,6 +78,16 @@ Place a player counter for each player on the initial Village Tile.
 
 In a multiplayer game give one player the First Turn Marker.
 
+
+Understanding Jobs
+------------------
+
+A key concept in this game is the Jobs. There are Jobs on all game Cards.  They are a list of symbols representing actions that must all be taken in order to perform any of them and should be done in order from left to right.
+
+
+
+
+
 Order of Play - Multiplayer
 -----------
 
@@ -93,13 +103,11 @@ All players turn the Player Card to face forward
 
 Players take turns to do one of the following actions.
 
-* Do a Card Job
-Choose a job on a card and perform all items in that Job. Place that card in your own 
-* Do a Character Card Job
-* Initiate a battle
-* Pass
+* Perform a Job
+* Purchase a Card
+* Pass - Discarding Cards any normal cards they want to.
 
-
+Once a player has passed, they may not do any more until the end of the round (Unless they are caught in a battle)
 
 
 

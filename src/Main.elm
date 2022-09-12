@@ -5,10 +5,16 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Time
 import Task
-import Cards exposing (Card,tradeRow,starterDeck)
+
+import Decks.Starter as DkStart
+import Decks.Trade as DkTrade
+import Cards exposing (Card)
 import Deck exposing (Deck)
 import MRand exposing (GGen,gzero)
 import Message exposing (Msg)
+import Canvas as Cv
+import Canvas.Settings as Cvs
+import Color
 
 
 type alias Model = 
@@ -34,10 +40,17 @@ subscriptions _ =
 
 -- VIEW
 view : Model -> Html Msg
-view mod = 
+view _ = 
     div [] 
-    [ div [style "clear" "both"] ((text "Hand")::(mod.pcards.hand |> List.map Cards.view))
-    , div [style "clear" "both"] ((text "TradeRow")::(mod.tradeRow.hand |> List.map Cards.view))
+    [Cv.toHtml (500,400) [
+        style "border" "1px solid black"
+        ] [
+            Cv.shapes [Cvs.fill Color.green] [
+                    Cv.rect (50,10) 300 300
+                ]
+            ]
+        -- div [style "clear" "both"] ((text "Hand")::(mod.pcards.hand |> List.map Cards.view))
+    --, div [style "clear" "both"] ((text "TradeRow")::(mod.tradeRow.hand |> List.map Cards.view))
     --, Map.view
    ]
 
@@ -52,8 +65,8 @@ update mes _ =
         Message.NewGame t ->
             let
                 gg = MRand.gnew t
-                (gg1,trd) = Deck.fromNCardList gg 5 tradeRow
-                (gg2,pcards) = Deck.fromNCardList gg1 5 starterDeck 
+                (gg1,trd) = Deck.fromNCardList gg 5 DkTrade.tradeDeck
+                (gg2,pcards) = Deck.fromNCardList gg1 5 (DkStart.starterDeck  1)
             in 
                 ({ gen = gg2
                 , pcards = pcards

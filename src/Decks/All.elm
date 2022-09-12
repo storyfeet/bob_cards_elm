@@ -1,4 +1,4 @@
-module Decks.All exposing (..)
+module Decks.All exposing (allCards)
 import Cards 
 import Decks.Starter as ST
 import Decks.Trade as TR
