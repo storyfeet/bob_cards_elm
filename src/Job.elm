@@ -146,8 +146,6 @@ woodMove : Int -> Int -> Job
 woodMove w d = [pay Wood w, Move(N d) ]
 
 
-
-
 scrapFor : Resource -> Int -> Job
 scrapFor r n =
     [Scrap TAny This, gain r n]

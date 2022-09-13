@@ -45,9 +45,6 @@ jobHeight j =
     |> \a -> a * 12
     |> toFloat
 
-    
-
-
 
 jobLen : Job -> Float
 jobLen j = 10 * List.length j |> toFloat

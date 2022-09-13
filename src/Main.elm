@@ -40,13 +40,18 @@ subscriptions _ =
 
 -- VIEW
 view : Model -> Html Msg
-view m = 
+view m =
     div [] 
     [Cv.toHtml (500,400) [
         style "border" "1px solid black"
         ] (m.pcards.hand 
         |> List.map CardCanvas.front
-        |> List.indexedMap (\n x -> Cv.group [CvSA.transform [CvSA.Translate (50*(toFloat n)) 10]] [x]))
+        |> List.indexedMap (\n x -> Cv.group 
+            [ CvSA.transform 
+                [ CvSA.Translate (150*(toFloat n)) 0
+                , CvSA.Rotate (0.1*(toFloat n)) 
+                ]
+            ] [x]))
    ]
 
 

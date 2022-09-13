@@ -2,6 +2,8 @@ module CardCanvas exposing (..)
 
 import Canvas as Cv
 import Canvas.Settings as Cvs
+import Canvas.Settings.Line as CvL
+import Canvas.Settings.Text as CvT
 
 import Cards exposing (..)
 import Color
@@ -24,8 +26,17 @@ tColor ct =
 
 front: Card -> Cv.Renderable
 front c =
-    Cv.shapes [tColor c.ctype |> Cvs.fill] 
-        [ Cv.rect (0,0) 50 70
+    Cv.group [] 
+        [ Cv.shapes [tColor c.ctype |> Cvs.fill, Cvs.stroke Color.black] [Cv.rect (0,0) 150 230] 
+        , Cv.text titleFont (0,20) c.name
         ]
 
+
+titleFont: List Cvs.Setting 
+titleFont = 
+    [ Cvs.fill Color.black
+    , Cvs.stroke Color.yellow
+    , CvL.lineWidth 0.2
+    , CvT.font {size = 15,family = "Arial"}
+    ]
 
