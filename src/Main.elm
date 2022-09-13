@@ -13,8 +13,8 @@ import Deck exposing (Deck)
 import MRand exposing (GGen,gzero)
 import Message exposing (Msg)
 import Canvas as Cv
-import Canvas.Settings as Cvs
-import Color
+import Canvas.Settings.Advanced as CvSA
+import CardCanvas
 
 
 type alias Model = 
@@ -40,18 +40,13 @@ subscriptions _ =
 
 -- VIEW
 view : Model -> Html Msg
-view _ = 
+view m = 
     div [] 
     [Cv.toHtml (500,400) [
         style "border" "1px solid black"
-        ] [
-            Cv.shapes [Cvs.fill Color.green] [
-                    Cv.rect (50,10) 300 300
-                ]
-            ]
-        -- div [style "clear" "both"] ((text "Hand")::(mod.pcards.hand |> List.map Cards.view))
-    --, div [style "clear" "both"] ((text "TradeRow")::(mod.tradeRow.hand |> List.map Cards.view))
-    --, Map.view
+        ] (m.pcards.hand 
+        |> List.map CardCanvas.front
+        |> List.indexedMap (\n x -> Cv.group [CvSA.transform [CvSA.Translate (50*(toFloat n)) 10]] [x]))
    ]
 
 
