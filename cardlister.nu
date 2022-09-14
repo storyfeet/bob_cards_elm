@@ -1,0 +1,1 @@
+ls pics/cards/ | get name | each {|x| basename $x |str replace "\\..*" '"'| str trim | '"' + $in}| str collect "\n     , " |  $"module HasPicList exposing \(..)\npList : List String\npList = [ " + $in + "\n    ]"| save -r src/HasPicList.elm
