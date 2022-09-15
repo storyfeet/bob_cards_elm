@@ -3151,6 +3151,112 @@ var $author$project$Cards$cTypeColor = function (ct) {
 			return 'Green';
 	}
 };
+var $author$project$PageSvg$etag = F2(
+	function (name, propl) {
+		return '<' + (name + (' ' + (A2($elm$core$String$join, ' ', propl) + ' />')));
+	});
+var $author$project$PageSvg$prop = F2(
+	function (name, val) {
+		return name + ('=\"' + (val + '\"'));
+	});
+var $author$project$PageSvg$props = $elm$core$String$join(' ');
+var $elm$core$String$fromFloat = _String_fromNumber;
+var $author$project$PageSvg$fprop = F2(
+	function (name, val) {
+		return A2(
+			$author$project$PageSvg$prop,
+			name,
+			$elm$core$String$fromFloat(val));
+	});
+var $author$project$PageSvg$wh = F2(
+	function (w, h) {
+		return $author$project$PageSvg$props(
+			_List_fromArray(
+				[
+					A2($author$project$PageSvg$fprop, 'width', w),
+					A2($author$project$PageSvg$fprop, 'height', h)
+				]));
+	});
+var $author$project$PageSvg$xy = F2(
+	function (x, y) {
+		return $author$project$PageSvg$props(
+			_List_fromArray(
+				[
+					A2($author$project$PageSvg$fprop, 'x', x),
+					A2($author$project$PageSvg$fprop, 'y', y)
+				]));
+	});
+var $author$project$PageSvg$xywh = F4(
+	function (x, y, w, h) {
+		return $author$project$PageSvg$props(
+			_List_fromArray(
+				[
+					A2($author$project$PageSvg$xy, x, y),
+					A2($author$project$PageSvg$wh, w, h)
+				]));
+	});
+var $author$project$PageSvg$img = F6(
+	function (x, y, w, h, path, pps) {
+		return A2(
+			$author$project$PageSvg$etag,
+			'image',
+			A2(
+				$elm$core$List$cons,
+				A4($author$project$PageSvg$xywh, x, y, w, h),
+				A2(
+					$elm$core$List$cons,
+					A2($author$project$PageSvg$prop, 'xlink:href', path),
+					pps)));
+	});
+var $elm$core$List$any = F2(
+	function (isOkay, list) {
+		any:
+		while (true) {
+			if (!list.b) {
+				return false;
+			} else {
+				var x = list.a;
+				var xs = list.b;
+				if (isOkay(x)) {
+					return true;
+				} else {
+					var $temp$isOkay = isOkay,
+						$temp$list = xs;
+					isOkay = $temp$isOkay;
+					list = $temp$list;
+					continue any;
+				}
+			}
+		}
+	});
+var $elm$core$List$member = F2(
+	function (x, xs) {
+		return A2(
+			$elm$core$List$any,
+			function (a) {
+				return _Utils_eq(a, x);
+			},
+			xs);
+	});
+var $author$project$HasPicList$pList = _List_fromArray(
+	['pistol', 'revolver', 'rifle', 'trident']);
+var $elm$core$String$toLower = _String_toLower;
+var $author$project$Cards$imageFile = F2(
+	function (root, cname) {
+		var lcase = $elm$core$String$toLower(cname);
+		return A2($elm$core$List$member, lcase, $author$project$HasPicList$pList) ? $elm$core$Maybe$Just(root + (lcase + '.svg')) : $elm$core$Maybe$Nothing;
+	});
+var $author$project$CardSvg$picFile = $author$project$Cards$imageFile('../pics/cards/');
+var $author$project$CardSvg$cardPic = F3(
+	function (x, y, cname) {
+		var _v0 = $author$project$CardSvg$picFile(cname);
+		if (_v0.$ === 'Just') {
+			var f = _v0.a;
+			return A6($author$project$PageSvg$img, x, y, 35, 35, f, _List_Nil);
+		} else {
+			return '';
+		}
+	});
 var $author$project$Job$dangerType = function (d) {
 	switch (d.$) {
 		case 'Pain':
@@ -3161,20 +3267,7 @@ var $author$project$Job$dangerType = function (d) {
 			return '';
 	}
 };
-var $author$project$PageSvg$prop = F2(
-	function (name, val) {
-		return name + ('=\"' + (val + '\"'));
-	});
 var $author$project$PageSvg$bold = A2($author$project$PageSvg$prop, 'font-weight', 'bold');
-var $elm$core$String$fromFloat = _String_fromNumber;
-var $author$project$PageSvg$fprop = F2(
-	function (name, val) {
-		return A2(
-			$author$project$PageSvg$prop,
-			name,
-			$elm$core$String$fromFloat(val));
-	});
-var $author$project$PageSvg$props = $elm$core$String$join(' ');
 var $author$project$PageSvg$flStk = F3(
 	function (f, s, w) {
 		return $author$project$PageSvg$props(
@@ -3212,15 +3305,6 @@ var $author$project$PageSvg$text = F4(
 				[txt]));
 	});
 var $author$project$PageSvg$txCenter = A2($author$project$PageSvg$prop, 'text-anchor', 'middle');
-var $author$project$PageSvg$xy = F2(
-	function (x, y) {
-		return $author$project$PageSvg$props(
-			_List_fromArray(
-				[
-					A2($author$project$PageSvg$fprop, 'x', x),
-					A2($author$project$PageSvg$fprop, 'y', y)
-				]));
-	});
 var $author$project$CardSvg$idText = F4(
 	function (x, y, col, tx) {
 		return A4(
@@ -3296,10 +3380,6 @@ var $author$project$CardSvg$narrowStk = F2(
 					A3($author$project$PageSvg$flStk, f, s, 0.5),
 					$author$project$PageSvg$strokeFirst
 				]));
-	});
-var $author$project$PageSvg$etag = F2(
-	function (name, propl) {
-		return '<' + (name + (' ' + (A2($elm$core$String$join, ' ', propl) + ' />')));
 	});
 var $author$project$PageSvg$points = function (pts) {
 	return A2(
@@ -3451,24 +3531,6 @@ var $author$project$CardSvg$gainText = F4(
 					$author$project$PageSvg$txCenter
 				]),
 			tx);
-	});
-var $author$project$PageSvg$wh = F2(
-	function (w, h) {
-		return $author$project$PageSvg$props(
-			_List_fromArray(
-				[
-					A2($author$project$PageSvg$fprop, 'width', w),
-					A2($author$project$PageSvg$fprop, 'height', h)
-				]));
-	});
-var $author$project$PageSvg$xywh = F4(
-	function (x, y, w, h) {
-		return $author$project$PageSvg$props(
-			_List_fromArray(
-				[
-					A2($author$project$PageSvg$xy, x, y),
-					A2($author$project$PageSvg$wh, w, h)
-				]));
 	});
 var $author$project$PageSvg$rect = F5(
 	function (x, y, w, h, pps) {
@@ -3950,6 +4012,7 @@ var $author$project$CardSvg$front = function (card) {
 						$author$project$PageSvg$flNoStk('White'),
 						A2($author$project$PageSvg$fprop, 'opacity', 0.4)
 					])),
+				A3($author$project$CardSvg$cardPic, 4, 6, card.name),
 				A4(
 				$author$project$PageSvg$text,
 				'Arial',
@@ -4224,19 +4287,6 @@ var $author$project$SvgMaker$tryNextPage = F6(
 		}
 	});
 var $author$project$SvgMaker$nextFront = A4($author$project$SvgMaker$tryNextPage, 16, $author$project$CardSvg$front, $author$project$SvgMaker$placeCard, 'front');
-var $author$project$PageSvg$img = F6(
-	function (x, y, w, h, path, pps) {
-		return A2(
-			$author$project$PageSvg$etag,
-			'image',
-			A2(
-				$elm$core$List$cons,
-				A4($author$project$PageSvg$xywh, x, y, w, h),
-				A2(
-					$elm$core$List$cons,
-					A2($author$project$PageSvg$prop, 'xlink:href', path),
-					pps)));
-	});
 var $author$project$TileSvg$wet = function (b) {
 	return b ? '_wet' : '';
 };

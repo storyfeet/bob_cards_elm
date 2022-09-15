@@ -8,6 +8,7 @@ front :  Card -> String
 front card =
     String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "white" 0.5, fprop "opacity" 0.5]
     , rect 5 5 40 60 [flNoStk "White" , fprop "opacity" 0.4 ]
+    , cardPic 4 6 card.name
     , text "Arial" 5 [xy 20 10,narrowStk "Black" "yellow" ,txCenter] card.name
     , costOrType card.cost card.ctype
     , jobs 65 card.jobs
@@ -277,4 +278,15 @@ idText x y col tx =
 gainText : Float -> Float -> String -> String -> String
 gainText x y col tx =
         text "Arial" 5 [xy x y ,flStk col "white" 0.5, strokeFirst,bold,txCenter] (tx )
+
+
+cardPic: Float -> Float -> String -> String
+cardPic x y cname = 
+    case  picFile cname of
+        Just f -> img x y 35 35 f []
+        Nothing -> ""
+
+
+picFile : String -> Maybe String
+picFile = Cards.imageFile "../pics/cards/"
 

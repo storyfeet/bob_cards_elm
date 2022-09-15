@@ -1,6 +1,8 @@
 module HasPicList exposing (..)
 pList : List String
-pList = [ "pistol"
+pList = [ "knife"
+     , "knife"
+     , "pistol"
      , "revolver"
      , "rifle"
      , "trident"

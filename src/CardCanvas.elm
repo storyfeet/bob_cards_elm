@@ -4,10 +4,12 @@ import Canvas as Cv
 import Canvas.Settings as Cvs
 import Canvas.Settings.Line as CvL
 import Canvas.Settings.Text as CvT
+import Canvas.Texture as CTex
 
 import Cards exposing (..)
 import Color
 import Job exposing (CardType)
+import Dict exposing (Dict)
 
 
 tColor : CardType -> Color.Color
@@ -24,12 +26,24 @@ tColor ct =
         Job.TMake -> Color.orange
         Job.THealth -> Color.green
 
-front: Card -> Cv.Renderable
-front c =
+front: (Dict String CTex.Texture)-> Card -> Cv.Renderable
+front txset c =
     Cv.group [] 
         [ Cv.shapes [tColor c.ctype |> Cvs.fill, Cvs.stroke Color.black] [Cv.rect (0,0) 150 230] 
+        , cardPic txset 20 20 (String.toLower c.name)
         , Cv.text titleFont (0,20) c.name
         ]
+
+cardPic : Dict String CTex.Texture -> Float -> Float -> String -> Cv.Renderable
+cardPic txset x y cname =
+    case Dict.get cname txset of
+        Just t -> Cv.texture [] (x,y) t
+        Nothing -> Cv.shapes [] [Cv.rect (x,y) 40 40]
+
+
+
+
+    
 
 
 titleFont: List Cvs.Setting 
@@ -39,4 +53,5 @@ titleFont =
     , CvL.lineWidth 0.2
     , CvT.font {size = 15,family = "Arial"}
     ]
+
 
