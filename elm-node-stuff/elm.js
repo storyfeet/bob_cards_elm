@@ -3239,7 +3239,7 @@ var $elm$core$List$member = F2(
 			xs);
 	});
 var $author$project$HasPicList$pList = _List_fromArray(
-	['pistol', 'revolver', 'rifle', 'trident']);
+	['knife', 'pistol', 'revolver', 'rifle', 'trident']);
 var $elm$core$String$toLower = _String_toLower;
 var $author$project$Cards$imageFile = F2(
 	function (root, cname) {
