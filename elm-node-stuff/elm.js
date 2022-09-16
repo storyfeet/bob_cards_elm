@@ -3492,7 +3492,6 @@ var $author$project$CardSvg$cardType = function (ct) {
 	}
 };
 var $author$project$Job$None = {$: 'None'};
-var $author$project$Job$This = {$: 'This'};
 var $author$project$CardSvg$cardLetter = F3(
 	function (x, y, ct) {
 		switch (ct.$) {
@@ -3808,8 +3807,6 @@ var $author$project$CardSvg$action = F3(
 			case 'Starter':
 				var n = c.a;
 				return A4($author$project$CardSvg$jobStar, x, y, 'yellow', n);
-			case 'Player':
-				return A4($author$project$CardSvg$jobStar, x, y, 'blue', $author$project$Job$This);
 			case 'Move':
 				var n = c.a;
 				return A5($author$project$CardSvg$jobCircle, x, y, 'Pink', 'Mv', n);
@@ -4364,6 +4361,7 @@ var $author$project$Job$In = function (a) {
 var $author$project$Job$Pain = {$: 'Pain'};
 var $author$project$Job$TGather = {$: 'TGather'};
 var $author$project$Job$Village = {$: 'Village'};
+var $author$project$Job$This = {$: 'This'};
 var $author$project$Job$discardMe = A2($author$project$Job$Discard, $author$project$Job$TAny, $author$project$Job$This);
 var $author$project$Job$scrapMe = A2($author$project$Job$Scrap, $author$project$Job$TAny, $author$project$Job$This);
 var $author$project$Decks$Starter$armWound = A4(

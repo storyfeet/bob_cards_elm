@@ -50,7 +50,7 @@ placeShortName pl =
 
 
 cTypeColor : CardType -> String
-cTypeColor ct = 
+cTypeColor ct =
     case ct of
         TAny -> "white"
         TStarter -> "yellow"

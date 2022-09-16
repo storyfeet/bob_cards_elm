@@ -78,7 +78,6 @@ type Action
     | MountainMove
     | Reveal JobNum
     | Starter JobNum
-    | Player
 
 -- COSTS
 

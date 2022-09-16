@@ -60,7 +60,6 @@ action x y c =
         Scrap ct n -> jobCard x y ct "#" "red" n
         Take ct n -> jobCard x y ct "^" "blue" n
         Starter n -> jobStar x y "yellow"  n
-        Player -> jobStar x y "blue" Job.This
         Move n -> jobCircle x y "Pink" "Mv" n
         Attack n -> jobCircle x y "red" "Atk" n
         Defend n -> jobCircle x y "Grey" "Dfd" n
