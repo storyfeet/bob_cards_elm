@@ -26,10 +26,24 @@ tColor ct =
         Job.TMake -> Color.orange
         Job.THealth -> Color.green
 
+lColor : CardType -> Color.Color
+lColor ct =
+    tColor ct |> lighter
+
+lighter : Color.Color -> Color.Color
+lighter c = 
+    let 
+        hsla = Color.toHsla c
+    in 
+        Color.fromHsla { hsla | lightness = hsla.lightness * 1.5}
+
 front: (Dict String CTex.Texture)-> Card -> Cv.Renderable
 front txset c =
     Cv.group [] 
         [ Cv.shapes [tColor c.ctype |> Cvs.fill, Cvs.stroke Color.black] [Cv.rect (0,0) 150 230] 
+        , Cv.shapes [lColor c.ctype |> Cvs.fill] [Cv.rect (10,10) 130 210]
+        
+
         , cardPic txset 20 20 (String.toLower c.name)
         , Cv.text titleFont (0,20) c.name
         ]
