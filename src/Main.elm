@@ -55,7 +55,7 @@ view m =
         |> List.indexedMap (\n x -> Cv.group 
             [ CvSA.transform 
                 [ CvSA.Translate (150*(toFloat n)) 0
-                , CvSA.Rotate (0.1*(toFloat n)) 
+                , CvSA.Rotate (0.1)--*(toFloat n)) 
                 ]
             ] [x]))
    ]

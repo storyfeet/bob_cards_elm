@@ -2,6 +2,7 @@ module CardCanvas exposing (..)
 
 import Canvas as Cv
 import Canvas.Settings as Cvs
+import Canvas.Settings.Advanced as CvSA
 import Canvas.Settings.Line as CvL
 import Canvas.Settings.Text as CvT
 import Canvas.Texture as CTex
@@ -35,7 +36,7 @@ lighter c =
     let 
         hsla = Color.toHsla c
     in 
-        Color.fromHsla { hsla | lightness = hsla.lightness * 1.5}
+        Color.fromHsla { hsla | lightness = hsla.lightness * 1.4}
 
 front: (Dict String CTex.Texture)-> Card -> Cv.Renderable
 front txset c =
@@ -51,8 +52,8 @@ front txset c =
 cardPic : Dict String CTex.Texture -> Float -> Float -> String -> Cv.Renderable
 cardPic txset x y cname =
     case Dict.get cname txset of
-        Just t -> Cv.texture [] (x,y) t
-        Nothing -> Cv.shapes [] [Cv.rect (x,y) 40 40]
+        Just t -> Cv.texture [CvSA.transform [CvSA.scale 0.5 0.5] ] (x,y) t
+        Nothing -> Cv.shapes [] [Cv.rect (x,y) 20 20]
 
 
 
