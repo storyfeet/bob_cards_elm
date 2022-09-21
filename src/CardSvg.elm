@@ -60,15 +60,15 @@ action x y c =
         Scrap ct n -> jobCard x y ct "#" "red" n
         Take ct n -> jobCard x y ct "^" "blue" n
         Starter n -> jobStar x y "yellow"  n
-        Move n -> jobCircle x y "Pink" "Mv" n
-        Attack n -> jobCircle x y "red" "Atk" n
-        Defend n -> jobCircle x y "Grey" "Dfd" n
+        Move n -> jobN x y "move" n
+        Attack n -> jobN x y "attack" n
+        Defend n -> jobN x y "defend" n
         WaterMove -> jobPic x y "sail" 
         MountainMove -> jobPic x y "climb"--jobCircle x y "white" "Clim" Job.None
-        Reveal n -> jobPic x y " 
+        Reveal n -> jobN x y "reveal" n
         Pay r n -> resource x y r "Red" "-" n 
         Gain r n -> resource x y r "Green" "+" n 
-        BuildRail -> jobCircle x y "Orange" "Bld" None
+        BuildRail -> jobPic x y "build_rail"
 
             
 costOrType : Job -> CardType -> String
@@ -100,9 +100,9 @@ cardType ct =
 resource : Float -> Float ->Resource -> String -> String -> JobNum -> String
 resource x y r tcol sym n =
     String.join "\n" 
-        [ rect x y 10 10 [narrowStk (resourceColor r) "black"] 
-        , gainText (x + 5) (y + 5) tcol (sym ++ jnum n)
-        , jobText (x + 5) (y + 9) (resourceShortName r)
+        [ jobPic x y (resPic r) 
+        , gainText (x + 6) (y + 4) tcol (sym ++ jnum n)
+        --, jobText (x + 5) (y + 9) (resourceShortName r)
         ]
 
 narrowStk: String -> String -> String 
@@ -303,7 +303,7 @@ jobN: Float -> Float -> String -> JobNum -> String
 jobN x y fname n = 
     String.join "\n" 
         [ jobPic x y fname
-        , gainText x y "blue" (jnum n)
+        , gainText (x+6) (y + 4) "blue" (jnum n)
         ]
 
 cardPicFile : String -> Maybe String

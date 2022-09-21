@@ -9,8 +9,8 @@ pageWrap u w h  m  =
         , iunit h u |> prop "height"
         , prop "xmlns" "http://www.w3.org/2000/svg"
         , prop "viewBox" ("0 0 "++ String.fromInt w ++ " " ++ String.fromInt h)
+        ,prop "xmlns:xlink" "http://www.w3.org/1999/xlink"
     ] [m]
-
 ----  TAGS ----
 
 etag : String -> List String -> String
