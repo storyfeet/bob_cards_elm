@@ -8,7 +8,7 @@ type alias Tile =
 type LType
     = Water
     | Forest Bool
-    | Prarie Bool
+    | Prairie Bool
     | Village Job
     | Mountain
 
@@ -18,20 +18,20 @@ intToLType n =
         0 -> Water
         1 -> Forest False
         2 -> Forest True
-        3 -> Prarie False
-        4 -> Prarie True
+        3 -> Prairie False
+        4 -> Prairie True
         _ -> Mountain
 
 isPlace: Place -> LType -> Bool
 isPlace p l =
     case (p,l) of
         (Job.River, Forest True) -> True
-        (Job.River, Prarie True) -> True
+        (Job.River, Prairie True) -> True
         (Job.Water, Water) -> True
         (Job.Forest, Forest _) -> True
         (Job.Village, Village _) -> True
         (Job.Mountain, Mountain) -> True
-        (Job.Prarie , Prarie _) -> True
+        (Job.Prairie , Prairie _) -> True
         _ -> False
 
 

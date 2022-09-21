@@ -3,7 +3,7 @@ type alias Job = List Action
 type Place 
     = Water
     | Forest
-    | Prarie
+    | Prairie
     | Village
     | Mountain
     | River

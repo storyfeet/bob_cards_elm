@@ -44,7 +44,7 @@ placeShortName pl =
         River -> "Rvr"
         Forest -> "Frt"
         Mountain -> "Mtn"
-        Prarie -> "Pry"
+        Prairie -> "Pry"
         Water -> "Wtr"
         Village -> "Vlg"
 
@@ -71,7 +71,7 @@ placeColor pl =
         River -> "Cyan"
         Forest -> "Green"
         Mountain -> "Grey"
-        Prarie -> "LightGreen"
+        Prairie -> "LightGreen"
         Water -> "Blue"
         Village -> "Yellow"
         

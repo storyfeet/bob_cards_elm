@@ -64,7 +64,7 @@ action x y c =
         Attack n -> jobN x y "attack" n
         Defend n -> jobN x y "defend" n
         WaterMove -> jobPic x y "sail" 
-        MountainMove -> jobPic x y "climb"--jobCircle x y "white" "Clim" Job.None
+        MountainMove -> jobPic x y "climb"
         Reveal n -> jobN x y "reveal" n
         Pay r n -> resource x y r "Red" "-" n 
         Gain r n -> resource x y r "Green" "+" n 
@@ -187,10 +187,7 @@ dangerStar x y col tx n =
 
 place : Float -> Float -> Place ->  String
 place x y p =
-    String.join "\n" 
-        [ polygon (hexPoints x y 10 10) [narrowStk (placeColor p) "black" ]
-        , jobText (x + 5) (y + 4) (placeShortName p)
-        ]
+        jobPic x y (placePic p)
 
 
 hexPoints: Float -> Float -> Float -> Float -> List Float
@@ -294,6 +291,16 @@ resPic r =
         Food -> "food"
         Wood -> "wood"
         Any -> "any"
+
+placePic:Place -> String
+placePic p = 
+    case p of
+        Water -> "water"
+        Mountain -> "mountain"
+        River -> "river"
+        Prairie -> "prairie"
+        Forest -> "forest"
+        Village -> "village"
         
 jobPic: Float -> Float -> String -> String
 jobPic x y fname = 

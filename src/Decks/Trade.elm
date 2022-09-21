@@ -37,20 +37,20 @@ elixer = Card "Elixer" TGather (payEq 1 [Food,Wood] )
 
 horse: Card
 horse = Card "Horse" TMove
-    [In Prarie, pay Food 3,Or, In Village ,pay Gold 1]
+    [In Prairie, pay Food 3,Or, In Village ,pay Gold 1]
     [foodMove 1 2, scrapFor Food 5]
     
 
 stalion:Card
 stalion = Card "Stalion" TMove 
-    [In Prarie ,pay Food 4,Or, In Village ,pay Gold 2]
+    [In Prairie ,pay Food 4,Or, In Village ,pay Gold 2]
     [[ Pay Food (X 2), Move (X 3)]
     , scrapFor Food 6
     ]
 
 cow: Card
 cow = Card "Cow" THealth 
-    [In Prarie ,pay Food 2,Or, In Village ,pay Gold 1]
+    [In Prairie ,pay Food 2,Or, In Village ,pay Gold 1]
     [ [gain Food 2] 
     , scrapFor Food 5 
     ]

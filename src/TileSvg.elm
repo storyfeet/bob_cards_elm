@@ -14,7 +14,7 @@ tileName tl =
     case tl of
         Water -> "water"
         Forest w -> "forest" ++ wet w
-        Prarie w -> "prarie" ++ wet w
+        Prairie w -> "prarie" ++ wet w
         Village _ -> "village" 
         Mountain -> "mountain"
 
