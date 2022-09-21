@@ -63,9 +63,9 @@ action x y c =
         Move n -> jobCircle x y "Pink" "Mv" n
         Attack n -> jobCircle x y "red" "Atk" n
         Defend n -> jobCircle x y "Grey" "Dfd" n
-        WaterMove -> jobCircle x y "blue" "sail" Job.None
-        MountainMove -> jobCircle x y "white" "Clim" Job.None
-        Reveal n -> jobCircle x y "white" "See" n
+        WaterMove -> jobPic x y "sail" 
+        MountainMove -> jobPic x y "climb"--jobCircle x y "white" "Clim" Job.None
+        Reveal n -> jobPic x y " 
         Pay r n -> resource x y r "Red" "-" n 
         Gain r n -> resource x y r "Green" "+" n 
         BuildRail -> jobCircle x y "Orange" "Bld" None
@@ -281,11 +281,35 @@ gainText x y col tx =
 
 cardPic: Float -> Float -> String -> String
 cardPic x y cname = 
-    case  picFile cname of
+    case  cardPicFile cname of
         Just f -> img x y 35 35 f []
         Nothing -> ""
 
 
-picFile : String -> Maybe String
-picFile = Cards.imageFile "../pics/cards/"
+resPic: Resource  -> String
+resPic r = 
+    case r of 
+        Gold -> "gold"
+        Iron -> "iron"
+        Food -> "food"
+        Wood -> "wood"
+        Any -> "any"
+        
+jobPic: Float -> Float -> String -> String
+jobPic x y fname = 
+    img x y 10 10 ("../pics/jobs/" ++ fname  ++ ".svg")[]
+
+jobN: Float -> Float -> String -> JobNum -> String
+jobN x y fname n = 
+    String.join "\n" 
+        [ jobPic x y fname
+        , gainText x y "blue" (jnum n)
+        ]
+
+cardPicFile : String -> Maybe String
+cardPicFile = Cards.imageFile "../pics/cards/"
+
+
+    
+
 
