@@ -113,6 +113,8 @@ bold = prop "font-weight" "bold"
 txCenter : String
 txCenter = prop "text-anchor" "middle"
 
+txRight : String
+txRight = prop "text-anchor" "end"
 flNoStk: String -> String
 flNoStk f =
     flStk f "none" 0

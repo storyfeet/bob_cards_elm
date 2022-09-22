@@ -101,7 +101,7 @@ resource : Float -> Float ->Resource -> String -> String -> JobNum -> String
 resource x y r tcol sym n =
     String.join "\n" 
         [ jobPic x y (resPic r) 
-        , gainText (x + 6) (y + 4) tcol (sym ++ jnum n)
+        , gainText (x + 10) (y + 3) tcol (sym ++ jnum n)
         --, jobText (x + 5) (y + 9) (resourceShortName r)
         ]
 
@@ -123,7 +123,7 @@ jobCard x y ct tx tcol n =
             , rotate 30 (x + 5) (y+5 )   
             ]        
         , cardLetter (x + 1) (y + 9) ct
-        , gainText (x + 6.5) (y+5) tcol (tx ++ jnum n)
+        , gainText (x + 10) (y+3) tcol (tx ++ jnum n)
 
         ]
 
@@ -181,7 +181,7 @@ dangerStar x y col tx n =
         , idText (x+ 2.5) ( y+7) "grey" (tx)
         , case n of 
             Job.None -> ""
-            _ -> gainText (x + 5) (y + 4 ) "Green" ("+" ++ jnum n)
+            _ -> gainText (x + 10) (y + 3 ) "Green" ("+" ++ jnum n)
         ]
 
 
@@ -273,7 +273,7 @@ idText x y col tx =
 
 gainText : Float -> Float -> String -> String -> String
 gainText x y col tx =
-        text "Arial" 5 [xy x y ,flStk col "white" 0.5, strokeFirst,bold,txCenter] (tx )
+        text "Arial" 4.5 [xy x y ,flStk col "white" 0.6, strokeFirst,bold,txRight] (tx )
 
 
 cardPic: Float -> Float -> String -> String
@@ -310,7 +310,7 @@ jobN: Float -> Float -> String -> JobNum -> String
 jobN x y fname n = 
     String.join "\n" 
         [ jobPic x y fname
-        , gainText (x+6) (y + 4) "blue" (jnum n)
+        , gainText (x+10) (y + 3) "blue" (jnum n)
         ]
 
 cardPicFile : String -> Maybe String
