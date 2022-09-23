@@ -7,13 +7,14 @@
    viewBox="0 0 297 210"
    version="1.1"
    id="svg527"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
    sodipodi:docname="cribsheet.svg"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
      id="namedview529"
      pagecolor="#ffffff"
      bordercolor="#eeeeee"
@@ -24,17 +25,16 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.0142361"
-     inkscape:cx="561.01336"
-     inkscape:cy="396.8504"
+     inkscape:zoom="0.91454423"
+     inkscape:cx="550.54746"
+     inkscape:cy="374.50348"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
-     inkscape:lockguides="true">
-    <inkscape:grid
+     inkscape:lockguides="true"><inkscape:grid
        type="xygrid"
        id="grid5313"
        units="mm"
@@ -42,28 +42,21 @@
        spacingy="52.5"
        empspacing="2"
        empcolor="#0099e5"
-       empopacity="0.5254902" />
-  </sodipodi:namedview>
-  <defs
-     id="defs524">
-    <rect
+       empopacity="0.5254902" /></sodipodi:namedview><defs
+     id="defs524"><rect
        x="1016.0826"
        y="723.98194"
        width="208.25297"
        height="76.696579"
-       id="rect6282" />
-    <rect
+       id="rect6282" /><rect
        x="79.200821"
        y="327.73886"
        width="85.950745"
        height="28.962044"
-       id="rect4156" />
-  </defs>
-  <g
+       id="rect4156" /></defs><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <text
+     id="layer1"><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="4.7062716"
@@ -98,100 +91,72 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
          x="4.7062716"
          y="35.293232"
-         id="tspan1041" /></text>
-    <text
+         id="tspan1041" /></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-       x="73.247063"
-       y="7.9535875"
-       id="text8299-0"><tspan
-         id="tspan8297-3"
-         style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="73.247063"
-         y="7.9535875"
-         sodipodi:role="line">Player Setup</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="73.247063"
-         y="13.24525"
-         id="tspan8301-6"
-         sodipodi:role="line">1) Choose a Character Card</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="73.247063"
-         y="18.536911"
-         id="tspan5759"
-         sodipodi:role="line">The number shows difficulty</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="73.247063"
-         y="23.828575"
-         id="tspan1682"
-         sodipodi:role="line" /><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="73.247063"
-         y="29.120235"
-         id="tspan2689"
-         sodipodi:role="line">2) Separate Starter cards and take</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="73.247063"
-         y="34.4119"
-         id="tspan1686"
-         sodipodi:role="line">the indicated number of each</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="73.247063"
-         y="39.70356"
-         id="tspan2687"
-         sodipodi:role="line">             </tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="73.247063"
-         y="44.995224"
-         id="tspan8305-0"
-         sodipodi:role="line">3) Take 1 Gold, 1 Iron, 1 Wood</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="73.247063"
-         y="50.286884"
-         id="tspan2685"
-         sodipodi:role="line">and 3 Food</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="73.247063"
-         y="55.578548"
-         id="tspan1041-6"
-         sodipodi:role="line" /></text>
-    <text
-       xml:space="preserve"
-       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-       x="54.512123"
-       y="56.640858"
+       x="73.612862"
+       y="26.235804"
        id="text8299-6"><tspan
          sodipodi:role="line"
          style="font-size:4.23333px;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="54.512123"
-         y="56.640858"
+         x="73.612862"
+         y="26.235804"
          id="tspan1199">Winning</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="54.512123"
-         y="61.932518"
+         x="73.612862"
+         y="31.527466"
          id="tspan8301-9">Collect 20 vp Before type Runs out.</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="54.512123"
-         y="67.224182"
-         id="tspan1203">* Reveal Land +1 VP.   -- If most west +2VP</tspan><tspan
+         x="73.612862"
+         y="36.81913"
+         id="tspan1203">* Reveal Land: +1 VP.  </tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="54.512123"
-         y="72.515846"
-         id="tspan1207">* Build Railway + 2VP -- If most west  +3VP</tspan><tspan
+         x="73.612862"
+         y="42.11079"
+         id="tspan44591">     - If most west: +2VP</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="54.512123"
-         y="77.80751"
-         id="tspan1209">* Remove all bandits from an area +2VP</tspan><tspan
+         x="73.612862"
+         y="47.402451"
+         id="tspan1207">* Build Railway: + 2VP</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="54.512123"
-         y="83.099167"
-         id="tspan1041-7" /></text>
-    <text
+         x="73.612862"
+         y="52.694115"
+         id="tspan44593">      - If most west:  +3VP</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="73.612862"
+         y="57.985779"
+         id="tspan1209">* Clear all bandits from a tile: +2VP</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="73.612862"
+         y="63.277439"
+         id="tspan1041-7" /></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:75.8519;display:inline;stroke-width:0.264583"
+       x="-0.65581954"
+       y="67.194206"
+       id="text8299-6-9"
+       transform="translate(74.660148,-3.2836817)"><tspan
+         x="-0.65581954"
+         y="67.194206"
+         id="tspan45477">Losing
+</tspan><tspan
+         x="-0.65581954"
+         y="72.485865"
+         id="tspan45481"><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif"
+           id="tspan45479">If at the start of your turn your hand </tspan></tspan><tspan
+         x="-0.65581954"
+         y="77.77753"
+         id="tspan45485"><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif"
+           id="tspan45483">is full of Danger cards you are out</tspan></tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="3.9935308"
@@ -236,209 +201,79 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
          x="3.9935308"
          y="74.494484"
-         id="tspan1121" /></text>
-    <g
-       id="g4016"
-       transform="translate(-16.484341,-54.917972)">
-      <circle
-         cx="175"
-         cy="204.5"
-         fill="#ffa500"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="ellipse2427"
-         r="5" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="175"
-         y="203.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text2429">Bld</text>
-    </g>
-    <text
+         id="tspan1121" /></text><text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text4154"
        style="font-weight:bold;font-size:26.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;white-space:pre;shape-inside:url(#rect4156);display:inline"><tspan
          x="79.201172"
          y="380.96454"
-         id="tspan1631"><tspan
+         id="tspan45489"><tspan
            dx="0 14.640013"
-           id="tspan1629">FO</tspan></tspan></text>
-    <text
+           id="tspan45487">FO</tspan></tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;white-space:pre;inline-size:109.066;display:inline;stroke-width:0.264583"
        x="51.078308"
        y="136.69841"
        id="text4162-37-93-9-3"
-       transform="translate(102.8786,30.444363)" />
-    <g
-       id="g6634"
-       transform="translate(184.89049,-46.675579)">
-      <rect
-         x="10"
-         y="107.5"
-         width="10"
-         height="10"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="rect6170" />
-      <text
-         font-family="Arial"
-         font-size="5px"
-         x="15"
-         y="112.5"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text6172">-2</text>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="15"
-         y="116.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text6174">Any</text>
-    </g>
-    <g
-       id="g1542"
-       transform="translate(90.751733,20.514783)">
-      <polygon
-         points="42,5 43,2 44,5 48,5 44.5,8 46,12 43,10 40,12 41.5,8 38,5 "
-         fill="#ffff00"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="polygon8"
-         transform="translate(5,8.5)" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="48"
-         y="16.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text10">2</text>
-    </g>
-    <g
-       id="g2134"
-       transform="translate(-61.62373,-71.297081)">
-      <polygon
-         points="48,5 44.5,8 46,12 43,10 40,12 41.5,8 38,5 42,5 43,2 44,5 "
-         fill="#0000ff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="polygon1700"
-         transform="translate(155,78.5)" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="198"
-         y="86.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text1702">1</text>
-    </g>
-    <g
-       id="g2903"
-       transform="translate(68.617219,76.690836)">
-      <g
-         id="g1483"
-         transform="translate(-2.1835196,-1.2017068)">
-        <circle
-           cx="93.038086"
-           cy="92.058739"
-           fill="#ffc0cb"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           id="ellipse2115"
-           r="5" />
-        <text
-           font-family="Arial"
-           font-size="4px"
-           x="93.038086"
-           y="91.058739"
-           text-anchor="middle"
-           fill="#000000"
-           stroke="none"
-           stroke-width="0"
-           id="text2117">Mv</text>
-        <text
-           font-family="Arial"
-           font-size="4px"
-           x="93.038086"
-           y="96.058739"
-           text-anchor="middle"
-           fill="#000000"
-           stroke="none"
-           stroke-width="0"
-           id="text2119">1</text>
-      </g>
-    </g>
-    <text
+       transform="translate(102.8786,30.444363)" /><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-       x="186.14821"
-       y="200.73492"
-       id="text4162-37-36-3-2-6-7"><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-         x="186.14821"
-         y="200.73492"
-         id="tspan7705-5">May move on water</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-       x="252.11842"
-       y="201.30949"
-       id="text4162-37-36-3-2-6-3"><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-         x="252.11842"
-         y="201.30949"
-         id="tspan7705-6">Mountains cost 1 to move on</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-       x="195.67165"
-       y="151.45219"
+       x="195.14249"
+       y="145.98746"
        id="text4162-37-36-3-2-6-2"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-         x="195.67165"
-         y="151.45219"
-         id="tspan2380-1-0-2">Build a railway where you are</tspan></text>
-    <text
+         x="195.14249"
+         y="145.98746"
+         id="tspan2380-1-0-2">Build a railway where you are</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="195.14249"
+         y="151.27911"
+         id="tspan43777">(not on water)</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:58.7467;display:inline;stroke-width:0.264583"
+       x="169.17259"
+       y="194.44241"
+       id="text4162-37-36-3-2-6-2-2"
+       transform="translate(-6.2091793,-2.5479206)"><tspan
+         x="169.17259"
+         y="194.44241"
+         id="tspan45493"><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif"
+           id="tspan45491">This turn you may move on </tspan></tspan><tspan
+         x="169.17259"
+         y="199.73406"
+         id="tspan45497"><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif"
+           id="tspan45495">mountain for 1 cost</tspan></tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:58.7467;display:inline;stroke-width:0.264583"
+       x="169.17259"
+       y="194.44241"
+       id="text4162-37-36-3-2-6-2-2-8"
+       transform="translate(65.372732,-2.5479206)"><tspan
+         x="169.17259"
+         y="194.44241"
+         id="tspan45501"><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif"
+           id="tspan45499">This turn, you may move on </tspan></tspan><tspan
+         x="169.17259"
+         y="199.73406"
+         id="tspan45505"><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif"
+           id="tspan45503">water for 1 cost</tspan></tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-       x="265.99356"
-       y="154.73914"
+       x="266.0596"
+       y="145.98746"
        id="text4162-37-36-3-2-6-2-5"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-         x="265.99356"
-         y="154.73914"
-         id="tspan2380-1-0-2-6">Reveal n Adjacent tiles</tspan></text>
-    <text
+         x="266.0596"
+         y="145.98746"
+         id="tspan2380-1-0-2-6">Reveal n Adjacent tiles</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:127.537;display:inline;stroke-width:0.264583"
        x="40.666729"
@@ -447,26 +282,23 @@
        transform="translate(-35.845263,4.1319098)"><tspan
          x="40.666729"
          y="192.82352"
-         id="tspan1635"><tspan
+         id="tspan45509"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1633">As Bandits Attack, but with steps 4 and 5 before 2 and 3
+           id="tspan45507">As Bandits Attack, but with steps 4 and 5 before 2 and 3
 </tspan></tspan><tspan
          x="40.666729"
          y="198.11517"
-         id="tspan1639"><tspan
+         id="tspan45513"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1637">(bandits counter after taking losses)</tspan></tspan></text>
-    <text
+           id="tspan45511">(bandits counter after taking losses)</tspan></tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:33.5614;display:inline;stroke-width:0.264583"
        x="139.14644"
        y="166.55841"
        id="text4162-37-36-3-2-2-0"
-       transform="translate(117.27267,-67.322691)" />
-    <g
+       transform="translate(117.27267,-67.322691)" /><g
        id="g3747"
-       transform="translate(77.213858,-207.89539)">
-      <rect
+       transform="translate(77.213858,-207.89539)"><rect
          x="272.1442"
          y="141.56372"
          width="6"
@@ -478,24 +310,20 @@
          rx="1"
          ry="1"
          transform="rotate(30)"
-         id="rect2623" />
-      <text
+         id="rect2623" /><text
          font-family="Arial"
          font-size="5px"
-         x="166.5"
-         y="264.5"
+         x="168.08748"
+         y="262.3833"
          fill="#ff0000"
          stroke="#ffffff"
          stroke-width="0.5"
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="middle"
-         id="text2625">#1</text>
-    </g>
-    <g
+         id="text2625">#1</text></g><g
        id="g3426"
-       transform="translate(180.47654,-79.205089)">
-      <rect
+       transform="translate(180.47654,-79.205089)"><rect
          x="105.7383"
          y="58.310127"
          width="6"
@@ -507,24 +335,20 @@
          rx="1"
          ry="1"
          transform="rotate(30)"
-         id="rect2329" />
-      <text
+         id="rect2329" /><text
          font-family="Arial"
          font-size="5px"
-         x="64.015068"
-         y="109.19733"
+         x="65.60257"
+         y="107.08067"
          fill="#ffa500"
          stroke="#ffffff"
          stroke-width="0.5"
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="middle"
-         id="text2331">-1</text>
-    </g>
-    <g
+         id="text2331">-1</text></g><g
        id="g1157"
-       transform="translate(0.15282367,6.9681241)" />
-    <text
+       transform="translate(0.15282367,6.9681241)" /><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="267.11765"
@@ -534,8 +358,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
          x="267.11765"
          y="30.630835"
-         id="tspan2344">Discard a card</tspan></text>
-    <text
+         id="tspan2344">Discard a card</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="266.42255"
@@ -550,8 +373,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
          x="266.42255"
          y="62.67733"
-         id="tspan2902" /></text>
-    <text
+         id="tspan2902" /></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="265.98947"
@@ -561,8 +383,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
          x="265.98947"
          y="17.710052"
-         id="tspan2380-1">Draw a card</tspan></text>
-    <text
+         id="tspan2380-1">Draw a card</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:43.9621;display:inline;stroke-width:0.264583"
        x="122.66517"
@@ -571,20 +392,18 @@
        transform="translate(145.25145,-109.30162)"><tspan
          x="122.66517"
          y="151.12054"
-         id="tspan1643"><tspan
+         id="tspan45517"><tspan
    style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan1641">Add a card to your</tspan><tspan
+   id="tspan45515">Add a card to your</tspan><tspan
    y="151.12054"
-   id="tspan1645"> </tspan></tspan><tspan
+   id="tspan45519"> </tspan></tspan><tspan
          x="122.66517"
          y="156.4122"
-         id="tspan1649"><tspan
+         id="tspan45523"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1647">discard pile</tspan></tspan></text>
-    <g
+           id="tspan45521">discard pile</tspan></tspan></text><g
        id="g2411"
-       transform="translate(144.86265,-124.26141)">
-      <rect
+       transform="translate(144.86265,-124.26141)"><rect
          x="153.52769"
          y="68.618248"
          width="6"
@@ -596,24 +415,20 @@
          rx="1"
          ry="1"
          transform="rotate(30)"
-         id="rect1704" />
-      <text
+         id="rect1704" /><text
          font-family="Arial"
          font-size="5px"
-         x="100.24784"
-         y="142.01913"
+         x="101.83535"
+         y="139.9025"
          fill="#008000"
          stroke="#ffffff"
          stroke-width="0.5"
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="middle"
-         id="text1706">+1</text>
-    </g>
-    <g
+         id="text1706">+1</text></g><g
        id="g2500"
-       transform="translate(117.79079,-11.56289)">
-      <rect
+       transform="translate(117.79079,-11.56289)"><rect
          x="132.50317"
          y="-20.301617"
          width="6"
@@ -625,21 +440,18 @@
          rx="1"
          ry="1"
          transform="rotate(30)"
-         id="rect1554" />
-      <text
+         id="rect1554" /><text
          font-family="Arial"
          font-size="5px"
-         x="126.5"
-         y="54.5"
+         x="127.55833"
+         y="52.383331"
          fill="#0000ff"
          stroke="#ffffff"
          stroke-width="0.5"
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="middle"
-         id="text1556">^1</text>
-    </g>
-    <text
+         id="text1556">^1</text></g><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="262.64218"
@@ -649,40 +461,30 @@
          id="tspan3015"
          style="font-size:4.93889px;stroke-width:0.264583"
          x="262.64218"
-         y="8.6953897">Card Actions</tspan></text>
-    <text
+         y="8.6953897">Card Actions</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-       x="167.67188"
-       y="159.92584"
+       x="165.9792"
+       y="157.28004"
        id="text3017-8"><tspan
          sodipodi:role="line"
          id="tspan3015-97"
          style="font-size:4.93889px;stroke-width:0.264583"
-         x="167.67188"
-         y="159.92584">Movement</tspan></text>
-    <g
+         x="165.9792"
+         y="157.28004">Movement</tspan></text><g
        id="g4120"
-       transform="translate(-0.61001228,1.6768239)">
-      <text
+       transform="translate(-0.51821253,1.2825586)"><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:94.4658;display:inline;stroke-width:0.264583"
          x="108.68443"
          y="77.782585"
          id="text4162-37-4"
-         transform="translate(90.048964,3.0476559)"><tspan
+         transform="translate(92.165632,3.0476559)"><tspan
            x="108.68443"
            y="77.782585"
-           id="tspan1653"><tspan
+           id="tspan45527"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start"
-             id="tspan1651">Roll of 3,4,5 =&gt; 1 success
-</tspan></tspan><tspan
-           x="108.68443"
-           y="83.074252"
-           id="tspan1657"><tspan
-             style="font-weight:normal;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start"
-             id="tspan1655">Roll of 6 =&gt; 2 successes</tspan></tspan></text>
-      <text
+             id="tspan45525">3,4,5 =&gt; 1 success.   6  =&gt;  2  successes</tspan></tspan></text><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="175.5163"
@@ -692,466 +494,193 @@
            id="tspan3015-9"
            style="font-size:4.93889px;stroke-width:0.264583"
            x="175.5163"
-           y="74.976387">'?' Means Roll dice</tspan></text>
-    </g>
-    <g
-       id="g3704">
-      <g
-         id="g2781"
-         transform="translate(93.064481,-48.861199)">
-        <polygon
-           points="10,53 15,56 15,60 10,63 5,60 5,56 "
-           fill="#00ffff"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           id="polygon2087"
-           transform="translate(55,8.5)" />
-        <text
-           font-family="Arial"
-           font-size="4px"
-           x="65"
-           y="65.5"
-           text-anchor="middle"
-           fill="#000000"
-           stroke="none"
-           stroke-width="0"
-           id="text2089">Rvr</text>
-      </g>
-      <g
-         id="g3355"
-         transform="translate(142.23168,-80.391337)">
-        <polygon
-           points="5,56 10,53 15,56 15,60 10,63 5,60 "
-           fill="#008000"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           id="polygon2197"
-           transform="translate(5.832797,51.197331)" />
-        <text
-           font-family="Arial"
-           font-size="4px"
-           x="15.832797"
-           y="108.19733"
-           text-anchor="middle"
-           fill="#000000"
-           stroke="none"
-           stroke-width="0"
-           id="text2199">Frt</text>
-      </g>
-      <g
-         id="g3711"
-         transform="translate(-39.935519,-185.52678)">
-        <polygon
-           points="38,5 43,2 48,5 48,9 43,12 38,9 "
-           fill="#90ee90"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           id="polygon2591"
-           transform="translate(155,218.5)" />
-        <text
-           font-family="Arial"
-           font-size="4px"
-           x="198"
-           y="224.5"
-           text-anchor="middle"
-           fill="#000000"
-           stroke="none"
-           stroke-width="0"
-           id="text2593">Pry</text>
-      </g>
-      <g
-         id="g3925"
-         transform="translate(72.064481,-173.19239)">
-        <polygon
-           points="31,22 26,19 26,15 31,12 36,15 36,19 "
-           fill="#ffff00"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           id="polygon2501"
-           transform="translate(55,218.5)" />
-        <text
-           font-family="Arial"
-           font-size="4px"
-           x="86"
-           y="234.5"
-           text-anchor="middle"
-           fill="#000000"
-           stroke="none"
-           stroke-width="0"
-           id="text2503">Vlg</text>
-      </g>
-      <g
-         id="g3865"
-         transform="translate(43.064481,-155.35958)">
-        <polygon
-           points="15,56 15,60 10,63 5,60 5,56 10,53 "
-           fill="#808080"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           id="polygon2377"
-           transform="translate(105,148.5)" />
-        <text
-           font-family="Arial"
-           font-size="4px"
-           x="115"
-           y="205.5"
-           text-anchor="middle"
-           fill="#000000"
-           stroke="none"
-           stroke-width="0"
-           id="text2379">Mtn</text>
-      </g>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="166.27579"
-         y="15.576985"
-         id="text4162"><tspan
-           sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-           x="166.27579"
-           y="15.576985"
-           id="tspan4168">In a tile</tspan><tspan
-           sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-           x="166.27579"
-           y="20.868649"
-           id="tspan4172">with a river</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="166.15302"
-         y="29.943663"
-         id="text4162-3"><tspan
-           sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-           x="166.15302"
-           y="29.943663"
-           id="tspan4208">In a forest</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="166.15302"
-         y="40.12846"
-         id="text4162-3-6"><tspan
-           sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-           x="166.15302"
-           y="40.12846"
-           id="tspan4208-6">In a prarie</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:23.5103;display:inline;stroke-width:0.264583"
-         x="21.573603"
-         y="152.67917"
-         id="text4162-3-1"
-         transform="translate(144.5788,-103.2455)"><tspan
-           x="21.573603"
-           y="152.67917"
-           id="tspan1661"><tspan
-   style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan1659">In a</tspan> </tspan><tspan
-           x="21.573603"
-           y="157.97082"
-           id="tspan1665"><tspan
-             style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan1663">mountain
-</tspan></tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="166.15302"
-         y="63.874409"
-         id="text4162-3-9"><tspan
-           sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-           x="166.15302"
-           y="63.874409"
-           id="tspan4208-2">In a village</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="170.23117"
-         y="8.7878265"
-         id="text3017-61"><tspan
-           sodipodi:role="line"
-           id="tspan3015-8"
-           style="font-size:4.93889px;stroke-width:0.264583"
-           x="170.23117"
-           y="8.7878265">Places</tspan></text>
-    </g>
-    <g
-       id="g3567"
-       transform="translate(34.89049,-140.71325)">
-      <rect
-         x="160"
-         y="189.5"
-         width="10"
-         height="10"
-         fill="#ffd700"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="rect2403" />
-      <text
-         font-family="Arial"
-         font-size="5px"
-         x="165"
-         y="194.5"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text2405">-1</text>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="165"
-         y="198.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text2407">Gld</text>
-    </g>
-    <g
-       id="g3567-3"
-       transform="translate(-7.9362432,-104.77024)" />
-    <g
-       id="g3974"
-       transform="translate(114.89049,-164.75092)">
-      <rect
-         x="80"
-         y="201.5"
-         width="10"
-         height="10"
-         fill="#a52a2a"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="rect2359" />
-      <text
-         font-family="Arial"
-         font-size="5px"
-         x="85"
-         y="206.5"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text2361">+3</text>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="85"
-         y="210.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text2363">Wd</text>
-    </g>
-    <g
-       id="g3974-3"
-       transform="translate(72.181361,-110.87532)">
-      <rect
-         x="80"
-         y="201.5"
-         width="10"
-         height="10"
-         fill="#a52a2a"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="rect2359-5" />
-      <text
-         font-family="Arial"
-         font-size="5px"
-         x="85"
-         y="206.5"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text2361-6">+3?</text>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="85"
-         y="210.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text2363-2">Wd</text>
-    </g>
-    <g
-       id="g2919"
-       transform="translate(84.89049,-48.826252)">
-      <rect
-         x="110"
-         y="61.5"
-         width="10"
-         height="10"
-         fill="#008000"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="rect2109" />
-      <text
-         font-family="Arial"
-         font-size="5px"
-         x="115"
-         y="66.5"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text2111">-1</text>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="115"
-         y="70.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text2113">Fd</text>
-    </g>
-    <g
-       id="g3609"
-       transform="translate(24.89049,-164.78858)">
-      <rect
-         x="170"
-         y="189.5"
-         width="10"
-         height="10"
-         fill="#808080"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="rect2409" />
-      <text
-         font-family="Arial"
-         font-size="5px"
-         x="175"
-         y="194.5"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text2411">-1</text>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="175"
-         y="198.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text2413">Ir</text>
-    </g>
-    <text
+           y="74.976387">⬢ Means Roll Dice</tspan></text></g><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
-       x="208.26251"
-       y="17.511217"
+       x="163.10083"
+       y="15.576985"
+       id="text4162"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="163.10083"
+         y="15.576985"
+         id="tspan4168">In a tile</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="163.10083"
+         y="20.868649"
+         id="tspan4172">with a river</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="162.97806"
+       y="27.826994"
+       id="text4162-3"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="162.97806"
+         y="27.826994"
+         id="tspan4208">In a forest</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="162.97806"
+       y="36.42429"
+       id="text4162-3-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="162.97806"
+         y="36.42429"
+         id="tspan4208-6">In a prarie</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:23.5103;display:inline;stroke-width:0.264583"
+       x="21.573603"
+       y="152.67917"
+       id="text4162-3-1"
+       transform="translate(141.40379,-109.59554)"><tspan
+         x="21.573603"
+         y="152.67917"
+         id="tspan45531"><tspan
+   style="font-weight:normal;-inkscape-font-specification:sans-serif"
+   id="tspan45529">In a</tspan> </tspan><tspan
+         x="21.573603"
+         y="157.97082"
+         id="tspan45535"><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif"
+           id="tspan45533">mountain
+</tspan></tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="162.97806"
+       y="56.466068"
+       id="text4162-3-9"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="162.97806"
+         y="56.466068"
+         id="tspan4208-2">In a village</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="162.97806"
+       y="66.389534"
+       id="text4162-3-9-3"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="162.97806"
+         y="66.389534"
+         id="tspan4208-2-6">In water</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="170.23117"
+       y="8.7878265"
+       id="text3017-61"><tspan
+         sodipodi:role="line"
+         id="tspan3015-8"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="170.23117"
+         y="8.7878265">Places</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="95.451111"
+       y="8.7659912"
+       id="text3017-61-9"><tspan
+         sodipodi:role="line"
+         id="tspan3015-8-2"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="95.451111"
+         y="8.7659912">Starting Resources</tspan></text><g
+       id="g3567-3"
+       transform="translate(-7.9362432,-104.77024)" /><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="200.1882"
+       y="17.240206"
        id="text4162-37"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="208.26251"
-         y="17.511217"
-         id="tspan4172-9">Pay 1 Food</tspan></text>
-    <text
+         x="200.1882"
+         y="17.240206"
+         id="tspan3558">Gold</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
-       x="208.26251"
-       y="29.075956"
+       x="200.0358"
+       y="29.040348"
        id="text4162-37-9"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="208.26251"
-         y="29.075956"
-         id="tspan4172-9-7">Pay 1 Iron</tspan></text>
-    <text
+         x="200.0358"
+         y="29.040348"
+         id="tspan4172-9-7">Food</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
-       x="208.41492"
-       y="41.030163"
+       x="200.44644"
+       y="37.851204"
+       id="text4162-37-9-3"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="200.44644"
+         y="37.851204"
+         id="tspan4172-9-7-56">Any Resource</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="200.44644"
+         y="43.142868"
+         id="tspan3616">(All the same)</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="223.52383"
+       y="28.942982"
+       id="text4162-37-9-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="223.52383"
+         y="28.942982"
+         id="tspan4172-9-7-5">Iron</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
+       x="223.64236"
+       y="17.240208"
        id="text4162-37-3"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="208.41492"
-         y="41.030163"
-         id="tspan4172-9-6">Gain 3 Wood</tspan></text>
-    <text
+         x="223.64236"
+         y="17.240208"
+         id="tspan4172-9-6">Wood</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
-       x="208.26251"
-       y="52.789635"
+       x="200.0358"
+       y="52.116959"
        id="text4162-37-1"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-         x="208.26251"
-         y="52.789635"
-         id="tspan4172-9-2">Pay 1 Gold</tspan></text>
-    <text
+         x="200.0358"
+         y="52.116959"
+         id="tspan4172-9-2">Pay 1 Food</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:34.6754;display:inline;stroke-width:0.264583"
        x="208.25641"
        y="64.570274"
        id="text4162-37-1-2"
-       transform="translate(0.201386)"><tspan
+       transform="translate(-8.0676646,-1.4333343)"><tspan
          x="208.25641"
          y="64.570274"
-         id="tspan1669"><tspan
+         id="tspan45539"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1667">Pay 2 of the </tspan></tspan><tspan
-         x="208.25641"
-         y="69.861934"
-         id="tspan1673"><tspan
-           style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1671">same any </tspan></tspan><tspan
-         x="208.25641"
-         y="75.153598"
-         id="tspan1677"><tspan
-           style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1675">resource</tspan></tspan></text>
-    <text
+           id="tspan45537">Gain 2 Iron</tspan></tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:48.6333;display:inline;stroke-width:0.264583"
        x="208.25641"
        y="64.570274"
        id="text4162-37-1-2-9"
-       transform="translate(-42.881098,29.094194)"><tspan
+       transform="translate(-41.194856,23.729737)"><tspan
          x="208.25641"
          y="64.570274"
-         id="tspan1681"><tspan
+         id="tspan45543"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1679">Roll 3 dice, gain 1 wood </tspan></tspan><tspan
+           id="tspan45541">Roll 3 dice, gain 1 wood </tspan></tspan><tspan
          x="208.25641"
          y="69.861934"
-         id="tspan1685"><tspan
+         id="tspan45547"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1683">per success.</tspan></tspan></text>
-    <text
+           id="tspan45545">per success.</tspan></tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="213.29373"
@@ -1161,39 +690,20 @@
          id="tspan3015-2"
          style="font-size:4.93889px;stroke-width:0.264583"
          x="213.29373"
-         y="8.9072599">Resources</tspan></text>
-    <g
-       id="g3478"
-       transform="translate(5.3758444,-1.498945)">
-      <g
-         id="g1188"
-         transform="translate(-2.3596617,-9.8572601)">
-        <rect
-           x="271.52469"
-           y="-3.183444"
-           width="6"
-           height="10"
-           fill="#ffff00"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           rx="1"
-           ry="1"
-           transform="rotate(30)"
-           id="rect2196" />
-        <polygon
-           points="20,51 18.5,50 17,51 17.75,49 16,47.5 18,47.5 18.5,46 19,47.5 21,47.5 19.25,49 "
-           fill="#ffff00"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           id="polygon2198"
-           transform="translate(216.83709,92.835536)" />
-      </g>
-      <g
+         y="8.9072599">Resources</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="262.50757"
+       y="68.786728"
+       id="text3017-3"><tspan
+         sodipodi:role="line"
+         id="tspan3015-6"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="262.50757"
+         y="68.786728">Card Types</tspan></text><g
+       id="g42388"><g
          id="g3420"
-         transform="translate(-6.2468373,6.0755389)">
-        <rect
+         transform="translate(-0.8709929,4.5765939)"><rect
            x="241.00887"
            y="-63.812752"
            width="6"
@@ -1205,35 +715,30 @@
            rx="1"
            ry="1"
            transform="rotate(30)"
-           id="rect2623-8" />
-        <text
+           id="rect2623-8" /><text
            font-family="Arial"
            font-size="5px"
-           x="243.81172"
-           y="71.071091"
+           x="244.87004"
+           y="68.954422"
            fill="#ff0000"
            stroke="#ffffff"
            stroke-width="0.5"
            style="paint-order:stroke"
            font-weight="bold"
            text-anchor="middle"
-           id="text2625-7">!</text>
-      </g>
-      <text
+           id="text2625-7">!</text></g><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="250.14557"
-         y="78.197319"
+         x="255.52141"
+         y="76.698372"
          id="text4162-37-36-2"><tspan
            sodipodi:role="line"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-           x="250.14557"
-           y="78.197319"
-           id="tspan2344-7">This card</tspan></text>
-      <g
+           x="255.52141"
+           y="76.698372"
+           id="tspan2344-7">This card</tspan></text><g
          id="g2978"
-         transform="translate(-1.864324,2.2289858)">
-        <rect
+         transform="translate(3.5115204,0.7300408)"><rect
            x="252.47064"
            y="-36.063587"
            width="6"
@@ -1245,8 +750,7 @@
            rx="1"
            ry="1"
            transform="rotate(30)"
-           id="rect1732" />
-        <text
+           id="rect1732" /><text
            font-family="Arial"
            font-size="6px"
            x="232.77586"
@@ -1257,78 +761,49 @@
            style="paint-order:stroke"
            font-weight="bold"
            text-anchor="middle"
-           id="text1734">E</text>
-      </g>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="257.13171"
-         y="70.285675"
-         id="text3017-3"><tspan
-           sodipodi:role="line"
-           id="tspan3015-6"
-           style="font-size:4.93889px;stroke-width:0.264583"
-           x="257.13171"
-           y="70.285675">Card Types</tspan></text>
-      <text
+           id="text1734">E</text></g><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="259.44391"
-         y="103.89964"
+         x="264.81976"
+         y="102.4007"
          id="text4162-37-36-2-3"><tspan
            sodipodi:role="line"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-           x="259.44391"
-           y="103.89964"
-           id="tspan2344-7-6">An 'E' Danger card</tspan></text>
-      <text
+           x="264.81976"
+           y="102.4007"
+           id="tspan2344-7-6">An 'E' Danger card</tspan></text><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="262.17862"
-         y="90.805061"
+         x="267.55447"
+         y="89.306114"
          id="text4162-37-36-2-3-1"><tspan
            sodipodi:role="line"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-           x="262.17862"
-           y="90.805061"
-           id="tspan2344-7-6-27">Any non-danger card</tspan></text>
-      <text
+           x="267.55447"
+           y="89.306114"
+           id="tspan2344-7-6-27">Any non-danger card</tspan></text><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="254.86559"
-         y="130.57564"
-         id="text4162-37-36-2-3-1-0"><tspan
-           sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-           x="254.86559"
-           y="130.57564"
-           id="tspan2344-7-6-27-9">A Starter card</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="261.48434"
-         y="143.6808"
+         x="266.8602"
+         y="128.95287"
          id="text4162-37-36-2-3-1-0-6"><tspan
            sodipodi:role="line"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-           x="261.48434"
-           y="143.6808"
-           id="tspan2344-7-6-27-9-0">A card of that colour</tspan></text>
-      <text
+           x="266.8602"
+           y="128.95287"
+           id="tspan2344-7-6-27-9-0">A card of that colour</tspan></text><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="257.84369"
-         y="116.99422"
+         x="263.21954"
+         y="115.49527"
          id="text4162-37-36-2-3-6"><tspan
            sodipodi:role="line"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-           x="257.84369"
-           y="116.99422"
-           id="tspan2344-7-6-2">Any Danger card</tspan></text>
-      <g
+           x="263.21954"
+           y="115.49527"
+           id="tspan2344-7-6-2">Any Danger card</tspan></text><g
          id="g2341"
-         transform="translate(-1.0887291,-22.728412)">
-        <rect
+         transform="translate(4.2871153,-24.227357)"><rect
            x="270.56189"
            y="-2.7277491"
            width="6"
@@ -1340,11 +815,9 @@
            rx="1"
            ry="1"
            transform="rotate(30)"
-           id="rect1714-5" />
-      </g>
-      <rect
-         x="245.11568"
-         y="-44.205887"
+           id="rect1714-5" /></g><rect
+         x="249.02182"
+         y="-48.191933"
          width="6"
          height="10"
          fill="#ffffff"
@@ -1354,10 +827,9 @@
          rx="1"
          ry="1"
          transform="rotate(30)"
-         id="rect2329-9" />
-      <rect
-         x="271.03149"
-         y="0.68162227"
+         id="rect2329-9" /><rect
+         x="268.32297"
+         y="-14.761223"
          width="6"
          height="10"
          fill="#ffffff"
@@ -1367,242 +839,201 @@
          rx="1"
          ry="1"
          transform="rotate(30)"
-         id="rect2329-9-3" />
-    </g>
-    <g
-       id="g16019"
-       transform="translate(-1.1316334,-9.5548564)">
-      <g
-         id="g7065"
-         transform="translate(93.290656,20.247821)">
-        <rect
-           x="115.54165"
-           y="70.32016"
-           width="6"
-           height="10"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           rx="1"
-           ry="1"
-           transform="rotate(30)"
-           id="rect6196" />
-        <text
-           font-family="Arial"
-           font-size="5px"
-           x="66.5"
-           y="124.5"
-           fill="#ffa500"
-           stroke="#ffffff"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           font-weight="bold"
-           text-anchor="middle"
-           id="text6198">-x</text>
-        <rect
-           x="124.2019"
-           y="65.32016"
-           width="6"
-           height="10"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           rx="1"
-           ry="1"
-           transform="rotate(30)"
-           id="rect6200" />
-        <text
-           font-family="Arial"
-           font-size="5px"
-           x="76.5"
-           y="124.5"
-           fill="#008000"
-           stroke="#ffffff"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           font-weight="bold"
-           text-anchor="middle"
-           id="text6202">+x</text>
-      </g>
-      <g
-         id="g3473"
-         transform="translate(34.02597,3.793553)">
-        <rect
-           x="120"
-           y="119.5"
-           width="10"
-           height="10"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           id="rect2257" />
-        <text
-           font-family="Arial"
-           font-size="5px"
-           x="125"
-           y="124.5"
-           fill="#ff0000"
-           stroke="#ffffff"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           font-weight="bold"
-           text-anchor="middle"
-           id="text2259">-2x</text>
-        <text
-           font-family="Arial"
-           font-size="4px"
-           x="125"
-           y="128.5"
-           text-anchor="middle"
-           fill="#000000"
-           stroke="none"
-           stroke-width="0"
-           id="text2261">Any</text>
-        <rect
-           x="130"
-           y="119.5"
-           width="10"
-           height="10"
-           fill="#ffd700"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           id="rect2263" />
-        <text
-           font-family="Arial"
-           font-size="5px"
-           x="135"
-           y="124.5"
-           fill="#008000"
-           stroke="#ffffff"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           font-weight="bold"
-           text-anchor="middle"
-           id="text2265">+x</text>
-        <text
-           font-family="Arial"
-           font-size="4px"
-           x="135"
-           y="128.5"
-           text-anchor="middle"
-           fill="#000000"
-           stroke="none"
-           stroke-width="0"
-           id="text2267">Gld</text>
-      </g>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:40.3044;display:inline;stroke-width:0.264583"
-         x="92.368088"
+         id="rect2329-9-3" /></g><g
+       id="g7065"
+       transform="translate(92.159023,1.6971308)"><rect
+         x="115.54165"
+         y="70.32016"
+         width="6"
+         height="10"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         rx="1"
+         ry="1"
+         transform="rotate(30)"
+         id="rect6196" /><text
+         font-family="Arial"
+         font-size="5px"
+         x="68.087502"
+         y="121.85418"
+         fill="#ffa500"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text6198">-x</text><rect
+         x="124.2019"
+         y="65.32016"
+         width="6"
+         height="10"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         rx="1"
+         ry="1"
+         transform="rotate(30)"
+         id="rect6200" /><text
+         font-family="Arial"
+         font-size="5px"
+         x="78.087502"
+         y="121.85418"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text6202">+x</text></g><g
+       id="g40210"
+       transform="translate(0.79198927,-7.5681869)"><image
+         preserveAspectRatio="none"
+         inkscape:svg-dpi="96"
+         width="10"
+         height="10"
+         xlink:href="../pics/jobs/any.svg"
+         id="image2724-9"
+         x="152.36923"
+         y="114.45145"
+         style="stroke-width:2" /><text
+         font-family="Arial"
+         font-size="5px"
+         x="158.7063"
+         y="118.21732"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text2259">-2x</text></g><g
+       id="g40219"
+       transform="translate(0.53171255,-7.6820251)"><image
+         preserveAspectRatio="none"
+         inkscape:svg-dpi="96"
+         width="10"
+         height="10"
+         xlink:href="../pics/jobs/gold.svg"
+         id="image2867-3"
+         x="162.46501"
+         y="114.61685"
+         style="stroke-width:2" /><text
+         font-family="Arial"
+         font-size="5px"
+         x="169.29211"
+         y="117.74741"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text2265">+x</text></g><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:61.8967;display:inline;stroke-width:0.264583"
+       x="66.904617"
+       y="136.69841"
+       id="text4162-37-93"
+       transform="translate(138.88334,-26.59426)"><tspan
+         x="66.904617"
          y="136.69841"
-         id="text4162-37-93"
-         transform="translate(102.47079,-12.414772)"><tspan
-           x="92.368088"
+         id="tspan45551"><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start"
+           id="tspan45549">For every 2 of any resource</tspan><tspan
            y="136.69841"
-           id="tspan1689"><tspan
-   style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan1687">For every 2 of the</tspan><tspan
-   y="136.69841"
-   id="tspan1691"> </tspan></tspan><tspan
-           x="92.368088"
-           y="141.99006"
-           id="tspan1697"><tspan
-   style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan1693">product you</tspan> <tspan
-   style="font-weight:normal;-inkscape-font-specification:sans-serif"
-   id="tspan1695">pay,</tspan><tspan
-   y="141.99006"
-   id="tspan1699"> </tspan></tspan><tspan
-           x="92.368088"
-           y="147.28172"
-           id="tspan1703"><tspan
-             style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan1701">gain one gold</tspan></tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:40.3044;display:inline;stroke-width:0.264583"
-         x="92.368088"
+           id="tspan45553"> </tspan></tspan><tspan
+         x="66.904617"
+         y="141.99006"
+         id="tspan45565"><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start"
+           id="tspan45555">you</tspan><tspan
+           style="text-align:start;text-anchor:start"
+           id="tspan45557"> </tspan><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start"
+           id="tspan45559">pay,</tspan><tspan
+           style="text-align:start;text-anchor:start"
+           id="tspan45561"> </tspan><tspan
+           style="font-weight:normal;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start"
+           id="tspan45563">gain one gold</tspan></tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:60.8842;display:inline;stroke-width:0.264583"
+       x="74.289658"
+       y="136.69841"
+       id="text4162-37-93-9"
+       transform="translate(101.19304,-12.41404)"><tspan
+         x="74.289658"
          y="136.69841"
-         id="text4162-37-93-9"
-         transform="translate(104.58699,5.4852535)"><tspan
-           x="92.368088"
-           y="136.69841"
-           id="tspan1707"><tspan
+         id="tspan45571"><tspan
    style="font-weight:normal"
-   id="tspan1705">For every card you</tspan><tspan
-   y="136.69841"
-   id="tspan1709"> </tspan></tspan><tspan
-           x="92.368088"
-           y="141.99006"
-           id="tspan1713"><tspan
+   id="tspan45567">For every card you</tspan> <tspan
    style="font-weight:normal"
-   id="tspan1711">discard, draw one</tspan><tspan
-   y="141.99006"
-   id="tspan1715"> </tspan></tspan><tspan
-           x="92.368088"
-           y="147.28172"
-           id="tspan1719"><tspan
-             style="font-weight:normal"
-             id="tspan1717">card</tspan></tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="181.25089"
-         y="118.49313"
-         id="text3017-2"><tspan
-           sodipodi:role="line"
-           id="tspan3015-3"
-           style="font-size:4.93889px;stroke-width:0.264583"
-           x="181.25089"
-           y="118.49313">'X' can be any number</tspan></text>
-    </g>
-    <text
+   id="tspan45569">discard, </tspan></tspan><tspan
+         x="74.289658"
+         y="141.99006"
+         id="tspan45577"><tspan
+   style="font-weight:normal"
+   id="tspan45573">draw one</tspan> <tspan
+   style="font-weight:normal"
+   id="tspan45575">card</tspan></tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="180.11925"
+       y="103.11744"
+       id="text3017-2"><tspan
+         sodipodi:role="line"
+         id="tspan3015-3"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="180.11925"
+         y="103.11744">'X' can be any number</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="171.07861"
+       y="139.7966"
+       id="text3017-2-6"><tspan
+         sodipodi:role="line"
+         id="tspan3015-3-0"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="171.07861"
+         y="139.7966">Simple Actions</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:125.51;display:inline;stroke-width:0.264583"
        x="205.05368"
        y="166.27745"
        id="text1126"
-       transform="translate(-36.69075,0.57177797)"><tspan
+       transform="translate(-38.308772,-3.4241514)"><tspan
          x="205.05368"
          y="166.27745"
-         id="tspan1723"><tspan
+         id="tspan45581"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1721">Move 1 space.  Most tiles cost One Movement to step onto. </tspan></tspan><tspan
+           id="tspan45579">Move up to n spaces. You may activate multiple movement </tspan></tspan><tspan
          x="205.05368"
          y="171.5691"
-         id="tspan1727"><tspan
+         id="tspan45585"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1725">Mountains cost 2, and Water Cannot be stepped on. 
+           id="tspan45583">jobs in a single turn 
 </tspan></tspan><tspan
          x="205.05368"
          y="176.86076"
-         id="tspan1731"><tspan
+         id="tspan45589"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1729"> - You can play multiple movement jobs together to achieve a </tspan></tspan><tspan
+           id="tspan45587">- Most tiles tiles cost 1 to step onto.
+</tspan></tspan><tspan
          x="205.05368"
          y="182.15242"
-         id="tspan1735"><tspan
+         id="tspan45593"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1733">certain level of movement.
+           id="tspan45591">- Mountains cost 2, water cannot be stepped on
 </tspan></tspan><tspan
          x="205.05368"
          y="187.44407"
-         id="tspan1739"><tspan
+         id="tspan45597"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1737"> - Land with a Railway on does not cost a Movement point, but </tspan></tspan><tspan
-         x="205.05368"
-         y="192.73573"
-         id="tspan1743"><tspan
-           style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan1741">you must activate a movement to use it. </tspan></tspan></text>
-    <g
+           id="tspan45595">- Tiles with Railway cost 0 </tspan></tspan></text><g
        id="g13570"
-       transform="translate(0,-9.5250005)">
-      <text
+       transform="translate(0,-9.5250005)"><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="20.40214"
@@ -1612,8 +1043,7 @@
            id="tspan3015-62-2"
            style="font-size:4.93889px;stroke-width:0.264583"
            x="20.40214"
-           y="110.62529">Bandits Move</tspan></text>
-      <text
+           y="110.62529">Bandits Move</tspan></text><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:141.044;display:inline;stroke-width:0.264583"
          x="205.05368"
@@ -1622,120 +1052,37 @@
          transform="translate(-197.59283,-49.008761)"><tspan
            x="205.05368"
            y="166.27745"
-           id="tspan1747"><tspan
+           id="tspan45601"><tspan
              style="font-weight:normal"
-             id="tspan1745">For each group of bandits on the board Roll 1 d6.
+             id="tspan45599">For each group of bandits on the board Roll 1 d6.
 </tspan></tspan><tspan
            x="205.05368"
            y="171.5691"
-           id="tspan1751">On:<tspan
+           id="tspan45605">On:<tspan
    style="font-weight:normal"
-   id="tspan1749"> 1 - Move north , 2 - Move East, 3 - Move south, 4 or 5 - Move West. </tspan></tspan><tspan
+   id="tspan45603"> 1 - Move north , 2 - Move East, 3 - Move south, 4 or 5 - Move West. </tspan></tspan><tspan
            x="205.05368"
            y="176.86076"
-           id="tspan1755"><tspan
+           id="tspan45609"><tspan
              style="font-weight:normal"
-             id="tspan1753">6 - Add a bandit to the group
+             id="tspan45607">6 - Add a bandit to the group
 </tspan></tspan><tspan
            x="205.05368"
            y="182.15242"
-           id="tspan1759"><tspan
+           id="tspan45613"><tspan
              style="font-weight:normal"
-             id="tspan1757">Bandits can move on any type of land (even unrevealed), but if they </tspan></tspan><tspan
+             id="tspan45611">Bandits can move on any type of land (even unrevealed), but if they </tspan></tspan><tspan
            x="205.05368"
            y="187.44407"
-           id="tspan1763"><tspan
+           id="tspan45617"><tspan
              style="font-weight:normal"
-             id="tspan1761">would move off the map, add a bandit instead. </tspan></tspan></text>
-    </g>
-    <g
-       id="g3151"
-       transform="translate(49.942941,75.656368)">
-      <circle
-         cx="165"
-         cy="124.5"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="ellipse2779"
-         r="5" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="165"
-         y="123.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text2781">Clim</text>
-    </g>
-    <g
-       id="g3151-3"
-       transform="translate(68.556052,30.325959)">
-      <circle
-         cx="165"
-         cy="124.5"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="ellipse2779-6"
-         r="5" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="165.08626"
-         y="128.87173"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text2119-5">n</text>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="165"
-         y="123.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text2781-7">see</text>
-    </g>
-    <g
-       id="g5120"
-       transform="translate(93.842379,-77.544372)">
-      <circle
-         cx="65"
-         cy="276.5"
-         fill="#0000ff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="ellipse4874"
-         r="5" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="65"
-         y="275.5"
-         text-anchor="middle"
-         fill="#000000"
-         stroke="none"
-         stroke-width="0"
-         id="text4876">sail</text>
-    </g>
-    <text
+             id="tspan45615">would move off the map, add a bandit instead. </tspan></tspan></text></g><text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text6280"
-       style="font-weight:bold;font-size:26.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;white-space:pre;shape-inside:url(#rect6282);display:inline" />
-    <g
+       style="font-weight:bold;font-size:26.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;white-space:pre;shape-inside:url(#rect6282);display:inline" /><g
        id="g13563"
-       transform="translate(0,-8.7427834)">
-      <text
+       transform="translate(0,-8.7427834)"><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="22.3067"
@@ -1745,8 +1092,7 @@
            id="tspan3015-62"
            style="font-size:4.93889px;stroke-width:0.264583"
            x="22.306698"
-           y="85.980629">Bandits Appear</tspan></text>
-      <text
+           y="85.980629">Bandits Appear</tspan></text><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:116.851;display:inline;stroke-width:0.264583"
          x="205.05368"
@@ -1755,31 +1101,28 @@
          transform="translate(-198.80993,-73.564969)"><tspan
            x="205.05368"
            y="166.27745"
-           id="tspan1767"><tspan
+           id="tspan45621"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan1765">Roll as many d12 as indicated by the  furthest along </tspan></tspan><tspan
+             id="tspan45619">Roll as many d12 as indicated by the  furthest along </tspan></tspan><tspan
            x="205.05368"
            y="171.5691"
-           id="tspan1771"><tspan
+           id="tspan45625"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan1769">tracker on the board. Then place a bandit counter in each </tspan></tspan><tspan
+             id="tspan45623">tracker on the board. Then place a bandit counter in each </tspan></tspan><tspan
            x="205.05368"
            y="176.86076"
-           id="tspan1775"><tspan
+           id="tspan45629"><tspan
              style="font-weight:normal;-inkscape-font-specification:sans-serif"
-             id="tspan1773">tile matching that number. </tspan></tspan></text>
-      <g
+             id="tspan45627">tile matching that number. </tspan></tspan></text><g
          id="g8067-6"
-         transform="matrix(0.59814781,0,0,0.59814781,95.326145,48.711386)">
-        <polygon
+         transform="matrix(0.59814781,0,0,0.59814781,95.326145,48.711386)"><polygon
            points="36,8 40,8 36.5,11 38,15 35,13 32,15 33.5,11 30,8 34,8 35,5 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
            style="paint-order:stroke"
            id="polygon7428-2"
-           transform="matrix(1.4727645,0,0,1.4115406,4.3841652,60.784887)" />
-        <text
+           transform="matrix(1.4727645,0,0,1.4115406,4.3841652,60.784887)" /><text
            font-family="Arial"
            font-size="5.76731px"
            x="54.756035"
@@ -1792,10 +1135,7 @@
            transform="scale(1.0214567,0.97899401)"
            style="font-size:7.05556px"><tspan
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
-             id="tspan9464">2</tspan></text>
-      </g>
-    </g>
-    <text
+             id="tspan9464">2</tspan></text></g></g><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="21.038477"
@@ -1805,8 +1145,7 @@
          id="tspan3015-62-2-9"
          style="font-size:4.93889px;stroke-width:0.264583"
          x="21.038477"
-         y="135.52605">Bandits Attack</tspan></text>
-    <text
+         y="135.52605">Bandits Attack</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:140.891;display:inline;stroke-width:0.264583"
        x="205.05368"
@@ -1815,63 +1154,60 @@
        transform="translate(-200.714,-20.257171)"><tspan
          x="205.05368"
          y="166.27745"
-         id="tspan1779"><tspan
+         id="tspan45633"><tspan
    style="font-style:italic"
-   id="tspan1777">Bandits roll dice like players. 3,4,5 =&gt; 1 success.  6 =&gt; 2 successes. </tspan>
+   id="tspan45631">Bandits roll dice like players. 3,4,5 =&gt; 1 success.  6 =&gt; 2 successes. </tspan>
 </tspan><tspan
          x="205.05368"
          y="171.5691"
-         id="tspan1783"><tspan
+         id="tspan45637"><tspan
            style="font-weight:normal"
-           id="tspan1781">For each group of bandits on the same tile as any players:
+           id="tspan45635">For each group of bandits on the same tile as any players:
 </tspan></tspan><tspan
          x="205.05368"
          y="176.86076"
-         id="tspan1787"><tspan
+         id="tspan45641"><tspan
            style="font-weight:normal"
-           id="tspan1785">1) Players may activate as many defence or attack jobs as they like. 
+           id="tspan45639">1) Players may activate as many defence or attack jobs as they like. 
 </tspan></tspan><tspan
          x="205.05368"
          y="182.15242"
-         id="tspan1791"><tspan
+         id="tspan45645"><tspan
            style="font-weight:normal"
-           id="tspan1789">2) Bandits roll 1 dice per bandit to hit. Players roll their defence.
+           id="tspan45643">2) Bandits roll 1 dice per bandit to hit. Players roll their defence.
 </tspan></tspan><tspan
          x="205.05368"
          y="187.44407"
-         id="tspan1795"><tspan
+         id="tspan45649"><tspan
            style="font-weight:normal"
-           id="tspan1793">3) For every Hit above the players combined defences, all players on </tspan></tspan><tspan
+           id="tspan45647">3) For every Hit above the players combined defences, all players on </tspan></tspan><tspan
          x="205.05368"
          y="192.73573"
-         id="tspan1799"><tspan
+         id="tspan45653"><tspan
            style="font-weight:normal"
-           id="tspan1797">that tile take 1 Pain (P) Card
+           id="tspan45651">that tile take 1 Pain (P) Card
 </tspan></tspan><tspan
          x="205.05368"
          y="198.02738"
-         id="tspan1803"><tspan
+         id="tspan45657"><tspan
            style="font-weight:normal"
-           id="tspan1801">4) Players roll their Attack, and Bandits roll 1 dice per bandit to save.
+           id="tspan45655">4) Players roll their Attack, and Bandits roll 1 dice per bandit to save.
 </tspan></tspan><tspan
          x="205.05368"
          y="203.31904"
-         id="tspan1807"><tspan
+         id="tspan45661"><tspan
            style="font-weight:normal"
-           id="tspan1805">5) For every Attack point above5 bandit saves remove 1 bandit.
+           id="tspan45659">5) For every Attack point above5 bandit saves remove 1 bandit.
 </tspan></tspan><tspan
          x="205.05368"
          y="208.6107"
-         id="tspan1811"><tspan
+         id="tspan45665"><tspan
            style="font-weight:normal"
-           id="tspan1809"> </tspan></tspan></text>
-    <g
+           id="tspan45663"> </tspan></tspan></text><g
        id="g2932"
-       transform="translate(42.406565,-5.5227795)">
-      <g
+       transform="translate(42.406565,-5.5227795)"><g
          id="g4115"
-         transform="translate(-64.872553,17.495914)">
-        <circle
+         transform="translate(-64.872553,17.495914)"><circle
            cx="75"
            cy="124.5"
            fill="#ff0000"
@@ -1879,8 +1215,7 @@
            stroke-width="0.5"
            style="paint-order:stroke"
            id="ellipse2219"
-           r="5" />
-        <text
+           r="5" /><text
            font-family="Arial"
            font-size="4px"
            x="75"
@@ -1889,8 +1224,7 @@
            fill="#000000"
            stroke="none"
            stroke-width="0"
-           id="text2221">Atk</text>
-        <text
+           id="text2221">Atk</text><text
            font-family="Arial"
            font-size="4px"
            x="75"
@@ -1899,9 +1233,7 @@
            fill="#000000"
            stroke="none"
            stroke-width="0"
-           id="text2223">3</text>
-      </g>
-      <text
+           id="text2223">3</text></g><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="25.574816"
@@ -1911,8 +1243,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
            x="25.574816"
            y="143.2541"
-           id="tspan2344-7-0">Attack</tspan></text>
-      <text
+           id="tspan2344-7-0">Attack</tspan></text><text
          xml:space="preserve"
          style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="61.754341"
@@ -1922,11 +1253,9 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
            x="61.754341"
            y="143.40147"
-           id="tspan2344-7-0-2">Defend</tspan></text>
-      <g
+           id="tspan2344-7-0-2">Defend</tspan></text><g
          id="g12569"
-         transform="translate(-119.69899,-52.121102)">
-        <circle
+         transform="translate(-119.69899,-52.121102)"><circle
            cx="165"
            cy="194.5"
            fill="#808080"
@@ -1934,8 +1263,7 @@
            stroke-width="0.5"
            style="paint-order:stroke"
            id="ellipse12304"
-           r="5" />
-        <text
+           r="5" /><text
            font-family="Arial"
            font-size="4px"
            x="165"
@@ -1944,8 +1272,7 @@
            fill="#000000"
            stroke="none"
            stroke-width="0"
-           id="text12306">Dfd</text>
-        <text
+           id="text12306">Dfd</text><text
            font-family="Arial"
            font-size="4px"
            x="165"
@@ -1954,10 +1281,7 @@
            fill="#000000"
            stroke="none"
            stroke-width="0"
-           id="text12308">2</text>
-      </g>
-    </g>
-    <text
+           id="text12308">2</text></g></g><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="21.185589"
@@ -1967,6 +1291,329 @@
          id="tspan3015-62-2-9-1"
          style="font-size:4.93889px;stroke-width:0.264583"
          x="21.185589"
-         y="189.92096">Players Attack</tspan></text>
-  </g>
-</svg>
+         y="189.92096">Players Attack</tspan></text><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/forest.svg"
+       id="image1600"
+       x="151.63062"
+       y="20.131411"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/mountain.svg"
+       id="image1652"
+       x="151.63062"
+       y="40.044941"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/prairie.svg"
+       id="image1707"
+       x="151.63062"
+       y="30.088175"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/river.svg"
+       id="image1769"
+       x="151.63062"
+       y="10.174646"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/village.svg"
+       id="image1814"
+       x="151.63062"
+       y="50.001705"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/water.svg"
+       id="image1872"
+       x="151.63062"
+       y="59.958469"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/any.svg"
+       id="image2724"
+       x="189.00006"
+       y="34.510971"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/food.svg"
+       id="image2824"
+       x="188.68715"
+       y="22.45285"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/gold.svg"
+       id="image2867"
+       x="188.68715"
+       y="10.652708"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/wood.svg"
+       id="image2914"
+       x="211.98468"
+       y="10.652708"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/iron.svg"
+       id="image3021"
+       x="211.98468"
+       y="22.45285"
+       style="stroke-width:2" /><g
+       id="g4247"
+       transform="translate(-0.19193161,-3.5950593)"><image
+         preserveAspectRatio="none"
+         inkscape:svg-dpi="96"
+         width="10"
+         height="10"
+         xlink:href="../pics/jobs/food.svg"
+         id="image2824-2"
+         x="188.8176"
+         y="49.77298"
+         style="stroke-width:2" /><text
+         font-family="Arial"
+         font-size="5px"
+         x="196.8562"
+         y="53.22625"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text2625-9">-1</text></g><g
+       id="g4247-2"
+       transform="translate(-35.633852,35.387187)"><image
+         preserveAspectRatio="none"
+         inkscape:svg-dpi="96"
+         width="10"
+         height="10"
+         xlink:href="../pics/jobs/food.svg"
+         id="image2824-2-7"
+         x="188.8176"
+         y="49.77298"
+         style="stroke-width:2" /></g><g
+       id="g34577"
+       transform="translate(-1.1855049,-1.8149744)"><image
+         preserveAspectRatio="none"
+         inkscape:svg-dpi="96"
+         width="10"
+         height="10"
+         xlink:href="../pics/jobs/iron.svg"
+         id="image3021-1"
+         x="189.59651"
+         y="59.926727"
+         style="stroke-width:2" /><text
+         font-family="Arial"
+         font-size="4.5px"
+         x="199.85478"
+         y="62.881638"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text5907">+2</text></g><text
+       font-family="Arial"
+       font-size="4.5px"
+       x="165.35513"
+       y="88.747978"
+       fill="#008000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text32466">+3⬢</text><g
+       id="g44669"
+       transform="translate(-7.891837,-1.1839181)"><g
+         id="g44053"
+         transform="translate(1.5875,-1.5875)"><image
+           preserveAspectRatio="none"
+           inkscape:svg-dpi="96"
+           width="10"
+           height="10"
+           xlink:href="../pics/jobs/gold.svg"
+           id="image2867-2"
+           x="79.339424"
+           y="13.942272"
+           style="stroke-width:2" /><text
+           font-family="Arial"
+           font-size="4.5px"
+           x="89.164665"
+           y="17.338219"
+           fill="#008000"
+           stroke="#ffffff"
+           stroke-width="0.6"
+           style="paint-order:stroke"
+           font-weight="bold"
+           text-anchor="end"
+           id="text32466-5">+1</text></g><g
+         id="g44064"
+         transform="translate(1.5875,-1.5875)"><image
+           preserveAspectRatio="none"
+           inkscape:svg-dpi="96"
+           width="10"
+           height="10"
+           xlink:href="../pics/jobs/wood.svg"
+           id="image2914-3"
+           x="91.012177"
+           y="13.942272"
+           style="stroke-width:2" /><text
+           font-family="Arial"
+           font-size="4.5px"
+           x="100.83742"
+           y="17.338219"
+           fill="#008000"
+           stroke="#ffffff"
+           stroke-width="0.6"
+           style="paint-order:stroke"
+           font-weight="bold"
+           text-anchor="end"
+           id="text32466-9">+1</text></g><g
+         id="g44075"
+         transform="translate(1.5875,-1.5875)"><image
+           preserveAspectRatio="none"
+           inkscape:svg-dpi="96"
+           width="10"
+           height="10"
+           xlink:href="../pics/jobs/iron.svg"
+           id="image3021-7"
+           x="102.68492"
+           y="13.942272"
+           style="stroke-width:2" /><text
+           font-family="Arial"
+           font-size="4.5px"
+           x="112.51016"
+           y="17.338219"
+           fill="#008000"
+           stroke="#ffffff"
+           stroke-width="0.6"
+           style="paint-order:stroke"
+           font-weight="bold"
+           text-anchor="end"
+           id="text32466-2">+1</text></g><g
+         id="g44087"
+         transform="translate(1.5875,-1.5875)"><image
+           preserveAspectRatio="none"
+           inkscape:svg-dpi="96"
+           width="10"
+           height="10"
+           xlink:href="../pics/jobs/food.svg"
+           id="image2824-0"
+           x="114.35767"
+           y="13.942272"
+           style="stroke-width:2" /><text
+           font-family="Arial"
+           font-size="4.5px"
+           x="124.22027"
+           y="17.384361"
+           fill="#008000"
+           stroke="#ffffff"
+           stroke-width="0.6"
+           style="paint-order:stroke"
+           font-weight="bold"
+           text-anchor="end"
+           id="text32466-28">+3</text></g></g><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/build_rail.svg"
+       id="image41289"
+       x="154.037"
+       y="142.00343"
+       style="stroke-width:2" /><g
+       id="g43802"><image
+         preserveAspectRatio="none"
+         inkscape:svg-dpi="96"
+         width="10"
+         height="10"
+         xlink:href="../pics/jobs/reveal.svg"
+         id="image42455"
+         x="231.56467"
+         y="142.00343"
+         style="stroke-width:2" /></g><text
+       font-family="Arial"
+       font-size="5px"
+       x="240.47308"
+       y="145.16835"
+       fill="#0000ff"
+       stroke="#ffffff"
+       stroke-width="0.5"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="middle"
+       id="text1556-6-7">n</text><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/climb.svg"
+       id="image43063"
+       x="152.16403"
+       y="187.95282"
+       style="stroke-width:2" /><image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="10"
+       height="10"
+       xlink:href="../pics/jobs/sail.svg"
+       id="image43173"
+       x="222.51799"
+       y="187.95282"
+       style="stroke-width:2" /><g
+       id="g43234"
+       transform="translate(-2.2092312,-2.8737531)"><image
+         preserveAspectRatio="none"
+         inkscape:svg-dpi="96"
+         width="10"
+         height="10"
+         xlink:href="../pics/jobs/move.svg"
+         id="image43110"
+         x="155.5033"
+         y="162.09312"
+         style="stroke-width:2" /><text
+         font-family="Arial"
+         font-size="5px"
+         x="163.23784"
+         y="165.7196"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text1556-6">n</text></g></g></svg>
