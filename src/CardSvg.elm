@@ -14,6 +14,15 @@ front card =
     , jobs 65 card.jobs
     ]
 
+back : String
+back  = 
+    String.join "\n" 
+    [ rect 0 0 50 70 [flNoStk "#f3c3a4",fprop "opacity" 0.5]
+    , rect 5 5 40 60 [flStk "none" "black" 1]
+    , img 5 15 40 40 "../pics/back_logo.svg" []
+
+    ]
+
 jobs : Float -> List Job -> String
 jobs y l =
     case l of 

@@ -30,6 +30,11 @@ starterList : List Card
 starterList = (allCards 4)
     |> spreadL 
 
+populate: c -> Int -> List c
+populate c n=
+    case n of 
+        0 -> []
+        v -> c::(populate c (v - 1))
 listPage :(c -> String)-> Placer ->List c -> String 
 listPage fnt placer l =
     l |> List.map fnt 
@@ -37,10 +42,17 @@ listPage fnt placer l =
     |> String.join "\n"
     |> a4Page
 
+backList : Placer -> Int -> String
+backList placer n = 
+    populate CardSvg.back n
+    |> List.indexedMap placer
+    |> String.join "\n"
+    |> a4Page
 
 type PrintMode
     = Cards
     | Tiles
+    | Done
 
 type alias Model = 
     { pmode:PrintMode
@@ -61,9 +73,14 @@ update ms mod =
             Nothing -> update Next {mod | pos = 0 , pmode = Tiles}
             Just w -> ({mod | pos = mod.pos +1}, w |> log)
         (Next, Tiles) -> case nextTile mod.pos (Land.fullDeck ) of
-            Nothing -> (mod,Cmd.none)
+            -- Do Backs and set to Done
+            Nothing -> ({mod | pmode = Done},Writer "backs.svg" (backList placeCard 16)|> log )
             Just w -> ({mod | pos = mod.pos +1 }, w|> log)
+        (Next, Done) -> (mod,Cmd.none)
+
             
+     
+
 
 tryNextPage : Int -> (a -> String) -> Placer -> String -> Int -> List a -> Maybe Writer
 tryNextPage mul fronter placer name pos ls =
