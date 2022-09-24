@@ -265,7 +265,7 @@ jobTextn x y tx n =
         ]
 
 jobText : Float -> Float -> String -> String
-jobText x y str = text "Arial" 4 [xy x y,txCenter,flNoStk "black" ] str
+jobText x y str = text "Arial" 4 [xy x y,bold,txCenter,flStk "white" "black" 0.4,strokeFirst ] str
 
 idText : Float -> Float -> String -> String -> String
 idText x y col tx =
@@ -315,8 +315,4 @@ jobN x y fname n =
 
 cardPicFile : String -> Maybe String
 cardPicFile = Cards.imageFile "../pics/cards/"
-
-
-    
-
 

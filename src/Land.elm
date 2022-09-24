@@ -1,5 +1,6 @@
 module Land exposing(..)
 import Job exposing (..)
+import MRand
 type alias Tile = 
     { ltype : LType
     , bandits: Int
@@ -42,20 +43,25 @@ intToBool n =
         0 -> False
         _ -> True
 
-tile: Int -> Tile
-tile n = 
+tile: Int -> Int -> Tile
+tile n b= 
     let 
         lt = Basics.modBy 6 n|> intToLType
-        bandits = Basics.modBy 12 (n * 17)
+        bandits = b
     in 
         Tile lt bandits
     
 
-basicTiles : Int -> List Tile
-basicTiles n =
-    case n of
-        0 -> [tile 0]
-        v -> (tile v) :: (basicTiles (n - 1))
+
+
+basicTiles : MRand.GGen -> Int -> List Tile
+basicTiles gen n =
+    let 
+        (g2 , b) = MRand.gnext gen 12
+    in 
+        case n of
+            0 -> [tile 0 (b +1)]
+            v -> (tile v (b + 1)) :: (basicTiles g2 (n - 1))
 
 villageJobs : List Job
 villageJobs =
@@ -73,5 +79,5 @@ villageTiles : List Tile
 villageTiles = villageJobs |> List.map (\j -> Tile (Village j) 0)
 
 fullDeck : List Tile
-fullDeck = villageTiles ++ (basicTiles 40)
+fullDeck = villageTiles ++ (basicTiles MRand.gzero 40)
 
