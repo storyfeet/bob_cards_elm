@@ -2,7 +2,7 @@ module HasPicList exposing (..)
 pList : List String
 pList = [ "boots"
      , "canoe"
-     , "elexir"
+     , "elixer"
      , "exhaustion"
      , "horse"
      , "hunger"

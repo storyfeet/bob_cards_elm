@@ -32,7 +32,7 @@ potion = Card "Potion" TGather [pay Food 1]
 
 elixer : Card
 elixer = Card "Elixer" TGather (payEq 1 [Food,Wood] )
-    [ [Scrap (TDanger DAny) (N 2)]
+    [ [Scrap (TDanger DAny) (N 1), Draw (N 1) ]
     , [Scrap TAny This,Scrap (TDanger DAny) (X 1),Draw (X 1) ]
     ]
 

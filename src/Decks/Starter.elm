@@ -108,7 +108,7 @@ armWound =  Card "Arm Wound" (TDanger Pain) []
 -- Players
 playerDeck : List (Card,Int)
 playerDeck = 
-    [(noobyNorris,2),(beginnerBen, 1),(noviceNiles,1) ,(sailorSam ,1), (stealySteve,1)]
+    [(noobyNorris,2),(beginnerBen, 1),(climberCarl,1) ,(sailorSam ,1), (stealySteve,1)]
 noobyNorris : Card 
 noobyNorris = Card "Nooby Norris" (TPlayer 1) []
     [ [Move (N 1)]
@@ -123,11 +123,11 @@ beginnerBen = Card "Beginner Ben" (TPlayer 1)[]
     , [Pay Any (X 1),Scrap TAny (X 2)]
     ]
 
-noviceNiles : Card
-noviceNiles = Card "Novie Niles" (TPlayer 1) []
+climberCarl : Card
+climberCarl = Card "Climber Carl" (TPlayer 1) []
     [ [Draw (N 1)] 
     , [Discard TAny (N 2) , MountainMove,Move (N 1)]
-    , [Discard (TDanger DAny) (N 1)]
+    , [Discard (TDanger DAny) (N 2),Scrap TAny (N 1)]
     ]
 
 sailorSam : Card
