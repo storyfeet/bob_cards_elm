@@ -26,13 +26,15 @@ explorerDeck =
 
 potion :  Card
 potion = Card "Potion" TGather [pay Food 1]
-    [[Discard (TDanger DAny) (N 1)]
-    , [Scrap TAny This ,Discard (TDanger DAny) (X 1)]
+    [[Discard (TDanger DAny) (X 1)]
+    , [Scrap TAny This ,Scrap (TDanger DAny) (X 1)]
     ]
 
 elixer : Card
 elixer = Card "Elixer" TGather (payEq 1 [Food,Wood] )
-    [[Discard (TDanger DAny) (N 1),Draw (N 1) ]]
+    [ [Scrap (TDanger DAny) (N 2)]
+    , [Scrap TAny This,Scrap (TDanger DAny) (X 1),Draw (X 1) ]
+    ]
 
 
 horse: Card

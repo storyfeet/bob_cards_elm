@@ -24,9 +24,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="8.9236751"
-     inkscape:cx="35.187296"
-     inkscape:cy="33.002098"
+     inkscape:zoom="10.649479"
+     inkscape:cx="37.748325"
+     inkscape:cy="37.795276"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -39,27 +39,16 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       sodipodi:type="star"
-       style="fill:#b5dab5;stroke:#000000;stroke-width:0.50915514;stroke-linecap:round;paint-order:stroke fill markers;stop-color:#000000;stroke-dasharray:none;fill-opacity:1"
-       id="path362"
-       inkscape:flatsided="true"
-       sodipodi:sides="6"
-       sodipodi:cx="1.4014137"
-       sodipodi:cy="1.3258054"
-       sodipodi:r1="9.5217237"
-       sodipodi:r2="4.6705375"
-       sodipodi:arg1="0.52764218"
-       sodipodi:arg2="1.051241"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 9.6281509,6.1199704 -8.2652373,4.7274806 -8.2267372,-4.7941647 0.0385,-9.5216459 8.2652373,-4.7274809 8.2267372,4.794165 z"
-       inkscape:transform-center-x="0.65617116"
-       inkscape:transform-center-y="-0.29652339"
-       transform="matrix(0.98194445,0,0,0.98209349,8.8655784,8.7180774)" />
+    <rect
+       style="fill:#b5dab5;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+       id="rect8157"
+       width="18.635"
+       height="18.635"
+       x="0.78249943"
+       y="0.78249955" />
     <path
        style="fill:none;stroke:#2409b7;stroke-width:1.065;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="M 5.8296338,17.092239 C 7.9641426,13.595095 3.7632179,3.6264802 10.075467,9.5837911 14.702888,13.951012 11.967908,4.0834567 13.18512,2.3478482"
+       d="M 3.8588844,19.462299 C 4.0964858,15.193634 3.7632179,3.6264802 10.075467,9.5837911 14.702888,13.951012 16.237723,2.8688457 16.133752,0.70546569"
        id="path1849"
        sodipodi:nodetypes="csc" />
   </g>

@@ -13,6 +13,7 @@ starterDeck n =
     ,(pickaxe,n)
     ,(woodHammer,n)
     ]
+
 pan : Card
 pan = Card "Pan" TGather [starter 2] [riverGather Gold 1]
 
@@ -55,6 +56,7 @@ dangerDeck n =
     [(thirst,1 + 2* n)
     ,(hunger,1 + 2* n)
     ,(exhaustion,2 + 2 * n)
+    ,(dysentery,2)
     ,(owie,2 + 2 * n)
     ,(legWound,2 + 2 * n)
     ,(armWound,2 + 2* n)
@@ -76,6 +78,12 @@ exhaustion : Card
 exhaustion = Card "Exhaustion" (TDanger Exhaustion) [] 
     [ [discard ,discardMe]
     , [Discard TAny (N 2) ,scrapMe]
+    ]
+
+dysentery : Card
+dysentery = Card "Dysentery" (TDanger Exhaustion) []
+    [
+        [In River, Pay Food (N 1) ,scrapMe]
     ]
 
 owie : Card
@@ -100,7 +108,7 @@ armWound =  Card "Arm Wound" (TDanger Pain) []
 -- Players
 playerDeck : List (Card,Int)
 playerDeck = 
-    [(noobyNorris,2),(beginnerBen, 2),(noviceNiles,2) , (stealySteve,1)]
+    [(noobyNorris,2),(beginnerBen, 1),(noviceNiles,1) ,(sailorSam ,1), (stealySteve,1)]
 noobyNorris : Card 
 noobyNorris = Card "Nooby Norris" (TPlayer 1) []
     [ [Move (N 1)]
@@ -122,7 +130,12 @@ noviceNiles = Card "Novie Niles" (TPlayer 1) []
     , [Discard (TDanger DAny) (N 1)]
     ]
 
-
+sailorSam : Card
+sailorSam = Card "Sailor Sam" (TPlayer 1) []
+    [ [Draw (N 1),Scrap TAny (N 1)]
+    , [In Water, Scrap (TDanger DAny) (X 1) ]
+    , [Pay Any (N 2), WaterMove , Move (N 1) ]
+    ]
 
 stealySteve : Card
 stealySteve = Card "Stealy Steve" (TPlayer 2) []
