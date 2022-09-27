@@ -92,8 +92,9 @@ diggerDeck =
     , (drill , 2)
     , (ironHammer , 2)
     , (jackHammer , 2)
-    , (roamingTrader ,1)
-    , (trader ,1)
+    , (roamingTrader ,2)
+    , (trader ,2)
+    , (gambler,2)
     , (quickTrader,2)
     ]
 
@@ -130,6 +131,11 @@ roamingTrader = Card "Roaming Trader" TTrade  [pay Gold 2]
 forager : Card
 forager = Card "Forager" TTrade [In Forest,pay Any 2]
     [[Scrap TAny (X 1), Draw (X 2)]]
+
+gambler : Card
+gambler = Card "Gambler" TTrade [In Village, pay Gold 1]
+    [ [Pay Gold (X 1),Gain Gold (XD 2)]
+    ]
 
 
 -- Fighter Deck -- 
