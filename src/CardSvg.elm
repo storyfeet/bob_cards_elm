@@ -9,7 +9,8 @@ front card =
     String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "white" 0.5, fprop "opacity" 0.5]
     , rect 5 5 40 60 [flNoStk "White" , fprop "opacity" 0.4 ]
     , cardPic 4 6 card.name
-    , text "Arial" 5 [xy 20 10,narrowStk "Black" "yellow" ,txCenter] card.name
+    , text "Arial" 5 [xy 2 6,flStk "Black" "white" 0.8,bold,strokeFirst
+    ] card.name
     , costOrType card.cost card.ctype
     , jobs 65 card.jobs
     ]
@@ -17,7 +18,7 @@ front card =
 back : String
 back  = 
     String.join "\n" 
-    [ rect 0 0 50 70 [flNoStk "#f3c3a4",fprop "opacity" 0.5]
+    [ rect -3 -3 56 76 [flNoStk "#f7c9b4"]
     , rect 5 5 40 60 [flStk "none" "black" 1]
     , img 5 15 40 40 "../pics/back_logo.svg" []
 
