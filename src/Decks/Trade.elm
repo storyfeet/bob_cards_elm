@@ -114,7 +114,7 @@ jackHammer = Card "Jack Hammer" TMake [In Village ,pay Gold 2]
     [[pay Iron 1, pay Wood 2,BuildRail] ]
 
 quickTrader : Card 
-quickTrader = Card "Quick Trader" TTrade [pay Any 3]
+quickTrader = Card "Quick Trader" TTrade [pay Any 2]
     [[In Village, Pay Any (X 2),Gain Any (X 1)]]
 
 
