@@ -282,7 +282,7 @@ idText x y col tx =
 
 gainText : Float -> Float -> String -> String -> String
 gainText x y col tx =
-        text "Arial" 4.5 [xy x y ,flStk col "white" 0.6, strokeFirst,bold,txRight] (tx )
+        text "Arial" 4 [xy x y ,flStk col "white" 0.6, strokeFirst,bold,txRight] (tx )
 
 
 cardPic: Float -> Float -> String -> String

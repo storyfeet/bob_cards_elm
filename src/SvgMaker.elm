@@ -87,7 +87,7 @@ tryNextPage mul fronter placer name pos ls =
     case ls |> List.drop (pos * mul) |> List.take mul of 
         [] -> Nothing
         l -> l |> listPage fronter placer 
-            |> Writer (String.join "" [name ,String.fromInt pos,".svg"])
+            |> Writer (String.join "" [name ,String.fromInt pos |> String.padLeft 2 '0',".svg"])
             |> Just
             
 
