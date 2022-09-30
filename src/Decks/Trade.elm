@@ -90,8 +90,10 @@ diggerDeck : List (Card,Int)
 diggerDeck = 
     [ (bigPan ,2)
     , (drill , 2)
-    , (ironHammer , 2)
-    , (jackHammer , 2)
+    , (axe, 2)
+    , (twoManSaw, 2)
+    , (lumpHammer , 2)
+    , (sledgeHammer , 2)
     , (roamingTrader ,2)
     , (trader ,2)
     , (gambler,2)
@@ -101,16 +103,28 @@ diggerDeck =
 bigPan : Card
 bigPan = Card "Big Pan" TGather [In Village,pay Gold 1]
     [riverGather Gold 3]
+
+axe : Card 
+axe = Card "Axe" TGather [pay Wood 1,pay Iron 1]
+    [ [In Forest,pay Food 1,gain Wood 3 ]
+    , [attack 1,defend 2]
+    ]
+
+twoManSaw : Card
+twoManSaw = Card "2 Man Saw" TGather [pay Iron 2]
+    [ [In Forest,Discard TAny (N 2), gather Wood 5]
+    ]
+
 drill : Card
 drill = Card "Dril" TGather [In Village, pay Iron 2,pay Gold 1 ]
     [[In Mountain, discard , gather Iron 5]]
 
-ironHammer : Card 
-ironHammer = Card "Iron Hammer" TMake [pay Iron 2]
+lumpHammer : Card 
+lumpHammer = Card "Lump Hammer" TMake [pay Iron 2]
     [[pay Iron 1, pay Wood 1,discard ,BuildRail] ]
 
-jackHammer : Card
-jackHammer = Card "Jack Hammer" TMake [In Village ,pay Gold 2]
+sledgeHammer : Card
+sledgeHammer = Card "Sledge-Hammer" TMake [In Village ,pay Gold 2]
     [[pay Iron 1, pay Wood 2,BuildRail] ]
 
 quickTrader : Card 
@@ -145,7 +159,7 @@ fighterDeck =
     , (shield, 2)
     , (bow ,2)
     , (rifle, 2)
-    , (pistol,2)
+    , (dillinger,2)
     , (revolver,2)
     , (crossbow,1)
     ]
@@ -163,8 +177,8 @@ bow = Card "Bow" TFight
     ,[pay Wood 1,defend 1, attack 3]
     ]
 
-pistol: Card
-pistol= Card "Pistol" TFight [pay Iron 1]
+dillinger: Card
+dillinger= Card "Dillinger" TFight [pay Iron 1]
     [[attack 1], [defend 3]]
 
 

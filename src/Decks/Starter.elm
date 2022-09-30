@@ -11,7 +11,7 @@ starterDeck n =
     ,(rookieTrader ,2 * n)
     ,(saw,2 * n)
     ,(pickaxe,n)
-    ,(woodHammer,n)
+    ,(mallet,n)
     ]
 
 pan : Card
@@ -28,8 +28,9 @@ knife = Card "Knife" TGather [starter 2]
 saw:Card
 saw = Card "Saw" TGather 
     [starter 2] 
-    [ [In Forest , discard , gain Wood 3] 
+    [ [In Forest , discard , Gain Wood (D 2)] 
     ]
+
 
 boots : Card
 boots = Card "Boots" TMove [starter 2] 
@@ -45,8 +46,8 @@ pickaxe : Card
 pickaxe = Card "Pickaxe" TGather [starter 1]
     [[In Mountain,discard , gather Iron 3]]
 
-woodHammer : Card
-woodHammer = Card "Wood Hammer" TMake [starter 1]
+mallet : Card
+mallet = Card "Mallet" TMake [starter 1]
     [[pay Gold 1,pay Iron 1, pay Wood 1,discard ,BuildRail]]
 
 -- Danger 
