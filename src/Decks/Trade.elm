@@ -73,7 +73,7 @@ canoe = Card "Canoe" TMove
 climbingBoots: Card 
 climbingBoots = Card "Climbing Boots" TMove
     [pay Iron 1]
-    [[MountainMove,Move (N 1)]]
+    [[pay Food 1,MountainMove,Move (N 1)]]
 
 binoculars: Card
 binoculars = Card "Binocular" TMove
