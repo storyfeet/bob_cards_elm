@@ -39,7 +39,9 @@ tileJob t =
     case t.ltype of
         Village j -> job j
         Water -> ""
-        _ -> CS.jobStar 30 5 "red" (Job.N t.bandits)
+        _ ->  case t.bandits of
+            0 -> CS.jobPic 30 5 "fireplace"
+            n -> CS.jobStar 30 5 "red" (Job.N n)
 
     
 job: Job -> String

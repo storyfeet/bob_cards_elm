@@ -46,7 +46,7 @@ intToBool n =
 tile: Int -> Int -> Tile
 tile n b= 
     let 
-        lt = Basics.modBy 6 n|> intToLType
+        lt = intToLType n
         bandits = b
     in 
         Tile lt bandits
@@ -57,11 +57,11 @@ tile n b=
 basicTiles : MRand.GGen -> Int -> List Tile
 basicTiles gen n =
     let 
-        (g2 , b) = MRand.gnext gen 12
+        (g2 , b) = MRand.gnext gen 10
     in 
         case n of
-            0 -> [tile 0 (b +1)]
-            v -> (tile v (b + 1)) :: (basicTiles g2 (n - 1))
+            0 -> [tile 0 b ]
+            v -> (tile v b) :: (basicTiles g2 (n - 1))
 
 villageJobs : List Job
 villageJobs =
@@ -79,5 +79,5 @@ villageTiles : List Tile
 villageTiles = villageJobs |> List.map (\j -> Tile (Village j) 0)
 
 fullDeck : List Tile
-fullDeck = villageTiles ++ (basicTiles MRand.gzero 40)
+fullDeck = villageTiles ++ (basicTiles MRand.gzero 39)
 
