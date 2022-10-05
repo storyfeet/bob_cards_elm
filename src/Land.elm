@@ -12,16 +12,22 @@ type LType
     | Prairie Bool
     | Village Job
     | Mountain
+    | BanditCamp
 
 intToLType: Int -> LType
 intToLType n =
-    case Basics.modBy 6 n of
+    case Basics.modBy 11 n of
         0 -> Water
-        1 -> Forest False
-        2 -> Forest True
-        3 -> Prairie False
-        4 -> Prairie True
-        _ -> Mountain
+        1 -> Water
+        2 -> Mountain
+        3 -> Mountain
+        4 -> Forest False
+        5 -> Forest False
+        6 -> Forest True
+        7 -> Prairie False
+        8 -> Prairie True
+        9 -> Prairie True
+        _ -> BanditCamp
 
 isPlace: Place -> LType -> Bool
 isPlace p l =

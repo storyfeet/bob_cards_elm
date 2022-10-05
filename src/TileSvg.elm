@@ -17,6 +17,7 @@ tileName tl =
         Prairie w -> "prarie" ++ wet w
         Village _ -> "village" 
         Mountain -> "mountain"
+        BanditCamp -> "bandit_camp"
 
         
 pLink : LType -> String
@@ -39,9 +40,7 @@ tileJob t =
     case t.ltype of
         Village j -> job j
         Water -> ""
-        _ ->  case t.bandits of
-            0 -> CS.jobPic 30 5 "fireplace"
-            n -> CS.jobStar 30 5 "red" (Job.N n)
+        _ -> CS.jobStar 30 5 "red" (Job.N t.bandits)
 
     
 job: Job -> String

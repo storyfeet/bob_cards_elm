@@ -80,12 +80,12 @@ climbingBoots = Card "Climbing Boots" TMove
 binoculars: Card
 binoculars = Card "Binocular" TMove
     [pay Iron 1]
-    [[Reveal (N 1)]]
+    [[Reveal (N 1) (N 1)]]
 
 telescope: Card
 telescope = Card "Telescope" TMove
     [pay Iron 1,pay Wood 1]
-    [[Pay Any (X 1),Reveal (X 1)]]
+    [[Pay Any (X 1),Reveal (N 2) (X 1)]]
 
 -- Digger Deck -- 
 diggerDeck : List (Card,Int)

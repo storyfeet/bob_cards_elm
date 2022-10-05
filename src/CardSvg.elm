@@ -75,7 +75,7 @@ action x y c =
         Defend n -> jobN x y "defend" n
         WaterMove -> jobPic x y "sail" 
         MountainMove -> jobPic x y "climb"
-        Reveal n -> jobN x y "reveal" n
+        Reveal d n -> jobS x y "reveal" (jnum d ++ ":" ++(jnum n))
         Pay r n -> resource x y r "Red" "-" n 
         Gain r n -> resource x y r "Green" "+" n 
         BuildRail -> jobPic x y "build_rail"
@@ -316,12 +316,15 @@ jobPic: Float -> Float -> String -> String
 jobPic x y fname = 
     img x y 10 10 ("../pics/jobs/" ++ fname  ++ ".svg")[]
 
-jobN: Float -> Float -> String -> JobNum -> String
-jobN x y fname n = 
+jobS: Float -> Float -> String -> String -> String
+jobS x y fname s = 
     String.join "\n" 
         [ jobPic x y fname
-        , gainText (x+10) (y + 3) "blue" (jnum n)
+        , gainText (x+10) (y + 3) "blue" s
         ]
+
+jobN : Float -> Float -> String -> JobNum -> String
+jobN x y fname n = jobS x y fname (jnum n)
 
 cardPicFile : String -> Maybe String
 cardPicFile = Cards.imageFile "../pics/cards/"

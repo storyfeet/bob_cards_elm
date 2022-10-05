@@ -76,7 +76,7 @@ type Action
     | BuildRail
     | WaterMove
     | MountainMove
-    | Reveal JobNum
+    | Reveal JobNum JobNum --Num Distance
     | Starter JobNum
 
 -- COSTS
