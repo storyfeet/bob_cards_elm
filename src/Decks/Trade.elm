@@ -27,41 +27,43 @@ explorerDeck =
 potion :  Card
 potion = Card "Potion" TGather [pay Food 1]
     [[Discard (TDanger DAny) (X 1)]
-    , [Scrap TAny This ,Scrap (TDanger DAny) (X 1)]
+    , [Scrap TGather This ,Scrap (TDanger DAny) (X 1)]
     ]
 
 elixer : Card
 elixer = Card "Elixer" TGather (payEq 1 [Food,Wood] )
     [ [Scrap (TDanger DAny) (N 1), Draw (N 1) ]
-    , [Scrap TAny This,Scrap (TDanger DAny) (X 1),Draw (X 1) ]
+    , [Scrap TGather This,Scrap (TDanger DAny) (X 1),Draw (X 1) ]
     ]
 
 
 horse: Card
 horse = Card "Horse" TMove
     [In Prairie, pay Food 3,Or, In Village ,pay Gold 1]
-    [foodMove 1 2, scrapFor Food 5]
+    [ foodMove 1 2
+    , scrapFor TMove Food 5
+    ]
     
 
 stalion:Card
 stalion = Card "Stalion" TMove 
     [In Prairie ,pay Food 4,Or, In Village ,pay Gold 2]
     [[ Pay Food (X 2), Move (X 3)]
-    , scrapFor Food 6
+    , scrapFor TMove Food 6
     ]
 
 cow: Card
 cow = Card "Cow" THealth 
     [In Prairie ,pay Food 2,Or, In Village ,pay Gold 1]
     [ [gain Food 2] 
-    , scrapFor Food 5 
+    , [ scrapThis THealth, gain Food 5 ]
     ]
 
 
 wagon:Card
 wagon = Card "Wagon" TMove
     [pay Wood 4,pay Food 2]  
-    [ [scrapMe ,gain Wood 2,gain Food 2,draw 2]
+    [ [scrapThis TMove ,gain Wood 2,gain Food 2,draw 2]
     , [gain Wood 1, gain Food 1, draw 1]
     ]
 
@@ -107,7 +109,7 @@ bigPan = Card "Big Pan" TGather [In Village,pay Gold 1]
 axe : Card 
 axe = Card "Axe" TGather [pay Wood 1,pay Iron 1]
     [ [In Forest,pay Food 1,gain Wood 3 ]
-    , [attack 1,defend 2]
+    , [attack 2,defend 2]
     ]
 
 twoManSaw : Card
@@ -129,7 +131,7 @@ sledgeHammer = Card "Sledge-Hammer" TMake [In Village ,pay Gold 2]
 
 quickTrader : Card 
 quickTrader = Card "Quick Trader" TTrade [pay Any 2]
-    [[In Village, Pay Any (X 2),Gain Any (X 1)]]
+    [[discard, Pay Any (X 1),Gain Any (X 1)]]
 
 
 trader : Card
@@ -139,7 +141,7 @@ trader = Card "Trader"  TTrade [pay Gold 2]
 roamingTrader: Card
 roamingTrader = Card "Roaming Trader" TTrade  [pay Gold 2]
     [ [Pay Gold (X 1), Gain Any (X 1)]
-    , [Pay Any (X 3), Gain Any (X 1)]
+    , [Pay Any (X 2), Gain Any (X 1)]
     ]
 
 forager : Card
@@ -168,32 +170,32 @@ fighterDeck =
 sword:Card
 sword = Card "Sword" TFight
     (payEq 1 [Iron,Wood])
-    [[attack 2] , [defend 2]]
+    [[attack 3] , [defend 3]]
 
 bow:Card
 bow = Card "Bow" TFight
     [pay Wood 1]
     [[In Forest, pay Wood 1, gather Food 3]
-    ,[pay Wood 1,defend 1, attack 3]
+    ,[pay Wood 1,defend 2, attack 4]
     ]
 
 dillinger: Card
 dillinger= Card "Dillinger" TFight [pay Iron 1]
-    [[attack 1], [defend 3]]
+    [[attack 1], [defend 4]]
 
 
 revolver: Card 
 revolver = Card "Revolver" TFight [pay Iron 1, pay Wood 2]
-    [ [Pay Wood (X 1),Attack (XD 3)]
-    , [defend 3]
+    [ [Pay Wood (X 1), Attack (XD 3)]
+    , [defend 4]
     ]
 
 
 
 rifle : Card
 rifle = Card "Rifle" TFight [In Village, pay Iron 1, pay Gold 1]
-    [[pay Iron 1, Attack (N 2), attack 4 ]
-    , [pay Iron 1, Defend (N 2), attack 4]
+    [[pay Iron 1, Attack (N 3), attack 4 ]
+    , [pay Iron 1, Defend (N 3), attack 4]
     ]
 
 
@@ -207,8 +209,5 @@ shield = Card "Shield" TFight
 crossbow:Card
 crossbow = Card "Crossbow" TFight [pay Wood 1,pay Iron 1]
     [[pay Wood 1,attack 5]]
-
-
-
 
 

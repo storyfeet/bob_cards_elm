@@ -21,7 +21,7 @@ pan = Card "Pan" TGather [starter 2] [riverGather Gold 1]
 knife : Card
 knife = Card "Knife" TGather [starter 2] 
     [ [In Forest , gather Food 2]
-    , [defend 1, attack 1]
+    , [defend 1, attack 2]
     ]
 
 
@@ -39,7 +39,8 @@ boots = Card "Boots" TMove [starter 2]
 rookieTrader : Card
 rookieTrader = Card "Rookie Trader" TTrade [starter 2]
     [ [In Village ,Pay Gold (X 1), Gain Any (X 1)]
-    , [In Village ,Pay Any (X 3), Gain Any (X 1)]
+    , [In Village ,Pay Any (X 2), Gain Any (X 1)]
+    , [discard,Pay Any (X 2), Gain Any (X 1)]
     ]
 
 pickaxe : Card
@@ -65,44 +66,44 @@ dangerDeck n =
 
 thirst :Card
 thirst = Card "Thirst" (TDanger Exhaustion) []
-    [ [In River,discardMe]
-    , [In River,discard,scrapMe]
+    [ [In River,discardD]
+    , [In River,discard,scrapD]
     ]
 
 hunger : Card
 hunger = Card "Hunger" (TDanger Exhaustion) []
-    [ [pay Any 1,discardMe]
-    , [pay Food 1,discard,scrapMe]
+    [ [pay Any 1,discardD]
+    , [pay Food 1,discard,scrapD]
     ]
 
 exhaustion : Card
 exhaustion = Card "Exhaustion" (TDanger Exhaustion) [] 
-    [ [discard ,discardMe]
-    , [Discard TAny (N 2) ,scrapMe]
+    [ [discard ,discardD]
+    , [Discard TAny (N 2) ,scrapD]
     ]
 
 dysentery : Card
 dysentery = Card "Dysentery" (TDanger Exhaustion) []
     [
-        [In River, Pay Food (N 1) ,scrapMe]
+        [In River, Pay Food (N 1) ,scrapD]
     ]
 
 owie : Card
 owie = Card "Owie" (TDanger Pain) []
-    [ [pay Food 1,discardMe]
-    , [In Village,pay Gold 1,scrapMe]
+    [ [pay Food 1,discardD]
+    , [In Village,pay Gold 1,scrapD]
     ]
 
 legWound : Card
 legWound =  Card "Leg Wound" (TDanger Pain) []
-    [ [ Discard (TMove) (N 1) ,discardMe]
-    , [In Village,Discard (TMove) (N 1) ,scrapMe]
+    [ [ Discard (TMove) (N 1) ,discardD]
+    , [In Village,Discard (TMove) (N 1) ,scrapD]
     ]
 
 armWound : Card
 armWound =  Card "Arm Wound" (TDanger Pain) []
-    [[ discard ,discardMe]
-    , [In Village,Discard (TGather) (N 1) ,scrapMe]
+    [[ discard ,discardD ]
+    , [In Village,Discard (TGather) (N 1) ,scrapD]
     ]
 
 
@@ -112,7 +113,7 @@ playerDeck =
     [(noobyNorris,2),(beginnerBen, 1),(climberCarl,1) ,(sailorSam ,1), (stealySteve,1)]
 noobyNorris : Card 
 noobyNorris = Card "Nooby Norris" (TPlayer 1) []
-    [ [Move (N 1)]
+    [ [discard , Move (N 1)]
     , [Scrap TAny (N 1)]
     , [Discard (TDanger DAny) (N 2)]
     ]
@@ -135,7 +136,7 @@ sailorSam : Card
 sailorSam = Card "Sailor Sam" (TPlayer 1) []
     [ [Draw (N 1),Scrap TAny (N 1)]
     , [In Water, Scrap (TDanger DAny) (X 1) ]
-    , [Pay Any (N 2), WaterMove , Move (N 1) ]
+    , [Pay Any (N 1), WaterMove , Move (N 1) ]
     ]
 
 stealySteve : Card

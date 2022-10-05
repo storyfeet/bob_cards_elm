@@ -92,6 +92,12 @@ starter n = Starter (N n)
 scrapMe : Action
 scrapMe = Scrap TAny This
 
+scrapD : Action 
+scrapD = Scrap (TDanger DAny) This
+
+scrapThis: CardType -> Action
+scrapThis ct = Scrap ct This
+
 payEq : Int ->  List Resource -> List Action
 payEq n l =
     l |> List.map (\r-> Pay r (N n)) 
@@ -122,8 +128,11 @@ discard : Action
 discard = 
     Discard TAny (N 1)
 
-discardMe : Action
-discardMe = Discard TAny This
+discardMe : CardType -> Action 
+discardMe ct = Discard ct This
+
+discardD : Action
+discardD = Discard (TDanger DAny) This
 
 -- JOBS
 trade : Resource -> Int -> Resource -> Int -> Job
@@ -145,7 +154,7 @@ woodMove : Int -> Int -> Job
 woodMove w d = [pay Wood w, Move(N d) ]
 
 
-scrapFor : Resource -> Int -> Job
-scrapFor r n =
-    [Scrap TAny This, gain r n]
+scrapFor : CardType -> Resource -> Int -> Job
+scrapFor ct r n =
+    [scrapThis ct, gain r n]
 
