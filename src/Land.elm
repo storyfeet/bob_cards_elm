@@ -63,11 +63,11 @@ tile n b=
 basicTiles : MRand.GGen -> Int -> List Tile
 basicTiles gen n =
     let 
-        (g2 , b) = MRand.gnext gen 10
+        (g2 , b) = MRand.gnext gen 8 
     in 
         case n of
-            0 -> [tile 0 b ]
-            v -> (tile v b) :: (basicTiles g2 (n - 1))
+            0 -> [tile 0 (b + 1) ]
+            v -> (tile v (b +1 )) :: (basicTiles g2 (n - 1))
 
 villageJobs : List Job
 villageJobs =

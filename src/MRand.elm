@@ -37,7 +37,7 @@ gnew t =
 ggmax :Int
 ggmax = 21474836447
 ggmul :Int
-ggmul = 1604908821
+ggmul = 1604908823
 ggadd :Int
 ggadd = 1604872351
 
