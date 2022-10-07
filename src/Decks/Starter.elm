@@ -128,8 +128,8 @@ beginnerBen = Card "Beginner Ben" (TPlayer 1)[]
 climberCarl : Card
 climberCarl = Card "Climber Carl" (TPlayer 1) []
     [ [Draw (N 1)] 
-    , [Discard TAny (N 2) , MountainMove,Move (N 1)]
-    , [Discard (TDanger DAny) (N 2),Scrap TAny (N 1)]
+    , [Discard TAny (N 1) , MountainMove,Move (N 1)]
+    , [Scrap TAny (N 1), Scrap (TDanger DAny) (N 1)]
     ]
 
 sailorSam : Card
