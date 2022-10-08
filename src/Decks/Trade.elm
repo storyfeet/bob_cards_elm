@@ -90,14 +90,14 @@ climbingBoots = Card "Climbing Boots" TMove
     ]
 
 binoculars: Card
-binoculars = Card "Binocular" TMove
+binoculars = Card "Binoculars" TMove
     [pay Iron 1]
     [[Reveal (N 1) (N 1)]]
 
 telescope: Card
 telescope = Card "Telescope" TMove
     [pay Iron 1,pay Wood 1]
-    [[Pay Any (X 1),Reveal (N 2) (X 1)]]
+    [[Pay Any (X 1),Reveal (X 1) (N 2) ]]
 
 fishingRod : Card
 fishingRod = Card "Fishing Rod" TGather
@@ -159,7 +159,9 @@ lumpHammer = Card "Lump Hammer" TMake [pay Iron 2]
 
 sledgeHammer : Card
 sledgeHammer = Card "Sledgehammer" TMake [In Village ,pay Gold 2]
-    [[pay Iron 1, pay Wood 2,BuildRail] ]
+    [ [pay Iron 1, pay Wood 2,BuildRail]
+    , [Discard TAny (N 2),gather Iron 3]
+    ]
 
 quickTrader : Card 
 quickTrader = Card "Quick Trader" TTrade [pay Any 2]
@@ -190,12 +192,11 @@ gambler = Card "Gambler" TTrade [In Village, pay Gold 1]
 fighterDeck : List (Card,Int)
 fighterDeck =
     [ (sword ,2 )
-    , (shield, 2)
     , (bow ,2)
     , (rifle, 2)
     , (dillinger,2)
     , (revolver,2)
-    , (crossbow,1)
+    , (crossbow,2)
     ]
 
 
@@ -233,10 +234,6 @@ rifle = Card "Rifle" TFight [In Village, pay Iron 1, pay Gold 1]
 
 
 
-shield: Card
-shield = Card "Shield" TFight
-    [pay Iron 1]
-    [[defend 4],[attack 1]]
 
 crossbow:Card
 crossbow = Card "Crossbow" TFight [pay Wood 1,pay Iron 1]
