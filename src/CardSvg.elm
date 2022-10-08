@@ -73,8 +73,8 @@ action x y c =
         Move n -> jobN x y "move" n
         Attack n -> jobN x y "attack" n
         Defend n -> jobN x y "defend" n
-        WaterMove -> jobPic x y "sail" 
-        MountainMove -> jobPic x y "climb"
+        WaterMove n -> jobN x y "sail" n
+        MountainMove n -> jobN x y "climb" n
         Reveal d n -> jobS x y "reveal" (jnum d ++ ":" ++(jnum n))
         Pay r n -> resource x y r "Red" "-" n 
         Gain r n -> resource x y r "Green" "+" n 
@@ -126,16 +126,21 @@ narrowStk f s =
 
 jobCard : Float -> Float -> CardType -> String -> String -> JobNum -> String
 jobCard x y ct tx tcol n =
-    String.join "\n" 
-         [ rect (x+2) y 6 10 
-            [narrowStk (cTypeColor ct) "black"
-            , rxy 1 1
-            , rotate 30 (x + 5) (y+5 )   
-            ]        
-        , cardLetter (x + 1) (y + 9) ct
-        , gainText (x + 10) (y+3) tcol (tx ++ jnum n)
+    let 
+        stk = case n of 
+            This -> narrowStk (cTypeColor ct) "red"
+            _ -> narrowStk (cTypeColor ct) "black"
+    in 
+        String.join "\n" 
+             [ rect (x+2) y 6 10 
+                [ stk
+                , rxy 1 1
+                , rotate 30 (x + 5) (y+5 )   
+                ]        
+            , cardLetter (x + 1) (y + 9) ct
+            , gainText (x + 10) (y+3) tcol (tx ++ jnum n)
 
-        ]
+            ]
 
 cardLetter : Float -> Float -> CardType -> String
 cardLetter x y ct =

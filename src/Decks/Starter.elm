@@ -20,7 +20,8 @@ pan = Card "Pan" TGather [starter 2] [riverGather Gold 1]
 
 knife : Card
 knife = Card "Knife" TGather [starter 2] 
-    [ [In Forest , gather Food 2]
+    [ [discard, gather Food 1]
+    , [In Forest , gather Food 2]
     , [defend 1, attack 2]
     ]
 
@@ -128,7 +129,7 @@ beginnerBen = Card "Beginner Ben" (TPlayer 1)[]
 climberCarl : Card
 climberCarl = Card "Climber Carl" (TPlayer 1) []
     [ [Draw (N 1)] 
-    , [Discard TAny (N 1) , MountainMove,Move (N 1)]
+    , [Discard TAny (N 1) , MountainMove (N 1)]
     , [Scrap TAny (N 1), Scrap (TDanger DAny) (N 1)]
     ]
 
@@ -136,7 +137,7 @@ sailorSam : Card
 sailorSam = Card "Sailor Sam" (TPlayer 1) []
     [ [Draw (N 1),Scrap TAny (N 1)]
     , [In Water, Scrap (TDanger DAny) (X 1) ]
-    , [Pay Any (N 1), WaterMove , Move (N 1) ]
+    , [Pay Any (N 1), WaterMove (N 1) , Move (N 1) ]
     ]
 
 stealySteve : Card

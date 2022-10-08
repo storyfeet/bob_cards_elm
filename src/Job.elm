@@ -74,8 +74,8 @@ type Action
     | Take CardType JobNum
     | Discard CardType JobNum
     | BuildRail
-    | WaterMove
-    | MountainMove
+    | WaterMove JobNum
+    | MountainMove JobNum
     | Reveal JobNum JobNum --Num Distance
     | Starter JobNum
 

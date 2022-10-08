@@ -20,6 +20,7 @@ explorerDeck =
     , (potion, 2)
     , (elixer , 2)
     , (canoe ,2)
+    , (sailboat , 2)
     , (climbingBoots ,2)
     , (forager, 2)
     ]
@@ -69,13 +70,21 @@ wagon = Card "Wagon" TMove
 
 canoe: Card
 canoe = Card "Canoe" TMove
-    [pay Wood 3]
-    [[WaterMove]]
+    [pay Wood 2]
+    [ [pay Food 1 ,WaterMove (N 1)]
+    ]
+
+sailboat: Card
+sailboat = Card "Sailboat" TMove
+    [pay Wood 4]
+    [[WaterMove (N 2)]]
 
 climbingBoots: Card 
 climbingBoots = Card "Climbing Boots" TMove
     [pay Iron 1]
-    [[pay Food 1,MountainMove,Move (N 1)]]
+    [ [pay Food 1,Move (N 1)]
+    , [pay Any 1, MountainMove (N 1)]
+    ]
 
 binoculars: Card
 binoculars = Card "Binocular" TMove
@@ -180,8 +189,8 @@ bow = Card "Bow" TFight
     ]
 
 dillinger: Card
-dillinger= Card "Dillinger" TFight [pay Iron 1]
-    [[attack 1], [defend 4]]
+dillinger= Card "Dillinger" TFight [pay Wood 1,pay Iron 1]
+    [[attack 1 ,defend 4]]
 
 
 revolver: Card 
