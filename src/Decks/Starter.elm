@@ -58,11 +58,11 @@ dangerDeck :Int ->  List (Card,Int)
 dangerDeck n =
     [(thirst,1 + 2* n)
     ,(hunger,1 + 2* n)
-    ,(exhaustion,2 + 2 * n)
+    ,(exhaustion,1 + 2 * n)
     ,(dysentery,2)
-    ,(owie,2 + 2 * n)
-    ,(legWound,2 + 2 * n)
-    ,(armWound,2 + 2* n)
+    ,(owie,1 + 2 * n)
+    ,(legWound,1 + 2 * n)
+    ,(armWound,1 + 2* n)
     ]
 
 thirst :Card

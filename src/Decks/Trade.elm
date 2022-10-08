@@ -23,6 +23,9 @@ explorerDeck =
     , (sailboat , 2)
     , (climbingBoots ,2)
     , (forager, 2)
+    , (fishingRod, 2)
+    , (net, 2)
+    , (huntingKnife, 2)
     ]
 
 potion :  Card
@@ -96,6 +99,26 @@ telescope = Card "Telescope" TMove
     [pay Iron 1,pay Wood 1]
     [[Pay Any (X 1),Reveal (N 2) (X 1)]]
 
+fishingRod : Card
+fishingRod = Card "Fishing Rod" TGather
+    [pay Wood 1]
+    [[In Water,gather Food 3]]
+
+net: Card
+net = Card "Net" TGather
+    [pay Wood 2]
+    [ [In Water, gather Food 5]
+    , [discard,gather Food 1]
+    ]
+
+huntingKnife : Card
+huntingKnife = Card "Hunting Knife" TGather
+    [pay Wood 1, pay Iron 1]
+    [ [defend 2, attack 3]
+    , [In Forest, gather Food 4]
+    , [discard, gather Food 2]
+    ]
+
 -- Digger Deck -- 
 diggerDeck : List (Card,Int)
 diggerDeck = 
@@ -135,7 +158,7 @@ lumpHammer = Card "Lump Hammer" TMake [pay Iron 2]
     [[pay Iron 1, pay Wood 1,discard ,BuildRail] ]
 
 sledgeHammer : Card
-sledgeHammer = Card "Sledge-Hammer" TMake [In Village ,pay Gold 2]
+sledgeHammer = Card "Sledgehammer" TMake [In Village ,pay Gold 2]
     [[pay Iron 1, pay Wood 2,BuildRail] ]
 
 quickTrader : Card 

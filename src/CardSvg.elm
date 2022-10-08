@@ -7,12 +7,12 @@ import Job exposing (..)
 front :  Card -> String
 front card =
     String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "white" 0.5, fprop "opacity" 0.5]
-    , rect 5 5 40 60 [flNoStk "White" , fprop "opacity" 0.4 ]
-    , cardPic 4 6 card.name
+    , rect 3 8 44 59 [flNoStk "White" , fprop "opacity" 0.4 ]
+    , cardPic 4 7 card.name
     , text "Arial" 5 [xy 2 6,flStk "Black" "white" 0.8,bold,strokeFirst
     ] card.name
     , costOrType card.cost card.ctype
-    , jobs 65 card.jobs
+    , jobs 69 card.jobs
     ]
 
 back : String
@@ -91,7 +91,7 @@ cost : Float -> Float -> Float -> Job -> String
 cost top x y c = 
     case c of 
         [] -> ""
-        Or::t -> cost (top+10) (x - 12) (top + 10 ) t
+        Or::t -> cost (top+2) (x - 12) (top + 2 ) t
         h::t -> action x y h ++ cost top x (y+10 ) t
 
 cardType : CardType -> String
@@ -294,7 +294,7 @@ gainText x y col tx =
 cardPic: Float -> Float -> String -> String
 cardPic x y cname = 
     case  cardPicFile cname of
-        Just f -> img x y 35 35 f []
+        Just f -> img x y 27 27 f []
         Nothing -> ""
 
 
