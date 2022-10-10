@@ -46,7 +46,7 @@ rookieTrader = Card "Rookie Trader" TTrade [starter 2]
 
 pickaxe : Card
 pickaxe = Card "Pickaxe" TGather [starter 1]
-    [[In Mountain,discard , gather Iron 3]]
+    [[In Mountain,discard , gather Iron 2]]
 
 mallet : Card
 mallet = Card "Mallet" TMake [starter 1]

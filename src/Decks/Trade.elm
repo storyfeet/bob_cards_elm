@@ -85,8 +85,8 @@ sailboat = Card "Sailboat" TMove
 climbingBoots: Card 
 climbingBoots = Card "Climbing Boots" TMove
     [pay Iron 1]
-    [ [pay Food 1,Move (N 1)]
-    , [pay Any 1, MountainMove (N 1)]
+    [ [pay Any 1,Move (N 1)]
+    , [pay Food 1, MountainMove (N 1)]
     ]
 
 binoculars: Card
