@@ -1,6 +1,11 @@
 module Job exposing (..)
-type alias Job = List Action
-type Place 
+
+
+type alias Job =
+    List Action
+
+
+type Place
     = Water
     | Forest
     | Prairie
@@ -8,7 +13,8 @@ type Place
     | Mountain
     | River
 
-type Resource  
+
+type Resource
     = Gold
     | Wood
     | Iron
@@ -16,7 +22,7 @@ type Resource
     | Any
 
 
-type JobNum 
+type JobNum
     = N Int
     | X Int
     | D Int
@@ -24,22 +30,41 @@ type JobNum
     | This
     | None
 
-jnum: JobNum -> String
+
+jnum : JobNum -> String
 jnum j =
     case j of
-        X 1 -> "x"
-        D 1 -> "⬢"
-        XD 1 -> "x⬢"
-        N n -> String.fromInt n
-        X n -> String.fromInt n ++ "x"
-        D n -> String.fromInt n ++ "⬢"
-        XD n-> String.fromInt n ++ "x⬢"
-        This -> "!"
-        None -> ""
+        X 1 ->
+            "x"
 
-type CardType 
+        D 1 ->
+            "⬢"
+
+        XD 1 ->
+            "x⬢"
+
+        N n ->
+            String.fromInt n
+
+        X n ->
+            String.fromInt n ++ "x"
+
+        D n ->
+            String.fromInt n ++ "⬢"
+
+        XD n ->
+            String.fromInt n ++ "x⬢"
+
+        This ->
+            "!"
+
+        None ->
+            ""
+
+
+type CardType
     = TAny
-    | TStarter 
+    | TStarter
     | THealth
     | TFight
     | TMove
@@ -49,21 +74,29 @@ type CardType
     | TPlayer Int
     | TDanger DangerType
 
+
 type DangerType
     = Pain
     | Exhaustion
     | DAny
 
-dangerType: DangerType -> String
-dangerType d = 
+
+dangerType : DangerType -> String
+dangerType d =
     case d of
-        Pain -> "P"
-        Exhaustion -> "E"
-        DAny -> ""
+        Pain ->
+            "P"
+
+        Exhaustion ->
+            "E"
+
+        DAny ->
+            ""
+
 
 type Action
     = Move JobNum
-    | Or 
+    | Or
     | In Place
     | Attack JobNum
     | Defend JobNum
@@ -79,45 +112,60 @@ type Action
     | Reveal JobNum JobNum --Num Distance
     | Starter JobNum
 
+
+
 -- COSTS
 
+
 pay : Resource -> Int -> Action
-pay r n = 
+pay r n =
     N n |> Pay r
 
+
 starter : Int -> Action
-starter n = Starter (N n)
+starter n =
+    Starter (N n)
 
 
 scrapMe : Action
-scrapMe = Scrap TAny This
+scrapMe =
+    Scrap TAny This
 
-scrapD : Action 
-scrapD = Scrap (TDanger DAny) This
 
-scrapThis: CardType -> Action
-scrapThis ct = Scrap ct This
+scrapD : Action
+scrapD =
+    Scrap (TDanger DAny) This
 
-payEq : Int ->  List Resource -> List Action
+
+scrapThis : CardType -> Action
+scrapThis ct =
+    Scrap ct This
+
+
+payEq : Int -> List Resource -> List Action
 payEq n l =
-    l |> List.map (\r-> Pay r (N n)) 
+    l |> List.map (\r -> Pay r (N n))
+
 
 gain : Resource -> Int -> Action
 gain r n =
-    N n |> Gain r 
+    N n |> Gain r
+
 
 gather : Resource -> Int -> Action
 gather r n =
     Gain r (D n)
-    
+
 
 attack : Int -> Action
 attack n =
     Attack (D n)
 
+
 defend : Int -> Action
 defend n =
     Defend (D n)
+
 
 draw : Int -> Action
 draw n =
@@ -125,36 +173,49 @@ draw n =
 
 
 discard : Action
-discard = 
+discard =
     Discard TAny (N 1)
 
-discardMe : CardType -> Action 
-discardMe ct = Discard ct This
+
+discardMe : CardType -> Action
+discardMe ct =
+    Discard ct This
+
 
 discardD : Action
-discardD = Discard (TDanger DAny) This
+discardD =
+    Discard (TDanger DAny) This
+
+
 
 -- JOBS
+
+
 trade : Resource -> Int -> Resource -> Int -> Job
 trade a aN b bN =
-    [Pay a (X aN) , Gain b (X bN)]
+    [ Pay a (X aN), Gain b (X bN) ]
 
-riverGather : Resource -> Int ->Job
-riverGather = gatherAt River
+
+riverGather : Resource -> Int -> Job
+riverGather =
+    gatherAt River
+
 
 gatherAt : Place -> Resource -> Int -> Job
-gatherAt p r n = 
-    [In p,Gain r (D n)  ]
+gatherAt p r n =
+    [ In p, Gain r (D n) ]
 
 
 foodMove : Int -> Int -> Job
-foodMove f d = [Pay Food (N f),Move(N d)]
+foodMove f d =
+    [ Pay Food (N f), Move (N d) ]
+
 
 woodMove : Int -> Int -> Job
-woodMove w d = [pay Wood w, Move(N d) ]
+woodMove w d =
+    [ pay Wood w, Move (N d) ]
 
 
 scrapFor : CardType -> Resource -> Int -> Job
 scrapFor ct r n =
-    [scrapThis ct, gain r n]
-
+    [ scrapThis ct, gain r n ]

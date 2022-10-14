@@ -29,4 +29,5 @@ pList = [ "arm wound"
      , "telescope"
      , "thirst"
      , "trident"
+     , "two man saw"
     ]

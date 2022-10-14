@@ -8,7 +8,7 @@ import HasPicList
 type alias Card =
     { name : String
     , ctype : CardType
-    , cost : List Action
+    , cost : Job
     , jobs : List Job
     }
 
