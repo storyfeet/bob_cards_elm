@@ -17,18 +17,19 @@ basicDeck n =
 
 farmerDeck : List (Card, Int)
 farmerDeck = [(pan, 2 )
-    , (toStarter Trd.horse 1, 1)
-    , (toStarter Trd.cow 1, 1)
+    , (toStarter Trd.horse , 1)
+    , (toStarter Trd.cow , 1)
     , (boots ,1)
     , (rookieTrader , 1)
-    , (saw,2)
+    , (knife ,1)
+    , (saw,3)
     , (pickaxe, 1)
     , (mallet,  1)
     ] 
 
-toStarter: Card -> Int -> Card
-toStarter c n = 
-    {c | cost = [starter n]}
+toStarter: Card -> Card
+toStarter c = 
+    {c | cost = [starter 1]}
 
 pan : Card
 pan = Card "Pan" TGather [starter 2] [riverGather Gold 1]
