@@ -9,8 +9,9 @@ type alias Player =
     , difficulty : Int
     , startItems : Job
     , jobs : List Job.Job
-    , startCards : List (Int ,Card)
+    , startCards : List (Card, Int)
     }
+
 
 
 jakeWilder : Player 
@@ -18,7 +19,7 @@ jakeWilder = Player "Jake Wilder" 1 []
     [ [discard , Move (N 1)]
     , [Scrap TAny (N 1)]
     , [Discard (TDanger DAny) (N 2)]
-    ] []
+    ] (DS.basicDeck 1)
 
 blazeDecker : Card
 blazeDecker = Card "Blaze Decker" (TPlayer 1)[]
