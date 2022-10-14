@@ -110,7 +110,7 @@ type Action
     | WaterMove JobNum
     | MountainMove JobNum
     | Reveal JobNum JobNum --Num Distance
-    | Starter JobNum
+    | Starter 
 
 
 
@@ -122,9 +122,9 @@ pay r n =
     N n |> Pay r
 
 
-starter : Int -> Action
-starter n =
-    Starter (N n)
+starter : Action
+starter =
+    Starter 
 
 
 scrapMe : Action

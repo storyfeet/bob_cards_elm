@@ -4,15 +4,15 @@ import Job exposing (..)
 import Decks.Trade as Trd
 --STARTER CARDS
 
-basicDeck :Int -> List (Card,Int)
-basicDeck n = 
-    [(pan, 2 * n )
-    ,(boots,2 * n )
-    ,(knife,2 * n)
-    ,(rookieTrader ,2 * n)
-    ,(saw,2 * n)
-    ,(pickaxe,n)
-    ,(mallet,n)
+basicDeck :List (Card,Int)
+basicDeck = 
+    [(pan, 2 )
+    ,(boots,2)
+    ,(knife,2)
+    ,(rookieTrader ,2)
+    ,(saw,2 )
+    ,(pickaxe,1)
+    ,(mallet,1)
     ]
 
 farmerDeck : List (Card, Int)
@@ -27,17 +27,29 @@ farmerDeck = [(pan, 2 )
     , (mallet,  1)
     ] 
 
+minerDeck : List (Card, Int)
+minerDeck =
+    [(pan, 2 )
+    ,(toStarter Trd.climbingBoots,2)
+    ,(knife,1)
+    ,(rookieTrader ,2)
+    ,(saw,2 )
+    ,(pickaxe,2)
+    ,(mallet,1)
+    ]
+
+
 toStarter: Card -> Card
 toStarter c = 
-    {c | cost = [starter 1]}
+    {c | cost = [starter]}
 
 pan : Card
-pan = Card "Pan" TGather [starter 2] [riverGather Gold 1]
+pan = Card "Pan" TGather [starter] [riverGather Gold 1]
 
 
 
 knife : Card
-knife = Card "Knife" TGather [starter 2] 
+knife = Card "Knife" TGather [starter] 
     [ [discard, gather Food 1]
     , [In Forest , gather Food 2]
     , [defend 1, attack 2]
@@ -46,27 +58,27 @@ knife = Card "Knife" TGather [starter 2]
 
 saw:Card
 saw = Card "Saw" TGather 
-    [starter 2] 
+    [starter] 
     [ [In Forest , discard , Gain Wood (D 2)] 
     ]
 
 
 boots : Card
-boots = Card "Boots" TMove [starter 2] 
+boots = Card "Boots" TMove [starter] 
     [foodMove 1 1]
 
 rookieTrader : Card
-rookieTrader = Card "Rookie Trader" TTrade [starter 2]
+rookieTrader = Card "Rookie Trader" TTrade [starter]
     [ [In Village ,Pay Gold (X 1), Gain Any (X 1)]
     , [In Village ,Pay Any (X 2), Gain Any (X 1)]
     , [discard,Pay Any (X 2), Gain Any (X 1)]
     ]
 
 pickaxe : Card
-pickaxe = Card "Pickaxe" TGather [starter 1]
+pickaxe = Card "Pickaxe" TGather [starter]
     [[In Mountain,discard , gather Iron 2]]
 
 mallet : Card
-mallet = Card "Mallet" TMake [starter 1]
+mallet = Card "Mallet" TMake [starter]
     [[pay Gold 1,pay Iron 1, pay Wood 1,discard ,BuildRail]]
 

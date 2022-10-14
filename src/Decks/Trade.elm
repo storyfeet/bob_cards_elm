@@ -1,4 +1,4 @@
-module Decks.Trade exposing (tradeDeck,explorerDeck,diggerDeck,fighterDeck,cow,horse)
+module Decks.Trade exposing (tradeDeck,explorerDeck,diggerDeck,fighterDeck,cow,horse,climbingBoots)
 import Cards exposing (..)
 import Job exposing (..)
 
