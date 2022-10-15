@@ -153,12 +153,25 @@ placeOneDir numCards padding page card n =
     in
         start + toFloat n * step
 
-placeCarder : Float -> Float -> Float -> Float -> Float ->Float -> Int -> String -> String
-placeCarder margin padding pw ph cw ch =
+placeOneDirRev  : Int -> Float -> Float -> Float -> Int -> Float
+placeOneDirRev numCards padding page card n =
+    let 
+        nf = toFloat numCards
+        start = (page - nf * card - (nf - 1) * padding) / 2
+        step = card + padding
+    in
+        start + toFloat (numCards - n - 1) * step
+
+placeCarder : Float -> Float -> Float -> Float -> Float ->Float -> Bool -> Int -> String -> String
+placeCarder margin padding pw ph cw ch reverse=
     let 
         nwide = nCardsFit margin padding pw cw
         nhigh = nCardsFit margin padding ph ch
-        fx = placeOneDir nwide padding pw cw
+        fx = if reverse then
+            placeOneDirRev nwide padding pw cw
+            else
+            placeOneDir nwide padding pw cw
+
         fy = placeOneDir nhigh padding ph ch
     in 
         placeCardF nwide fx fy

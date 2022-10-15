@@ -2,6 +2,8 @@ port module SvgMaker exposing (log,nextPage, main)
 
 import Platform exposing (worker)
 import PageSvg exposing (..)
+import Player as PL
+import PlayerSvg as PLSvg
 import CardSvg exposing (..)
 import Cards exposing (..)
 import Decks.All exposing (allCards)
@@ -19,10 +21,16 @@ type alias Writer = { fname:String, content:String}
 
 
 placeCard : Int -> String -> String
-placeCard = placeCarder 3 0 210 297 50 70
+placeCard = placeCarder 3 0 210 297 50 70 False
 
 placeTile : Int -> String -> String
-placeTile = placeCarder 3 0 210 297 45 45 
+placeTile = placeCarder 3 0 210 297 45 45 False
+
+placePlayer: Int -> String -> String
+placePlayer = placeCarder 3 0 210 291 100 90 False
+
+placePlayerBack: Int -> String -> String
+placePlayerBack = placeCarder 3 0 210 291 100 90 True
 
 type alias Placer = (Int -> String -> String)
 
@@ -35,6 +43,7 @@ populate c n=
     case n of 
         0 -> []
         v -> c::(populate c (v - 1))
+
 listPage :(c -> String)-> Placer ->List c -> String 
 listPage fnt placer l =
     l |> List.map fnt 
@@ -52,6 +61,8 @@ backList placer n =
 type PrintMode
     = Cards
     | Tiles
+    | Players
+    | PlayerBacks
     | Done
 
 type alias Model = 
@@ -68,16 +79,27 @@ init _ =
 
 update: Msg -> Model -> (Model,Cmd Msg)
 update ms mod = 
-    case (ms,mod.pmode) of 
-        (Next, Cards) -> case nextFront mod.pos starterList of
-            Nothing -> update Next {mod | pos = 0 , pmode = Tiles}
-            Just w -> ({mod | pos = mod.pos +1}, w |> log)
-        (Next, Tiles) -> case nextTile mod.pos (Land.fullDeck ) of
-            -- Do Backs and set to Done
-            Nothing -> ({mod | pmode = Done},Writer "backs.svg" (backList placeCard 16)|> log )
-            Just w -> ({mod | pos = mod.pos +1 }, w|> log)
-        (Next, Done) -> (mod,Cmd.none)
+    case ms of 
+        Next -> updateNext mod
 
+updateNext : Model -> (Model,Cmd Msg)
+updateNext mod = 
+    case mod.pmode of 
+        Cards -> case nextFront mod.pos starterList of
+            Just w -> ({mod | pos = mod.pos +1}, w |> log)
+            Nothing -> updateNext {mod | pos = 0 , pmode = Tiles}
+        Tiles -> case nextTile mod.pos (Land.fullDeck ) of
+            -- Do Backs and set to Done
+            Just w -> ({mod | pos = mod.pos +1 }, w|> log)
+            Nothing -> updateNext {mod | pos = 0, pmode = Players}
+        Players -> case nextPlayer mod.pos PL.players of
+            Just w -> ({mod | pos = mod.pos +1}, w|> log)
+            Nothing -> updateNext {mod | pos = 0, pmode = PlayerBacks}
+        PlayerBacks -> case nextPlayerBack mod.pos PL.players of
+            Just w -> ({mod | pos = mod.pos +1}, w|> log)
+            -- GO Print Backs and say set to Done
+            Nothing -> ({mod | pmode = Done},Writer "backs.svg" (backList placeCard 16)|> log )
+        Done -> (mod,Cmd.none)
             
      
 
@@ -96,6 +118,12 @@ nextFront = tryNextPage 16 front placeCard "front"
 
 nextTile : Int -> List Tile -> Maybe Writer
 nextTile = tryNextPage 24 TileSvg.front placeTile "tiles"
+
+nextPlayer : Int -> List PL.Player -> Maybe Writer
+nextPlayer = tryNextPage 6 PLSvg.front placePlayer "players"
+
+nextPlayerBack : Int -> List PL.Player -> Maybe Writer
+nextPlayerBack = tryNextPage 6 PLSvg.back placePlayerBack "playerback"
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
