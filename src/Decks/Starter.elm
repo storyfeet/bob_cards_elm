@@ -39,6 +39,17 @@ minerDeck =
     ]
 
 
+sailorDeck : List (Card, Int)
+sailorDeck =
+    [ (pan,2)
+    ,(boots,2)
+    ,(toStarter Trd.net,2)
+    ,(rookieTrader ,2)
+    ,(saw,2 )
+    ,(pickaxe,1)
+    ,(mallet,1)
+    ]
+
 toStarter: Card -> Card
 toStarter c = 
     {c | cost = [starter]}

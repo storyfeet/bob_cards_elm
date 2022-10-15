@@ -69,7 +69,7 @@ action x y c =
         Draw n -> jobCard x y TAny "+" "green" n
         Scrap ct n -> jobCard x y ct "#" "red" n
         Take ct n -> jobCard x y ct "^" "blue" n
-        Starter n -> jobStar x y "yellow"  n
+        Starter -> qStar x y "yellow" "black" --jobStar x y "yellow"  n
         Move n -> jobN x y "move" n
         Attack n -> jobN x y "attack" n
         Defend n -> jobN x y "defend" n
