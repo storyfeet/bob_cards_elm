@@ -12,7 +12,7 @@ front card =
     , text "Arial" 5 [xy 2 6,flStk "Black" "white" 0.8,bold,strokeFirst
     ] card.name
     , costOrType card.cost card.ctype
-    , jobs 69 card.jobs
+    , jobs 5 69 card.jobs
     ]
 
 back : String
@@ -24,11 +24,11 @@ back  =
 
     ]
 
-jobs : Float -> List Job -> String
-jobs y l =
+jobs : Float -> Float -> List Job -> String
+jobs x y l =
     case l of 
         [] -> ""
-        h::t -> job 5 (y - jobHeight h) h ++ jobs (y - jobHeight h) t 
+        h::t -> job x (y - jobHeight h) h ++ jobs x (y - jobHeight h) t 
 
 
 job : Float -> Float -> Job -> String
