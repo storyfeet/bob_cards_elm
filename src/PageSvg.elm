@@ -29,6 +29,13 @@ text : String -> Float -> List String -> String -> String
 text fnt fsize pps txt = 
     tag "text" ((font fnt fsize) :: pps) [txt]
 
+textLines : Float -> Float -> Float -> List String -> List String -> String 
+textLines x y dy attrs ls =
+    ls 
+    |> List.indexedMap (\i s->tag "text" ((xy x (y + (dy * (toFloat i)))):: attrs) [s]) 
+    |> String.join "\n"
+
+
 circle: Float -> Float -> Float -> List String -> String
 circle x y r pps =
     etag "ellipse" ((cenRad x y r r)::pps )

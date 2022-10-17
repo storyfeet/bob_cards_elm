@@ -94,7 +94,7 @@ samBoater =
 
 jebSteal : Player
 jebSteal =
-    Player "Jeb Steal" 6 2
+    Player "Jeb Steal" 2 6
         standardRes 
         [ [ Take (TDanger Exhaustion) (N 1), Move (N 1) ]
         , [ pay Any 1, Discard (TDanger DAny) (N 1) ]
