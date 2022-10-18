@@ -1,9 +1,10 @@
 module Player exposing (..)
 
 import Cards exposing (Card)
-import Decks.Starter as DS
+import Decks.Starter as DS exposing (..)
 import Job exposing (..)
 import Dict exposing (Dict)
+import Decks.Trade exposing (..)
 
 startRes : List (Resource, Int) -> Job
 startRes = 
@@ -49,6 +50,7 @@ reqList n =
 --    |> List.map (\(c,v) -> (cme,v))
 
 
+-- Basic 1
 jakeWilder : Player
 jakeWilder =
     Player "Jake Wilder" 1 6
@@ -59,6 +61,28 @@ jakeWilder =
         ]
         (DS.basicDeck )
 
+--Moutain 1
+caseyRocks : Player
+caseyRocks = 
+    Player "Casey Rocks" 1 6
+        (startRes [(Gold,2 ), (Food,5)])
+        [ [ Discard TAny (N 1), MountainMove (N 1) ]
+        , [ pay Food 1, Move (N 1) ]
+        , [ Scrap TAny (N 1), Scrap (TDanger DAny) (N 1) ]
+        ]
+        (DS.coreMinus [boots,pickaxe] ++ [(toStarter climbingBoots, 2), (DS.pickaxe ,2)])
+
+
+--Water 1
+samBoater : Player
+samBoater =
+    Player "Sam Boater" 1 6
+        standardRes  
+        [ [ Draw (N 1), Scrap TAny (N 1) ]
+        , [ In Water, Scrap (TDanger DAny) (X 1) ]
+        , [ Pay Any (N 1), WaterMove (N 1), Move (N 1) ]
+        ]
+        (coreMinus [saw,knife] ++ [(net,2),(axe, 1)])
 
 blazeDecker : Player
 blazeDecker =
@@ -71,25 +95,7 @@ blazeDecker =
         (DS.basicDeck)
 
 
-caseyRocks : Player
-caseyRocks =
-    Player "Casey Rocks" 1 6
-        (startRes [(Gold,2 ), (Food,5)])
-        [ [ Discard TAny (N 1), MountainMove (N 1) ]
-        , [ pay Food 1, Move (N 1) ]
-        , [ Scrap TAny (N 1), Scrap (TDanger DAny) (N 1) ]
-        ]
-        (DS.minerDeck)
 
-samBoater : Player
-samBoater =
-    Player "Sam Boater" 1 6
-        standardRes  
-        [ [ Draw (N 1), Scrap TAny (N 1) ]
-        , [ In Water, Scrap (TDanger DAny) (X 1) ]
-        , [ Pay Any (N 1), WaterMove (N 1), Move (N 1) ]
-        ]
-        (DS.sailorDeck)
 
 
 jebSteal : Player
@@ -100,3 +106,26 @@ jebSteal =
         , [ pay Any 1, Discard (TDanger DAny) (N 1) ]
         ]
         (DS.basicDeck)
+
+
+
+{-- Types
+Basic
+Mountain 
+Water
+Farmer
+Hunter
+Fighter
+
+
+--}
+
+{-- NAMES
+Josephine Willow
+Fisher Byrd
+
+Dorothy Duke
+Jane Clarence
+
+
+--}

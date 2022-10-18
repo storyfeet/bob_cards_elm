@@ -4,16 +4,27 @@ import Job exposing (..)
 import Decks.Trade as Trd
 --STARTER CARDS
 
-basicDeck :List (Card,Int)
-basicDeck = 
-    [(pan, 2 )
-    ,(boots,2)
+
+coreDeck :List (Card,Int)
+coreDeck = 
+    [(boots,2)
+    ,(pan, 2 )
     ,(knife,2)
-    ,(rookieTrader ,2)
     ,(saw,2 )
     ,(pickaxe,1)
+    ,(rookieTrader ,1)
     ,(mallet,1)
     ]
+
+coreMinus: List (Card) -> List (Card ,Int)
+coreMinus l =
+    coreDeck |> List.filter (\(c,_) -> not (List.member c l))
+    
+
+basicDeck :List (Card,Int)
+basicDeck =  
+    coreMinus [rookieTrader] ++ [(rookieTrader , 2)]
+
 
 farmerDeck : List (Card, Int)
 farmerDeck = [(pan, 2 )
@@ -27,16 +38,6 @@ farmerDeck = [(pan, 2 )
     , (mallet,  1)
     ] 
 
-minerDeck : List (Card, Int)
-minerDeck =
-    [(pan, 2 )
-    ,(toStarter Trd.climbingBoots,2)
-    ,(knife,1)
-    ,(rookieTrader ,2)
-    ,(saw,2 )
-    ,(pickaxe,2)
-    ,(mallet,1)
-    ]
 
 
 sailorDeck : List (Card, Int)
@@ -56,7 +57,6 @@ toStarter c =
 
 pan : Card
 pan = Card "Pan" TGather [starter] [riverGather Gold 1]
-
 
 
 knife : Card
