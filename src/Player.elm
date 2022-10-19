@@ -27,7 +27,7 @@ type alias ReqList = Dict String (Card,List Int)
 players : List Player
 players = 
     [ jakeWilder,blazeDecker,caseyRocks,samBoater,elijahWatton,wayneJohnson
-    , claytonConnel,jebSteal]
+    , claytonConnel,dorotheaDuke,jebSteal]
 
 
 reqCard : Card -> Int -> ReqList-> ReqList
@@ -72,7 +72,7 @@ caseyRocks =
         , [ pay Food 1, Move (N 1) ]
         , [ Scrap TAny (N 1), Scrap (TDanger DAny) (N 1) ]
         ]
-        (DS.coreMinPlus [boots,pickaxe] [(toStarter climbingBoots, 2), (DS.pickaxe ,2)])
+        (DS.coreMinPlus [boots,pickaxe] [(climbingBoots, 2), (pickaxe ,2)])
 
 
 --Water 1
@@ -123,13 +123,26 @@ wayneJohnson =
 
 claytonConnel : Player
 claytonConnel =
-    Player "clayton Connel" 1 5
+    Player "clayton Connel" 2 5
         standardRes
         [ [ discard, Move (N 1) ]
         , [ Scrap TAny (N 1) ]
         , [ Discard (TDanger DAny) (X 1) ]
         ]
         (DS.basicDeck )
+
+-- Mountain 2
+dorotheaDuke : Player
+dorotheaDuke = 
+    Player "Dorothea Duke" 2 6
+        (startRes [(Gold,2 ), (Food,5)])
+        [ [ Discard TAny (N 2), MountainMove (N 1) ]
+        , [ pay Food 2, Move (N 1) ]
+        , [ Scrap TAny (N 1), Scrap (TDanger DAny) (N 1) ]
+        ]
+        (DS.coreMinPlus [boots,pickaxe] [(climbingBoots, 2), (pickaxe ,2)])
+
+
 
 -- Farmer 2
 jebSteal : Player
@@ -157,9 +170,8 @@ Fighter
 
 {-- NAMES
 Josephine Willow
-Fisher Byrd
 
-Dorothy Duke
+Fisher Byrd
 Jane Clarence
 
 
