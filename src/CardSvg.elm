@@ -145,7 +145,7 @@ jobCard x y ct tx tcol n =
 cardLetter : Float -> Float -> CardType -> String
 cardLetter x y ct =
     case ct of
-        TDanger d -> idText x y "black" (dangerType d)
+        TDanger d -> idText (x+1) y "red" (dangerType d)
         TStarter -> 
             polygon (starPoints x (y - 4) 5 5 ) [narrowStk "yellow" "black"]
         _ -> ""

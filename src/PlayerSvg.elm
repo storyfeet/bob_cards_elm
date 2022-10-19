@@ -13,8 +13,8 @@ front p =
         , text "Arial" 4 [xy 7 50 , txCenter , rotate -90 7 50,narrowStk "black" "white" ] "Draw"
         , text "Arial" 4 [xy 93 50 , txCenter , rotate 90 93 50,narrowStk "black" "white" ] "Discard"
         , jobs 9 85 p.jobs
-        , picItem 85 8 "Difficulty" "difficulty" p.difficulty "red"
-        , picItem 85 20 "Hand Size" "hand_size" p.handSize "Blue"
+        , picItem 75 2 "difficulty" p.difficulty "red"
+        , picItem 85 2 "hand_size" p.handSize "Blue"
         , text "Arial" 4 [xy 50 54, bold] "Player Phase"
         , playerPhase p.handSize |> textLines 50 60 6 [font "Arial" 4]
         ]
@@ -35,11 +35,10 @@ back p =
         , banditPhase|> textLines 55 20 6 [font "Arial" 4]
         ]
 
-picItem : Float -> Float -> String -> String -> Int -> String -> String
-picItem x y tx picName num col =
+picItem : Float -> Float -> String -> Int -> String -> String
+picItem x y picName num col =
     String.join "\n" [
-        text "Arial" 4 [xy x (y + 5 ),flStk "Black" "none" 0,txRight] tx
-        , CSV.jobPic x y picName 
+         CSV.jobPic x y picName 
         , text "Arial" 5 [xy (x + 5) (y + 4), CSV.narrowStk col "white" , bold ] (String.fromInt num)
         ]
 

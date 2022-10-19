@@ -1,4 +1,4 @@
-module Player exposing (..)
+module Player exposing (Player,players,reqList)
 
 import Cards exposing (Card)
 import Decks.Starter as DS exposing (..)
@@ -25,7 +25,9 @@ type alias Player =
 type alias ReqList = Dict String (Card,List Int)
 
 players : List Player
-players = [jakeWilder,blazeDecker,caseyRocks,samBoater,jebSteal]
+players = 
+    [ jakeWilder,blazeDecker,caseyRocks,samBoater,elijahWatton,wayneJohnson
+    , claytonConnel,jebSteal]
 
 
 reqCard : Card -> Int -> ReqList-> ReqList
@@ -70,7 +72,7 @@ caseyRocks =
         , [ pay Food 1, Move (N 1) ]
         , [ Scrap TAny (N 1), Scrap (TDanger DAny) (N 1) ]
         ]
-        (DS.coreMinus [boots,pickaxe] ++ [(toStarter climbingBoots, 2), (DS.pickaxe ,2)])
+        (DS.coreMinPlus [boots,pickaxe] [(toStarter climbingBoots, 2), (DS.pickaxe ,2)])
 
 
 --Water 1
@@ -82,30 +84,63 @@ samBoater =
         , [ In Water, Scrap (TDanger DAny) (X 1) ]
         , [ Pay Any (N 1), WaterMove (N 1), Move (N 1) ]
         ]
-        (coreMinus [saw,knife] ++ [(net,2),(axe, 1)])
+        (coreMinPlus [saw,knife] [(net,2),(axe, 1)])
 
-blazeDecker : Player
-blazeDecker =
-    Player "Blaze Decker" 1 6
+--Farmer 1
+elijahWatton : Player
+elijahWatton =
+    Player "Elijah Watton" 1 6
         standardRes
         [ [ Take (TDanger Exhaustion) (N 1), Move (N 1) ]
         , [ Discard TAny (X 1), Draw (X 1) ]
-        , [ Pay Any (X 1), Scrap TAny (X 2) ]
+        , [ Pay Food (X 1), Scrap TAny (X 2) ]
         ]
-        (DS.basicDeck)
+        (coreMinPlus [knife] [(cow,2)])
 
+-- Hunter 1
+blazeDecker : Player
+blazeDecker = 
+    Player "Blaze Decker" 1 6
+    standardRes
+    [ [ discard, Move (N 1)]
+    , [ scrap TAny 1, scrap anyDanger 1]
+    ] 
+    (coreMinPlus [knife] [(huntingKnife , 2)])
 
+-- Fighter 1
 
+wayneJohnson : Player
+wayneJohnson = 
+    Player "Wayne Johnson" 1 6
+    (startRes [(Gold, 1),(Wood,2),(Food, 4)])
+    [ [attack 2]
+    , [Pay Food (X 1), Move (X 1)]
+    , [Pay Any (X 2) ,Scrap (TDanger Pain) (X 1)]
+    ]
+    (coreMinPlus [knife] [(knife,1),(revolver,1)])
 
+-- Basic 2
 
+claytonConnel : Player
+claytonConnel =
+    Player "clayton Connel" 1 5
+        standardRes
+        [ [ discard, Move (N 1) ]
+        , [ Scrap TAny (N 1) ]
+        , [ Discard (TDanger DAny) (X 1) ]
+        ]
+        (DS.basicDeck )
+
+-- Farmer 2
 jebSteal : Player
 jebSteal =
     Player "Jeb Steal" 2 6
         standardRes 
         [ [ Take (TDanger Exhaustion) (N 1), Move (N 1) ]
         , [ pay Any 1, Discard (TDanger DAny) (N 1) ]
+        , [ pay Any 2, scrap (TAny) 1]
         ]
-        (DS.basicDeck)
+        (coreMinPlus [knife] [(cow,1)])
 
 
 

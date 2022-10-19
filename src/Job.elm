@@ -80,6 +80,8 @@ type DangerType
     | Exhaustion
     | DAny
 
+anyDanger:CardType
+anyDanger = TDanger DAny
 
 dangerType : DangerType -> String
 dangerType d =
@@ -127,10 +129,8 @@ starter =
     Starter 
 
 
-scrapMe : Action
-scrapMe =
-    Scrap TAny This
-
+scrap:  CardType -> Int -> Action
+scrap ct n = Scrap ct (N n)
 
 scrapD : Action
 scrapD =
