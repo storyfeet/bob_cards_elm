@@ -26,8 +26,8 @@ type alias ReqList = Dict String (Card,List Int)
 
 players : List Player
 players = 
-    [ jakeWilder,blazeDecker,caseyRocks,samBoater,elijahWatton,wayneJohnson
-    , claytonConnel,dorotheaDuke,fisherByrd,jebSteal]
+    [ jakeWilder,blazeDecker,caseyRocks,samBoater,elijahWatton,wayneJohns
+    , claytonConnel,dorotheaDuke,fisherByrd,jebSteal,driftWood,alysBear]
 
 
 reqCard : Card -> Int -> ReqList-> ReqList
@@ -109,9 +109,9 @@ blazeDecker =
 
 -- Fighter 1
 
-wayneJohnson : Player
-wayneJohnson = 
-    Player "Wayne Johnson" 1 6
+wayneJohns : Player
+wayneJohns = 
+    Player "Wayne Johns" 1 6
     (startRes [(Gold, 1),(Wood,2),(Food, 4)])
     [ [attack 2]
     , [Pay Food (X 1), Move (X 1)]
@@ -166,6 +166,30 @@ jebSteal =
         (coreMinPlus [knife] [(cow,1)])
 
 
+-- Hunter 2
+
+alysBear : Player
+alysBear = 
+    Player "Alys Bear" 2 6
+    standardRes
+    [ [ discard,Discard anyDanger (N 1),Scrap TAny (X 1)]
+    , [ Discard TAny (N 1),scrap anyDanger 1 ]
+    , [ Discard anyDanger (N 1), Move (N 1)]
+    ] 
+    (coreMinPlus [knife] [(huntingKnife , 2)])
+
+-- Fighter 2
+
+driftWood : Player
+driftWood = 
+    Player "Drift Wood" 2 5
+    (startRes [(Gold, 1),(Wood,2),(Food, 4)])
+    [ [attack 2]
+    , [Pay Food (X 1), Move (X 1)]
+    , [Pay Any (X 1) ,Scrap (TDanger Pain) (X 1)]
+    ]
+    (coreMinPlus [knife] [(knife,1),(revolver,1)])
+
 
 {-- Types
 Basic
@@ -181,7 +205,6 @@ Fighter
 {-- NAMES
 Josephine Willow
 
-Fisher Byrd
 Jane Clarence
 
 
