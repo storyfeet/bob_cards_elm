@@ -27,7 +27,7 @@ type alias ReqList = Dict String (Card,List Int)
 players : List Player
 players = 
     [ jakeWilder,blazeDecker,caseyRocks,samBoater,elijahWatton,wayneJohnson
-    , claytonConnel,dorotheaDuke,jebSteal]
+    , claytonConnel,dorotheaDuke,fisherByrd,jebSteal]
 
 
 reqCard : Card -> Int -> ReqList-> ReqList
@@ -123,7 +123,7 @@ wayneJohnson =
 
 claytonConnel : Player
 claytonConnel =
-    Player "clayton Connel" 2 5
+    Player "Clayton Connel" 2 5
         standardRes
         [ [ discard, Move (N 1) ]
         , [ Scrap TAny (N 1) ]
@@ -142,7 +142,17 @@ dorotheaDuke =
         ]
         (DS.coreMinPlus [boots,pickaxe] [(climbingBoots, 2), (pickaxe ,2)])
 
+-- Water 2
 
+fisherByrd : Player
+fisherByrd = 
+    Player "Fisher Byrd" 2 5
+        standardRes  
+        [ [ Draw (N 1), Scrap TAny (N 1) ]
+        , [ In Water, Scrap (TDanger DAny) (X 1) ]
+        , [ Pay Any (X 1), WaterMove (N 1), Move (X 1) ]
+        ]
+        (coreMinPlus [saw,knife] [(net,2),(axe, 2)])
 
 -- Farmer 2
 jebSteal : Player
