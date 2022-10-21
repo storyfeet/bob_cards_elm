@@ -145,7 +145,7 @@ axe = Card "Axe" TGather [pay Wood 1,pay Iron 1]
     ]
 
 twoManSaw : Card
-twoManSaw = Card "2 Man Saw" TGather [pay Iron 2]
+twoManSaw = Card "Two Man Saw" TGather [pay Iron 2]
     [ [In Forest,Discard TAny (N 2), gather Wood 5]
     ]
 
