@@ -5,7 +5,7 @@ Deck Goes West - Rules
 Overview
 --------
 
-Set in the early settlement of the Americas, each player competes, either against other players or against the clock, to go as far west as possible while maintaining their supplies and managing their supplies, exhaustion and injuries, all while staying safe from Bandits.
+Set in the early settlement of the Americas, each player competes, either against other players or against the clock, to go as far west as possible, managing their supplies, exhaustion and injuries, all while staying safe from Bandits.
 
 Each player maintains a deck of cards with various actions available.
 During the main phase of the game players take turns to play cards and perform the actions on those cards. They may also buy cards from the trade row to gain extra abilities.
@@ -48,14 +48,27 @@ Contents
 
 
 
-Setup
------
+Board Setup
+--------- 
 
-Choose a direction to represent East on the table. Take the appropriate Score board (Solo or Multiplayer) And place it at the east so it's top is towards east.
+Use the following diagram to help you follow setup instructions
 
-Add a score counter for every player to the blue '0' on the Score board.
+<img src="{{cat $0 "/boards/start_setup_embedded.svg" }}">
 
+1. Choose a direction to represent West on the table. Take the appropriate Score Board (Standard or Co-op) And place it close to the the east of the playing area so it's compas shows the directions intended. And there is plenty of room to expand to the West.
+
+2. Add a score counter for every player to the clear '0' on the *Score Board*.
+
+3. Add a score counter for the bandits on the red '0' on the *Score Board*
 In solo games, also add a score counter for the bandits to the red '0' on the score board.
+
+4. Separate the cards into 4 groups based on their top right corner:
+    * Yellow Star = Starting Cards
+    * Black Star 'P' = *Pain* Cards
+    * Black Star 'E' = *Exhaustion* Cards
+    * Otherwise = *Trade Row* cards
+
+Shuffle the *Trade Row* cards and place them across the top of the Score Board.
 
 Give each player a Player Card. 
     * In a solo game, choose the starter card you wish, Higher level Player cards will make the game more difficult

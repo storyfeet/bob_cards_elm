@@ -7,7 +7,9 @@ browser:
 cards:
 	nu cardlister.nu
 	elm-node --js src/svg_maker.js src/SvgMaker.elm
-
+	
+rules: 
+	siter exec -t rules.md -d "../pics" > out/rules.html
 
 SVGFILES := $(wildcard cards_out/*.svg)
 
