@@ -48,31 +48,45 @@ Contents
 
 
 
-Board Setup
---------- 
+Setup
+-----
+
+First Separate the cards into 4 groups based on their top right corner:
+
+* Yellow Star = Starter Cards
+* Black Star 'P' = *Pain* Cards
+* Black Star 'E' = *Exhaustion* Cards
+* Anything Else = *Trade Row* cards
+
+<img src="{{cat $0 "/rules/card_types.svg"}}" >
+
+
+### Board Setup
+
 
 Use the following diagram to help you follow setup instructions
 
-<img src="{{cat $0 "/boards/start_setup_embedded.svg" }}">
+<img src="{{cat $0 "/rules/start_setup_embedded.svg" }}">
 
-1. Choose a direction to represent West on the table. Take the appropriate Score Board (Standard or Co-op) And place it close to the the east of the playing area so it's compas shows the directions intended. And there is plenty of room to expand to the West.
+1. **Choose and Place Board:** Choose a direction to represent West on the table. Take the appropriate Score Board (Standard or Co-op) And place it close to the the east of the playing area.It's compas should show the directions intended, and there should be plenty of room to expand to the West.
 
-2. Add a score counter for every player to the clear '0' on the *Score Board*.
+2. Add a **score counter** for every player to the clear '0' on the *Score Board*.
 
-3. Add a score counter for the bandits on the red '0' on the *Score Board*
-In solo games, also add a score counter for the bandits to the red '0' on the score board.
+3. Add a **Bandit Token** to the red '0' on the *Score Board*
 
-4. Separate the cards into 4 groups based on their top right corner:
-    * Yellow Star = Starting Cards
-    * Black Star 'P' = *Pain* Cards
-    * Black Star 'E' = *Exhaustion* Cards
-    * Otherwise = *Trade Row* cards
+4. Shuffle the **Trade Row** cards and deal 5 of them across the top of the Score Board. Leaving the rest in a draw pile beside them.
 
-Shuffle the *Trade Row* cards and place them across the top of the Score Board.
+5. Shuffle the **Pain** and **Exhaustion** Cards and place them face down by the appropriate symbol on the score board. These will help you tell the piles apart as they have no markings on the back.
 
-Give each player a Player Card. 
-    * In a solo game, choose the starter card you wish, Higher level Player cards will make the game more difficult
-    * In multiplayer, each player should have a level 1 card.
+6. Shuffle the **Land Tiles** and deal 6 of them face up in a 2x3 grid. North to south should be 3 tiles.
+
+7. Add a **Player Counter** for each player to the Eastmost Central tile. If that tile is water, swap it with another tile. 
+
+8. Deal 3 more *Land Tiles*, face down, to the west of the tiles already placed.
+
+
+
+### Player Setup 
 
 Sort the Starter cards by Name. Each Starter Card has a number in the yellow star, that is how many of that card each player should have. Distribute the cards like this. Each player should have 10 cards.
 Each player should shuffle these 10 cards, this will be thier Draw Deck.
@@ -121,8 +135,6 @@ Players take turns to do one of the following actions.
 * Pass - Discarding Cards any normal cards they want to.
 
 Once a player has passed, they may not do any more until the end of the round (Unless they are caught in a battle)
-
-
 
 Starting with the First Player and Clockwise around the table players take it in turns to activate
 
