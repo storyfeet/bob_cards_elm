@@ -2,6 +2,7 @@ module CardSvg exposing (..)
 import PageSvg exposing (..)
 import Cards exposing (..)
 import Job exposing (..)
+import HasPicList as PicLists
 
 
 front :  Card -> String
@@ -332,5 +333,7 @@ jobN : Float -> Float -> String -> JobNum -> String
 jobN x y fname n = jobS x y fname (jnum n)
 
 cardPicFile : String -> Maybe String
-cardPicFile = Cards.imageFile "../pics/cards/"
+cardPicFile = Cards.imageFile PicLists.pList ".svg" "../pics/cards/"
+
+
 

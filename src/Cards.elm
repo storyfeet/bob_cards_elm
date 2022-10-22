@@ -3,7 +3,6 @@ import Html exposing(..)
 import Html.Attributes exposing(..)
 import Css exposing (..)
 import Job exposing (..)
-import HasPicList
 
 type alias Card =
     { name : String
@@ -105,13 +104,19 @@ viewRect col inner =
     div (squareStyle col 35 |> itemStyle ) inner
 
 
-imageFile: String -> String -> Maybe String
-imageFile root cname = 
+
+
+
+imageFile: List String -> String -> String -> String -> Maybe String
+imageFile list ext root cname = 
     let 
         lcase = String.toLower cname
     in
-    if List.member lcase HasPicList.pList then
-        Just (root ++ lcase ++ ".svg")
+    if List.member lcase list then
+        Just (root ++ lcase ++ ext)
     else 
-        Nothing
+        Debug.log "No image by name:" lcase |> (\_ -> Nothing)
+        
+
+
 

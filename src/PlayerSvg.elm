@@ -2,6 +2,8 @@ module PlayerSvg exposing (front,back)
 import Player as PL
 import PageSvg exposing (..)
 import CardSvg  as CSV exposing (job,jobs,narrowStk)
+import HasPicList as PicLists
+import Cards 
 
 front : PL.Player -> String
 front p = 
@@ -10,6 +12,7 @@ front p =
         , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] p.name
+        , facePic 4 9 92 23 p.name
         , text "Arial" 4 [xy 7 50 , txCenter , rotate -90 7 50,narrowStk "black" "white" ] "Draw"
         , text "Arial" 4 [xy 93 50 , txCenter , rotate 90 93 50,narrowStk "black" "white" ] "Discard"
         , jobs 9 85 p.jobs
@@ -64,3 +67,12 @@ banditPhase =
     ]
 
 
+facePicFile: String -> Maybe String
+facePicFile = Cards.imageFile PicLists.cList ".png" "../pics/characters/"
+
+
+facePic: Float -> Float -> Float -> Float -> String -> String
+facePic x y w h cname = 
+    case  facePicFile cname of
+        Just f -> img x y w h f []
+        Nothing -> "" --Debug.log "Couldn't find thing" cname 
