@@ -71,8 +71,8 @@ Contents
 * Bandit Counters * Many
 * First Turn Marker
 * Land Tiles * Many
+* Player Cards - Wide Cards with difficulty and hand size in top right corner.
 * Cards - Type is marked by the star in the top right corner
-    * Player Cards - Blue Star
     * Starter Cards - Yellow Star
     * Pain Cards - Black Star with a 'P'
     * Exhaustion Cards - Black Stare with an 'E'
@@ -91,9 +91,11 @@ First Separate the cards into 4 groups based on their top right corner:
 
 <img src="{{cat $0 "/rules/card_types.svg"}}" >
 
+Note : Pain and Exhaustion are both types of "Danger Card" if your hand becomes full of either, you lose. 
+
+
 
 ### Board Setup
-
 
 Use the following diagram to help you follow setup instructions
 
@@ -137,6 +139,8 @@ Order of Play
 
 Repeat *Player Phase* and then *Bandit Phase* until either a player, or the bandits reach the end of their score track.
 
+A complete *Player Phase* and *Bandit Phase* is called a **Round**.
+
 ### Player Phase
 
 1. Draw Cards
@@ -153,13 +157,14 @@ Repeat *Player Phase* and then *Bandit Phase* until either a player, or the band
 
 4. Play and Buy Cards
 
-    Starting with the player with the P1 Token, going clockwise. Players take turns to do one of the following actions.
+    Starting with the player with the P1 Token, going clockwise until all players have passed, Players take turns to do one of the following actions.
 
     These actions are explained in more detail later.
 
     * Perform a Job
     * Purchase a Card
     * Trade with othe players
+    * Attack Bandits 
     * Pass 
 
     Once a player has passed, they may not do any more until the end of the round (Unless they are caught in a battle)
@@ -211,12 +216,41 @@ Repeat *Player Phase* and then *Bandit Phase* until either a player, or the band
     For each roll, add 1 bandit to every tile with the same number in it's red star on the map.
 
 
-Understanding Jobs
+Perform a Job
 ------------------
 
-A key concept in this game is the Jobs. There are Jobs on all game Cards.  They are a list of symbols representing actions that must all be taken in order to perform any of them and should be done in order from left to right.
+A Job is a set of Actions that must ALL be performed, they are indiced by a set of Icons in a row. For example.
 
-Every Card has Jobs on, to use it's job you
+<img src="{{cat $0 "/rules/job_examples.svg"}}">
+
+Jobs are found in 4 places.
+
+* On Item Cards (Starter and Trade)
+
+    To perform a Job on an Item Card, you must discard that card.
+    You may only perform one job per card.
+
+* On Danger Cards (Pain and Exhaustion)
+
+    The reason to perform the Job on a Danger Card, is to get rid of it. Danger Cards may not be discarded like Item Cards, and so you have to use the last action of their Jobs to either Discard them or Scrap them.
+
+    *(Note : Scrapping is much better as Discarding them means they will come into your hand again, Scrapping them means they are gone for good.)*
+
+* On Player Cards
+
+To use a Job on a *Player Card* you must Tap that *Player Card*. That is rotate it by 90 degrees, to mark it as used. You may only use one job on a player card per round.  It will be Untapped again, at the start of each Round.
+
+* On Village Tiles
+
+To use the Job on a Village Tile, your Player Token must be on that tile. You may only use a Village Tile's job once per Round. 
+
+
+
+
+
+
+
+
 
 {{/md}}
 
