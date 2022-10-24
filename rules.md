@@ -27,10 +27,21 @@ Once all players have passed, the bandits will take their turn, and the trade ro
 
 Then each player draws back up to 6 cards, and the cycle begins again.
 
+Competetive, Co-op and Single player
+---------------------
+
+This game can be played competively, co-op and single player. The rules barely need adjustment. Simply choose the appropriate score board and everything falls into place.
+
+The only differences from the competative game are as follows.
+
+In Co-op all players use the same score counter, and win or lose together.
+
+In Single Player, you do not have to wait for other players to take their turns, or pass the "Player 1" token.
+
 Winning and Scoring
 -------------------
 
-The game is won by scoring a number of points by performing actions on the map.
+The game is won by scoring a number of points by performing actions on the map. 
 
 1. Reveal a Land Tile 
     - If that tile is furthest west 2vp
@@ -41,6 +52,13 @@ The game is won by scoring a number of points by performing actions on the map.
 3. Remove the last bandit from an area.
     - 2vp
 
+The first player to reach the end of the score track wins the game.
+
+If the Bandits reach the end of their track, the game ends immediately.
+* In Co-op or Single player: The players Lose.
+* In Competetive: The player with the most points wins.
+
+    *(Ties are broken by distance west, followed by resource count)*
 
 Contents
 ---------
@@ -59,7 +77,6 @@ Contents
     * Pain Cards - Black Star with a 'P'
     * Exhaustion Cards - Black Stare with an 'E'
     * Trade Row Cards - No Star, but a cost to purchase.
-
 
 
 Setup
@@ -118,11 +135,7 @@ Use the following diagram to help you follow setup instructions
 Order of Play 
 -----------
 
-Repeat *Player Phase* followed by *Bandit Phase* until Either a player, or a bandit reaches the end of their score track.
-
-If the Bandits get their first, then in Co-op and Solo, The bandits win and player lose. In Multiplayer, the player furthest player on the score track wins. (Ties broken by distance west)
-
-If a player gets their first, that player wins.
+Repeat *Player Phase* and then *Bandit Phase* until either a player, or the bandits reach the end of their score track.
 
 ### Player Phase
 
@@ -146,6 +159,7 @@ If a player gets their first, that player wins.
 
     * Perform a Job
     * Purchase a Card
+    * Trade with othe players
     * Pass 
 
     Once a player has passed, they may not do any more until the end of the round (Unless they are caught in a battle)
@@ -159,7 +173,42 @@ If a player gets their first, that player wins.
 
 *(This is shown on the back of Player Cards)*
 
+1. Move the Bandit Tracker
 
+    One space on the score board.
+
+2. Move the Trade Row
+
+    1. Place the rightmost *Trade Row* card in the Trade row discard pile.
+    2. Move all cards in the *Trade Row* 1 space right.
+    3. Draw a Card from the draw pile and add it to the leftmost space on the *Trade Row*.
+
+3. Everyone takes an Exhaustion Card.
+
+    From the 'E' stack of Danger cards, draw, and give each player 1 card to place on the top of their Discard Pile *(Or Draw pile if they prefer)*
+
+4. Bandits Attack
+    
+    Starting From West to East, Each Group of bandits on the same tile as a player Attack (See "Attacking")
+
+5. Bandits Move.
+    Starting from West, then North, For every group of bandits not in on the same tile as a player, roll the Compas Dice.
+    Move the bandits 1 Space in the direction indicated. Or if you roll a '+' Add one Bandit to the group
+    * Bandits may move onto tiles that have been placed but not revealed, but not onto places with no tile at all.
+    * If they cannot move North or South, move them West instead.
+    * If they cannot move West, add a Bandit.
+    * If a group has 6 or more bandits do not add another.
+    * If a group of bandits meets another group, that have not rolled yet, move the other group separately. If they do not separate, they become 1 bigger group.
+
+6. Remove Tiles.
+
+    Remove all tiles more than 5 complete spaces East of the Eastmost player, along with any Bandits on them.
+    (This step is not strictly necessary, but those bandits are unlikely to affect the game any more).
+
+7. Bandits Appear.
+
+    Roll the chosen *Bandit Dice*, as many times as are indicated in the red star in the same section as the furthest forward player or bandit tracker on the scoreboard.
+    For each roll, add 1 bandit to every tile with the same number in it's red star on the map.
 
 
 Understanding Jobs
@@ -168,6 +217,8 @@ Understanding Jobs
 A key concept in this game is the Jobs. There are Jobs on all game Cards.  They are a list of symbols representing actions that must all be taken in order to perform any of them and should be done in order from left to right.
 
 Every Card has Jobs on, to use it's job you
+
 {{/md}}
+
 </body>
 </html>
