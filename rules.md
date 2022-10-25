@@ -219,9 +219,9 @@ A complete *Player Phase* and *Bandit Phase* is called a **Round**.
 Perform a Job
 ------------------
 
-A Job is a set of Actions that must ALL be performed, they are indiced by a set of Icons in a row. For example.
+A Job is a set of Actions that must ALL be performed, they are indicated by a set of Icons in a row. For example.
 
-<img src="{{cat $0 "/rules/job_examples.svg"}}">
+<img src="{{$0}}/rules/job_examples.svg">
 
 Jobs are found in 4 places.
 
@@ -244,13 +244,39 @@ To use a Job on a *Player Card* you must Tap that *Player Card*. That is rotate 
 
 To use the Job on a Village Tile, your Player Token must be on that tile. You may only use a Village Tile's job once per Round. 
 
+Understanding the Job Icons
+----------------
 
+### Places
 
+Square Icons represent a place. Your Player Token must be in that kind of place to perform the action. There must also be **No Bandits on the tile**
 
+<img src="{{$0}}/rules/places.svg">
 
+### Resources
 
+There are 4 key resources in the game, "Gold", "Iron", "Wood" and "Food". They can be paid and gained, to and from the General supply.
 
+<img src="{{$0}}/rules/resources.svg">
 
+'n' On the card will be an actual number.
+
+The grey circles represent a group of 'n' of the same item.
+If there are more than one grey circle, the contents of the each circle does not have to be the same.
+
+### ⬢ Rolling Dice ⬢
+
+The ⬢ Symbol means Roll Dice. The dice that come with this game have 6 sides, and the numbers [0,0,1,1,1,2] on representing successes.
+
+If using standard D6, treat 3,4,5 as 1 Success, and 6 as 2 Successes.
+
+If told ```+n⬢``` Roll 'n' dice and gain 1 of the resource for every success.
+
+### 'x' Means Any Number
+
+When Performing the Job If an action has an 'x' you can choose any number for x. It will be the same number for the whole Job.
+
+<img src="{{$0}}/rules/x_is_any.svg">
 
 {{/md}}
 
