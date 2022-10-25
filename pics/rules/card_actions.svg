@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="191.967mm"
+   height="16.52mm"
+   viewBox="0 0 191.967 16.520001"
+   version="1.1"
+   id="svg1791"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   sodipodi:docname="card_actions.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1793"
+     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.74208053"
+     inkscape:cx="423.80845"
+     inkscape:cy="210.89355"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2054" />
+  <defs
+     id="defs1788" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-9.8859005,-9.5245114)">
+    <g
+       id="g2043"
+       transform="translate(34.079273,0.52916667)">
+      <g
+         id="g3426"
+         transform="translate(-33.09917,-92.807862)">
+        <rect
+           x="105.7383"
+           y="58.310127"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           transform="rotate(30)"
+           id="rect2329" />
+        <text
+           font-family="Arial"
+           font-size="5px"
+           x="65.60257"
+           y="107.08067"
+           fill="#ffa500"
+           stroke="#ffffff"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           font-weight="bold"
+           text-anchor="middle"
+           id="text2331">-1</text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="53.541935"
+         y="17.028061"
+         id="text4162-37-36"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           x="53.541935"
+           y="17.028061"
+           id="tspan2344">Discard a card</tspan></text>
+    </g>
+    <g
+       id="g2062"
+       transform="translate(133.82913,-26.083187)">
+      <g
+         id="g3747"
+         transform="translate(-136.36185,-221.49816)">
+        <rect
+           x="272.1442"
+           y="141.56372"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           transform="rotate(30)"
+           id="rect2623" />
+        <text
+           font-family="Arial"
+           font-size="5px"
+           x="168.08748"
+           y="262.3833"
+           fill="#ff0000"
+           stroke="#ffffff"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           font-weight="bold"
+           text-anchor="middle"
+           id="text2625">#1</text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="52.846836"
+         y="43.782898"
+         id="text4162-37-36-3"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           x="52.846836"
+           y="43.782898"
+           id="tspan2380">Scrap a card</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           x="52.846836"
+           y="49.074562"
+           id="tspan2902" /></text>
+    </g>
+    <g
+       id="g2036"
+       transform="translate(-13.580011,12.763677)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="52.413761"
+         y="4.1072793"
+         id="text4162-37-36-3-2"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           x="52.413761"
+           y="4.1072793"
+           id="tspan2380-1">Draw a card</tspan></text>
+      <g
+         id="g2411"
+         transform="translate(-68.71306,-137.86418)">
+        <rect
+           x="153.52769"
+           y="68.618248"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           transform="rotate(30)"
+           id="rect1704" />
+        <text
+           font-family="Arial"
+           font-size="5px"
+           x="101.83535"
+           y="139.9025"
+           fill="#008000"
+           stroke="#ffffff"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           font-weight="bold"
+           text-anchor="middle"
+           id="text1706">+1</text>
+      </g>
+    </g>
+    <g
+       id="g2054"
+       transform="translate(80.520496,-12.415697)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:43.9621;display:inline;stroke-width:0.264583"
+         x="122.66517"
+         y="151.12054"
+         id="text4162-37-36-3-2-2"
+         transform="translate(-68.32426,-122.90439)"><tspan
+           x="122.66517"
+           y="151.12054"
+           id="tspan2362"><tspan
+   style="font-weight:normal;-inkscape-font-specification:sans-serif"
+   id="tspan2360">Add a card to your</tspan><tspan
+   y="151.12054"
+   id="tspan2364"> </tspan></tspan><tspan
+           x="122.66517"
+           y="156.4122"
+           id="tspan2368"><tspan
+             style="font-weight:normal;-inkscape-font-specification:sans-serif"
+             id="tspan2366">discard  or draw pile</tspan></tspan></text>
+      <g
+         id="g2500"
+         transform="translate(-95.78492,-25.165663)">
+        <rect
+           x="132.50317"
+           y="-20.301617"
+           width="6"
+           height="10"
+           fill="#ffff00"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="fill:#ffffff;paint-order:stroke"
+           rx="1"
+           ry="1"
+           transform="rotate(30)"
+           id="rect1554" />
+        <text
+           font-family="Arial"
+           font-size="5px"
+           x="127.55833"
+           y="52.383331"
+           fill="#0000ff"
+           stroke="#ffffff"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           font-weight="bold"
+           text-anchor="middle"
+           id="text1556">^1</text>
+      </g>
+    </g>
+  </g>
+</svg>

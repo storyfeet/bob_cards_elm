@@ -274,9 +274,32 @@ If told ```+n⬢``` Roll 'n' dice and gain 1 of the resource for every success.
 
 ### 'x' Means Any Number
 
-When Performing the Job If an action has an 'x' you can choose any number for x. It will be the same number for the whole Job.
+When Performing the Job If an action has an 'x' you can choose any number for x : Even Zero. It will be the same number for the whole Job.
 
 <img src="{{$0}}/rules/x_is_any.svg">
+
+### Card Acions
+
+There are four actions that involve Cards
+
+<img src="{{$0}}/rules/card_actions.svg">
+
+When Scrapping a Card put it in the appropriate discard pile. eg 'E' Danger cards beside the 'E' Danger draw pile, Starter Cards are removed from the game.
+
+Gained Cards can be added to top of your Draw Pile or Discard Pile
+
+### Card Types
+
+The four *Card Actions* can be applied to different types of cards. So the Card image will change to match the type.
+
+<img src="{{$0}}/rules/card_action_types.svg">
+
+When the card is "This card", the symbol will also match the color of the card to help you remember that it refers to the card you are looking at.
+
+**You cannot discard a Danger Card when the action requires an Item Card Or Visa Versa**
+
+<img src="{{$0}}/rules/card_action_examples.svg">
+
 
 {{/md}}
 

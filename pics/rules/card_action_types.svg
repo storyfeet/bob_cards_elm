@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="164.89799mm"
+   height="33.127998mm"
+   viewBox="0 0 164.898 33.127998"
+   version="1.1"
+   id="svg2401"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   sodipodi:docname="card_action_types.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2403"
+     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.3299322"
+     inkscape:cx="319.96639"
+     inkscape:cy="164.59706"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2398" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-15.055327,-21.425342)">
+    <g
+       id="g2616"
+       transform="translate(64.151693,-29.77812)">
+      <g
+         id="g1743"
+         transform="translate(-220.31525,-17.050109)">
+        <rect
+           x="242.54286"
+           y="-59.413807"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="stroke:#ff0000;paint-order:stroke"
+           rx="1"
+           ry="1"
+           transform="rotate(30)"
+           id="rect2623-8" />
+        <text
+           font-family="Arial"
+           font-size="5px"
+           x="243.99905"
+           y="73.531013"
+           fill="#ff0000"
+           stroke="#ffffff"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           font-weight="bold"
+           text-anchor="middle"
+           id="text2625-7">!</text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.206161"
+         y="59.648262"
+         id="text4162-37-36-2"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           x="35.206161"
+           y="59.648262"
+           id="tspan2344-7">This card</tspan></text>
+    </g>
+    <g
+       id="g12572">
+      <g
+         id="g2978"
+         transform="translate(-133.40469,-55.405719)">
+        <rect
+           x="252.47064"
+           y="-36.063587"
+           width="6"
+           height="10"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           transform="rotate(30)"
+           id="rect1732" />
+        <text
+           font-family="Arial"
+           font-size="6px"
+           x="233.30502"
+           y="104.83347"
+           fill="#000000"
+           stroke="#ffffff"
+           stroke-width="0.5"
+           style="fill:#ff0000;fill-opacity:1;paint-order:stroke"
+           font-weight="bold"
+           text-anchor="middle"
+           id="text1734">E</text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="127.90356"
+         y="46.264942"
+         id="text4162-37-36-2-3"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           x="127.90356"
+           y="46.264942"
+           id="tspan2344-7-6">An 'E' Danger card</tspan></text>
+    </g>
+    <g
+       id="g2634"
+       transform="translate(27.797862,-52.043559)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="42.904297"
+         y="98.44516"
+         id="text4162-37-36-2-3-6"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           x="42.904297"
+           y="98.44516"
+           id="tspan2344-7-6-2">Any Danger card</tspan></text>
+      <g
+         id="g2341"
+         transform="translate(-216.02813,-41.277466)">
+        <rect
+           x="270.56189"
+           y="-2.7277491"
+           width="6"
+           height="10"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           transform="rotate(30)"
+           id="rect1714-5" />
+      </g>
+    </g>
+    <g
+       id="g2621"
+       transform="translate(2.086172,-42.782631)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="26.316175"
+         y="72.256004"
+         id="text4162-37-36-2-3-1"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+           x="26.316175"
+           y="72.256004"
+           id="tspan2344-7-6-27">Any Item card</tspan></text>
+      <rect
+         x="49.698166"
+         y="47.199863"
+         width="6"
+         height="10"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         rx="1"
+         ry="1"
+         transform="rotate(30)"
+         id="rect2329-9" />
+    </g>
+    <g
+       id="g2639"
+       transform="translate(109.83012,-81.385041)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="46.544952"
+         y="111.90276"
+         id="text4162-37-36-2-3-1-0-6"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           x="46.544952"
+           y="111.90276"
+           id="tspan2344-7-6-27-9-0">A card of that colour</tspan></text>
+      <rect
+         x="68.999306"
+         y="80.630569"
+         width="6"
+         height="10"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         style="fill:#00ffff;paint-order:stroke"
+         rx="1"
+         ry="1"
+         transform="rotate(30)"
+         id="rect2329-9-3" />
+    </g>
+  </g>
+</svg>
