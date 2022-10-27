@@ -102,12 +102,14 @@ telescope = Card "Telescope" TMove
 fishingRod : Card
 fishingRod = Card "Fishing Rod" TGather
     [pay Wood 1]
-    [[In Water,gather Food 3]]
+    [ [In River,gather Food 1]
+    , [In Water,gather Food 3]]
 
 net: Card
 net = Card "Net" TGather
     [pay Wood 2]
     [ [In Water, gather Food 5]
+    , [In River, gather Food 2]
     , [discard,gather Food 1]
     ]
 

@@ -238,11 +238,13 @@ Jobs are found in 4 places.
 
 * On Player Cards
 
-To use a Job on a *Player Card* you must Tap that *Player Card*. That is rotate it by 90 degrees, to mark it as used. You may only use one job on a player card per round.  It will be Untapped again, at the start of each Round.
+    To use a Job on a *Player Card* you must Tap that *Player Card*. That is rotate it by 90 degrees, to mark it as used. You may only use one job on a player card per round.  It will be Untapped again, at the start of each Round.
 
 * On Village Tiles
 
-To use the Job on a Village Tile, your Player Token must be on that tile. You may only use a Village Tile's job once per Round. 
+    To use the Job on a Village Tile, your Player Token must be on that tile. You may only use a Village Tile's job once per Round. 
+
+If multiple jobs provide the same last action, you may use them in the same turn.
 
 Understanding the Job Icons
 ----------------
@@ -299,6 +301,96 @@ When the card is "This card", the symbol will also match the color of the card t
 **You cannot discard a Danger Card when the action requires an Item Card Or Visa Versa**
 
 <img src="{{$0}}/rules/card_action_examples.svg">
+
+### Movement
+
+There are three kinds of movement actions.
+
+<img src="{{$0}}/rules/movement_types.svg">
+
+These actions mean move your player 'n' spaces on the map orthagonaly (that is NWES) not diagonally. Though they have different limitations.
+
+* Normal Movement
+    * Cannot move onto water.
+    * Can move off of water.
+    * Moving onto a mountain counts as moving two spaces.
+    * Moving onto a tile with a railway does not cost movement points, but you must have at least 1 *Normal Movement* left to use it.
+* Climbing Movement
+    * Cannot move onto water
+    * Can move off of water
+    * Mountains Cost 1 movement.
+    * Even tiles with railway cost 1 Movement
+* Sailing Movement
+    * Must move either from or onto water or river.
+    * Moving onto a mountain costs 2 Spaces.
+    * Tiles with railway cost 1 Movement.
+    
+You may play multiple movement Jobs in the same turn and combine movement types in the same turn.
+
+*(Reminder : You may only play 1 Job per card)*
+
+You may use any movement type to try to move onto unrevealed land.
+If you do not have enough movement to achieve it, you have the choice to either add another Job for the required movement, or not move.
+
+Revealing a tile by movement commits you to the chosen direction. You may not go in another direction that turn, without stepping onto the revealed tile.
+
+If you step onto a tile which is not yet revealed, reveal it. (See *Revealing Tiles)
+
+If you step onto a space without a tile, add a tile, and then reveal it.
+
+Bandits
+-------
+
+While travelling you are going to face bandits who will hinder your journey.They are represented by Bandit Counters, and Triple Bandit Counters.
+
+When you reveal a Bandit Campfire, and during the Bandits Appear Phase, bandits will arrive on the map. They will mostly be travelling west, and if they meet you will attack you. You may attack them on your turn as well if you have the weapons to do it.
+
+All Bandits on a tile are considered a group, and move and attack together.
+
+### Attacking
+
+Attacks work the same way whether Players or Bandits are attacking.
+* Bandits have 1⬢ attack and 1⬢ defence for every bandit on the tile.
+* Bandits take 'n' Damage by removing 'n' Bandits from the board.
+* Players take 'n' damage by **all players** on the tile taking 'n' Pain cards each into their discard pile.
+
+The order of a battle.
+
+1. All players on the tile choose jobs they wish to activate, and pay their cost (But do not roll Attack or Defence with dice requirements yet)
+
+Primary attack
+
+2. The Attackers roll their attack for *hits*
+3. Defenders their defence for *saves*
+4. Defenders take 1 damage for every hit above saves.
+
+Counter attack
+
+5. Defenders roll their attack for *hits*
+6. Attackers roll their defence for *saves*
+7. Attackers take 1 damage for every hit above saves.
+
+### Bandits Move
+
+Starting with the Westmost (then Northmost) Group, for each group of bandits, Roll the Compas Dice, and Move them in the Direction Indicated [N,W,W,W,S,+]. Or in the case of the '+' add a bandit to the group.
+
+* If the group lands on a group that hasn't yet moved, move that group next. If they do not move. The two groups merge to become one larger group.
+* Bandits may move onto unrevealed tiles, but not onto spaces without a tile.
+* If the dice indicate North or South, but there 
+
+
+
+
+
+Revealing Tiles
+---------------
+
+A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is either done by the Reveal Action using Telescopes/Binoculars
+
+To reveal a tile, flip it so that it faces up.
+* If it is the furthest West tile revealed, score 2 Points
+* Otherwise Score 1 VP
+* If it has a Campfire add Bandits to the tile based on the number of
 
 
 {{/md}}
