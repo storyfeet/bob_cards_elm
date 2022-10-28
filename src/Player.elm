@@ -26,7 +26,7 @@ type alias ReqList = Dict String (Card,List Int)
 
 players : List Player
 players = 
-    [ jakeWilder,blazeDecker,caseyRocks,samBoater,elijahWatton,wayneJohns
+    [ jakeWilder,blazeDecker,caseyRocks,samBoater,elisaWatton,wayneJohns
     , claytonConnel,dorotheaDuke,fisherByrd,jebSteal,driftWood,alysBear]
 
 
@@ -87,9 +87,9 @@ samBoater =
         (coreMinPlus [saw,knife] [(net,2),(axe, 1)])
 
 --Farmer 1
-elijahWatton : Player
-elijahWatton =
-    Player "Elijah Watton" 1 6
+elisaWatton : Player
+elisaWatton =
+    Player "Elisa Watton" 1 6
         standardRes
         [ [ Take (TDanger Exhaustion) (N 1), Move (N 1) ]
         , [ Discard TAny (X 1), Draw (X 1) ]

@@ -33,5 +33,7 @@ pList = [ "arm wound"
      , "two man saw"
     ]
 cList : List String 
-cList = [ "wayne johns"
+cList = [ "elisa watton"
+    , "sam boater"
+    , "wayne johns"
     ]
