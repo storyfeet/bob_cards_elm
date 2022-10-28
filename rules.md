@@ -77,6 +77,10 @@ Contents
     * Pain Cards - Black Star with a 'P'
     * Exhaustion Cards - Black Stare with an 'E'
     * Trade Row Cards - No Star, but a cost to purchase.
+* Dice
+    * 4 x Bandit Dice: d8-Hardest, d10, d12, d20-Easiest
+    * 1 x Compas Dice: Dice with faces [N, S, W, W , W , + ]
+    * 10 x Job Dice: Dice with faces [0,0,1,1,1,2]
 
 
 Setup
@@ -372,15 +376,22 @@ Counter attack
 
 ### Bandits Move
 
-Starting with the Westmost (then Northmost) Group, for each group of bandits, Roll the Compas Dice, and Move them in the Direction Indicated [N,W,W,W,S,+]. Or in the case of the '+' add a bandit to the group.
-
-* If the group lands on a group that hasn't yet moved, move that group next. If they do not move. The two groups merge to become one larger group.
+Starting with the Westmost (then Northmost) Group, for each group of bandits, Roll the Compas Dice, and Move them in the Direction Indicated *(N = North,W = West,S = South)*.
+* If the dice lands on '+' and the group has fewer than 6 members, Add a Bandit to the group. *(If Bandit groups merge to more than 6, that is fine.)*
+* If the group lands on a group that hasn't yet moved, move that group next. If the second group does not move, the two groups merge to become one larger group.
 * Bandits may move onto unrevealed tiles, but not onto spaces without a tile.
-* If the dice indicate North or South, but there 
+* If the Bandits should move North or South but cannot, move them West.
+* If the Bandits should move West but cannot, Add a Bandit (if less than 6)
 
+### Bandits Appear
 
+The red stars on the *Score Board* have a number in them. That number is how many times to roll the *Bandit Dice*. 
 
+Choose the Star in the section with the furthest forward Player Token, or Bandit Tracker. 
 
+Roll the Bandit Dice, that many times, and add a bandit to all tiles with the rolled number in the red star on the tile.
+
+*The numbers on the tiles go from 1 to 8, so the d8 is the most likely to add bandits making the game harder*
 
 Revealing Tiles
 ---------------
@@ -390,7 +401,16 @@ A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is e
 To reveal a tile, flip it so that it faces up.
 * If it is the furthest West tile revealed, score 2 Points
 * Otherwise Score 1 VP
-* If it has a Campfire add Bandits to the tile based on the number of
+* If it has a Campfire add Bandits to it. The number of bandits is the one in the Red star on the scoreboard in the section with the Furthest Player or Bandit Token.
+
+Once you have revealed the tile, add more tiles.
+If the spaces indicated are empty add a tile face down.
+* 1 West of the current tile.
+* 1 East of the current tile.
+* If the tile is, North of, or on, the center row:
+    1 South of the current tile.
+* If the tile is South of, or on, the center row:
+    1 North of the Current tile.
 
 
 {{/md}}
