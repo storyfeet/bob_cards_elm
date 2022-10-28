@@ -76,7 +76,7 @@ action x y c =
         Defend n -> jobN x y "defend" n
         WaterMove n -> jobN x y "sail" n
         MountainMove n -> jobN x y "climb" n
-        Reveal d n -> jobS x y "reveal" (jnum d ++ ":" ++(jnum n))
+        Reveal n -> jobN x y "reveal" n
         Pay r n -> resource x y r "Red" "-" n 
         Gain r n -> resource x y r "Green" "+" n 
         BuildRail -> jobPic x y "build_rail"

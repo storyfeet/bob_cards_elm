@@ -111,7 +111,7 @@ type Action
     | BuildRail
     | WaterMove JobNum
     | MountainMove JobNum
-    | Reveal JobNum JobNum --Num Distance
+    | Reveal JobNum --Num
     | Starter 
 
 

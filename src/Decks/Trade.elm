@@ -92,12 +92,16 @@ climbingBoots = Card "Climbing Boots" TMove
 binoculars: Card
 binoculars = Card "Binoculars" TMove
     [pay Iron 1]
-    [[Reveal (N 1) (N 1)]]
+    [ [Reveal (N 1)]
+    , [scrapThis TMove, Reveal (N 2)]
+    ]
 
 telescope: Card
 telescope = Card "Telescope" TMove
     [pay Iron 1,pay Wood 1]
-    [[Pay Any (X 1),Reveal (X 1) (N 2) ]]
+    [ [ Reveal (N 2) ]
+    , [scrapThis TMove, Reveal (N 3)]
+    ]
 
 fishingRod : Card
 fishingRod = Card "Fishing Rod" TGather

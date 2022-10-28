@@ -66,9 +66,9 @@ Contents
 * Multiplayer Score Board
 * Solo Score Board
 * Crib Sheets
-* Player Counters * 4
-* Score Counters * 4
-* Bandit Counters * Many
+* Meeples * 8 (2 Per player).
+* Bandit Counters * 20
+* Big(/Pink) Bandit Counters * 10. (These represent 3 Bandits)
 * First Turn Marker
 * Land Tiles * Many
 * Player Cards - Wide Cards with difficulty and hand size in top right corner.
@@ -107,9 +107,9 @@ Use the following diagram to help you follow setup instructions
 
 1. **Choose and Place Board:** Choose a direction to represent West on the table. Take the appropriate Score Board (Standard or Co-op) And place it close to the the east of the playing area.It's compas should show the directions intended, and there should be plenty of room to expand to the West.
 
-2. Add a **score counter** for every player to the clear '0' on the *Score Board*.
+2. Add a **Meeple** for every player to the clear '0' on the *Score Board*.
 
-3. Add a **Bandit Token** to the red '0' on the *Score Board*
+3. Add a **Bandit** to the red '0' on the *Score Board*, this will be the Bandit Tracker
 
 4. Shuffle the **Trade Row** cards and deal 5 of them across the top of the Score Board. Leaving the rest in a draw pile beside them.
 
@@ -150,6 +150,8 @@ A complete *Player Phase* and *Bandit Phase* is called a **Round**.
 1. Draw Cards
 
     All players draw cards from their own personal deck until they have Cards in hand matching their hand size. (If they have more they do not have to discard)
+
+    Whenever a Player needs to draw cards but his Draw Pile is empty, They shuffle their Discard Pile and it becomes their new Draw Deck. If the Discard pile is also empty, they do not draw any more.
 
 2. Untap Player Card
 
@@ -246,16 +248,19 @@ Jobs are found in 4 places.
 
 * On Village Tiles
 
-    To use the Job on a Village Tile, your Player Token must be on that tile. You may only use a Village Tile's job once per Round. 
+    You may only use a Village's Job once per visit. To use it, your Meeple must be on that tile and standing up. Lay the Meeple down, and then do it's action.
+    When you move out of that Village, stand your Meeple up again.
 
-If multiple jobs provide the same last action, you may use them in the same turn.
+    **You cannot use a Village's job while there are Bandits on the tile**
+
+If multiple jobs provide the same last action, you may use them in the same turn. Even if one of those jobs is a Card and the other on a Village or Player Card.
 
 Understanding the Job Icons
 ----------------
 
 ### Places
 
-Square Icons represent a place. Your Player Token must be in that kind of place to perform the action. There must also be **No Bandits on the tile**
+Square Icons represent a place. Your Meeple must be in that kind of place to perform the action. There must also be **No Bandits on the tile**
 
 <img src="{{$0}}/rules/places.svg">
 
@@ -306,6 +311,22 @@ When the card is "This card", the symbol will also match the color of the card t
 
 <img src="{{$0}}/rules/card_action_examples.svg">
 
+### Special Actions
+
+<img src="{{$0}}/rules/special_actions.svg">
+
+* Build Railway
+    * Place an Railway (Iron) Token on the Tile you are currently on.
+    * Cannot be done if there is already a Railway Token Down.
+    * If this is the most West Railway yet, score 3 VP.
+    * Otherwise score 2 VP
+
+* Reveal Land
+    * 'n' is the number of tiles.
+    * Reveal 'n' tiles within 
+    * Diagonal is allowed.
+    * You may place tiles, to reveal them.
+
 ### Movement
 
 There are three kinds of movement actions.
@@ -334,7 +355,10 @@ You may play multiple movement Jobs in the same turn and combine movement types 
 *(Reminder : You may only play 1 Job per card)*
 
 You may use any movement type to try to move onto unrevealed land.
-If you do not have enough movement to achieve it, you have the choice to either add another Job for the required movement, or not move.
+
+If you do not have enough movement to achieve it, you have the choice to either play another Job for the required movement, or not move there. Either way you score the VP for revealing it.
+
+You do not have to move onto revealed land, however that still costs you 1 Distance of your movement (Any type). You may still use remaining movement to try another direction.
 
 Revealing a tile by movement commits you to the chosen direction. You may not go in another direction that turn, without stepping onto the revealed tile.
 
@@ -387,7 +411,7 @@ Starting with the Westmost (then Northmost) Group, for each group of bandits, Ro
 
 The red stars on the *Score Board* have a number in them. That number is how many times to roll the *Bandit Dice*. 
 
-Choose the Star in the section with the furthest forward Player Token, or Bandit Tracker. 
+Choose the Star in the section with the furthest forward Meeple, or Bandit Tracker. 
 
 Roll the Bandit Dice, that many times, and add a bandit to all tiles with the rolled number in the red star on the tile.
 
@@ -401,7 +425,7 @@ A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is e
 To reveal a tile, flip it so that it faces up.
 * If it is the furthest West tile revealed, score 2 Points
 * Otherwise Score 1 VP
-* If it has a Campfire add Bandits to it. The number of bandits is the one in the Red star on the scoreboard in the section with the Furthest Player or Bandit Token.
+* If it has a Campfire add Bandits to it. The number of bandits is the one in the Red star on the scoreboard in the section with the Furthest Player or Bandit Tracker.
 
 Once you have revealed the tile, add more tiles.
 If the spaces indicated are empty add a tile face down.
