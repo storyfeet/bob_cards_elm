@@ -8,7 +8,7 @@ import Cards
 front : PL.Player -> String
 front p = 
     String.join "\n"
-        [ rect 0 0 100 90 [flStk "lightBlue" "white" 1] 
+        [ rect 0 0 100 90 [flStk "#ffb380" "white" 1] 
         , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] p.name
