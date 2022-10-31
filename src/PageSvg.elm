@@ -22,6 +22,10 @@ tag : String -> List String -> List String -> String
 tag name propl children =
     "<" ++ name ++ " " ++ (String.join " " propl) ++ " >" ++ String.join "\n" children ++ "</" ++ name ++ ">"
 
+g : List String -> List String -> String
+g = 
+    tag "g"
+
 rect: Float -> Float -> Float -> Float -> List String -> String
 rect x y w h pps =
     etag "rect" ((xywh x y w h)::pps)

@@ -68,8 +68,7 @@ caseyRocks : Player
 caseyRocks = 
     Player "Casey Rocks" 1 6
         (startRes [(Gold,2 ), (Food,5)])
-        [ [ Discard TAny (N 1), MountainMove (N 1) ]
-        , [ pay Food 1, Move (N 1) ]
+        [ [ pay Food 1,Discard TAny (N 1), MountainMove (N 1) ]
         , [ Scrap TAny (N 1), Scrap (TDanger DAny) (N 1) ]
         ]
         (DS.coreMinPlus [boots,pickaxe] [(climbingBoots, 2), (pickaxe ,2)])
@@ -82,7 +81,7 @@ samBoater =
         standardRes  
         [ [ Draw (N 1), Scrap TAny (N 1) ]
         , [ In Water, Scrap (TDanger DAny) (X 1) ]
-        , [ Pay Any (N 1), WaterMove (N 1), Move (N 1) ]
+        , [ Pay Any (N 1), WaterMove (N 2) ]
         ]
         (coreMinPlus [saw,knife] [(net,2),(axe, 1)])
 
@@ -150,7 +149,7 @@ fisherByrd =
         standardRes  
         [ [ Draw (N 1), Scrap TAny (N 1) ]
         , [ In Water, Scrap (TDanger DAny) (X 1) ]
-        , [ Pay Any (X 1), WaterMove (N 1), Move (X 1) ]
+        , [ Pay Any (X 1), WaterMove (X 1)]
         ]
         (coreMinPlus [saw,knife] [(net,2),(axe, 2)])
 

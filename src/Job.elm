@@ -56,7 +56,7 @@ jnum j =
             String.fromInt n ++ "x⬢"
 
         This ->
-            "!"
+            ""
 
         None ->
             ""
