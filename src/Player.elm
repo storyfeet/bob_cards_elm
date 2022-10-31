@@ -68,7 +68,7 @@ caseyRocks : Player
 caseyRocks = 
     Player "Casey Rocks" 1 6
         (startRes [(Gold,2 ), (Food,5)])
-        [ [ pay Food 1,Discard TAny (N 1), MountainMove (N 1) ]
+        [ [ pay Any 1,Discard TAny (N 1), MountainMove (N 1) ]
         , [ Scrap TAny (N 1), Scrap (TDanger DAny) (N 1) ]
         ]
         (DS.coreMinPlus [boots,pickaxe] [(climbingBoots, 2), (pickaxe ,2)])
