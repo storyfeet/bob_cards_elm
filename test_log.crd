@@ -17,14 +17,22 @@
 "Thursday Club":
 .mode = "Competetive"
 .date = 29/9/2022
-.players = [Me "Steve Rogers", "Andrew Woodward"]
+.players = [Me ,"Steve Rogers", "Andrew Woodward"]
 .learned = "Dillinger not Pistol, Mallet not Wooden hammer, Bandits awkward"
+
+"Chance n Counters":
+.mode = "Competetive"
+.date = 4/10/2022
+.players = ["Arnaud Jones","Dr Paul","Mrs Dr Paul" ,"Unknown"]
+.learned = "Buy to Trade Row, Allow more actions on simple tools, allow discard powered hunting with knife."
 
 "Home":
 .mode = Coop
 .date = 23/10/2022
+.dice = d10
+.difficulty = 2
 .players = [Me,Toby,Jacob]
-.learned = "Hard wasn't too hard"
+.learned = "Hard wasn't too hard, Had an Awesome adventure"
 
 "Wifey":
 .mode = Coop
@@ -50,7 +58,7 @@
 .dice = d12
 .length = Long
 .players = [Me, Toby, Jacob]
-.learned = "Casey Rocks OP"
+.learned = "Casey Rocks is OP"
 
 
 
