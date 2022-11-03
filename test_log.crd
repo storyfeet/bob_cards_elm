@@ -23,7 +23,7 @@
 "Chance n Counters":
 .mode = "Competetive"
 .date = 4/10/2022
-.players = ["Arnaud Jones","Dr Paul","Mrs Dr Paul" ,"Unknown"]
+.players = ["Andreas Jones","Dr Paul","Mrs Dr Paul" ,"Unknown"]
 .learned = "Buy to Trade Row, Allow more actions on simple tools, allow discard powered hunting with knife."
 
 "Home":
@@ -51,6 +51,15 @@
 .players = [Me, "Steve Rogers", "Andrew Woodward"]
 .learned = "Good game"
 
+"DH":
+.mode = Handicap
+.difficulty = 1
+.length = Short
+.dice = d20
+.date = 29/10/2022
+.players [Me, "Joanne DH"]
+.learned = "Good reach for non gamers"
+
 "Home":
 .mode = Competetive
 .date = 30/10/2022
@@ -60,5 +69,19 @@
 .players = [Me, Toby, Jacob]
 .learned = "Casey Rocks is OP"
 
+"Chance n Counters":
+.mode = Coop
+.date = 1/11/2022
+.difficulty = 1
+.length = Short
+.players = [ Iona,"Andreas Jones",Tom,Sam]
+.learned = "Catching the wind too powerful in short game, Score on moving everyone instead"
 
+"Kids"
+.mode = Coop
+.date = 2/11/2022
+.difficulty = 1
+.length = Short
+.players = [Toby,Jacob,River,Felicity]
+.learned = "Eastern Bar for scoring works, but playing with young children too painful"
 
