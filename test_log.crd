@@ -1,87 +1,89 @@
 "Jacob Solo":
-.mode = "Solo"
-.date = 1/8/2022
-.learned = "Hexes are awkward"
+.mode : "Solo"
+.date : "1/8/2022"
+.learned : "Hexes are awkward"
 
 "Toby Solo":
-.mode = "Solo"
-.date = 2/8/2022
-.learned = "Fun enough to keep playing ages, needs an end"
+.mode : "Solo"
+.date : "2/8/2022"
+.learned : "Fun enough to keep playing ages, needs an end"
 
 "Thursday Club":
-.mode = "Competetive"
-.date = 1/9/2022
-.players = [Me,"Colin Ettle","Steve Rogers"]
-.learned = "Players got stuck need a way to move"
+.mode : "Competetive"
+.date : "1/9/2022"
+.players : [Me,"Colin Ettle","Steve Rogers"]
+.learned : "Players got stuck need a way to move"
 
 "Thursday Club":
-.mode = "Competetive"
-.date = 29/9/2022
-.players = [Me ,"Steve Rogers", "Andrew Woodward"]
-.learned = "Dillinger not Pistol, Mallet not Wooden hammer, Bandits awkward"
+.mode : "Competetive"
+.date : "29/9/2022"
+.players : [Me ,"Steve Rogers", "Andrew Woodward"]
+.learned : "Dillinger not Pistol, Mallet not Wooden hammer, Bandits awkward"
 
 "Chance n Counters":
-.mode = "Competetive"
-.date = 4/10/2022
-.players = ["Andreas Jones","Dr Paul","Mrs Dr Paul" ,"Unknown"]
-.learned = "Buy to Trade Row, Allow more actions on simple tools, allow discard powered hunting with knife."
+.mode : "Competetive"
+.date : "4/10/2022"
+.players : ["Andreas Jones","Dr Paul","Mrs Dr Paul" ,"Unknown"]
+.learned : "Buy to Trade Row, Allow more actions on simple tools, allow discard powered hunting with knife."
 
 "Home":
-.mode = Coop
-.date = 23/10/2022
-.dice = d10
-.difficulty = 2
-.players = [Me,Toby,Jacob]
-.learned = "Hard wasn't too hard, Had an Awesome adventure"
+.mode : Coop
+.date : "23/10/2022"
+.dice : 10
+.difficulty : 2
+.players : [Me,Toby,Jacob]
+.learned : "Hard wasn't too hard, Had an Awesome adventure"
 
 "Wifey":
-.mode = Coop
-.length = Short
-.dice = d20
-.date = 26/10/2022
-.players = [Me,Tasha]
-.learned = "Barely touched bandits, got separated, hard to work together"
+.mode : Coop
+.length : Short
+.dice : 20
+.date : "26/10/2022"
+.players : [Me,Tasha]
+.learned : "Barely touched bandits, got separated, hard to work together"
 
 "Thursday Club":
-.mode = Competetive
-.difficulty = 2
-.length = Long
-.dice = d8
-.date = 27/10/2022
-.players = [Me, "Steve Rogers", "Andrew Woodward"]
-.learned = "Good game"
+.mode : Competetive
+.difficulty : 2
+.length : Long
+.dice : 8
+.date : "27/10/2022"
+.players : [Me, "Steve Rogers", "Andrew Woodward"]
+.learned : "Good game"
 
 "DH":
-.mode = Handicap
-.difficulty = 1
-.length = Short
-.dice = d20
-.date = 29/10/2022
-.players [Me, "Joanne DH"]
-.learned = "Good reach for non gamers"
+.mode : Handicap
+.difficulty : 1
+.length : Short
+.dice : 20
+.date : "29/10/2022"
+.players : [Me, "Joanne DH"]
+.learned : "Good reach for non gamers"
 
 "Home":
-.mode = Competetive
-.date = 30/10/2022
-.difficulty = 1
-.dice = d12
-.length = Long
-.players = [Me, Toby, Jacob]
-.learned = "Casey Rocks is OP"
+.mode : Competetive
+.date : "30/10/2022"
+.difficulty : 1
+.dice : 12
+.length : Long
+.players : [Me, Toby, Jacob]
+.learned : "Casey Rocks is OP"
 
 "Chance n Counters":
-.mode = Coop
-.date = 1/11/2022
-.difficulty = 1
-.length = Short
-.players = [ Iona,"Andreas Jones",Tom,Sam]
-.learned = "Catching the wind too powerful in short game, Score on moving everyone instead"
+.mode : Coop
+.date : "1/11/2022"
+.difficulty : 1
+.dice : 8
+.length : Short
+.players : [ Iona,"Andreas Jones",Tom,Sam]
+.learned : "Catching the wind too powerful in short game, Score on moving everyone instead"
 
 "Kids"
-.mode = Coop
-.date = 2/11/2022
-.difficulty = 1
-.length = Short
-.players = [Toby,Jacob,River,Felicity]
-.learned = "Eastern Bar for scoring works, but playing with young children too painful"
+.mode : Coop
+.date : "2/11/2022"
+.dice : 20
+.difficulty : 1
+.length : Short
+.players : [Toby,Jacob,River,Felicity]
+.learned : "Eastern Bar for scoring works, but playing with young children too painful"
 

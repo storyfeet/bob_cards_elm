@@ -61,7 +61,7 @@ jakeWilder =
         , [ Scrap TAny (N 1) ]
         , [ Discard (TDanger DAny) (N 2) ]
         ]
-        (DS.basicDeck )
+        (DS.coreMinPlus [pan] [(bigPan,1)] )
 
 --Moutain 1
 caseyRocks : Player

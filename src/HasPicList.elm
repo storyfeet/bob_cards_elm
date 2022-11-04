@@ -34,6 +34,7 @@ pList = [ "arm wound"
     ]
 cList : List String 
 cList = [ "elisa watton"
+    , "jake wilder"
     , "sam boater"
     , "wayne johns"
     ]

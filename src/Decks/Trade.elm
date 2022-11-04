@@ -1,4 +1,4 @@
-module Decks.Trade exposing (tradeDeck,explorerDeck,diggerDeck,fighterDeck,cow,horse,climbingBoots,net,axe,huntingKnife,revolver)
+module Decks.Trade exposing (tradeDeck,explorerDeck,diggerDeck,fighterDeck,cow,horse,climbingBoots,net,axe,huntingKnife,revolver,bigPan)
 import Cards exposing (..)
 import Job exposing (..)
 
@@ -137,7 +137,7 @@ diggerDeck =
     , (roamingTrader ,2)
     , (trader ,2)
     , (gambler,2)
-    , (quickTrader,2)
+    , (skilledTrader,2)
     ]
 
 bigPan : Card
@@ -169,14 +169,14 @@ sledgeHammer = Card "Sledgehammer" TMake [In Village ,pay Gold 2]
     , [Discard TAny (N 2),gather Iron 3]
     ]
 
-quickTrader : Card 
-quickTrader = Card "Quick Trader" TTrade [pay Any 2]
-    [[discard, Pay Any (X 1),Gain Any (X 1)]]
-
+skilledTrader : Card 
+skilledTrader = Card "Skilled Trader" TTrade [pay Any 2]
+    [ [discard, Pay Any (X 1),Gain Any (X 1)]
+    , [In Village, Pay Any (X 1),Gain Any (X 1)]] 
 
 trader : Card
 trader = Card "Trader"  TTrade [pay Gold 2]
-    [[In Village, Pay Any (X 1),Gain Any (X 1)]] 
+    [[discard, Pay Any (X 1),Gain Any (X 1)]] 
 
 roamingTrader: Card
 roamingTrader = Card "Roaming Trader" TTrade  [pay Gold 2]
