@@ -1,6 +1,7 @@
 module HasPicList exposing (..)
 pList : List String
 pList = [ "arm wound"
+     , "big pan"
      , "binoculars"
      , "boots"
      , "canoe"
@@ -31,9 +32,11 @@ pList = [ "arm wound"
      , "thirst"
      , "trident"
      , "two man saw"
+     , "whiskey"
     ]
 cList : List String 
-cList = [ "elisa watton"
+cList = [ "driftina wood"
+    , "elisa watton"
     , "jake wilder"
     , "sam boater"
     , "wayne johns"

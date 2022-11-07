@@ -27,7 +27,7 @@ type alias ReqList = Dict String (Card,List Int)
 players : List Player
 players = 
     [ jakeWilder,blazeDecker,caseyRocks,samBoater,elisaWatton,wayneJohns
-    , claytonConnel,dorotheaDuke,fisherByrd,jebSteal,driftWood,alysBear]
+    , claytonConnel,dorotheaDuke,fisherByrd,jebSteal,driftinaWood,alysBear]
 
 
 reqCard : Card -> Int -> ReqList-> ReqList
@@ -179,9 +179,9 @@ alysBear =
 
 -- Fighter 2
 
-driftWood : Player
-driftWood = 
-    Player "Drift Wood" 2 5
+driftinaWood : Player
+driftinaWood = 
+    Player "Driftina Wood" 2 5
     (startRes [(Gold, 1),(Wood,2),(Food, 4)])
     [ [attack 2]
     , [Pay Food (X 1), Move (X 1)]
