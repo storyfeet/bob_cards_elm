@@ -7,6 +7,12 @@
 img {
     max-width:100%;
     border:1px solid black;
+    background: white;
+}
+body {
+    background:#ffb380;
+    color:black;
+    font-size:0.9em;
 }
 </style>
 </head>
@@ -27,21 +33,18 @@ Once all players have passed, the bandits will take their turn, and the trade ro
 
 Then each player draws back up to 6 cards, and the cycle begins again.
 
-Competetive, Co-op and Single player
+Competitive, Co-op and Single player
 ---------------------
 
-This game can be played competively, co-op and single player. The rules barely need adjustment. Simply choose the appropriate score board and everything falls into place.
+This game can be played competively, co-op and single player. The rules barely need adjustment. Simply choose the appropriate score board and everything almost falls into place.
 
-The only differences from the competative game are as follows.
-
-In Co-op all players use the same score counter, and win or lose together.
-
-In Single Player, you do not have to wait for other players to take their turns, or pass the "Player 1" token.
+For the sake of simplicity, these rules are written for competetive play.
+The changes needed for cooperative and solo play are found in the Variants section at the back.
 
 Winning and Scoring
 -------------------
 
-The game is won by scoring a number of points by performing actions on the map. 
+The game is won by reaching the end of the score track first. Players score points by performing actions on the map. 
 
 1. Reveal a Land Tile 
     - If that tile is furthest west 2vp
@@ -55,32 +58,29 @@ The game is won by scoring a number of points by performing actions on the map.
 The first player to reach the end of the score track wins the game.
 
 If the Bandits reach the end of their track, the game ends immediately.
-* In Co-op or Single player: The players Lose.
-* In Competetive: The player with the most points wins.
+* In Single Player: The player Loses.
+* In Co-op: The players Lose.
+* In Competitive: The player with the most points wins.
 
     *(Ties are broken by distance west, followed by resource count)*
 
 Contents
 ---------
 
-* Multiplayer Score Board
-* Solo Score Board
-* Crib Sheets
-* Meeples * 8 (2 Per player).
-* Bandit Counters * 20
-* Big(/Pink) Bandit Counters * 10. (These represent 3 Bandits)
+* Score Boards * 8
+* Crib Sheets * 4
+* Meeples * 8 (2 Per player)
+* Wagon * 1
+* Bandit Counters - small * 20 , big(/pink) * 20
+* Resource Counters - Wood, Food, Iron , Gold : all * 20
 * First Turn Marker
-* Land Tiles * Many
-* Player Cards - Wide Cards with difficulty and hand size in top right corner.
-* Cards - Type is marked by the star in the top right corner
-    * Starter Cards - Yellow Star
-    * Pain Cards - Black Star with a 'P'
-    * Exhaustion Cards - Black Stare with an 'E'
-    * Trade Row Cards - No Star, but a cost to purchase.
+* Land Tiles * 48
+* Player Cards * 12 (soon 18)
+* Deck Cards 
 * Dice
-    * 4 x Bandit Dice: d8-Hardest, d10, d12, d20-Easiest
-    * 1 x Compas Dice: Dice with faces [N, S, W, W , W , + ]
-    * 10 x Job Dice: Dice with faces [0,0,1,1,1,2]
+    * Bandit Dice * 4: d8-Hardest, d10, d12, d20-Easiest
+    * Compass Dice * 1: Dice with faces [N, S, W, W , W , + ]
+    * Job Dice * 10: Dice with faces [0,0,1,1,1,2]
 
 
 Setup
@@ -105,7 +105,7 @@ Use the following diagram to help you follow setup instructions
 
 <img src="{{cat $0 "/rules/start_setup_embedded.svg" }}">
 
-1. **Choose and Place Board:** Choose a direction to represent West on the table. Take the appropriate Score Board (Standard or Co-op) And place it close to the the east of the playing area.It's compas should show the directions intended, and there should be plenty of room to expand to the West.
+1. **Choose and Place Board:** Choose a direction to represent West on the table. Take the appropriate Score Board (Standard or Co-op) And place it close to the east of the playing area.It's compass should show the directions intended, and there should be plenty of room to expand to the West.
 
 2. Add a **Meeple** for every player to the clear '0' on the *Score Board*.
 
@@ -454,8 +454,46 @@ When to players are on the same tile they may trade. The player who's turn it is
 
 # Variants
 
-## Cooperative Wagon
+## Precious Cargo 
 
+In Precious Cargo players must bring a wagon with a precious macguffin West with them.
+
+### Setup Changes -- Co op
+
+* Choose a "Precious Cargo - Co op" Board
+* Add the *Wagon Piece* to the same tile as the players.
+* Add only 1 counter to the players score track as players score together.
+
+### Setup Changes -- Competitive
+
+* Choose a "Competetive" Board
+* Add the *Wagon Piece* to the same tile as the players.
+
+### Rules Changes
+
+Players no longer score by revealing tiles.
+Players score by:
+
+* Removing Bandits : 2vp
+* Building Railway : 2vp or 3vp)
+* Moving the Wagon West : 2vp (-2vp for moving it East)
+
+To move the wagon, a player must be on the same tile as the wagon and use a movement action to move the wagon **instead** of themselves. (The Wagon follows the same movement rules they would)
+
+
+
+### Extra Rules
+
+Players no longer score by revealing tiles.
+Players score by:
+
+* Removing Bandits : 2vp
+* Building Railway : 2vp or 3vp)
+* Moving the Wagon West : 2vp (-2vp for moving it East)
+
+The Wagon may be attacked by bandits. If the Wagon would take any Damage, move the bandit tracker one space forward, no matter how big the damage.
+
+To move the wagon, a player must be on the same tile as the wagon and use a movement action to move the wagon **instead** of themselves. (The Wagon follows the same movement rules as players)
 
 
 {{/md}}
