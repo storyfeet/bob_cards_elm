@@ -1,6 +1,7 @@
 module HasPicList exposing (..)
 pList : List String
 pList = [ "arm wound"
+     , "axe"
      , "big pan"
      , "binoculars"
      , "boots"
@@ -32,6 +33,7 @@ pList = [ "arm wound"
      , "thirst"
      , "trident"
      , "two man saw"
+     , "wagon"
      , "whiskey"
     ]
 cList : List String 
