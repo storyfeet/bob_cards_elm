@@ -313,7 +313,7 @@ When the card is "This card", the symbol will also match the color of the card t
 
 ### Special Actions
 
-<img src="{{$0}}/rules/special_actions.svg">
+<img src="{{$0}}/rules/build_railway.svg">
 
 * Build Railway
     * Place an Railway (Iron) Token on the Tile you are currently on.
@@ -321,11 +321,12 @@ When the card is "This card", the symbol will also match the color of the card t
     * If this is the most West Railway yet, score 3 VP.
     * Otherwise score 2 VP
 
+<img src="{{$0}}/rules/reveal.svg">
+
 * Reveal Land
-    * 'n' is the number of tiles.
-    * Reveal 'n' tiles within 
-    * Diagonal is allowed.
-    * You may place tiles, to reveal them.
+    * Reveal 'n' tiles within 2 spaces from your current position. 
+    * One diagonal is allowed.
+    * You may choose places without a tile, add one and reveal it.
 
 ### Movement
 
@@ -435,6 +436,9 @@ If the spaces indicated are empty add a tile face down.
     1 South of the current tile.
 * If the tile is South of, or on, the center row:
     1 North of the Current tile.
+
+
+
 
 
 {{/md}}
