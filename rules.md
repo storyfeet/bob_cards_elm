@@ -428,16 +428,33 @@ To reveal a tile, flip it so that it faces up.
 * Otherwise Score 1 VP
 * If it has a Campfire add Bandits to it. The number of bandits is the one in the Red star on the scoreboard in the section with the Furthest Player or Bandit Tracker.
 
-Once you have revealed the tile, add more tiles.
-If the spaces indicated are empty add a tile face down.
-* 1 West of the current tile.
-* 1 East of the current tile.
-* If the tile is, North of, or on, the center row:
-    1 South of the current tile.
-* If the tile is South of, or on, the center row:
-    1 North of the Current tile.
+Once you have revealed the tile, add face down tiles to empty spaces around it.
+* If the tile is on the center row (going West), to all empty spaces next to it.
+* If the tile is North of the center row, to those South, West, and East.
+* If the tile is South of the center row, to those North, West, and East.
+
+** Note Adding these is important because bandits can step onto unrevealed tiles, but not empty spaces**
 
 
+## Cooperation Bonus
+
+When a player performs a job that's last action produces a Dice amount of a certain resource, if there are other players on the tile, he may invite them to join him.
+
+The other players may then activate any of their jobs that also produce the same resource by dice, paying their appropriate cost.
+
+All players then roll. All players then gain the full amount they rolled, plus half of the amount the other players rolled, added together and rounded up.
+
+## Trade
+
+When to players are on the same tile they may trade. The player who's turn it is offers the trade, and if it is agreed, that player discards a card and proceeds with the trade.
+
+* Item Cards are traded from one players hand to the top of the other player's Draw or Discard pile.
+* Resources are traded directly.
+* Danger cards cannot be traded
+
+# Variants
+
+## Cooperative Wagon
 
 
 
