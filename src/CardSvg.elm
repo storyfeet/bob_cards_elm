@@ -136,7 +136,7 @@ jobCard x y ct tx tcol n =
             [ g [ rotate 30 (x + 5) (y + 5)]
                 [ rect (x+2) y 6 10 [ stk , rxy 1 1 ]        
                 , if n == This then 
-                    cardIconText (x + 5) (y + 8)  "!"
+                    cardIconText (x + 5) (y + 8) tcol "!"
                     else ""
                 ]
             , cardLetter (x + 1) (y + 9) ct
@@ -292,9 +292,9 @@ gainText : Float -> Float -> String -> String -> String
 gainText x y col tx =
         text "Arial" 4 [xy x y ,flStk col "white" 0.6, strokeFirst,bold,txRight] (tx )
 
-cardIconText : Float -> Float -> String -> String
-cardIconText x y tx = 
-    text "Arial" 7 [xy x y, flStk "red" "white" 0.6,strokeFirst,bold,txCenter] tx
+cardIconText : Float -> Float ->String -> String -> String
+cardIconText x y tcol tx  = 
+    text "Arial" 7 [xy x y, flStk tcol "white" 0.6,strokeFirst,bold,txCenter] tx
 
 
 cardPic: Float -> Float -> String -> String
