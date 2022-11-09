@@ -14,6 +14,10 @@ body {
     color:black;
     font-size:0.9em;
 }
+
+h1, h2, h3 {
+    page-break-after:avoid;
+}
 </style>
 </head>
 
@@ -33,13 +37,13 @@ Once all players have passed, the bandits will take their turn, and the trade ro
 
 Then each player draws back up to 6 cards, and the cycle begins again.
 
-Competitive, Co-op and Single player
+Verses, Co-op and Single player
 ---------------------
 
 This game can be played competively, co-op and single player. The rules barely need adjustment. Simply choose the appropriate score board and everything almost falls into place.
 
-For the sake of simplicity, these rules are written for competetive play.
-The changes needed for cooperative and solo play are found in the Variants section at the back.
+For the sake of simplicity, these rules are written for Verses play.
+The changes needed for co-op and solo play are found in the Variants section at the back.
 
 Winning and Scoring
 -------------------
@@ -60,7 +64,7 @@ The first player to reach the end of the score track wins the game.
 If the Bandits reach the end of their track, the game ends immediately.
 * In Single Player: The player Loses.
 * In Co-op: The players Lose.
-* In Competitive: The player with the most points wins.
+* In Verses: The player with the most points wins.
 
     *(Ties are broken by distance west, followed by resource count)*
 
@@ -95,8 +99,7 @@ First Separate the cards into 4 groups based on their top right corner:
 
 <img src="{{cat $0 "/rules/card_types.svg"}}" >
 
-Note : Pain and Exhaustion are both types of "Danger Card" if your hand becomes full of either, you lose. 
-
+Note : Pain and Exhaustion are both types of "Danger Card" if your hand becomes full of them, you lose. 
 
 
 ### Board Setup
@@ -313,13 +316,13 @@ When the card is "This card", the symbol will also match the color of the card t
 
 ### Special Actions
 
-<img src="{{$0}}/rules/build_railway.svg">
 
-* Build Railway
-    * Place an Railway (Iron) Token on the Tile you are currently on.
-    * Cannot be done if there is already a Railway Token Down.
-    * If this is the most West Railway yet, score 3 VP.
-    * Otherwise score 2 VP
+<img src="{{$0}}/rules/build_railway.svg" style="float:left;margin:0px 20px 60px 0px"> Build Railway
+
+* Place an Railway (Iron) Token on the Tile you are currently on.
+* Cannot be done if there is already a Railway Token Down.
+* If this is the most West Railway yet, score 3 VP.
+* Otherwise score 2 VP
 
 <img src="{{$0}}/rules/reveal.svg">
 
@@ -330,42 +333,37 @@ When the card is "This card", the symbol will also match the color of the card t
 
 ### Movement
 
-There are three kinds of movement actions.
+These actions move your player 'n' spaces on the map orthagonaly (that is NWES and not diagonally). Though they have different limitations.
 
-<img src="{{$0}}/rules/movement_types.svg">
 
-These actions mean move your player 'n' spaces on the map orthagonaly (that is NWES) not diagonally. Though they have different limitations.
+<img src="{{$0}}/rules/movement_normal.svg" style="float:left;margin:0px 20px 60px 0px">Normal Movement
 
-* Normal Movement
-    * Cannot move onto water.
-    * Can move off of water.
-    * Moving onto a mountain counts as moving two spaces.
-    * Moving onto a tile with a railway does not cost movement points, but you must have at least 1 *Normal Movement* left to use it.
-* Climbing Movement
-    * Cannot move onto water
-    * Can move off of water
-    * Mountains Cost 1 movement.
-    * Even tiles with railway cost 1 Movement
-* Sailing Movement
-    * Must move either from or onto water or river.
-    * Moving onto a mountain costs 2 Spaces.
-    * Tiles with railway cost 1 Movement.
+* Cannot move onto water.
+* Can move off of water.
+* Moving onto a mountain counts as moving two spaces.
+* Moving onto a tile with a railway does not cost movement points, but you must have at least 1 *Normal Movement* left to use it.
+
+<img src="{{$0}}/rules/movement_climbing.svg" style="float:left;margin:0px 20px 60px 0px">Climbing Movement
+
+* Cannot move onto water
+* Can move off of water
+* Mountains Cost 1 movement.
+* Even tiles with railway cost 1 Movement
+
+<img src="{{$0}}/rules/movement_sailing.svg" style="float:left;margin:0px 20px 60px 0px">Sailing Movement
+
+* Must move either from or onto water or river.
+* Moving onto a mountain costs 2 Spaces.
+* Tiles with railway cost 1 Movement.
     
-You may play multiple movement Jobs in the same turn and combine movement types in the same turn.
-
-*(Reminder : You may only play 1 Job per card)*
+You may play multiple movement Jobs in the same turn and combine movement types in the same turn. *(Though as always, only play 1 Job per card)*
 
 You may use any movement type to try to move onto unrevealed land.
+If that turns out not enough, you may play another Job for the required movement, or not move there. Either way you score the VP for revealing it.
 
-If you do not have enough movement to achieve it, you have the choice to either play another Job for the required movement, or not move there. Either way you score the VP for revealing it.
+You do not have to move onto revealed land, however the attempt cost is 1 Distance (Any movement type). You may still use remaining movement to try another direction.
 
-You do not have to move onto revealed land, however that still costs you 1 Distance of your movement (Any type). You may still use remaining movement to try another direction.
-
-Revealing a tile by movement commits you to the chosen direction. You may not go in another direction that turn, without stepping onto the revealed tile.
-
-If you step onto a tile which is not yet revealed, reveal it. (See *Revealing Tiles)
-
-If you step onto a space without a tile, add a tile, and then reveal it.
+If you step onto a tile which is not yet revealed, reveal it. (See *Revealing Tiles). If you step onto a space without a tile, add a tile, and then reveal it.
 
 Bandits
 -------
@@ -410,11 +408,9 @@ Starting with the Westmost (then Northmost) Group, for each group of bandits, Ro
 
 ### Bandits Appear
 
-The red stars on the *Score Board* have a number in them. That number is how many times to roll the *Bandit Dice*. 
+The "Bandit Risk" is the number in the red star on the scoreboad in the section with the furthest forward player or Bandit Tracker.
 
-Choose the Star in the section with the furthest forward Meeple, or Bandit Tracker. 
-
-Roll the Bandit Dice, that many times, and add a bandit to all tiles with the rolled number in the red star on the tile.
+Roll the Bandit Dice, once per *Bandit Risk*, and add a bandit to all tiles with the rolled number in the red star on the tile.
 
 *The numbers on the tiles go from 1 to 8, so the d8 is the most likely to add bandits making the game harder*
 
@@ -423,26 +419,24 @@ Revealing Tiles
 
 A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is either done by the Reveal Action using Telescopes/Binoculars
 
-To reveal a tile, flip it so that it faces up.
-* If it is the furthest West tile revealed, score 2 Points
-* Otherwise Score 1 VP
-* If it has a Campfire add Bandits to it. The number of bandits is the one in the Red star on the scoreboard in the section with the Furthest Player or Bandit Tracker.
+To reveal a tile, flip it faces up. And in standard mode score victory points (2 if furthest west or 1 otherwise).
 
-Once you have revealed the tile, add face down tiles to empty spaces around it.
-* If the tile is on the center row (going West), to all empty spaces next to it.
-* If the tile is North of the center row, to those South, West, and East.
-* If the tile is South of the center row, to those North, West, and East.
+If it has a Campfire add Bandits to it. The number of bandits is the one in the Red star on the scoreboard in the section with the Furthest Player or Bandit Tracker.
 
-** Note Adding these is important because bandits can step onto unrevealed tiles, but not empty spaces**
+Once you have revealed the tile, add face down tiles to all empty spaces around it, Except
+* If the tile is North of the center row (Going West), not to the North.
+* If the tile is South of the center row, not to the South.
+
+** Note Adding these is important because bandits can step onto unrevealed tiles, but not empty spaces **
 
 
 ## Cooperation Bonus
 
-When a player performs a job that's last action produces a Dice amount of a certain resource, if there are other players on the tile, he may invite them to join him.
+When a player performs a job with a last action that produces a Dice amount of a certain resource, if there are other players on the tile, he may invite them to join him.
 
 The other players may then activate any of their jobs that also produce the same resource by dice, paying their appropriate cost.
 
-All players then roll. All players then gain the full amount they rolled, plus half of the amount the other players rolled, added together and rounded up.
+All players then roll and gain the full amount they rolled, plus half of the amount the other players combined rolled (rounded up).
 
 ## Trade
 
@@ -452,21 +446,20 @@ When to players are on the same tile they may trade. The player who's turn it is
 * Resources are traded directly.
 * Danger cards cannot be traded
 
-# Variants
+<h1 style="page-break-before:always">Variants</h1>
 
-## Precious Cargo 
+## Precious Cargo -- Co-op or Verses
 
-In Precious Cargo players must bring a wagon with a precious macguffin West with them.
+In Precious Cargo players must bring a wagon containing a precious macguffin West with them.
 
 ### Setup Changes -- Co op
 
-* Choose a "Precious Cargo - Co op" Board
+* Choose a "Co-op" Board
 * Add the *Wagon Piece* to the same tile as the players.
 * Add only 1 counter to the players score track as players score together.
 
-### Setup Changes -- Competitive
+### Setup Changes -- Verses
 
-* Choose a "Competetive" Board
 * Add the *Wagon Piece* to the same tile as the players.
 
 ### Rules Changes
@@ -480,23 +473,32 @@ Players score by:
 
 To move the wagon, a player must be on the same tile as the wagon and use a movement action to move the wagon **instead** of themselves. (The Wagon follows the same movement rules they would)
 
+**In Co-op mode, if any player dies, the whole group fail the mission and lose.**
 
+## Speed of the Slowest -- Co-op Only
 
-### Extra Rules
+### Setup Changes
+
+Choose a Co-op Board
+Add the Travel Bar behind (to the East) of the players
+
+### Rules Changes
 
 Players no longer score by revealing tiles.
 Players score by:
 
 * Removing Bandits : 2vp
-* Building Railway : 2vp or 3vp)
-* Moving the Wagon West : 2vp (-2vp for moving it East)
+* Building Railway : 2vp or 3vp
+* When the Travel Bar moves forward : 2vp
 
-The Wagon may be attacked by bandits. If the Wagon would take any Damage, move the bandit tracker one space forward, no matter how big the damage.
+Whenever a player moves West such that **ALL** players are at least 1 space ahead of the Travel Bar, move the Travel Bar West to meet the furthest back player. Score 2vp for every space the Travel Bar moves.
 
-To move the wagon, a player must be on the same tile as the wagon and use a movement action to move the wagon **instead** of themselves. (The Wagon follows the same movement rules as players)
+The Travel bar does not limit movement. Players and bandits may cross it freely, it does not move East again.
 
 
 {{/md}}
+
+<!--div style="page-break-after:always"></div --!>
 
 </body>
 </html>

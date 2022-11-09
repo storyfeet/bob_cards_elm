@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="2.3299322"
-     inkscape:cx="319.96639"
-     inkscape:cy="164.59706"
+     inkscape:cx="254.72844"
+     inkscape:cy="165.02626"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -40,50 +40,17 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-15.055327,-21.425342)">
-    <g
-       id="g2616"
-       transform="translate(64.151693,-29.77812)">
-      <g
-         id="g1743"
-         transform="translate(-220.31525,-17.050109)">
-        <rect
-           x="242.54286"
-           y="-59.413807"
-           width="6"
-           height="10"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="stroke:#ff0000;paint-order:stroke"
-           rx="1"
-           ry="1"
-           transform="rotate(30)"
-           id="rect2623-8" />
-        <text
-           font-family="Arial"
-           font-size="5px"
-           x="243.99905"
-           y="73.531013"
-           fill="#ff0000"
-           stroke="#ffffff"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           font-weight="bold"
-           text-anchor="middle"
-           id="text2625-7">!</text>
-      </g>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="35.206161"
-         y="59.648262"
-         id="text4162-37-36-2"><tspan
-           sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
-           x="35.206161"
-           y="59.648262"
-           id="tspan2344-7">This card</tspan></text>
-    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="99.357857"
+       y="29.870142"
+       id="text4162-37-36-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="99.357857"
+         y="29.870142"
+         id="tspan2344-7">This card</tspan></text>
     <g
        id="g12572">
       <g
@@ -214,6 +181,36 @@
          ry="1"
          transform="rotate(30)"
          id="rect2329-9-3" />
+    </g>
+    <g
+       id="g4259"
+       transform="translate(10.583334,0.04252092)">
+      <rect
+         x="74.172752"
+         y="-16.380772"
+         width="6"
+         height="10"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         style="stroke:#ff0000;paint-order:stroke"
+         rx="1"
+         ry="1"
+         transform="rotate(30)"
+         id="rect2623-8-3" />
+      <text
+         font-family="Arial"
+         font-size="5px"
+         x="77.115524"
+         y="-8.9583788"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="font-size:6.35px;paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text2625-7-6"
+         transform="rotate(30.465463)">!</text>
     </g>
   </g>
 </svg>
