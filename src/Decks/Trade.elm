@@ -211,7 +211,10 @@ fighterDeck =
 sword:Card
 sword = Card "Sword" TFight
     (payEq 1 [Iron,Wood])
-    [[attack 3] , [defend 3]]
+    [ [attack 3]
+    , [defend 3]
+    , [In Forest,gather Food 1]
+    ]
 
 bow:Card
 bow = Card "Bow" TFight
@@ -228,6 +231,7 @@ dillinger= Card "Dillinger" TFight [pay Wood 1,pay Iron 1]
 revolver: Card 
 revolver = Card "Revolver" TFight [pay Iron 1, pay Wood 2]
     [ [Pay Wood (X 1), Attack (XD 3)]
+    , [In Forest,Pay Wood (X 1), Gain Food (XD 2)]
     , [defend 4]
     ]
 
@@ -237,6 +241,7 @@ rifle : Card
 rifle = Card "Rifle" TFight [In Village, pay Iron 1, pay Gold 1]
     [[pay Iron 1, Attack (N 3), attack 4 ]
     , [pay Iron 1, Defend (N 3), attack 4]
+    , [In Forest,gather Food 1]
     ]
 
 
@@ -245,6 +250,8 @@ rifle = Card "Rifle" TFight [In Village, pay Iron 1, pay Gold 1]
 
 crossbow:Card
 crossbow = Card "Crossbow" TFight [pay Wood 1,pay Iron 1]
-    [[pay Wood 1,attack 5]]
+    [[pay Wood 1,attack 5]
+    , [In Forest, pay Wood 1, gather Food 2]
+    ]
 
 
