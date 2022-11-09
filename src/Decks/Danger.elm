@@ -40,11 +40,13 @@ owie : Card
 owie = Card "Owie" (TDanger Pain) []
     [ [pay Food 1,discardD]
     , [In Village,pay Gold 1,scrapD]
+    , [Discard (TGather) (N 1),Discard (TMove) (N 1) ,scrapD]
     ]
 
 legWound : Card
 legWound =  Card "Leg Wound" (TDanger Pain) []
     [ [ Discard (TMove) (N 1) ,discardD]
+    , [ Discard (TMove) (N 2) ,scrapD]
     , [In Village,Discard (TMove) (N 1) ,scrapD]
     ]
 
@@ -52,6 +54,7 @@ armWound : Card
 armWound =  Card "Arm Wound" (TDanger Pain) []
     [[ discard ,discardD ]
     , [In Village,Discard (TGather) (N 1) ,scrapD]
+    , [Discard (TGather) (N 2) ,scrapD]
     ]
 
 

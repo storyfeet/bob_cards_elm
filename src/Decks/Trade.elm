@@ -17,7 +17,7 @@ explorerDeck =
     , (wagon, 2)
     , (telescope, 2)
     , (binoculars, 2)
-    , (potion, 3)
+    , (whiskey, 3)
     , (elixer , 3)
     , (canoe ,2)
     , (sailboat , 2)
@@ -28,16 +28,16 @@ explorerDeck =
     , (huntingKnife, 2)
     ]
 
-potion :  Card
-potion = Card "Potion" TGather [pay Food 1]
+whiskey :  Card
+whiskey = Card "Whiskey" THealth [pay Food 1]
     [[Discard (TDanger DAny) (X 1)]
-    , [Scrap TGather This ,Scrap (TDanger DAny) (X 1)]
+    , [Scrap THealth This ,Scrap (TDanger DAny) (X 1)]
     ]
 
 elixer : Card
-elixer = Card "Elixer" TGather (payEq 1 [Food,Wood] )
+elixer = Card "Elixer" THealth (payEq 1 [Food,Wood] )
     [ [Scrap (TDanger DAny) (N 1), Draw (N 1) ]
-    , [Scrap TGather This,Scrap (TDanger DAny) (X 1),Draw (X 1) ]
+    , [Scrap THealth This,Scrap (TDanger DAny) (X 1),Draw (X 1) ]
     ]
 
 
@@ -53,6 +53,7 @@ stalion:Card
 stalion = Card "Stalion" TMove 
     [In Prairie ,pay Food 4,Or, In Village ,pay Gold 2]
     [[ Pay Food (X 2), Move (X 3)]
+    , [scrapThis (TMove),Move (N 3),gain Food 2]
     , scrapFor TMove Food 6
     ]
 
@@ -65,9 +66,9 @@ cow = Card "Cow" THealth
 
 
 wagon:Card
-wagon = Card "Wagon" TMove
-    [pay Wood 4,pay Food 2]  
-    [ [scrapThis TMove ,gain Wood 2,gain Food 2,draw 2]
+wagon = Card "Wagon" THealth
+    [pay Wood 3,pay Food 2]  
+    [ [scrapThis THealth ,gain Wood 2,gain Food 2,draw 2]
     , [gain Wood 1, gain Food 1, draw 1]
     ]
 
