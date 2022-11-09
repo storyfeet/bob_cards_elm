@@ -61,6 +61,7 @@ cow: Card
 cow = Card "Cow" THealth 
     [In Prairie ,pay Food 2,Or, In Village ,pay Gold 1]
     [ [gain Food 2] 
+    , [In River,gain Food 3] 
     , [ scrapThis THealth, gain Food 5 ]
     ]
 
