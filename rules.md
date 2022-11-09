@@ -479,8 +479,8 @@ To move the wagon, a player must be on the same tile as the wagon and use a move
 
 ### Setup Changes
 
-Choose a Co-op Board
-Add the Travel Bar behind (to the East) of the players
+* Choose a Co-op Board.
+* Add the Travel Bar behind (to the East) of the players.
 
 ### Rules Changes
 
@@ -494,6 +494,15 @@ Players score by:
 Whenever a player moves West such that **ALL** players are at least 1 space ahead of the Travel Bar, move the Travel Bar West to meet the furthest back player. Score 2vp for every space the Travel Bar moves.
 
 The Travel bar does not limit movement. Players and bandits may cross it freely, it does not move East again.
+
+## Solo Play
+
+* Choose a Verses Board, and take 1 character as far west as you can.    
+If it's too easy make sure to choose a Hard Character and Bandit Dice.    
+For an extra challenge start with the Bandit Tracker further along the board.
+
+* Choose a Co-op Board, and play with 2 Characters, on either "Precious Cargo" or "Speed of the Slowest"
+
 
 
 {{/md}}
