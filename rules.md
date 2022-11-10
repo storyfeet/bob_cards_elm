@@ -29,13 +29,14 @@ Deck Goes West - Rules
 Overview
 --------
 
-Set in the early settlement of the Americas, each player competes, either against other players or against the clock, to go as far west as possible, managing their supplies, exhaustion and injuries, all while staying safe from Bandits.
+Set in the early settlement of the Americas, each player competes, or works together, to go as far west as possible. All while managing supplies, exhaustion and injuries, and staying safe from Bandits.
 
 Each player maintains a deck of cards with various actions available.
 During the main phase of the game players take turns to play cards and perform the actions on those cards. They may also buy cards from the trade row to gain extra abilities.
-Once all players have passed, the bandits will take their turn, and the trade row will upate.
 
-Then each player draws back up to 6 cards, and the cycle begins again.
+Once all players have run out of cards/actions and passed, the bandits will take their turn, and the trade row will upate.
+
+Then each player draws cards, and the cycle begins again.
 
 Verses, Co-op and Single player
 ---------------------
@@ -50,23 +51,24 @@ Winning and Scoring
 
 The game is won by reaching the end of the score track first. Players score points by performing actions on the map. 
 
-1. Reveal a Land Tile 
+1. Revealing a Land Tile 
     - If that tile is furthest west 2vp
     - Otherwise 1vp
-2. Build a Railway track
+2. Building a Railway track
     - If that Track is the furthest west 3vp
     - Otherwise 2vp
-3. Remove the last bandit from an area.
+3. Removing the last bandit from an area.
     - 2vp
 
 The first player to reach the end of the score track wins the game.
 
 If the Bandits reach the end of their track, the game ends immediately.
-* In Single Player: The player Loses.
-* In Co-op: The players Lose.
-* In Verses: The player with the most points wins.
 
-    *(Ties are broken by distance west, followed by resource count)*
+* In Single Player: The player Loses.    
+* In Co-op: The players Lose.    
+* In Verses: The player with the most points wins.    
+
+*(Ties are broken by distance west, followed by resource count)*
 
 Contents
 ---------
@@ -158,7 +160,7 @@ A complete *Player Phase* and *Bandit Phase* is called a **Round**.
 
 2. Untap Player Card
 
-    All players turn the Player Card to face forward
+    All players turn their Player Card to face forward (If it's not already)
 
 3. Pass the P1 Token *(In Solo Games ignore this)*
 
@@ -179,9 +181,9 @@ A complete *Player Phase* and *Bandit Phase* is called a **Round**.
     Once a player has passed, they may not do any more until the end of the round (Unless they are caught in a battle)
 *(In Solo Games, just do actions the until you don't want to)*
 
-5. May discard Item cards.
+5. May discard *Item Cards*.
 
-    Players may discard as many Item cards as they wish. They may not discard any Pain or Exhaustion cards at this point.
+    Players may discard as many Item cards as they wish. They may not discard any Danger cards at this point. *(Beware : If when you come to draw cards, you cannot draw at least 1 card, you lose)*
 
 ### Bandit Phase
 
