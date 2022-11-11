@@ -158,7 +158,7 @@ twoManSaw = Card "Two Man Saw" TGather [pay Iron 2]
     ]
 
 drill : Card
-drill = Card "Dril" TGather [In Village, pay Iron 2,pay Gold 1 ]
+drill = Card "Drill" TGather [In Village, pay Iron 2,pay Gold 1 ]
     [[In Mountain, discard , gather Iron 5]]
 
 lumpHammer : Card 
