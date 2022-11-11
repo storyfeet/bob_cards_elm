@@ -15,6 +15,10 @@ body {
     font-size:0.9em;
 }
 
+h1:not(:first-of-type){
+    page-break-before:always;
+}
+
 h1, h2, h3 {
     page-break-after:avoid;
 }
@@ -78,7 +82,7 @@ Contents
 * Meeples * 8 (2 Per player)
 * Wagon * 1
 * Bandit Counters - small * 20 , big(/pink) * 20
-* Resource Counters - Wood, Food, Iron , Gold : all * 20
+* Resource Counters - Wood, Food, Iron , Gold : small * 20 
 * First Turn Marker
 * Land Tiles * 48
 * Player Cards * 12 (soon 18)
@@ -103,14 +107,13 @@ First Separate the cards into 4 groups based on their top right corner:
 
 Note : Pain and Exhaustion are both types of "Danger Card" if your hand becomes full of them, you lose. 
 
-
 ### Board Setup
 
 Use the following diagram to help you follow setup instructions
 
 <img src="{{cat $0 "/rules/start_setup_embedded.svg" }}">
 
-1. **Choose and Place Board:** Choose a direction to represent West on the table. Take the appropriate Score Board (Standard or Co-op) And place it close to the east of the playing area.It's compass should show the directions intended, and there should be plenty of room to expand to the West.
+1. **Choose and Place Board:** Choose a direction to represent West on the table. Take the appropriate Score Board (Standard or Co-op) And place it to the east of the playing area.It's compass should show the directions intended, and there should be plenty of room to expand to the West.
 
 2. Add a **Meeple** for every player to the clear '0' on the *Score Board*.
 
@@ -278,7 +281,7 @@ There are 4 key resources in the game, "Gold", "Iron", "Wood" and "Food". They c
 'n' On the card will be an actual number.
 
 The grey circles represent a group of 'n' of the same item.
-If there are more than one grey circle, the contents of the each circle does not have to be the same.
+If there are more than one grey circle, separate grey circles do not have to be the same resource.
 
 ### ⬢ Rolling Dice ⬢
 
@@ -286,7 +289,7 @@ The ⬢ Symbol means Roll Dice. The dice that come with this game have 6 sides, 
 
 If using standard D6, treat 3,4,5 as 1 Success, and 6 as 2 Successes.
 
-If told ```+n⬢``` Roll 'n' dice and gain 1 of the resource for every success.
+If told "+n⬢" Roll 'n' dice and gain 1 of the resource for every success.
 
 ### 'x' Means Any Number
 
@@ -370,7 +373,7 @@ If you step onto a tile which is not yet revealed, reveal it. (See *Revealing Ti
 Bandits
 -------
 
-While travelling you are going to face bandits who will hinder your journey.They are represented by Bandit Counters, and Triple Bandit Counters.
+While travelling you are going to face bandits who will hinder your journey.They are represented by Bandit Counters.
 
 When you reveal a Bandit Campfire, and during the Bandits Appear Phase, bandits will arrive on the map. They will mostly be travelling west, and if they meet you will attack you. You may attack them on your turn as well if you have the weapons to do it.
 
@@ -410,7 +413,7 @@ Starting with the Westmost (then Northmost) Group, for each group of bandits, Ro
 
 ### Bandits Appear
 
-The "Bandit Risk" is the number in the red star on the scoreboad in the section with the furthest forward player or Bandit Tracker.
+The "Bandit Risk" is the number in the red star in the scoreboard section with the furthest forward player or Bandit Tracker.
 
 Roll the Bandit Dice, once per *Bandit Risk*, and add a bandit to all tiles with the rolled number in the red star on the tile.
 
@@ -423,7 +426,7 @@ A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is e
 
 To reveal a tile, flip it faces up. And in standard mode score victory points (2 if furthest west or 1 otherwise).
 
-If it has a Campfire add Bandits to it. The number of bandits is the one in the Red star on the scoreboard in the section with the Furthest Player or Bandit Tracker.
+If it has a Bandit Campfire, roll 'n' *Job Dice* where 'n' is the current *bandit risk*, and for every success, add a Bandit to the tile.
 
 Once you have revealed the tile, add face down tiles to all empty spaces around it, Except
 * If the tile is North of the center row (Going West), not to the North.
@@ -448,7 +451,8 @@ When to players are on the same tile they may trade. The player who's turn it is
 * Resources are traded directly.
 * Danger cards cannot be traded
 
-<h1 style="page-break-before:always">Variants</h1>
+Variants 
+======= 
 
 ## Precious Cargo -- Co-op or Verses
 
@@ -475,6 +479,9 @@ Players score by:
 
 To move the wagon, a player must be on the same tile as the wagon and use a movement action to move the wagon **instead** of themselves. (The Wagon follows the same movement rules they would)
 
+In Co-op the Wagon takes 'n' damage by all losing 'n' VP
+In Verses all players who did not defend the Wagon lose 'n' VP
+
 **In Co-op mode, if any player dies, the whole group fail the mission and lose.**
 
 ## Speed of the Slowest -- Co-op Only
@@ -497,13 +504,15 @@ Whenever a player moves West such that **ALL** players are at least 1 space ahea
 
 The Travel bar does not limit movement. Players and bandits may cross it freely, it does not move East again.
 
-## Solo Play
+Solo Play
+=======
 
 * Choose a Verses Board, and take 1 character as far west as you can.    
 If it's too easy make sure to choose a Hard Character and Bandit Dice.    
 For an extra challenge start with the Bandit Tracker further along the board.
 
-* Choose a Co-op Board, and play with 2 Characters, on either "Precious Cargo" or "Speed of the Slowest"
+* Choose a Co-op Board, and play with 2 Characters, on either "Precious Cargo" or "Speed of the Slowest".  Each Character maintains their own cards and resources. Trade can only happen when they are on the same tile. Play the characters actions in any order.
+
 
 
 
