@@ -368,7 +368,7 @@ If that turns out not enough, you may play another Job for the required movement
 
 You do not have to move onto revealed land, however the attempt cost is 1 Distance (Any movement type). You may still use remaining movement to try another direction.
 
-If you step onto a tile which is not yet revealed, reveal it. (See *Revealing Tiles). If you step onto a space without a tile, add a tile, and then reveal it.
+If you step onto a tile which is not yet revealed, reveal it. (See *Revealing Tiles*). If you step onto a space without a tile, add a tile, and then reveal it.
 
 Bandits
 -------
@@ -417,7 +417,7 @@ The "Bandit Risk" is the number in the red star in the scoreboard section with t
 
 Roll the Bandit Dice, once per *Bandit Risk*, and add a bandit to all tiles with the rolled number in the red star on the tile.
 
-*The numbers on the tiles go from 1 to 8, so the d8 is the most likely to add bandits making the game harder*
+*(The numbers on the tiles go from 1 to 8, so the d8 is the most likely to add bandits making the game harder)*
 
 Revealing Tiles
 ---------------
@@ -426,14 +426,13 @@ A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is e
 
 To reveal a tile, flip it faces up. And in standard mode score victory points (2 if furthest west or 1 otherwise).
 
-If it has a Bandit Campfire, roll 'n' *Job Dice* where 'n' is the current *bandit risk*, and for every success, add a Bandit to the tile.
+If it has a Bandit Campfire, roll 'n' *Job Dice* where 'n' is the current *bandit risk* , and for every success, add a Bandit to the tile.
 
 Once you have revealed the tile, add face down tiles to all empty spaces around it, Except
 * If the tile is North of the center row (Going West), not to the North.
 * If the tile is South of the center row, not to the South.
 
 ** Note Adding these is important because bandits can step onto unrevealed tiles, but not empty spaces **
-
 
 ## Cooperation Bonus
 
@@ -445,11 +444,13 @@ All players then roll and gain the full amount they rolled, plus half of the amo
 
 ## Trade
 
-When to players are on the same tile they may trade. The player who's turn it is offers the trade, and if it is agreed, that player discards a card and proceeds with the trade.
+When two players are on the same tile they may trade. The player who's turn it is offers the trade, and if it is agreed, that player discards a card and proceeds with the trade.
 
 * Item Cards are traded from one players hand to the top of the other player's Draw or Discard pile.
 * Resources are traded directly.
 * Danger cards cannot be traded
+* Players may also move the other player's piece using their own movement jobs. All movement must come from one player, and move the other. 
+
 
 Variants 
 ======= 

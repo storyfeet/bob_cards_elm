@@ -92,7 +92,7 @@ Me
 .mode: "Solo - Wagon"
 .date : "11/11/2022"
 .dice :12
-.difficulty : 1.5
+.difficulty : 2
 .length : Long
 .players : [Me]
 .learned : "Wagon works, but is really really hard"
