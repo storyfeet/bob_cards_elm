@@ -87,3 +87,22 @@
 .players : [Toby,Jacob,River,Felicity]
 .learned : "Eastern Bar for scoring works, but playing with young children too painful"
 
+
+Me
+.mode: "Solo - Wagon"
+.date : "11/11/2022"
+.dice :12
+.difficulty : 1.5
+.length : Long
+.players : [Me]
+.learned : "Wagon works, but is really really hard"
+
+Me
+.mode : "Solo - Wagon"
+.date : "12/11/2022"
+.dice : 20
+.difficulty : 1
+.length : Long
+.players : [Me]
+.learned : "Wagon Can Be completed, JUST, and on easy mode. Wayne Johns movement Very powerful for Launching the Wagon if only he can get enough food. Consider making it so players can move each other like the Wagon."
+
