@@ -106,3 +106,20 @@ Me
 .players : [Me]
 .learned : "Wagon Can Be completed, JUST, and on easy mode. Wayne Johns movement Very powerful for Launching the Wagon if only he can get enough food. Consider making it so players can move each other like the Wagon."
 
+Boys
+.mode : "Coop - Wagon"
+.date : "12/11/2022"
+.dice : 20
+.difficulty : 1
+.players : [Me,Toby,Jacob]
+.learned : "Tough, possibly too long"
+
+Boys
+.mode : "Coop - Slowest"
+.date : "13/11/2022"
+.difficulty : 1
+.dice : 20
+.players : [Me,Toby,Jacob]
+.learned : "Can be exciting and tense, maybe make target easier, so challenge can be possible at harder levels"
+
+
