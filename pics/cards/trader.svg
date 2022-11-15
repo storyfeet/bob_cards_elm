@@ -8,7 +8,7 @@
    version="1.1"
    id="svg135"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
-   sodipodi:docname="quick trader.svg"
+   sodipodi:docname="trader.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="5.3247396"
-     inkscape:cx="75.49665"
-     inkscape:cy="75.590551"
+     inkscape:cx="54.087152"
+     inkscape:cy="75.778354"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -164,20 +164,5 @@
          style="fill:#a2a233;fill-opacity:1;stroke-width:0.188477"
          x="12.252388"
          y="7.7509508">$</tspan></text>
-    <path
-       style="fill:#36dcdc;fill-opacity:1;stroke:#000000;stroke-width:0.0995058;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill;stop-color:#000000"
-       d="m 30.376617,16.618768 c -0.508192,0.758286 -1.374017,1.581682 -0.09213,2.014069 1.557762,-0.0112 0.334095,-1.224833 0.09213,-2.014069 z"
-       id="path6354"
-       sodipodi:nodetypes="ccc" />
-    <path
-       style="fill:#36dcdc;fill-opacity:1;stroke:#000000;stroke-width:0.0995058;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill;stop-color:#000000"
-       d="m 8.981555,18.322155 c -0.508192,0.758286 -1.374017,1.581682 -0.09213,2.014069 1.557762,-0.0112 0.334095,-1.224833 0.09213,-2.014069 z"
-       id="path6354-6"
-       sodipodi:nodetypes="ccc" />
-    <path
-       style="fill:#36dcdc;fill-opacity:1;stroke:#000000;stroke-width:0.0995058;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill;stop-color:#000000"
-       d="m 20.708263,8.7320927 c -0.508192,0.758286 -1.374017,1.5816823 -0.09213,2.0140693 1.557762,-0.0112 0.334095,-1.2248333 0.09213,-2.0140693 z"
-       id="path6354-2"
-       sodipodi:nodetypes="ccc" />
   </g>
 </svg>
