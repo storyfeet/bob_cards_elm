@@ -109,6 +109,7 @@ type Action
     | Take CardType JobNum
     | Discard CardType JobNum
     | BuildRail
+    | BuildBridge
     | WaterMove JobNum
     | MountainMove JobNum
     | Reveal JobNum --Num

@@ -163,16 +163,18 @@ drill = Card "Drill" TGather [In Village, pay Iron 2,pay Gold 1 ]
 
 lumpHammer : Card 
 lumpHammer = Card "Lump Hammer" TMake [pay Iron 2]
-    [[pay Iron 1, pay Wood 1,discard ,BuildRail] ]
+    [[pay Iron 1, pay Wood 1,discard ,BuildRail] 
+    ,[pay Iron 2, pay Wood 1,discard ,BuildBridge] ]
 
 sledgeHammer : Card
 sledgeHammer = Card "Sledgehammer" TMake [In Village ,pay Gold 2]
     [ [pay Iron 1, pay Wood 2,BuildRail]
-    , [Discard TAny (N 2),gather Iron 3]
+    , [pay Iron 2, pay Wood 2,BuildBridge]
+    , [Discard TAny (X 1),Gain Iron (XD 1)]
     ]
 
 skilledTrader : Card 
-skilledTrader = Card "Skilled Trader" TTrade [pay Any 2]
+skilledTrader = Card "Skilled Trader" TTrade [pay Any 2,pay Any 2]
     [ [discard, Pay Any (X 1),Gain Any (X 1)]
     , [In Village, Pay Any (X 1),Gain Any (X 1)]] 
 
@@ -188,7 +190,8 @@ roamingTrader = Card "Roaming Trader" TTrade  [pay Gold 2]
 
 forager : Card
 forager = Card "Forager" TTrade [In Forest,pay Any 2]
-    [[Scrap TAny (X 1), Draw (X 2)]]
+    [[Scrap TAny (X 1), Draw (X 2)]
+    ,[In Forest, Scrap (TDanger DAny) (N 2) ]] 
 
 gambler : Card
 gambler = Card "Gambler" TTrade [In Village, pay Gold 1]
@@ -243,9 +246,6 @@ rifle = Card "Rifle" TFight [In Village, pay Iron 1, pay Gold 1]
     , [pay Iron 1, Defend (N 3), attack 4]
     , [In Forest,gather Food 1]
     ]
-
-
-
 
 
 crossbow:Card

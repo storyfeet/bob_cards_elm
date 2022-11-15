@@ -66,11 +66,7 @@ The game is won by reaching the end of the score track first. Players score poin
 
 The first player to reach the end of the score track wins the game.
 
-If the Bandits reach the end of their track, the game ends immediately.
-
-* In Single Player: The player Loses.    
-* In Co-op: The players Lose.    
-* In Verses: The player with the most points wins.    
+If the Bandits reach the end of their track, the game ends immediately, and the player with the most points wins.
 
 *(Ties are broken by distance west, followed by resource count)*
 
@@ -449,13 +445,17 @@ When two players are on the same tile they may trade. The player who's turn it i
 * Item Cards are traded from one players hand to the top of the other player's Draw or Discard pile.
 * Resources are traded directly.
 * Danger cards cannot be traded
-* Players may also move the other player's piece using their own movement jobs. All movement must come from one player, and move the other. 
+* One of the players may also move the other player's piece using their own movement jobs. All movement must come from the one player to move the other. 
 
 
-Variants 
+Cooperative Variants 
 ======= 
 
-## Precious Cargo -- Co-op or Verses
+In Cooperative mode players win or lose together.  They win by reaching the end of the score track first. They lose if **any** player dies, or the bandits reach the end first.
+
+Turn order is not important. Players can take actions in any order. (Or use the turn order rules if they prefer)
+
+## Precious Cargo 
 
 In Precious Cargo players must bring a wagon containing a precious macguffin West with them.
 
@@ -464,10 +464,6 @@ In Precious Cargo players must bring a wagon containing a precious macguffin Wes
 * Choose a "Co-op" Board
 * Add the *Wagon Piece* to the same tile as the players.
 * Add only 1 counter to the players score track as players score together.
-
-### Setup Changes -- Verses
-
-* Add the *Wagon Piece* to the same tile as the players.
 
 ### Rules Changes
 
@@ -480,12 +476,9 @@ Players score by:
 
 To move the wagon, a player must be on the same tile as the wagon and use a movement action to move the wagon **instead** of themselves. (The Wagon follows the same movement rules they would)
 
-In Co-op the Wagon takes 'n' damage by all losing 'n' VP
-In Verses all players who did not defend the Wagon lose 'n' VP
+The Wagon takes 'n' damage by players losing 'n' VP
 
-**In Co-op mode, if any player dies, the whole group fail the mission and lose.**
-
-## Speed of the Slowest -- Co-op Only
+## Speed of the Slowest
 
 ### Setup Changes
 
@@ -507,6 +500,8 @@ The Travel bar does not limit movement. Players and bandits may cross it freely,
 
 Solo Play
 =======
+
+To play solo you can either play a faux Co-op game, where you manage two characters, or as a single character to beat the any of the boards you choose.
 
 * Choose a Verses Board, and take 1 character as far west as you can.    
 If it's too easy make sure to choose a Hard Character and Bandit Dice.    

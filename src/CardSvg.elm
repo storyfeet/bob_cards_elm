@@ -80,6 +80,7 @@ action x y c =
         Pay r n -> resource x y r "Red" "-" n 
         Gain r n -> resource x y r "Green" "+" n 
         BuildRail -> jobPic x y "build_rail"
+        BuildBridge -> jobPic x y "build_bridge"
 
             
 costOrType : Job -> CardType -> String
