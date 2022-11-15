@@ -315,43 +315,43 @@ When the card is "This card", the symbol will also match the color of the card t
 
 <img src="{{$0}}/rules/card_action_examples.svg">
 
-### Special Actions
+<h2 style="page-break-before:always">Build Railway</h2>
 
-
-<img src="{{$0}}/rules/build_railway.svg" style="float:left;margin:0px 20px 60px 0px"> Build Railway
+<img src="{{$0}}/rules/build_railway.svg">
 
 * Place an Railway (Iron) Token on the Tile you are currently on.
 * Cannot be done if there is already a Railway Token Down.
 * If this is the most West Railway yet, score 3 VP.
 * Otherwise score 2 VP
 
+## Reveal Land 
+
 <img src="{{$0}}/rules/reveal.svg">
 
-* Reveal Land
-    * Reveal 'n' tiles within 2 spaces from your current position. 
-    * One diagonal is allowed.
-    * You may choose places without a tile, add one and reveal it.
+* Reveal 'n' tiles within 2 spaces from your current position. 
+* One diagonal is allowed.
+* You may choose places without a tile, add one and reveal it.
 
 ### Movement
 
 These actions move your player 'n' spaces on the map orthagonaly (that is NWES and not diagonally). Though they have different limitations.
 
 
-<img src="{{$0}}/rules/movement_normal.svg" style="float:left;margin:0px 20px 60px 0px">Normal Movement
+<img src="{{$0}}/rules/movement_normal.svg" style="float:left;margin:0px 20px 60px 0px">**Normal Movement**
 
 * Cannot move onto water.
 * Can move off of water.
 * Moving onto a mountain counts as moving two spaces.
-* Moving onto a tile with a railway does not cost movement points, but you must have at least 1 *Normal Movement* left to use it.
+* Moving onto a tile with a railway does not cost movement points, but you must have at least 1 *Normal Movement* left. 
 
-<img src="{{$0}}/rules/movement_climbing.svg" style="float:left;margin:0px 20px 60px 0px">Climbing Movement
+<img src="{{$0}}/rules/movement_climbing.svg" style="float:left;margin:0px 20px 60px 0px">**Climbing Movement**
 
 * Cannot move onto water
 * Can move off of water
 * Mountains Cost 1 movement.
 * Even tiles with railway cost 1 Movement
 
-<img src="{{$0}}/rules/movement_sailing.svg" style="float:left;margin:0px 20px 60px 0px">Sailing Movement
+<img src="{{$0}}/rules/movement_sailing.svg" style="float:left;margin:0px 20px 60px 0px">**Sailing Movement**
 
 * Must move either from or onto water or river.
 * Moving onto a mountain costs 2 Spaces.
