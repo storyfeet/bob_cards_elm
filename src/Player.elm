@@ -27,7 +27,7 @@ type alias ReqList = Dict String (Card,List Int)
 players : List Player
 players = 
     [ jakeWilder,blazeDecker,caseyRocks,samBoater,elisaWatton,wayneJohns
-    , claytonConnel,dorotheaDuke,fisherByrd,jebSteal,driftinaWood,alysBear]
+    , claytonConnel,dorotheaDuke,carlDirk,jebSteal,driftinaWood,alysBear]
 
 
 reqCard : Card -> Int -> ReqList-> ReqList
@@ -101,7 +101,8 @@ blazeDecker : Player
 blazeDecker = 
     Player "Blaze Decker" 1 6
     standardRes
-    [ [ discard, Move (N 1)]
+    [ [defend 1]
+    , [ discard, Move (N 1)]
     , [ scrap TAny 1, scrap anyDanger 1]
     ] 
     (coreMinPlus [knife] [(huntingKnife , 2)])
@@ -142,16 +143,17 @@ dorotheaDuke =
         (DS.coreMinPlus [boots,pickaxe] [(climbingBoots, 2), (pickaxe ,2)])
 
 -- Water 2
+-- (fisher Byrd)
 
-fisherByrd : Player
-fisherByrd = 
-    Player "Fisher Byrd" 2 5
+driftinaWood : Player
+driftinaWood = 
+    Player "Driftina Wood" 2 5
         standardRes  
-        [ [ Draw (N 1), Scrap TAny (N 1) ]
-        , [ In Water, Scrap (TDanger DAny) (X 1) ]
+        [ [ In Water,Scrap TAny (N 1),gather Food 2 ]
+        , [ In Water,pay Any 1, Scrap (TDanger DAny) (X 1) ]
         , [ Pay Any (X 1), WaterMove (X 1)]
         ]
-        (coreMinPlus [saw,knife] [(net,2),(axe, 2)])
+        (coreMinPlus [saw,knife] [(net,1),(axe, 2)])
 
 -- Farmer 2
 jebSteal : Player
@@ -179,9 +181,9 @@ alysBear =
 
 -- Fighter 2
 
-driftinaWood : Player
-driftinaWood = 
-    Player "Driftina Wood" 2 5
+carlDirk : Player
+carlDirk = 
+    Player "Carl Dirk" 2 5
     (startRes [(Gold, 1),(Wood,2),(Food, 4)])
     [ [attack 2]
     , [Pay Food (X 1), Move (X 1)]
