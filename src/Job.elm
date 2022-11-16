@@ -19,6 +19,7 @@ type Resource
     | Wood
     | Iron
     | Food
+    | VP
     | Any
 
 
@@ -36,28 +37,20 @@ jnum j =
     case j of
         X 1 ->
             "x"
-
         D 1 ->
             "⬢"
-
         XD 1 ->
             "x⬢"
-
         N n ->
             String.fromInt n
-
         X n ->
             String.fromInt n ++ "x"
-
         D n ->
             String.fromInt n ++ "⬢"
-
         XD n ->
             String.fromInt n ++ "x⬢"
-
         This ->
             ""
-
         None ->
             ""
 
@@ -112,7 +105,18 @@ type Action
     | WaterMove JobNum
     | MountainMove JobNum
     | Reveal JobNum --Num
+    | Event Event
     | Starter 
+
+type Event 
+    = WagonWest
+    | WagonEast
+    | BarWest
+    | Build
+    | EReveal
+    | Then
+    | West
+
 
 
 

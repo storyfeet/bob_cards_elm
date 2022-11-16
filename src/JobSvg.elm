@@ -58,6 +58,10 @@ action x y c =
         J.Gain r n -> resource x y r "Green" "+" n 
         J.BuildRail -> jobPic x y "build_rail"
         J.BuildBridge -> jobPic x y "build_bridge"
+        J.Event J.WagonEast -> jobPic x y "wagon_east"
+        J.Event J.WagonWest -> jobPic x y "wagon_west"
+        J.Event J.BarWest -> jobPic x y "bar_west"
+        J.Event J.Then -> jobPic x y "then"
 
 jobPlaceAction: Float -> Float -> Int -> J.Action -> String
 jobPlaceAction sx sy n a = 
@@ -81,6 +85,7 @@ resPic r =
         J.Iron -> "iron"
         J.Food -> "food"
         J.Wood -> "wood"
+        J.VP -> "vp"
         J.Any -> "any"
 
 placePic:J.Place -> String

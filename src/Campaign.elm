@@ -10,7 +10,6 @@ type alias Campaign =
     , setup : String
     , rules : String
     , jobs : List Job
-    , scoring : List Score
     }
 
 type Mode 
@@ -19,13 +18,6 @@ type Mode
     | Verses
 
 
-type Score 
-    = Build Int Int
-    | Reveal Int Int
-    | WagonWest Int
-    | WagonEast Int
-    | BarWest Int
-    | RemoveBandits Int
 
 type Dice
     = D8
@@ -43,7 +35,9 @@ verses1 = { name = "Verses 1"
     , setup = ""
     , rules = ""
     , jobs = []
-    , scoring = [Build 2 3,Reveal 1 2, RemoveBandits 2]
+    , scoring = [
+        [J.Build ,Reveal 1 2, RemoveBandits 2]
+        ]
     }
 
 coop1 : Campaign
