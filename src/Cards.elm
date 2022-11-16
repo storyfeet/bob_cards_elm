@@ -56,7 +56,6 @@ cTypeColor ct =
         TFight -> "red"
         TMove -> "cyan"
         TGather -> "fuchsia"
-        TPlayer _ -> "blue"
         TDanger _ -> "black"
         TTrade -> "pink"
         TMake -> "orange"

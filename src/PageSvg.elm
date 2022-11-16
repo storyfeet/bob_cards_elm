@@ -70,6 +70,12 @@ iunit : Int -> String -> String
 iunit n u =
     String.fromInt n ++ u
 
+narrowStk: String -> String -> String 
+narrowStk f s = 
+    String.join " " 
+    [ flStk f s 0.5
+    , strokeFirst
+    ]
 
 iprop : String -> Int -> String
 iprop name val =

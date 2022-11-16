@@ -1,7 +1,7 @@
 module PlayerSvg exposing (front,back)
 import Player as PL
 import PageSvg exposing (..)
-import CardSvg  as CSV exposing (job,jobs,narrowStk)
+import JobSvg as JSV exposing (job,jobs)
 import HasPicList as PicLists
 import Cards 
 
@@ -16,8 +16,8 @@ front p =
         , text "Arial" 4 [xy 7 50 , txCenter , rotate -90 7 50,narrowStk "black" "white" ] "Draw"
         , text "Arial" 4 [xy 93 50 , txCenter , rotate 90 93 50,narrowStk "black" "white" ] "Discard"
         , jobs 9 85 p.jobs
-        , picItem 75 2 "difficulty" p.difficulty "red"
-        , picItem 85 2 "hand_size" p.handSize "Blue"
+        , JSV.picItem 75 2 "difficulty" p.difficulty "red"
+        , JSV.picItem 85 2 "hand_size" p.handSize "Blue"
         , text "Arial" 4 [xy 50 54, bold] "Player Phase"
         , playerPhase p.handSize |> textLines 50 60 6 [font "Arial" 4]
         ]
@@ -38,12 +38,6 @@ back p =
         , banditPhase|> textLines 55 20 6 [font "Arial" 4]
         ]
 
-picItem : Float -> Float -> String -> Int -> String -> String
-picItem x y picName num col =
-    String.join "\n" [
-         CSV.jobPic x y picName 
-        , text "Arial" 5 [xy (x + 5) (y + 4), CSV.narrowStk col "white" , bold ] (String.fromInt num)
-        ]
 
 playerPhase : Int ->  List String
 playerPhase hSize = 

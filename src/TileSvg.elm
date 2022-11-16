@@ -1,8 +1,8 @@
 module TileSvg exposing(..)
 import Land exposing (..)
 import PageSvg exposing(..)
-import CardSvg as CS
 import Job exposing (Job)
+import JobSvg as JSV
 
 wet : Bool -> String
 wet b = 
@@ -40,15 +40,19 @@ tileJob t =
     case t.ltype of
         Village j -> job j
         Water -> ""
-        _ -> CS.jobStar 30 5 "red" (Job.N t.bandits)
+        _ -> String.join "\n" 
+            [ JSV.qStar 30 5 "red" "black"
+            , text "Arial" 6.5 [xy 35 12 ,flStk "white" "black" 0.5, strokeFirst,bold,txCenter] (String.fromInt t.bandits)
+            ]
+
 
     
 job: Job -> String
 job j =
     let 
-        x = ( 45 - (CS.jobLen j)) * 0.5
+        x = ( 45 - (JSV.jobLen j)) * 0.5
         
     in
-         CS.job  x 32 j
+         JSV.job  x 32 j
 
 

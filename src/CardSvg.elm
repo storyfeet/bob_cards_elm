@@ -1,7 +1,8 @@
 module CardSvg exposing (..)
 import PageSvg exposing (..)
 import Cards exposing (..)
-import Job exposing (..)
+import Job as J
+import JobSvg as JSV
 import HasPicList as PicLists
 
 
@@ -13,7 +14,7 @@ front card =
     , text "Arial" 5 [xy 2 6,flStk "Black" "white" 0.8,bold,strokeFirst
     ] card.name
     , costOrType card.cost card.ctype
-    , jobs 5 69 card.jobs
+    , JSV.jobs 5 69 card.jobs
     ]
 
 back : String
@@ -25,148 +26,39 @@ back  =
 
     ]
 
-jobs : Float -> Float -> List Job -> String
-jobs x y l =
-    case l of 
-        [] -> ""
-        h::t -> job x (y - jobHeight h) h ++ jobs x (y - jobHeight h) t 
-
-
-job : Float -> Float -> Job -> String
-job x y jb = 
-    List.indexedMap (jobPlaceAction x y) jb
-    |> String.join "\n"
-    
-
-jobPlaceAction: Float -> Float -> Int -> Action -> String
-jobPlaceAction sx sy n a = 
-    let 
-        x = sx + 10 * (modBy 4 n |> toFloat) + if n >= 4 then 10 else 0
-        y = sy + 10 * (n // 4 |> toFloat)
-    in
-        if modBy 4 n == 0  && n > 0 then
-             jobCornerArrow (x - 10) y  ++ action x y a 
-        else
-            action x y a
-
-jobHeight : Job -> Float
-jobHeight j = 
-    jobLen j 
-    |> floor
-    |> \n -> (n // 41 ) + 1
-    |> \a -> a * 12
-    |> toFloat
-
-
-jobLen : Job -> Float
-jobLen j = 10 * List.length j |> toFloat
-
-action : Float -> Float -> Action -> String
-action x y c = 
-    case c of 
-        In p -> place x y p 
-        Or -> ""
-        Discard ct n -> jobCard x y ct "-" "orange" n 
-        Draw n -> jobCard x y TAny "+" "green" n
-        Scrap ct n -> jobCard x y ct "#" "red" n
-        Take ct n -> jobCard x y ct "^" "blue" n
-        Starter -> qStar x y "yellow" "black" --jobStar x y "yellow"  n
-        Move n -> jobN x y "move" n
-        Attack n -> jobN x y "attack" n
-        Defend n -> jobN x y "defend" n
-        WaterMove n -> jobN x y "sail" n
-        MountainMove n -> jobN x y "climb" n
-        Reveal n -> jobN x y "reveal" n
-        Pay r n -> resource x y r "Red" "-" n 
-        Gain r n -> resource x y r "Green" "+" n 
-        BuildRail -> jobPic x y "build_rail"
-        BuildBridge -> jobPic x y "build_bridge"
 
             
-costOrType : Job -> CardType -> String
+costOrType : J.Job -> J.CardType -> String
 costOrType j ct =
     case j of
         [] -> cardType ct
         _ -> cost 2 38 2 j
 
-cost : Float -> Float -> Float -> Job -> String
+cost : Float -> Float -> Float -> J.Job -> String
 cost top x y c = 
     case c of 
         [] -> ""
-        Or::t -> cost (top+2) (x - 12) (top + 2 ) t
-        h::t -> action x y h ++ cost top x (y+10 ) t
+        J.Or::t -> cost (top+2) (x - 12) (top + 2 ) t
+        h::t -> JSV.action x y h ++ cost top x (y+10 ) t
 
-cardType : CardType -> String
+cardType : J.CardType -> String
 cardType ct = 
     case ct of
-        TDanger d ->  
+        J.TDanger d ->  
             String.join "\n" 
-                [ qStar 38 2 "black" "white"
-                , idText 43 10 "red" (dangerType d)
+                [ JSV.qStar 38 2 "black" "white"
+                , JSV.idText 43 10 "red" (J.dangerType d)
             ]
-        TPlayer n -> jobStar 38 2 "blue" (N n)
-        _ -> qStar 38 2 (cTypeColor ct) "black"
+        _ -> JSV.qStar 38 2 (cTypeColor ct) "black"
 
 
 
-resource : Float -> Float ->Resource -> String -> String -> JobNum -> String
-resource x y r tcol sym n =
-    String.join "\n" 
-        [ jobPic x y (resPic r) 
-        , gainText (x + 10) (y + 3) tcol (sym ++ jnum n)
-        --, jobText (x + 5) (y + 9) (resourceShortName r)
-        ]
-
-narrowStk: String -> String -> String 
-narrowStk f s = 
-    String.join " " 
-    [ flStk f s 0.5
-    , strokeFirst
-    ]
 
 
 
-jobCard : Float -> Float -> CardType -> String -> String -> JobNum -> String
-jobCard x y ct tx tcol n =
-    let 
-        stk = case n of 
-            This -> narrowStk (cTypeColor ct) "red"
-            _ -> narrowStk (cTypeColor ct) "black"
-    in 
-        String.join "\n" 
-            [ g [ rotate 30 (x + 5) (y + 5)]
-                [ rect (x+2) y 6 10 [ stk , rxy 1 1 ]        
-                , if n == This then 
-                    cardIconText (x + 5) (y + 8) tcol "!"
-                    else ""
-                ]
-            , cardLetter (x + 1) (y + 9) ct
-            , gainText (x + 10) (y+3) tcol (tx ++ jnum n)
-
-            ]
-
-cardLetter : Float -> Float -> CardType -> String
-cardLetter x y ct =
-    case ct of
-        TDanger d -> idText (x+1) y "red" (dangerType d)
-        TStarter -> 
-            polygon (starPoints x (y - 4) 5 5 ) [narrowStk "yellow" "black"]
-        _ -> ""
-
-jobArrow : Float -> Float -> String 
-jobArrow x y =
-    polygon (jobArrowPoints x y 7 7) [narrowStk "red" "white" ,prop "class" "arrow"]
-
-jobCornerArrow : Float -> Float -> String
-jobCornerArrow x y =
-    etag "path" 
-    [ prop "d" (String.join " " (jobCornerArrowPath x y 8 8))
-    , narrowStk "red" "white" 
-    , prop "class" "arrow"
-    ]
 
         
-jobCircle : Float -> Float -> String -> String -> JobNum -> String
+        {--jobCircle : Float -> Float -> String -> String -> JobNum -> String
 jobCircle x y col tx n = 
     String.join "\n" 
         [ circle (x+5) (y+5) 5 [narrowStk col "Black"  ]
@@ -180,35 +72,10 @@ jobRect x y col tx n =
         [ rect x y 10 10 [narrowStk col "Black"  ]
         , jobTextn x y tx n
         ]
-
-jobStar : Float -> Float -> String ->  JobNum -> String
-jobStar x y col n =
-    String.join "\n"
-        [ qStar x y col "black"
-        , jobText (x+5) (y + 6) (jnum n)
-        ]
-
-qStar : Float -> Float -> String -> String -> String
-qStar  x y col oline= 
-    polygon (starPoints x y 10 10) [narrowStk col oline]
-
-dangerStar : Float -> Float -> String -> String -> JobNum -> String
-dangerStar x y col tx n =
-    String.join "\n"
-        [ polygon (starPoints x y 10 10) [narrowStk col "black" ]
-        , idText (x+ 2.5) ( y+7) "grey" (tx)
-        , case n of 
-            Job.None -> ""
-            _ -> gainText (x + 10) (y + 3 ) "Green" ("+" ++ jnum n)
-        ]
+        --}
 
 
-place : Float -> Float -> Place ->  String
-place x y p =
-        jobPic x y (placePic p)
-
-
-hexPoints: Float -> Float -> Float -> Float -> List Float
+{--hexPoints: Float -> Float -> Float -> Float -> List Float
 hexPoints x y w h =
     let
         y1 = y + h*0.3
@@ -224,78 +91,19 @@ hexPoints x y w h =
         , x , y2
         , x , y1
         ]
+        --}
 
-starPoints : Float -> Float -> Float -> Float ->  List Float 
-starPoints x y w h =
-    let 
-         xx = (\n -> x + w * n * 0.1)
-         yy = (\n -> y + h * n * 0.1)
-    in
-        [ xx 5 , y  -- top
-        , xx 6 , yy 3
-        , xx 10 , yy 3 -- top right
-        , xx 6.5 , yy 6
-        , xx 8 , yy 10 -- bottom right
-        , xx 5 , yy 8
-        , xx 2 , yy 10 -- bottom left
-        , xx 3.5 , yy 6
-        , x , yy 3 -- top left
-        , xx 4, yy 3
+
+dangerStar : Float -> Float -> String -> String -> J.JobNum -> String
+dangerStar x y col tx n =
+    String.join "\n"
+        [ polygon (JSV.starPoints x y 10 10) [narrowStk col "black" ]
+        , JSV.idText (x+ 2.5) ( y+7) "grey" (tx)
+        , case n of 
+            J.None -> ""
+            _ -> JSV.gainText (x + 10) (y + 3 ) "Green" ("+" ++ J.jnum n)
         ]
 
-jobArrowPoints : Float -> Float -> Float -> Float -> List Float
-jobArrowPoints x y w h =
-    let 
-         xx = (\n -> x + w * n * 0.1)
-         yy = (\n -> y + h * n * 0.1)
-    in 
-        [ x , yy 5 
-        , xx 6 , yy 4
-        , xx 5 , yy 2
-        , xx 10 , yy 5
-        , xx 5 , yy 8
-        , xx 6 , yy 6
-        ]
-
-jobCornerArrowPath : Float -> Float -> Float -> Float -> List String
-jobCornerArrowPath x y w h =
-    let
-        xx = (\n -> String.fromFloat (x + w * n * 0.1))
-        yy = (\n -> String.fromFloat (y + h * n * 0.1))
-
-    in
-        [ "M", xx 0 , yy 0 -- back
-        , "Q", xx 0, yy 5 , xx 7, yy 6
-        , "L", xx 6,yy 4 
-        , "L", xx 10, yy 7 -- Point
-        , "L", xx 6, yy 10
-        , "L", xx 7, yy 8
-        , "Q", xx 0, yy 8 , xx 0 , yy 0 --finish
-        ]
-
-
-
-jobTextn : Float -> Float -> String ->JobNum -> String
-jobTextn x y tx n = 
-    String.join "\n" 
-        [ jobText (x + 5) (y + 4) (tx)
-        , jobText (x + 5) (y + 9) (jnum n)
-        ]
-
-jobText : Float -> Float -> String -> String
-jobText x y str = text "Arial" 4 [xy x y,bold,txCenter,flStk "white" "black" 0.4,strokeFirst ] str
-
-idText : Float -> Float -> String -> String -> String
-idText x y col tx =
-        text "Arial" 6 [xy x y ,flStk col "white" 0.5, strokeFirst,bold,txCenter] (tx )
-
-gainText : Float -> Float -> String -> String -> String
-gainText x y col tx =
-        text "Arial" 4 [xy x y ,flStk col "white" 0.6, strokeFirst,bold,txRight] (tx )
-
-cardIconText : Float -> Float ->String -> String -> String
-cardIconText x y tcol tx  = 
-    text "Arial" 7 [xy x y, flStk tcol "white" 0.6,strokeFirst,bold,txCenter] tx
 
 
 cardPic: Float -> Float -> String -> String
@@ -305,38 +113,8 @@ cardPic x y cname =
         Nothing -> ""
 
 
-resPic: Resource  -> String
-resPic r = 
-    case r of 
-        Gold -> "gold"
-        Iron -> "iron"
-        Food -> "food"
-        Wood -> "wood"
-        Any -> "any"
-
-placePic:Place -> String
-placePic p = 
-    case p of
-        Water -> "water"
-        Mountain -> "mountain"
-        River -> "river"
-        Prairie -> "prairie"
-        Forest -> "forest"
-        Village -> "village"
         
-jobPic: Float -> Float -> String -> String
-jobPic x y fname = 
-    img x y 10 10 ("../pics/jobs/" ++ fname  ++ ".svg")[]
 
-jobS: Float -> Float -> String -> String -> String
-jobS x y fname s = 
-    String.join "\n" 
-        [ jobPic x y fname
-        , gainText (x+10) (y + 3) "blue" s
-        ]
-
-jobN : Float -> Float -> String -> JobNum -> String
-jobN x y fname n = jobS x y fname (jnum n)
 
 cardPicFile : String -> Maybe String
 cardPicFile = Cards.imageFile PicLists.pList ".svg" "../pics/cards/"

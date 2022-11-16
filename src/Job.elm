@@ -71,7 +71,6 @@ type CardType
     | TGather
     | TMake
     | TTrade
-    | TPlayer Int
     | TDanger DangerType
 
 
