@@ -58,41 +58,6 @@ cardType ct =
 
 
         
-        {--jobCircle : Float -> Float -> String -> String -> JobNum -> String
-jobCircle x y col tx n = 
-    String.join "\n" 
-        [ circle (x+5) (y+5) 5 [narrowStk col "Black"  ]
-        , jobTextn x y tx n
-        ]
-
-
-jobRect : Float -> Float -> String -> String -> JobNum -> String
-jobRect x y col tx n = 
-    String.join "\n" 
-        [ rect x y 10 10 [narrowStk col "Black"  ]
-        , jobTextn x y tx n
-        ]
-        --}
-
-
-{--hexPoints: Float -> Float -> Float -> Float -> List Float
-hexPoints x y w h =
-    let
-        y1 = y + h*0.3
-        y2 = y + h*0.7
-        y3 = y + h
-        x1 = x + w*0.5
-        x2 = x+ w
-    in
-        [ x1,y 
-        , x2, y1
-        , x2, y2
-        , x1, y3
-        , x , y2
-        , x , y1
-        ]
-        --}
-
 
 dangerStar : Float -> Float -> String -> String -> J.JobNum -> String
 dangerStar x y col tx n =
