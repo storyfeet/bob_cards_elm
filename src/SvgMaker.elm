@@ -6,6 +6,8 @@ import Player as PL
 import PlayerSvg as PLSvg
 import CardSvg exposing (..)
 import Cards exposing (..)
+import Campaign as CP
+import CampaignSvg as CPSvg
 import Decks.All exposing (allCards)
 import MLists exposing(spreadL)
 import Land exposing (Tile)
@@ -63,6 +65,8 @@ type PrintMode
     | Tiles
     | Players
     | PlayerBacks
+    | Campaign
+    | CampaignBacks
     | Done
 
 type alias Model = 
@@ -97,7 +101,13 @@ updateNext mod =
             Nothing -> updateNext {mod | pos = 0, pmode = PlayerBacks}
         PlayerBacks -> case nextPlayerBack mod.pos PL.players of
             Just w -> ({mod | pos = mod.pos +1}, w|> log)
+            Nothing -> updateNext {mod | pos = 0, pmode = Campaign}
             -- GO Print Backs and say set to Done
+        Campaign ->  case nextCampaign mod.pos CP.campaigns of
+            Just w -> ({mod | pos = mod.pos +1}, w |> log)
+            Nothing -> updateNext {mod | pos = 0, pmode = CampaignBacks }
+        CampaignBacks -> case nextCampaignBack mod.pos CP.campaigns of 
+            Just w -> ({mod | pos = mod.pos +1}, w|> log)
             Nothing -> ({mod | pmode = Done},Writer "backs.svg" (backList placeCard 16)|> log )
         Done -> (mod,Cmd.none)
             
@@ -125,6 +135,11 @@ nextPlayer = tryNextPage 6 PLSvg.front placePlayer "players"
 nextPlayerBack : Int -> List PL.Player -> Maybe Writer
 nextPlayerBack = tryNextPage 6 PLSvg.back placePlayerBack "playerback"
 
+nextCampaign : Int -> List CP.Campaign -> Maybe Writer
+nextCampaign = tryNextPage 6 CPSvg.front placePlayer "campaignfront"
+
+nextCampaignBack : Int -> List CP.Campaign -> Maybe Writer
+nextCampaignBack = tryNextPage 6 CPSvg.back placePlayerBack "campaignback"
 subscriptions : Model -> Sub Msg
 subscriptions _ =
     nextPage (\_ -> Next)

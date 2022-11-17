@@ -25,12 +25,15 @@ type Dice
     | D12
     | D20
 
+campaigns : List Campaign
+campaigns = [ vs1 
+    , coop1
+    ]
+
 basicVsScoring : List Job
 basicVsScoring =
-    [ [on J.OnReveal, gain VP 1]
-    , [on J.OnRevealWest, gain VP 2]
-    , [on J.OnBuild, gain VP 2]
-    , [on J.OnBuildWest, gain VP 3]
+    [ [on J.OnReveal, gain VP 1, J.Or, on J.OnRevealWest, gain VP 2]
+    , [on J.OnBuild, gain VP 2 , J.Or,on J.OnBuildWest, gain VP 3]
     , [on J.OnDefeatBandits , gain VP 2]
     ]
 
@@ -44,8 +47,8 @@ basicWagonScoring =
     ]
 
 
-verses1 : Campaign
-verses1 = { name = "Verses 1"
+vs1 : Campaign
+vs1 = { name = "Verses 1"
     , difficulty = 1
     , dice = D20
     , mode = Verses
@@ -58,7 +61,7 @@ verses1 = { name = "Verses 1"
 
 
 coop1 : Campaign
-coop1 = {verses1 
+coop1 = {vs1 
     | name = "Precious Cargo"
     , mode = Coop
     , board = "Co-op Short"

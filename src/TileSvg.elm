@@ -48,11 +48,11 @@ tileJob t =
 
     
 job: Job -> String
-job j =
+job j = 
     let 
         x = ( 45 - (JSV.jobLen j)) * 0.5
         
     in
-         JSV.job  x 32 j
+         JSV.job 41 x 32 j
 
 

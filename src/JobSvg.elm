@@ -13,25 +13,25 @@ jobPic: Float -> Float -> String -> String
 jobPic x y fname = 
     img x y 10 10 ("../pics/jobs/" ++ fname  ++ ".svg")[]
 
-jobs : Float -> Float -> List Job -> String
-jobs x y l =
+jobs : Int -> Float -> Float -> List Job -> String
+jobs maxW x y l =
     case l of 
         [] -> ""
-        h::t -> job x (y - jobHeight h) h ++ jobs x (y - jobHeight h) t 
+        h::t -> job maxW x (y - jobHeight maxW h) h ++ jobs maxW x (y - jobHeight maxW h) t 
 
 
-job : Float -> Float -> Job -> String
-job x y jb = 
-    List.indexedMap (jobPlaceAction x y) jb
+job : Int -> Float -> Float -> Job -> String
+job maxW x y jb = 
+    List.indexedMap (jobPlaceAction maxW x y) jb
     |> String.join "\n"
     
 
-jobHeight : Job -> Float
-jobHeight j = 
+jobHeight : Int -> Job -> Float
+jobHeight maxW j = 
     jobLen j 
     |> floor
-    |> \n -> (n // 41 ) + 1
-    |> \a -> a * 12
+    |> \n -> (n // maxW ) + 1
+    |> \a -> a * 11
     |> toFloat
 
 
@@ -39,10 +39,10 @@ jobLen : Job -> Float
 jobLen j = 10 * List.length j |> toFloat
 
 action : Float -> Float -> J.Action -> String
-action x y c = 
+action x y c =
     case c of 
         J.In p -> place x y p 
-        J.Or -> ""
+        J.Or -> jobPic x y "or"
         J.Discard ct n -> jobCard x y ct "-" "orange" n 
         J.Draw n -> jobCard x y J.TAny "+" "green" n
         J.Scrap ct n -> jobCard x y ct "#" "red" n
@@ -58,9 +58,8 @@ action x y c =
         J.Gain r n -> resource x y r "Green" "+" n 
         J.BuildRail -> jobPic x y "build_rail"
         J.BuildBridge -> jobPic x y "build_bridge"
-        J.Event e -> event e x y
+        J.On e -> event e x y
 
-on Job : J.Action
 
 eventPic : J.Event -> String
 eventPic e =
@@ -69,7 +68,7 @@ eventPic e =
         J.OnWagonWest -> "on_wagon_west"
         J.OnBarWest -> "on_bar_west"
         J.OnBuild -> "on_build"
-        J.OnBuildWest -> "on build_west"
+        J.OnBuildWest -> "on_build_west"
         J.OnReveal -> "on_reveal"
         J.OnRevealWest -> "on_reveal_west"
         J.OnDefeatBandits -> "on_defeat_bandits"
@@ -79,13 +78,14 @@ event e x y =
     eventPic e |> jobPic x y
 
 
-jobPlaceAction: Float -> Float -> Int -> J.Action -> String
-jobPlaceAction sx sy n a = 
+jobPlaceAction: Int -> Float -> Float -> Int -> J.Action -> String
+jobPlaceAction maxW sx sy n a = 
     let 
-        x = sx + 10 * (modBy 4 n |> toFloat) + if n >= 4 then 10 else 0
-        y = sy + 10 * (n // 4 |> toFloat)
+        nwide = maxW // 10
+        x = sx + 10 * (modBy nwide n |> toFloat) + if n >= nwide then 10 else 0
+        y = sy + 10 * (n // nwide |> toFloat)
     in
-        if modBy 4 n == 0  && n > 0 then
+        if modBy nwide n == 0  && n > 0 then
              jobCornerArrow (x - 10) y  ++ action x y a 
         else
             action x y a

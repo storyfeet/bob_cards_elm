@@ -14,7 +14,7 @@ front card =
     , text "Arial" 5 [xy 2 6,flStk "Black" "white" 0.8,bold,strokeFirst
     ] card.name
     , costOrType card.cost card.ctype
-    , JSV.jobs 5 69 card.jobs
+    , JSV.jobs 41 5 69 card.jobs
     ]
 
 back : String
