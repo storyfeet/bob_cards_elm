@@ -1,5 +1,5 @@
 module Campaign exposing (..)
-import Job exposing (Job)
+import Job as J exposing (on,Job,gain,Resource(..))
 
 type alias Campaign =
     { name : String 
@@ -25,6 +25,24 @@ type Dice
     | D12
     | D20
 
+basicVsScoring : List Job
+basicVsScoring =
+    [ [on J.OnReveal, gain VP 1]
+    , [on J.OnRevealWest, gain VP 2]
+    , [on J.OnBuild, gain VP 2]
+    , [on J.OnBuildWest, gain VP 3]
+    , [on J.OnDefeatBandits , gain VP 2]
+    ]
+
+basicWagonScoring : List Job
+basicWagonScoring = 
+    [ [on J.OnWagonWest, gain VP 2]
+    , [on J.OnWagonEast, J.pay VP 2]
+    , [on J.OnBuild, gain VP 2]
+    , [on J.OnBuildWest, gain VP 3]
+    , [on J.OnDefeatBandits , gain VP 2]
+    ]
+
 
 verses1 : Campaign
 verses1 = { name = "Verses 1"
@@ -34,18 +52,17 @@ verses1 = { name = "Verses 1"
     , board = "Verses Short"
     , setup = ""
     , rules = ""
-    , jobs = []
-    , scoring = [
-        [J.Build ,Reveal 1 2, RemoveBandits 2]
-        ]
+    , jobs = basicVsScoring
     }
+
+
 
 coop1 : Campaign
 coop1 = {verses1 
     | name = "Precious Cargo"
     , mode = Coop
     , board = "Co-op Short"
-    , scoring = [Build 2 3, WagonWest 2,RemoveBandits 2 ]
+    , jobs = basicWagonScoring
     }
 
 

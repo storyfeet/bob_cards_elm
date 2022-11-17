@@ -58,10 +58,26 @@ action x y c =
         J.Gain r n -> resource x y r "Green" "+" n 
         J.BuildRail -> jobPic x y "build_rail"
         J.BuildBridge -> jobPic x y "build_bridge"
-        J.Event J.WagonEast -> jobPic x y "wagon_east"
-        J.Event J.WagonWest -> jobPic x y "wagon_west"
-        J.Event J.BarWest -> jobPic x y "bar_west"
-        J.Event J.Then -> jobPic x y "then"
+        J.Event e -> event e x y
+
+on Job : J.Action
+
+eventPic : J.Event -> String
+eventPic e =
+    case e of
+        J.OnWagonEast -> "on_wagon_east"
+        J.OnWagonWest -> "on_wagon_west"
+        J.OnBarWest -> "on_bar_west"
+        J.OnBuild -> "on_build"
+        J.OnBuildWest -> "on build_west"
+        J.OnReveal -> "on_reveal"
+        J.OnRevealWest -> "on_reveal_west"
+        J.OnDefeatBandits -> "on_defeat_bandits"
+
+event : J.Event ->Float -> Float -> String
+event e x y =
+    eventPic e |> jobPic x y
+
 
 jobPlaceAction: Float -> Float -> Int -> J.Action -> String
 jobPlaceAction sx sy n a = 

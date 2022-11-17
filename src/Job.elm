@@ -105,17 +105,20 @@ type Action
     | WaterMove JobNum
     | MountainMove JobNum
     | Reveal JobNum --Num
-    | Event Event
+    | On Event
     | Starter 
 
+
+
 type Event 
-    = WagonWest
-    | WagonEast
-    | BarWest
-    | Build
-    | EReveal
-    | Then
-    | West
+    = OnWagonWest
+    | OnWagonEast
+    | OnBarWest
+    | OnBuild
+    | OnBuildWest
+    | OnReveal
+    | OnRevealWest
+    | OnDefeatBandits
 
 
 
@@ -190,6 +193,9 @@ discardD : Action
 discardD =
     Discard (TDanger DAny) This
 
+on : Event ->  Action
+on e =
+    On e
 
 
 -- JOBS
