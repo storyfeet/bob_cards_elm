@@ -28,6 +28,7 @@ type Dice
 campaigns : List Campaign
 campaigns = [ vs1 
     , coop1
+    , coop2
     ]
 
 basicVsScoring : List Job
@@ -39,10 +40,8 @@ basicVsScoring =
 
 basicWagonScoring : List Job
 basicWagonScoring = 
-    [ [on J.OnWagonWest, gain VP 2]
-    , [on J.OnWagonEast, J.pay VP 2]
-    , [on J.OnBuild, gain VP 2]
-    , [on J.OnBuildWest, gain VP 3]
+    [ [on J.OnWagonWest, gain VP 2, J.Or, on J.OnWagonEast, J.pay VP 2]
+    , [on J.OnBuild, gain VP 2, J.Or ,on J.OnBuildWest, gain VP 3]
     , [on J.OnDefeatBandits , gain VP 2]
     ]
 
@@ -59,7 +58,6 @@ vs1 = { name = "Verses 1"
     }
 
 
-
 coop1 : Campaign
 coop1 = {vs1 
     | name = "Precious Cargo"
@@ -68,4 +66,13 @@ coop1 = {vs1
     , jobs = basicWagonScoring
     }
 
+coop2 : Campaign
+coop2 = {coop1 
+    | name = "Speed of the Slowest"
+    ,jobs = [
+        [on J.OnBuild, gain VP 2 , J.Or,on J.OnBuildWest, gain VP 3]
+        , [on J.OnBarWest, gain VP 3]
+        , [on J.OnDefeatBandits , gain VP 2]
+        ]
+    }
 
