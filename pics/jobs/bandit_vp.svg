@@ -8,7 +8,7 @@
    version="1.1"
    id="svg135"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
-   sodipodi:docname="vp.svg"
+   sodipodi:docname="bandit_vp.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -40,51 +40,57 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#ffcc00;stroke:#000000;stroke-width:0.41;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000;stroke-dasharray:none"
-       d="M 4.4069962,1.1296169 7.4492049,2.4182496 C -3.7949283,20.869677 23.483825,21.734515 13.273479,1.928468 L 15.834217,0.98940639 16.610138,2.9502379 16.058756,3.1372835 C 26.726464,25.746724 -7.4538704,24.797024 4.31649,3.4126456 L 3.4962584,2.9445355 Z"
+       style="fill:#ff0000;stroke:#000000;stroke-width:0.41;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill;stop-color:#000000"
+       d="M 4.420508,19.459398 7.4627167,18.170765 C -3.7814165,-0.28066238 23.497337,-1.1455004 13.286991,18.660547 l 2.560738,0.939061 0.775921,-1.960831 -0.551382,-0.187046 C 26.739976,-5.1577094 -7.4403586,-4.2080094 4.3300018,17.176369 l -0.8202316,0.46811 z"
        id="path390"
        sodipodi:nodetypes="ccccccccc" />
     <ellipse
        style="fill:#000000;stroke:#000000;stroke-width:0.21;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
        id="path594"
        cx="4.4857755"
-       cy="5.8476686"
+       cy="-14.567336"
        rx="0.26309392"
-       ry="0.25968379" />
+       ry="0.25968379"
+       transform="scale(1,-1)" />
     <ellipse
        style="fill:#000000;stroke:#000000;stroke-width:0.21;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
        id="path594-3"
        cx="3.4727373"
-       cy="9.3369856"
+       cy="-11.078019"
        rx="0.26309392"
-       ry="0.25968379" />
+       ry="0.25968379"
+       transform="scale(1,-1)" />
     <ellipse
        style="fill:#000000;stroke:#000000;stroke-width:0.21;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
        id="path594-6"
        cx="3.224221"
-       cy="12.733223"
+       cy="-7.6817818"
        rx="0.26309392"
-       ry="0.25968379" />
+       ry="0.25968379"
+       transform="scale(1,-1)" />
     <ellipse
        style="fill:#000000;stroke:#000000;stroke-width:0.21;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
        id="path594-7"
        cx="15.748777"
-       cy="5.1409802"
+       cy="-15.274024"
        rx="0.26309392"
-       ry="0.25968379" />
+       ry="0.25968379"
+       transform="scale(1,-1)" />
     <ellipse
        style="fill:#000000;stroke:#000000;stroke-width:0.21;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
        id="path594-5"
        cx="16.685192"
-       cy="8.9565134"
+       cy="-11.458491"
        rx="0.26309392"
-       ry="0.25968379" />
+       ry="0.25968379"
+       transform="scale(1,-1)" />
     <ellipse
        style="fill:#000000;stroke:#000000;stroke-width:0.21;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
        id="path594-35"
        cx="16.639338"
-       cy="12.952849"
+       cy="-7.4621553"
        rx="0.26309392"
-       ry="0.25968379" />
+       ry="0.25968379"
+       transform="scale(1,-1)" />
   </g>
 </svg>
