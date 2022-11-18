@@ -6,8 +6,8 @@ type alias Campaign =
     , difficulty : Int
     , dice : Dice
     , mode : Mode
-    , board : String
-    , setup : String
+    , setupPic : String
+    , setup : List String
     , rules : String
     , jobs : List Job
     }
@@ -51,8 +51,8 @@ vs1 = { name = "Verses 1"
     , difficulty = 1
     , dice = D20
     , mode = Verses
-    , board = "Verses Short"
-    , setup = ""
+    , setup = ["Board = A"]
+    , setupPic = "basic_vs"
     , rules = ""
     , jobs = basicVsScoring
     }
@@ -62,7 +62,7 @@ coop1 : Campaign
 coop1 = {vs1 
     | name = "Precious Cargo"
     , mode = Coop
-    , board = "Co-op Short"
+    , setup = ["Board = B"]
     , jobs = basicWagonScoring
     }
 
