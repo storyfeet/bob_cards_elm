@@ -22,13 +22,12 @@ back cam =
         , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] (cam.name ++ " - setup")
-        , rect 30 10 66 34 [flNoStk "white"]
-        , rect 50 10 46 54 [flNoStk "white"]
+        , rect 30 10 66 54 [flNoStk "white"]
         , text "Arial" 4 [xy 15 15] "Boards"
         , text "Arial" 4 [xy 7 30, txCenter,rotate -90 7 30]  "Dice"
         , namedCheckGrid 8 20 cam.boards ["d20","d12","d8"]
         , setupPic cam.setupPic
-        , textLines 5 55 6 [font "Arial" 4] cam.setup
+        , textLines 5 67 6 [font "Arial" 4] cam.setup
         ]
 
 setupPic : String -> String
