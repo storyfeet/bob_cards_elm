@@ -12,12 +12,13 @@ front cam =
     ] cam.name
         , JSV.jobs 61 4.5 87 cam.jobs
         , JSV.picItem 75 2 "difficulty" cam.difficulty "red"
+        , textLines 5 15 6 [font "Arial" 4] cam.rules
         ]
 
 back : CP.Campaign -> String
 back cam =  
     String.join "\n"
-        [ rect -3 -3 106 96 [flNoStk "#ccccff" ] 
+        [ rect -3 -3 106 96 [flNoStk "#dddddd" ] 
         , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] (cam.name ++ " - setup")
@@ -27,7 +28,7 @@ back cam =
         , text "Arial" 4 [xy 7 30, txCenter,rotate -90 7 30]  "Dice"
         , namedCheckGrid 8 20 cam.boards ["d20","d12","d8"]
         , setupPic cam.setupPic
-        , textLines 5 55 14 [font "Arial" 4] cam.setup
+        , textLines 5 55 6 [font "Arial" 4] cam.setup
         ]
 
 setupPic : String -> String

@@ -8,7 +8,7 @@ import Cards
 front : PL.Player -> String
 front p = 
     String.join "\n"
-        [ rect 0 0 100 90 [flStk "#ffb380" "white" 1] 
+        [ rect 0 0 100 90 [flStk "#ccccff" "white" 1] 
         , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] p.name
@@ -25,7 +25,7 @@ front p =
 back : PL.Player -> String
 back p =  
     String.join "\n"
-        [ rect -3 -3 106 96 [flNoStk "#ccccff" ] 
+        [ rect -3 -3 106 96 [flNoStk "#ccffcc" ] 
         , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst ] ( p.name ++ " - setup")
         , text "Arial" 4 [xy 5 14,flStk "Black" "none" 0,bold] "Start Resources"

@@ -4,32 +4,26 @@ import Job as J exposing (on,Job,gain,Resource(..))
 type alias Campaign =
     { name : String 
     , difficulty : Int
-    , dice : Dice
     , mode : Mode
     , boards : List String
     , setupPic : String
     , setup : List String
-    , rules : String
+    , rules : List String
     , jobs : List Job
     }
 
-type Mode 
-    = Solo
+type Mode =
+    Solo
     | Coop
     | Verses
 
 
-
-type Dice
-    = D8
-    | D10
-    | D12
-    | D20
-
 campaigns : List Campaign
 campaigns = [ vs1 
+    , onlyWest 
     , coop1
     , coop2
+    , thereAndBackAgain
     ]
 
 basicVsScoring : List Job
@@ -48,15 +42,21 @@ basicWagonScoring =
 
 
 vs1 : Campaign
-vs1 = { name = "Verses 1"
+vs1 = { name = "Standard Verses"
     , difficulty = 1
-    , dice = D20
     , mode = Verses
     , boards = ["A","B"]
     , setup = ["Board = A"]
     , setupPic = "basic_vs"
-    , rules = ""
+    , rules = []
     , jobs = basicVsScoring
+    }
+
+onlyWest:Campaign
+onlyWest = {vs1 
+    | name = "Only West"
+    , difficulty = 2
+    , jobs = [[on J.OnRevealWest , gain VP 3]]
     }
 
 
@@ -64,6 +64,7 @@ coop1 : Campaign
 coop1 = {vs1 
     | name = "Precious Cargo"
     , mode = Coop
+    , boards = ["C","D"]
     , setup = ["Board = B"]
     , jobs = basicWagonScoring
     }
@@ -78,3 +79,13 @@ coop2 = {coop1
         ]
     }
 
+thereAndBackAgain : Campaign
+thereAndBackAgain = {coop1 
+    | name = "There and Back Again"
+    , difficulty = 2
+    , jobs = [
+        [on J.OnRevealWest, gain VP 3]
+        , [ on J.OnDefeatBandits, J.Gain Any (J.D 3)]
+        ]
+    , rules = ["Do not remove any Tiles from the the board", "To win you need:","- To complete the score track","- All players on the starting tile" ]
+    }
