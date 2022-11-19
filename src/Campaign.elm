@@ -6,6 +6,7 @@ type alias Campaign =
     , difficulty : Int
     , dice : Dice
     , mode : Mode
+    , boards : List String
     , setupPic : String
     , setup : List String
     , rules : String
@@ -51,6 +52,7 @@ vs1 = { name = "Verses 1"
     , difficulty = 1
     , dice = D20
     , mode = Verses
+    , boards = ["A","B"]
     , setup = ["Board = A"]
     , setupPic = "basic_vs"
     , rules = ""
