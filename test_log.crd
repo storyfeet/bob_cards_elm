@@ -122,4 +122,11 @@ Boys
 .players : [Me,Toby,Jacob]
 .learned : "Can be exciting and tense, maybe make target easier, so challenge can be possible at harder levels"
 
-
+Boys
+.mode : "Coop - There and Back Again"
+.date : "20/11/2022"
+.runtime : 120
+.difficulty : 1
+.dice : 12
+.players : [Me,Toby,Jacob]
+.learned : "Building railway for back travel turned out to be super valuable, Getting back past the bandits wasn't too bad. Timings worked out pretty well"
