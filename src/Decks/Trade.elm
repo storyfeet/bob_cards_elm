@@ -202,7 +202,7 @@ gambler = Card "Gambler" TTrade [In Village, pay Gold 1]
 -- Fighter Deck -- 
 fighterDeck : List (Card,Int)
 fighterDeck =
-    [ (sword ,2 )
+    [ (dagger ,2 )
     , (bow ,2)
     , (rifle, 2)
     , (dillinger,2)
@@ -211,13 +211,22 @@ fighterDeck =
     ]
 
 
-sword:Card
+{-- sword:Card
 sword = Card "Sword" TFight
     (payEq 1 [Iron,Wood])
     [ [attack 3]
     , [defend 3]
     , [In Forest,gather Food 1]
     ]
+    --}
+
+dagger : Card
+dagger = Card "Dagger" TFight
+    [pay Iron 1,discard]
+    [ [discard, gather Food 2]
+    , [discard , defend 3, attack 4]
+    ]
+
 
 bow:Card
 bow = Card "Bow" TFight
@@ -250,7 +259,7 @@ rifle = Card "Rifle" TFight [In Village, pay Iron 1, pay Gold 1]
 
 crossbow:Card
 crossbow = Card "Crossbow" TFight [pay Wood 1,pay Iron 1]
-    [[pay Wood 1,attack 5]
+    [[pay Wood 1,defend 2,attack 5]
     , [In Forest, pay Wood 1, gather Food 2]
     ]
 
