@@ -42,27 +42,17 @@ Once all players have run out of cards/actions and passed, the bandits will take
 
 Then each player draws cards, and the cycle begins again.
 
-Verses, Co-op and Single player
----------------------
-
-This game can be played competively, co-op and single player. The rules barely need adjustment. Simply choose the appropriate score board and everything almost falls into place.
-
-For the sake of simplicity, these rules are written for Verses play.
-The changes needed for co-op and solo play are found in the Variants section at the back.
-
 Winning and Scoring
 -------------------
 
 The game is won by reaching the end of the score track first. Players score points by performing actions on the map. 
 
-1. Revealing a Land Tile 
-    - If that tile is furthest west 2vp
-    - Otherwise 1vp
+The way you score points depends on the campaign you are playing, but common ways are : 
+
+1. Revealing Land Tiles
 2. Building a Railway track
-    - If that Track is the furthest west 3vp
-    - Otherwise 2vp
-3. Removing the last bandit from an area.
-    - 2vp
+3. Removing bandits from an area
+4. Moving the Wagon token
 
 The first player to reach the end of the score track wins the game.
 
@@ -70,10 +60,23 @@ If the Bandits reach the end of their track, the game ends immediately, and the 
 
 *(Ties are broken by distance west, followed by resource count)*
 
+Verses, Co-op and Single player
+---------------------
+
+This game can be played as Verses, as Co-op and as single player. The rules barely need adjustment. Simply choose the appropriate *Campaign Card* and everything basically falls into place.
+
+The only fundamental difference in Cooperative play are:
+
+* Turn order is not important. Players may take their turns in any order they agree.
+* All players share a single score counter, and as such, win or lose together.
+* If any player dies, or the bandits reach the end of their track, the whole team lose.
+
+
 Contents
 ---------
 
-* Score Boards * 8
+* Score Boards * 4
+* Campaign Cards * 12
 * Crib Sheets * 4
 * Meeples * 8 (2 Per player)
 * Wagon * 1
@@ -104,6 +107,13 @@ First Separate the cards into 4 groups based on their top right corner:
 Note : Pain and Exhaustion are both types of "Danger Card" if your hand becomes full of them, you lose. 
 
 ### Board Setup
+
+Choose a *Campaign Card* from the set appropriate for your group.
+
+If this is your first Verses game, use "Standard Verses"
+If this is your first Co-op game use "Speed of the Slowest"
+
+Follow the instructions below, and those on the back of your Campaign Card (Which have extra instructions for some campaigns) to setup the play area.
 
 Use the following diagram to help you follow setup instructions
 
@@ -145,11 +155,11 @@ Use the following diagram to help you follow setup instructions
 Order of Play 
 -----------
 
-Repeat *Player Phase* and then *Bandit Phase* until either a player, or the bandits reach the end of their score track.
+Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits reach the end of their score track.
 
-A complete *Player Phase* and *Bandit Phase* is called a **Round**.
+A complete *Day Phase* and *Night Phase* is called a **Round**.
 
-### Player Phase
+### Day Phase
 
 1. Draw Cards
 
@@ -184,7 +194,7 @@ A complete *Player Phase* and *Bandit Phase* is called a **Round**.
 
     Players may discard as many Item cards as they wish. They may not discard any Danger cards at this point. *(Beware : If when you come to draw cards, you cannot draw at least 1 card, you lose)*
 
-### Bandit Phase
+### Night Phase
 
 *(This is shown on the back of Player Cards)*
 
