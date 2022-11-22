@@ -104,6 +104,7 @@ blazeDecker =
     [ [defend 1]
     , [ discard, Move (N 1)]
     , [ scrap TAny 1, scrap anyDanger 1]
+    , [ Discard TAny (X 1), Draw (X 1)]
     ] 
     (coreMinPlus [knife] [(huntingKnife , 2)])
 

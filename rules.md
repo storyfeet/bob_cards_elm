@@ -65,11 +65,17 @@ Verses, Co-op and Single player
 
 This game can be played as Verses, as Co-op and as single player. The rules barely need adjustment. Simply choose the appropriate *Campaign Card* and everything basically falls into place.
 
-The only fundamental difference in Cooperative play are:
+For Cooperative Play:
 
 * Turn order is not important. Players may take their turns in any order they agree.
 * All players share a single score counter, and as such, win or lose together.
 * If any player dies, or the bandits reach the end of their track, the whole team lose.
+
+For Solo Play:
+
+* Turn order is not important.
+* You may either play a Co-op campaign, managing two charaters or a VS game as one, aiming to beat the bandit tracker.
+
 
 
 Contents
@@ -108,9 +114,9 @@ Note : Pain and Exhaustion are both types of "Danger Card" if your hand becomes 
 
 ### Board Setup
 
-Choose a *Campaign Card* from the set appropriate for your group.
+Choose a *Campaign Card* appropriate for your group.
 
-If this is your first Verses game, use "Standard Verses"
+If this is your first Verses game, use "The Race"
 If this is your first Co-op game use "Speed of the Slowest"
 
 Follow the instructions below, and those on the back of your Campaign Card (Which have extra instructions for some campaigns) to setup the play area.

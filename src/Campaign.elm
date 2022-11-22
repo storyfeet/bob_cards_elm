@@ -17,12 +17,20 @@ type Mode =
     | Coop
     | Verses
 
+modeStr : Mode -> String
+modeStr m =
+    case m of
+        Solo -> "Solo"
+        Coop -> "Co-op"
+        Verses -> "VS"
+
 
 campaigns : List Campaign
 campaigns = [ vs1 
     , onlyWest 
     , coop1
-    , coop2
+    , speedOfTheSlowest
+    , escortMission
     , thereAndBackAgain
     , areWeTheBaddies
     ]
@@ -43,7 +51,7 @@ basicWagonScoring =
 
 
 vs1 : Campaign
-vs1 = { name = "Standard Verses"
+vs1 = { name = "The Race"
     , difficulty = 1
     , mode = Verses
     , boards = ["A","B"]
@@ -73,15 +81,28 @@ coop1 = {vs1
     , jobs = basicWagonScoring
     }
 
-coop2 : Campaign
-coop2 = {coop1 
+speedOfTheSlowest : Campaign
+speedOfTheSlowest = {coop1 
     | name = "Speed of the Slowest"
     , setupPic = "bar"
-    , setup = ["Add the Travel bar East of the map tiles facing west"]
+    , setup = ["Add the Travel Bar East of the map tiles facing west"]
     ,jobs = [
         [on J.OnBuild, gain VP 2 , J.Or,on J.OnBuildWest, gain VP 3]
         , [on J.OnBarWest, gain VP 3]
         , [on J.OnDefeatBandits , gain VP 2]
+        ]
+    }
+
+escortMission : Campaign
+escortMission = { speedOfTheSlowest
+    | name = "Escort Mission"
+    , difficulty = 3
+    , setup = [ "Add the Travel Bar East of the map tiles facing West"
+            , "1 player plays a Character with Difficulty 3"]
+    ,jobs = [
+        [on J.OnBuild, gain VP 1 , J.Or,on J.OnBuildWest, gain VP 1]
+        , [on J.OnBarWest, gain VP 3]
+        , [on J.OnDefeatBandits , gain VP 1]
         ]
     }
 
@@ -108,3 +129,5 @@ areWeTheBaddies = {coop1
         [on J.OnDefeatBandits , gain VP 3, J.Gain Gold (J.D 3)]
         ]
     }
+
+
