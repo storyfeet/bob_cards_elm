@@ -2,20 +2,26 @@ module CampaignSvg exposing (..)
 import PageSvg exposing (..)
 import JobSvg as JSV
 import Campaign as CP
+import MLists
+import JobString as JString
 
 front : CP.Campaign -> String
 front cam = 
-    String.join "\n"
-        [ rect 0 0 100 90 [flStk "#ffb380" "white" 1] 
-        , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
-        , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
-    ] cam.name
-        , text "Arial" 5 [xy 96 7,flStk "Black" "white" 0.8,bold,strokeFirst
-    ,txRight] (CP.modeStr cam.mode)
-        , JSV.jobs 61 4.5 87 cam.jobs
-        , JSV.picItem 75 10 "difficulty" cam.difficulty "red"
-        , textLines 5 15 6 [font "Arial" 4] cam.rules
-        ]
+    let 
+        jrules = cam.jobs |> List.map (JString.jobToString)
+        rules = MLists.mergeIfSmaller 7 cam.rules jrules
+    in 
+        String.join "\n"
+            [ rect 0 0 100 90 [flStk "#ffb380" "white" 1] 
+            , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
+            , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
+        ] cam.name
+            , text "Arial" 5 [xy 96 7,flStk "Black" "white" 0.8,bold,strokeFirst
+        ,txRight] (CP.modeStr cam.mode)
+            , JSV.jobs 61 4.5 87 cam.jobs
+            , JSV.picItem 86 10 "difficulty" cam.difficulty "red"
+            , textLines 5 15 6 [font "Arial" 4] rules
+            ]
 
 back : CP.Campaign -> String
 back cam =  

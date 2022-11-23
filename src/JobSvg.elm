@@ -102,6 +102,7 @@ resPic r =
         J.Food -> "food"
         J.Wood -> "wood"
         J.VP -> "vp"
+        J.BanditVP -> "bandit_vp"
         J.Any -> "any"
 
 placePic:J.Place -> String

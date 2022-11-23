@@ -20,6 +20,7 @@ type Resource
     | Iron
     | Food
     | VP
+    | BanditVP
     | Any
 
 

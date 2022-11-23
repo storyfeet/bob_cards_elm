@@ -62,5 +62,39 @@ mapEnumerated_ f n l =
     case l of 
         [] -> []
         h::t -> (f n h ) :: (mapEnumerated_ f (n + 1) t)
-        
+
+mergeIfSmaller: Int -> List a -> List a  -> List a
+mergeIfSmaller n a b =
+    if (List.length a) + ( List.length b) > n 
+    then if a == [] then b else a
+    else a ++ b
+    
+
+wordWrap : Int -> String -> List String
+wordWrap n s =
+    wordWrap_ n (String.toList s)
+
+wordWrap_: Int -> List Char ->  List String
+wordWrap_ n s = 
+    case wrap1_ n s "" of
+        Just (w1, []) -> [w1]
+        Just (w1 , rest ) -> w1 :: (wordWrap_ n rest )
+        Nothing -> [String.fromList s] 
+
+
+wrap1_ : Int -> List Char -> String -> Maybe (String,List Char)
+wrap1_ n s bld =
+    case s of
+        [] -> Just (bld , [])
+        ' '::t -> case wrap1_ (n - 1) t (bld++" ") of 
+            Just v -> Just v
+            Nothing -> Just ( bld, t)
+        '\n'::t -> Just (bld, t)
+        c::t -> if n <= 0 then Nothing
+            else wrap1_ (n - 1) t (bld ++ String.fromChar c)
+
+            
+
+    
+
 

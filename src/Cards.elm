@@ -36,6 +36,7 @@ resourceShortName r =
         Iron -> "Ir"
         Food -> "Fd"
         VP -> "vp"
+        BanditVP -> "bvp"
         Any -> "Any"
 
 placeShortName: Place -> String  
@@ -82,6 +83,7 @@ resourceColor r =
         Wood -> "Brown"
         Gold -> "Gold"
         VP -> "silver"
+        BanditVP -> "red"
         Any -> "White"
 
 

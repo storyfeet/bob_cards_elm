@@ -51,7 +51,10 @@ pList = [ "arm wound"
      , "whiskey"
     ]
 cList : List String 
-cList = [ "driftina wood"
+cList = [ "Miner2"
+    , "Miner3xcf"
+    , "MinerTeal"
+    , "driftina wood"
     , "elisa watton"
     , "jake wilder"
     , "sam boater"
