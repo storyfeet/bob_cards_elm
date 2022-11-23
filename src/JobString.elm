@@ -10,7 +10,7 @@ actionToString a =
     case a of
         On e -> eventToString e
         In p -> placeToString p
-        Gain r n -> "Gain " ++ (jNumToString n) ++  " " ++ resourceToString r
+        Gain r n -> "gain " ++ (jNumToString n) ++  " " ++ resourceToString r
         Or -> "or"
         _ -> ""
 
@@ -29,14 +29,14 @@ placeToString p =
 eventToString : Event -> String
 eventToString e =
     case e of
-        OnWagonWest -> "When the Wagon moves West"
-        OnWagonEast -> "When the Wagon moves East"
-        OnBarWest -> "When the Travel Bar moves West"
-        OnBuild -> "When you build"
-        OnBuildWest -> "When you build the most West"
-        OnReveal -> "When you reveal a tile"
-        OnRevealWest -> "When you reveal the most West tile"
-        OnDefeatBandits -> "When you clear a tile of Bandits"
+        OnWagonWest -> "when the Wagon moves West"
+        OnWagonEast -> "when the Wagon moves East"
+        OnBarWest -> "when the Travel Bar moves West"
+        OnBuild -> "when you build"
+        OnBuildWest -> "when you build the furthest West yet"
+        OnReveal -> "when you reveal a tile"
+        OnRevealWest -> "when you reveal the most West tile"
+        OnDefeatBandits -> "when you clear a tile of Bandits"
 
 resourceToString : Resource -> String
 resourceToString r = 

@@ -94,7 +94,10 @@ wrap1_ n s bld =
             else wrap1_ (n - 1) t (bld ++ String.fromChar c)
 
             
-
+capFirst : String -> String
+capFirst s = 
+    (String.left 1 s |> String.toUpper) ++ (String.dropLeft 1 s)
+    
     
 
 

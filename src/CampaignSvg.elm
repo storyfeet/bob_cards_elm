@@ -8,7 +8,11 @@ import JobString as JString
 front : CP.Campaign -> String
 front cam = 
     let 
-        jrules = cam.jobs |> List.map (JString.jobToString)
+        jrules = cam.jobs 
+            |> List.map (JString.jobToString)
+            |> List.map (MLists.capFirst)
+            |> List.map (MLists.wordWrap "    " 44 )
+            |> List.concat
         rules = MLists.mergeIfSmaller 7 cam.rules jrules
     in 
         String.join "\n"
@@ -18,9 +22,9 @@ front cam =
         ] cam.name
             , text "Arial" 5 [xy 96 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ,txRight] (CP.modeStr cam.mode)
-            , JSV.jobs 61 4.5 87 cam.jobs
+            , JSV.jobs 61 4.5 87 (List.reverse cam.jobs)
             , JSV.picItem 86 10 "difficulty" cam.difficulty "red"
-            , textLines 5 15 6 [font "Arial" 4] rules
+            , textLines 5 15 6 [font "Arial" 4 ,prop "xml:space" "preserve"] rules
             ]
 
 back : CP.Campaign -> String
