@@ -40,4 +40,4 @@ tWrap1 = test "Wrap1 line"
 tWordWrap : Test
 tWordWrap
     = test "Wordwrap does anything"
-    (\_ -> Expect.equal (MLists.wordWrap 9 "Hello cat people" ) ["Hello cat" ,"people"])
+    (\_ -> Expect.equal (MLists.wordWrap "--" 9 "Hello cat people" ) ["Hello cat" ,"--people"])

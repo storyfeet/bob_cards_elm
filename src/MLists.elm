@@ -70,15 +70,15 @@ mergeIfSmaller n a b =
     else a ++ b
     
 
-wordWrap : Int -> String -> List String
-wordWrap n s =
-    wordWrap_ n (String.toList s)
+wordWrap : String -> Int -> String -> List String
+wordWrap sub n s =
+    wordWrap_ (String.toList sub) n (String.toList s)
 
-wordWrap_: Int -> List Char ->  List String
-wordWrap_ n s = 
+wordWrap_: List Char -> Int -> List Char ->  List String
+wordWrap_ sub n s = 
     case wrap1_ n s "" of
         Just (w1, []) -> [w1]
-        Just (w1 , rest ) -> w1 :: (wordWrap_ n rest )
+        Just (w1 , rest ) -> w1 :: (wordWrap_ sub n (sub ++ rest) )
         Nothing -> [String.fromList s] 
 
 
