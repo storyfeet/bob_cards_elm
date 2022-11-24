@@ -117,7 +117,7 @@ thereAndBackAgain = {coop1
         [on J.OnRevealWest, gain VP 3]
         , [ on J.OnDefeatBandits, J.Gain Any (J.D 3)]
         ]
-    , rules = ["Do not remove any Tiles from the the board", "To win you need:","- To complete the score track","- All players on the starting tile" ]
+    , rules = ["Do not remove any tiles from play", "To win you need:","- To complete the score track","- All players on the starting tile" ]
     }
 
 areWeTheBaddies : Campaign
