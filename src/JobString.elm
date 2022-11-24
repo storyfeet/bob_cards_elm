@@ -11,6 +11,9 @@ actionToString a =
         On e -> eventToString e
         In p -> placeToString p
         Gain r n -> "gain " ++ (jNumToString n) ++  " " ++ resourceToString r
+        Pay VP n -> "lose " ++ (jNumToString n) ++ " VP"
+        Pay r n -> "pay " ++ (jNumToString n) ++  " " ++ resourceToString r
+
         Or -> "or"
         _ -> ""
 
