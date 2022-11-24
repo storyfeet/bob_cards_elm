@@ -85,6 +85,7 @@ speedOfTheSlowest : Campaign
 speedOfTheSlowest = {coop1 
     | name = "Speed of the Slowest"
     , setupPic = "bar"
+    , rules = ["The bar moves west when all players are at least 1 tile west of it"]
     , setup = ["Add the Travel Bar East of the map tiles facing west"]
     ,jobs = [
         [on J.OnBuild, gain VP 2 , J.Or,on J.OnBuildWest, gain VP 3]
@@ -100,7 +101,7 @@ escortMission = { speedOfTheSlowest
     , setup = [ "Add the Travel Bar East of the map tiles facing West"
             , "1 player plays a Character with Difficulty 3"]
     ,jobs = [
-        [on J.OnBuild, gain VP 1 , J.Or,on J.OnBuildWest, gain VP 1]
+        [on J.OnBuild, gain VP 1 ]
         , [on J.OnBarWest, gain VP 3]
         , [on J.OnDefeatBandits , gain VP 1]
         ]
@@ -120,14 +121,15 @@ thereAndBackAgain = {coop1
     }
 
 areWeTheBaddies : Campaign
-areWeTheBaddies = {coop1
+areWeTheBaddies = { coop1
     | name = "Are We the Baddies"
     , setupPic = "coop_basic"
     , setup = ["Use a single nuetral Score token"]
-    , rules = ["All players who contributed to bandit defeat" ,"roll 3 dice and gain the gold", "(This is not shared)"]
+    , rules = ["All players who contributed to bandit defeat roll 3 dice and gain the gold" ]
     , jobs = [
         [on J.OnDefeatBandits , gain VP 3, J.Gain Gold (J.D 3)]
         ]
     }
+
 
 

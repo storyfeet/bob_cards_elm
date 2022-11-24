@@ -132,6 +132,9 @@ txCenter = prop "text-anchor" "middle"
 
 txRight : String
 txRight = prop "text-anchor" "end"
+
+txSpaces : String
+txSpaces = prop "xml:space" "preserve"
 flNoStk: String -> String
 flNoStk f =
     flStk f "none" 0

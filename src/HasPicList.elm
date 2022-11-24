@@ -54,6 +54,7 @@ cList : List String
 cList = [ "Miner2"
     , "Miner3xcf"
     , "MinerTeal"
+    , "casey rocks"
     , "driftina wood"
     , "elisa watton"
     , "jake wilder"

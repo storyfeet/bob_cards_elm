@@ -10,10 +10,9 @@ front cam =
     let 
         jrules = cam.jobs 
             |> List.map (JString.jobToString)
-            |> List.map (MLists.capFirst)
-            |> List.map (MLists.wordWrap "    " 44 )
-            |> List.concat
-        rules = MLists.mergeIfSmaller 7 cam.rules jrules
+            |> ruleWrap 55
+        --rules = MLists.mergeIfSmaller 7 cam.rules jrules
+        crules = cam.rules |> ruleWrap 43
     in 
         String.join "\n"
             [ rect 0 0 100 90 [flStk "#ffb380" "white" 1] 
@@ -24,7 +23,8 @@ front cam =
         ,txRight] (CP.modeStr cam.mode)
             , JSV.jobs 61 4.5 87 (List.reverse cam.jobs)
             , JSV.picItem 86 10 "difficulty" cam.difficulty "red"
-            , textLines 5 15 6 [font "Arial" 4 ,prop "xml:space" "preserve"] rules
+            , textLines 5 15 5 [font "Arial" 4 ,txSpaces] crules
+            , textLines 5 (15 + 5 * (List.length crules|> toFloat )) 4 [font "Arial" 3,txSpaces] jrules
             ]
 
 back : CP.Campaign -> String
@@ -69,3 +69,8 @@ checkRow x y l =
     l |> List.indexedMap (\i _ -> rect (x + (toFloat i) * 7) y 5 5 [flStk "white" "black" 0.5,rxy 0.1 0.1])
     |> String.join "\n"
 
+ruleWrap : Int -> List String -> List String
+ruleWrap n l =
+    l |> List.map (MLists.capFirst)
+        |> List.map (MLists.wordWrap "    " n )
+        |> List.concat
