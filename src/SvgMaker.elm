@@ -63,10 +63,8 @@ backList placer n =
 type PrintMode
     = Cards
     | Tiles
-    | Players
-    | PlayerBacks
-    | Campaign
-    | CampaignBacks
+    | Wide
+    | WideBack
     | Done
 
 type alias Model = 
@@ -95,18 +93,11 @@ updateNext mod =
         Tiles -> case nextTile mod.pos (Land.fullDeck ) of
             -- Do Backs and set to Done
             Just w -> ({mod | pos = mod.pos +1 }, w|> log)
-            Nothing -> updateNext {mod | pos = 0, pmode = Players}
-        Players -> case nextPlayer mod.pos PL.players of
+            Nothing -> updateNext {mod | pos = 0, pmode = Wide}
+        Wide -> case nextWide mod.pos wideCards of
             Just w -> ({mod | pos = mod.pos +1}, w|> log)
-            Nothing -> updateNext {mod | pos = 0, pmode = PlayerBacks}
-        PlayerBacks -> case nextPlayerBack mod.pos PL.players of
-            Just w -> ({mod | pos = mod.pos +1}, w|> log)
-            Nothing -> updateNext {mod | pos = 0, pmode = Campaign}
-            -- GO Print Backs and say set to Done
-        Campaign ->  case nextCampaign mod.pos CP.campaigns of
-            Just w -> ({mod | pos = mod.pos +1}, w |> log)
-            Nothing -> updateNext {mod | pos = 0, pmode = CampaignBacks }
-        CampaignBacks -> case nextCampaignBack mod.pos CP.campaigns of 
+            Nothing -> updateNext {mod | pos = 0, pmode = WideBack}
+        WideBack -> case nextWideBack mod.pos wideCards of
             Just w -> ({mod | pos = mod.pos +1}, w|> log)
             Nothing -> ({mod | pmode = Done},Writer "backs.svg" (backList placeCard 16)|> log )
         Done -> (mod,Cmd.none)
@@ -129,20 +120,44 @@ nextFront = tryNextPage 16 front placeCard "front"
 nextTile : Int -> List Tile -> Maybe Writer
 nextTile = tryNextPage 24 TileSvg.front placeTile "tiles"
 
+{--
 nextPlayer : Int -> List PL.Player -> Maybe Writer
 nextPlayer = tryNextPage 6 PLSvg.front placePlayer "players"
 
 nextPlayerBack : Int -> List PL.Player -> Maybe Writer
 nextPlayerBack = tryNextPage 6 PLSvg.back placePlayerBack "playerback"
+--}
 
-nextCampaign : Int -> List CP.Campaign -> Maybe Writer
-nextCampaign = tryNextPage 6 CPSvg.front placePlayer "campaignfront"
+nextWide : Int -> List WideCard -> Maybe Writer
+nextWide = tryNextPage 6 wideFront placePlayer "widefront"
 
-nextCampaignBack : Int -> List CP.Campaign -> Maybe Writer
-nextCampaignBack = tryNextPage 6 CPSvg.back placePlayerBack "campaignback"
+nextWideBack : Int -> List WideCard -> Maybe Writer
+nextWideBack = tryNextPage 6 wideBack placePlayerBack "wideback"
 subscriptions : Model -> Sub Msg
 subscriptions _ =
     nextPage (\_ -> Next)
+
+type WideCard 
+    = WCampaign CP.Campaign
+    | WPlayer PL.Player
+
+wideCards : List WideCard
+wideCards = (PL.players |> List.map WPlayer)
+        ++ (CP.campaigns |> List.map  WCampaign)
+
+
+wideFront : WideCard -> String
+wideFront c =
+    case c of
+        WCampaign cp -> CPSvg.front cp
+        WPlayer p -> PLSvg.front p
+
+wideBack : WideCard -> String
+wideBack c = 
+    case c of
+        WCampaign cp -> CPSvg.back cp
+        WPlayer p -> PLSvg.back p
+
 
 
 main : Program () Model Msg

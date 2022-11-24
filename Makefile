@@ -21,7 +21,7 @@ all_pages: cards $(SVGFILES:cards_out/%.svg=cards_out/%.pdf)
 cards_file : cards cards_out/all_pages.pdf
 
 cards_out/all_pages.pdf :all_pages
-	pdfunite cards_out/front*.pdf cards_out/tiles*.pdf cards_out/backs.pdf cards_out/players*.pdf cards_out/playerback*.pdf cards_out/campaignfront*.pdf cards_out/campaignback*.pdf cards_out/all_pages.pdf
+	pdfunite cards_out/front*.pdf cards_out/tiles*.pdf cards_out/backs.pdf cards_out/widefront*.pdf cards_out/wideback*.pdf cards_out/all_pages.pdf
 
 	
 clean:
