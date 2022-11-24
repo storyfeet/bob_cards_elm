@@ -26,7 +26,8 @@ type alias ReqList = Dict String (Card,List Int)
 
 players : List Player
 players = 
-    [ jakeWilder,blazeDecker,caseyRocks,samBoater,elisaWatton,wayneJohns
+    [ jakeWilder,blazeDecker,caseyRocks,samBoater,elisaWatton,wayneJohns,derekDogood
+
     , claytonConnel,dorotheaDuke,carlDirk,jebSteal,driftinaWood,alysBear]
 
 
@@ -120,6 +121,19 @@ wayneJohns =
     ]
     (coreMinPlus [knife] [(knife,1),(revolver,1)])
 
+
+-- Trader 1
+derekDogood : Player
+derekDogood =
+    Player "Derek Dogood" 1 6
+    (startRes [(Gold,1),(Iron,1),(Wood,1),(Food,3)])
+    [ [pay Any 1, Move (N 1)]
+      , [discard, Pay Any (X 1),Gain Any (X 1)]
+      , [Scrap TAny (X 1),Gain Any (X 1)]
+    ]
+    (coreMinPlus [rookieTrader] [])
+
+
 -- Basic 2
 
 claytonConnel : Player
@@ -200,6 +214,7 @@ Water
 Farmer
 Hunter
 Fighter
+Trader
 
 
 --}
