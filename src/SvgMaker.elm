@@ -37,7 +37,7 @@ placePlayerBack = placeCarder 3 0 210 291 100 90 True
 type alias Placer = (Int -> String -> String)
 
 starterList : List Card
-starterList = (allCards 4)
+starterList = (allCards 5)
     |> spreadL 
 
 populate: c -> Int -> List c

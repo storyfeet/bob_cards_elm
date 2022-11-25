@@ -30,8 +30,8 @@ front cam =
 back : CP.Campaign -> String
 back cam =  
     String.join "\n"
-        [ rect -3 -3 106 96 [flNoStk "#dddddd" ] 
-        , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
+        [ rect -3 -3 106 96 [flNoStk "#ddffdd" ] 
+        , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.5 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] (cam.name ++ " - setup")
         , rect 30 10 66 54 [flNoStk "white"]

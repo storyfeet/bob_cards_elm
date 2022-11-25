@@ -7,6 +7,6 @@ import Player as PL
 
 allCards :Int -> List (Cards.Card, Int)
 allCards n = 
-    ( PL.reqList 4
+    ( PL.reqList n
     ++ TR.tradeDeck 
     ++ DG.dangerDeck n)

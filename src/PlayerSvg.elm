@@ -18,14 +18,14 @@ front p =
         , jobs 41 9 85 p.jobs
         , JSV.picItem 75 2 "difficulty" p.difficulty "red"
         , JSV.picItem 85 2 "hand_size" p.handSize "Blue"
-        , text "Arial" 4 [xy 50 54, bold] "Player Phase"
+        , text "Arial" 4 [xy 50 54, bold] "Day Phase"
         , playerPhase p.handSize |> textLines 50 60 6 [font "Arial" 4]
         ]
 
 back : PL.Player -> String
 back p =  
     String.join "\n"
-        [ rect -3 -3 106 96 [flNoStk "#ccffcc" ] 
+        [ rect -3 -3 106 96 [flNoStk "#ddffdd" ] 
         , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst ] ( p.name ++ " - setup")
         , text "Arial" 4 [xy 5 14,flStk "Black" "none" 0,bold] "Start Resources"
@@ -34,7 +34,7 @@ back p =
         , p.startCards 
         |> List.map (\(c, n) -> String.fromInt n ++ " * " ++ c.name)
         |> textLines 5 36 6 [font "Arial" 4]
-        , text "Arial" 4 [xy 55 14, bold] "Bandit Phase"
+        , text "Arial" 4 [xy 55 14, bold] "Night Phase"
         , banditPhase|> textLines 55 20 6 [font "Arial" 4]
         ]
 

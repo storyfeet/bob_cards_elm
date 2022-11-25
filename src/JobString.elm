@@ -58,6 +58,7 @@ jNumToString j =
     case j of
         N n -> String.fromInt n
         D n -> String.fromInt n ++ " dice's worth of"
+        X 1 -> "x"
         X n -> String.fromInt n ++ "x"
         XD n -> String.fromInt n ++ "x dice's worth of"
         This -> "This"

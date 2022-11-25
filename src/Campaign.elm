@@ -1,5 +1,5 @@
 module Campaign exposing (..)
-import Job as J exposing (on,Job,gain,Resource(..))
+import Job as J exposing (on,Job,gain,pay,Resource(..),JobNum (..))
 
 type alias Campaign =
     { name : String 
@@ -26,9 +26,11 @@ modeStr m =
 
 
 campaigns : List Campaign
-campaigns = [ vs1 
-    , onlyWest 
+campaigns = [ discovery 
+    , theRace 
+    , villageHero
     , coop1
+    , theFeast
     , speedOfTheSlowest
     , escortMission
     , thereAndBackAgain
@@ -50,8 +52,8 @@ basicWagonScoring =
     ]
 
 
-vs1 : Campaign
-vs1 = { name = "The Race"
+discovery : Campaign
+discovery = { name = "Discovery"
     , difficulty = 1
     , mode = Verses
     , boards = ["A","B"]
@@ -61,16 +63,45 @@ vs1 = { name = "The Race"
     , jobs = basicVsScoring
     }
 
-onlyWest:Campaign
-onlyWest = {vs1 
-    | name = "Only West"
+theRace:Campaign
+theRace = {discovery 
+    | name = "The Race"
     , difficulty = 2
-    , jobs = [[on J.OnRevealWest , gain VP 3]]
+    , jobs = 
+        [ [on J.OnRevealWest , gain VP 3]
+        , [on J.OnDefeatBandits, gain Gold 1,gain Wood 1,gain Iron 1,gain Food 1]
+        ]
+
+    }
+
+villageHero: Campaign
+villageHero = {discovery
+    | name = "Village Hero"
+    , difficulty = 2
+    , rules = fedVillage
+    , jobs = 
+        [ [J.In J.Village, pay Food 1, J.Pay Food (X 1),J.Gain VP (X 1)]
+        , [on J.OnReveal, gain VP 1,J.Or, on J.OnBuild , gain VP 2 ]
+        , [on J.OnDefeatBandits, gain VP 2, J.Or, J.In J.Village, on J.OnDefeatBandits, gain VP 4 ]
+        ]
     }
 
 
+theFeast: Campaign
+theFeast = { coop1
+    | name = "The Feast"
+    , difficulty = 2 
+    , setupPic = "coop_basic"
+    , rules = fedVillage
+    , setup = []
+    , jobs =
+        [ [J.In J.Village, J.pay Food 5 , J.gain VP 6]
+        ]
+
+    }
+
 coop1 : Campaign
-coop1 = {vs1 
+coop1 = {discovery 
     | name = "Precious Cargo"
     , mode = Coop
     , setupPic = "wagon"
@@ -115,7 +146,7 @@ thereAndBackAgain = {coop1
     , setup = ["Use a single neutral score token"]
     , jobs = [
         [on J.OnRevealWest, gain VP 3]
-        , [ on J.OnDefeatBandits, J.Gain Any (J.D 3)]
+        , [ on J.OnDefeatBandits, J.Gain Any (D 3)]
         ]
     , rules = ["Do not remove any tiles from play", "To win you need:","- To complete the score track","- All players on the starting tile" ]
     }
@@ -125,11 +156,15 @@ areWeTheBaddies = { coop1
     | name = "Are We the Baddies"
     , setupPic = "coop_basic"
     , setup = ["Use a single nuetral Score token"]
-    , rules = ["All players who contributed to bandit defeat roll 3 dice and gain the gold" ]
+    , rules = ["Only players who contributed to the bandit defeat get to roll for gold" ]
     , jobs = [
-        [on J.OnDefeatBandits , gain VP 3, J.Gain Gold (J.D 3)]
+        [on J.OnDefeatBandits , gain VP 3, J.Gain Gold (D 3)]
         ]
     }
 
 
 
+----- RULES ---- 
+
+fedVillage : List String
+fedVillage =["When you feed a village, place a food token there to mark it as fed", "You cannot feed a fed village"]

@@ -116,7 +116,7 @@ Note : Pain and Exhaustion are both types of "Danger Card" if your hand becomes 
 
 Choose a *Campaign Card* appropriate for your group.
 
-If this is your first Verses game, use "The Race"
+If this is your first Verses game, use "Discovery"
 If this is your first Co-op game use "Speed of the Slowest"
 
 Follow the instructions below, and those on the back of your Campaign Card (Which have extra instructions for some campaigns) to setup the play area.
