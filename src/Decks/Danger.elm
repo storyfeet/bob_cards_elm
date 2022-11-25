@@ -3,13 +3,13 @@ import Job exposing (..)
 import Cards exposing(Card)
 dangerDeck :Int ->  List (Card,Int)
 dangerDeck n =
-    [(thirst,1 + 2* n)
-    ,(hunger,1 + 2* n)
-    ,(exhaustion,1 + 2 * n)
-    ,(dysentery,2)
-    ,(owie,1 + 2 * n)
-    ,(legWound,1 + 2 * n)
-    ,(armWound,1 + 2* n)
+    [(thirst,2* n)
+    ,(hunger,2* n)
+    ,(exhaustion,2 * n)
+    ,(dysentery,(n - 1))
+    ,(owie,2 * n)
+    ,(legWound,2 * n)
+    ,(armWound,2* n)
     ]
 
 thirst :Card

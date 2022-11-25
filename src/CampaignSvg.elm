@@ -39,7 +39,7 @@ back cam =
         , text "Arial" 4 [xy 7 30, txCenter,rotate -90 7 30]  "Dice"
         , namedCheckGrid 8 20 cam.boards ["d20","d12","d8"]
         , setupPic cam.setupPic
-        , textLines 5 67 6 [font "Arial" 4] cam.setup
+        , cam.setup |> ruleWrap 50 |> textLines 5 67 6 [font "Arial" 4,txSpaces] 
         ]
 
 setupPic : String -> String

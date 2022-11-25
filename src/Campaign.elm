@@ -155,7 +155,7 @@ areWeTheBaddies : Campaign
 areWeTheBaddies = { coop1
     | name = "Are We the Baddies"
     , setupPic = "coop_basic"
-    , setup = ["Use a single nuetral Score token"]
+    , setup = ["Use a single neutral Score token","All players choose one weapon from the trade row to start with"]
     , rules = ["Only players who contributed to the bandit defeat get to roll for gold" ]
     , jobs = [
         [on J.OnDefeatBandits , gain VP 3, J.Gain Gold (D 3)]
