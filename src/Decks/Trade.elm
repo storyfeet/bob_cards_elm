@@ -81,13 +81,13 @@ canoe = Card "Canoe" TMove
 
 sailboat: Card
 sailboat = Card "Sailboat" TMove
-    [pay Wood 4]
+    [pay Wood 3, pay Any 1]
     [[WaterMove (N 2)]]
 
 climbingBoots: Card 
 climbingBoots = Card "Climbing Boots" TMove
     [pay Iron 1]
-    [ [pay Any 1,Move (N 1)]
+    [ [pay Food 1,discard ,Move (N 1)]
     , [pay Food 1, MountainMove (N 1)]
     ]
 
@@ -143,7 +143,7 @@ diggerDeck =
     ]
 
 bigPan : Card
-bigPan = Card "Big Pan" TGather [In Village,pay Gold 1]
+bigPan = Card "Big Pan" TGather [In Village,pay Gold 1,Or, discard,pay Wood 1]
     [riverGather Gold 3]
 
 axe : Card 
@@ -170,7 +170,7 @@ sledgeHammer : Card
 sledgeHammer = Card "Sledgehammer" TMake [In Village ,pay Gold 2]
     [ [pay Iron 1, pay Wood 2,BuildRail]
     , [pay Iron 2, pay Wood 2,BuildBridge]
-    , [Discard TAny (X 1),Gain Iron (XD 1)]
+    , [In Mountain,Discard TAny (X 1),Gain Iron (XD 1)]
     ]
 
 skilledTrader : Card 
@@ -196,6 +196,7 @@ forager = Card "Forager" TTrade [In Forest,pay Any 2]
 gambler : Card
 gambler = Card "Gambler" TTrade [In Village, pay Gold 1]
     [ [Pay Gold (X 1),Gain Gold (XD 2)]
+    , [Discard TAny (X 1), Draw (XD 2)]
     ]
 
 
@@ -231,7 +232,7 @@ dagger = Card "Dagger" TFight
 bow:Card
 bow = Card "Bow" TFight
     [pay Wood 1]
-    [[In Forest, pay Wood 1, gather Food 3]
+    [[In Forest, pay Wood 1, gather Food 4]
     ,[pay Wood 1,defend 2, attack 4]
     ]
 

@@ -52,7 +52,7 @@ legWound =  Card "Leg Wound" (TDanger Pain) []
 
 armWound : Card
 armWound =  Card "Arm Wound" (TDanger Pain) []
-    [[ discard ,discardD ]
+    [[ Discard (TGather) (N 1) ,discardD ]
     , [In Village,Discard (TGather) (N 1) ,scrapD]
     , [Discard (TGather) (N 2) ,scrapD]
     ]

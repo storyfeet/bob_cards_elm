@@ -216,11 +216,16 @@ gatherAt : Place -> Resource -> Int -> Job
 gatherAt p r n =
     [ In p, Gain r (D n) ]
 
+move : Int -> Action
+move n = Move (N n)
 
 foodMove : Int -> Int -> Job
 foodMove f d =
     [ Pay Food (N f), Move (N d) ]
 
+
+muligan : Job
+muligan = [ Discard TAny (X 1), Draw (X 1)]
 
 woodMove : Int -> Int -> Job
 woodMove w d =
