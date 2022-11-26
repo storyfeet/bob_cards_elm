@@ -80,7 +80,7 @@ villageHero = {discovery
     , difficulty = 2
     , rules = fedVillage
     , jobs = 
-        [ [J.In J.Village, pay Food 1, J.Pay Food (X 1),J.Gain VP (X 1)]
+        [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
         , [on J.OnReveal, gain VP 1,J.Or, on J.OnBuild , gain VP 2 ]
         , [on J.OnDefeatBandits, gain VP 2, J.Or, J.In J.Village, on J.OnDefeatBandits, gain VP 4 ]
         ]
@@ -106,8 +106,7 @@ coop1 = {discovery
     , mode = Coop
     , setupPic = "wagon"
     , boards = ["C","D"]
-    , setup = ["- Add a Wagon token to the central start tile"
-              ,  "- Use a single a neutral token" ]
+    , setup = ["- Add a Wagon token to the central start tile" ]
     , rules = ["To move the Wagon a player must:","- Be on the same square as the wagon", "- Use their own movement actions to move it"]
     , jobs = basicWagonScoring
     }
