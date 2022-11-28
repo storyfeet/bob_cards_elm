@@ -130,3 +130,12 @@ Boys
 .dice : 12
 .players : [Me,Toby,Jacob]
 .learned : "Building railway for back travel turned out to be super valuable, Getting back past the bandits wasn't too bad. Timings worked out pretty well"
+
+Boys
+.mode : "Coop - The Feast"
+.difficulty : 2
+.dice : 12
+.players : [Me,Toby,Jacob]
+.learned : "When Playing feast, we turn over cards quite quickly, so looking for 4 - 5 Villages isn't a big problem"
+
+
