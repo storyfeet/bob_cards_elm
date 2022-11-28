@@ -40,6 +40,7 @@ eventToString e =
         OnReveal -> "when you reveal a tile"
         OnRevealWest -> "when you reveal the most West tile"
         OnDefeatBandits -> "when you clear a tile of Bandits"
+        OnWagonDamage n -> "when the wagon takes " ++ jNumToString n ++ " damage"
 
 resourceToString : Resource -> String
 resourceToString r = 

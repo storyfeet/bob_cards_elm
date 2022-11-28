@@ -120,6 +120,7 @@ type Event
     | OnReveal
     | OnRevealWest
     | OnDefeatBandits
+    | OnWagonDamage JobNum
 
 
 

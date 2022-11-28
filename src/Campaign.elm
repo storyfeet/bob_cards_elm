@@ -37,20 +37,6 @@ campaigns = [ discovery
     , areWeTheBaddies
     ]
 
-basicVsScoring : List Job
-basicVsScoring =
-    [ [on J.OnReveal, gain VP 1, J.Or, on J.OnRevealWest, gain VP 2]
-    , [on J.OnBuild, gain VP 2 , J.Or,on J.OnBuildWest, gain VP 3]
-    , [on J.OnDefeatBandits , gain VP 2]
-    ]
-
-basicWagonScoring : List Job
-basicWagonScoring = 
-    [ [on J.OnWagonWest, gain VP 2, J.Or, on J.OnWagonEast, J.pay VP 2]
-    , [on J.OnBuild, gain VP 2, J.Or ,on J.OnBuildWest, gain VP 3]
-    , [on J.OnDefeatBandits , gain VP 2]
-    ]
-
 
 discovery : Campaign
 discovery = { name = "Discovery"
@@ -108,7 +94,7 @@ coop1 = {discovery
     , boards = ["C","D"]
     , setup = ["- Add a Wagon token to the central start tile" ]
     , rules = moveWagon
-    , jobs = basicWagonScoring
+    , jobs = [wagonEastWest 2, buildNWest 2 3, defeatBanditsVP 2]
     }
 
 speedOfTheSlowest : Campaign
@@ -160,6 +146,28 @@ areWeTheBaddies = { coop1
         [on J.OnDefeatBandits , gain VP 3, J.Gain Gold (D 3)]
         ]
     }
+
+
+------ SCORING -------
+
+wagonEastWest : Int -> Job
+wagonEastWest n = [on J.OnWagonWest, gain VP n, J.Or, on J.OnWagonEast, J.pay VP n]
+
+basicVsScoring : List Job
+basicVsScoring =
+    [ [on J.OnReveal, gain VP 1, J.Or, on J.OnRevealWest, gain VP 2]
+    , [on J.OnBuild, gain VP 2 , J.Or,on J.OnBuildWest, gain VP 3]
+    , [on J.OnDefeatBandits , gain VP 2]
+    ]
+
+buildNWest : Int -> Int -> Job
+buildNWest b w = 
+    [on J.OnBuild, gain VP b, J.Or ,on J.OnBuildWest, gain VP w]
+
+defeatBanditsVP : Int -> Job
+defeatBanditsVP n = 
+    [on J.OnDefeatBandits , gain VP n]
+
 
 
 

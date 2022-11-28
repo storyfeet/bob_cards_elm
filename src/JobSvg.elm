@@ -72,10 +72,13 @@ eventPic e =
         J.OnReveal -> "on_reveal"
         J.OnRevealWest -> "on_reveal_west"
         J.OnDefeatBandits -> "on_defeat_bandits"
+        J.OnWagonDamage _ -> "on_wagon_damage"
 
 event : J.Event ->Float -> Float -> String
 event e x y =
-    eventPic e |> jobPic x y
+    case e of
+        J.OnWagonDamage n -> jobN x y "on_wagon_damage" n
+        _ -> eventPic e |> jobPic x y
 
 
 jobPlaceAction: Int -> Float -> Float -> Int -> J.Action -> String
