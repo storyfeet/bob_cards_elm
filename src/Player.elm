@@ -28,7 +28,7 @@ players : List Player
 players = 
     [ jakeWilder,blazeDecker,caseyRocks,samBoater,elisaWatton,wayneJohns,derekDogood
 
-    , claytonConnel,dorotheaDuke,carlDirk,jebSteal,driftinaWood,alysBear
+    , claytonConnel,dorotheaDuke,carlaDirk,jebSteal,driftinaWood,alysBear
 
     ,bryantCarrot , washCardman
     ]
@@ -201,9 +201,9 @@ alysBear =
 
 -- Fighter 2
 
-carlDirk : Player
-carlDirk = 
-    Player "Carl Dirk" 2 5
+carlaDirk : Player
+carlaDirk = 
+    Player "Carla Dirk" 2 5
     (startRes [(Gold, 1),(Wood,2),(Food, 4)])
     [ [attack 2]
     , [Pay Food (X 1), Move (X 1)]
