@@ -92,7 +92,7 @@ theFeast = { coop1
     | name = "The Feast"
     , difficulty = 2 
     , setupPic = "coop_basic"
-    , rules = fedVillage
+    , rules = fedVillage ++ lessWest
     , setup = []
     , jobs =
         [ [J.In J.Village, J.pay Food 5 , J.gain VP 5]
@@ -107,7 +107,7 @@ coop1 = {discovery
     , setupPic = "wagon"
     , boards = ["C","D"]
     , setup = ["- Add a Wagon token to the central start tile" ]
-    , rules = ["To move the Wagon a player must:","- Be on the same square as the wagon", "- Use their own movement actions to move it"]
+    , rules = moveWagon
     , jobs = basicWagonScoring
     }
 
@@ -165,5 +165,11 @@ areWeTheBaddies = { coop1
 
 ----- RULES ---- 
 
+lessWest : List String
+lessWest = ["If the Bandits cannot move in any direction, don't move them, instead add a bandit."]
+
 fedVillage : List String
 fedVillage =["When you feed a village, place a food token there to mark it as fed", "You cannot feed a fed village"]
+
+moveWagon : List String
+moveWagon = ["To move the Wagon a player must:","- Be on the same square as the wagon", "- Use their own movement actions to move it"]
