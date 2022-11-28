@@ -95,9 +95,9 @@ theFeast = { coop1
     , rules = fedVillage
     , setup = []
     , jobs =
-        [ [J.In J.Village, J.pay Food 5 , J.gain VP 6]
+        [ [J.In J.Village, J.pay Food 5 , J.gain VP 5]
+        , [on J.OnDefeatBandits, J.gain Food 2]
         ]
-
     }
 
 coop1 : Campaign
