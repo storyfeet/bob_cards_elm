@@ -1,16 +1,16 @@
-module CampaignSvg exposing (..)
+module MissionSvg exposing (..)
 import PageSvg exposing (..)
 import JobSvg as JSV
-import Campaign as CP
+import Mission as CP
 import MLists
 import JobString as JString
 
-front : CP.Campaign -> String
+front : CP.Mission -> String
 front cam = 
     let 
         jrules = cam.jobs 
             |> List.map (JString.jobToString)
-            |> ruleWrap 55
+            |> ruleWrap 60
         --rules = MLists.mergeIfSmaller 7 cam.rules jrules
         crules = cam.rules |> ruleWrap 43
     in 
@@ -21,13 +21,13 @@ front cam =
         ] cam.name
             , text "Arial" 5 [xy 96 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ,txRight] (CP.modeStr cam.mode)
-            , JSV.jobs 61 4.5 87 (List.reverse cam.jobs)
+            , JSV.jobs 95 4.5 87 (List.reverse cam.jobs)
             , JSV.picItem 86 10 "difficulty" cam.difficulty "red"
-            , textLines 5 15 5 [font "Arial" 4 ,txSpaces] crules
-            , textLines 5 (15 + 5 * (List.length crules|> toFloat )) 4 [font "Arial" 3,txSpaces] jrules
+            , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
+            , textLines 5 (14 + 4.6 * (List.length crules|> toFloat )) 3.5 [font "Arial" 3,txSpaces] jrules
             ]
 
-back : CP.Campaign -> String
+back : CP.Mission -> String
 back cam =  
     String.join "\n"
         [ rect -3 -3 106 96 [flNoStk "#ddffdd" ] 

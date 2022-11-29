@@ -6,8 +6,8 @@ import Player as PL
 import PlayerSvg as PLSvg
 import CardSvg exposing (..)
 import Cards exposing (..)
-import Campaign as CP
-import CampaignSvg as CPSvg
+import Mission as CP
+import MissionSvg as CPSvg
 import Decks.All exposing (allCards)
 import MLists exposing(spreadL)
 import Land exposing (Tile)
@@ -138,24 +138,24 @@ subscriptions _ =
     nextPage (\_ -> Next)
 
 type WideCard 
-    = WCampaign CP.Campaign
+    = WMission CP.Mission
     | WPlayer PL.Player
 
 wideCards : List WideCard
 wideCards = (PL.players |> List.map WPlayer)
-        ++ (CP.campaigns |> List.map  WCampaign)
+        ++ (CP.campaigns |> List.map  WMission)
 
 
 wideFront : WideCard -> String
 wideFront c =
     case c of
-        WCampaign cp -> CPSvg.front cp
+        WMission cp -> CPSvg.front cp
         WPlayer p -> PLSvg.front p
 
 wideBack : WideCard -> String
 wideBack c = 
     case c of
-        WCampaign cp -> CPSvg.back cp
+        WMission cp -> CPSvg.back cp
         WPlayer p -> PLSvg.back p
 
 

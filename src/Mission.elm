@@ -1,7 +1,7 @@
-module Campaign exposing (..)
+module Mission exposing (..)
 import Job as J exposing (on,Job,gain,pay,Resource(..),JobNum (..))
 
-type alias Campaign =
+type alias Mission =
     { name : String 
     , difficulty : Int
     , mode : Mode
@@ -25,7 +25,7 @@ modeStr m =
         Verses -> "VS"
 
 
-campaigns : List Campaign
+campaigns : List Mission
 campaigns = [ discovery 
     , theRace 
     , villageHero
@@ -35,10 +35,11 @@ campaigns = [ discovery
     , escortMission
     , thereAndBackAgain
     , areWeTheBaddies
+    , stopThatWagon
     ]
 
 
-discovery : Campaign
+discovery : Mission
 discovery = { name = "Discovery"
     , difficulty = 1
     , mode = Verses
@@ -49,7 +50,7 @@ discovery = { name = "Discovery"
     , jobs = basicVsScoring
     }
 
-theRace:Campaign
+theRace:Mission
 theRace = {discovery 
     | name = "The Race"
     , difficulty = 2
@@ -60,7 +61,7 @@ theRace = {discovery
 
     }
 
-villageHero: Campaign
+villageHero: Mission
 villageHero = {discovery
     | name = "Village Hero"
     , difficulty = 2
@@ -73,7 +74,7 @@ villageHero = {discovery
     }
 
 
-theFeast: Campaign
+theFeast: Mission
 theFeast = { coop1
     | name = "The Feast"
     , difficulty = 2 
@@ -86,18 +87,22 @@ theFeast = { coop1
         ]
     }
 
-coop1 : Campaign
+coop1 : Mission
 coop1 = {discovery 
     | name = "Precious Cargo"
     , mode = Coop
     , setupPic = "wagon"
     , boards = ["C","D"]
     , setup = ["- Add a Wagon token to the central start tile" ]
-    , rules = moveWagon
-    , jobs = [wagonEastWest 2, buildNWest 2 3, defeatBanditsVP 2]
+    , rules = moveWagon ++ wagonDamage
+    , jobs = 
+        [ wagonEastWest 2 ++ [J.Or ,J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
+        , buildNWest 2 0
+        , defeatBanditsVP 2
+        ]
     }
 
-speedOfTheSlowest : Campaign
+speedOfTheSlowest : Mission
 speedOfTheSlowest = {coop1 
     | name = "Speed of the Slowest"
     , setupPic = "bar"
@@ -110,7 +115,7 @@ speedOfTheSlowest = {coop1
         ]
     }
 
-escortMission : Campaign
+escortMission : Mission
 escortMission = { speedOfTheSlowest
     | name = "Escort Mission"
     , difficulty = 3
@@ -123,7 +128,7 @@ escortMission = { speedOfTheSlowest
         ]
     }
 
-thereAndBackAgain : Campaign
+thereAndBackAgain : Mission
 thereAndBackAgain = {coop1 
     | name = "There and Back Again"
     , difficulty = 2
@@ -136,16 +141,31 @@ thereAndBackAgain = {coop1
     , rules = ["Do not remove any tiles from play", "To win you need:","- To complete the score track","- All players on the starting tile" ]
     }
 
-areWeTheBaddies : Campaign
+areWeTheBaddies : Mission
 areWeTheBaddies = { coop1
     | name = "Are We the Baddies"
     , setupPic = "coop_basic"
-    , setup = ["Use a single neutral Score token","All players choose one weapon from the trade row to start with"]
+    , setup = freeWeapon
     , rules = ["Only players who contributed to the bandit defeat get to roll for gold" ]
     , jobs = [
         [on J.OnDefeatBandits , gain VP 3, J.Gain Gold (D 3)]
         ]
     }
+
+stopThatWagon : Mission 
+stopThatWagon = { coop1
+    | name = "Stop That Wagon"
+    , boards = ["A","B"]
+    , setupPic = "wagon_chase"
+    , setup = freeWeapon ++ [ "Place the wagon 2 tiles West of all players"]
+    , rules = ["Players may attack the wagon", "At the end of the Night phase" , " - Move the Wagon 1 space West revealing tiles as needed"," - Add a bandit to the Wagon's Tile"]
+    , jobs = 
+        [ [J.On (J.OnWagonDamage (X 1)), J.Gain VP (X 2) ]
+        , [J.On J.OnDefeatBandits,gain VP 1]
+        ]
+    }
+    
+
 
 
 ------ SCORING -------
@@ -160,9 +180,13 @@ basicVsScoring =
     , [on J.OnDefeatBandits , gain VP 2]
     ]
 
+
+
 buildNWest : Int -> Int -> Job
 buildNWest b w = 
-    [on J.OnBuild, gain VP b, J.Or ,on J.OnBuildWest, gain VP w]
+    case w of
+        0 -> [on J.OnBuild,gain VP b]
+        _ -> [on J.OnBuild, gain VP b, J.Or ,on J.OnBuildWest, gain VP w]
 
 defeatBanditsVP : Int -> Job
 defeatBanditsVP n = 
@@ -174,10 +198,17 @@ defeatBanditsVP n =
 ----- RULES ---- 
 
 lessWest : List String
-lessWest = ["If the Bandits cannot move in any direction, don't move them, instead add a bandit."]
+lessWest = ["If the Bandits cannot move in the direction rolled, add a bandit instead."]
 
 fedVillage : List String
 fedVillage =["When you feed a village, place a food token there to mark it as fed", "You cannot feed a fed village"]
 
 moveWagon : List String
-moveWagon = ["To move the Wagon a player must:","- Be on the same square as the wagon", "- Use their own movement actions to move it"]
+moveWagon = ["To move the Wagon a player must:","- Be on the same square as the wagon", "- Use their own movement actions"]
+
+wagonDamage : List String
+wagonDamage = ["The wagon takes 1 damage leaving bandits and may be attacked by bandits"]
+
+freeWeapon : List String 
+freeWeapon = ["Players may all take 1 weapon (Red Card) from the trade row draw pile"]
+
