@@ -138,4 +138,11 @@ Boys
 .players : [Me,Toby,Jacob]
 .learned : "When Playing feast, we turn over cards quite quickly, so looking for 4 - 5 Villages isn't a big problem"
 
+AfterArt
+.mode : "Coop - Speed of the Slowest"
+.difficulty : 1
+.dice : 20
+.players : [ Jacob,Jem,Martin]
+.learned : "3 Points for moving the bar is OK, only if it's the only points you get"
+
 

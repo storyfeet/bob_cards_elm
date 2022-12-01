@@ -1,4 +1,4 @@
-module Mission exposing (..)
+module Mission exposing (Mission,modeStr,campaigns)
 import Job as J exposing (on,Job,gain,pay,Resource(..),JobNum (..))
 
 type alias Mission =
@@ -29,13 +29,16 @@ campaigns : List Mission
 campaigns = [ discovery 
     , theRace 
     , villageHero
-    , coop1
     , theFeast
+    , builders
     , speedOfTheSlowest
+    , buildingTogether
+    , dreamWork
+    , stopThatWagon
+    , preciousCargo
     , escortMission
     , thereAndBackAgain
     , areWeTheBaddies
-    , stopThatWagon
     ]
 
 
@@ -73,9 +76,17 @@ villageHero = {discovery
         ]
     }
 
+builders: Mission
+builders = {discovery
+    | name = "Builders"
+    , difficulty = 2
+    , rules = []
+    , jobs = [buildNWest 2 4,lootDrop Any (D 3)] 
+    }
+
 
 theFeast: Mission
-theFeast = { coop1
+theFeast = { preciousCargo
     | name = "The Feast"
     , difficulty = 2 
     , setupPic = "coop_basic"
@@ -87,8 +98,15 @@ theFeast = { coop1
         ]
     }
 
-coop1 : Mission
-coop1 = {discovery 
+buildingTogether : Mission
+buildingTogether = { preciousCargo 
+    | name = "Building Together"
+    , difficulty = 2
+    , jobs = [buildNWest 2 4, lootDrop Any (D 3)]
+    }
+
+preciousCargo : Mission
+preciousCargo = {discovery 
     | name = "Precious Cargo"
     , mode = Coop
     , setupPic = "wagon"
@@ -98,20 +116,33 @@ coop1 = {discovery
     , jobs = 
         [ wagonEastWest 2 ++ [J.Or ,J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
         , buildNWest 2 0
-        , defeatBanditsVP 2
+        , vpDrop 2
         ]
     }
 
-speedOfTheSlowest : Mission
-speedOfTheSlowest = {coop1 
-    | name = "Speed of the Slowest"
+dreamWork : Mission
+dreamWork = {preciousCargo 
+    | name = "Make the Dream Work"
     , setupPic = "bar"
+    , difficulty = 2
     , rules = ["The bar moves west when all players are at least 1 tile west of it"]
     , setup = ["Add the Travel Bar East of the map tiles facing west"]
     ,jobs = [
-        [on J.OnBuild, gain VP 2 , J.Or,on J.OnBuildWest, gain VP 3]
-        , [on J.OnBarWest, gain VP 3]
+        [on J.OnBuild, gain VP 1 , J.Or,on J.OnBuildWest, gain VP 2]
+        , [on J.OnBarWest, gain VP 2]
         , [on J.OnDefeatBandits , gain VP 2]
+        ]
+    }
+speedOfTheSlowest : Mission
+speedOfTheSlowest = {preciousCargo 
+    | name = "Speed of the Slowest"
+    , setupPic = "bar"
+    , difficulty = 1
+    , rules = ["The bar moves west when all players are at least 1 tile west of it"]
+    , setup = ["Add the Travel Bar East of the map tiles facing west"]
+    ,jobs = [
+        [on J.OnBarWest, gain VP 3]
+        , lootDrop Gold (D 2)
         ]
     }
 
@@ -129,7 +160,7 @@ escortMission = { speedOfTheSlowest
     }
 
 thereAndBackAgain : Mission
-thereAndBackAgain = {coop1 
+thereAndBackAgain = {preciousCargo 
     | name = "There and Back Again"
     , difficulty = 2
     , setupPic = "coop_basic"
@@ -142,7 +173,7 @@ thereAndBackAgain = {coop1
     }
 
 areWeTheBaddies : Mission
-areWeTheBaddies = { coop1
+areWeTheBaddies = { preciousCargo
     | name = "Are We the Baddies"
     , setupPic = "coop_basic"
     , setup = freeWeapon
@@ -153,7 +184,7 @@ areWeTheBaddies = { coop1
     }
 
 stopThatWagon : Mission 
-stopThatWagon = { coop1
+stopThatWagon = { preciousCargo
     | name = "Stop That Wagon"
     , boards = ["A","B"]
     , setupPic = "wagon_chase"
@@ -188,10 +219,13 @@ buildNWest b w =
         0 -> [on J.OnBuild,gain VP b]
         _ -> [on J.OnBuild, gain VP b, J.Or ,on J.OnBuildWest, gain VP w]
 
-defeatBanditsVP : Int -> Job
-defeatBanditsVP n = 
-    [on J.OnDefeatBandits , gain VP n]
+vpDrop : Int -> Job
+vpDrop n = 
+    lootDrop VP (N n)
 
+lootDrop : Resource -> JobNum -> Job
+lootDrop r n = 
+    [on J.OnDefeatBandits, J.Gain r n]
 
 
 
@@ -211,4 +245,6 @@ wagonDamage = ["The wagon takes 1 damage leaving bandits and may be attacked by 
 
 freeWeapon : List String 
 freeWeapon = ["Players may all take 1 weapon (Red Card) from the trade row draw pile"]
+
+
 
