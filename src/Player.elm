@@ -88,7 +88,7 @@ samBoater =
         standardRes  
         [ [ Draw (N 1), Scrap TAny (N 1) ]
         , [ In Water, Scrap (TDanger DAny) (X 1) ]
-        , [ Pay Any (N 1), WaterMove (N 2) ]
+        , [ Pay Any (N 1), WaterMove (N 1) ]
         ]
         (coreMinPlus [saw,knife] [(net,2),(axe, 1)])
 
@@ -121,7 +121,7 @@ wayneJohns =
     Player "Wayne Johns" 1 6
     (startRes [(Gold, 1),(Wood,2),(Food, 4)])
     [ [attack 2]
-    , [Pay Food (N 1),Pay Food (X 1), Move (X 1)]
+    , [Pay Any (N 1),Pay Food (X 1), Move (X 1)]
     , [Pay Any (X 2) ,Scrap (TDanger Pain) (X 1)]
     ]
     (coreMinPlus [knife] [(knife,1),(revolver,1)])
@@ -171,7 +171,7 @@ driftinaWood =
         standardRes  
         [ [ In Water,Scrap TAny (N 1),gather Food 2 ]
         , [ In Water,pay Any 1, Scrap (TDanger DAny) (X 1) ]
-        , [ Pay Any (X 1), WaterMove (X 1)]
+        , [ Pay Any (N 1) ,Pay Any (X 1), WaterMove (X 1)]
         ]
         (coreMinPlus [saw,knife] [(net,1),(axe, 2)])
 
