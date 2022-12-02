@@ -145,4 +145,16 @@ AfterArt
 .players : [ Jacob,Jem,Martin]
 .learned : "3 Points for moving the bar is OK, only if it's the only points you get"
 
+"Thursday Club" 
+.mode : "VS - The Race"
+.difficulty : 2
+.dice : d12
+.players : [Me,Andrew,John]
+.learned : "Race is really not an intro game, probably needs marking on the card"
 
+"Thursday Club"
+.mode : "Coop - Make the Dream Work"
+.difficulty : 1
+.dice : d12
+.players : [Me, ANdrew,John]
+.learned : ["Level about right for dream work, need to make sure I moved the right amount" , "Make sure to score the right amount"]
