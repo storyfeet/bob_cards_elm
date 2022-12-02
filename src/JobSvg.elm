@@ -73,6 +73,7 @@ eventPic e =
         J.OnRevealWest -> "on_reveal_west"
         J.OnDefeatBandits -> "on_defeat_bandits"
         J.OnWagonDamage _ -> "on_wagon_damage"
+        J.OnMoveWest -> "on_move_west"
 
 event : J.Event ->Float -> Float -> String
 event e x y =

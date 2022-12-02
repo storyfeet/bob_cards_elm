@@ -121,6 +121,7 @@ type Event
     | OnRevealWest
     | OnDefeatBandits
     | OnWagonDamage JobNum
+    | OnMoveWest
 
 
 

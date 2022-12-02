@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="20mm"
+   height="20mm"
+   viewBox="0 0 20 20"
+   version="1.1"
+   id="svg135"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   sodipodi:docname="on_move_west.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview137"
+     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="9.689068"
+     inkscape:cx="31.788403"
+     inkscape:cy="35.349117"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs132">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1938">
+      <stop
+         style="stop-color:#0000ff;stop-opacity:1;"
+         offset="0"
+         id="stop1934" />
+      <stop
+         style="stop-color:#0000ff;stop-opacity:0;"
+         offset="1"
+         id="stop1936" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1938"
+       id="linearGradient1940"
+       x1="11.719002"
+       y1="11.638509"
+       x2="18.806312"
+       y2="11.638509"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffff00;stroke:#000000;stroke-width:0.391999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000"
+       d="M 2.4794192,1.1959994 7.0871676,1.2224572 3.2738991,5.0825004 6.2654536,4.0942984 2.152647,10.031883 3.3986808,6.6286088 1.1959927,7.5045477 Z"
+       id="path1217"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       style="fill:#ff00ff;stroke:#000000;stroke-width:0.391999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000"
+       d="m 9.9555766,10.475944 2.3243754,-0.01388 c 0.322784,-1.433847 2.482586,-1.545303 2.710248,-0.02815 l 2.324374,0.05907 C 17.219123,9.3779073 16.90759,6.9399846 15.679244,5.7051639 l 0.817666,0.7780992 1.635331,-0.739737 C 17.319875,4.2800763 16.173822,3.3704445 14.861575,3.0072735 15.474814,0.3954108 11.844456,0.6053815 12.408577,2.9296302 11.005235,3.4793778 9.5064766,4.667452 9.1379103,5.74351 L 10.773243,6.483247 11.590909,5.7300679 C 10.441248,6.7836634 9.9140736,9.2553644 9.9555766,10.475925 Z"
+       id="path5314"
+       sodipodi:nodetypes="ccccccccccccc" />
+    <path
+       style="fill:#ff00ff;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+       d="M 18.701208,14.024338 C 16.884516,13.09463 13.913273,13.706381 12.689184,14.61248 l -0.28296,-1.307758 -1.444028,2.882871 2.529303,1.401745 -0.419658,-1.607876 c 1.133433,-0.573949 3.530565,0.586817 4.622837,1.280928 z"
+       id="path1364"
+       sodipodi:nodetypes="cccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:11.5978px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ff00ff;stroke-width:0.264583"
+       x="0.94480485"
+       y="18.335758"
+       id="text2338"
+       transform="scale(0.98922769,1.0108896)"><tspan
+         sodipodi:role="line"
+         id="tspan2336"
+         style="fill:#ff00ff;stroke:#000000;stroke-width:0.264583;paint-order:stroke fill markers"
+         x="0.94480485"
+         y="18.335758">w</tspan></text>
+  </g>
+</svg>
