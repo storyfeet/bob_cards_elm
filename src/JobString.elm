@@ -1,21 +1,72 @@
 module JobString exposing (..)
 import Job exposing (..)
 
-jobToString: Job -> String
-jobToString j =
-    List.map (actionToString) j |> String.join ", "
+type WriteState
+    = WReady
+    | WGain
+    | WOn
 
-actionToString : Action -> String
-actionToString a = 
+
+
+jobStr : Job -> String
+jobStr j =
+    case j of
+        (On e)::t -> "When " ++ eventToString e ++ onStr t
+        a::t -> actionStr a ++ " " ++ jobContStr t 
+        _ -> ""
+
+jobContStr : Job -> String
+jobContStr j = 
+    case j of
+        (On e)::t -> "when " ++ eventToString e ++ " " ++ onStr t
+        a::t -> actionStr a ++ " " ++ jobContStr t 
+        _ -> ""
+
+onStr : Job -> String
+onStr j  =
+    case j of 
+        (On e)::t -> " and " ++ eventToString e ++ onStr t
+        _ -> ", " ++ jobContStr j
+
+
+
+actionStr : Action -> String 
+actionStr a = 
     case a of
         On e -> eventToString e
         In p -> placeToString p
-        Gain r n -> "gain " ++ (jNumToString n) ++  " " ++ resourceToString r
+        Gain r n -> "gain " ++ (jNumToString n) ++ " " ++ resourceToString r
         Pay VP n -> "lose " ++ (jNumToString n) ++ " VP"
         Pay r n -> "pay " ++ (jNumToString n) ++  " " ++ resourceToString r
-
         Or -> "or"
-        _ -> ""
+        _ -> "-- UNDEFINED --"
+
+
+jobToString: Job -> String
+jobToString j =
+    jobStr j
+    --List.foldl (makeAction) ("" ,WReady) j |> (\(s,_)->s)
+
+makeAction :Action -> (String, WriteState) -> (String,WriteState)
+makeAction a (s, ws) =
+    let 
+        (s2 , ws2) = actionToString ws a
+    in
+        (s ++ ", " ++ s2, ws2)
+
+actionToString : WriteState -> Action -> (String , WriteState)
+actionToString ws a = 
+    case (ws,a) of
+        (WOn,On e) -> ("and " ++ eventToString e, WOn)
+        (_ , On e ) -> ("When " ++ eventToString e, WOn)
+        (_ ,In p) -> (placeToString p, WReady)
+        (WGain, Gain r n) -> ("and " ++ (jNumToString n) ++  " " ++ resourceToString r, WGain )
+        (_ ,Gain r n) -> ("gain " ++ (jNumToString n) ++ " " ++ resourceToString r, WGain)
+        (_, Pay VP n) -> ("lose " ++ (jNumToString n) ++ " VP", WReady)
+        (_, Pay r n) -> ("pay " ++ (jNumToString n) ++  " " ++ resourceToString r,WReady)
+
+        (_,Or) -> ("or",WReady)
+        _ -> ("-- UNDEFINED --",WReady)
 
 placeToString : Place -> String
 placeToString p = 
@@ -32,16 +83,16 @@ placeToString p =
 eventToString : Event -> String
 eventToString e =
     case e of
-        OnWagonWest -> "when the Wagon moves West"
-        OnWagonEast -> "when the Wagon moves East"
-        OnBarWest -> "when the Travel Bar moves West"
-        OnBuild -> "when you build"
-        OnBuildWest -> "when you build the furthest West yet"
-        OnReveal -> "when you reveal a tile"
-        OnRevealWest -> "when you reveal the most West tile"
-        OnDefeatBandits -> "when you clear a tile of Bandits"
-        OnWagonDamage n -> "when the wagon takes " ++ jNumToString n ++ " damage"
-        OnMoveWest -> "When you move west"
+        OnWagonWest -> "the Wagon moves West"
+        OnWagonEast -> "the Wagon moves East"
+        OnBarWest -> "the Travel Bar moves West"
+        OnBuild -> "you build"
+        OnBuildWest -> "you build the furthest West yet"
+        OnReveal -> "you reveal a tile"
+        OnRevealWest -> "you reveal the most West tile"
+        OnDefeatBandits -> "you clear a tile of Bandits"
+        OnWagonDamage n -> "the wagon takes " ++ jNumToString n ++ " damage"
+        OnMoveWest -> "you move west"
 
 resourceToString : Resource -> String
 resourceToString r = 
