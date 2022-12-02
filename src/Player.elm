@@ -226,7 +226,9 @@ washCardman : Player
 washCardman =
     Player "Wash Cardman" 3 5
     standardRes
-    [ muligan]
+    [ muligan
+    , [Discard TMove (N 1) ,Discard TGather (N 1),Move (N 1)]
+    ]
     (coreMinPlus [] [])
 
 
