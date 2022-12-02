@@ -12,15 +12,28 @@ jobStr : Job -> String
 jobStr j =
     case j of
         (On e)::t -> "When " ++ eventToString e ++ onStr t
+        (Gain _ _)::_ -> "Gain " ++ gainStr j
         a::t -> actionStr a ++ " " ++ jobContStr t 
         _ -> ""
 
 jobContStr : Job -> String
 jobContStr j = 
     case j of
-        (On e)::t -> "when " ++ eventToString e ++ " " ++ onStr t
+        (On e)::t -> "when " ++ eventToString e ++ onStr t
+        (Gain _ _)::_ -> "gain " ++ gainStr j
         a::t -> actionStr a ++ " " ++ jobContStr t 
         _ -> ""
+
+gainStr : Job -> String
+gainStr j =
+    case j of
+        (Gain r n)::(Gain _ _)::(Gain _ _)::_ -> resStr r n  ++ ", " ++ gainStr (List.drop 1 j)
+        (Gain r n)::(Gain _ _)::_ -> resStr r n ++ " and " ++ gainStr (List.drop 1 j)
+        (Gain r n)::t -> resStr r n  ++ jobContStr t
+        t -> jobContStr t
+
+resStr : Resource -> JobNum -> String
+resStr r n = jNumToString n ++ " " ++ resourceToString r
 
 onStr : Job -> String
 onStr j  =
@@ -38,21 +51,14 @@ actionStr a =
         Gain r n -> "gain " ++ (jNumToString n) ++ " " ++ resourceToString r
         Pay VP n -> "lose " ++ (jNumToString n) ++ " VP"
         Pay r n -> "pay " ++ (jNumToString n) ++  " " ++ resourceToString r
-        Or -> "or"
+        Or -> ", or"
         _ -> "-- UNDEFINED --"
 
 
 jobToString: Job -> String
 jobToString j =
-    jobStr j
-    --List.foldl (makeAction) ("" ,WReady) j |> (\(s,_)->s)
+    jobStr j ++ "."
 
-makeAction :Action -> (String, WriteState) -> (String,WriteState)
-makeAction a (s, ws) =
-    let 
-        (s2 , ws2) = actionToString ws a
-    in
-        (s ++ ", " ++ s2, ws2)
 
 actionToString : WriteState -> Action -> (String , WriteState)
 actionToString ws a = 
