@@ -47,12 +47,12 @@ Winning and Scoring
 
 The game is won by reaching the end of the score track first. Players score points by performing actions on the map. 
 
-The way you score points depends on the campaign you are playing, but common ways are : 
+The way you score points depends on the mission you are playing, but common ways are : 
 
 1. Revealing Land Tiles
 2. Building a Railway track
 3. Removing bandits from an area
-4. Moving the Wagon token
+4. Moving Special pieces West
 
 The first player to reach the end of the score track wins the game.
 
@@ -63,7 +63,7 @@ If the Bandits reach the end of their track, the game ends immediately, and the 
 Verses, Co-op and Single player
 ---------------------
 
-This game can be played as Verses, as Co-op and as single player. The rules barely need adjustment. Simply choose the appropriate *Campaign Card* and everything basically falls into place.
+This game can be played as Verses, as Co-op and as single player. The rules barely need adjustment. Simply choose the appropriate *Mission Card* and everything basically falls into place.
 
 For Cooperative Play:
 
@@ -76,18 +76,17 @@ For Solo Play:
 * Turn order is not important.
 * You may either play a Co-op campaign, managing two charaters or a VS game as one, aiming to beat the bandit tracker.
 
-
-
 Contents
 ---------
 
 * Score Boards * 4
-* Campaign Cards * 12
+* Mission Cards * 12
 * Crib Sheets * 4
-* Meeples * 8 (2 Per player)
-* Wagon * 1
-* Bandit Counters - small * 20 , big(/pink) * 20
-* Resource Counters - Wood, Food, Iron , Gold : small * 20 
+* Meeples * 10 (2 Per player)
+* Wagon * 2
+* Travel Bar * 1
+* Bandit Counters - small * 20 , big * 20
+* Resource Counters - Wood, Food, Iron , Gold : small * 20 Big * 10
 * First Turn Marker
 * Land Tiles * 48
 * Player Cards * 12 (soon 18)
@@ -96,7 +95,6 @@ Contents
     * Bandit Dice * 4: d8-Hardest, d10, d12, d20-Easiest
     * Compass Dice * 1: Dice with faces [N, S, W, W , W , + ]
     * Job Dice * 10: Dice with faces [0,0,1,1,1,2]
-
 
 Setup
 -----
@@ -114,34 +112,54 @@ Note : Pain and Exhaustion are both types of "Danger Card" if your hand becomes 
 
 ### Board Setup
 
-Choose a *Campaign Card* appropriate for your group.
+Choose a *Mission Card* appropriate for your group.
 
-If this is your first Verses game, use "Discovery"
-If this is your first Co-op game use "Speed of the Slowest"
+* If this is your first Verses game, use "Discovery"
+* If this is your first Co-op game use "Speed of the Slowest"
 
-Follow the instructions below, and those on the back of your Campaign Card (Which have extra instructions for some campaigns) to setup the play area.
+Mission Cards look something like this:
+
+<img src="{{$0}}/rules/mission_cards.svg">
+
+On the back you will find:
+* a game setup diagram 
+* Mission specific setup instructions
+* A set of checkboxes. To mark difficulty levels as complete.
+
+On the front you will find:
+* A mode (Vs, Coop , Solo)
+* Mission Specific rules
+* Icons showing you how you score in this game.    
+(These are explained later)
+
+
+Follow the instructions below, and those on the back of your Mission Card (Which have extra instructions for some campaigns) to setup the play area.
 
 Use the following diagram to help you follow setup instructions
 
-<img src="{{cat $0 "/rules/start_setup_embedded.svg" }}">
+<img src="{{$0}}/setups/basic_setup_numbered.svg">
 
 1. **Choose and Place Board:** Choose a direction to represent West on the table. Take the appropriate Score Board (Standard or Co-op) And place it to the east of the playing area.It's compass should show the directions intended, and there should be plenty of room to expand to the West.
 
-2. Add a **Meeple** for every player to the clear '0' on the *Score Board*.
+2. Add a **Meeple** for every player to the golden '0' horseshoe on the *Score Board*. (In Coop add just one counter which the players share)
 
-3. Add a **Bandit** to the red '0' on the *Score Board*, this will be the Bandit Tracker
+3. Add a **Bandit** to the red '0' horseshoe the *Score Board*, this will be the Bandit Tracker
 
-4. Shuffle the **Trade Row** cards and deal 5 of them across the top of the Score Board. Leaving the rest in a draw pile beside them.
+4. Shuffle the **Trade Row** cards and deal 5 of them across the top of the Score Board. Leaving the rest in a draw pile beside them, with a space beside if for discards.
 
 5. Shuffle the **Pain** and **Exhaustion** Cards separately and place them face down by the appropriate symbol on the score board. These will help you tell the piles apart as they have no markings on the back.
 
-6. Shuffle the **Land Tiles** and deal 6 of them face up in a 2x3 grid. North to south should be 3 tiles.
+6. Shuffle the **Land Tiles** and deal 6 of them face up in a 2x3 grid. North to south should be 3 tiles.    
+(Make sure to leave room to grow. As you move west more cards will be added here.)
 
-7. Add a **Player Counter** for each player to the Eastmost Central tile. If that tile is water, swap it with another tile. 
+7. Deal 3 more *Land Tiles*, face down, to the west of the tiles already placed.
 
-8. Deal 3 more *Land Tiles*, face down, to the west of the tiles already placed.
+8. Add a **Meeple** for each player to the Eastmost Central tile.    
+(Even if it's Water)
 
-9. Make sure to leave space to grow. As you move west more cards will be added here.
+9. Place the rest of the *Land Tiles* face down in a draw pile by the board.
+
+10. Place the *Mission Card* beside the *scoreboard*.
 
 ### Player Setup 
 
