@@ -156,5 +156,14 @@ AfterArt
 .mode : "Coop - Make the Dream Work"
 .difficulty : 1
 .dice : 12
-.players : [Me, ANdrew,John]
+.players : [Me, Andrew,John]
 .learned : ["Level about right for dream work, need to make sure I moved the right amount" , "Make sure to score the right amount"]
+
+Kids
+.mode : "Coop - Are we the baddies"
+.difficulty : 1
+.board : C
+.dice : 12
+.players : [Me,Toby,Jacob]
+.learned : ["Possibly need to make it tad tricker"]
+
