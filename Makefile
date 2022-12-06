@@ -10,6 +10,7 @@ cards:
 	
 rules: 
 	siter exec -t rules.md -d "../pics" > out/rules.html
+	siter exec -t adventure.md -d "../pics" > out/adventure.html
 
 SVGFILES := $(wildcard cards_out/*.svg)
 
