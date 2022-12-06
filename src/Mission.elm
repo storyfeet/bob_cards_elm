@@ -99,9 +99,14 @@ theFeast = { preciousCargo
     }
 
 buildingTogether : Mission
-buildingTogether = { preciousCargo 
-    | name = "Building Together"
+buildingTogether = { 
+    name = "Building Together"
+    , mode = Coop
+    , boards = ["C","D"]
     , difficulty = 2
+    , setupPic = "coop_basic"
+    , rules = []
+    , setup = []
     , jobs = [buildNWest 2 4, lootDrop Any (D 3)]
     }
 
