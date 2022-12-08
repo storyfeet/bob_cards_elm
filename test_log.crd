@@ -167,3 +167,12 @@ Kids
 .players : [Me,Toby,Jacob]
 .learned : ["Possibly need to make it tad tricker"]
 
+"Chance and Counters"
+.mode : "Vs - Discovery"
+.difficulty : 1
+.board : A
+.dice : 12
+.players : [Ted,Andreas,Joe,Harrison,Aaron]
+.learned : "Consider making it possible to move water to water with boots", "Sometimes Coop and Vs do not pair well together"
+
+
