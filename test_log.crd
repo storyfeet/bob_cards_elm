@@ -173,6 +173,12 @@ Kids
 .board : A
 .dice : 12
 .players : [Ted,Andreas,Joe,Harrison,Aaron]
-.learned : "Consider making it possible to move water to water with boots", "Sometimes Coop and Vs do not pair well together"
+.learned : ["Consider making it possible to move water to water with boots", "Sometimes Coop and Vs do not pair well together"]
 
-
+Kids
+.mode : "Coop - Speed of the Slowest"
+.difficulty : 2
+.board : C
+.dice : 12
+.players : [Me, Toby, Jacob, River]
+.learned : ["Distance probably too short, make it longer","Bryant Carrot, not too shabby, small hand size but strong skills"]
