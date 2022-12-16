@@ -42,7 +42,7 @@ tileJob t =
         Water -> ""
         BanditCamp ->  String.join "\n" 
             [ bStar 30 5 t.bandits
-            , bStar 5 5 (rotBy 8 (t.bandits + 2 ))
+            , bStar 5 5 (rotBy 8 (t.bandits + 3 ))
             , bStar 17.5 30 (rotBy 8 (t.bandits + 4 ))
             ]
         _ -> bStar 30 5 t.bandits

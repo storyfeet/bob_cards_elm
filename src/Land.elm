@@ -85,5 +85,5 @@ villageTiles : List Tile
 villageTiles = villageJobs |> List.map (\j -> Tile (Village j) 0)
 
 fullDeck : List Tile
-fullDeck = villageTiles ++ (basicTiles MRand.gzero 39)
+fullDeck = villageTiles ++ (basicTiles (MRand.gn 11) 39)
 

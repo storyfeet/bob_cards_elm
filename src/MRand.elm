@@ -1,4 +1,4 @@
-module MRand exposing (gnew,gzero,gnext,rgen1,rgen,GGen)
+module MRand exposing (gnew,gzero,gn,gnext,rgen1,rgen,GGen)
 import Time exposing (Posix,posixToMillis)
 
 rgen : Int -> Int -> Int -> Int ->Int -> (Int , Int)
@@ -26,6 +26,13 @@ gzero =
     { curr = 0
     , next = rgen1
     }
+
+gn : Int -> GGen
+gn n = 
+    { curr = n
+    , next = rgen1
+    }
+
 gnew : Posix -> GGen
 gnew t = 
     { curr = posixToMillis t
