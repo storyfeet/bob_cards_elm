@@ -40,10 +40,24 @@ tileJob t =
     case t.ltype of
         Village j -> job j
         Water -> ""
-        _ -> String.join "\n" 
-            [ JSV.qStar 30 5 "red" "black"
-            , text "Arial" 6.5 [xy 35 12 ,flStk "white" "black" 0.5, strokeFirst,bold,txCenter] (String.fromInt t.bandits)
+        BanditCamp ->  String.join "\n" 
+            [ bStar 30 5 t.bandits
+            , bStar 5 5 (rotBy 8 (t.bandits + 2 ))
+            , bStar 17.5 30 (rotBy 8 (t.bandits + 4 ))
             ]
+        _ -> bStar 30 5 t.bandits
+
+rotBy : Int -> Int -> Int
+rotBy r n =
+    (modBy r (n - 1) ) + 1
+
+bStar : Float -> Float -> Int -> String
+bStar x y n = String.join "\n" 
+            [ JSV.qStar x y "red" "black"
+            , text "Arial" 6.5 [xy (x + 5) (y + 7) ,flStk "white" "black" 0.5, strokeFirst,bold,txCenter] (String.fromInt n)
+            ]
+
+    
 
 
     
