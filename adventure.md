@@ -16,9 +16,6 @@ Deck Goes West - A *Co-op* Adventure
 
 Welcome to the Americas. you must explore the land, find a place to call home, defeat bandits & protect your land.
 
-You have heard the announcement that there are plots of land to own to the West of the country, all you have to do is get there first, and it's yours.
-
-You and a group of friends agree to travel together across the wilderness, and to help each other as you can.
 
 Legacy game rules:
 --------------
@@ -38,14 +35,23 @@ If you complete the Mission:
     * Remove 1 Starter Card they have scrapped this game from their start supply    
     * Remove 1 Danger Card from their Deck
 
-If you fail to complete the Mission:
+You can only make a maximum of two changes to your deck, the rest must be in resources.
 
+Write down on the mision log the card changes and the gained start resources. Along with the number of Danger Cards (E and P) you still have in your Deck.
+
+
+If you fail to complete the Mission:
+* Mark the Mission as faile
 
 
 Onto the Adventure
 ====================
 
 ** Each Player Choose a Character card to start the game **
+
+You have heard the announcement that there are plots of land to own to the West of the country, all you have to do is get there first, and it's yours.
+
+You and a group of friends agree to travel together across the wilderness, and to help each other as you can.
 
 **Mission 1**: Speed of the Slowest. Play with the D20 and with Scoreboard A
 
