@@ -182,3 +182,12 @@ Kids
 .dice : 12
 .players : [Me, Toby, Jacob, River]
 .learned : ["Distance probably too short, make it longer","Bryant Carrot, not too shabby, small hand size but strong skills"]
+
+Kids
+.mode : "VS - Village Hero"
+.difficulty : 2
+.board : A
+.dice : 12
+.players : [Me, Toby, Jacob, River]
+.learned : ["Carrot my not be strong enough for level 2",
+       "Village hero may benefit from not rewarding explores" ]
