@@ -122,7 +122,7 @@ net = Card "Net" TGather
 huntingKnife : Card
 huntingKnife = Card "Hunting Knife" TGather
     [pay Wood 1, pay Iron 1]
-    [ [defend 2, attack 3]
+    [ [defend 1, attack 2]
     , [In Forest, gather Food 4]
     , [discard, gather Food 2]
     ]
