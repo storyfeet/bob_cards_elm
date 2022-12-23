@@ -191,3 +191,12 @@ Kids
 .players : [Me, Toby, Jacob, River]
 .learned : ["Carrot my not be strong enough for level 2",
        "Village hero may benefit from not rewarding explores" ]
+
+Thursday
+.mode : "Coop - Precious Carg["
+.difficulty : 1
+.board : A
+.dice : 12
+.players : [Me, "James windmil", "Joel new"]
+.learned : ["Hunting knife should be for hunting"
+           , "Precious Cargo should be trickier" ]
