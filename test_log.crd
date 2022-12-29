@@ -193,10 +193,19 @@ Kids
        "Village hero may benefit from not rewarding explores" ]
 
 Thursday
-.mode : "Coop - Precious Carg["
+.mode : "Coop - Precious Cargo"
 .difficulty : 1
 .board : A
 .dice : 12
 .players : [Me, "James windmil", "Joel new"]
 .learned : ["Hunting knife should be for hunting"
            , "Precious Cargo should be trickier" ]
+
+
+"Boxing Day"
+.mode : "VS - Discovery"
+.difficulty : 1
+.board : A
+.players : ["Mark Jordan", "Mark Stoodley", "Simeon Stoodley", "Emma"]
+.learned : ["Not boxing day", "Bandits have maybe too much ritual"]
+
