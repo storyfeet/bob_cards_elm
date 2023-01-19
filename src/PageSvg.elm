@@ -212,7 +212,3 @@ placeCardF nwide fx fy n theCard=
             , theCard 
             , "</g>"
         ]
-
-
-
-
