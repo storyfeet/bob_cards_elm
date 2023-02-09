@@ -13,9 +13,9 @@ startMap =
     emptyGrid 20  
     |> gridPut 10 10 (Tile (Village (J.trade J.Gold 1 J.Food 4 ))  3)
     |> gridPut 10 11 (Tile (Forest True) 1 )
-    |> gridPut 10 9 (Tile (Prarie True) 2)
+    |> gridPut 10 9 (Tile (Prairie True) 2)
     |> gridPut 11 10 (Tile (Forest False) 5 ) 
-    |> gridPut 9 10 (Tile (Prarie False) 9) 
+    |> gridPut 9 10 (Tile (Prairie False) 9) 
 
 
 
