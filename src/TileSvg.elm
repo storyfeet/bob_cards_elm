@@ -19,20 +19,30 @@ tileName tl =
         Mountain -> "mountain"
         BanditCamp -> "bandit_camp"
 
+
+tilePath : String
+tilePath = "../pics/tiles/"
         
 pLink : LType -> String
-pLink = tileLink "../pics/"
+pLink = tileLink tilePath
 
 tileLink:String -> LType -> String
 tileLink root tl =
     root ++ (tileName tl) ++ ".svg" 
 
 
-front : Tile->String
+front : Tile -> String
 front t =
     String.join "\n" 
     [ img 0 0 45 45  (pLink t.ltype) [fprop "opacity" 0.5]
     , tileJob t
+    ]
+
+back : Tile -> String
+back t =
+    String.join "\n" [
+        img -1 -1 47 47 (tilePath ++ "back.svg") []
+        , bStar 17.5 30 t.bandits
     ]
 
 tileJob : Tile -> String

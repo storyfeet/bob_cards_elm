@@ -63,6 +63,7 @@ backList placer n =
 type PrintMode
     = Cards
     | Tiles
+    | TileBack
     | Wide
     | WideBack
     | Done
@@ -93,6 +94,9 @@ updateNext mod =
         Tiles -> case nextTile mod.pos (Land.fullDeck ) of
             -- Do Backs and set to Done
             Just w -> ({mod | pos = mod.pos +1 }, w|> log)
+            Nothing -> updateNext {mod | pos = 0, pmode = TileBack}
+        TileBack -> case nextTileBack mod.pos (Land.fullDeck) of
+            Just w -> ({mod | pos = mod.pos + 1} , w|> log)
             Nothing -> updateNext {mod | pos = 0, pmode = Wide}
         Wide -> case nextWide mod.pos wideCards of
             Just w -> ({mod | pos = mod.pos +1}, w|> log)
@@ -119,6 +123,9 @@ nextFront = tryNextPage 16 front placeCard "front"
 
 nextTile : Int -> List Tile -> Maybe Writer
 nextTile = tryNextPage 24 TileSvg.front placeTile "tiles"
+
+nextTileBack : Int -> List Tile -> Maybe Writer
+nextTileBack = tryNextPage 24 TileSvg.back placeTile "tile_backs"
 
 {--
 nextPlayer : Int -> List PL.Player -> Maybe Writer
