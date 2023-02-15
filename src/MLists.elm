@@ -1,7 +1,7 @@
 module MLists exposing (..)
 import MRand exposing(..)
 
-insertAt :Int -> a -> List a -> List a
+insertAt : Int -> a -> List a -> List a
 insertAt pos v l =
     case (pos,l) of
         (_,[]) -> [v]

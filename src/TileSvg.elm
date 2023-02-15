@@ -42,20 +42,35 @@ back : Tile -> String
 back t =
     String.join "\n" [
         img -1 -1 47 47 (tilePath ++ "back.svg") []
-        , bStar 17.5 30 t.bandits
+        , bStar 17.5 30 t.backBandits
     ]
 
 tileJob : Tile -> String
 tileJob t =
     case t.ltype of
         Village j -> job j
-        Water -> ""
-        BanditCamp ->  String.join "\n" 
-            [ bStar 30 5 t.bandits
-            , bStar 5 5 (rotBy 8 (t.bandits + 3 ))
-            , bStar 17.5 30 (rotBy 8 (t.bandits + 4 ))
-            ]
-        _ -> bStar 30 5 t.bandits
+        _ -> placeBandits 0 t.bandits |> String.join "\n" 
+
+
+banditPos : Int -> (Float, Float)
+banditPos n = 
+    case n of
+        0 -> (30,5)
+        1 -> (5,5)
+        2 -> (17.5,30)
+        v -> (toFloat v , 15)
+
+placeBandits : Int -> List Int -> List String
+placeBandits n l = 
+    case l of 
+        [] -> []
+        h :: t -> 
+            let 
+                (x ,y) = banditPos n
+            in 
+                (bStar x y h)  :: (placeBandits (n + 1) t)
+
+
 
 rotBy : Int -> Int -> Int
 rotBy r n =

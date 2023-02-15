@@ -1,9 +1,11 @@
 module Land exposing(..)
 import Job exposing (..)
-import MRand
+import MRand exposing (gnext,GGen)
+
 type alias Tile = 
     { ltype : LType
-    , bandits: Int
+    , bandits: List Int
+    , backBandits : Int
     }
 
 type LType
@@ -49,25 +51,46 @@ intToBool n =
         0 -> False
         _ -> True
 
-tile: Int -> Int -> Tile
-tile n b= 
+tileGen: GGen -> Int ->  (GGen,Tile)
+tileGen g n = 
     let 
         lt = intToLType n
-        bandits = b
+        (g2,f,b) = buildBandits g lt
     in 
-        Tile lt bandits
+        (g2, Tile lt f b)
     
-
-
-
-basicTiles : MRand.GGen -> Int -> List Tile
-basicTiles gen n =
+buildBandits : GGen -> LType ->  (GGen,List Int, Int)
+buildBandits g t = 
     let 
-        (g2 , b) = MRand.gnext gen 8 
+        (g1, back) = gnext g 8
     in 
-        case n of
-            0 -> [tile 0 (b + 1) ]
-            v -> (tile v (b +1 )) :: (basicTiles g2 (n - 1))
+        case t of
+            BanditCamp -> 
+                let 
+                    (g2 , a)  = gnext g1 8
+                    (g3 , b)  = gnext g2 8
+                    (g4 , c)  = gnext g3 8
+                in
+                    (g4,[a + 1 ,b + 1 ,c + 1],back + 1)
+            Village _ -> (g1,[],back + 1)
+            _ -> 
+                let 
+                    (g2, a) = gnext g1 12
+                in
+                    if a < 8 then
+                        (g2,[a + 1],back + 1)
+                    else (g2,[],back + 1)
+
+basicTiles : GGen -> Int -> (GGen,List Tile)
+basicTiles gen n =
+    case n of
+        0 -> (gen,[])
+        _ -> 
+            let
+                (g2, tail) = basicTiles gen (n - 1)
+                (g3, head) = tileGen g2 n
+            in
+                (g3,head:: tail)
 
 villageJobs : List Job
 villageJobs =
@@ -81,9 +104,22 @@ villageJobs =
     , [pay Gold 2, Draw (N 4)]
     ]
 
-villageTiles : List Tile
-villageTiles = villageJobs |> List.map (\j -> Tile (Village j) 0)
+toVillages : GGen -> List Job -> (GGen,List Tile )
+toVillages gen jobs = 
+    case jobs of
+        [] -> (gen,[])
+        h::t ->  
+            let 
+                (g2,fr,bk) = buildBandits gen (Village h)
+                (g3,tail) = toVillages g2 t
+            in 
+                (g3,(Tile (Village h) fr bk) ::tail)
 
 fullDeck : List Tile
-fullDeck = villageTiles ++ (basicTiles (MRand.gn 11) 39)
+fullDeck = 
+    let 
+        (g2,basics) =(basicTiles (MRand.gn 11) 40) 
+        (_, vTiles) = toVillages g2 villageJobs
+    in 
+        vTiles ++ basics
 
