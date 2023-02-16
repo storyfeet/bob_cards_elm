@@ -4,6 +4,7 @@ import Cards exposing (..)
 import Job as J
 import JobSvg as JSV
 import HasPicList as PicLists
+import Config
 
 
 front :  Card -> String
@@ -23,6 +24,7 @@ back  =
     [ rect -3 -3 56 76 [flNoStk "#f7c9b4"]
     , rect 5 5 40 60 [flStk "none" "black" 1]
     , img 5 15 40 40 "../pics/back_logo.svg" []
+    , text "Arial" 3 [xy 6 64,flNoStk "black",fprop "opacity" 0.5] Config.version
 
     ]
 
