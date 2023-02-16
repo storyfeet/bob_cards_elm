@@ -43,9 +43,9 @@ playerPhase : Int ->  List String
 playerPhase hSize = 
     [ "Untap this card"
     , "Draw to "++ (String.fromInt hSize ) ++ " Cards"
-    ,"Pass P1 Token"
-    ,"Play Cards / Trade"
+    , "Play Cards / Trade"
     , "May discard Item Cards"
+    , "Pass P1 Token"
     ]
 
 banditPhase : List String
