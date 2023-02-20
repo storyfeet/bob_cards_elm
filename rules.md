@@ -221,6 +221,8 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 5. Pass the P1 Token *(In Solo Games ignore this)*
 
     The player who has the P1 Token passes it to the left.
+
+
 ### Night Phase
 
 *(This is shown on the back of Player Cards)*
@@ -281,7 +283,7 @@ Jobs are found in 4 places.
 
     The reason to perform the Job on a Danger Card, is to get rid of it. Danger Cards may not be discarded like Item Cards, and so you have to use the last action of their Jobs to either Discard them or Scrap them.
 
-    *(Note : Scrapping is much better as Discarding them means they will come into your hand again, Scrapping them means they are gone for good.)*
+    *(Note : Scrapping is much better than Discarding because the cards won't come back again)*
 
 * On Player Cards
 
@@ -336,9 +338,9 @@ There are four actions that involve Cards
 
 <img src="{{$0}}/rules/card_actions.svg">
 
-When Scrapping a Card put it in the appropriate discard pile. eg 'E' Danger cards beside the 'E' Danger draw pile, Starter Cards are removed from the game.
+**Scrapping** a Card removes it from your deck completely so you do not see it again. Do not put in in your own discard pile, instead put it in the discard pile matching it's type. eg 'E' Danger cards beside the 'E' Danger draw pile. Starter Cards are removed from the game.
 
-Gained Cards can be added to top of your Draw Pile or Discard Pile
+Whenever a player **Gains** a card, they may add it to the top of either their Draw Pile or their Discard Pile.
 
 ### Card Types
 
