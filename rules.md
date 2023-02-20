@@ -33,12 +33,12 @@ Deck Goes West - Rules
 Overview
 --------
 
-Set in the early settlement of the Americas, each player competes, or works together, to go as far west as possible. All while managing supplies, exhaustion and injuries, and staying safe from Bandits.
+Set in the early settlement of the Americas, players may compete, or works together, to go as far west as possible. All while managing supplies, exhaustion and injuries, and staying safe from Bandits.
 
 Each player maintains a deck of cards with various actions available.
-During the main phase of the game players take turns to play cards and perform the actions on those cards. They may also buy cards from the trade row to gain extra abilities.
+During the day phase of the game players play cards to perform actions. They may also buy cards to gain abilities or perform their own character abilities.
 
-Once all players have run out of cards/actions and passed, the bandits will take their turn, and the trade row will upate.
+Once all players have run out actions and passed, during the night the bandits will take their turn, and the trade row will upate.
 
 Then each player draws cards, and the cycle begins again.
 
@@ -130,8 +130,7 @@ On the front you will find:
 * A mode (Vs, Coop , Solo)
 * Mission Specific rules
 * Icons showing you how you score in this game.    
-(These are explained later)
-
+(These are explained in the text above them)
 
 Follow the instructions below, and those on the back of your Mission Card (Which have extra instructions for some campaigns) to setup the play area.
 
@@ -139,20 +138,20 @@ Use the following diagram to help you follow setup instructions
 
 <img src="{{$0}}/setups/basic_setup_numbered.svg">
 
-1. **Choose and Place Board:** Choose a direction to represent West on the table. Take the appropriate Score Board (Standard or Co-op) And place it to the east of the playing area.It's compass should show the directions intended, and there should be plenty of room to expand to the West.
+1. **Choose and Place Board:** Choose a direction to represent West on the table. Choose a Score Board from the options on the Mission Card. And place it to the east of the playing area.It's compass should show the directions intended, and there should be plenty of room to expand to the West.
 
 2. Add a **Meeple** for every player to the golden '0' horseshoe on the *Score Board*. (In Coop add just one counter which the players share)
 
 3. Add a **Bandit** to the red '0' horseshoe the *Score Board*, this will be the Bandit Tracker
 
-4. Shuffle the **Trade Row** cards and deal 5 of them across the top of the Score Board. Leaving the rest in a draw pile beside them, with a space beside if for discards.
+4. Shuffle the **Trade Row** cards and deal 5 of them across the top of the Score Board. Leaving the rest in a draw pile beside them, with a space beside it for discards.
 
 5. Shuffle the **Pain** and **Exhaustion** Cards separately and place them face down by the appropriate symbol on the score board. These will help you tell the piles apart as they have no markings on the back.
 
 6. Shuffle the **Land Tiles** and deal 6 of them face up in a 2x3 grid. North to south should be 3 tiles.    
 (Make sure to leave room to grow. As you move west more cards will be added here.)
 
-7. Deal 3 more *Land Tiles*, face down, to the west of the tiles already placed.
+7. Deal 7 more *Land Tiles*, face down around them, to the North, West and South.
 
 8. Add a **Meeple** for each player to the Eastmost Central tile.    
 (Even if it's Water)
@@ -165,7 +164,7 @@ Use the following diagram to help you follow setup instructions
 
 <img src="{{cat $0 "/rules/player_setup.svg"}}">
 
-1. Give each player a *Player Card* of the agreed **Difficulty**. (If this is your first game, choose 1).
+1. Give each player a *Player Card* of the agreed **Difficulty**. <img src="{{$0}}/jobs/difficulty.svg" width="25px" height="25px"> (If this is your first game, choose 1).
 
 2. Each player takes the **Resources** listed on the back of the *Player Card*
 
@@ -195,29 +194,33 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 
     All players turn their Player Card to face forward (If it's not already)
 
-3. Pass the P1 Token *(In Solo Games ignore this)*
 
-    The player who has the P1 Token passes it to the left.
+3. Play and Buy Cards
 
-4. Play and Buy Cards
+    The player with the P1 Token takes one action. After him all players in order clockwise take either 1 or 2 actions.
 
-    Starting with the player with the P1 Token, going clockwise until all players have passed, Players take turns to do one of the following actions.
+    Players continue taking 1 or 2 actions in clockwise order until all players have passed.
 
-    These actions are explained in more detail later.
+    The actions they may perform are as follows, and are explained in more detail later.
 
     * Perform a Job
     * Purchase a Card
     * Trade with othe players
     * Attack Bandits 
-    * Pass 
+    * Pass
 
-    Once a player has passed, they may not do any more until the end of the round (Unless they are caught in a battle)
-*(In Solo Games, just do actions the until you don't want to)*
+    Once a player has passed, they may not perform any more actions that round, but they may participate in other players actions.
 
-5. May discard *Item Cards*.
+
+*(In Solo and Co-op Games, just do actions the until you don't want to)*
+
+4. May discard *Item Cards*.
 
     Players may discard as many Item cards as they wish. They may not discard any Danger cards at this point. *(Beware : If when you come to draw cards, you cannot draw at least 1 card, you lose)*
 
+5. Pass the P1 Token *(In Solo Games ignore this)*
+
+    The player who has the P1 Token passes it to the left.
 ### Night Phase
 
 *(This is shown on the back of Player Cards)*
@@ -452,17 +455,15 @@ Roll the Bandit Dice, once per *Bandit Risk*, and add a bandit to all tiles with
 Revealing Tiles
 ---------------
 
-A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is either done by the Reveal Action using Telescopes/Binoculars
+A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is either done by moving or by the Reveal Action using Telescopes/Binoculars.
 
 To reveal a tile, flip it faces up. And in standard mode score victory points (2 if furthest west or 1 otherwise).
 
-If it has a Bandit Campfire, roll 'n' *Job Dice* where 'n' is the current *bandit risk* , and for every success, add a Bandit to the tile.
+If it has a Bandit Campfire, add a bandit to the tile.
 
-Once you have revealed the tile, add face down tiles to all empty spaces around it, Except
-* If the tile is North of the center row (Going West), not to the North.
-* If the tile is South of the center row, not to the South.
+Once you have revealed the tile, add face down tiles to all empty spaces around it, except those East of the start tile.
 
-** Note Adding these is important because bandits can step onto unrevealed tiles, but not empty spaces **
+** Note Adding these is important because bandits can appear and walk on these tiles **
 
 ## Cooperation Bonus
 
@@ -474,76 +475,12 @@ All players then roll and gain the full amount they rolled, plus half of the amo
 
 ## Trade
 
-When two players are on the same tile they may trade. The player who's turn it is offers the trade, and if it is agreed, that player discards a card and proceeds with the trade.
+When two players are on the same tile they may trade. The player who's turn it is offers the trade, and if it is agreed, **the active player discards an item card** and players proceed with the trade.
 
 * Item Cards are traded from one players hand to the top of the other player's Draw or Discard pile.
 * Resources are traded directly.
 * Danger cards cannot be traded
 * One of the players may also move the other player's piece using their own movement jobs. All movement must come from the one player to move the other. 
-
-
-Cooperative Variants 
-======= 
-
-In Cooperative mode players win or lose together.  They win by reaching the end of the score track first. They lose if **any** player dies, or the bandits reach the end first.
-
-Turn order is not important. Players can take actions in any order. (Or use the turn order rules if they prefer)
-
-## Precious Cargo 
-
-In Precious Cargo players must bring a wagon containing a precious macguffin West with them.
-
-### Setup Changes -- Co op
-
-* Choose a "Co-op" Board
-* Add the *Wagon Piece* to the same tile as the players.
-* Add only 1 counter to the players score track as players score together.
-
-### Rules Changes
-
-Players no longer score by revealing tiles.
-Players score by:
-
-* Removing Bandits : 2vp
-* Building Railway : 2vp or 3vp)
-* Moving the Wagon West : 2vp (-2vp for moving it East)
-
-To move the wagon, a player must be on the same tile as the wagon and use a movement action to move the wagon **instead** of themselves. (The Wagon follows the same movement rules they would)
-
-The Wagon takes 'n' damage by players losing 'n' VP
-
-## Speed of the Slowest
-
-### Setup Changes
-
-* Choose a Co-op Board.
-* Add the Travel Bar behind (to the East) of the players.
-
-### Rules Changes
-
-Players no longer score by revealing tiles.
-Players score by:
-
-* Removing Bandits : 2vp
-* Building Railway : 2vp or 3vp
-* When the Travel Bar moves forward : 2vp
-
-Whenever a player moves West such that **ALL** players are at least 1 space ahead of the Travel Bar, move the Travel Bar West to meet the furthest back player. Score 2vp for every space the Travel Bar moves.
-
-The Travel bar does not limit movement. Players and bandits may cross it freely, it does not move East again.
-
-Solo Play
-=======
-
-To play solo you can either play a faux Co-op game, where you manage two characters, or as a single character to beat the any of the boards you choose.
-
-* Choose a Verses Board, and take 1 character as far west as you can.    
-If it's too easy make sure to choose a Hard Character and Bandit Dice.    
-For an extra challenge start with the Bandit Tracker further along the board.
-
-* Choose a Co-op Board, and play with 2 Characters, on either "Precious Cargo" or "Speed of the Slowest".  Each Character maintains their own cards and resources. Trade can only happen when they are on the same tile. Play the characters actions in any order.
-
-
 
 
 {{/md}}
