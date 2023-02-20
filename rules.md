@@ -197,7 +197,7 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 
 3. Play and Buy Cards
 
-    The player with the P1 Token takes one action. After him all players in order clockwise take either 1 or 2 actions.
+    The player with the P1 Token takes one action. After him, all players in clockwise order take either 1 or 2 actions.
 
     Players continue taking 1 or 2 actions in clockwise order until all players have passed.
 
@@ -205,7 +205,7 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 
     * Perform a Job
     * Purchase a Card
-    * Trade with othe players
+    * Trade
     * Attack Bandits 
     * Pass
 
@@ -358,6 +358,7 @@ When the card is "This card", the symbol will also match the color of the card t
 
 * Place an Railway (Iron) Token on the Tile you are currently on.
 * Cannot be done if there is already a Railway Token Down.
+* Cannot be done if there are bandits on the tile.
 * If this is the most West Railway yet, score 3 VP.
 * Otherwise score 2 VP
 
@@ -438,7 +439,7 @@ Counter attack
 ### Bandits Move
 
 Starting with the Westmost (then Northmost) Group, for each group of bandits, Roll the Compas Dice, and Move them in the Direction Indicated *(N = North,W = West,S = South)*.
-* If the dice lands on '+' and the group has fewer than 6 members, Add a Bandit to the group. *(If Bandit groups merge to more than 6, that is fine.)*
+* If the dice lands on '+' Add a Bandit to the group. 
 * If the group lands on a group that hasn't yet moved, move that group next. If the second group does not move, the two groups merge to become one larger group.
 * Bandits may move onto unrevealed tiles, but not onto spaces without a tile.
 * If the Bandits should move North or South but cannot, move them West.
@@ -452,6 +453,14 @@ Roll the Bandit Dice, once per *Bandit Risk*, and add a bandit to all tiles with
 
 *(The numbers on the tiles go from 1 to 8, so the d8 is the most likely to add bandits making the game harder)*
 
+If after bandits appear, a group of bandits has 8 or more members, split the group as follows.
+
+* Move 2 bandits in each of the four compas directions.
+* If any direction is not possible, do not move those 2 bandits.
+* Leave any others where they are.
+* If this creates another group more than 8 ignore it. That can wait until the turn after.
+
+
 Revealing Tiles
 ---------------
 
@@ -459,7 +468,7 @@ A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is e
 
 To reveal a tile, flip it faces up. And in standard mode score victory points (2 if furthest west or 1 otherwise).
 
-If it has a Bandit Campfire, add a bandit to the tile.
+If it has a Bandit Campfire, add a bandit to the tile, even if it already had bandits on it.
 
 Once you have revealed the tile, add face down tiles to all empty spaces around it, except those East of the start tile.
 
@@ -480,8 +489,7 @@ When two players are on the same tile they may trade. The player who's turn it i
 * Item Cards are traded from one players hand to the top of the other player's Draw or Discard pile.
 * Resources are traded directly.
 * Danger cards cannot be traded
-* One of the players may also move the other player's piece using their own movement jobs. All movement must come from the one player to move the other. 
-
+* As part of the trade, one of the players may also move the other player using their own movement jobs. You may use either player's resources, but only one player may move
 
 {{/md}}
 
