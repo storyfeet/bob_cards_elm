@@ -33,19 +33,22 @@ Deck Goes West - Rules
 Overview
 --------
 
-Set in the early settlement of the Americas, players may compete, or works together, to go as far west as possible. All while managing supplies, exhaustion and injuries, and staying safe from Bandits.
+Set in the early settlement of the Americas, players may compete, or work together, to travel West and complete a given mission. All while managing supplies, exhaustion and injuries, and staying safe from Bandits.
 
-Each player maintains a deck of cards with various actions available.
-During the day phase of the game players play cards to perform actions. They may also buy cards to gain abilities or perform their own character abilities.
+During the day phase of the game players play cards from their own deck to perform actions. They may also buy cards to gain abilities or perform their own character abilities.
 
-Once all players have run out actions and passed, during the night the bandits will take their turn, and the trade row will upate.
+During the night the bandits will take their turn, maybe even attack the players, and the trade row will upate.
 
-Then each player draws cards, and the cycle begins again.
+Day follows night until the players either:
+
+* Complete their mission
+* Run out of time
+* Die of Exhaustion
 
 Winning and Scoring
 -------------------
 
-The game is won by reaching the end of the score track first. Players score points by performing actions on the map. 
+The game is won by reaching the end of the score track first. 
 
 The way you score points depends on the mission you are playing, but common ways are : 
 
@@ -53,17 +56,22 @@ The way you score points depends on the mission you are playing, but common ways
 2. Building a Railway track
 3. Removing bandits from an area
 4. Moving Special pieces West
+5. Feeding Villages
 
-The first player to reach the end of the score track wins the game.
-
-If the Bandits reach the end of their track, the game ends immediately, and the player with the most points wins.
-
-*(Ties are broken by distance west, followed by resource count)*
 
 Verses, Co-op and Single player
 ---------------------
 
 This game can be played as Verses, as Co-op and as single player. The rules barely need adjustment. Simply choose the appropriate *Mission Card* and everything basically falls into place.
+
+For Verses Play:
+
+* Each player has their own token on the score track.
+* The first player to reach the end of the score track wins the game.
+* Players take turns clockwise, starting with the holder of the P1 Token, which changes every day.
+* If the Bandits reach the end of their track, the game ends immediately, and the player with the most points wins.
+
+*(Ties are broken by distance west, followed by resource count)*
 
 For Cooperative Play:
 
@@ -210,7 +218,6 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
     * Pass
 
     Once a player has passed, they may not perform any more actions that round, but they may participate in other players actions.
-
 
 *(In Solo and Co-op Games, just do actions the until you don't want to)*
 
