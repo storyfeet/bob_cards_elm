@@ -209,3 +209,19 @@ Thursday
 .players : ["Mark Jordan", "Mark Stoodley", "Simeon Stoodley", "Emma"]
 .learned : ["Not boxing day", "Bandits have maybe too much ritual"]
 
+"2pVs"
+.mode : "VS - "
+.difficulty : 1
+.board : A
+.players:  ["Toby",Me]
+.learned : []
+
+"Boys"
+.version :"0.2.0"
+.mode : "Coop - Build Together"
+.difficulty : 1
+.board : C
+.players: [Toby,Jacob,Me]
+.learned : ["Really like bandit edges", "Need to prohibit building on bandits" ]
+
+
