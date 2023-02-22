@@ -41,7 +41,7 @@ During the night the bandits will take their turn, maybe even attack the players
 
 Day follows night until the players either:
 
-* Complete their mission
+* Complete their mission / score track
 * Run out of time
 * Die of Exhaustion
 
@@ -67,7 +67,7 @@ For Verses Play:
 
 * Each player has their own token on the score track.
 * The first player to reach the end of the score track wins the game.
-* Players take turns clockwise, starting with the holder of the P1 Token, which changes every day.
+* Players take turns clockwise, starting with the holder of the P1 Token, which changes every day/round.
 * If the Bandits reach the end of their track, the game ends immediately, and the player with the most points wins.
 
 *(Ties are broken by distance west, followed by resource count)*
