@@ -58,11 +58,10 @@ The way you score points depends on the mission you are playing, but common ways
 4. Moving Special pieces West
 5. Feeding Villages
 
-
 Verses, Co-op and Single player
 ---------------------
 
-This game can be played as Verses, as Co-op and as single player. The rules barely need adjustment. Simply choose the appropriate *Mission Card* and everything basically falls into place.
+This game can be played as Verses, Co-op and Single Player. The rules barely need adjustment. Simply choose the appropriate *Mission Card* and everything basically falls into place.
 
 For Verses Play:
 
@@ -135,7 +134,7 @@ On the back you will find:
 * A set of checkboxes. To mark difficulty levels as complete.
 
 On the front you will find:
-* A mode (Vs, Coop , Solo)
+* A mode (Vs, Coop )
 * Mission Specific rules
 * Icons showing you how you score in this game.    
 (These are explained in the text above them)
@@ -246,7 +245,7 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 
 3. Everyone takes an Exhaustion Card.
 
-    From the 'E' stack of Danger cards, draw, and give each player 1 card to place on the top of their Discard Pile *(Or Draw pile if they prefer)*
+    From the 'E' stack of Danger cards, to the top of their Discard Pile *(Or Draw pile if they prefer)*
 
 4. Bandits Attack
     
