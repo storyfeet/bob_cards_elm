@@ -45,7 +45,7 @@ Day follows night until the players either:
 * Run out of time
 * Die of Exhaustion
 
-Winning and Scoring
+Winning, Losing and Scoring
 -------------------
 
 The game is won by reaching the end of the score track first. 
@@ -57,6 +57,16 @@ The way you score points depends on the mission you are playing, but common ways
 3. Removing bandits from an area
 4. Moving Special pieces West
 5. Feeding Villages
+
+Players lose the game when the bandits reach the end of their score track, or when a character dies.
+
+Character death:
+* If a players hand **EVER** has as many danger cards as their hand limit that character dies and is out.
+* Also at the end of the Night phase, if a player's hand has at least as many cards in their hand as their hand size at the end of the Bandit phase, that character dies.
+
+    Note: This second rules means that you cannot refuse to discard playable cards to avoid drawing danger cards. But it allows you to keep weapons in case of an unavoidable fight.
+
+
 
 Verses, Co-op and Single player
 ---------------------
@@ -222,7 +232,7 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 
 4. May discard *Item Cards*.
 
-    Players may discard as many Item cards as they wish. They may not discard any Danger cards at this point. *(Beware : If when you come to draw cards, you cannot draw at least 1 card, you lose)*
+    Players may discard as many Item cards as they wish. They may not discard any Danger cards at this point. *(Beware : If your hand is full at the end of night phase your character dies)*
 
 5. Pass the P1 Token *(In Solo Games ignore this)*
 
