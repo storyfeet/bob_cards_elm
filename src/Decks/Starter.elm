@@ -89,9 +89,9 @@ rookieTrader = Card "Rookie Trader" TTrade [starter]
 
 pickaxe : Card
 pickaxe = Card "Pickaxe" TGather [starter]
-    [[In Mountain,discard , gather Iron 2]]
+    [[In Mountain,discard , gather Metal 2]]
 
 mallet : Card
 mallet = Card "Mallet" TMake [starter]
-    [[pay Gold 1,pay Iron 1, pay Wood 1,discard ,BuildRail]]
+    [[pay Gold 1,pay Metal 1, pay Wood 1,discard ,BuildRail]]
 

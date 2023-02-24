@@ -518,7 +518,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
          x="224.58215"
          y="28.942982"
-         id="tspan4172-9-7-5">Iron</tspan></text><text
+         id="tspan4172-9-7-5">Metal</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;stroke-width:0.264583"
        x="224.70068"
@@ -549,7 +549,7 @@
          y="64.570274"
          id="tspan3786"><tspan
            style="font-weight:normal;-inkscape-font-specification:sans-serif"
-           id="tspan3784">Gain 'n' Iron</tspan></tspan></text><text
+           id="tspan3784">Gain 'n' Metal</tspan></tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;text-anchor:start;white-space:pre;inline-size:48.6333;display:inline;stroke-width:0.264583"
        x="208.25641"
@@ -1138,7 +1138,7 @@
        inkscape:svg-dpi="96"
        width="10"
        height="10"
-       xlink:href="../jobs/iron.svg"
+       xlink:href="../jobs/metal.svg"
        id="image3021"
        x="213.043"
        y="22.45285"
@@ -1182,7 +1182,7 @@
          inkscape:svg-dpi="96"
          width="10"
          height="10"
-         xlink:href="../jobs/iron.svg"
+         xlink:href="../jobs/metal.svg"
          id="image3021-1"
          x="189.59651"
          y="59.926727"

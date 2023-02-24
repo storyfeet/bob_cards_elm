@@ -33,7 +33,7 @@ resourceShortName r =
     case r of
         Gold -> "Gld"
         Wood -> "Wd"
-        Iron -> "Ir"
+        Metal -> "Ir"
         Food -> "Fd"
         VP -> "vp"
         BanditVP -> "bvp"
@@ -79,7 +79,7 @@ resourceColor: Resource ->String
 resourceColor r = 
     case r of 
         Food -> "green"
-        Iron -> "Grey"
+        Metal -> "Grey"
         Wood -> "Brown"
         Gold -> "Gold"
         VP -> "silver"

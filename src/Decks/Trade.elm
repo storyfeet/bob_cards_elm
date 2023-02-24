@@ -86,21 +86,21 @@ sailboat = Card "Sailboat" TMove
 
 climbingBoots: Card 
 climbingBoots = Card "Climbing Boots" TMove
-    [pay Iron 1]
+    [pay Metal 1]
     [ [pay Food 1,discard ,Move (N 1)]
     , [pay Food 1, MountainMove (N 1)]
     ]
 
 binoculars: Card
 binoculars = Card "Binoculars" TMove
-    [pay Iron 1]
+    [pay Metal 1]
     [ [Reveal (N 1)]
     , [scrapThis TMove, Reveal (N 2)]
     ]
 
 telescope: Card
 telescope = Card "Telescope" TMove
-    [pay Iron 1,pay Wood 1]
+    [pay Metal 1,pay Wood 1]
     [ [ Reveal (N 2) ]
     , [scrapThis TMove, Reveal (N 3)]
     ]
@@ -121,7 +121,7 @@ net = Card "Net" TGather
 
 huntingKnife : Card
 huntingKnife = Card "Hunting Knife" TGather
-    [pay Wood 1, pay Iron 1]
+    [pay Wood 1, pay Metal 1]
     [ [defend 1, attack 2]
     , [In Forest, gather Food 4]
     , [discard, gather Food 2]
@@ -147,30 +147,30 @@ bigPan = Card "Big Pan" TGather [In Village,pay Gold 1,Or, discard,pay Wood 1]
     [riverGather Gold 3]
 
 axe : Card 
-axe = Card "Axe" TGather [pay Wood 1,pay Iron 1]
+axe = Card "Axe" TGather [pay Wood 1,pay Metal 1]
     [ [In Forest,pay Food 1,gain Wood 3 ]
     , [attack 2,defend 2]
     ]
 
 twoManSaw : Card
-twoManSaw = Card "Two Man Saw" TGather [pay Iron 2]
+twoManSaw = Card "Two Man Saw" TGather [pay Metal 2]
     [ [In Forest,Discard TAny (N 2), gather Wood 5]
     ]
 
 drill : Card
-drill = Card "Drill" TGather [In Village, pay Iron 2,pay Gold 1 ]
-    [[In Mountain, discard , gather Iron 5]]
+drill = Card "Drill" TGather [In Village, pay Metal 2,pay Gold 1 ]
+    [[In Mountain, discard , gather Metal 5]]
 
 lumpHammer : Card 
-lumpHammer = Card "Lump Hammer" TMake [pay Iron 2]
-    [[pay Iron 1, pay Wood 1,discard ,BuildRail] 
-    ,[pay Iron 2, pay Wood 1,discard ,BuildBridge] ]
+lumpHammer = Card "Lump Hammer" TMake [pay Metal 2]
+    [[pay Metal 1, pay Wood 1,discard ,BuildRail] 
+    ,[pay Metal 2, pay Wood 1,discard ,BuildBridge] ]
 
 sledgeHammer : Card
 sledgeHammer = Card "Sledgehammer" TMake [In Village ,pay Gold 2]
-    [ [pay Iron 1, pay Wood 2,BuildRail]
-    , [pay Iron 2, pay Wood 2,BuildBridge]
-    , [In Mountain,Discard TAny (X 1),Gain Iron (XD 1)]
+    [ [pay Metal 1, pay Wood 2,BuildRail]
+    , [pay Metal 2, pay Wood 2,BuildBridge]
+    , [In Mountain,Discard TAny (X 1),Gain Metal (XD 1)]
     ]
 
 skilledTrader : Card 
@@ -214,7 +214,7 @@ fighterDeck =
 
 {-- sword:Card
 sword = Card "Sword" TFight
-    (payEq 1 [Iron,Wood])
+    (payEq 1 [Metal,Wood])
     [ [attack 3]
     , [defend 3]
     , [In Forest,gather Food 1]
@@ -223,7 +223,7 @@ sword = Card "Sword" TFight
 
 dagger : Card
 dagger = Card "Dagger" TFight
-    [pay Iron 1,discard]
+    [pay Metal 1,discard]
     [ [discard, gather Food 2]
     , [discard , defend 3, attack 4]
     ]
@@ -237,12 +237,12 @@ bow = Card "Bow" TFight
     ]
 
 dillinger: Card
-dillinger= Card "Dillinger" TFight [pay Wood 1,pay Iron 1]
+dillinger= Card "Dillinger" TFight [pay Wood 1,pay Metal 1]
     [[attack 1 ,defend 4]]
 
 
 revolver: Card 
-revolver = Card "Revolver" TFight [pay Iron 1, pay Wood 2]
+revolver = Card "Revolver" TFight [pay Metal 1, pay Wood 2]
     [ [Pay Wood (X 1), Attack (XD 3)]
     , [In Forest,Pay Wood (X 1), Gain Food (XD 2)]
     , [defend 4]
@@ -251,15 +251,15 @@ revolver = Card "Revolver" TFight [pay Iron 1, pay Wood 2]
 
 
 rifle : Card
-rifle = Card "Rifle" TFight [In Village, pay Iron 1, pay Gold 1]
-    [[pay Iron 1, Attack (N 3), attack 4 ]
-    , [pay Iron 1, Defend (N 3), attack 4]
+rifle = Card "Rifle" TFight [In Village, pay Metal 1, pay Gold 1]
+    [[pay Metal 1, Attack (N 3), attack 4 ]
+    , [pay Metal 1, Defend (N 3), attack 4]
     , [In Forest,gather Food 1]
     ]
 
 
 crossbow:Card
-crossbow = Card "Crossbow" TFight [pay Wood 1,pay Iron 1]
+crossbow = Card "Crossbow" TFight [pay Wood 1,pay Metal 1]
     [[pay Wood 1,defend 2,attack 5]
     , [In Forest, pay Wood 1, gather Food 2]
     ]

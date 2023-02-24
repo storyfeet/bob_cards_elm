@@ -102,7 +102,7 @@ resPic: J.Resource  -> String
 resPic r = 
     case r of 
         J.Gold -> "gold"
-        J.Iron -> "iron"
+        J.Metal -> "metal"
         J.Food -> "food"
         J.Wood -> "wood"
         J.VP -> "vp"

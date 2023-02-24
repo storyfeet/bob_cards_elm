@@ -11,7 +11,7 @@ startRes =
     List.map (\(r,n) -> gain r n) 
 
 standardRes : Job
-standardRes = startRes [(Gold,1),(Iron,1),(Wood,1),(Food,3)]
+standardRes = startRes [(Gold,1),(Metal,1),(Wood,1),(Food,3)]
 
 type alias Player =
     { name : String
@@ -131,7 +131,7 @@ wayneJohns =
 derekDogood : Player
 derekDogood =
     Player "Derek Dogood" 1 6
-    (startRes [(Gold,1),(Iron,1),(Wood,1),(Food,3)])
+    (startRes [(Gold,1),(Metal,1),(Wood,1),(Food,3)])
     [ [pay Any 1, Move (N 1)]
       , [discard, Pay Any (X 1),Gain Any (X 1)]
       , [Scrap TAny (X 1),Gain Any (X 1)]
@@ -216,7 +216,7 @@ carlaDirk =
 bryantCarrot : Player
 bryantCarrot =
     Player "Bryant Carrot" 3 4
-    (startRes [(Gold, 1), (Wood , 1) ,(Iron,1),(Food,3)])
+    (startRes [(Gold, 1), (Wood , 1) ,(Metal,1),(Food,3)])
     [ [ Scrap anyDanger (N 1), move 1]
     , [ Scrap TAny (N 1), move 1]    
     ]

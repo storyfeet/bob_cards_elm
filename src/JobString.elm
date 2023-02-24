@@ -104,7 +104,7 @@ resourceToString : Resource -> String
 resourceToString r = 
     case r of
         Gold -> "gold"
-        Iron -> "iron"
+        Metal -> "metal"
         Food -> "food"
         Wood -> "wood"
         VP -> "VP"

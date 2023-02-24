@@ -59,7 +59,7 @@ theRace = {discovery
     , difficulty = 2
     , jobs = 
         [ [on J.OnRevealWest , gain VP 3 , J.Or, on J.OnMoveWest , on J.OnReveal, gain VP 2 ]
-        , [on J.OnDefeatBandits, gain Gold 1,gain Wood 1,gain Iron 1,gain Food 1]
+        , [on J.OnDefeatBandits, gain Gold 1,gain Wood 1,gain Metal 1,gain Food 1]
         ]
 
     }

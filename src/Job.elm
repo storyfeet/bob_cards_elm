@@ -17,7 +17,7 @@ type Place
 type Resource
     = Gold
     | Wood
-    | Iron
+    | Metal
     | Food
     | VP
     | BanditVP
