@@ -93,7 +93,7 @@ Contents
 * Wagon * 2
 * Travel Bar * 1
 * Bandit Counters - small * 20 , big * 20
-* Resource Counters - Wood, Food, Iron , Gold : small * 20 Big * 10
+* Resource Counters - Wood, Food, Metal , Gold : small * 20 Big * 10
 * First Turn Marker
 * Land Tiles * 48
 * Player Cards * 12 (soon 18)
@@ -302,20 +302,22 @@ Jobs are found in 4 places.
 
     **You cannot use a Village's job while there are Bandits on the tile**
 
-If multiple jobs provide the same last action, you may use them in the same turn. Even if one of those jobs is a Card and the other on a Village or Player Card.
+If multiple jobs provide the same last action, you may use them in the same turn. Even if one the jobs are different places, (ie Cards, Players,Villages)
+
+You can also increase your reward for some jobs by working with other players. *(see Cooperation Bonus)*
 
 Understanding the Job Icons
 ----------------
 
 ### Places
 
-Square Icons represent a place. Your Meeple must be in that kind of place to perform the action. There must also be **No Bandits on the tile**
+Square Icons represent a place. Your Meeple must be on that kind of tile, with no bandits on, to perform the action.
 
 <img src="{{$0}}/rules/places.svg">
 
 ### Resources
 
-There are 4 key resources in the game, "Gold", "Iron", "Wood" and "Food". They can be paid and gained, to and from the General supply.
+There are 4 key resources in the game, "Gold", "Metal", "Wood" and "Food". They can be paid and gained, to and from the General supply.
 
 <img src="{{$0}}/rules/resources.svg">
 
@@ -364,7 +366,7 @@ When the card is "This card", the symbol will also match the color of the card t
 
 <img src="{{$0}}/rules/build_railway.svg">
 
-* Place an Railway (Iron) Token on the Tile you are currently on.
+* Place an Railway (Metal) Token on the Tile you are currently on.
 * Cannot be done if there is already a Railway Token Down.
 * Cannot be done if there are bandits on the tile.
 * If this is the most West Railway yet, score 3 VP.
