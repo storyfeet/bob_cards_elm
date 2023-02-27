@@ -13,12 +13,12 @@ type LType
     | Forest Bool
     | Prairie Bool
     | Village Job
+    | BanditCamp Job
     | Mountain
-    | BanditCamp
 
 intToLType: Int -> LType
 intToLType n =
-    case Basics.modBy 11 n of
+    case Basics.modBy 10 n of
         0 -> Water
         1 -> Water
         2 -> Mountain
@@ -28,8 +28,7 @@ intToLType n =
         6 -> Forest True
         7 -> Prairie False
         8 -> Prairie True
-        9 -> Prairie True
-        _ -> BanditCamp
+        _ -> Prairie True
 
 isPlace: Place -> LType -> Bool
 isPlace p l =
@@ -65,7 +64,7 @@ buildBandits g t =
         (g1, back) = gnext g 8
     in 
         case t of
-            BanditCamp -> 
+            BanditCamp _ -> 
                 let 
                     (g2 , a)  = gnext g1 8
                     (g3 , b)  = gnext g2 8
@@ -104,22 +103,35 @@ villageJobs =
     , [pay Gold 2, Draw (N 4)]
     ]
 
-toVillages : GGen -> List Job -> (GGen,List Tile )
-toVillages gen jobs = 
+campJobs : List Job 
+campJobs = 
+    [ [Discard (TAny) (X 1),Gain Any (X 3)] 
+    , [Scrap (TDanger DAny) (X 1), Gain Gold (X 3)]
+    , [Scrap (TDanger DAny) (X 1), Draw (X 2)]
+    , [draw 1, gain Gold 6]
+    ]
+
+toTiles : (a -> LType) -> GGen -> List a ->  (GGen,List Tile )
+toTiles fTile gen jobs = 
     case jobs of
         [] -> (gen,[])
         h::t ->  
             let 
-                (g2,fr,bk) = buildBandits gen (Village h)
-                (g3,tail) = toVillages g2 t
+                lt = (fTile h)
+                (g2,fr,bk) = buildBandits gen lt
+                (g3,tail) = toTiles fTile g2 t
             in 
-                (g3,(Tile (Village h) fr bk) ::tail)
+                (g3,(Tile lt fr bk) ::tail)
+
+
+
 
 fullDeck : List Tile
 fullDeck = 
     let 
-        (g2,basics) =(basicTiles (MRand.gn 11) 40) 
-        (_, vTiles) = toVillages g2 villageJobs
+        (g2,basics) =(basicTiles (MRand.gn 11) 36) 
+        (g3, vTiles) = toTiles (Village) g2 villageJobs
+        (_ , bTiles)  = toTiles (BanditCamp) g3 campJobs
     in 
-        vTiles ++ basics
+        vTiles ++ bTiles ++ basics 
 

@@ -7,7 +7,7 @@
    viewBox="0 0 38.774696 38.7747"
    version="1.1"
    id="svg1240"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="bandit_camp.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,7 +25,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="3.2290832"
-     inkscape:cx="94.918583"
+     inkscape:cx="94.76374"
      inkscape:cy="48.465769"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
@@ -57,7 +57,7 @@
          sodipodi:nodetypes="cccccccccccccccc" />
       <g
          id="g873"
-         transform="matrix(1.351765,0,0,1.2315822,-27.597951,-2.4177554)"
+         transform="matrix(1.2123523,0,0,1.0515602,-21.479663,5.1630087)"
          style="stroke-width:0.775029">
         <path
            style="fill:#c87137;stroke:#000000;stroke-width:0.211539px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -66,17 +66,17 @@
            sodipodi:nodetypes="ccccc" />
         <path
            style="fill:#ff0000;stroke:#000000;stroke-width:0.211539px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 39.464231,39.151507 c 14.66862,-4.670986 -1.841322,-10.983701 -0.326092,-14.453022 -0.217717,4.2692 -9.714495,8.268071 0.326092,14.453022 z"
+           d="m 39.464231,39.151507 c 14.66862,-4.670986 -2.63782,-11.155563 -1.12259,-14.624884 -0.217717,4.2692 -8.917997,8.439933 1.12259,14.624884 z"
            id="path4322"
            sodipodi:nodetypes="ccc" />
         <path
            style="fill:#ff6600;stroke:#000000;stroke-width:0.211539px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 39.689055,39.180277 c 8.404165,-5.080262 0.612017,-7.677114 -0.324444,-10.938432 -0.07214,3.199734 -7.644289,4.785459 0.324444,10.938432 z"
+           d="m 39.689055,39.180277 c 8.404165,-5.080262 -0.183962,-7.940932 -1.120423,-11.20225 -0.07214,3.199734 -6.84831,5.049277 1.120423,11.20225 z"
            id="path4324"
            sodipodi:nodetypes="ccc" />
         <path
            style="fill:#ffff00;stroke:#000000;stroke-width:0.211539px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 39.676116,39.170357 c -3.25751,-5.169372 -0.22685,-5.918629 -0.146589,-8.137794 0.559381,2.413639 3.029954,5.806539 0.146589,8.137794 z"
+           d="m 39.676116,39.170357 c -3.25751,-5.169372 -0.749675,-5.939426 -0.669414,-8.158591 0.559381,2.413639 3.552779,5.827336 0.669414,8.158591 z"
            id="path4326"
            sodipodi:nodetypes="ccc" />
         <path

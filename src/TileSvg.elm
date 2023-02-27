@@ -3,6 +3,7 @@ import Land exposing (..)
 import PageSvg exposing(..)
 import Job exposing (Job)
 import JobSvg as JSV
+import Config 
 
 wet : Bool -> String
 wet b = 
@@ -17,7 +18,7 @@ tileName tl =
         Prairie w -> "prarie" ++ wet w
         Village _ -> "village" 
         Mountain -> "mountain"
-        BanditCamp -> "bandit_camp"
+        BanditCamp _ -> "bandit_camp"
 
 
 tilePath : String
@@ -43,21 +44,26 @@ back t =
     String.join "\n" [
         img -1 -1 47 47 (tilePath ++ "back.svg") []
         , bStar 17.5 30 t.backBandits
+        , text "Arial" 3 [xy 4 40,flNoStk "black",fprop "opacity" 0.5] Config.version
     ]
 
 tileJob : Tile -> String
 tileJob t =
     case t.ltype of
         Village j -> job j
+        BanditCamp j -> String.join "\n" 
+            [ job j
+            , placeBandits 0 t.bandits |> String.join "\n" 
+            ]
         _ -> placeBandits 0 t.bandits |> String.join "\n" 
 
 
 banditPos : Int -> (Float, Float)
 banditPos n = 
     case n of
-        0 -> (30,5)
-        1 -> (5,5)
-        2 -> (17.5,30)
+        0 -> (30,6)
+        1 -> (5,6)
+        2 -> (17.5,3)
         v -> (toFloat v , 15)
 
 placeBandits : Int -> List Int -> List String
