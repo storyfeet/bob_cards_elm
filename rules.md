@@ -62,9 +62,9 @@ Players lose the game when the bandits reach the end of their score track, or wh
 
 Character death:
 * If a players hand **EVER** has as many danger cards as their hand limit that character dies and is out.
-* Also at the end of the Night phase, if a player's hand has at least as many cards in their hand as their hand size at the end of the Bandit phase, that character dies.
+* Also at the end of the Night phase, if a player's hand has at least as many cards (of any kind) in their hand as their hand size at the end of the Bandit phase, that character dies.
 
-    Note: This second rules means that you cannot refuse to discard playable cards to avoid drawing danger cards. But it allows you to keep weapons in case of an unavoidable fight.
+    Note: This second rules means that you cannot refuse to discard playable cards to avoid drawing danger cards. But it allows you to keep weapons if there are bandits on your tile.
 
 
 
@@ -106,7 +106,7 @@ Contents
 * Resource Counters - Wood, Food, Metal , Gold : small * 20 Big * 10
 * First Turn Marker
 * Land Tiles * 48
-* Player Cards * 12 (soon 18)
+* Character Cards * 12 (soon 18)
 * Deck Cards 
 * Dice
     * Bandit Dice * 4: d8-Hardest, d10, d12, d20-Easiest
@@ -181,15 +181,15 @@ Use the following diagram to help you follow setup instructions
 
 <img src="{{cat $0 "/rules/player_setup.svg"}}">
 
-1. Give each player a *Player Card* of the agreed **Difficulty**. <img src="{{$0}}/jobs/difficulty.svg" width="25px" height="25px"> (If this is your first game, choose 1).
+1. Give each player a *Character Card* of the agreed **Difficulty**. <img src="{{$0}}/jobs/difficulty.svg" width="25px" height="25px"> (If this is your first game, choose 1).
 
-2. Each player takes the **Resources** listed on the back of the *Player Card*
+2. Each player takes the **Resources** listed on the back of the *Character Card*
 
-3. Each player takes the *Starter cards* listed on the back of the *Player Card*, shuffles them, and places them face down as their **Draw Pile** (It may be easier to sort the starter cards by name first)
+3. Each player takes the *Starter cards* listed on the back of the *Character Card*, shuffles them, and places them face down as their **Draw Pile** (It may be easier to sort the starter cards by name first)
 
-4. Leave a space beside the *Player Card* for the **Discard Pile**. This is where you will put cards when you have used them.
+4. Leave a space beside the *Character Card* for the **Discard Pile**. This is where you will put cards when you have used them.
 
-5. Give 1 player the P1 Marker.
+5. Choose a player and give them the P1 Marker
 
 
 Order of Play 
@@ -203,13 +203,13 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 
 1. Draw Cards
 
-    All players draw cards from their own personal deck until they have Cards in hand matching their hand size. (If they have more they do not have to discard)
+    All players draw cards from their own personal deck until they have Cards in hand matching their hand size.
 
     Whenever a Player needs to draw cards but his Draw Pile is empty, They shuffle their Discard Pile and it becomes their new Draw Deck. If the Discard pile is also empty, they do not draw any more.
 
-2. Untap Player Card
+2. Untap Character Card
 
-    All players turn their Player Card to face forward (If it's not already)
+    All players turn their Character Card to face forward (If it's not already)
 
 
 3. Play and Buy Cards
@@ -241,7 +241,7 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 
 ### Night Phase
 
-*(This is shown on the back of Player Cards)*
+*(This is shown on the back of Character Cards)*
 
 1. Move the Bandit Tracker
 
@@ -301,9 +301,9 @@ Jobs are found in 4 places.
 
     *(Note : Scrapping is much better than Discarding because the cards won't come back again)*
 
-* On Player Cards
+* On Character Cards
 
-    To use a Job on a *Player Card* you must Tap that *Player Card*. That is rotate it by 90 degrees, to mark it as used. You may only use one job on a player card per round.  It will be Untapped again, at the start of each Round.
+    To use a Job on a *Character Card* you must Tap it. That is rotate it by 90 degrees, to mark it as used. You may only use one job on it per round.  It will be Untapped again, at the start of each Round.
 
 * On Village Tiles
 
@@ -458,7 +458,7 @@ Counter attack
 
 ### Bandits Move
 
-Starting with the Westmost (then Northmost) Group, for each group of bandits, Roll the Compas Dice, and Move them in the Direction Indicated *(N = North,W = West,S = South)*.
+Starting with the Westmost (then Northmost) Group, for each group of bandits not on a Bandit Camp or tile with a player. Roll the Compas Dice, and Move them in the Direction Indicated *(N = North,W = West,S = South)*.
 * If the dice lands on '+' Add a Bandit to the group. 
 * If the group lands on a group that hasn't yet moved, move that group next. If the second group does not move, the two groups merge to become one larger group.
 * Bandits may move onto unrevealed tiles, but not onto spaces without a tile.
@@ -473,12 +473,12 @@ Roll the Bandit Dice, once per *Bandit Risk*, and add a bandit to all tiles with
 
 *(The numbers on the tiles go from 1 to 8, so the d8 is the most likely to add bandits making the game harder)*
 
-If after bandits appear, a group of bandits has 8 or more members, split the group as follows.
+If after bandits appear, a group of bandits has 6 or more members, split the group as follows.
 
-* Move 2 bandits in each of the four compas directions.
-* If any direction is not possible, do not move those 2 bandits.
+* Move 1 bandit in each of the four compas directions.
+* If any direction is not possible, do not move that bandit.
 * Leave any others where they are.
-* If this creates another group more than 8 ignore it. That can wait until the turn after.
+* If this creates another group of at least 6 bandits do the same again.
 
 
 Revealing Tiles
@@ -486,13 +486,9 @@ Revealing Tiles
 
 A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is either done by moving or by the Reveal Action using Telescopes/Binoculars.
 
-To reveal a tile, flip it faces up. And in standard mode score victory points (2 if furthest west or 1 otherwise).
-
-If it has a Bandit Campfire, add a bandit to the tile, even if it already had bandits on it.
-
-Once you have revealed the tile, add face down tiles to all empty spaces around it, except those East of the start tile.
-
-** Note Adding these is important because bandits can appear and walk on these tiles **
+To reveal a tile, flip it face up.
+* If it has a Bandit Campfire, add a bandit to the tile, even if it already had bandits on it.
+* Add a face down tile to all empty spaces around it, except those East of the start tile. *(Bandits can appear on these tiles)* 
 
 ## Cooperation Bonus
 
