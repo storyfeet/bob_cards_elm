@@ -224,4 +224,14 @@ Thursday
 .players: [Toby,Jacob,Me]
 .learned : ["Really like bandit edges", "Need to prohibit building on bandits" ]
 
+"Thursday group"
+.version : "0.2.0"
+.mode : "Coop - Precious Cargo"
+.dice : 20
+.difficulty : 1
+.board : D
+.players [Nigel,Me]
+.learned : ["Production at edges really makes game harder", "need more bandit counters"]
+
+
 

@@ -305,14 +305,14 @@ Jobs are found in 4 places.
 
     To use a Job on a *Character Card* you must Tap it. That is rotate it by 90 degrees, to mark it as used. You may only use one job on it per round.  It will be Untapped again, at the start of each Round.
 
-* On Village Tiles
+* On Tiles
 
-    You may only use a Village's Job once per visit. To use it, your Meeple must be on that tile and standing up. Lay the Meeple down, and then do it's action.
-    When you move out of that Village, stand your Meeple up again.
+    You may only use a Tile's Job once per visit. To use it, your Meeple must be on that tile and standing up. Lay the Meeple down, and then do the Tile action.
+    When you move off of that Tile, stand your Meeple up again.
 
-    **You cannot use a Village's job while there are Bandits on the tile**
+    **You cannot use a Tile's job while there are Bandits on it**
 
-If multiple jobs provide the same last action, you may use them in the same turn. Even if one the jobs are different places, (ie Cards, Players,Villages)
+If multiple jobs provide the same last action, you may use them in the same turn. Even if one the jobs are different places, (ie Cards, Players,Tiles)
 
 You can also increase your reward for some jobs by working with other players. *(see Cooperation Bonus)*
 
@@ -488,7 +488,7 @@ A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is e
 
 To reveal a tile, flip it face up.
 * If it has a Bandit Campfire, add a bandit to the tile, even if it already had bandits on it.
-* Add a face down tile to all empty spaces around it, except those East of the start tile. *(Bandits can appear on these tiles)* 
+* Add a face down tile to all empty spaces around it, except those East of the Eastmost tile. 
 
 ## Cooperation Bonus
 
@@ -505,7 +505,7 @@ When two players are on the same tile they may trade. The player who's turn it i
 * Item Cards are traded from one players hand to the top of the other player's Draw or Discard pile.
 * Resources are traded directly.
 * Danger cards cannot be traded
-* As part of the trade, one of the players may also move the other player using their own movement jobs. You may use either player's resources, but only one player may move
+* As part of the trade, players may combine their Movement Jobs and resources from both players to move ONE of the players. There is no limit on distance, if you come across unexpected obstacles, either player may add Movement Jobs to overcome them.
 
 {{/md}}
 
