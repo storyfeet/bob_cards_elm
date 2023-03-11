@@ -386,9 +386,9 @@ When the card is "This card", the symbol will also match the color of the card t
 
 <img src="{{$0}}/rules/reveal.svg">
 
-* Reveal 'n' tiles within 2 spaces from your current position. 
+* Reveal 'n' facedown tiles within 2 spaces from your current position. 
 * One diagonal is allowed.
-* You may choose places without a tile, add one and reveal it.
+* You may complete each reveal before choosing the next.
 
 ### Movement
 
@@ -509,7 +509,9 @@ When two players are on the same tile they may trade. The player who's turn it i
 
 {{/md}}
 
-<!--div style="page-break-after:always"></div --!>
+<div style="page-break-after:always"></div>
+<p>_</p>
+
 
 </body>
 </html>

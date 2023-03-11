@@ -12,6 +12,13 @@ rules:
 	siter exec -t rules.md -d "../pics" > out/rules.html
 	siter exec -t adventure.md -d "../pics" > out/adventure.html
 
+
+rules_print:
+	echo "works with out/rules_a5.pdf"
+	pdftk out/rules_a5.pdf cat 20 1 2 19 18 3 4 17 16 5 6 15 14 7 8 13 12 9 10 11 output out/rules_a5_sorted.pdf
+	pdfjam --nup 2x1 --outfile out/rules_2x1.pdf --landscape out/rules_a5_sorted.pdf
+
+
 SVGFILES := $(wildcard cards_out/*.svg)
 
 all_pages: cards $(SVGFILES:cards_out/%.svg=cards_out/%.pdf) 
