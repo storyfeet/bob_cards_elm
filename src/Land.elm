@@ -74,7 +74,7 @@ buildBandits g t =
             Village _ -> (g1,[],back + 1)
             _ -> 
                 let 
-                    (g2, a) = gnext g1 12
+                    (g2, a) = gnext g1 20
                 in
                     if a < 8 then
                         (g2,[a + 1],back + 1)
