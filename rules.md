@@ -177,10 +177,9 @@ Use the following diagram to help you follow setup instructions
 
 10. Place the *Mission Card* beside the *scoreboard*.
 
-11. Select a Bandit Dice and place it by the compass on the scoreboard. If this is your first game choose the D20, as this will produce fewer bandits.
-(In future games the D12, and D8 can be used to increase the game difficulty)
-
-Place the Compass Dice next it.
+11. Select a Bandit Dice and place it by the compass on the scoreboard. If this is your first game choose the D20, as this will spawn fewer bandits.    
+*(In future games the D12, and D8 can be used to increase the game difficulty)*    
+Place the Compass Dice (With faces N,S,W,W,W,+) next it.
 
 
 ### Player Setup 
