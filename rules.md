@@ -90,7 +90,7 @@ For Cooperative Play:
 
 For Solo Play:
 
-* You play any the Co-op campaigns, managing two charaters, with separate resource piles
+* You play any the Co-op campaigns, managing two charaters with separate resource piles
 * Turn order is not important.
 
 Contents
