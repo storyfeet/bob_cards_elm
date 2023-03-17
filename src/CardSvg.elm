@@ -40,7 +40,7 @@ cost : Float -> Float -> Float -> J.Job -> String
 cost top x y c = 
     case c of 
         [] -> ""
-        J.Or::t -> cost (top+2) (x - 12) (top + 2 ) t
+--        J.Or::t -> cost (top+2) (x - 12) (top + 2 ) t
         h::t -> JSV.action x y h ++ cost top x (y+10 ) t
 
 cardType : J.CardType -> String
