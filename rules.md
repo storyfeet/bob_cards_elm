@@ -33,7 +33,7 @@ Deck Goes West - Rules
 Overview
 --------
 
-Set in the early settlement of the Americas, players may compete, or work together, to travel West and complete a given mission. All while managing supplies, exhaustion and injuries, and staying safe from Bandits.
+Set in the early settlement of the Americas, players compete, or work together, to travel West and complete a given mission. All while managing supplies, exhaustion and injuries, and staying safe from Bandits.
 
 During the day phase of the game players play cards from their own deck to perform actions. They may also buy cards to gain abilities or perform their own character abilities.
 
@@ -309,7 +309,7 @@ Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits 
 Perform a Job
 ------------------
 
-A Job is a set of Actions that must ALL be performed, they are indicated by a set of Icons in a row. For example.
+A Job is a set of **Steps**, each indicated by an Icon that must ALL be performed, they are indicated by a set of Icons in a row. For example.
 
 <img src="{{$0}}/rules/job_examples.svg">
 
@@ -337,7 +337,7 @@ Jobs are found in 4 places.
 
     **You cannot use a Tile's job while there are Bandits on it**
 
-If multiple jobs provide the same last action, you may use them in the same turn. Even if one the jobs are different places, (ie Cards, Players,Tiles)
+If multiple jobs have the same last Icon, you may use them in the same *Action*. Even if one the jobs are different places, (ie Cards, Players,Tiles)
 
 You can also increase your reward for some jobs by working with other players. *(see Cooperation Bonus)*
 
@@ -407,7 +407,7 @@ When the card is "This card", the symbol will also match the color of the card t
 * If this is the most West Railway yet, score 3 VP.
 * Otherwise score 2 VP
 
-## Reveal Land 
+## Reveal
 
 <img src="{{$0}}/rules/reveal.svg">
 
@@ -436,17 +436,19 @@ These actions move your player 'n' spaces on the map orthagonaly (that is NWES a
 <img src="{{$0}}/rules/movement_sailing.svg" style="float:left;margin:0px 20px 60px 0px">**Sailing Movement**
 
 * Must move either from or onto water or river.
-* Moving onto a mountain costs 2 Spaces.
+* Moving onto a mountain costs 2 Movement.
 * Tiles with railway cost 1 Movement.
+* May be combined with *Normal Movement* to move (from water/river) onto a Mountain.
     
-You may play multiple movement Jobs in the same turn and combine movement types in the same turn. *(Though as always, only play 1 Job per card)*
+You may play multiple movement Jobs in the same *action* and combine movement types. *(Though as always, only play 1 Job per card)*
 
-You may use any movement type to try to move onto unrevealed land.
-If that turns out not enough, you may play another Job for the required movement, or not move there. Either way you score the VP for revealing it.
+You may use any movement type to try to move onto face down tiles revealing them as you move. 
 
-You do not have to move onto revealed land, however the attempt cost is 1 Distance (Any movement type). You may still use remaining movement to try another direction.
+If your movement does not match the tile, or is not enough to move onto it, you may play another Job to reach the required movement as part of the same action. Or you may choose not move there. Either way you score any VP for revealing it.
 
-If you step onto a tile which is not yet revealed, reveal it. (See *Revealing Tiles*). If you step onto a space without a tile, add a tile, and then reveal it.
+You do not have to move onto a tile after revealing it, however that reveal still costs one movement (of any type). You may still use remaining movement to try another direction.
+
+
 
 Attacking and Defending
 --------
@@ -482,6 +484,8 @@ A key goal in Deck Goes West is to discover new land, ie reveal tiles. This is e
 To reveal a tile, flip it face up.
 * If it has a Bandit Campfire, add a bandit to the tile, even if it already had bandits on it.
 * Add a face down tile to all empty spaces around it, except those East of the Eastmost tile. 
+* If there are no more tiles to reveal. Remove the Eastmost row on the board, and anything on them. Shuffle them to create a new Land Draw deck.
+    * If a player is on a removed Tile, they take an Exhaustion Card and move West to the nearest tile.
 
 ## Cooperation Bonus
 
