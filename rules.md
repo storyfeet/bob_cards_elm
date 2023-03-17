@@ -200,9 +200,25 @@ Place the Compass Dice (With faces N,S,W,W,W,+) next it.
 Order of Play 
 -----------
 
+The Game is broken up into two phases : "Day Phase" and "Night Phase". During the Day, Players perform their actions. At Night, the board updates and the Bandits cause trouble.
+The stages below are outlined in more detail below.
+
+* Day Phase : Players -
+    * Draw Cards
+    * Untap Character Card
+    * Player Actions
+    * Discard Item Cards
+    * Pass the P1 Token
+* Night Phase
+    * Move the Bandit Tracker
+    * Move the Trade Row
+    * Players takes an 'E' Danger Card
+    * Bandits Attack
+    * Bandits Move
+    * Bandits Appear
+
 Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits reach the end of their score track.
 
-A complete *Day Phase* and *Night Phase* is called a **Round**.
 
 ### Day Phase
 
@@ -217,7 +233,7 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
     All players turn their Character Card to face forward (If it's not already)
 
 
-3. Play and Buy Cards
+3. Player Actions
 
     The player with the P1 Token takes one action. After him, all players in clockwise order take either 1 or 2 actions.
 
@@ -225,7 +241,7 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 
     The actions they may perform are as follows, and are explained in more detail later.
 
-    * Perform a Job
+    * Perform a Job 
     * Purchase a Card
     * Trade
     * Attack Bandits 
@@ -239,7 +255,7 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 
     Players may discard as many Item cards as they wish. They may not discard any Danger cards at this point. *(Beware : If your hand is full at the end of night phase your character dies)*
 
-5. Pass the P1 Token *(In Solo Games ignore this)*
+5. Pass the P1 Token *(In Co-op and Solo Games ignore this)*
 
     The player who has the P1 Token passes it to the left.
 
@@ -264,20 +280,19 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
 
 4. Bandits Attack
     
-    Starting From West to East, Each Group of bandits on the same tile as a player Attack (See "Attacking")
+    Starting From West to East, Each Group of bandits on the same tile as a player Attacks (See "Attacking")
 
 5. Bandits Move.
-    Starting from West, then North, For every group of bandits not in on the same tile as a player, roll the Compas Dice.
-    Move the bandits 1 Space in the direction indicated. Or if you roll a '+' Add one Bandit to the group
-    * Bandits may move onto tiles that have been placed but not revealed, but not onto places with no tile at all.
-    * If they cannot move North or South, move them West instead.
-    * If they cannot move West, add a Bandit.
-    * If a group has 6 or more bandits do not add another.
-    * If a group of bandits meets another group, that have not rolled yet, move the other group separately. If they do not separate, they become 1 bigger group.
+    Starting from West, then North: For every group of bandits **not on the same tile as a player** and **not on a Bandit Camp**, roll the Compas Dice.
+    Move the group 1 Space in the direction indicated. Or if you roll a '+' Add one Bandit to the group
+    * Bandits may move onto face up or face down tiles, but not off the tiles.
+    * If they cannot move in the rolled direction, move them in the opposite direction.
+    * If they still cannot move, add a bandit
+    * If a group of bandits meets group that have not yet moved, move, roll movement for the other group immediately. If the second group do not move, the two groups merge.
 
 6. Remove Tiles.
 
-    Remove all tiles more than 5 complete spaces East of the Eastmost player, along with any Bandits on them.
+    Remove all tiles more than 3 complete spaces East of the Eastmost player, along with any Bandits on them.
     (This step is not strictly necessary, but those bandits are unlikely to affect the game any more).
 
 7. Bandits Appear.
@@ -285,6 +300,11 @@ A complete *Day Phase* and *Night Phase* is called a **Round**.
     Roll the chosen *Bandit Dice*, as many times as are indicated in the red star in the same section as the furthest forward player or bandit tracker on the scoreboard.
     For each roll, add 1 bandit to every tile with the same number in it's red star on the map.
 
+    If after bandits appear, a group of bandits has 6 or more members, split the group as follows.
+
+    * Move 1 bandit in each of the four compas directions.
+    * If any direction is not possible, do not move that bandit.
+    * If this creates another group of at least 6 bandits do the same again.
 
 Perform a Job
 ------------------
@@ -399,7 +419,6 @@ When the card is "This card", the symbol will also match the color of the card t
 
 These actions move your player 'n' spaces on the map orthagonaly (that is NWES and not diagonally). Though they have different limitations.
 
-
 <img src="{{$0}}/rules/movement_normal.svg" style="float:left;margin:0px 20px 60px 0px">**Normal Movement**
 
 * Cannot move onto water.
@@ -429,16 +448,8 @@ You do not have to move onto revealed land, however the attempt cost is 1 Distan
 
 If you step onto a tile which is not yet revealed, reveal it. (See *Revealing Tiles*). If you step onto a space without a tile, add a tile, and then reveal it.
 
-Bandits
--------
-
-While travelling you are going to face bandits who will hinder your journey.They are represented by Bandit Counters.
-
-When you reveal a Bandit Campfire, and during the Bandits Appear Phase, bandits will arrive on the map. They will mostly be travelling west, and if they meet you will attack you. You may attack them on your turn as well if you have the weapons to do it.
-
-All Bandits on a tile are considered a group, and move and attack together.
-
-### Attacking
+Attacking and Defending
+--------
 
 Attacks work the same way whether Players or Bandits are attacking.
 * Bandits have 1⬢ attack and 1⬢ defence for every bandit on the tile.
@@ -461,29 +472,6 @@ Counter attack
 6. Attackers roll their defence for *saves*
 7. Attackers take 1 damage for every hit above saves.
 
-### Bandits Move
-
-Starting with the Westmost (then Northmost) Group, for each group of bandits not on a Bandit Camp or tile with a player. Roll the Compas Dice, and Move them in the Direction Indicated *(N = North,W = West,S = South)*.
-* If the dice lands on '+' Add a Bandit to the group. 
-* If the group lands on a group that hasn't yet moved, move that group next. If the second group does not move, the two groups merge to become one larger group.
-* Bandits may move onto unrevealed tiles, but not onto spaces without a tile.
-* If the Bandits should move North or South but cannot, move them West.
-* If the Bandits should move West but cannot, Add a Bandit (if less than 6)
-
-### Bandits Appear
-
-The "Bandit Risk" is the number in the red star in the scoreboard section with the furthest forward player or Bandit Tracker.
-
-Roll the Bandit Dice, once per *Bandit Risk*, and add a bandit to all tiles with the rolled number in the red star on the tile.
-
-*(The numbers on the tiles go from 1 to 8, so the d8 is the most likely to add bandits making the game harder)*
-
-If after bandits appear, a group of bandits has 6 or more members, split the group as follows.
-
-* Move 1 bandit in each of the four compas directions.
-* If any direction is not possible, do not move that bandit.
-* Leave any others where they are.
-* If this creates another group of at least 6 bandits do the same again.
 
 
 Revealing Tiles
@@ -515,8 +503,9 @@ When two players are on the same tile they may trade. The player who's turn it i
 {{/md}}
 
 <div style="page-break-after:always"></div>
-<p>_</p>
-
+<p>-</p>
+<div style="page-break-after:always"></div>
+<p>-</p>
 
 </body>
 </html>
