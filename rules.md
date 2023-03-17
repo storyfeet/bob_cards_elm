@@ -448,6 +448,12 @@ If your movement does not match the tile, or is not enough to move onto it, you 
 
 You do not have to move onto a tile after revealing it, however that reveal still costs one movement (of any type). You may still use remaining movement to try another direction.
 
+Purchase a Card
+-----------
+
+The Cards on the *Trade Row* can be bought and added to your personal Deck. These increase your skills in the game.
+
+Simply perform the job in the top corner of the card, and add it to the top of either your draw deck or discard pile.
 
 
 Attacking and Defending
