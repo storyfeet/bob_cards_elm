@@ -13,11 +13,27 @@ jobPic: Float -> Float -> String -> String
 jobPic x y fname = 
     img x y 10 10 ("../pics/jobs/" ++ fname  ++ ".svg")[]
 
+
 jobs : Int -> Float -> Float -> List Job -> String
 jobs maxW x y l =
     case l of 
         [] -> ""
-        h::t -> job maxW x (y - jobHeight maxW h) h ++ jobs maxW x (y - jobHeight maxW h) t 
+        j::t -> 
+            let 
+                ht = jobHeight maxW j
+                wd = jobWidth maxW j
+                ny = (y - ht) 
+            in 
+                String.join "\n"
+                [ jobRect x ny wd ht
+                , job maxW x ny j 
+                , jobs maxW x (y - 2 - jobHeight maxW j) t 
+               -- , text "Arial" 10 [xy x y ,flNoStk "red"] (String.fromInt maxW)
+                ]
+
+jobRect: Float -> Float -> Float -> Float -> String
+jobRect x y w h =
+    rect (x - 1) (y - 1) (w + 1) (h + 1) [flStk "white" "black" 0.5,opacity 0.3,rxy 2 2]
 
 
 job : Int -> Float -> Float -> Job -> String
@@ -33,6 +49,17 @@ jobHeight maxW j =
     |> \n -> (n // maxW ) + 1
     |> \a -> a * 11
     |> toFloat
+
+jobWidth : Int -> Job -> Float
+jobWidth maxW j = 
+    let 
+        mw = maxW // 10
+    in 
+        if List.length j  >= mw then
+            1 + 10 * mw |> toFloat
+        else
+            1 + 10 * List.length j |> toFloat
+
 
 
 jobLen : Job -> Float

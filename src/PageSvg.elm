@@ -125,6 +125,9 @@ flStk f s w =
 strokeFirst : String
 strokeFirst = prop "style" "paint-order:stroke"
 
+opacity : Float -> String
+opacity f = fprop "opacity" f
+
 bold : String
 bold = prop "font-weight" "bold"
 txCenter : String
