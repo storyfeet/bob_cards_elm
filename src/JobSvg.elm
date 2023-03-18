@@ -113,13 +113,10 @@ jobPlaceAction: Int -> Float -> Float -> Int -> J.Action -> String
 jobPlaceAction maxW sx sy n a = 
     let 
         nwide = maxW // 10
-        x = sx + 10 * (modBy nwide n |> toFloat) + if n >= nwide then 10 else 0
-        y = sy + 10 * (n // nwide |> toFloat)
+        x = sx + 10 * (modBy nwide n |> toFloat) + if n >= nwide then 5 else 0
+        y = sy + 11 * (n // nwide |> toFloat)
     in
-        if modBy nwide n == 0  && n > 0 then
-             jobCornerArrow (x - 10) y  ++ action x y a 
-        else
-            action x y a
+        action x y a 
 
 place : Float -> Float -> J.Place ->  String
 place x y p =
