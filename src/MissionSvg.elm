@@ -21,7 +21,7 @@ front cam =
         ] cam.name
             , text "Arial" 5 [xy 96 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ,txRight] (CP.modeStr cam.mode)
-            , JSV.jobs 95 4.5 87 (List.reverse cam.jobs)
+            , JSV.jobsRight 95 95 87 (List.reverse cam.jobs)
             , JSV.picItem 86 10 "difficulty" cam.difficulty "red"
             , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
             , textLines 5 (14 + 4.6 * (List.length crules|> toFloat )) 3.5 [font "Arial" 3,txSpaces] jrules

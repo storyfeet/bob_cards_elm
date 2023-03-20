@@ -119,8 +119,8 @@ preciousCargo = {discovery
     , setup = ["- Add a Wagon token to the central start tile" ]
     , rules = moveWagon ++ wagonDamage
     , jobs = 
-        [ wagonEastWest 2 ++ [J.Or ,J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
-        , buildNWest 2 0
+        [ buildNWest 2 0
+        , wagonEastWest 2 ++ [J.Or ,J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
         , vpDrop 2
         ]
     }

@@ -13,9 +13,23 @@ jobPic: Float -> Float -> String -> String
 jobPic x y fname = 
     img x y 10 10 ("../pics/jobs/" ++ fname  ++ ".svg")[]
 
+type alias Anchor = Float -> Float -> Float
 
-jobs : Int -> Float -> Float -> List Job -> String
-jobs maxW x y l =
+anchorLeft: Float -> Float -> Float
+anchorLeft x _ = x
+
+anchorRight: Float -> Float -> Float
+anchorRight x w = x - w 
+
+jobs: Int -> Float -> Float -> List Job -> String
+jobs = jobsAnchored anchorLeft
+
+jobsRight: Int -> Float -> Float -> List Job -> String
+jobsRight = jobsAnchored anchorRight
+
+
+jobsAnchored : Anchor -> Int -> Float -> Float -> List Job -> String
+jobsAnchored anchor maxW x y l =
     case l of 
         [] -> ""
         j::t -> 
@@ -23,11 +37,11 @@ jobs maxW x y l =
                 ht = jobHeight maxW j
                 wd = jobWidth maxW j
                 ny = (y - ht) 
+                jx = anchor x wd
             in 
                 String.join "\n"
-                [ jobRect x ny wd ht
-                , job maxW x ny j 
-                , jobs maxW x (y - 2 - jobHeight maxW j) t 
+                [ job maxW jx ny j 
+                , jobsAnchored anchor maxW x (y - 2 - jobHeight maxW j) t 
                -- , text "Arial" 10 [xy x y ,flNoStk "red"] (String.fromInt maxW)
                 ]
 
@@ -38,8 +52,14 @@ jobRect x y w h =
 
 job : Int -> Float -> Float -> Job -> String
 job maxW x y jb = 
-    List.indexedMap (jobPlaceAction maxW x y) jb
-    |> String.join "\n"
+    let 
+        w = jobWidth maxW jb
+        h = jobHeight maxW jb
+        icons = List.indexedMap (jobPlaceAction maxW x y) jb
+    in 
+        (jobRect x y w h) :: icons
+        |> String.join "\n" 
+    
     
 
 jobHeight : Int -> Job -> Float

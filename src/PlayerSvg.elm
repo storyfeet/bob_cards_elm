@@ -1,7 +1,7 @@
 module PlayerSvg exposing (front,back)
 import Player as PL
 import PageSvg exposing (..)
-import JobSvg as JSV exposing (job,jobs)
+import JobSvg as JSV exposing (job)
 import HasPicList as PicLists
 import Cards 
 
@@ -15,7 +15,7 @@ front p =
         , facePic 4 9 92 23 p.name
         , text "Arial" 4 [xy 7 50 , txCenter , rotate -90 7 50,narrowStk "black" "white" ] "Draw"
         , text "Arial" 4 [xy 93 50 , txCenter , rotate 90 93 50,narrowStk "black" "white" ] "Discard"
-        , jobs 41 9 85 p.jobs
+        , JSV.jobs 41 9 85 p.jobs
         , JSV.picItem 75 2 "difficulty" p.difficulty "red"
         , JSV.picItem 85 2 "hand_size" p.handSize "Blue"
         , text "Arial" 4 [xy 50 54, bold] "Day Phase"
