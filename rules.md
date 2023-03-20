@@ -121,7 +121,7 @@ First Separate the cards into 4 groups based on their top right corner:
 * Yellow Star = Starter Cards
 * Black Star 'P' = *Pain* Cards
 * Black Star 'E' = *Exhaustion* Cards
-* Anything Else = *Trade Row* cards
+* A Purchase Job = *Trade Row* cards
 
 <img src="{{cat $0 "/rules/card_types.svg"}}" >
 
@@ -200,7 +200,7 @@ Place the Compass Dice (With faces N,S,W,W,W,+) next it.
 Order of Play 
 -----------
 
-The Game is broken up into two phases : "Day Phase" and "Night Phase". During the Day, Players perform their actions. At Night, the board updates and the Bandits cause trouble.
+The game is broken up into two phases which repeat: "Day Phase" and "Night Phase". During the Day, Players perform their actions. At Night, the board updates and the Bandits cause trouble.
 The stages below are outlined in more detail below.
 
 * Day Phase : Players -
@@ -309,7 +309,7 @@ Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits 
 Perform a Job
 ------------------
 
-A Job is a set of **Steps**, each indicated by an Icon that must ALL be performed, they are indicated by a set of Icons in a row. For example.
+A Job is a set of **Steps** that must ALL be performed. They are indicated by a set of Icons in a box. For example.
 
 <img src="{{$0}}/rules/job_examples.svg">
 
@@ -332,10 +332,12 @@ Jobs are found in 4 places.
 
 * On Tiles
 
-    You may only use a Tile's Job once per visit. To use it, your Meeple must be on that tile and standing up. Lay the Meeple down, and then do the Tile action.
-    When you move off of that Tile, stand your Meeple up again.
+    You may only use a Tile's Job once per visit. 
 
-    **You cannot use a Tile's job while there are Bandits on it**
+    Your Meeple must be on that tile and standing up, and there may not be any bandits there. 
+
+    To do the job, Lay the Meeple down. When you move off of that Tile, stand your Meeple up again.
+
 
 If multiple jobs have the same last Icon, you may use them in the same *Action*. Even if one the jobs are different places, (ie Cards, Players,Tiles)
 
@@ -454,6 +456,10 @@ Purchase a Card
 The Cards on the *Trade Row* can be bought and added to your personal Deck. These increase your skills in the game.
 
 Simply perform the job in the top corner of the card, and add it to the top of either your draw deck or discard pile.
+
+After that move the next cards right, to fill in the space, and deal a new card from the Trade Row at the left end.
+
+(There should always be 5 cards available on the trade row)
 
 
 Attacking and Defending
