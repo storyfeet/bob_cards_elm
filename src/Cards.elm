@@ -54,7 +54,7 @@ cTypeColor : CardType -> String
 cTypeColor ct =
     case ct of
         TAny -> "white"
-        TFight -> "#c3796b" -- Salmon 
+        TFight -> "#c72a28" -- Scarlet
         TMove -> "#306393" -- Blue Jean
         TGather -> "#ff7100" -- Orange
         TDanger _ -> "#222222" -- Grungy red (formerly black)
