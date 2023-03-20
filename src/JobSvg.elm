@@ -218,8 +218,6 @@ cardLetter : Float -> Float -> J.CardType -> String
 cardLetter x y ct =
     case ct of
         J.TDanger d -> idText (x+1) y "red" (J.dangerType d)
-        J.TStarter -> 
-            polygon (starPoints x (y - 4) 5 5 ) [narrowStk "yellow" "black"]
         _ -> ""
 
 jobArrow : Float -> Float -> String 

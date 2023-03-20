@@ -17,11 +17,9 @@ tColor : CardType -> Color.Color
 tColor ct = 
     case ct of
         Job.TAny -> Color.white
-        Job.TStarter -> Color.yellow
         Job.TFight -> Color.red
         Job.TMove -> Color.darkBlue
         Job.TGather -> Color.darkPurple
-        Job.TPlayer _ -> Color.blue
         Job.TDanger _ -> Color.black
         Job.TTrade -> Color.lightPurple
         Job.TMake -> Color.orange

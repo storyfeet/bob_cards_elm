@@ -58,7 +58,6 @@ jnum j =
 
 type CardType
     = TAny
-    | TStarter
     | THealth
     | TFight
     | TMove
