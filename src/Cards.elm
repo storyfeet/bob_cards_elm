@@ -55,13 +55,13 @@ cTypeColor ct =
     case ct of
         TAny -> "white"
         TStarter -> "yellow"
-        TFight -> "red"
-        TMove -> "cyan"
-        TGather -> "fuchsia"
-        TDanger _ -> "black"
-        TTrade -> "pink"
-        TMake -> "orange"
-        THealth -> "Green"
+        TFight -> "#c3796b" -- Salmon 
+        TMove -> "#306393" -- Blue Jean
+        TGather -> "#ff7100" -- Orange
+        TDanger _ -> "#222222" -- Grungy red (formerly black)
+        TTrade -> "#dda417" -- yellow
+        TMake -> "#7f521f" -- dark tan
+        THealth -> "#008622" -- Emerald Green
 
          
 
