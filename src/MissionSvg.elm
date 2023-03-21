@@ -4,6 +4,7 @@ import JobSvg as JSV
 import Mission as CP
 import MLists
 import JobString as JString
+import ColorCodes as CC
 
 front : CP.Mission -> String
 front cam = 
@@ -15,7 +16,8 @@ front cam =
         crules = cam.rules |> ruleWrap 43
     in 
         String.join "\n"
-            [ rect 0 0 100 90 [flStk "#ffb380" "white" 1] 
+            [ rect 0 0 100 90 [flStk CC.orange "white" 1] 
+            , rect 0 0 100 90 [flNoStk "white", opacity 0.5] 
             , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
             , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ] cam.name
@@ -30,8 +32,9 @@ front cam =
 back : CP.Mission -> String
 back cam =  
     String.join "\n"
-        [ rect -3 -3 106 96 [flNoStk "#ddffdd" ] 
-        , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.5 ]
+        [ rect -3 -3 106 96 [flNoStk CC.emeraldGreen ] 
+        , rect -3 -3 106 96 [flNoStk "White" , opacity 0.5 ]
+        , rect 4 9 92 77 [flNoStk "White" , opacity 0.5 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] (cam.name ++ " - setup")
         , rect 30 10 66 54 [flNoStk "white"]

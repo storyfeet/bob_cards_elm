@@ -4,12 +4,14 @@ import PageSvg exposing (..)
 import JobSvg as JSV exposing (job)
 import HasPicList as PicLists
 import Cards 
+import ColorCodes as CC
 
 front : PL.Player -> String
 front p = 
     String.join "\n"
-        [ rect 0 0 100 90 [flStk "#ccccff" "white" 1] 
-        , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
+        [ rect 0 0 100 90 [flStk CC.darkTan "white" 1] 
+        , rect 0 0 100 100 [flNoStk "white", opacity 0.5]
+        , rect 4 9 92 77 [flNoStk "White" , opacity 0.4 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] p.name
         , facePic 4 9 92 23 p.name
@@ -25,8 +27,9 @@ front p =
 back : PL.Player -> String
 back p =  
     String.join "\n"
-        [ rect -3 -3 106 96 [flNoStk "#ddffdd" ] 
-        , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
+        [ rect -3 -3 106 96 [flNoStk CC.emeraldGreen ] 
+        , rect -3 -3 106 96 [flNoStk "white", opacity 0.5] 
+        , rect 4 9 92 77 [flNoStk "White" , opacity 0.5 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst ] ( p.name ++ " - setup")
         , text "Arial" 4 [xy 5 14,flStk "Black" "none" 0,bold] "Start Resources"
         , job 41 5 15.5 p.startItems 

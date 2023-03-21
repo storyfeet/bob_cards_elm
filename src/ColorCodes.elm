@@ -1,6 +1,5 @@
 module ColorCodes exposing (..)
 import Job as J 
-import Color exposing (Color)
 
 cTypeColor : J.CardType -> String
 cTypeColor ct =
@@ -31,7 +30,7 @@ yellow :String
 yellow = "#dda417"
 
 darkTan : String
-darkTan = "#7g521f"
+darkTan = "#70501f"
 
 emeraldGreen : String
 emeraldGreen = "#008622"
