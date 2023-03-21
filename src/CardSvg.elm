@@ -1,6 +1,7 @@
 module CardSvg exposing (..)
 import PageSvg exposing (..)
 import Cards exposing (..)
+import ColorCodes as CC
 import Job as J
 import JobSvg as JSV
 import HasPicList as PicLists
@@ -9,7 +10,7 @@ import Config
 
 front :  Card -> String
 front card =
-    String.join "\n" [ rect 0 0 50 70 [flStk (cTypeColor card.ctype) "white" 0.5, opacity 0.5]
+    String.join "\n" [ rect 0 0 50 70 [flStk (CC.cTypeColor card.ctype) "white" 0.5, opacity 0.5]
     , rect 3 8 44 59 [flNoStk "White" , opacity 0.4 ]
     , cardPic 4 7 card.name
     , costOrType card.cost card.ctype
@@ -62,7 +63,7 @@ cardType ct =
                 [ JSV.qStar 38 2 "black" "white"
                 , JSV.idText 43 10 "red" (J.dangerType d)
             ]
-        _ -> JSV.qStar 38 2 (cTypeColor ct) "black"
+        _ -> JSV.qStar 38 2 (CC.cTypeColor ct) "black"
 
 
 

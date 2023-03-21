@@ -1,7 +1,7 @@
 module JobSvg exposing (..)
 import Job as J exposing (Job)
 import PageSvg exposing (..)
-import Cards exposing (cTypeColor)
+import ColorCodes exposing (cTypeColor)
 
 picItem : Float -> Float -> String -> Int -> String -> String
 picItem x y picName num col =

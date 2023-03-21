@@ -50,18 +50,6 @@ placeShortName pl =
         Village -> "Vlg"
 
 
-cTypeColor : CardType -> String
-cTypeColor ct =
-    case ct of
-        TAny -> "white"
-        TFight -> "#c72a28" -- Scarlet
-        TMove -> "#306393" -- Blue Jean
-        TGather -> "#ff7100" -- Orange
-        TDanger _ -> "#222222" -- Grungy red (formerly black)
-        TTrade -> "#dda417" -- yellow
-        TMake -> "#7f521f" -- dark tan
-        THealth -> "#008622" -- Emerald Green
-
          
 
 placeColor: Place -> String
