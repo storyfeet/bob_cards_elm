@@ -10,13 +10,16 @@ import Config
 
 front :  Card -> String
 front card =
-    String.join "\n" [ rect 0 0 50 70 [flStk (CC.cTypeColor card.ctype) "white" 0.5, opacity 0.5]
-    , rect 3 8 44 59 [flNoStk "White" , opacity 0.4 ]
-    , cardPic 4 7 card.name
-    , costOrType card.cost card.ctype
-    , JSV.jobs 41 5 69 card.jobs
-    , text "Arial" 5 [xy 2 6,flStk "Black" "white" 0.8,bold,strokeFirst
-    ] card.name
+    String.join "\n" [ 
+        rect 0 0 50 70 [flStk (CC.cTypeColor card.ctype) "white" 0.5]
+        , rect 0 0 50 70 [flNoStk "white", opacity 0.5]
+        , rect 3 8 44 59 [flNoStk "White" , opacity 0.4 ]
+        , cardPic 4 7 card.name
+        , costOrType card.cost card.ctype
+        , JSV.jobs 41 5 69 card.jobs
+        , text "Arial" 5 [
+                xy 2 6,flStk "Black" "white" 0.8,bold,strokeFirst
+            ] card.name
     ]
 
 back : String
