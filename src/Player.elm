@@ -207,7 +207,7 @@ carlaDirk =
     (startRes [(Gold, 1),(Wood,2),(Food, 4)])
     [ [attack 2]
     , [Pay Food (X 1), Move (X 1)]
-    , [Pay Any (X 1) ,Scrap (TDanger Pain) (X 1)]
+    , [scrap (TDanger Pain) 1]
     ]
     (coreMinPlus [knife] [(knife,1),(revolver,1)])
 
@@ -227,7 +227,7 @@ washCardman =
     Player "Wash Cardman" 3 5
     standardRes
     [ muligan
-    , [Discard TMove (N 1) ,Discard TGather (N 1),Move (N 1)]
+    , [Discard TMove (N 1) ,Move (N 1)]
     ]
     (coreMinPlus [] [])
 
