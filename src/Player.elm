@@ -99,7 +99,7 @@ elisaWatton =
         standardRes
         [ [ Take (TDanger Exhaustion) (N 1), Move (N 1) ]
         , muligan 
-        , [ pay Food 1, Scrap TAny (N 2),draw 1 ]
+        , [ Scrap TAny (N 2),draw 1 ]
         ]
         (coreMinPlus [knife] [(cow,2)])
 
@@ -122,7 +122,7 @@ wayneJohns =
     (startRes [(Gold, 1),(Wood,2),(Food, 4)])
     [ [attack 2]
     , [Pay Any (N 1),Pay Food (X 1), Move (X 1)]
-    , [Pay Any (X 2) ,Scrap (TDanger Pain) (X 1)]
+    , [scrap TAny 1, Discard TAny (X 1), Gain Food (X 1)]
     ]
     (coreMinPlus [knife] [(knife,1),(revolver,1)])
 
