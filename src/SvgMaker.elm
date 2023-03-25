@@ -5,17 +5,17 @@ import PageSvg as Pg exposing (..)
 import Player as PL
 import PlayerSvg as PLSvg
 import CardSvg exposing (..)
-import Cards exposing (..)
-import Mission as CP
-import MissionSvg as CPSvg
+import Cards 
+import Mission as MS
+import MissionSvg 
 import Decks.All exposing (allCards)
 import MLists exposing(spreadL)
-import Land exposing (Tile)
+import Land 
 import TileSvg
 
 
 
-port log : Writer -> Cmd msg
+port log : Writer -> Cmd msg 
 port nextPage : (Int -> msg) -> Sub msg
 
 type alias Writer = { fname:String, content:String}
@@ -37,7 +37,7 @@ placePlayer rd= placeCarder 3 0 210 291 100 90 rd
 
 type alias Placer = (Int -> String -> String)
 
-starterList : List Card
+starterList : List Cards.Card
 starterList = (allCards 5)
     |> spreadL 
 
@@ -54,24 +54,9 @@ listPage fnt placer l =
     |> String.join "\n"
     |> a4Page
 
-backList : Placer -> Int -> String
-backList placer n = 
-    populate CardSvg.back n
-    |> List.indexedMap placer
-    |> String.join "\n"
-    |> a4Page
-
-type PrintMode
-    = Cards
-    | Tiles
-    | TileBack
-    | Wide
-    | WideBack
-    | Done
 
 type alias Model = 
-    { pmode:PrintMode
-    , pos:Int
+    { p : Maybe Printer
     }
 
 type Msg
@@ -79,54 +64,71 @@ type Msg
 
 init : () -> (Model,Cmd Msg)
 init _ = 
-    ({pos=0,pmode = Cards } , Cmd.none)
+    ({p = multiPrinter printables |> Just}, Cmd.none)
 
 update: Msg -> Model -> (Model,Cmd Msg)
 update ms mod = 
     case ms of 
         Next -> updateNext mod
 
-updateNext : Model -> (Model,Cmd Msg)
-updateNext mod = 
-    case mod.pmode of 
-        Cards -> case nextFront mod.pos starterList of
-            Just w -> ({mod | pos = mod.pos +1}, w |> log)
-            Nothing -> updateNext {mod | pos = 0 , pmode = Tiles}
-        Tiles -> case nextTile mod.pos (Land.fullDeck ) of
-            -- Do Backs and set to Done
-            Just w -> ({mod | pos = mod.pos +1 }, w|> log)
-            Nothing -> updateNext {mod | pos = 0, pmode = TileBack}
-        TileBack -> case nextTileBack mod.pos (Land.fullDeck) of
-            Just w -> ({mod | pos = mod.pos + 1} , w|> log)
-            Nothing -> updateNext {mod | pos = 0, pmode = Wide}
-        Wide -> case nextWide mod.pos wideCards of
-            Just w -> ({mod | pos = mod.pos +1}, w|> log)
-            Nothing -> updateNext {mod | pos = 0, pmode = WideBack}
-        WideBack -> case nextWideBack mod.pos wideCards of
-            Just w -> ({mod | pos = mod.pos +1}, w|> log)
-            Nothing -> ({mod | pmode = Done},Writer "backs.svg" (backList placeCard 16)|> log )
-        Done -> (mod,Cmd.none)
+
+type alias Printer = () -> Printable
+
+type Printable = 
+    Continue (Writer,Printer)
+    | Stop
+
+updateNext: Model -> (Model, Cmd Msg)
+updateNext m =
+    case m.p of
+        Nothing -> (m,Cmd.none)
+        Just pr ->
+            case pr () of 
+                Continue (w,p) -> ({m | p = Just p},w |> log)
+                Stop -> ({m | p = Nothing} ,Cmd.none)
+
+   
+
+
+
+pager : String -> Int -> List a -> Int -> (a -> String) -> Placer -> Printer
+pager name pagenum list ncards fronter placer =
+    \() -> case list of
+        [] -> Stop
+        _ -> let
+                seg = List.take ncards list
+                pg = listPage fronter placer seg
+                rest = List.drop ncards list
+                nm = (String.join "" [name ,String.fromInt pagenum |> String.padLeft 2 '0',".svg"])
+            in
+                Continue (Writer nm pg, pager name (pagenum + 1) rest ncards fronter placer )
             
-     
 
 
-tryNextPage : Int -> (a -> String) -> Placer -> String -> Int -> List a -> Maybe Writer
-tryNextPage mul fronter placer name pos ls =
-    case ls |> List.drop (pos * mul) |> List.take mul of 
-        [] -> Nothing
-        l -> l |> listPage fronter placer 
-            |> Writer (String.join "" [name ,String.fromInt pos |> String.padLeft 2 '0',".svg"])
-            |> Just
+multiPrinter : List Printer -> Printer 
+multiPrinter lp =
+    \() ->  case lp of
+        [] -> Stop
+        h::t -> case h () of 
+            Continue (w,p) -> Continue (w, multiPrinter (p::t))
+            Stop -> multiPrinter t ()
+
+
+printables : List Printer
+printables = 
+    [ pager "cards" 0 starterList 16 CardSvg.front placeCard 
+    , pager "card_backs" 0 ( populate () 16 ) 16 (\() ->CardSvg.back ) placeCard
+    , pager "tiles" 0 Land.fullDeck 24 TileSvg.front placeTile
+    , pager "tile_backs" 0 Land.fullDeck 24 TileSvg.back placeTile
+    , pager "players" 0 PL.players 6 PLSvg.front (placePlayer Pg.LtoR)
+    , pager "player_backs" 0 PL.players 6 PLSvg.back (placePlayer Pg.RtoL)
+    , pager "missions" 0 MS.campaigns  6 MissionSvg.front (placePlayer Pg.LtoR)
+    , pager "mission_backs" 0 MS.campaigns 6 MissionSvg.back (placePlayer Pg.RtoL)
+    ]
+
+
             
 
-nextFront : Int->List Card -> Maybe Writer
-nextFront = tryNextPage 16 front placeCard "front" 
-
-nextTile : Int -> List Tile -> Maybe Writer
-nextTile = tryNextPage 24 TileSvg.front placeTile "tiles"
-
-nextTileBack : Int -> List Tile -> Maybe Writer
-nextTileBack = tryNextPage 24 TileSvg.back placeTile "tile_backs"
 
 {--
 nextPlayer : Int -> List PL.Player -> Maybe Writer
@@ -136,36 +138,12 @@ nextPlayerBack : Int -> List PL.Player -> Maybe Writer
 nextPlayerBack = tryNextPage 6 PLSvg.back placePlayerBack "playerback"
 --}
 
-nextWide : Int -> List WideCard -> Maybe Writer
-nextWide = tryNextPage 6 wideFront (placePlayer Pg.LtoR) "widefront"
 
-nextWideBack : Int -> List WideCard -> Maybe Writer
-nextWideBack = tryNextPage 6 wideBack (placePlayer Pg.RtoL) "wideback"
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
     nextPage (\_ -> Next)
 
-type WideCard 
-    = WMission CP.Mission
-    | WPlayer PL.Player
-
-wideCards : List WideCard
-wideCards = (PL.players |> List.map WPlayer)
-        ++ (CP.campaigns |> List.map  WMission)
-
-
-wideFront : WideCard -> String
-wideFront c =
-    case c of
-        WMission cp -> CPSvg.front cp
-        WPlayer p -> PLSvg.front p
-
-wideBack : WideCard -> String
-wideBack c = 
-    case c of
-        WMission cp -> CPSvg.back cp
-        WPlayer p -> PLSvg.back p
 
 
 
