@@ -1,7 +1,7 @@
 port module SvgMaker exposing (log,nextPage, main)
 
 import Platform exposing (worker)
-import PageSvg exposing (..)
+import PageSvg as Pg exposing (..)
 import Player as PL
 import PlayerSvg as PLSvg
 import CardSvg exposing (..)
@@ -23,16 +23,18 @@ type alias Writer = { fname:String, content:String}
 
 
 placeCard : Int -> String -> String
-placeCard = placeCarder 3 0 210 297 50 70 False
+placeCard = placeCarder 3 0 210 297 50 70 Pg.LtoR
 
 placeTile : Int -> String -> String
-placeTile = placeCarder 3 0 210 297 45 45 False
+placeTile = placeCarder 3 0 210 297 45 45 Pg.LtoR
 
 placePlayer: Int -> String -> String
-placePlayer = placeCarder 3 0 210 291 100 90 False
+placePlayer = placeCarder 3 0 210 291 100 90 Pg.LtoR
 
 placePlayerBack: Int -> String -> String
-placePlayerBack = placeCarder 3 0 210 291 100 90 True
+placePlayerBack = placeCarder 3 0 210 291 100 90 Pg.RtoL
+
+
 
 type alias Placer = (Int -> String -> String)
 

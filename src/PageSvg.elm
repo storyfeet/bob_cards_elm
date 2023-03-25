@@ -158,6 +158,9 @@ rotate n x y =
     prop "transform" ("rotate(" ++ String.fromFloat n ++ "," ++ String.fromFloat x ++","++ String.fromFloat y ++")")
 
 ---- Layout ---- 
+type RowDirection =
+    RtoL
+    | LtoR
 
 nCardsFit : Float -> Float -> Float -> Float -> Int
 nCardsFit margin padding page card =
@@ -167,35 +170,27 @@ nFitPage : Float -> Float -> Float -> Float -> Float -> Float -> Int
 nFitPage margin padding pw ph cw ch =
     (nCardsFit margin padding pw cw) *(nCardsFit margin padding ph ch)
 
-placeOneDir  : Int -> Float -> Float -> Float -> Int -> Float
-placeOneDir numCards padding page card n =
+placeOneDir  : Int -> Float -> Float -> Float -> RowDirection -> Int -> Float
+placeOneDir numCards padding page card dir n =
     let 
         nf = toFloat numCards
         start = (page - nf * card - (nf - 1) * padding) / 2
         step = card + padding
     in
-        start + toFloat n * step
+        case dir of 
+            LtoR -> start + toFloat n * step
+            RtoL -> start + toFloat (numCards - n - 1) * step
 
-placeOneDirRev  : Int -> Float -> Float -> Float -> Int -> Float
-placeOneDirRev numCards padding page card n =
-    let 
-        nf = toFloat numCards
-        start = (page - nf * card - (nf - 1) * padding) / 2
-        step = card + padding
-    in
-        start + toFloat (numCards - n - 1) * step
 
-placeCarder : Float -> Float -> Float -> Float -> Float ->Float -> Bool -> Int -> String -> String
-placeCarder margin padding pw ph cw ch reverse=
+    
+
+placeCarder : Float -> Float -> Float -> Float -> Float ->Float -> RowDirection -> Int -> String -> String
+placeCarder margin padding pw ph cw ch dir=
     let 
         nwide = nCardsFit margin padding pw cw
         nhigh = nCardsFit margin padding ph ch
-        fx = if reverse then
-            placeOneDirRev nwide padding pw cw
-            else
-            placeOneDir nwide padding pw cw
-
-        fy = placeOneDir nhigh padding ph ch
+        fx = placeOneDir nwide padding pw cw dir
+        fy = placeOneDir nhigh padding ph ch LtoR
     in 
         placeCardF nwide fx fy
 
