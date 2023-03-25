@@ -233,5 +233,20 @@ Thursday
 .players [Nigel,Me]
 .learned : ["Production at edges really makes game harder", "need more bandit counters"]
 
+"Thursday Group"
+.version : "0.2.0"
+.mode : "VS - Discovery"
+.dice : 20
+.difficulty: 1
+.board : B
+.players : [Me, Julien, Alan, Johnny]
+.learned : ["People getting locked out of play is bad, give some people a guaranteed but inefficient fix", "make railways more like stations"]
 
-
+"Kids"
+.version :"0.2.0"
+.mode : "Are we the baddies"
+.dice : "20"
+.difficulty : 1
+.board : D
+.players : [Me, Toby, Jacob]
+.learned : ["Coop would still be fine with powered up railways"]
