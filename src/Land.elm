@@ -108,7 +108,7 @@ campJobs =
     [ [Discard (TAny) (X 1),Gain Any (X 3)] 
     , [Scrap (TDanger DAny) (X 1), Gain Gold (X 3)]
     , [Scrap (TDanger DAny) (X 1), Draw (X 2)]
-    , [draw 1, gain Gold 6]
+    , [scrap TAny 1, gain Gold 6]
     ]
 
 toTiles : (a -> LType) -> GGen -> List a ->  (GGen,List Tile )
