@@ -230,7 +230,7 @@ Thursday
 .dice : 20
 .difficulty : 1
 .board : D
-.players [Nigel,Me]
+.players : [Nigel,Me]
 .learned : ["Production at edges really makes game harder", "need more bandit counters"]
 
 "Thursday Group"
