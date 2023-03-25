@@ -28,11 +28,10 @@ placeCard = placeCarder 3 0 210 297 50 70 Pg.LtoR
 placeTile : Int -> String -> String
 placeTile = placeCarder 3 0 210 297 45 45 Pg.LtoR
 
-placePlayer: Int -> String -> String
-placePlayer = placeCarder 3 0 210 291 100 90 Pg.LtoR
+placePlayer: Pg.RowDirection -> Int -> String -> String
+placePlayer rd= placeCarder 3 0 210 291 100 90 rd
 
-placePlayerBack: Int -> String -> String
-placePlayerBack = placeCarder 3 0 210 291 100 90 Pg.RtoL
+
 
 
 
@@ -138,10 +137,11 @@ nextPlayerBack = tryNextPage 6 PLSvg.back placePlayerBack "playerback"
 --}
 
 nextWide : Int -> List WideCard -> Maybe Writer
-nextWide = tryNextPage 6 wideFront placePlayer "widefront"
+nextWide = tryNextPage 6 wideFront (placePlayer Pg.LtoR) "widefront"
 
 nextWideBack : Int -> List WideCard -> Maybe Writer
-nextWideBack = tryNextPage 6 wideBack placePlayerBack "wideback"
+nextWideBack = tryNextPage 6 wideBack (placePlayer Pg.RtoL) "wideback"
+
 subscriptions : Model -> Sub Msg
 subscriptions _ =
     nextPage (\_ -> Next)
