@@ -1,12 +1,12 @@
 module MissionSvg exposing (..)
 import PageSvg exposing (..)
 import JobSvg as JSV
-import Mission as CP
+import Mission as MS
 import MLists
 import JobString as JString
 import ColorCodes as CC
 
-front : CP.Mission -> String
+front : MS.Mission -> String
 front cam = 
     let 
         jrules = cam.jobs 
@@ -16,20 +16,20 @@ front cam =
         crules = cam.rules |> ruleWrap 43
     in 
         String.join "\n"
-            [ rect 0 0 100 90 [flStk CC.orange "white" 1] 
-            , rect 0 0 100 90 [flNoStk "white", opacity 0.5] 
-            , rect 4 9 92 77 [flNoStk "White" , fprop "opacity" 0.4 ]
+            [ rect 0 0 200 72 [flStk CC.orange "white" 1] 
+            , rect 0 0 200 72 [flNoStk "white", opacity 0.5] 
+            , rect 4 9 192 59 [flNoStk "White" , fprop "opacity" 0.4 ]
             , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ] cam.name
             , text "Arial" 5 [xy 96 7,flStk "Black" "white" 0.8,bold,strokeFirst
-        ,txRight] (CP.modeStr cam.mode)
-            , JSV.jobsRight 95 95 87 (List.reverse cam.jobs)
+        ,txRight] (MS.modeStr cam.mode)
+            , JSV.jobsRight 95 195 68 (List.reverse cam.jobs)
             , JSV.picItem 86 10 "difficulty" cam.difficulty "red"
             , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
             , textLines 5 (14 + 4.6 * (List.length crules|> toFloat )) 3.5 [font "Arial" 3,txSpaces] jrules
             ]
 
-back : CP.Mission -> String
+back : MS.Mission -> String
 back cam =  
     String.join "\n"
         [ rect -3 -3 106 96 [flNoStk CC.emeraldGreen ] 
