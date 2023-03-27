@@ -10,6 +10,7 @@ type alias Mission =
     , setup : List String
     , rules : List String
     , jobs : List Job
+    , night : List String
     }
 
 type Mode =
@@ -51,6 +52,7 @@ discovery = { name = "Discovery"
     , setupPic = "basic_vs"
     , rules = []
     , jobs = basicVsScoring
+    , night = banditPhase 3
     }
 
 theRace:Mission
@@ -90,7 +92,7 @@ theFeast = { preciousCargo
     | name = "The Feast"
     , difficulty = 2 
     , setupPic = "coop_basic"
-    , rules = fedVillage ++ lessWest
+    , rules = fedVillage 
     , setup = []
     , jobs =
         [ [J.In J.Village, J.pay Food 5 , J.gain VP 5]
@@ -108,6 +110,7 @@ buildingTogether = {
     , rules = []
     , setup = []
     , jobs = [buildNWest 2 4, lootDrop Any (D 3)]
+    , night = banditPhase 3
     }
 
 preciousCargo : Mission
@@ -211,11 +214,16 @@ wagonEastWest n = [on J.OnWagonWest, gain VP n, J.Or, on J.OnWagonEast, J.pay VP
 
 basicVsScoring : List Job
 basicVsScoring =
-    [ [on J.OnReveal, gain VP 1, J.Or, on J.OnRevealWest, gain VP 2]
-    , [on J.OnBuild, gain VP 2 , J.Or,on J.OnBuildWest, gain VP 3]
-    , [on J.OnDefeatBandits , gain VP 2]
+    [ revealNWest 1 2
+    , buildNWest 2 3
+    , lootDrop VP (N 2)
     ]
 
+revealNWest : Int -> Int -> Job
+revealNWest r w = 
+    case w of
+        0 -> [on J.OnReveal,gain VP r]
+        _ -> [on J.OnReveal, gain VP r, J.Or ,on J.OnRevealWest, gain VP w]
 
 
 buildNWest : Int -> Int -> Job
@@ -236,9 +244,6 @@ lootDrop r n =
 
 ----- RULES ---- 
 
-lessWest : List String
-lessWest = ["If the Bandits cannot move in the direction rolled, add a bandit instead."]
-
 fedVillage : List String
 fedVillage =["When you feed a village, place a food token there to mark it as fed", "You cannot feed a fed village"]
 
@@ -251,5 +256,25 @@ wagonDamage = ["The wagon takes 1 damage leaving bandits and may be attacked by 
 freeWeapon : List String 
 freeWeapon = ["Players may all take 1 weapon (Red Card) from the trade row draw pile"]
 
+---------Bandit Phase
+
+banditPhase : Int -> List String
+banditPhase d = 
+    let
+        head = [ "Move Trade row"
+            , "Move Bandit Tracker"
+            , "Take an 'E' Danger"
+            , "Bandits attack"
+            , "Bandits move"
+            ]
+        rm = if d == 0 then 
+                [] 
+            else 
+                [ "Remove tiles"
+                , " (>" ++ String.fromInt d ++ " east of all players)"
+                ]
+        tail = ["Bandits Appear"]
+    in
+        head ++ rm ++ tail
 
 

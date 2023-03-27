@@ -38,7 +38,6 @@ back p =
         |> List.map (\(c, n) -> String.fromInt n ++ " * " ++ c.name)
         |> textLines 5 36 6 [font "Arial" 4]
         , text "Arial" 4 [xy 55 14, bold] "Night Phase"
-        , banditPhase|> textLines 55 20 6 [font "Arial" 4]
         ]
 
 
@@ -49,18 +48,6 @@ playerPhase hSize =
     , "Play Cards / Trade"
     , "May discard Item Cards"
     , "Pass P1 Token"
-    ]
-
-banditPhase : List String
-banditPhase = 
-    [ "Move Bandit Tracker"
-    , "Move Trade row"
-    , "Take an 'E' Danger"
-    , "Bandits attack"
-    , "Bandits move"
-    , "Remove tiles"
-    , " (>5 east of all players)"
-    , "Bandits Appear"
     ]
 
 
