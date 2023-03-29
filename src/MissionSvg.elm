@@ -11,9 +11,9 @@ front cam =
     let 
         jrules = cam.jobs 
             |> List.map (JString.jobToString)
-            |> ruleWrap 60
+            |> ruleWrap 45 
         --rules = MLists.mergeIfSmaller 7 cam.rules jrules
-        crules = cam.rules |> ruleWrap 43
+        crules = cam.rules |> ruleWrap 37
     in 
         String.join "\n"
             [ rect 0 0 200 72 [flStk CC.orange "white" 1] 
@@ -21,12 +21,13 @@ front cam =
             , rect 4 9 192 59 [flNoStk "White" , fprop "opacity" 0.4 ]
             , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ] cam.name
-            , text "Arial" 5 [xy 96 7,flStk "Black" "white" 0.8,bold,strokeFirst
+            , text "Arial" 5 [xy 196 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ,txRight] (MS.modeStr cam.mode)
-            , JSV.jobsRight 95 195 68 (List.reverse cam.jobs)
-            , JSV.picItem 86 10 "difficulty" cam.difficulty "red"
+            , JSV.jobsRight 95 145 68 (List.reverse cam.jobs)
+            , JSV.picItem 186 10 "difficulty" cam.difficulty "red"
             , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
             , textLines 5 (14 + 4.6 * (List.length crules|> toFloat )) 3.5 [font "Arial" 3,txSpaces] jrules
+            , textLines 150 25 4.6 [font "Arial" 4 ,txSpaces] cam.night
             ]
 
 back : MS.Mission -> String

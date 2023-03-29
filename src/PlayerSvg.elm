@@ -37,7 +37,6 @@ back p =
         , p.startCards 
         |> List.map (\(c, n) -> String.fromInt n ++ " * " ++ c.name)
         |> textLines 5 36 6 [font "Arial" 4]
-        , text "Arial" 4 [xy 55 14, bold] "Night Phase"
         ]
 
 
