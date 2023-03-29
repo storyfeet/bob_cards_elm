@@ -36,7 +36,7 @@ front : Tile -> String
 front t =
     String.join "\n" 
     [ img 0 0 45 45  (pLink t.ltype) []
-    , rect 0 0 45 45 [flNoStk "white", opacity 0.5]
+--    , rect 0 0 45 45 [flNoStk "white", opacity 0.5]
     , tileJob t
     ]
 
