@@ -55,14 +55,14 @@ sailorDeck =
 
 toStarter: Card -> Card
 toStarter c = 
-    {c | cost = [starter]}
+    {c | cost = []}
 
 pan : Card
-pan = Card "Pan" TGather [starter] [riverGather Gold 1]
+pan = Card "Pan" TGather [] [riverGather Gold 1]
 
 
 knife : Card
-knife = Card "Knife" TGather [starter] 
+knife = Card "Knife" TGather [] 
     [ [discard, gather Food 1]
     , [In Forest , gather Food 2]
     , [defend 1, attack 2]
@@ -71,27 +71,27 @@ knife = Card "Knife" TGather [starter]
 
 saw:Card
 saw = Card "Saw" TGather 
-    [starter] 
+    [] 
     [ [In Forest , discard , Gain Wood (D 2)] 
     ]
 
 
 boots : Card
-boots = Card "Boots" TMove [starter] 
+boots = Card "Boots" TMove [] 
     [foodMove 1 1]
 
 rookieTrader : Card
-rookieTrader = Card "Rookie Trader" TTrade [starter]
+rookieTrader = Card "Rookie Trader" TTrade []
     [ [In Village ,Pay Gold (X 1), Gain Any (X 1)]
     , [In Village ,Pay Any (X 2), Gain Any (X 1)]
     , [discard,Pay Any (X 2), Gain Any (X 1)]
     ]
 
 pickaxe : Card
-pickaxe = Card "Pickaxe" TGather [starter]
+pickaxe = Card "Pickaxe" TGather []
     [[In Mountain,discard , gather Metal 2]]
 
 mallet : Card
-mallet = Card "Mallet" TMake [starter]
+mallet = Card "Mallet" TMake []
     [[pay Gold 1,pay Metal 1, pay Wood 1,discard ,BuildRail]]
 

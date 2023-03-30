@@ -7,7 +7,7 @@ import Job exposing (..)
 type alias Card =
     { name : String
     , ctype : CardType
-    , cost : Job
+    , cost : List Job
     , jobs : List Job
     }
 

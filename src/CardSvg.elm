@@ -34,21 +34,28 @@ back  =
 
 
             
-costOrType : J.Job -> J.CardType -> String
+costOrType : List J.Job -> J.CardType -> String
 costOrType j ct =
-    case j of
-        [] -> cardType ct
-        [J.Starter] -> cost 2 38 2 j
-        _ -> (costRect j ++ 
-            (cost 2 38 2 j))
+    case (j,ct) of
+        (_,J.TDanger _) -> cardType ct
+        ([],_) -> cost 2 38 2 [J.Starter] 
+        _ -> (costList j 38 2) 
 
-costRect : J.Job -> String
-costRect js =
-    let 
-        h = (List.length js) *  10 + 2 |> toFloat 
-    in 
-        rect 37 1 12 h [flStk "white" "black" 0.5,opacity 0.3,rxy 2 2]
 
+
+costList : List J.Job -> Float -> Float -> String
+costList l x y = 
+    case l of 
+        [] -> ""
+        h::t -> 
+            let
+                len = 10 * List.length h |> toFloat
+            in
+                String.join "\n" [
+                    JSV.jobRect x y 11 (len + 1)
+                    , cost y x y h
+                    , costList t x (y + len + 3)
+                ]
 
 
 cost : Float -> Float -> Float -> J.Job -> String
