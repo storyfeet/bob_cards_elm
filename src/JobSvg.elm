@@ -105,6 +105,7 @@ action x y c =
         J.Gain r n -> resource x y r "Green" "+" n 
         J.BuildRail -> jobPic x y "build_rail"
         J.BuildBridge -> jobPic x y "build_bridge"
+        J.RideTrain n -> jobN x y "ride_train" n
         J.On e -> event e x y
 
 

@@ -107,6 +107,7 @@ type Action
     | Reveal JobNum --Num
     | On Event
     | Starter 
+    | RideTrain JobNum
 
 
 

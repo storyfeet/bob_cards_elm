@@ -51,7 +51,7 @@ discovery = { name = "Discovery"
     , setup = ["Follow the standard game setup"]
     , setupPic = "basic_vs"
     , rules = []
-    , jobs = basicVsScoring
+    , jobs =  utilJobs ++basicVsScoring
     , night = banditPhase 3
     }
 
@@ -208,6 +208,19 @@ stopThatWagon = { preciousCargo
 
 
 ------ SCORING -------
+
+
+utilJobs : List Job
+utilJobs = [cardsForFood 3 1,goldForTrain 1 5 ] 
+
+cardsForFood : Int -> Int -> Job 
+cardsForFood n f =
+    [J.Discard J.TAny (N n),gain J.Food f]
+
+goldForTrain : Int -> Int -> Job
+goldForTrain n d =
+    [pay Gold n, J.RideTrain (N d) ]
+
 
 wagonEastWest : Int -> Job
 wagonEastWest n = [on J.OnWagonWest, gain VP n, J.Or, on J.OnWagonEast, J.pay VP n]
