@@ -52,6 +52,8 @@ actionStr a =
         Pay VP n -> "lose " ++ (jNumToString n) ++ " VP"
         Pay r n -> "pay " ++ (jNumToString n) ++  " " ++ resourceToString r
         Or -> ", or"
+        Discard c n -> "discard " ++ (jNumToString n) ++ " " ++ (cTypeToString c) ++ " cards"
+        RideTrain n -> "Ride the train up to " ++ (jNumToString n) ++ " tiles"
         _ -> "-- UNDEFINED --"
 
 
@@ -83,6 +85,14 @@ placeToString p =
         Prairie -> "On a Prairie"
         Forest -> "In a Forest"
         Village  -> "In a Village"
+
+
+cTypeToString : CardType -> String
+cTypeToString ct = 
+    case ct of
+        TAny -> "item"
+        TDanger DAny -> "danger"
+        _ -> "UNDEFINED CARDS"
 
 
 
