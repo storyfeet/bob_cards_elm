@@ -45,6 +45,38 @@ jobsAnchored anchor maxW x y l =
                -- , text "Arial" 10 [xy x y ,flNoStk "red"] (String.fromInt maxW)
                 ]
 
+jobsSquish : Float -> Float -> Float -> Float -> List Job ->  String
+jobsSquish x y w h l = 
+    if List.length l <= (floor (h / 12)) then
+        case l of 
+            [] -> ""
+            hd::tl -> job (floor w) x y hd ++ jobsSquish x (y + 12) w (h - 12) tl
+    else 
+        let 
+            (row,rest) = squishRow x y w l
+        in 
+            row ++ jobsSquish x (y + 12) w (h - 12) rest
+
+squishRow : Float -> Float -> Float -> List Job -> (String , List Job)
+squishRow x y w l =
+    case l of 
+        [] -> ("" , [])
+        hd::tl -> 
+            if (List.length hd * 10 + 2) > (floor w) then
+                ("", l)
+            else 
+                let 
+                    jw = (jobWidth (floor w) hd ) + 2
+                    (row ,rest) = squishRow (x + jw ) y (w - jw ) tl
+                in 
+                    (((job (floor w) x y hd) ++ row ),rest)
+            
+
+
+
+
+
+
 jobRect: Float -> Float -> Float -> Float -> String
 jobRect x y w h =
     rect (x - 1) (y - 1) (w + 1) (h + 1) [flStk "white" "black" 0.5,opacity 0.3,rxy 2 2]

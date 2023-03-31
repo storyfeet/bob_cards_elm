@@ -23,10 +23,11 @@ front cam =
         ] cam.name
             , text "Arial" 5 [xy 196 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ,txRight] (MS.modeStr cam.mode)
-            , JSV.jobsRight 95 145 68 (List.reverse cam.jobs)
+            , JSV.jobsSquish 85 10 100 62 cam.jobs
             , JSV.picItem 186 10 "difficulty" cam.difficulty "red"
             , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
             , textLines 5 (14 + 4.6 * (List.length crules|> toFloat )) 3.5 [font "Arial" 3,txSpaces] jrules
+            , text "Arial" 5 [xy 150 20,bold] "Night Phase"
             , textLines 150 25 4.6 [font "Arial" 4 ,txSpaces] cam.night
             ]
 

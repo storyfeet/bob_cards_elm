@@ -60,7 +60,7 @@ theRace = {discovery
     | name = "The Race"
     , difficulty = 2
     , jobs = 
-        [ [on J.OnRevealWest , gain VP 3 , J.Or, on J.OnMoveWest , on J.OnReveal, gain VP 2 ]
+        utilJobs ++ [ [on J.OnRevealWest , gain VP 3 , J.Or, on J.OnMoveWest , on J.OnReveal, gain VP 2 ]
         , [on J.OnDefeatBandits, gain Gold 1,gain Wood 1,gain Metal 1,gain Food 1]
         ]
 
@@ -72,7 +72,7 @@ villageHero = {discovery
     , difficulty = 2
     , rules = fedVillage
     , jobs = 
-        [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
+        utilJobs ++ [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
         , [on J.OnBuild, gain VP 1,J.Or,J.In J.Village, on J.OnBuild , gain VP 2 ]
         , [on J.OnDefeatBandits, gain VP 2, J.Or, J.In J.Village, on J.OnDefeatBandits, gain VP 4 ]
         ]
@@ -83,7 +83,7 @@ builders = {discovery
     | name = "Builders"
     , difficulty = 2
     , rules = []
-    , jobs = [buildNWest 2 4,lootDrop Any (D 3)] 
+    , jobs = utilJobs ++ [buildNWest 2 4,lootDrop Any (D 3)] 
     }
 
 
@@ -95,7 +95,7 @@ theFeast = { preciousCargo
     , rules = fedVillage 
     , setup = []
     , jobs =
-        [ [J.In J.Village, J.pay Food 5 , J.gain VP 5]
+        utilJobs ++ [ [J.In J.Village, J.pay Food 5 , J.gain VP 5]
         , [on J.OnDefeatBandits, J.gain Food 2]
         ]
     }
@@ -109,7 +109,7 @@ buildingTogether = {
     , setupPic = "coop_basic"
     , rules = []
     , setup = []
-    , jobs = [buildNWest 2 4, lootDrop Any (D 3)]
+    , jobs = utilJobs ++ [buildNWest 2 4, lootDrop Any (D 3)]
     , night = banditPhase 3
     }
 
@@ -122,8 +122,9 @@ preciousCargo = {discovery
     , setup = ["- Add a Wagon token to the central start tile" ]
     , rules = moveWagon ++ wagonDamage
     , jobs = 
-        [ buildNWest 2 0
-        , wagonEastWest 2 ++ [J.Or ,J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
+        utilJobs ++ [ buildNWest 2 0
+        , wagonEastWest 2 
+        , [J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
         , vpDrop 2
         ]
     }
@@ -135,7 +136,7 @@ dreamWork = {preciousCargo
     , difficulty = 2
     , rules = ["The bar moves west when all players are at least 1 tile west of it"]
     , setup = ["Add the Travel Bar East of the map tiles facing west"]
-    ,jobs = [
+    ,jobs = utilJobs ++ [
         [on J.OnBuild, gain VP 1 , J.Or,on J.OnBuildWest, gain VP 2]
         , [on J.OnBarWest, gain VP 2]
         , [on J.OnDefeatBandits , gain VP 2]
@@ -148,7 +149,7 @@ speedOfTheSlowest = {preciousCargo
     , difficulty = 1
     , rules = ["The bar moves west when all players are at least 1 tile west of it"]
     , setup = ["Add the Travel Bar East of the map tiles facing west"]
-    ,jobs = [
+    ,jobs = utilJobs ++ [
         [on J.OnBarWest, gain VP 3]
         , lootDrop Gold (D 2)
         ]
@@ -160,7 +161,7 @@ escortMission = { speedOfTheSlowest
     , difficulty = 3
     , setup = [ "Add the Travel Bar East of the map tiles facing West"
             , "1 player plays a Character with Difficulty 3"]
-    ,jobs = [
+    ,jobs = utilJobs ++ [
         [on J.OnBuild, gain VP 1 ]
         , [on J.OnBarWest, gain VP 3]
         , [on J.OnDefeatBandits , gain VP 1]
@@ -173,7 +174,7 @@ thereAndBackAgain = {preciousCargo
     , difficulty = 2
     , setupPic = "coop_basic"
     , setup = ["Use a single neutral score token"]
-    , jobs = [
+    , jobs = utilJobs ++ [
         [on J.OnRevealWest, gain VP 3]
         , [ on J.OnDefeatBandits, J.Gain Any (D 3)]
         ]
@@ -186,7 +187,7 @@ areWeTheBaddies = { preciousCargo
     , setupPic = "coop_basic"
     , setup = freeWeapon
     , rules = ["Only players who contributed to the bandit defeat get to roll for gold" ]
-    , jobs = [
+    , jobs = utilJobs ++ [
         [on J.OnDefeatBandits , gain VP 3, J.Gain Gold (D 3)]
         ]
     }
@@ -199,7 +200,7 @@ stopThatWagon = { preciousCargo
     , setup = freeWeapon ++ [ "Place the wagon 2 tiles West of all players"]
     , rules = ["Players may attack the wagon", "At the end of the Night phase" , " - Move the Wagon 1 space West revealing tiles as needed"," - Add a bandit to the Wagon's Tile"]
     , jobs = 
-        [ [J.On (J.OnWagonDamage (X 1)), J.Gain VP (X 2) ]
+        utilJobs ++ [ [J.On (J.OnWagonDamage (X 1)), J.Gain VP (X 2) ]
         , [J.On J.OnDefeatBandits,gain VP 1]
         ]
     }
