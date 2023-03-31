@@ -24,7 +24,7 @@ SVGFILES := $(wildcard cards_out/*.svg)
 all_pages: cards $(SVGFILES:cards_out/%.svg=cards_out/%.pdf) 
 
 %.pdf : %.svg
-	inkscape --file=$*.svg -o $*.pdf
+	inkscape $*.svg -o $*.pdf
 
 cards_file : cards cards_out/all_pages.pdf
 
