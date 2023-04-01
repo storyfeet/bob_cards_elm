@@ -63,8 +63,7 @@ squishRow first x y w l =
         [] -> ("" , [])
         hd::tl -> 
             let 
-                w2 = Debug.log "W" w
-                jw = Debug.log "JW" ((jobLen hd) + 2)
+                jw = ((jobLen hd) + 2)
             in 
                 if jw > w && first == False then
                     ("", l)
