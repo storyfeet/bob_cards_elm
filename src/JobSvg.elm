@@ -62,11 +62,13 @@ squishRow x y w l =
     case l of 
         [] -> ("" , [])
         hd::tl -> 
-            if (List.length hd * 10 + 2) > (floor w) then
+            let 
+                jw = jobWidth (floor w) hd 
+            in 
+                if jw > w then
                 ("", l)
             else 
                 let 
-                    jw = (jobWidth (floor w) hd ) + 2
                     (row ,rest) = squishRow (x + jw ) y (w - jw ) tl
                 in 
                     (((job (floor w) x y hd) ++ row ),rest)

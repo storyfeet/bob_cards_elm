@@ -74,6 +74,7 @@ villageHero = {discovery
     , jobs = 
         utilJobs ++ [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
         , [on J.OnBuild, gain VP 1,J.Or,J.In J.Village, on J.OnBuild , gain VP 2 ]
+        , [on J.OnBuild, gain VP 1,J.In J.Village, gain VP 1 ]
         , [on J.OnDefeatBandits, gain VP 2, J.Or, J.In J.Village, on J.OnDefeatBandits, gain VP 4 ]
         ]
     }
