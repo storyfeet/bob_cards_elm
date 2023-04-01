@@ -7,7 +7,7 @@
    viewBox="0 0 20 20"
    version="1.1"
    id="svg135"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="mountain.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="8.9236751"
-     inkscape:cx="33.674467"
-     inkscape:cy="32.441791"
+     inkscape:cx="33.730497"
+     inkscape:cy="32.553852"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -40,25 +40,33 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#c1cdc1;fill-opacity:1;stroke:#000000;stroke-width:0.500001;stroke-linecap:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
+       style="fill:#79a5a1;fill-opacity:1;stroke:#000000;stroke-width:0.494899;stroke-linecap:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
        id="rect9686"
-       width="19.1"
-       height="19.099998"
-       x="0.55000001"
-       y="0.54999995" />
+       width="18.905102"
+       height="18.905102"
+       x="0.54744899"
+       y="0.54744893" />
     <g
-       id="g5160"
-       transform="matrix(1.1967216,0,0,1.1970208,-1.4065624,-1.9617266)"
-       style="stroke-width:0.835512">
+       id="g7325-5"
+       transform="matrix(-1,0,0,1,-122.91675,48.367733)"
+       style="display:inline;fill:#006b0d;fill-opacity:1;stroke-width:0.396875;stroke-dasharray:none">
       <path
-         style="fill:#666666;stroke:#000000;stroke-width:0.21429px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 2.0364452,15.697707 4.5883372,8.2317096 6.0119261,10.261615 7.4824664,8.2400946 9.1542209,10.947909 11.291937,7.5178305 13.78359,11.557675 15.01616,7.3445948 17.039095,16.787925 Z"
-         id="path5002-1" />
+         id="path4874-6"
+         style="fill:#56607e;fill-opacity:1;stroke:#313749;stroke-width:0.396875;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+         d="m -141.65254,-33.216108 1.05369,-1.182874 1.20509,-1.550809 0.55036,-1.271241 0.10025,-1.277958 -1.34152,-1.25522 z" />
       <path
-         style="fill:#f9f9f9;stroke:#000000;stroke-width:0.21429px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 4.4913276,8.1248714 8.6369859,2.7670203 15.015205,7.3445972 13.953765,12.297396 11.323471,7.636326 9.5556867,11.660368 7.526213,8.28755 6.0408195,11.009923 Z"
-         id="path5004-0"
-         sodipodi:nodetypes="ccccccccc" />
+         id="path6556-2"
+         style="fill:#42625f;fill-opacity:1;stroke:#233433;stroke-width:0.396875;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+         d="m -126.51858,-38.246809 -0.90537,0.250114 -1.0852,0.610299 -1.62006,-0.782898 -2.26601,0.15813 -1.28468,1.364774 -3.99045,-1.716691 -0.75964,-0.127641 -0.0233,0.263033 -0.2899,-0.271301 -0.10025,1.277958 -0.55036,1.271241 -1.20509,1.550809 -1.05369,1.182874 -0.23564,0.983402 c 5.80034,2.546746 11.71028,1.896509 17.67127,-0.242879 l -0.66662,-2.673738 z"
+         sodipodi:nodetypes="cccccccccccccccccc" />
+      <path
+         id="path6554-9"
+         style="fill:#56607e;fill-opacity:1;stroke:#313749;stroke-width:0.396875;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+         d="m -128.70397,-42.388158 -0.31006,-0.116272 -0.46302,0.0047 -1.00976,0.304891 -2.38125,-1.350822 -1.19062,-0.406177 -0.81856,-0.121956 -0.38344,0.517798 -0.93689,-0.537952 -0.98754,-0.274402 -0.40049,1.416968 -0.51987,0.763261 -0.32452,3.697448 0.75964,0.127641 3.99045,1.716691 1.28468,-1.364774 2.26601,-0.15813 1.62006,0.782898 1.0852,-0.610299 0.90537,-0.250114 z" />
+      <path
+         id="path6961-1"
+         style="fill:#adb2c9;fill-opacity:1;stroke:#313749;stroke-width:0.396875;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+         d="m -137.74476,-46.300581 -0.36071,4.112411 0.51987,-0.763261 0.40049,-1.416968 0.98754,0.274402 0.93689,0.537952 0.38344,-0.517798 0.81856,0.121956 1.19062,0.406177 2.38125,1.350822 1.00976,-0.304891 0.46302,-0.0047 0.31006,0.116272 -0.59686,-1.13068 -1.33326,1.078487 z" />
     </g>
   </g>
 </svg>
