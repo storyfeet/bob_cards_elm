@@ -53,25 +53,26 @@ jobsSquish x y w h l =
             hd::tl -> job (floor w) x y hd ++ jobsSquish x (y + 12) w (h - 12) tl 
     else 
         let 
-            (row,rest) = squishRow x y w l
+            (row,rest) = squishRow True x y w l
         in 
             row ++ jobsSquish x (y + 12) w (h - 12) rest
 
-squishRow : Float -> Float -> Float -> List Job -> (String , List Job)
-squishRow x y w l =
+squishRow : Bool -> Float -> Float -> Float -> List Job -> (String , List Job)
+squishRow first x y w l =
     case l of 
         [] -> ("" , [])
         hd::tl -> 
             let 
-                jw = jobWidth (floor w) hd 
+                w2 = Debug.log "W" w
+                jw = Debug.log "JW" ((jobLen hd) + 2)
             in 
-                if jw > w then
-                ("", l)
-            else 
-                let 
-                    (row ,rest) = squishRow (x + jw ) y (w - jw ) tl
-                in 
-                    (((job (floor w) x y hd) ++ row ),rest)
+                if jw > w && first == False then
+                    ("", l)
+                else 
+                    let 
+                        (row ,rest) = squishRow False (x + jw ) y (w - jw ) tl
+                    in 
+                        (((job (floor w) x y hd) ++ row ),rest)
             
 
 
