@@ -7,7 +7,7 @@
    viewBox="0 0 20 20"
    version="1.1"
    id="svg135"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="fireplace.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="10.596562"
-     inkscape:cx="37.795276"
-     inkscape:cy="37.984016"
+     inkscape:cx="37.842462"
+     inkscape:cy="38.078388"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -39,13 +39,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.500002;stroke-linecap:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
-       id="rect3256"
-       width="18.899998"
-       height="18.899998"
-       x="0.55000103"
-       y="0.55000103" />
     <path
        style="fill:#c87137;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 2.4271991,14.669416 C 2.2167582,13.359998 3.6639828,11.411399 4.7061024,10.827123 l 13.4635836,4.647549 c -0.261082,1.245739 0.343331,2.456325 -0.941659,3.743651 z"

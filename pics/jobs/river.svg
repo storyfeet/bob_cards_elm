@@ -7,7 +7,7 @@
    viewBox="0 0 20 20"
    version="1.1"
    id="svg135"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="river.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="10.649479"
-     inkscape:cx="37.748325"
-     inkscape:cy="37.795276"
+     inkscape:cx="39.156845"
+     inkscape:cy="37.889177"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -39,17 +39,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="fill:#b5dab5;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
-       id="rect8157"
-       width="18.635"
-       height="18.635"
-       x="0.78249943"
-       y="0.78249955" />
     <path
-       style="fill:none;stroke:#2409b7;stroke-width:1.065;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="M 3.8588844,19.462299 C 4.0964858,15.193634 3.7632179,3.6264802 10.075467,9.5837911 14.702888,13.951012 16.237723,2.8688457 16.133752,0.70546569"
-       id="path1849"
-       sodipodi:nodetypes="csc" />
+       style="fill:#0000ff;stroke:#000080;stroke-width:0.499999;stroke-linecap:round;paint-order:stroke markers fill;stop-color:#000000"
+       d="m 5.6254663,19.494695 c 0,0 -4.71973228,-10.5864364 -0.408087,-12.1786959 4.3116452,-1.5922594 6.7314867,6.1179779 9.4290347,5.1855449 2.697548,-0.932433 -4.57711,-12.01651997 -4.57711,-12.01651997 l 4.319582,-0.0789067 c 0,0 5.356189,13.01819168 1.993376,14.29469968 -3.362813,1.276508 -7.5512356,-5.7186972 -10.0340129,-4.47621 -2.4827773,1.242487 3.1273163,9.329116 3.1273163,9.329116 z"
+       id="path15751"
+       sodipodi:nodetypes="czzcczzcc" />
   </g>
 </svg>

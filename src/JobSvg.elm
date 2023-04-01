@@ -50,7 +50,7 @@ jobsSquish x y w h l =
     if List.length l <= (floor (h / 12)) then
         case l of 
             [] -> ""
-            hd::tl -> job (floor w) x y hd ++ jobsSquish x (y + 12) w (h - 12) tl
+            hd::tl -> job (floor w) x y hd ++ jobsSquish x (y + 12) w (h - 12) tl 
     else 
         let 
             (row,rest) = squishRow x y w l
@@ -173,7 +173,7 @@ jobPlaceAction maxW sx sy n a =
 
 place : Float -> Float -> J.Place ->  String
 place x y p =
-        jobPic x y (placePic p)
+        jobS x y (placePic p) "?"
 
 resPic: J.Resource  -> String
 resPic r = 
