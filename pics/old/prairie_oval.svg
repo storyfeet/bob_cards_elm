@@ -8,7 +8,7 @@
    version="1.1"
    id="svg135"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
-   sodipodi:docname="prairie.svg"
+   sodipodi:docname="prairie_oval.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -40,10 +40,10 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#81c63a;fill-opacity:1;stroke-width:1.97726;stroke-linecap:round;paint-order:fill markers stroke;stop-color:#000000"
-       d="M 3.3773434,11.749447 2.2909544,19.480511 18.533318,18.994697 17.259497,11.569976 Z"
-       id="path21861"
-       sodipodi:nodetypes="ccccc" />
+       style="fill:#81c63a;fill-opacity:1;stroke:none;stroke-width:1.43119;stroke-linecap:round;paint-order:fill markers stroke;stop-color:#000000"
+       d="M 9.5039269,19.498869 C 3.6417729,19.50674 0.77460193,4.5968153 3.0712079,3.0066741 6.8279659,0.40554204 14.349741,-2.674571e-4 17.02259,2.5348591 19.806612,5.1754304 16.993062,19.488814 9.5039269,19.498869 Z"
+       id="path43822"
+       sodipodi:nodetypes="ssss" />
     <path
        style="fill:none;stroke:#24a615;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 5.7197672,13.332749 C 5.8378606,11.718796 6.9294666,10.589198 5.862816,8.3857948"
