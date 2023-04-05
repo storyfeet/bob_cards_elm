@@ -16,7 +16,7 @@ front cam =
         crules = cam.rules |> ruleWrap 37
     in 
         String.join "\n"
-            [ rect 0 0 200 72 [flStk CC.orange "white" 1] 
+            [ rect 0 0 200 72 [flStk CC.orange "white" 1,rxy 2 2] 
             , rect 0 0 200 72 [flNoStk "white", opacity 0.5] 
             , rect 4 9 192 59 [flNoStk "White" , fprop "opacity" 0.4 ]
             , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
@@ -34,24 +34,24 @@ front cam =
 back : MS.Mission -> String
 back cam =  
     String.join "\n"
-        [ rect -3 -3 106 96 [flNoStk CC.emeraldGreen ] 
-        , rect -3 -3 106 96 [flNoStk "White" , opacity 0.5 ]
-        , rect 4 9 92 77 [flNoStk "White" , opacity 0.5 ]
+        [ rect -2 -2 204 76 [flNoStk CC.emeraldGreen ] 
+        , rect -2 -2 204 76 [flNoStk "White" , opacity 0.5 ]
+        , rect 4 9 192 59 [flNoStk "White" , opacity 0.5 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] (cam.name ++ " - setup")
-        , rect 30 10 66 54 [flNoStk "white"]
+        , rect 45 9 66 59 [flNoStk "white"]
         , text "Arial" 4 [xy 15 15] "Boards"
         , text "Arial" 4 [xy 7 30, txCenter,rotate -90 7 30]  "Dice"
         , namedCheckGrid 8 20 cam.boards ["d20","d12","d8"]
         , setupPic cam.setupPic
-        , cam.setup |> ruleWrap 50 |> textLines 5 67 6 [font "Arial" 4,txSpaces] 
+        , cam.setup |> ruleWrap 40 |> textLines 112 15 6 [font "Arial" 4,txSpaces] 
         ]
 
 setupPic : String -> String
 setupPic fname =
     case fname of
         "" -> ""
-        s -> img 30 10 66 54 ("../pics/setups/" ++ s ++ ".svg") []
+        s -> img 45 10 66 54 ("../pics/setups/" ++ s ++ ".svg") []
 
 
 namedCheckGrid : Float -> Float -> List String -> List String -> String
