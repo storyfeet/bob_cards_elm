@@ -9,8 +9,8 @@ import ColorCodes as CC
 front : PL.Player -> String
 front p = 
     String.join "\n"
-        [ rect 0 0 100 90 [flStk CC.darkTan "white" 1] 
-        , rect 0 0 100 90 [flNoStk "white", opacity 0.5]
+        [ rect 0 0 100 90 [flStk CC.darkTan "white" 1, rxy 2 2] 
+        , rect 0 0 100 90 [flNoStk "white", opacity 0.5, rxy 2 2]
         , rect 4 9 92 77 [flNoStk "White" , opacity 0.4 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] p.name

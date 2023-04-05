@@ -11,9 +11,9 @@ import Config
 front :  Card -> String
 front card =
     String.join "\n" [ 
-        rect 0 0 50 70 [flStk (CC.cTypeColor card.ctype) "white" 0.5]
-        , rect 0 0 50 70 [flNoStk "white", opacity 0.5]
-        , rect 3 8 44 59 [flNoStk "White" , opacity 0.4 ]
+        rect 0 0 50 70 [flStk (CC.cTypeColor card.ctype) "white" 0.5,rxy 2 2 ]
+        , rect 0 0 50 70 [flNoStk "white", opacity 0.5,rxy 2 2]
+        , rect 3 8 44 59 [flNoStk "White" , opacity 0.4, rxy 1 1]
         , cardPic 4 7 card.name
         , costOrType card.cost card.ctype
         , JSV.jobs 41 5 69 card.jobs
