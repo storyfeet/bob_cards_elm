@@ -83,7 +83,7 @@ builders = {discovery
     | name = "Builders"
     , difficulty = 2
     , rules = []
-    , jobs = vsUtil ++ [buildNWest 2 4,lootDrop Any (D 3)] 
+    , jobs = vsUtil ++ [buildN 2 |> westMost 4,lootDrop Any (D 3)] 
     }
 
 
@@ -109,7 +109,7 @@ buildingTogether = {
     , setupPic = "coop_basic"
     , rules = []
     , setup = []
-    , jobs = coopJobs ++ [buildNWest 2 4, lootDrop Any (D 3)]
+    , jobs = coopJobs ++ [buildN 2 |> westMost 4, lootDrop Any (D 3)]
     , night = banditPhase 3
     }
 
@@ -122,7 +122,7 @@ preciousCargo = {discovery
     , setup = ["- Add a Wagon token to the central start tile" ]
     , rules = moveWagon ++ wagonDamage
     , jobs = 
-        coopJobs ++ [ buildNWest 2 0
+        coopJobs ++ [ buildN 2 |> westMost 0
         , wagonEastWest 2 
         , [J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
         , vpDrop 2
@@ -137,9 +137,9 @@ dreamWork = {preciousCargo
     , rules = ["The bar moves west when all players are at least 1 tile west of it"]
     , setup = ["Add the Travel Bar East of the map tiles facing west"]
     ,jobs = coopJobs ++ [
-        [on J.OnBuild, gain VP 1 , J.Or,on J.OnBuildWest, gain VP 2]
+        buildN 1 |> westMost 1
         , [on J.OnBarWest, gain VP 2]
-        , [on J.OnDefeatBandits , gain VP 2]
+        , lootDrop VP (N 2)
         ]
     }
 speedOfTheSlowest : Mission
@@ -247,9 +247,11 @@ wagonEastWest n = [on J.OnWagonWest, gain VP n, J.Or, on J.OnWagonEast, J.pay VP
 basicVsScoring : List Job
 basicVsScoring =
     [ revealNWest 1 2
-    , buildNWest 2 3
+    , buildN 2 |> westMost 3
     , lootDrop VP (N 2)
     ]
+
+
 
 revealNWest : Int -> Int -> Job
 revealNWest r w = 
@@ -257,12 +259,19 @@ revealNWest r w =
         0 -> [on J.OnReveal,gain VP r]
         _ -> [on J.OnReveal, gain VP r, J.Or ,on J.OnRevealWest, gain VP w]
 
+westMost : Int -> Job -> Job
+westMost n j =
+    case n of
+        0 -> j
+        _ -> j ++ [J.In J.WestMost, gain VP n]
 
-buildNWest : Int -> Int -> Job
-buildNWest b w = 
-    case w of
-        0 -> [on J.OnBuild,gain VP b]
-        _ -> [on J.OnBuild, gain VP b, J.Or ,on J.OnBuildWest, gain VP w]
+revealWest : Int -> Job
+revealWest r = 
+        [on J.OnReveal,J.In J.MovingWest,gain VP r]
+
+buildN : Int -> Job
+buildN b = 
+    [on J.OnBuild,gain VP b] 
 
 vpDrop : Int -> Job
 vpDrop n = 
