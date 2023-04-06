@@ -197,6 +197,8 @@ placePic p =
         J.Prairie -> "prairie"
         J.Forest -> "forest"
         J.Village -> "village"
+        J.WestMost -> "if_westmost"
+        J.MovingWest -> "if_moving_west"
 
 jobS: Float -> Float -> String -> String -> String
 jobS x y fname s = 

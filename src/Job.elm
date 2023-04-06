@@ -12,6 +12,8 @@ type Place
     | Village
     | Mountain
     | River
+    | WestMost
+    | MovingWest
 
 
 type Resource
