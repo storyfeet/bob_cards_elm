@@ -48,6 +48,8 @@ placeShortName pl =
         Prairie -> "Pry"
         Water -> "Wtr"
         Village -> "Vlg"
+        MovingWest -> "MWst"
+        WestMost -> "Wst"
 
 
          
@@ -61,6 +63,7 @@ placeColor pl =
         Prairie -> "LightGreen"
         Water -> "Blue"
         Village -> "Yellow"
+        _ -> "PLACE COLOR"
         
 resourceColor: Resource ->String
 resourceColor r = 

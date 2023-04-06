@@ -85,6 +85,8 @@ placeToString p =
         Prairie -> "On a Prairie"
         Forest -> "In a Forest"
         Village  -> "In a Village"
+        WestMost -> "If you are doing this the furthest west"
+        MovingWest -> "If you moved West to do this"
 
 
 cTypeToString : CardType -> String
