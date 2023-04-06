@@ -48,10 +48,10 @@ discovery = { name = "Discovery"
     , difficulty = 1
     , mode = Verses
     , boards = ["A","B"]
-    , setup = ["Follow the standard game setup"]
+    , setup = standardSetup
     , setupPic = "basic_vs"
     , rules = []
-    , jobs =  utilJobs ++basicVsScoring
+    , jobs =  vsUtil ++basicVsScoring
     , night = banditPhase 3
     }
 
@@ -60,7 +60,7 @@ theRace = {discovery
     | name = "The Race"
     , difficulty = 2
     , jobs = 
-        utilJobs ++ [ [on J.OnRevealWest , gain VP 3 , J.Or, on J.OnMoveWest , on J.OnReveal, gain VP 2 ]
+        vsUtil ++ [ [on J.OnRevealWest , gain VP 3 , J.Or, on J.OnMoveWest , on J.OnReveal, gain VP 2 ]
         , [on J.OnDefeatBandits, gain Gold 1,gain Wood 1,gain Metal 1,gain Food 1]
         ]
 
@@ -72,7 +72,7 @@ villageHero = {discovery
     , difficulty = 2
     , rules = fedVillage
     , jobs = 
-        utilJobs ++ [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
+        vsUtil ++ [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
         , [on J.OnBuild, gain VP 1,J.In J.Village, gain VP 1 ]
         , [on J.OnDefeatBandits, gain VP 2,J.In J.Village, gain VP 2 ]
         ]
@@ -83,7 +83,7 @@ builders = {discovery
     | name = "Builders"
     , difficulty = 2
     , rules = []
-    , jobs = utilJobs ++ [buildNWest 2 4,lootDrop Any (D 3)] 
+    , jobs = vsUtil ++ [buildNWest 2 4,lootDrop Any (D 3)] 
     }
 
 
@@ -207,15 +207,30 @@ stopThatWagon = { preciousCargo
     
 
 
+newWorld : Mission
+newWorld = { name = "New World"
+    , difficulty = 1
+    , mode = Solo
+    , boards = ["A","B"]
+    , setup = standardSetup
+    , setupPic = "basic_vs"
+    , rules = []
+    , jobs =  soloUtil ++ basicVsScoring
+    , night = banditPhase 3
+    }
 
 ------ SCORING -------
 
 
-utilJobs : List Job
-utilJobs = [cardsForFood 3 1,goldForTrain 1 5 ] 
+vsUtil : List Job
+vsUtil = [cardsForFood 3 1,goldForTrain 1 5 ] 
 
 coopJobs : List Job
 coopJobs = [goldForTrain 2 3]
+
+soloUtil : List Job
+soloUtil = [goldForTrain 1 4]
+
 
 cardsForFood : Int -> Int -> Job 
 cardsForFood n f =
@@ -294,4 +309,7 @@ banditPhase d =
     in
         head ++ rm ++ tail
 
+--------------Setups
+standardSetup : List String
+standardSetup = ["Follow the standard game setup"]
 
