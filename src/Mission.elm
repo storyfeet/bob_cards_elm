@@ -47,7 +47,7 @@ discovery = { name = "Discovery"
     , setup = standardSetup
     , setupPic = "basic_vs"
     , rules = []
-    , jobs =  vsUtil ++basicVsScoring
+    , jobs =  vsUtil ++ basicVsScoring
     , night = nightPhase Versus 3
     }
 
@@ -56,7 +56,7 @@ theRace = {discovery
     | name = "The Race"
     , difficulty = 2
     , jobs = 
-        vsUtil ++ [ [on J.OnRevealWest , gain VP 3 , J.Or, on J.OnMoveWest , on J.OnReveal, gain VP 2 ]
+        vsUtil ++ [ [on J.OnReveal,J.In J.MovingWest, gain VP 2 , J.In J.WestMost , gain VP 1 ]
         , [on J.OnDefeatBandits, gain Gold 1,gain Wood 1,gain Metal 1,gain Food 1]
         ]
 
@@ -79,7 +79,7 @@ builders = {discovery
     | name = "Builders"
     , difficulty = 2
     , rules = []
-    , jobs = vsUtil ++ [buildN 2 |> westMost 4,lootDrop Any (D 3)] 
+    , jobs = vsUtil ++ [buildN 2 |> westMost 2,lootDrop Any (D 3)] 
     }
 
 
@@ -118,7 +118,7 @@ buildingTogether = {
     , setupPic = "coop_basic"
     , rules = []
     , setup = []
-    , jobs = coopJobs ++ [buildN 2 |> westMost 4, lootDrop Any (D 3)]
+    , jobs = coopJobs ++ [buildN 2 |> westMost 2, lootDrop Any (D 3)]
     , night = nightPhase Coop 3
     }
 
@@ -271,28 +271,18 @@ wagonEastWest n = [on J.OnWagonWest, gain VP n, J.Or, on J.OnWagonEast, J.pay VP
 
 basicVsScoring : List Job
 basicVsScoring =
-    [ revealNWest 1 2
+    [ revealN 1 |> westMost 1
     , buildN 2 |> westMost 3
     , lootDrop VP (N 2)
     ]
 
 
-
-revealNWest : Int -> Int -> Job
-revealNWest r w = 
-    case w of
-        0 -> [on J.OnReveal,gain VP r]
-        _ -> [on J.OnReveal, gain VP r, J.Or ,on J.OnRevealWest, gain VP w]
+revealN : Int -> Job
+revealN r = [on J.OnReveal,gain VP r]
 
 westMost : Int -> Job -> Job
-westMost n j =
-    case n of
-        0 -> j
-        _ -> j ++ [J.In J.WestMost, gain VP n]
+westMost n j = j ++ [J.In J.WestMost, gain VP n]
 
-revealWest : Int -> Job
-revealWest r = 
-        [on J.OnReveal,J.In J.MovingWest,gain VP r]
 
 buildN : Int -> Job
 buildN b = 
