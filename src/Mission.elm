@@ -1,4 +1,4 @@
-module Mission exposing (Mission,modeStr,campaigns)
+module Mission exposing (Mission,modeStr,allCampaigns)
 import Job as J exposing (on,Job,gain,pay,Resource(..),JobNum (..))
 
 type alias Mission =
@@ -16,43 +16,39 @@ type alias Mission =
 type Mode =
     Solo
     | Coop
-    | Verses
+    | Versus
 
 modeStr : Mode -> String
 modeStr m =
     case m of
         Solo -> "Solo"
         Coop -> "Co-op"
-        Verses -> "VS"
+        Versus -> "VS"
 
 
-campaigns : List Mission
-campaigns = [ discovery 
+allCampaigns : List Mission
+allCampaigns = vsCampaigns ++ coopCampaigns ++ soloCampaigns 
+
+vsCampaigns : List Mission
+vsCampaigns = [ discovery 
     , theRace 
     , villageHero
-    , theFeast
     , builders
-    , speedOfTheSlowest
-    , buildingTogether
-    , dreamWork
-    , stopThatWagon
-    , preciousCargo
-    , escortMission
-    , thereAndBackAgain
-    , areWeTheBaddies
     ]
+
+
 
 
 discovery : Mission
 discovery = { name = "Discovery"
     , difficulty = 1
-    , mode = Verses
+    , mode = Versus
     , boards = ["A","B"]
     , setup = standardSetup
     , setupPic = "basic_vs"
     , rules = []
     , jobs =  vsUtil ++basicVsScoring
-    , night = banditPhase 3
+    , night = nightPhase Versus 3
     }
 
 theRace:Mission
@@ -100,6 +96,19 @@ theFeast = { preciousCargo
         ]
     }
 
+coopCampaigns : List Mission
+coopCampaigns = 
+    [ speedOfTheSlowest
+    , buildingTogether
+    , dreamWork
+    , theFeast
+    , stopThatWagon
+    , preciousCargo
+    , escortMission
+    , thereAndBackAgain
+    , areWeTheBaddies
+    ]
+
 buildingTogether : Mission
 buildingTogether = { 
     name = "Building Together"
@@ -110,13 +119,14 @@ buildingTogether = {
     , rules = []
     , setup = []
     , jobs = coopJobs ++ [buildN 2 |> westMost 4, lootDrop Any (D 3)]
-    , night = banditPhase 3
+    , night = nightPhase Coop 3
     }
 
 preciousCargo : Mission
-preciousCargo = {discovery 
-    | name = "Precious Cargo"
+preciousCargo = {
+    name = "Precious Cargo"
     , mode = Coop
+    , difficulty = 1
     , setupPic = "wagon"
     , boards = ["C","D"]
     , setup = ["- Add a Wagon token to the central start tile" ]
@@ -127,6 +137,8 @@ preciousCargo = {discovery
         , [J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
         , vpDrop 2
         ]
+    , night = nightPhase Coop 3
+    
     }
 
 dreamWork : Mission
@@ -143,7 +155,7 @@ dreamWork = {preciousCargo
         ]
     }
 speedOfTheSlowest : Mission
-speedOfTheSlowest = {preciousCargo 
+speedOfTheSlowest = { preciousCargo 
     | name = "Speed of the Slowest"
     , setupPic = "bar"
     , difficulty = 1
@@ -204,11 +216,16 @@ stopThatWagon = { preciousCargo
         , [J.On J.OnDefeatBandits,gain VP 1]
         ]
     }
-    
+
+-------- SOLO Campaigns
+
+soloCampaigns : List Mission
+soloCampaigns = [newWorld,doubleTrouble]
 
 
 newWorld : Mission
-newWorld = { name = "New World"
+newWorld = { 
+    name = "New World"
     , difficulty = 1
     , mode = Solo
     , boards = ["A","B"]
@@ -216,7 +233,15 @@ newWorld = { name = "New World"
     , setupPic = "basic_vs"
     , rules = []
     , jobs =  soloUtil ++ basicVsScoring
-    , night = banditPhase 3
+    , night = nightPhase Solo 4
+    }
+
+doubleTrouble : Mission
+doubleTrouble = { newWorld 
+    | name = "Double Trouble"
+    , setup = ["Add 2 Meeples to the board for 1 player", "Add the Travel Bad at the East of the Board"]
+    , rules  = ["You can do any job with either meeple, but not both"]
+    , jobs = soloUtil ++ [[J.On J.OnBarWest,gain VP 3 ]]
     }
 
 ------ SCORING -------
@@ -299,8 +324,8 @@ freeWeapon = ["Players may all take 1 weapon (Red Card) from the trade row draw 
 
 ---------Bandit Phase
 
-banditPhase : Int -> List String
-banditPhase d = 
+nightPhase : Mode -> Int -> List String
+nightPhase md d = 
     let
         head = [ "Move Trade row"
             , "Move Bandit Tracker"
@@ -314,9 +339,15 @@ banditPhase d =
                 [ "Remove tiles"
                 , " (>" ++ String.fromInt d ++ " east of all players)"
                 ]
+        p1t = case md of
+            Versus -> ["Pass the P1 token"]
+            _ -> []
+
+
         tail = ["Bandits Appear"]
     in
-        head ++ rm ++ tail
+        head ++ rm ++ tail ++ p1t
+
 
 --------------Setups
 standardSetup : List String
