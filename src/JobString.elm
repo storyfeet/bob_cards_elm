@@ -13,16 +13,18 @@ jobStr j =
     case j of
         (On e)::t -> "When " ++ eventToString e ++ onStr t
         (Gain _ _)::_ -> "Gain " ++ gainStr j
-        a::t -> actionStr a ++ " " ++ jobContStr t 
-        _ -> ""
+        (In p)::t -> "If " ++ placeToString p ++ jobContStr t
+        a::t -> actionStr a ++ jobContStr t 
+        [] -> "."
 
 jobContStr : Job -> String
 jobContStr j = 
     case j of
-        (On e)::t -> "when " ++ eventToString e ++ onStr t
-        (Gain _ _)::_ -> "gain " ++ gainStr j
-        a::t -> actionStr a ++ " " ++ jobContStr t 
-        _ -> ""
+        (On e)::t -> ", when " ++ eventToString e ++ onStr t
+        (In p)::t -> ". If " ++ placeToString p ++ jobAlsoIfStr t 
+        (Gain _ _)::_ -> ", gain " ++ gainStr j
+        a::t -> ", " ++ actionStr a ++ jobContStr t 
+        [] -> "."
 
 gainStr : Job -> String
 gainStr j =
@@ -39,9 +41,15 @@ onStr : Job -> String
 onStr j  =
     case j of 
         (On e)::t -> " and " ++ eventToString e ++ onStr t
-        _ -> ", " ++ jobContStr j
+        (In p)::t -> ", if " ++ placeToString p ++ jobContStr t
+        _ -> jobContStr j
 
-
+jobAlsoIfStr : Job -> String
+jobAlsoIfStr j = 
+    case j of
+        (In p)::t -> " and " ++ placeToString p ++ jobAlsoIfStr t
+        a::t -> ", also " ++ actionStr a ++ jobContStr t 
+        [] -> "."
 
 actionStr : Action -> String 
 actionStr a = 
@@ -53,13 +61,13 @@ actionStr a =
         Pay r n -> "pay " ++ (jNumToString n) ++  " " ++ resourceToString r
         Or -> ", or"
         Discard c n -> "discard " ++ (jNumToString n) ++ " " ++ (cTypeToString c) ++ " cards"
-        RideTrain n -> "Ride the train up to " ++ (jNumToString n) ++ " tiles"
+        RideTrain n -> "ride the train up to " ++ (jNumToString n) ++ " tiles"
         _ -> "-- UNDEFINED --"
 
 
 jobToString: Job -> String
 jobToString j =
-    jobStr j ++ "."
+    jobStr j 
 
 
 actionToString : WriteState -> Action -> (String , WriteState)
@@ -79,14 +87,14 @@ actionToString ws a =
 placeToString : Place -> String
 placeToString p = 
     case p of
-        Water -> "In Water"
-        Mountain -> "On Mountain"
-        River -> "On a tile with a River"
-        Prairie -> "On a Prairie"
-        Forest -> "In a Forest"
-        Village  -> "In a Village"
-        WestMost -> "If you are doing this the furthest west"
-        MovingWest -> "If you moved West to do this"
+        Water -> "in Water"
+        Mountain -> "on Mountain"
+        River -> "on a tile with a River"
+        Prairie -> "on a Prairie"
+        Forest -> "in a Forest"
+        Village  -> "in a Village"
+        WestMost -> "you are doing this the furthest West yet"
+        MovingWest -> "you moved West to do this"
 
 
 cTypeToString : CardType -> String
@@ -101,14 +109,14 @@ cTypeToString ct =
 eventToString : Event -> String
 eventToString e =
     case e of
-        OnWagonWest -> "the Wagon moves West"
-        OnWagonEast -> "the Wagon moves East"
-        OnBarWest -> "the Travel Bar moves West"
+        OnWagonWest -> "the wagon moves West"
+        OnWagonEast -> "the wagon moves East"
+        OnBarWest -> "the 'Travel Bar' moves West"
         OnBuild -> "you build"
         OnBuildWest -> "you build the furthest West yet"
         OnReveal -> "you reveal a tile"
         OnRevealWest -> "you reveal the most West tile"
-        OnDefeatBandits -> "you clear a tile of Bandits"
+        OnDefeatBandits -> "you clear a tile of bandits"
         OnWagonDamage n -> "the wagon takes " ++ jNumToString n ++ " damage"
         OnMoveWest -> "you move west"
 
