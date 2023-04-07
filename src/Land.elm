@@ -61,22 +61,22 @@ tileGen g n =
 buildBandits : GGen -> LType ->  (GGen,List Int, Int)
 buildBandits g t = 
     let 
-        (g1, back) = gnext g 8
+        (g1, back) = gnext g 12
     in 
         case t of
             BanditCamp _ -> 
                 let 
-                    (g2 , a)  = gnext g1 8
-                    (g3 , b)  = gnext g2 8
-                    (g4 , c)  = gnext g3 8
+                    (g2 , a)  = gnext g1 12 
+                    (g3 , b)  = gnext g2 12 
+                    (g4 , c)  = gnext g3 12
                 in
                     (g4,[a + 1 ,b + 1 ,c + 1],back + 1)
             Village _ -> (g1,[],back + 1)
             _ -> 
                 let 
-                    (g2, a) = gnext g1 20
+                    (g2, a) = gnext g1 30
                 in
-                    if a < 8 then
+                    if a < 12 then
                         (g2,[a + 1],back + 1)
                     else (g2,[],back + 1)
 
