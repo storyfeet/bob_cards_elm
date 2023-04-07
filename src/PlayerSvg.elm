@@ -46,7 +46,6 @@ playerPhase hSize =
     , "Draw to "++ (String.fromInt hSize ) ++ " Cards"
     , "Play Cards / Trade"
     , "May discard Item Cards"
-    , "Pass P1 Token"
     ]
 
 
