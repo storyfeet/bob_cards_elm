@@ -272,7 +272,7 @@ wagonEastWest n = [on J.OnWagonWest, gain VP n, J.Or, on J.OnWagonEast, J.pay VP
 basicVsScoring : List Job
 basicVsScoring =
     [ revealN 1 |> westMost 1
-    , buildN 2 |> westMost 3
+    , buildN 2 |> westMost 1
     , lootDrop VP (N 2)
     ]
 
