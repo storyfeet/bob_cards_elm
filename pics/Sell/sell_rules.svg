@@ -25,9 +25,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.0284691"
-     inkscape:cx="418.29575"
-     inkscape:cy="432.59224"
+     inkscape:zoom="0.84768052"
+     inkscape:cx="575.09874"
+     inkscape:cy="601.05191"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -36,6 +36,63 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker56483"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path56481" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker52273"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path52271" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
     <marker
        style="overflow:visible"
        id="Arrow5"
@@ -347,12 +404,12 @@
        x="56.465588"
        y="153.84509"
        id="text7161-3"
-       transform="matrix(0.26458333,0,0,0.26458333,-10.242775,23.116777)"><tspan
+       transform="matrix(0.26458333,0,0,0.26458333,-6.5386081,37.933447)"><tspan
          sodipodi:role="line"
          id="tspan7159-6"
          x="56.465588"
          y="153.84509"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">Setup</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">Board Setup</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;white-space:pre;inline-size:191.913;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -362,33 +419,44 @@
        transform="translate(-4.2333335,-14.287503)"><tspan
          x="16.462694"
          y="48.718864"
-         id="tspan79943">After choosing a mission, which can be cooperative, competetive of single player, players, </tspan><tspan
+         id="tspan67987">After choosing a mission, which can be cooperative, competetive or single player, players, </tspan><tspan
          x="16.462694"
          y="54.010524"
-         id="tspan79945">attempt to travel West on the tiled map, revealing tiles as they go, in order to complete the goals </tspan><tspan
+         id="tspan67989">attempt to travel West on the tiled map, revealing tiles as they go, to complete the goals of their </tspan><tspan
          x="16.462694"
          y="59.302188"
-         id="tspan79947">of their chosen mission.
+         id="tspan67991">chosen mission.
 </tspan><tspan
          x="16.462694"
          y="64.593852"
-         id="tspan79949">The game is divided into two main phases, &quot;Day&quot; and &quot;Night&quot;. During the day, players may </tspan><tspan
+         id="tspan67993">Each player manages their own deck of cards. They can improve it by buying good cards, but </tspan><tspan
          x="16.462694"
          y="69.885516"
-         id="tspan79951">perform their actions, and during the night, bandits cause havoc and the board takes it's turn.</tspan></text>
+         id="tspan67995">they will also pick up Danger Cards.   
+</tspan><tspan
+         x="16.462694"
+         y="75.17718"
+         id="tspan67997">During the &quot;Day&quot; phases of the game, players draw ~6 cards, and then take turns to perform the </tspan><tspan
+         x="16.462694"
+         y="80.468844"
+         id="tspan67999">actions on them, buy cards from the &quot;Trade Row&quot; or Trade with each other.
+</tspan><tspan
+         x="16.462694"
+         y="85.760508"
+         id="tspan68001">When &quot;Night comes&quot; Bandits attack, move, and appear. All players take an Exhaustion card.</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;white-space:pre;inline-size:191.913;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
        x="16.462694"
        y="48.718864"
        id="text7165-7"
-       transform="translate(-6.4383203,21.269712)"><tspan
+       transform="translate(-4.8508202,35.557215)"><tspan
          x="16.462694"
          y="48.718864"
-         id="tspan79953">The initial set up depends partially on the mission, but will look somthing like this: </tspan></text>
+         id="tspan68003">Setup is on the back of the mission cards, and will look something like this: </tspan></text>
     <g
        id="g77101"
-       transform="translate(-0.56694225,-1.6366158)">
+       transform="translate(-23.81861,17.452839)">
       <g
          transform="matrix(0.22865633,0,0,0.23925931,85.78571,98.927387)"
          id="g9262">
@@ -550,7 +618,7 @@
            text-anchor="end"
            id="text9338">+2x</text>
         <polygon
-           points="35,6 36,9 40,9 36.5,12 38,16 35,14 32,16 33.5,12 30,9 34,9 "
+           points="32,16 33.5,12 30,9 34,9 35,6 36,9 40,9 36.5,12 38,16 35,14 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -569,7 +637,7 @@
            text-anchor="middle"
            id="text9342">3</text>
         <polygon
-           points="10,6 11,9 15,9 11.5,12 13,16 10,14 7,16 8.5,12 5,9 9,9 "
+           points="7,16 8.5,12 5,9 9,9 10,6 11,9 15,9 11.5,12 13,16 10,14 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -588,7 +656,7 @@
            text-anchor="middle"
            id="text9346">11</text>
         <polygon
-           points="22.5,3 23.5,6 27.5,6 24,9 25.5,13 22.5,11 19.5,13 21,9 17.5,6 21.5,6 "
+           points="19.5,13 21,9 17.5,6 21.5,6 22.5,3 23.5,6 27.5,6 24,9 25.5,13 22.5,11 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -618,7 +686,7 @@
            xlink:href="../tiles/forest_wet.svg"
            id="image9382" />
         <polygon
-           points="35,6 36,9 40,9 36.5,12 38,16 35,14 32,16 33.5,12 30,9 34,9 "
+           points="32,16 33.5,12 30,9 34,9 35,6 36,9 40,9 36.5,12 38,16 35,14 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -659,7 +727,7 @@
            xlink:href="../tiles/mountain.svg"
            id="image9398" />
         <polygon
-           points="34,9 35,6 36,9 40,9 36.5,12 38,16 35,14 32,16 33.5,12 30,9 "
+           points="35,14 32,16 33.5,12 30,9 34,9 35,6 36,9 40,9 36.5,12 38,16 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -689,7 +757,7 @@
            xlink:href="../tiles/back.svg"
            id="image19133" />
         <polygon
-           points="21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 17.5,33 "
+           points="22.5,38 19.5,40 21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -729,7 +797,7 @@
            xlink:href="../tiles/back.svg"
            id="image19143" />
         <polygon
-           points="21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 17.5,33 "
+           points="22.5,38 19.5,40 21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -769,7 +837,7 @@
            xlink:href="../tiles/back.svg"
            id="image19153" />
         <polygon
-           points="21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 17.5,33 "
+           points="22.5,38 19.5,40 21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -809,7 +877,7 @@
            xlink:href="../tiles/back.svg"
            id="image19163" />
         <polygon
-           points="22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 17.5,33 21.5,33 "
+           points="19.5,40 21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -849,7 +917,7 @@
            xlink:href="../tiles/back.svg"
            id="image19193" />
         <polygon
-           points="21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 17.5,33 "
+           points="22.5,38 19.5,40 21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -889,7 +957,7 @@
            xlink:href="../tiles/back.svg"
            id="image19203" />
         <polygon
-           points="22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 17.5,33 21.5,33 "
+           points="19.5,40 21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -929,7 +997,7 @@
            xlink:href="../tiles/back.svg"
            id="image19233" />
         <polygon
-           points="24,36 25.5,40 22.5,38 19.5,40 21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 "
+           points="21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 17.5,33 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -972,7 +1040,7 @@
     </g>
     <g
        id="g44136"
-       transform="matrix(0,0.25523685,-0.25523685,0,142.56766,79.104956)">
+       transform="matrix(0,0.25523685,-0.25523685,0,119.31599,98.194411)">
       <path
          style="fill:#ffb380;fill-opacity:1;stroke:#000000;stroke-width:0.394812px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 12.96755,4.7973 9.5996227,97.51531 H 293.2164 V 4.7973 Z"
@@ -987,7 +1055,7 @@
          id="g1990-2-7"
          transform="translate(13.497372,-2.43212)">
         <polygon
-           points="38,15 35,13 32,15 33.5,11 30,8 34,8 35,5 36,8 40,8 36.5,11 "
+           points="35,5 36,8 40,8 36.5,11 38,15 35,13 32,15 33.5,11 30,8 34,8 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -1013,7 +1081,7 @@
          id="g1985-5-6"
          transform="translate(5.0307022,-3.5514)">
         <polygon
-           points="35,5 36,8 40,8 36.5,11 38,15 35,13 32,15 33.5,11 30,8 34,8 "
+           points="32,15 33.5,11 30,8 34,8 35,5 36,8 40,8 36.5,11 38,15 35,13 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -2180,7 +2248,7 @@
          id="g1995-2-3"
          transform="translate(-21.956805,-2.01974)">
         <polygon
-           points="34,8 35,5 36,8 40,8 36.5,11 38,15 35,13 32,15 33.5,11 30,8 "
+           points="35,13 32,15 33.5,11 30,8 34,8 35,5 36,8 40,8 36.5,11 38,15 "
            fill="#ff0000"
            stroke="#000000"
            stroke-width="0.5"
@@ -2208,7 +2276,7 @@
         <g
            id="g2000-3-4">
           <polygon
-             points="35,13 32,15 33.5,11 30,8 34,8 35,5 36,8 40,8 36.5,11 38,15 "
+             points="36,8 40,8 36.5,11 38,15 35,13 32,15 33.5,11 30,8 34,8 35,5 "
              fill="#ff0000"
              stroke="#000000"
              stroke-width="0.5"
@@ -2238,7 +2306,7 @@
          id="g13633-3-9"
          transform="matrix(2.6427926,0,0,2.6427926,-171.60138,-223.97257)">
         <polygon
-           points="46,12 43,10 40,12 41.5,8 38,5 42,5 43,2 44,5 48,5 44.5,8 "
+           points="43,2 44,5 48,5 44.5,8 46,12 43,10 40,12 41.5,8 38,5 42,5 "
            fill="#000000"
            stroke="#ffffff"
            stroke-width="0.5"
@@ -2262,7 +2330,7 @@
          id="g13633-6-2-6"
          transform="matrix(2.6427926,0,0,2.6427926,-72.537588,-223.31861)">
         <polygon
-           points="46,12 43,10 40,12 41.5,8 38,5 42,5 43,2 44,5 48,5 44.5,8 "
+           points="43,2 44,5 48,5 44.5,8 46,12 43,10 40,12 41.5,8 38,5 42,5 "
            fill="#000000"
            stroke="#ffffff"
            stroke-width="0.5"
@@ -3266,7 +3334,7 @@
     </g>
     <g
        id="g71456"
-       transform="matrix(0,0.24556687,-0.24556687,0,206.41437,90.88488)">
+       transform="matrix(0,0.24556687,-0.24556687,0,183.1627,109.97433)">
       <g
          transform="translate(214.66444,178.28561)"
          id="g50243">
@@ -4537,7 +4605,7 @@
     </g>
     <g
        id="g7996-80-1"
-       transform="matrix(1.316341,0,0,1.316341,-36.551938,49.812014)">
+       transform="matrix(1.316341,0,0,1.316341,-59.803606,68.901468)">
       <rect
          x="19.269876"
          y="-150.54523"
@@ -4607,7 +4675,7 @@
     </g>
     <g
        id="g7996-80-1-3"
-       transform="matrix(1.316341,0,0,1.316341,-83.530581,72.183445)">
+       transform="matrix(1.316341,0,0,1.316341,-106.78225,91.2729)">
       <rect
          x="19.269876"
          y="-150.54523"
@@ -4677,7 +4745,7 @@
     </g>
     <g
        id="g7996-80-1-9"
-       transform="matrix(1.316341,0,0,1.316341,-83.254622,96.793842)">
+       transform="matrix(1.316341,0,0,1.316341,-106.50629,115.8833)">
       <rect
          x="19.269876"
          y="-150.54523"
@@ -4744,6 +4812,1317 @@
          style="fill:#000000;stroke-width:0.34091"
          d="m 142.24865,25.742689 c 0.39923,-0.296653 0.90771,-0.400355 1.30818,-0.689723 0.1377,-0.379178 -0.32487,0.02404 -0.48174,0.08234 -0.14625,0.07454 -0.47992,0.30245 -0.50955,0.265334 0.33357,-0.356367 0.83155,-0.468789 1.22684,-0.727806 0.30521,-0.34012 0.31681,-0.82318 0.42969,-1.244089 0.0591,-0.353691 0.073,-0.713444 0.065,-1.071472 0.33768,0.04232 0.25923,0.449412 0.30741,0.692287 0.14593,0.413485 0.3486,0.811201 0.56496,1.195697 0.28915,0.314077 0.66647,-0.150464 0.98413,-0.20262 0.0984,-0.03143 0.46526,-0.08518 0.18478,0.0079 -0.24798,0.122493 -0.75608,0.210472 -0.82007,0.399834 0.95783,0.526884 1.543,1.727586 1.23409,2.798219 0.0936,0.205072 -0.37835,0.421427 -0.15917,0.09858 0.13985,-0.182367 0.15827,-0.668966 0.1302,-0.715909 0.0238,0.687831 -0.5573,1.306001 -1.23694,1.361 -0.9042,0.08719 -1.72054,-0.620035 -1.97385,-1.455231 -0.12555,-0.389951 -0.16374,-0.810874 -0.0707,-1.211294 0.0278,-0.255028 -0.44953,0.100957 -0.091,-3.03e-4 -0.18689,0.260922 -0.64548,0.208753 -0.82868,0.505485 -0.10584,0.3965 0.30461,0.715964 0.38598,1.091678 0.17058,0.354742 0.31738,0.73889 0.5823,1.033273 0.33733,0.195222 0.70295,-0.167681 1.04552,6.6e-4 -0.3368,0.11817 -0.69737,0.342878 -1.06255,0.199759 -0.32511,-0.202626 -0.40491,-0.611995 -0.59952,-0.918334 -0.21433,-0.466986 -0.47983,-0.918724 -0.62432,-1.412605 l 6e-4,-0.04172 0.009,-0.04102 z m 0.85077,-0.363612 c 0.0659,-0.02247 -0.0626,-0.02839 0,0 z m 0.52341,0.607245 c 0.16832,-0.423715 0.45075,-0.82598 0.88694,-1.001678 0.54918,-0.250358 1.25049,-0.104015 1.62618,0.377211 0.27449,0.305405 0.45013,0.687614 0.55753,1.081 -0.1346,-0.907077 -0.82208,-1.767438 -1.74658,-1.942147 -0.47875,-0.07751 -0.97142,0.193037 -1.17716,0.629382 -0.13779,0.260094 -0.19428,0.564859 -0.14691,0.856232 z m 0.18559,0.629774 c 0.22673,0.703425 0.9835,1.237744 1.72747,1.134002 0.57435,-0.09804 1.05793,-0.686724 0.90755,-1.278099 -0.0909,-0.459305 -0.35326,-0.888212 -0.71699,-1.181088 -0.70906,-0.482958 -1.79675,0.01094 -1.94936,0.84012 -0.032,0.162445 -0.0127,0.327049 0.0314,0.485065 z m 0.41051,-0.63438 c 0.45357,-0.198046 0.893,-0.428614 1.35629,-0.604156 0.33535,0.111755 0.19391,0.598121 -0.14559,0.515938 -0.10719,0.04829 -0.61066,0.08899 -0.43484,0.228823 0.11867,0.0464 0.23735,0.09281 0.35601,0.139211 0.0436,0.162584 -0.45985,0.384434 -0.0946,0.380071 0.26349,0.0044 0.67061,-0.06517 0.7882,0.240962 0.0288,0.341188 -0.43176,0.302866 -0.65421,0.2213 -0.28059,-0.124767 -0.59211,0.081 -0.85492,-0.101575 -0.3378,-0.274201 0.34211,-0.337137 0.28241,-0.624961 -0.11425,-0.202344 -0.72906,-0.0301 -0.59871,-0.395613 z m 1.24939,-0.393271 c 0.22939,-0.09889 -0.23087,-0.04023 0,0 z m 0.0934,0.161564 c 0.23397,-0.08625 -0.24904,0.01166 0,0 z m 0.3519,1.11311 c 0.01,-0.129276 -0.13499,0.04381 0,0 z m -0.0171,0.0746 c 0.0976,-0.0749 -0.12156,0.0076 0,0 z m 0.003,0.115453 c -0.005,-0.07632 -0.0724,0.077 0,0 z m -1.54422,-2.754974 c 0.16003,-0.145722 0.69017,0.09393 0.64425,-0.13212 -0.22275,-0.186219 -0.34592,-0.723863 -0.51537,-0.766681 -0.0599,0.301021 -0.18296,0.626532 -0.18222,0.918066 z m -1.75646,1.162048 c 0.24027,-0.184102 0.50763,-0.348704 0.80177,-0.428091 0.0677,0.03061 -0.29267,0.162525 -0.3859,0.245271 -0.0896,0.05257 -0.44939,0.252291 -0.41587,0.18282 z m 0.55361,1.377283 c 0.16825,-0.347974 0.57664,0.305698 0.14144,0.171833 -0.0621,-0.01268 -0.28528,-0.100631 -0.14144,-0.171833 z m 2.42545,1.341708 c 0.27498,-0.202374 0.16085,0.543174 0.0291,0.112514 -0.0246,-0.02008 -0.11086,-0.09543 -0.0291,-0.112514 z m 0.11957,0.218163 c 0.0658,-0.02246 -0.0626,-0.02839 0,0 z m 0.12987,-4.298506 c 0.0868,-0.09311 0.57089,-0.191499 0.23378,-0.07272 -0.0802,0.05866 -0.59684,0.248 -0.23378,0.07272 z m -0.12633,0.336748 c 0.26058,-0.180641 0.5678,-0.328654 0.88889,-0.340194 -0.0494,0.09107 -0.49862,0.09995 -0.5837,0.282567 0.25376,-0.111608 0.77976,-0.177929 0.87782,-0.24821 -0.12588,-0.06856 -0.30994,-0.312871 -0.0614,-0.122343 0.30975,0.226017 0.67728,0.430611 0.81158,0.814589 0.32533,0.611281 0.54699,1.289028 0.60524,1.979021 -0.0478,0.342574 -0.45503,0.352021 -0.72644,0.350432 -0.14326,-0.01711 -0.54228,0.106023 -0.5468,-0.02969 0.33304,-0.195344 0.85424,-0.02185 1.10983,-0.277695 0.0175,-0.641165 -0.26181,-1.2413 -0.50713,-1.818332 -0.15729,-0.291305 -0.34874,-0.69628 -0.73113,-0.701138 -0.37245,-0.0071 -0.71613,0.187446 -1.08711,0.191456 -0.0374,-0.0036 -0.0596,-0.04619 -0.0496,-0.08047 z m 0.1449,0.0034 c 0.0659,-0.02246 -0.0626,-0.02839 0,0 z m 1.01761,1.501784 c 0.36609,-0.263732 0.35905,0.460304 0.0213,0.187998 -0.0306,-0.05752 -0.0316,-0.12535 -0.0213,-0.187998 z"
          id="path12824-5-0-2-1" />
+    </g>
+    <g
+       id="g34346"
+       transform="translate(-27.554408,12.472442)">
+      <rect
+         style="fill:#90e490;fill-opacity:1;stroke:#000000;stroke-width:0.217317;stroke-opacity:1"
+         id="rect61-3-6-9-0-7-5"
+         width="8.9000006"
+         height="8.9000006"
+         x="101.29248"
+         y="152.66765" />
+      <rect
+         style="fill:#90e490;fill-opacity:1;stroke:#000000;stroke-width:0.217317;stroke-opacity:1"
+         id="rect61-3-6-9-0-7-1"
+         width="8.9000006"
+         height="8.9000006"
+         x="101.6017"
+         y="153.00346" />
+      <rect
+         style="fill:#90e490;fill-opacity:1;stroke:#000000;stroke-width:0.217317;stroke-opacity:1"
+         id="rect61-3-6-9-0-7-6"
+         width="8.9000006"
+         height="8.9000006"
+         x="101.96542"
+         y="153.38269" />
+      <rect
+         style="fill:#90e490;fill-opacity:1;stroke:#000000;stroke-width:0.217317;stroke-opacity:1"
+         id="rect61-3-6-9-0-7-0"
+         width="8.9000006"
+         height="8.9000006"
+         x="102.35268"
+         y="153.80855" />
+      <g
+         id="g30853"
+         transform="translate(-38.31327,85.174293)">
+        <rect
+           style="fill:#90e490;fill-opacity:1;stroke:#000000;stroke-width:0.217317;stroke-opacity:1"
+           id="rect61-3-6-9-0-7"
+           width="8.9000006"
+           height="8.9000006"
+           x="141.0453"
+           y="69.209557" />
+        <g
+           transform="matrix(0.18586694,0,0,0.18586694,141.37032,69.518612)"
+           id="g19733">
+          <image
+             x="-1"
+             y="-1"
+             width="47"
+             height="47"
+             xlink:href="../tiles/back.svg"
+             id="image19725" />
+          <polygon
+             points="21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 "
+             fill="#ff0000"
+             stroke="#000000"
+             stroke-width="0.5"
+             style="paint-order:stroke"
+             id="polygon19727" />
+          <text
+             font-family="Arial"
+             font-size="6.5px"
+             x="22.5"
+             y="37"
+             fill="#ffffff"
+             stroke="#000000"
+             stroke-width="0.5"
+             style="paint-order:stroke"
+             font-weight="bold"
+             text-anchor="middle"
+             id="text19729">9</text>
+          <text
+             font-family="Arial"
+             font-size="3px"
+             x="4"
+             y="40"
+             fill="#000000"
+             stroke="none"
+             stroke-width="0"
+             opacity="0.5"
+             id="text19731">0.2.1</text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g36183"
+       transform="translate(-22.391178,16.169693)">
+      <path
+         sodipodi:type="star"
+         style="fill:#ff7f2a;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.008;stroke-linecap:square;stop-color:#000000"
+         id="path7512"
+         inkscape:flatsided="false"
+         sodipodi:sides="3"
+         sodipodi:cx="66.639"
+         sodipodi:cy="18.313263"
+         sodipodi:r1="16.52718"
+         sodipodi:r2="16.52718"
+         sodipodi:arg1="0.60348139"
+         sodipodi:arg2="1.6506789"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 80.246899,27.692642 65.32017,34.787739 51.71227,25.40836 53.0311,8.9338847 67.957831,1.8387871 81.56573,11.218165 Z"
+         transform="matrix(0.11399683,-0.00733226,0.00763178,0.10952274,104.82007,84.62108)" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ff7f2a;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.008;stroke-linecap:square;stop-color:#000000"
+         id="path7512-5"
+         inkscape:flatsided="false"
+         sodipodi:sides="3"
+         sodipodi:cx="66.639"
+         sodipodi:cy="18.313263"
+         sodipodi:r1="16.52718"
+         sodipodi:r2="16.52718"
+         sodipodi:arg1="0.60348139"
+         sodipodi:arg2="1.6506789"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 80.246899,27.692642 65.32017,34.787739 51.71227,25.40836 53.0311,8.9338847 67.957831,1.8387871 81.56573,11.218165 Z"
+         transform="matrix(0.11399683,-0.00733226,0.00763178,0.10952274,101.76884,87.869889)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         x="202.58392"
+         y="22.217358"
+         id="text7620"
+         transform="matrix(0.1934631,0,0,0.1934631,72.271652,82.650061)"><tspan
+           sodipodi:role="line"
+           id="tspan7618"
+           x="202.58392"
+           y="22.217358"
+           style="font-size:10.6667px">20</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         x="204.42119"
+         y="27.192963"
+         id="text7883"
+         transform="matrix(0.1753126,-0.08528467,0.18935677,0.12468444,68.608762,103.3682)"><tspan
+           sodipodi:role="line"
+           id="tspan7881"
+           x="204.42119"
+           y="27.192963"
+           style="font-size:10.6667px">N</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         x="204.55293"
+         y="34.918037"
+         id="text7887"
+         transform="matrix(0.15748949,-0.10305924,0,0.19205667,77.414112,105.46628)"><tspan
+           sodipodi:role="line"
+           id="tspan7885"
+           x="204.55293"
+           y="34.918037"
+           style="font-size:10.6667px">W</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         x="195.94545"
+         y="31.413465"
+         id="text8361"
+         transform="matrix(0.19926283,0.18593068,0,0.19926283,69.158762,47.41464)"><tspan
+           sodipodi:role="line"
+           id="tspan8359"
+           x="195.94545"
+           y="31.413465">S</tspan></text>
+    </g>
+    <g
+       id="g17649"
+       transform="translate(-22.833663,89.872318)">
+      <path
+         style="fill:#ff00ff;stroke:#000000;stroke-width:0.391999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000"
+         d="m 128.01214,11.834528 0.79222,-0.0046 c 0.11001,-0.47888 0.84614,-0.516104 0.92373,-0.0094 l 0.79222,0.01973 c -0.0325,-0.372417 -0.13871,-1.18664 -0.55737,-1.599049 l 0.27868,0.259871 0.55737,-0.247059 c -0.27688,-0.4887655 -0.66748,-0.7925664 -1.11474,-0.9138581 0.20901,-0.8723167 -1.02832,-0.8021891 -0.83605,-0.025926 -0.4783,0.183606 -0.98912,0.5804002 -1.11474,0.9397841 l 0.55737,0.247059 0.27868,-0.251548 c -0.39184,0.351883 -0.57151,1.177386 -0.55737,1.585032 z"
+         id="path5314"
+         sodipodi:nodetypes="ccccccccccccc" />
+      <path
+         style="fill:#04d90b;stroke:#000000;stroke-width:0.391999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000;fill-opacity:1"
+         d="m 129.99046,13.340922 0.79221,-0.0046 c 0.11002,-0.478879 0.84614,-0.516104 0.92374,-0.0095 l 0.79221,0.01973 c -0.0325,-0.372414 -0.13871,-1.186638 -0.55737,-1.599046 l 0.27869,0.259872 0.55737,-0.24706 c -0.27688,-0.488766 -0.66749,-0.792567 -1.11474,-0.913859 0.20901,-0.8723168 -1.02833,-0.802189 -0.83606,-0.02592 -0.4783,0.183606 -0.98912,0.5804 -1.11474,0.939784 l 0.55737,0.247059 0.27869,-0.251548 c -0.39184,0.351883 -0.57152,1.177386 -0.55737,1.585031 z"
+         id="path5314-3"
+         sodipodi:nodetypes="ccccccccccccc" />
+      <path
+         style="fill:#ffdd55;stroke:#000000;stroke-width:0.391999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000"
+         d="m 125.90943,13.249101 0.79222,-0.0046 c 0.11001,-0.478879 0.84614,-0.516104 0.92373,-0.0095 l 0.79222,0.01974 c -0.0325,-0.372361 -0.13872,-1.186584 -0.55737,-1.598992 l 0.27868,0.259871 0.55737,-0.247058 c -0.27688,-0.488767 -0.66749,-0.792569 -1.11474,-0.91386 0.20901,-0.8723174 -1.02832,-0.8021904 -0.83605,-0.02593 -0.47831,0.183606 -0.98913,0.5804 -1.11475,0.939785 l 0.55738,0.247059 0.27868,-0.251549 c -0.39184,0.351883 -0.57152,1.177386 -0.55737,1.585031 z"
+         id="path5314-6"
+         sodipodi:nodetypes="ccccccccccccc" />
+    </g>
+    <path
+       style="fill:#ff0000;stroke:#000000;stroke-width:0.391999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000"
+       d="m 113.03885,103.50421 0.79221,-0.005 c 0.11002,-0.47888 0.84614,-0.5161 0.92374,-0.01 l 0.79221,0.0197 c -0.0325,-0.37241 -0.13871,-1.18664 -0.55737,-1.59905 l 0.27869,0.25988 0.55737,-0.24706 c -0.27688,-0.48877 -0.66749,-0.79257 -1.11474,-0.91386 0.20901,-0.87232 -1.02833,-0.80219 -0.83606,-0.0259 -0.4783,0.1836 -0.98912,0.5804 -1.11474,0.93978 l 0.55737,0.24706 0.27869,-0.25155 c -0.39184,0.35188 -0.57152,1.17739 -0.55737,1.58503 z"
+       id="path5314-3-0"
+       sodipodi:nodetypes="ccccccccccccc" />
+    <g
+       id="g17649-3"
+       transform="translate(-62.122832,118.83821)">
+      <path
+         style="fill:#ff00ff;stroke:#000000;stroke-width:0.391999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000"
+         d="m 128.01214,11.834528 0.79222,-0.0046 c 0.11001,-0.47888 0.84614,-0.516104 0.92373,-0.0094 l 0.79222,0.01973 c -0.0325,-0.372417 -0.13871,-1.18664 -0.55737,-1.599049 l 0.27868,0.259871 0.55737,-0.247059 c -0.27688,-0.4887655 -0.66748,-0.7925664 -1.11474,-0.9138581 0.20901,-0.8723167 -1.02832,-0.8021891 -0.83605,-0.025926 -0.4783,0.183606 -0.98912,0.5804002 -1.11474,0.9397841 l 0.55737,0.247059 0.27868,-0.251548 c -0.39184,0.351883 -0.57151,1.177386 -0.55737,1.585032 z"
+         id="path5314-67"
+         sodipodi:nodetypes="ccccccccccccc" />
+      <path
+         style="fill:#04d90b;stroke:#000000;stroke-width:0.391999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000;fill-opacity:1"
+         d="m 129.99046,13.340922 0.79221,-0.0046 c 0.11002,-0.478879 0.84614,-0.516104 0.92374,-0.0095 l 0.79221,0.01973 c -0.0325,-0.372414 -0.13871,-1.186638 -0.55737,-1.599046 l 0.27869,0.259872 0.55737,-0.24706 c -0.27688,-0.488766 -0.66749,-0.792567 -1.11474,-0.913859 0.20901,-0.8723168 -1.02833,-0.802189 -0.83606,-0.02592 -0.4783,0.183606 -0.98912,0.5804 -1.11474,0.939784 l 0.55737,0.247059 0.27869,-0.251548 c -0.39184,0.351883 -0.57152,1.177386 -0.55737,1.585031 z"
+         id="path5314-3-5"
+         sodipodi:nodetypes="ccccccccccccc" />
+      <path
+         style="fill:#ffdd55;stroke:#000000;stroke-width:0.391999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000"
+         d="m 125.90943,13.249101 0.79222,-0.0046 c 0.11001,-0.478879 0.84614,-0.516104 0.92373,-0.0095 l 0.79222,0.01974 c -0.0325,-0.372361 -0.13872,-1.186584 -0.55737,-1.598992 l 0.27868,0.259871 0.55737,-0.247058 c -0.27688,-0.488767 -0.66749,-0.792569 -1.11474,-0.91386 0.20901,-0.8723174 -1.02832,-0.8021904 -0.83605,-0.02593 -0.47831,0.183606 -0.98913,0.5804 -1.11475,0.939785 l 0.55738,0.247059 0.27868,-0.251549 c -0.39184,0.351883 -0.57152,1.177386 -0.55737,1.585031 z"
+         id="path5314-6-3"
+         sodipodi:nodetypes="ccccccccccccc" />
+    </g>
+    <path
+       style="fill:#ff0000;stroke:#000000;stroke-width:0.391999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000"
+       d="m 57.841676,147.14218 0.79221,-0.005 c 0.11002,-0.47888 0.84614,-0.51611 0.92374,-0.01 l 0.79221,0.0197 c -0.0325,-0.37242 -0.13871,-1.18664 -0.55737,-1.59905 l 0.27869,0.25987 0.55737,-0.24706 c -0.27688,-0.48876 -0.66749,-0.79256 -1.11474,-0.91386 0.20901,-0.87231 -1.02833,-0.80218 -0.83606,-0.0259 -0.4783,0.18361 -0.98912,0.5804 -1.11474,0.93979 l 0.55737,0.24706 0.27869,-0.25155 c -0.39184,0.35188 -0.57152,1.17739 -0.55737,1.58503 z"
+       id="path5314-3-0-5"
+       sodipodi:nodetypes="ccccccccccccc" />
+    <g
+       transform="matrix(0,0.29465646,-0.29465646,0,174.45206,108.01549)"
+       id="g41232">
+      <rect
+         x="0"
+         y="0"
+         width="200"
+         height="72"
+         fill="#ff7100"
+         stroke="#ffffff"
+         stroke-width="1"
+         rx="2"
+         ry="2"
+         id="rect41104" />
+      <rect
+         x="0"
+         y="0"
+         width="200"
+         height="72"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.5"
+         id="rect41106" />
+      <rect
+         x="4"
+         y="9"
+         width="192"
+         height="59"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.4"
+         id="rect41108" />
+      <text
+         font-family="Arial"
+         font-size="5px"
+         x="4"
+         y="7"
+         fill="#000000"
+         stroke="#ffffff"
+         stroke-width="0.8"
+         font-weight="bold"
+         style="paint-order:stroke"
+         id="text41110">Discovery</text>
+      <text
+         font-family="Arial"
+         font-size="5px"
+         x="196"
+         y="7"
+         fill="#000000"
+         stroke="#ffffff"
+         stroke-width="0.8"
+         font-weight="bold"
+         style="paint-order:stroke"
+         text-anchor="end"
+         id="text41112">VS</text>
+      <rect
+         x="79"
+         y="9"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect41114" />
+      <g
+         transform="rotate(30,85,15)"
+         id="g41118">
+        <rect
+           x="82"
+           y="10"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           id="rect41116" />
+      </g>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="90"
+         y="13"
+         fill="#ffa500"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41120">-3</text>
+      <image
+         x="90"
+         y="10"
+         width="10"
+         height="10"
+         xlink:href="../jobs/move.svg"
+         id="image41122" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="100"
+         y="13"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41124">1</text>
+      <rect
+         x="101"
+         y="9"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect41126" />
+      <image
+         x="102"
+         y="10"
+         width="10"
+         height="10"
+         xlink:href="../jobs/vp.svg"
+         id="image41128" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="112"
+         y="13"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41130">-4</text>
+      <g
+         transform="rotate(30,117,15)"
+         id="g41134">
+        <rect
+           x="114"
+           y="10"
+           width="6"
+           height="10"
+           fill="#222222"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           id="rect41132" />
+      </g>
+      <text
+         font-family="Arial"
+         font-size="6px"
+         x="114"
+         y="19"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text41136" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="122"
+         y="13"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41138">#3</text>
+      <rect
+         x="123"
+         y="9"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect41140" />
+      <image
+         x="124"
+         y="10"
+         width="10"
+         height="10"
+         xlink:href="../jobs/gold.svg"
+         id="image41142" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="134"
+         y="13"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41144">-1</text>
+      <image
+         x="134"
+         y="10"
+         width="10"
+         height="10"
+         xlink:href="../jobs/ride_train.svg"
+         id="image41146" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="144"
+         y="13"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41148">5</text>
+      <rect
+         x="79"
+         y="21"
+         width="42"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect41150" />
+      <image
+         x="80"
+         y="22"
+         width="10"
+         height="10"
+         xlink:href="../jobs/on_reveal.svg"
+         id="image41152" />
+      <image
+         x="90"
+         y="22"
+         width="10"
+         height="10"
+         xlink:href="../jobs/vp.svg"
+         id="image41154" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="100"
+         y="25"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41156">+1</text>
+      <image
+         x="100"
+         y="22"
+         width="10"
+         height="10"
+         xlink:href="../jobs/westmost.svg"
+         id="image41158" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="110"
+         y="25"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41160">?</text>
+      <image
+         x="110"
+         y="22"
+         width="10"
+         height="10"
+         xlink:href="../jobs/vp.svg"
+         id="image41162" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="120"
+         y="25"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41164">+1</text>
+      <rect
+         x="79"
+         y="33"
+         width="42"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect41166" />
+      <image
+         x="80"
+         y="34"
+         width="10"
+         height="10"
+         xlink:href="../jobs/on_build.svg"
+         id="image41168" />
+      <image
+         x="90"
+         y="34"
+         width="10"
+         height="10"
+         xlink:href="../jobs/vp.svg"
+         id="image41170" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="100"
+         y="37"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41172">+2</text>
+      <image
+         x="100"
+         y="34"
+         width="10"
+         height="10"
+         xlink:href="../jobs/westmost.svg"
+         id="image41174" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="110"
+         y="37"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41176">?</text>
+      <image
+         x="110"
+         y="34"
+         width="10"
+         height="10"
+         xlink:href="../jobs/vp.svg"
+         id="image41178" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="120"
+         y="37"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41180">+1</text>
+      <rect
+         x="79"
+         y="45"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect41182" />
+      <image
+         x="80"
+         y="46"
+         width="10"
+         height="10"
+         xlink:href="../jobs/on_defeat_bandits.svg"
+         id="image41184" />
+      <image
+         x="90"
+         y="46"
+         width="10"
+         height="10"
+         xlink:href="../jobs/vp.svg"
+         id="image41186" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="100"
+         y="49"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text41188">+2</text>
+      <image
+         x="186"
+         y="10"
+         width="10"
+         height="10"
+         xlink:href="../jobs/difficulty.svg"
+         id="image41190" />
+      <text
+         font-family="Arial"
+         font-size="5px"
+         x="191"
+         y="14"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         id="text41192">1</text>
+      <text
+         x="5"
+         y="14"
+         font-family="Arial"
+         font-size="3px"
+         xml:space="preserve"
+         id="text41194">* Discard 3 item cards, move 1 space.</text>
+      <text
+         x="5"
+         y="17.5"
+         font-family="Arial"
+         font-size="3px"
+         xml:space="preserve"
+         id="text41196">* Lose 4 VP, scrap 3 danger.</text>
+      <text
+         x="5"
+         y="21"
+         font-family="Arial"
+         font-size="3px"
+         xml:space="preserve"
+         id="text41198">* Pay 1 gold, ride the train up to 5 tiles.</text>
+      <text
+         x="5"
+         y="24.5"
+         font-family="Arial"
+         font-size="3px"
+         xml:space="preserve"
+         id="text41200">* When you reveal a tile, gain 1 VP. If you are</text>
+      <text
+         x="5"
+         y="28"
+         font-family="Arial"
+         font-size="3px"
+         xml:space="preserve"
+         id="text41202">    doing this the furthest West yet, also gain 1</text>
+      <text
+         x="5"
+         y="31.5"
+         font-family="Arial"
+         font-size="3px"
+         xml:space="preserve"
+         id="text41204">    VP.</text>
+      <text
+         x="5"
+         y="35"
+         font-family="Arial"
+         font-size="3px"
+         xml:space="preserve"
+         id="text41206">* When you build, gain 2 VP. If you are doing this</text>
+      <text
+         x="5"
+         y="38.5"
+         font-family="Arial"
+         font-size="3px"
+         xml:space="preserve"
+         id="text41208">    the furthest West yet, also gain 1 VP.</text>
+      <text
+         x="5"
+         y="42"
+         font-family="Arial"
+         font-size="3px"
+         xml:space="preserve"
+         id="text41210">* When you clear a tile of bandits, gain 2 VP.</text>
+      <text
+         font-family="Arial"
+         font-size="5px"
+         x="147"
+         y="14"
+         font-weight="bold"
+         id="text41212">Night Phase</text>
+      <text
+         x="147"
+         y="20"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text41214">Move Trade row</text>
+      <text
+         x="147"
+         y="24.6"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text41216">Move Bandit Tracker</text>
+      <text
+         x="147"
+         y="29.200001"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text41218">Take an 'E' Danger</text>
+      <text
+         x="147"
+         y="33.799999"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text41220">Bandits attack</text>
+      <text
+         x="147"
+         y="38.400002"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text41222">Bandits move</text>
+      <text
+         x="147"
+         y="43"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text41224">Remove tiles</text>
+      <text
+         x="147"
+         y="47.599998"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text41226"> (&gt;3 east of all players)</text>
+      <text
+         x="147"
+         y="52.200001"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text41228">Bandits Appear</text>
+      <text
+         x="147"
+         y="56.799999"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text41230">Pass the P1 token</text>
+    </g>
+    <path
+       style="fill:#ff0000;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;marker-end:url(#TriangleStart);paint-order:fill markers stroke;stop-color:#000000"
+       d="m 35.444673,134.76991 -12.472084,0.0477"
+       id="path47815"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="25.124382"
+       y="133.43814"
+       id="text48551"><tspan
+         sodipodi:role="line"
+         id="tspan48549"
+         style="stroke-width:0.264583"
+         x="25.124382"
+         y="133.43814">West</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;text-anchor:middle;white-space:pre;inline-size:17.5148;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="85.275192"
+       y="117.34798"
+       id="text48555"
+       transform="translate(-0.0290599,17.532086)"><tspan
+         x="85.275192"
+         y="117.34798"
+         id="tspan68005">Danger<tspan
+   y="117.34798"
+   id="tspan68007"> </tspan></tspan><tspan
+         x="85.275192"
+         y="122.63964"
+         id="tspan68009">Cards</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;text-anchor:middle;white-space:pre;inline-size:20.2441;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="39.879742"
+       y="92.723656"
+       id="text48609"
+       transform="translate(-4.9790122,66.175776)"><tspan
+         x="39.879742"
+         y="92.723656"
+         id="tspan68011">Random<tspan
+   y="92.723656"
+   id="tspan68013"> </tspan></tspan><tspan
+         x="39.879742"
+         y="98.015323"
+         id="tspan68015">tiles</tspan></text>
+    <path
+       style="fill:#ff0000;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;marker-end:url(#marker52273);paint-order:fill markers stroke;stop-color:#000000"
+       d="m 42.317019,157.00124 10.725859,-8.85406"
+       id="path52269" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;text-anchor:middle;white-space:pre;inline-size:23.2633;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="29.800756"
+       y="147.39647"
+       id="text56109"
+       transform="translate(-5.0907147,-1.4334698)"><tspan
+         x="29.800756"
+         y="147.39647"
+         id="tspan68017">facedown<tspan
+   y="147.39647"
+   id="tspan68019"> </tspan></tspan><tspan
+         x="29.800756"
+         y="152.68812"
+         id="tspan68021">tiles</tspan></text>
+    <path
+       style="fill:#ff0000;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;paint-order:fill markers stroke;stop-color:#000000;marker-end:url(#TriangleStart)"
+       d="m 31.287624,149.04633 10.386767,-3.52537"
+       id="path56165" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="160.24513"
+       y="96.941254"
+       id="text56251"><tspan
+         sodipodi:role="line"
+         id="tspan56249"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="160.24513"
+         y="96.941254">Trade Row</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="160.24513"
+         y="102.23292"
+         id="tspan56253">(buyable cards)</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;paint-order:fill markers stroke;stop-color:#000000;marker-start:url(#TriangleStart);marker-end:url(#TriangleStart)"
+       d="m 137.6922,117.79106 10.72172,-13.05625 -10.43364,-0.0932"
+       id="path56255" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="177.95706"
+       y="113.05808"
+       id="text56423"><tspan
+         sodipodi:role="line"
+         id="tspan56421"
+         style="stroke-width:0.264583"
+         x="177.95706"
+         y="113.05808">Mission Card</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;paint-order:fill markers stroke;stop-color:#000000;marker-end:url(#marker56483)"
+       d="m 176.38527,112.34908 -6.83661,4.7833"
+       id="path56479" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;text-anchor:middle;white-space:pre;inline-size:30.0083;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="187.71313"
+       y="135.99475"
+       id="text56619"
+       transform="translate(3.5777863,1.3737069)"><tspan
+         x="187.71313"
+         y="135.99475"
+         id="tspan68023">Mission<tspan
+   y="135.99475"
+   id="tspan68025"> </tspan></tspan><tspan
+         x="187.71313"
+         y="141.2864"
+         id="tspan68027">specific jobs
+</tspan><tspan
+         x="187.71313"
+         y="146.57806"
+         id="tspan68029">and scoring</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;paint-order:fill markers stroke;stop-color:#000000;marker-end:url(#marker52273)"
+       d="m 181.27831,138.41742 -10.78375,0.97693"
+       id="path56621" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="93.78508"
+       y="177.97057"
+       id="text56717"><tspan
+         sodipodi:role="line"
+         id="tspan56715"
+         style="stroke-width:0.264583"
+         x="93.78508"
+         y="177.97057">Score board</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="79.364487"
+       y="91.393356"
+       id="text56721"><tspan
+         sodipodi:role="line"
+         id="tspan56719"
+         style="stroke-width:0.264583"
+         x="79.364487"
+         y="91.393356">Score meeples</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;marker-end:url(#marker52273);paint-order:fill markers stroke;stop-color:#000000"
+       d="m 105.18882,93.02545 3.05005,6.665508"
+       id="path56723"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="19.419504"
+       y="102.71853"
+       id="text56817"><tspan
+         sodipodi:role="line"
+         id="tspan56815"
+         style="stroke-width:0.264583"
+         x="19.419504"
+         y="102.71853">Map meeples</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;marker-end:url(#marker52273);paint-order:fill markers stroke;stop-color:#000000"
+       d="M 38.831946,104.85303 64.52179,127.90548"
+       id="path56819"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="63.784077"
+       y="99.847733"
+       id="text61901"><tspan
+         sodipodi:role="line"
+         id="tspan61899"
+         style="stroke-width:0.264583"
+         x="63.784077"
+         y="99.847733" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="46.547237"
+       y="172.4604"
+       id="text61905"><tspan
+         sodipodi:role="line"
+         id="tspan61903"
+         style="stroke-width:0.264583"
+         x="46.547237"
+         y="172.4604">Tile draw pile</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;white-space:pre;inline-size:37.896;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="46.676704"
+       y="98.54969"
+       id="text61909"
+       transform="translate(10.997293,-0.1122607)"><tspan
+         x="46.676704"
+         y="98.54969"
+         id="tspan68031">Compass and </tspan><tspan
+         x="46.676704"
+         y="103.84136"
+         id="tspan68033">Bandit Dice</tspan></text>
+    <path
+       style="fill:#04d90b;fill-opacity:1;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;paint-order:fill markers stroke;stop-color:#000000;marker-end:url(#TriangleStart)"
+       d="m 80.879425,100.18155 5.132123,1.87275"
+       id="path61969" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       x="56.465588"
+       y="153.84509"
+       id="text7161-3-6"
+       transform="matrix(0.26458333,0,0,0.26458333,-2.343965,142.2536)"><tspan
+         sodipodi:role="line"
+         id="tspan7159-6-2"
+         x="56.465588"
+         y="153.84509"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">Player Setup</tspan></text>
+    <g
+       transform="matrix(0.33272101,0,0,0.33272101,25.452493,194.13051)"
+       id="g65808">
+      <rect
+         x="0"
+         y="0"
+         width="100"
+         height="90"
+         fill="#70501f"
+         stroke="#ffffff"
+         stroke-width="1"
+         rx="2"
+         ry="2"
+         id="rect65746" />
+      <rect
+         x="0"
+         y="0"
+         width="100"
+         height="90"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.5"
+         rx="2"
+         ry="2"
+         id="rect65748" />
+      <rect
+         x="4"
+         y="9"
+         width="92"
+         height="77"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.4"
+         id="rect65750" />
+      <text
+         font-family="Arial"
+         font-size="5px"
+         x="4"
+         y="7"
+         fill="#000000"
+         stroke="#ffffff"
+         stroke-width="0.8"
+         font-weight="bold"
+         style="paint-order:stroke"
+         id="text65752">Jake Wilder</text>
+      <image
+         x="4"
+         y="9"
+         width="92"
+         height="23"
+         xlink:href="../characters/jake%20wilder.png"
+         id="image65754" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="7"
+         y="50"
+         text-anchor="middle"
+         transform="rotate(-90,7,50)"
+         fill="#000000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         id="text65756">Draw</text>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="93"
+         y="50"
+         text-anchor="middle"
+         transform="rotate(90,93,50)"
+         fill="#000000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         id="text65758">Discard</text>
+      <rect
+         x="8"
+         y="73"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect65760" />
+      <g
+         transform="rotate(30,14,79)"
+         id="g65764">
+        <rect
+           x="11"
+           y="74"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           id="rect65762" />
+      </g>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="19"
+         y="77"
+         fill="#ffa500"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text65766">-1</text>
+      <image
+         x="19"
+         y="74"
+         width="10"
+         height="10"
+         xlink:href="../jobs/move.svg"
+         id="image65768" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="29"
+         y="77"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text65770">1</text>
+      <rect
+         x="8"
+         y="60"
+         width="12"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect65772" />
+      <g
+         transform="rotate(30,14,66)"
+         id="g65776">
+        <rect
+           x="11"
+           y="61"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           id="rect65774" />
+      </g>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="19"
+         y="64"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text65778">#1</text>
+      <rect
+         x="8"
+         y="47"
+         width="12"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect65780" />
+      <g
+         transform="rotate(30,14,53)"
+         id="g65784">
+        <rect
+           x="11"
+           y="48"
+           width="6"
+           height="10"
+           fill="#222222"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           id="rect65782" />
+      </g>
+      <text
+         font-family="Arial"
+         font-size="6px"
+         x="11"
+         y="57"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text65786" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="19"
+         y="51"
+         fill="#ffa500"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text65788">-2</text>
+      <image
+         x="75"
+         y="2"
+         width="10"
+         height="10"
+         xlink:href="../jobs/difficulty.svg"
+         id="image65790" />
+      <text
+         font-family="Arial"
+         font-size="5px"
+         x="80"
+         y="6"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         id="text65792">1</text>
+      <image
+         x="85"
+         y="2"
+         width="10"
+         height="10"
+         xlink:href="../jobs/hand_size.svg"
+         id="image65794" />
+      <text
+         font-family="Arial"
+         font-size="5px"
+         x="90"
+         y="6"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         id="text65796">6</text>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="50"
+         y="54"
+         font-weight="bold"
+         id="text65798">Day Phase</text>
+      <text
+         x="50"
+         y="60"
+         font-family="Arial"
+         font-size="4px"
+         id="text65800">Untap this card</text>
+      <text
+         x="50"
+         y="66"
+         font-family="Arial"
+         font-size="4px"
+         id="text65802">Draw to 6 Cards</text>
+      <text
+         x="50"
+         y="72"
+         font-family="Arial"
+         font-size="4px"
+         id="text65804">Play Cards / Trade</text>
+      <text
+         x="50"
+         y="78"
+         font-family="Arial"
+         font-size="4px"
+         id="text65806">May discard Item Cards</text>
     </g>
   </g>
 </svg>
