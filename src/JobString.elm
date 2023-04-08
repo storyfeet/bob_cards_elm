@@ -62,14 +62,16 @@ actionStr a =
         Or -> ", or"
         Discard c n -> "discard " ++ (jNumToString n) ++ " " ++ (cTypeToString c) ++ " cards"
         RideTrain n -> "ride the train up to " ++ (jNumToString n) ++ " tiles"
-        _ -> "-- UNDEFINED --"
+        Move n -> "move " ++ pluralJ "space" "spaces" n
+        Scrap t n -> "scrap " ++ jNumToString n ++ " " ++ cTypeToString t 
+        _ -> "-- UNDEFINED actionStr--"
 
 
 jobToString: Job -> String
 jobToString j =
     jobStr j 
 
-
+{--
 actionToString : WriteState -> Action -> (String , WriteState)
 actionToString ws a = 
     case (ws,a) of
@@ -82,8 +84,11 @@ actionToString ws a =
         (_, Pay r n) -> ("pay " ++ (jNumToString n) ++  " " ++ resourceToString r,WReady)
 
         (_,Or) -> ("or",WReady)
-        _ -> ("-- UNDEFINED --",WReady)
+        (_, Move n) -> ("move " ++ (jNumToString n) ++ " spaces",WReady)
+        (_, Scrap t n) -> (("scrap " ++ jNumToString n) ++ " " ++ cTypeToString t , WReady) 
+        _ -> ("-- UNDEFINED action --",WReady)
 
+--}
 placeToString : Place -> String
 placeToString p = 
     case p of
@@ -143,3 +148,16 @@ jNumToString j =
         This -> "This"
         None -> "None"
 
+plural: String -> String -> Int -> String
+plural s p n =
+    if n == 1 then
+        s
+    else 
+        p
+
+pluralJ: String -> String -> JobNum -> String
+pluralJ s p n =
+    if n == (N 1) then
+        "1 " ++ s
+    else
+        jNumToString n ++ " " ++ p

@@ -47,7 +47,7 @@ discovery = { name = "Discovery"
     , setup = standardSetup
     , setupPic = "basic_vs"
     , rules = []
-    , jobs =  vsUtil ++ basicVsScoring
+    , jobs =  vsUtil 3 ++ basicVsScoring
     , night = nightPhase Versus 3
     }
 
@@ -56,7 +56,7 @@ theRace = {discovery
     | name = "The Race"
     , difficulty = 2
     , jobs = 
-        vsUtil ++ [ [on J.OnReveal,J.In J.MovingWest, gain VP 2 , J.In J.WestMost , gain VP 1 ]
+        vsUtil 4 ++ [ [on J.OnReveal,J.In J.MovingWest, gain VP 2 , J.In J.WestMost , gain VP 1 ]
         , [on J.OnDefeatBandits, gain Gold 1,gain Wood 1,gain Metal 1,gain Food 1]
         ]
 
@@ -68,7 +68,7 @@ villageHero = {discovery
     , difficulty = 2
     , rules = fedVillage
     , jobs = 
-        vsUtil ++ [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
+        vsUtil 3 ++ [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
         , [on J.OnBuild, gain VP 1,J.In J.Village, gain VP 1 ]
         , [on J.OnDefeatBandits, gain VP 2,J.In J.Village, gain VP 2 ]
         ]
@@ -79,7 +79,7 @@ builders = {discovery
     | name = "Builders"
     , difficulty = 2
     , rules = []
-    , jobs = vsUtil ++ [buildN 2 |> westMost 2,lootDrop Any (D 3)] 
+    , jobs = vsUtil 3 ++ [buildN 2 |> westMost 2,lootDrop Any (D 3)] 
     }
 
 
@@ -247,8 +247,8 @@ doubleTrouble = { newWorld
 ------ SCORING -------
 
 
-vsUtil : List Job
-vsUtil = [cardsForFood 3 1,goldForTrain 1 5 ] 
+vsUtil : Int -> List Job
+vsUtil n = [cardsForMove n 1,pointsForScrap 4 3,goldForTrain 1 5 ] 
 
 coopJobs : List Job
 coopJobs = [goldForTrain 2 3]
@@ -257,9 +257,17 @@ soloUtil : List Job
 soloUtil = [goldForTrain 1 4]
 
 
-cardsForFood : Int -> Int -> Job 
-cardsForFood n f =
-    [J.Discard J.TAny (N n),gain J.Food f]
+--cardsForFood : Int -> Int -> Job 
+--cardsForFood n f =
+--    [J.Discard J.TAny (N n),gain J.Food f]
+
+cardsForMove : Int -> Int -> Job
+cardsForMove n d = 
+    [J.Discard J.TAny ( N n),J.move d]
+
+pointsForScrap : Int -> Int -> Job
+pointsForScrap n s =
+    [J.pay VP n,J.scrap (J.TDanger J.DAny) s ]
 
 goldForTrain : Int -> Int -> Job
 goldForTrain n d =
