@@ -185,12 +185,13 @@ thereAndBackAgain = {preciousCargo
     | name = "There and Back Again"
     , difficulty = 2
     , setupPic = "coop_basic"
-    , setup = ["Use a single neutral score token"]
+    , setup = ["Use a single neutral score token", "Place the wagon on the start tile"]
     , jobs = coopJobs ++ [
-        [on J.OnRevealWest, gain VP 3]
+        [on J.OnReveal, J.In J.WestMost, gain VP 3]
         , [ on J.OnDefeatBandits, J.Gain Any (D 3)]
         ]
-    , rules = ["Do not remove any tiles from play", "To win you need:","- To complete the score track","- All players on the starting tile" ]
+    , rules = ["Do not remove any tiles from play", "You may not reveal more than 4 tiles North to South on a row.", "To win you need:","- To complete the score track","- All players on the starting tile" ]
+    , night = nightPhase Coop 0
     }
 
 areWeTheBaddies : Mission
