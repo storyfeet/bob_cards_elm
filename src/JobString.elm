@@ -14,7 +14,7 @@ jobStr j =
         (On e)::t -> "When " ++ eventToString e ++ onStr t
         (Gain _ _)::_ -> "Gain " ++ gainStr j
         (In p)::t -> "If " ++ placeToString p ++ jobContStr t
-        a::t -> actionStr a ++ jobContStr t 
+        a::t -> capFirst (actionStr a) ++ jobContStr t 
         [] -> "."
 
 jobContStr : Job -> String
@@ -59,7 +59,7 @@ actionStr a =
         Gain r n -> "gain " ++ (jNumToString n) ++ " " ++ resourceToString r
         Pay VP n -> "lose " ++ (jNumToString n) ++ " VP"
         Pay r n -> "pay " ++ (jNumToString n) ++  " " ++ resourceToString r
-        Or -> ", or"
+        Or -> "or"
         Discard c n -> "discard " ++ (jNumToString n) ++ " " ++ (cTypeToString c) ++ " cards"
         RideTrain n -> "ride the train up to " ++ (jNumToString n) ++ " tiles"
         Move n -> "move " ++ pluralJ "space" "spaces" n
@@ -161,3 +161,14 @@ pluralJ s p n =
         "1 " ++ s
     else
         jNumToString n ++ " " ++ p
+
+capFirst: String -> String
+capFirst s =
+    case s of
+        "" -> ""
+        _ -> 
+            let 
+                hd = String.left 1 s
+                tl = String.dropLeft 1 s
+            in
+                String.toUpper hd ++ tl
