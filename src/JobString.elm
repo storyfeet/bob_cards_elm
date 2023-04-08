@@ -69,7 +69,7 @@ actionStr a =
 
 jobToString: Job -> String
 jobToString j =
-    jobStr j 
+    "* " ++ jobStr j 
 
 {--
 actionToString : WriteState -> Action -> (String , WriteState)

@@ -11,7 +11,7 @@ front cam =
     let 
         jrules = cam.jobs 
             |> List.map (JString.jobToString)
-            |> ruleWrap 45 
+            |> ruleWrap 50 
         --rules = MLists.mergeIfSmaller 7 cam.rules jrules
         crules = cam.rules |> ruleWrap 37
     in 
@@ -27,8 +27,8 @@ front cam =
             , JSV.picItem 186 10 "difficulty" cam.difficulty "red"
             , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
             , textLines 5 (14 + 4.6 * (List.length crules|> toFloat )) 3.5 [font "Arial" 3,txSpaces] jrules
-            , text "Arial" 5 [xy 150 20,bold] "Night Phase"
-            , textLines 150 25 4.6 [font "Arial" 4 ,txSpaces] cam.night
+            , text "Arial" 5 [xy 147 14,bold] "Night Phase"
+            , textLines 147 20 4.6 [font "Arial" 4 ,txSpaces] cam.night
             ]
 
 back : MS.Mission -> String
