@@ -25,9 +25,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.1121039"
-     inkscape:cx="324.16037"
-     inkscape:cy="396.09609"
+     inkscape:zoom="1.4799951"
+     inkscape:cx="415.87977"
+     inkscape:cy="373.98774"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -379,9 +379,9 @@
        transform="translate(-20.643637,7.3640777)"><tspan
          x="102.99165"
          y="286.70901"
-         id="tspan52538"><tspan
+         id="tspan19098"><tspan
            style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-           id="tspan52536">Matthew Stoodley    matt.storyfeet@gmail.com</tspan></tspan></text>
+           id="tspan19096">Matthew Stoodley    matt.storyfeet@gmail.com</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -408,35 +408,35 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">Board Setup</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;white-space:pre;inline-size:193.865;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;white-space:pre;inline-size:195.934;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
        x="16.462694"
        y="48.718864"
        id="text7165"
        transform="translate(-7.9743203,-14.287503)"><tspan
          x="16.462694"
          y="48.718864"
-         id="tspan52540">After choosing a mission, which can be cooperative, competetive or solo, players attempt to </tspan><tspan
+         id="tspan19100">After choosing a mission, which can be cooperative, competetive or solo, players attempt to </tspan><tspan
          x="16.462694"
          y="54.010524"
-         id="tspan52542">travel West on the tiled map, revealing tiles as they go, to complete it's objectives.
+         id="tspan19102">complete it's objectives by travelling West on the tiled map, revealing tiles as they go.
 </tspan><tspan
          x="16.462694"
          y="59.302188"
-         id="tspan52544">Each player manages their own deck of cards. They can improve it by buying good cards, but they </tspan><tspan
+         id="tspan19104">Each player manages their own deck of cards. They can improve it by buying better cards, but they </tspan><tspan
          x="16.462694"
          y="64.593852"
-         id="tspan52546">will also pick up &quot;Danger Cards&quot;. They use it's cards to gain resources and move about the board.   
+         id="tspan19106">will also pick up &quot;Danger Cards&quot; at times. The cards help to gain resources and move about.   
 </tspan><tspan
          x="16.462694"
          y="69.885516"
-         id="tspan52548">During the &quot;Day&quot; phases, players draw ~6 cards, and then take turns to perform the actions on </tspan><tspan
+         id="tspan19108">During the &quot;Day&quot; phases, players draw to 6 cards, and then take turns to perform &quot;Jobs&quot;. They may </tspan><tspan
          x="16.462694"
          y="75.17718"
-         id="tspan52550">them, buy cards from the &quot;Trade Row&quot; or Trade with each other. even perform jobs together
+         id="tspan19110">also buy cards from the &quot;Trade Row&quot;, Trade with each other. Doing jobs together gains a bonus.
 </tspan><tspan
          x="16.462694"
          y="80.468844"
-         id="tspan52552">When &quot;Night comes&quot; Bandits attack, move, and appear. All players take an Exhaustion card.</tspan></text>
+         id="tspan19112">When &quot;Night comes&quot; Bandits attack, move, and appear. All players take a Danger card.</tspan></text>
     <g
        id="g28620"
        transform="matrix(0.82448872,0,0,0.82448872,-14.450018,139.18073)">
@@ -558,7 +558,7 @@
        transform="translate(-8.1902201,33.440547)"><tspan
          x="16.462694"
          y="48.718864"
-         id="tspan52554">Setup is on the back of the mission cards, and will look something like this: </tspan></text>
+         id="tspan19114">Setup is on the back of the mission cards, and will look something like this: </tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -603,13 +603,13 @@
        transform="translate(-8.2901005,-3.6066897)"><tspan
          x="16.711754"
          y="188.76294"
-         id="tspan52556">Players each Take a Character card, then collect </tspan><tspan
+         id="tspan19116">Players each take a &quot;character card&quot;, then </tspan><tspan
          x="16.711754"
          y="194.05459"
-         id="tspan52558">the resources, and starter cards listed on the </tspan><tspan
+         id="tspan19118">collect the resources, and &quot;start cards&quot; listed on </tspan><tspan
          x="16.711754"
          y="199.34625"
-         id="tspan52560">back</tspan></text>
+         id="tspan19120">the back</tspan></text>
     <g
        id="g48480">
       <g
@@ -1080,17 +1080,17 @@
          xml:space="preserve"
          style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
          x="92.789871"
-         y="221.63376"
+         y="222.69208"
          id="text10737"><tspan
            sodipodi:role="line"
            id="tspan10735"
            style="text-align:center;text-anchor:middle;stroke-width:0.264583"
            x="92.789871"
-           y="221.63376">Food, Wood</tspan><tspan
+           y="222.69208">Food, Wood</tspan><tspan
            sodipodi:role="line"
            style="text-align:center;text-anchor:middle;stroke-width:0.264583"
            x="92.789871"
-           y="226.92542"
+           y="227.98373"
            id="tspan10739">Metal, and Gold</tspan></text>
       <path
          style="fill:#04d90b;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;stroke-dasharray:none;marker-end:url(#TriangleStart);paint-order:fill markers stroke;stop-color:#000000"
@@ -1143,12 +1143,12 @@
          transform="translate(-6.2823385,0.20831918)"><tspan
            x="39.728672"
            y="223.76596"
-           id="tspan52562">Character<tspan
+           id="tspan19122">Character<tspan
    y="223.76596"
-   id="tspan52564"> </tspan></tspan><tspan
+   id="tspan19124"> </tspan></tspan><tspan
            x="39.728672"
            y="229.05761"
-           id="tspan52566">specific Jobs</tspan></text>
+           id="tspan19126">specific Jobs</tspan></text>
       <path
          style="fill:#04d90b;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;stroke-dasharray:none;marker-end:url(#TriangleStart);paint-order:fill markers stroke;stop-color:#000000"
          d="m 43.553692,223.68149 4.868741,-6.59875"
@@ -1175,38 +1175,38 @@
        transform="translate(-6.6110885,2.7307798)"><tspan
          x="122.61971"
          y="188.62314"
-         id="tspan52568">Jobs are found in 6 places and are used </tspan><tspan
+         id="tspan19128">Jobs are found in 6 places and are used </tspan><tspan
          x="122.61971"
          y="193.91479"
-         id="tspan52570">slightly differently.
+         id="tspan19130">slightly differently.
 </tspan><tspan
          x="122.61971"
          y="199.20645"
-         id="tspan52572">* On Item cards. (Discard the item card)
+         id="tspan19132">* On Item cards. (Discard the item card)
 </tspan><tspan
          x="122.61971"
          y="204.4981"
-         id="tspan52574">* On Danger cards (To help you scrap them)
+         id="tspan19134">* On Danger cards (To help you scrap them)
 </tspan><tspan
          x="122.61971"
          y="209.78976"
-         id="tspan52576">* On Tiles. (Lie your meeple down)
+         id="tspan19136">* On Tiles. (Lie your meeple down)
 </tspan><tspan
          x="122.61971"
          y="215.08142"
-         id="tspan52578">* On Character Cards (Tap / turn 90° )
+         id="tspan19138">* On Character Cards (Tap / turn 90° )
 </tspan><tspan
          x="122.61971"
          y="220.37307"
-         id="tspan52580">* On Mission Cards (Useable repeatedly)
+         id="tspan19140">* On Mission Cards (Useable repeatedly)
 </tspan><tspan
          x="122.61971"
          y="225.66473"
-         id="tspan52582">* Top corner of Trade Row cards 
+         id="tspan19142">* Top corner of Trade Row cards 
 </tspan><tspan
          x="122.61971"
          y="230.95639"
-         id="tspan52584">      (To buy them)</tspan></text>
+         id="tspan19144">      (To buy them)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;white-space:pre;inline-size:98.8974;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -1216,20 +1216,20 @@
        transform="translate(-5.0576692,1.1946952)"><tspan
          x="13.504192"
          y="235.17525"
-         id="tspan52586">When a players draw pile is empty, and they need </tspan><tspan
+         id="tspan19146">When a players draw pile is empty, and they need </tspan><tspan
          x="13.504192"
          y="240.4669"
-         id="tspan52588">to draw more cards, they shuffle the discard pile </tspan><tspan
+         id="tspan19148">to draw more cards, they shuffle the discard pile </tspan><tspan
          x="13.504192"
          y="245.75856"
-         id="tspan52590">into a new draw pile.
+         id="tspan19150">into a new draw pile.
 </tspan><tspan
          x="13.504192"
          y="251.05021"
-         id="tspan52592">This way, cards are used again, and &quot;Danger </tspan><tspan
+         id="tspan19152">This way, cards are used again, and &quot;Danger </tspan><tspan
          x="13.504192"
          y="256.34187"
-         id="tspan52594">Cards&quot; can come back to haunt you.</tspan></text>
+         id="tspan19154">Cards&quot; can come back to haunt you.</tspan></text>
     <g
        id="g45404"
        transform="translate(0,-2.1166667)">
@@ -6410,12 +6410,12 @@
          transform="translate(-0.0290599,17.532086)"><tspan
            x="85.275192"
            y="117.34798"
-           id="tspan52596">Danger<tspan
+           id="tspan19156">Danger<tspan
    y="117.34798"
-   id="tspan52598"> </tspan></tspan><tspan
+   id="tspan19158"> </tspan></tspan><tspan
            x="85.275192"
            y="122.63964"
-           id="tspan52600">Cards</tspan></text>
+           id="tspan19160">Cards</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;text-anchor:middle;white-space:pre;inline-size:20.2441;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -6425,12 +6425,12 @@
          transform="translate(-4.9790122,66.175776)"><tspan
            x="39.879742"
            y="92.723656"
-           id="tspan52602">Random<tspan
+           id="tspan19162">Random<tspan
    y="92.723656"
-   id="tspan52604"> </tspan></tspan><tspan
+   id="tspan19164"> </tspan></tspan><tspan
            x="39.879742"
            y="98.015323"
-           id="tspan52606">tiles</tspan></text>
+           id="tspan19166">tiles</tspan></text>
       <path
          style="fill:#ff0000;stroke:#ff0000;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;marker-end:url(#marker52273);paint-order:fill markers stroke;stop-color:#000000"
          d="m 42.317019,157.00124 10.725859,-8.85406"
@@ -6444,12 +6444,12 @@
          transform="translate(-5.0907147,-1.4334698)"><tspan
            x="29.800756"
            y="147.39647"
-           id="tspan52608">facedown<tspan
+           id="tspan19168">facedown<tspan
    y="147.39647"
-   id="tspan52610"> </tspan></tspan><tspan
+   id="tspan19170"> </tspan></tspan><tspan
            x="29.800756"
            y="152.68812"
-           id="tspan52612">tiles</tspan></text>
+           id="tspan19172">tiles</tspan></text>
       <path
          style="fill:#ff0000;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;marker-end:url(#TriangleStart);paint-order:fill markers stroke;stop-color:#000000"
          d="m 31.287624,149.04633 10.386767,-3.52537"
@@ -6498,16 +6498,16 @@
          transform="translate(3.5777863,1.3737069)"><tspan
            x="187.71313"
            y="135.99475"
-           id="tspan52614">Mission<tspan
+           id="tspan19174">Mission<tspan
    y="135.99475"
-   id="tspan52616"> </tspan></tspan><tspan
+   id="tspan19176"> </tspan></tspan><tspan
            x="187.71313"
            y="141.2864"
-           id="tspan52618">specific jobs
+           id="tspan19178">specific jobs
 </tspan><tspan
            x="187.71313"
            y="146.57806"
-           id="tspan52620">and scoring</tspan></text>
+           id="tspan19180">and scoring</tspan></text>
       <path
          style="fill:none;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;marker-end:url(#marker52273);paint-order:fill markers stroke;stop-color:#000000"
          d="m 181.27831,138.41742 -10.78375,0.97693"
@@ -6575,10 +6575,10 @@
          transform="translate(10.997293,-0.1122607)"><tspan
            x="46.676704"
            y="98.54969"
-           id="tspan52622">Compass and </tspan><tspan
+           id="tspan19182">Compass and </tspan><tspan
            x="46.676704"
            y="103.84136"
-           id="tspan52624">Bandit Dice</tspan></text>
+           id="tspan19184">Bandit Dice</tspan></text>
       <path
          style="fill:#04d90b;fill-opacity:1;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;marker-end:url(#TriangleStart);paint-order:fill markers stroke;stop-color:#000000"
          d="m 80.879425,100.18155 5.132123,1.87275"
@@ -6636,13 +6636,13 @@
        transform="translate(-5.1413359)"><tspan
          x="13.566311"
          y="271.5863"
-         id="tspan52626">Many Actions are managed by success dice with </tspan><tspan
+         id="tspan19186">Many Actions are managed by success dice with </tspan><tspan
          x="13.566311"
          y="276.87796"
-         id="tspan52628">faces [0,0,1,1,1,2]. To roll dice for 'n' resources, </tspan><tspan
+         id="tspan19188">faces [0,0,1,1,1,2]. To roll dice for 'n' resources, </tspan><tspan
          x="13.566311"
          y="282.16961"
-         id="tspan52630">players roll 'n' dice and gain the total rolled.</tspan></text>
+         id="tspan19190">players roll 'n' dice and gain the total rolled.</tspan></text>
     <g
        id="g36014"
        transform="matrix(0.82448872,0,0,0.82448872,-15.170996,47.693926)">
@@ -6848,10 +6848,10 @@
        transform="translate(3.0855644,0.63446331)"><tspan
          x="136.72963"
          y="281.60608"
-         id="tspan52632">If in a forest, roll 2 </tspan><tspan
+         id="tspan19192">If in a forest, roll 2 </tspan><tspan
          x="136.72963"
          y="286.89773"
-         id="tspan52634">dice for food</tspan></text>
+         id="tspan19194">dice for food</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;white-space:pre;inline-size:58.6042;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -6861,13 +6861,13 @@
        transform="translate(-1.367389,0.35219145)"><tspan
          x="145.62706"
          y="264.53271"
-         id="tspan52636">Scrap this card, then for </tspan><tspan
+         id="tspan19196">Scrap this card, then for </tspan><tspan
          x="145.62706"
          y="269.82437"
-         id="tspan52638">every danger card you scrap, </tspan><tspan
+         id="tspan19198">every danger card you scrap, </tspan><tspan
          x="145.62706"
          y="275.11602"
-         id="tspan52640">draw a card</tspan></text>
+         id="tspan19200">draw a card</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;white-space:pre;inline-size:63.1217;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -6877,9 +6877,9 @@
        transform="translate(-2.4360662,-37.088159)"><tspan
          x="146.71703"
          y="279.77768"
-         id="tspan52642">Pay 1 wood for 2 dice defence </tspan><tspan
+         id="tspan19202">Pay 1 wood for 2 dice defence </tspan><tspan
          x="146.71703"
          y="285.06933"
-         id="tspan52644">and 4 dice attack (In battle)</tspan></text>
+         id="tspan19204">and 4 dice attack (In battle)</tspan></text>
   </g>
 </svg>
