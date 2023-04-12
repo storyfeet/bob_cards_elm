@@ -116,7 +116,6 @@ eventToString e =
     case e of
         OnWagonWest -> "the wagon moves West"
         OnWagonEast -> "the wagon moves East"
-        OnBarWest -> "the 'Travel Bar' moves West"
         OnBuild -> "you build"
         OnBuildWest -> "you build the furthest West yet"
         OnReveal -> "you reveal a tile"

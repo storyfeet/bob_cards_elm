@@ -116,7 +116,6 @@ type Action
 type Event 
     = OnWagonWest
     | OnWagonEast
-    | OnBarWest
     | OnBuild
     | OnBuildWest
     | OnReveal

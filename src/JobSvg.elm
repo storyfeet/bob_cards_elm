@@ -148,7 +148,6 @@ eventPic e =
     case e of
         J.OnWagonEast -> "on_wagon_east"
         J.OnWagonWest -> "on_wagon_west"
-        J.OnBarWest -> "on_bar_west"
         J.OnBuild -> "on_build"
         J.OnBuildWest -> "on_build_west"
         J.OnReveal -> "on_reveal"
