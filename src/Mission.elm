@@ -104,7 +104,6 @@ coopCampaigns =
     , theFeast
     , stopThatWagon
     , preciousCargo
-    , escortMission
     , thereAndBackAgain
     , areWeTheBaddies
     ]
@@ -146,11 +145,11 @@ dreamWork = {preciousCargo
     | name = "Make the Dream Work"
     , setupPic = "bar"
     , difficulty = 2
-    , rules = ["The bar moves west when all players are at least 1 tile west of it"]
-    , setup = ["Add the Travel Bar East of the map tiles facing west"]
+    , rules = ["The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
+    , setup = ["Add the Wagon with the meeples"]
     ,jobs = coopJobs ++ [
         buildN 1 |> westMost 1
-        , [on J.OnBarWest, gain VP 2]
+        , [on J.OnWagonWest, gain VP 2]
         , lootDrop VP (N 2)
         ]
     }
@@ -159,26 +158,14 @@ speedOfTheSlowest = { preciousCargo
     | name = "Speed of the Slowest"
     , setupPic = "bar"
     , difficulty = 1
-    , rules = ["The bar moves west when all players are at least 1 tile west of it"]
-    , setup = ["Add the Travel Bar East of the map tiles facing west"]
+    , rules = ["The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
+    , setup = ["Add the Wagon East with the meeples to the map"]
     ,jobs = coopJobs ++ [
-        [on J.OnBarWest, gain VP 3]
+        [on J.OnWagonWest, gain VP 3]
         , lootDrop Gold (D 2)
         ]
     }
 
-escortMission : Mission
-escortMission = { speedOfTheSlowest
-    | name = "Escort Mission"
-    , difficulty = 3
-    , setup = [ "Add the Travel Bar East of the map tiles facing West"
-            , "1 player plays a Character with Difficulty 3"]
-    ,jobs = coopJobs ++ [
-        [on J.OnBuild, gain VP 1 ]
-        , [on J.OnBarWest, gain VP 3]
-        , [on J.OnDefeatBandits , gain VP 1]
-        ]
-    }
 
 thereAndBackAgain : Mission
 thereAndBackAgain = {preciousCargo 
@@ -240,9 +227,9 @@ newWorld = {
 doubleTrouble : Mission
 doubleTrouble = { newWorld 
     | name = "Double Trouble"
-    , setup = ["Add 2 Meeples to the board for 1 player", "Add the Travel Bad at the East of the Board"]
+    , setup = ["Add 2 Meeples to the board for 1 player", "Add the Wagon Bad at the East of the Board"] ++ moveWagon
     , rules  = ["You can do any job with either meeple, but not both"]
-    , jobs = soloUtil ++ [[J.On J.OnBarWest,gain VP 3 ]]
+    , jobs = soloUtil ++ [[J.On J.OnWagonWest,gain VP 3 ]]
     }
 
 ------ SCORING -------
