@@ -199,7 +199,8 @@ Place the Compass Dice (With faces N,S,W,W,W,+) next it.
 Order of Play 
 -----------
 
-The game is broken up into two phases which repeat: "Day Phase" and "Night Phase". During the Day, Players perform their actions. At Night, the board updates and the Bandits cause trouble.
+The game is broken up into two phases which repeat: "Day Phase" and "Night Phase". During the Day, Players perform their actions.    
+At Night, the board updates and the Bandits cause trouble.
 The stages below are outlined in more detail below.
 
 * Day Phase : Players -
@@ -207,14 +208,15 @@ The stages below are outlined in more detail below.
     * Untap Character Card
     * Player Actions
     * Discard Item Cards
-    * Pass the P1 Token
 * Night Phase
     * Move the Bandit Tracker
     * Move the Trade Row
     * Players takes an 'E' Danger Card
     * Bandits Attack
     * Bandits Move
+    * Remove Eastern Tiles 
     * Bandits Appear
+    * Pass the P1 Token 
 
 Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits reach the end of their score track.
 
@@ -227,18 +229,19 @@ Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits 
 
     Whenever a Player needs to draw cards but his Draw Pile is empty, They shuffle their Discard Pile and it becomes their new Draw Deck. If the Discard pile is also empty, they do not draw any more.
 
+    If the player's hand is already full without drawing any cards, that player's character dies, and they are out.
+
 2. Untap Character Card
 
     All players turn their Character Card to face forward (If it's not already)
-
 
 3. Player Actions
 
     The player with the P1 Token takes one action. After him, all players in clockwise order take either 1 or 2 actions.
 
-    Players continue taking 1 or 2 actions in clockwise order until all players have passed.
+    Players (including P1) continue taking 1 or 2 actions in clockwise order until all players have passed. 
 
-    The actions they may perform are as follows, and are explained in more detail later.
+    The actions below are explained in more detail later.
 
     * Perform a Job 
     * Purchase a Card
@@ -246,7 +249,7 @@ Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits 
     * Attack Bandits 
     * Pass
 
-    Once a player has passed, they may not perform any more actions that round, but they may participate in other players actions.
+    Once a player has passed, they may not initiate any more actions that round, but they may participate in other players actions.
 
 *(In Solo and Co-op Games, just do actions the until you don't want to)*
 
@@ -254,14 +257,10 @@ Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits 
 
     Players may discard as many Item cards as they wish. They may not discard any Danger cards at this point. *(Beware : If your hand is full at the end of night phase your character dies)*
 
-5. Pass the P1 Token *(In Co-op and Solo Games ignore this)*
-
-    The player who has the P1 Token passes it to the left.
-
 
 ### Night Phase
 
-*(This is shown on the back of Character Cards)*
+The order is on the Mission Card, and varies slightly.
 
 1. Move the Bandit Tracker
 
@@ -279,7 +278,7 @@ Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits 
 
 4. Bandits Attack
     
-    Starting From West to East, Each Group of bandits on the same tile as a player Attacks (See "Attacking")
+    Starting From West to East (North before South), Each Group of bandits on the same tile as a player Attacks (See "Attacking")
 
 5. Bandits Move.
     Starting from West, then North: For every group of bandits **not on the same tile as a player** and **not on a Bandit Camp**, roll the Compas Dice.
@@ -287,12 +286,11 @@ Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits 
     * Bandits may move onto face up or face down tiles, but not off the tiles.
     * If they cannot move in the rolled direction, move them in the opposite direction.
     * If they still cannot move, add a bandit
-    * If a group of bandits meets group that have not yet moved, move, roll movement for the other group immediately. If the second group do not move, the two groups merge.
+    * If a group of bandits meets group that have not yet moved, roll movement for the other group immediately. If the second group do not move, the two groups merge.
 
-6. Remove Tiles.
+6. Remove Eastern Tiles. (Not on all missions)
 
-    Remove all tiles more than 3 complete spaces East of the Eastmost player, along with any Bandits on them.
-    (This step is not strictly necessary, but those bandits are unlikely to affect the game any more).
+    Remove all tiles more than the number on the mission card East of the Eastmost player, along with any Bandits on them.
 
 7. Bandits Appear.
 
@@ -304,6 +302,10 @@ Repeat *Day Phase* and then *Night Phase* until either a player, or the bandits 
     * Move 1 bandit in each of the four compas directions.
     * If any direction is not possible, do not move that bandit.
     * If this creates another group of at least 6 bandits do the same again.
+
+8. Pass the P1 Token *(Not on Co-op and Solo Missions)*
+
+    The player who has the P1 Token passes it to the left.
 
 Perform a Job
 ------------------
@@ -395,8 +397,6 @@ The four *Card Actions* can be applied to different types of cards. So the Card 
 When the card is "This card", the symbol will also match the color of the card to help you remember that it refers to the card you are looking at.
 
 **You cannot discard a Danger Card when the action requires an Item Card Or Visa Versa**
-
-<img src="{{$0}}/rules/card_action_examples.svg">
 
 <h2 style="page-break-before:always">Build Railway</h2>
 
