@@ -90,7 +90,7 @@ For Cooperative Play:
 
 For Solo Play:
 
-* You play any the Co-op campaigns, managing two charaters with separate resource piles
+* You may play the Solo Missions or the Cooperative ones acting as two players.
 * Turn order is not important.
 
 Contents
@@ -101,7 +101,6 @@ Contents
 * Crib Sheets * 4
 * Meeples * 10 (2 Per player)
 * Wagon * 2
-* Travel Bar * 1
 * Bandit Counters - small * 20 , big * 20
 * Resource Counters - Wood, Food, Metal , Gold : small * 20 Big * 10
 * First Turn Marker
@@ -109,7 +108,7 @@ Contents
 * Character Cards * 12 (soon 18)
 * Deck Cards 
 * Dice
-    * Bandit Dice * 4: d8-Hardest, d10, d12, d20-Easiest
+    * Bandit Dice * 2: d12 - Harder, d20-Easier
     * Compass Dice * 1: Dice with faces [N, S, W, W , W , + ]
     * Job Dice * 10: Dice with faces [0,0,1,1,1,2]
 
@@ -138,20 +137,20 @@ Mission Cards look something like this:
 
 <img src="{{$0}}/rules/mission_cards.svg">
 
-On the back you will find:
+On the front you will find:
+* A mode (Vs, Coop, Solo )
+* Mission Specific
+    * Rules 
+    * Jobs
+    * Scoring Jobs
+* Text explaining what all the Scoring Jobs mean.
+
+On the back you will fing:
 * a game setup diagram 
 * Mission specific setup instructions
 * A set of checkboxes. To mark difficulty levels as complete.
 
-On the front you will find:
-* A mode (Vs, Coop )
-* Mission Specific rules
-* Icons showing you how you score in this game.    
-(These are explained in the text above them)
-
-Follow the instructions below, and those on the back of your Mission Card (Which have extra instructions for some campaigns) to setup the play area.
-
-Use the following diagram to help you follow setup instructions
+Follow the instructions below, with the diagram on the back of the Mission card, along with the mission specific setup instructions.
 
 <img src="{{$0}}/setups/basic_setup_numbered.svg">
 
@@ -178,7 +177,7 @@ Use the following diagram to help you follow setup instructions
 10. Place the *Mission Card* beside the *scoreboard*.
 
 11. Select a Bandit Dice and place it by the compass on the scoreboard. If this is your first game choose the D20, as this will spawn fewer bandits.    
-*(In future games the D12, and D8 can be used to increase the game difficulty)*    
+*(In future games the D12 can be used to increase the game difficulty)*    
 Place the Compass Dice (With faces N,S,W,W,W,+) next it.
 
 
