@@ -143,7 +143,7 @@ preciousCargo = {
 dreamWork : Mission
 dreamWork = {preciousCargo 
     | name = "Make the Dream Work"
-    , setupPic = "bar"
+    , setupPic = "wagon"
     , difficulty = 2
     , rules = ["The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
     , setup = ["Add the Wagon with the meeples"]
@@ -156,7 +156,7 @@ dreamWork = {preciousCargo
 speedOfTheSlowest : Mission
 speedOfTheSlowest = { preciousCargo 
     | name = "Speed of the Slowest"
-    , setupPic = "bar"
+    , setupPic = "wagon"
     , difficulty = 1
     , rules = ["The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
     , setup = ["Add the Wagon East with the meeples to the map"]
@@ -230,6 +230,7 @@ doubleTrouble = { newWorld
     , setup = ["Add 2 Meeples to the board for 1 player", "Add the Wagon Bad at the East of the Board"] ++ moveWagon
     , rules  = ["You can do any job with either meeple, but not both"]
     , jobs = soloUtil ++ [[J.On J.OnWagonWest,gain VP 3 ]]
+    , setupPic = "wagon"
     }
 
 ------ SCORING -------
