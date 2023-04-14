@@ -63,6 +63,7 @@ actionStr a =
         Discard c n -> "discard " ++ (jNumToString n) ++ " " ++ (cTypeToString c) ++ " cards"
         RideTrain n -> "ride the train up to " ++ (jNumToString n) ++ " tiles"
         Move n -> "move " ++ pluralJ "space" "spaces" n
+        MountainMove n -> "climb " ++ pluralJ "space" "spaces" n
         Scrap t n -> "scrap " ++ jNumToString n ++ " " ++ cTypeToString t 
         _ -> "-- UNDEFINED actionStr--"
 
