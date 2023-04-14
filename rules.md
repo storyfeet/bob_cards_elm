@@ -401,7 +401,7 @@ When the card is "This card", the symbol will also match the color of the card t
 
 **You cannot discard a Danger Card when the action requires an Item Card Or Visa Versa**
 
-<h2 style="page-break-before:always">Build Railway</h2>
+### Build Railway
 
 <img src="{{$0}}/rules/build_railway.svg">
 
@@ -411,7 +411,7 @@ When the card is "This card", the symbol will also match the color of the card t
 * If this is the most West Railway yet, score 3 VP.
 * Otherwise score 2 VP
 
-## Reveal
+### Reveal
 
 <img src="{{$0}}/rules/reveal.svg">
 
@@ -455,6 +455,22 @@ You may use any movement type to try to move onto face down tiles revealing them
 If your movement does not match the tile, or is not enough to move onto it, you may play another Job to reach the required movement as part of the same action. Or you may choose not move there. Either way you score any VP for revealing it.
 
 You do not have to move onto a tile after revealing it, however that reveal still costs one movement (of any type). You may still use remaining movement to try another direction.
+
+### Events
+
+Event icons are found on mission cards, and cause the Job to happen, when that event happens on the board.
+
+If two jobs have the same trigger, activate them both.
+
+<img src="{{$0}}/rules/events.svg">
+
+The following conditions apply to events, and as with places, meeting the conditions allow you to perform the Icons after them.
+
+<img src="{{$0}}/rules/event_conditions.svg">
+
+Westmost: If the railway you built, or tile you revealed, is further west than any other.
+
+Caused by moving West example: If you flipped the tile by moving west onto it.
 
 Purchase a Card
 -----------
