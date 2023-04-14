@@ -28,8 +28,21 @@ all_pages: cards $(SVGFILES:cards_out/%.svg=cards_out/%.pdf)
 
 cards_file : cards cards_out/all_pages.pdf
 
-cards_out/all_pages.pdf : all_pages
+
+
+
+cards_out/all_pages.pdf : all_pages unite
+
+
+unite : 
 	pdfunite cards_out/cards*.pdf cards_out/card_backs*.pdf cards_out/tiles*.pdf cards_out/tile_backs*.pdf  cards_out/players*.pdf cards_out/player_backs*.pdf cards_out/missions*.pdf cards_out/mission_backs*.pdf cards_out/all_pages.pdf
+
+
+SVG_MISSIONS := $(wildcard cards_out/mission*.svg)
+
+mission_pdfs: cards $(SVG_MISSIONS:cards_out/%.svg=cards_out/%.pdf) 
+
+missions : mission_pdfs unite
 
 	
 clean:

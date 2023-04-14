@@ -89,7 +89,7 @@ theFeast = { preciousCargo
     , difficulty = 2 
     , setupPic = "coop_basic"
     , rules = fedVillage 
-    , setup = []
+    , setup = coopSetup
     , jobs =
         coopUtil ++ [ [J.In J.Village, J.pay Food 5 , J.gain VP 5]
         , [on J.OnDefeatBandits, J.gain Food 2]
@@ -116,7 +116,7 @@ buildingTogether = {
     , difficulty = 2
     , setupPic = "coop_basic"
     , rules = []
-    , setup = []
+    , setup = coopSetup
     , jobs = coopUtil ++ [buildN 2 |> westMost 2, lootDrop Any (D 3)]
     , night = nightPhase Coop 3
     }
@@ -128,7 +128,7 @@ preciousCargo = {
     , difficulty = 1
     , setupPic = "wagon"
     , boards = ["C","D"]
-    , setup = ["- Add a Wagon token to the central start tile" ]
+    , setup = coopSetup ++ ["- Add a Wagon token to the central start tile" ]
     , rules = moveWagon ++ wagonDamage
     , jobs = 
         coopUtil ++ [ buildN 2 |> westMost 0
@@ -146,20 +146,21 @@ dreamWork = {preciousCargo
     , setupPic = "wagon"
     , difficulty = 2
     , rules = ["The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
-    , setup = ["Add the Wagon with the meeples"]
+    , setup = coopSetup ++ wagonSetup
     ,jobs = coopUtil ++ [
         buildN 1 |> westMost 1
         , [on J.OnWagonWest, gain VP 2]
         , lootDrop VP (N 2)
         ]
     }
+
 speedOfTheSlowest : Mission
 speedOfTheSlowest = { preciousCargo 
     | name = "Speed of the Slowest"
     , setupPic = "wagon"
     , difficulty = 1
     , rules = ["The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
-    , setup = ["Add the Wagon East with the meeples to the map"]
+    , setup = coopSetup ++ wagonSetup 
     ,jobs = coopUtil ++ [
         [on J.OnWagonWest, gain VP 3]
         , lootDrop Gold (D 2)
@@ -227,7 +228,7 @@ newWorld = {
 doubleTrouble : Mission
 doubleTrouble = { newWorld 
     | name = "Double Trouble"
-    , setup = ["Add 2 Meeples to the board for 1 player", "Add the Wagon Bad at the East of the Board"] ++ moveWagon
+    , setup = "Add 2 Meeples to the board for 1 player" :: wagonSetup
     , rules  = ["You can do any job with either meeple, but not both"]
     , jobs = soloUtil ++ [[J.On J.OnWagonWest,gain VP 3 ]]
     , setupPic = "wagon"
@@ -339,4 +340,11 @@ nightPhase md d =
 --------------Setups
 standardSetup : List String
 standardSetup = ["Follow the standard game setup"]
+
+wagonSetup : List String
+wagonSetup = ["Add the Wagon to the map with the meeples"]
+
+coopSetup : List String
+coopSetup = ["For every player above 2: Move the Bandit Tracker 1 space."]
+
 
