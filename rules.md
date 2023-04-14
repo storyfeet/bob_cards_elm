@@ -441,7 +441,11 @@ These actions move your player 'n' spaces on the map orthagonaly (that is NWES a
 * Moving onto a mountain costs 2 Movement.
 * Tiles with railway cost 1 Movement.
 * May be combined with *Normal Movement* to move (from water/river) onto a Mountain.
-    
+
+<img src="{{$0}}/rules/movement_train.svg" style="float:left;margin:0px 20px 10px 0px">**Train Movement**
+
+* Move from 1 tile with a railway to another with a railway, at most "n" tiles away.
+
 You may play multiple movement Jobs in the same *action* and combine movement types. *(Though as always, only play 1 Job per card)*
 
 You may use any movement type to try to move onto face down tiles revealing them as you move. 
