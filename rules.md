@@ -351,6 +351,8 @@ Understanding the Job Icons
 
 Square Icons represent a place. Your Meeple must be on that kind of tile, with no bandits on, to perform the action.
 
+The "?" is a condition for everything after it. If you do not meet the condition, you still do everything before (left of) it. If you do, you must do everything before and after to complete the job.
+
 <img src="{{$0}}/rules/places.svg">
 
 ### Resources
