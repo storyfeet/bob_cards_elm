@@ -355,24 +355,27 @@ Square Icons represent a place. Your Meeple must be on that kind of tile, with n
 
 ### Resources
 
-There are 4 key resources in the game, "Gold", "Metal", "Wood" and "Food". They can be paid and gained, to and from the General supply.
-
-<img src="{{$0}}/rules/resources.svg">
+There are 4 key resources in the game, "Gold", "Metal", "Wood" and "Food". 
+* "+n" Will gain that many from the general supply.
+* "-n" Will lose that many to the General supply
 
 'n' On the card will be an actual number.
 
-The grey circles represent a group of 'n' of the same item.
+<img src="{{$0}}/rules/resources.svg">
+
+
+The grey circles represent a group of 'n' of the same resource.
 If there are more than one grey circle, separate grey circles do not have to be the same resource.
 
 ### ⬢ Rolling Dice ⬢
 
 The ⬢ Symbol means Roll Dice. The dice that come with this game have 6 sides, and the numbers [0,0,1,1,1,2] on representing successes.
 
-If using standard D6, treat 3,4,5 as 1 Success, and 6 as 2 Successes.
+<img src="{{$0}}/rules/dice.svg">
 
-If told "+n⬢" Roll 'n' dice and gain 1 of the resource for every success.
+If told "+n⬢" Roll 'n' dice and gain 1 of the resource/ability for every success.
 
-### 'x' Means Any Number
+### 'x' Is the same number for the whole job
 
 When Performing the Job If an action has an 'x' you can choose any number for x : Even Zero. It will be the same number for the whole Job.
 
@@ -387,8 +390,6 @@ There are four actions that involve Cards
 **Scrapping** a Card removes it from your deck completely so you do not see it again. Do not put in in your own discard pile, instead put it in the discard pile matching it's type. eg 'E' Danger cards beside the 'E' Danger draw pile. Starter Cards are removed from the game.
 
 Whenever a player **Gains** a card, they may add it to the top of either their Draw Pile or their Discard Pile.
-
-### Card Types
 
 The four *Card Actions* can be applied to different types of cards. So the Card image will change to match the type.
 
