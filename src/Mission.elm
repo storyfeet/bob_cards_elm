@@ -56,9 +56,12 @@ theRace = {discovery
     | name = "The Race"
     , difficulty = 2
     , jobs = 
-        vsUtil ++ [ [on J.OnReveal,J.In J.MovingWest, gain VP 2 , J.In J.WestMost , gain VP 1 ]
+        vsUtil ++ [ [on J.OnReveal,J.In J.MovingWest, gain VP 2 ]
+        , [on J.OnReveal, J.In J.WestMost , gain VP 1 ]
         , [on J.OnDefeatBandits, gain Gold 1,gain Wood 1,gain Metal 1,gain Food 1]
         ]
+    , setup = ["Players may scrap their Mallets"]
+    , rules = ["Train Rides may go from Village to Village if there are no bandits on either"]
 
     }
 
