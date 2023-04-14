@@ -235,6 +235,7 @@ woodMove w d =
     [ pay Wood w, Move (N d) ]
 
 
+
 scrapFor : CardType -> Resource -> Int -> Job
 scrapFor ct r n =
     [ scrapThis ct, gain r n ]

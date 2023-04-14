@@ -47,7 +47,7 @@ discovery = { name = "Discovery"
     , setup = standardSetup
     , setupPic = "basic_vs"
     , rules = []
-    , jobs =  vsUtil 3 ++ basicVsScoring
+    , jobs =  vsUtil  ++ basicVsScoring
     , night = nightPhase Versus 3
     }
 
@@ -56,7 +56,7 @@ theRace = {discovery
     | name = "The Race"
     , difficulty = 2
     , jobs = 
-        vsUtil 4 ++ [ [on J.OnReveal,J.In J.MovingWest, gain VP 2 , J.In J.WestMost , gain VP 1 ]
+        vsUtil ++ [ [on J.OnReveal,J.In J.MovingWest, gain VP 2 , J.In J.WestMost , gain VP 1 ]
         , [on J.OnDefeatBandits, gain Gold 1,gain Wood 1,gain Metal 1,gain Food 1]
         ]
 
@@ -68,7 +68,7 @@ villageHero = {discovery
     , difficulty = 2
     , rules = fedVillage
     , jobs = 
-        vsUtil 3 ++ [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
+        vsUtil ++ [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
         , [on J.OnBuild, gain VP 1,J.In J.Village, gain VP 1 ]
         , [on J.OnDefeatBandits, gain VP 2,J.In J.Village, gain VP 2 ]
         ]
@@ -79,7 +79,7 @@ builders = {discovery
     | name = "Builders"
     , difficulty = 2
     , rules = []
-    , jobs = vsUtil 3 ++ [buildN 2 |> westMost 2,lootDrop Any (D 3)] 
+    , jobs = vsUtil ++ [buildN 2 |> westMost 2,lootDrop Any (D 3)] 
     }
 
 
@@ -91,7 +91,7 @@ theFeast = { preciousCargo
     , rules = fedVillage 
     , setup = []
     , jobs =
-        coopJobs ++ [ [J.In J.Village, J.pay Food 5 , J.gain VP 5]
+        coopUtil ++ [ [J.In J.Village, J.pay Food 5 , J.gain VP 5]
         , [on J.OnDefeatBandits, J.gain Food 2]
         ]
     }
@@ -117,7 +117,7 @@ buildingTogether = {
     , setupPic = "coop_basic"
     , rules = []
     , setup = []
-    , jobs = coopJobs ++ [buildN 2 |> westMost 2, lootDrop Any (D 3)]
+    , jobs = coopUtil ++ [buildN 2 |> westMost 2, lootDrop Any (D 3)]
     , night = nightPhase Coop 3
     }
 
@@ -131,7 +131,7 @@ preciousCargo = {
     , setup = ["- Add a Wagon token to the central start tile" ]
     , rules = moveWagon ++ wagonDamage
     , jobs = 
-        coopJobs ++ [ buildN 2 |> westMost 0
+        coopUtil ++ [ buildN 2 |> westMost 0
         , wagonEastWest 2 
         , [J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
         , vpDrop 2
@@ -147,7 +147,7 @@ dreamWork = {preciousCargo
     , difficulty = 2
     , rules = ["The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
     , setup = ["Add the Wagon with the meeples"]
-    ,jobs = coopJobs ++ [
+    ,jobs = coopUtil ++ [
         buildN 1 |> westMost 1
         , [on J.OnWagonWest, gain VP 2]
         , lootDrop VP (N 2)
@@ -160,7 +160,7 @@ speedOfTheSlowest = { preciousCargo
     , difficulty = 1
     , rules = ["The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
     , setup = ["Add the Wagon East with the meeples to the map"]
-    ,jobs = coopJobs ++ [
+    ,jobs = coopUtil ++ [
         [on J.OnWagonWest, gain VP 3]
         , lootDrop Gold (D 2)
         ]
@@ -173,7 +173,7 @@ thereAndBackAgain = {preciousCargo
     , difficulty = 2
     , setupPic = "coop_basic"
     , setup = ["Use a single neutral score token", "Place the wagon on the start tile"]
-    , jobs = coopJobs ++ [
+    , jobs = coopUtil ++ [
         [on J.OnReveal, J.In J.WestMost, gain VP 3]
         , [ on J.OnDefeatBandits, J.Gain Any (D 3)]
         ]
@@ -187,7 +187,7 @@ areWeTheBaddies = { preciousCargo
     , setupPic = "coop_basic"
     , setup = freeWeapon
     , rules = ["Only players who contributed to the bandit defeat get to roll for gold" ]
-    , jobs = coopJobs ++ [
+    , jobs = coopUtil ++ [
         [on J.OnDefeatBandits , gain VP 3, J.Gain Gold (D 3)]
         ]
     }
@@ -200,7 +200,7 @@ stopThatWagon = { preciousCargo
     , setup = freeWeapon ++ [ "Place the wagon 2 tiles West of all players"]
     , rules = ["Players may attack the wagon", "At the end of the Night phase" , " - Move the Wagon 1 space West revealing tiles as needed"," - Add a bandit to the Wagon's Tile"]
     , jobs = 
-        coopJobs ++ [ [J.On (J.OnWagonDamage (X 1)), J.Gain VP (X 2) ]
+        coopUtil ++ [ [J.On (J.OnWagonDamage (X 1)), J.Gain VP (X 2) ]
         , [J.On J.OnDefeatBandits,gain VP 1]
         ]
     }
@@ -236,11 +236,11 @@ doubleTrouble = { newWorld
 ------ SCORING -------
 
 
-vsUtil : Int -> List Job
-vsUtil n = [cardsForMove n 1,pointsForScrap 4 3,goldForTrain 1 5 ] 
+vsUtil : List Job
+vsUtil = [vpCardsForClimb 2 2 1,pointsForScrap 4 3,goldForTrain 1 5 ] 
 
-coopJobs : List Job
-coopJobs = [goldForTrain 2 3]
+coopUtil : List Job
+coopUtil = [goldForTrain 1 3]
 
 soloUtil : List Job
 soloUtil = [goldForTrain 1 4]
@@ -250,9 +250,9 @@ soloUtil = [goldForTrain 1 4]
 --cardsForFood n f =
 --    [J.Discard J.TAny (N n),gain J.Food f]
 
-cardsForMove : Int -> Int -> Job
-cardsForMove n d = 
-    [J.Discard J.TAny ( N n),J.move d]
+
+vpCardsForClimb: Int -> Int -> Int -> Job
+vpCardsForClimb v c d = [pay VP v ,J.Discard J.TAny (N c),J.MountainMove (N d)]
 
 pointsForScrap : Int -> Int -> Job
 pointsForScrap n s =
