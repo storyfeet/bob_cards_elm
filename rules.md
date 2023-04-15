@@ -490,9 +490,9 @@ To attack bandits on the same tile as you, play a job with the following symbol:
 
 <img src="{{$0}}/jobs/attack.svg" width="25px" height="25px">
 
-Then see "Battles"
+Then see "Attacking"
 
-Battles
+Attacking
 --------
 
 <img src="{{$0}}/rules/battles.svg">
