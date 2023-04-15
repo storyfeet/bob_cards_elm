@@ -527,7 +527,9 @@ When a player performs a job with a last action that produces a Dice amount of a
 
 The other players may then activate any of their jobs that also produce the same resource by dice, paying their appropriate cost.
 
-All players then roll and gain the full amount they rolled, plus half of the amount the other players combined rolled (rounded up).
+All players then roll and gain the full amount they rolled.
+
+They also gain half, rounded up, of what the co-worker who rolled the most, not themselves, rolled.
 
 ## Trade
 
