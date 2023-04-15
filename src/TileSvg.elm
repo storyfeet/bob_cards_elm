@@ -45,7 +45,7 @@ back t =
     String.join "\n" [
         img -1 -1 47 47 (tilePath ++ "back.svg") []
         , bStar 17.5 30 t.backBandits
-        , text "Arial" 3 [xy 4 40,flNoStk "black",fprop "opacity" 0.5] Config.version
+        , text "Arial" 3 [xy 4 40,flNoStk "white",fprop "opacity" 0.6] Config.version
     ]
 
 tileJob : Tile -> String

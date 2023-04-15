@@ -19,7 +19,7 @@ h1:not(:first-of-type){
     page-break-before:always;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4{
     page-break-after:avoid;
 }
 </style>
@@ -181,7 +181,7 @@ Follow the instructions below, with the diagram on the back of the Mission card,
 Place the Compass Dice (With faces N,S,W,W,W,+) next it.
 
 
-### Player Setup 
+<h3 style="page-break-before:always">Player Setup</h3>
 
 <img src="{{cat $0 "/rules/player_setup.svg"}}">
 
