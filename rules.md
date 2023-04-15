@@ -477,15 +477,25 @@ Purchase a Card
 
 The Cards on the *Trade Row* can be bought and added to your personal Deck. These increase your skills in the game.
 
-Simply perform the job in the top corner of the card, and add it to the top of either your draw deck or discard pile.
+Simply perform a job from the top corner of the card, and add the card to the top of either your draw deck or discard pile.
 
-After that move the next cards right, to fill in the space, and deal a new card from the Trade Row at the left end.
+After that move the cards right to fill in the space, and deal a new card from the Trade Row at the left end.
 
 (There should always be 5 cards available on the trade row)
 
+Attack Bandits
+--------------
 
-Attacking and Defending
+To attack bandits on the same tile as you, play a job with the following symbol: 
+
+<img src="{{$0}}/jobs/attack.svg" width="25px" height="25px">
+
+Then see "Battles"
+
+Battles
 --------
+
+<img src="{{$0}}/rules/battles.svg">
 
 Attacks work the same way whether Players or Bandits are attacking.
 * Bandits have 1⬢ attack and 1⬢ defence for every bandit on the tile.
