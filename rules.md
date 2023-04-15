@@ -543,7 +543,7 @@ They also gain half, rounded up, of what the co-worker who rolled the most, not 
 
 ## Trade
 
-When two players are on the same tile they may trade. The player who's turn it is offers the trade, and if it is agreed, **the active player discards an item card** and players proceed with the trade.
+When two players are on the same tile, or they are both on tiles with railway, they may trade. The player who's turn it is offers the trade, and if it is agreed, **the active player discards an item card** and players proceed with the trade.
 
 * Item Cards are traded from one players hand to the top of the other player's Draw or Discard pile.
 * Resources are traded directly.
