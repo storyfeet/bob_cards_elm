@@ -28,7 +28,7 @@ back  =
     [ rect -3 -3 56 76 [flNoStk "#f7c9b4"]
     , rect 5 5 40 60 [flStk "none" "black" 1]
     , img 5 15 40 40 "../pics/back_logo.svg" []
-    , text "Arial" 3 [xy 6 64,flNoStk "black",opacity 0.5] Config.version
+    , text "Arial" 4 [xy 6 64,flNoStk "black",opacity 0.6] Config.version
 
     ]
 

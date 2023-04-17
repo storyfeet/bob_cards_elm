@@ -5,6 +5,7 @@ import JobSvg as JSV exposing (job)
 import HasPicList as PicLists
 import Cards 
 import ColorCodes as CC
+import Config
 
 front : PL.Player -> String
 front p = 
@@ -37,6 +38,8 @@ back p =
         , p.startCards 
         |> List.map (\(c, n) -> String.fromInt n ++ " * " ++ c.name)
         |> textLines 5 36 6 [font "Arial" 4]
+        , text "Arial" 4 [xy 95 85 ,flNoStk "black",opacity 0.6,txRight] Config.version
+
         ]
 
 

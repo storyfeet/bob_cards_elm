@@ -46,7 +46,7 @@ back cam =
         , namedCheckGrid 8 20 ["d20","d12"] cam.boards 
         , setupPic cam.setupPic
         , cam.setup |> ruleWrap 40 |> textLines 112 15 6 [font "Arial" 4,txSpaces] 
-        , text "Arial" 3 [xy 6 72,flNoStk "black",opacity 0.5] Config.version
+        , text "Arial" 4 [xy 4.5 68,flNoStk "black",opacity 0.6] Config.version
         ]
 
 setupPic : String -> String
