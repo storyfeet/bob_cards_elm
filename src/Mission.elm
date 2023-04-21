@@ -82,7 +82,7 @@ builders = {discovery
     | name = "Builders"
     , difficulty = 2
     , rules = []
-    , jobs = vsUtil ++ [buildN 2 |> westMost 2,lootDrop Any (D 3)] 
+    , jobs = vsUtil ++ [[J.Discard J.TAny (N 3),pay Gold 1, pay Metal 1, pay Wood 1,J.BuildRail] , buildN 3 |> westMost 2,lootDrop Any (D 3)] 
     }
 
 

@@ -65,6 +65,7 @@ actionStr a =
         Move n -> "move " ++ pluralJ "space" "spaces" n
         MountainMove n -> "climb " ++ pluralJ "space" "spaces" n
         Scrap t n -> "scrap " ++ jNumToString n ++ " " ++ cTypeToString t 
+        BuildRail -> "build a railway"
         _ -> "-- UNDEFINED actionStr--"
 
 
