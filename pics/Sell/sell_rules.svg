@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="sell_rules.svg"
-   inkscape:export-filename="../../../../../TashaShare/games/Deck Goes West/rules.jpg"
+   inkscape:export-filename="../../../../../TashaShare/games/Deck Goes West/deck goes west rules.pdf"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,9 +28,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.4423191"
-     inkscape:cx="347.70393"
-     inkscape:cy="1038.2585"
+     inkscape:zoom="1.079099"
+     inkscape:cx="392.45704"
+     inkscape:cy="712.1682"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -98,7 +98,7 @@
     </marker>
     <marker
        style="overflow:visible"
-       id="Arrow5"
+       id="Arrow5-3-2"
        refX="0"
        refY="0"
        orient="auto-start-reverse"
@@ -114,11 +114,11 @@
          transform="scale(0.5)"
          style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
          d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
-         id="path8893" />
+         id="path8893-6-3" />
     </marker>
     <marker
        style="overflow:visible"
-       id="EmptyTriangleIn"
+       id="EmptyTriangleIn-7-7"
        refX="0"
        refY="0"
        orient="auto-start-reverse"
@@ -133,11 +133,11 @@
          transform="scale(0.5)"
          style="fill:context-fill;fill-rule:evenodd;stroke:context-stroke;stroke-width:2"
          d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path153" />
+         id="path153-5-5" />
     </marker>
     <marker
        style="overflow:visible"
-       id="EmptyTriangleIn-4"
+       id="EmptyTriangleIn-4-3-9"
        refX="0"
        refY="0"
        orient="auto-start-reverse"
@@ -152,11 +152,11 @@
          transform="scale(0.5)"
          style="fill:context-fill;fill-rule:evenodd;stroke:context-stroke;stroke-width:2"
          d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path153-7" />
+         id="path153-7-5-2" />
     </marker>
     <marker
        style="overflow:visible"
-       id="EmptyTriangleIn-4-5"
+       id="EmptyTriangleIn-4-5-6-2"
        refX="0"
        refY="0"
        orient="auto-start-reverse"
@@ -171,7 +171,7 @@
          transform="scale(0.5)"
          style="fill:context-fill;fill-rule:evenodd;stroke:context-stroke;stroke-width:2"
          d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path153-7-6" />
+         id="path153-7-6-2-8" />
     </marker>
   </defs>
   <g
@@ -183,58 +183,7 @@
        id="layer15"
        inkscape:label="DGW"
        style="display:inline"
-       transform="translate(-0.52336156,-3.7624861)">
-      <g
-         id="g18697"
-         transform="translate(-2.6458334,5.8208334)">
-        <circle
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#d45500;stroke-width:0.816715;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-           id="path12051"
-           r="7.8614154"
-           cy="10.54619"
-           cx="157.73949" />
-        <path
-           style="display:inline;fill:none;fill-rule:evenodd;stroke:#d45500;stroke-width:0.965;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow5)"
-           d="m 149.01767,10.547049 -1.46458,0.02204"
-           id="path15515"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-rule:evenodd;stroke:#d45500;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#EmptyTriangleIn)"
-           d="m 157.73981,2.4155002 -0.001,-0.7626539"
-           id="path18202"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-rule:evenodd;stroke:#d45500;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#EmptyTriangleIn-4)"
-           d="m 157.73688,18.703797 0.008,0.762619"
-           id="path18202-6"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-rule:evenodd;stroke:#d45500;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#EmptyTriangleIn-4-5)"
-           d="m 165.93761,10.548798 0.76262,-0.008"
-           id="path18202-6-9"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="cc" />
-      </g>
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:10px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;display:inline;fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:2.89134;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
-       x="247.40755"
-       y="123.87882"
-       id="text18860"
-       transform="matrix(0.26458333,0,0,0.26458333,38.444706,-14.377408)"><tspan
-         sodipodi:role="line"
-         id="tspan18858"
-         x="252.40755"
-         y="123.87882"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Gargi-1.2b';-inkscape-font-specification:'Gargi-1.2b Bold';text-align:center;text-anchor:middle;fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:2.89134;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke">Deck Goes West</tspan></text>
+       transform="translate(-0.52336156,-3.7624861)" />
     <g
        id="g9512"
        transform="matrix(0.32942322,0,0,0.32942322,42.466074,199.58056)"
@@ -382,9 +331,9 @@
        transform="translate(-20.643637,7.3640777)"><tspan
          x="102.99165"
          y="286.70901"
-         id="tspan43262"><tspan
+         id="tspan86248"><tspan
            style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-           id="tspan43260">Matthew Stoodley    matt.storyfeet@gmail.com</tspan></tspan></text>
+           id="tspan86246">Matthew Stoodley    matt.storyfeet@gmail.com</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -430,17 +379,17 @@
        transform="translate(-8.4632839,-22.812626)"><tspan
          x="16.462694"
          y="48.718864"
-         id="tspan43264">                          After choosing a mission, which can be cooperative, competetive or solo, players </tspan><tspan
+         id="tspan86250">                          After choosing a mission, which can be cooperative, competetive or solo, players </tspan><tspan
          x="16.462694"
          y="54.010524"
-         id="tspan43266">attempt to complete it's objectives by travelling West on the tiled map, revealing tiles as they go.
+         id="tspan86252">attempt to complete it's objectives by travelling West on the tiled map, revealing tiles as they go.
 </tspan><tspan
          x="16.462694"
          y="59.302188"
-         id="tspan43268">Each player manages their own deck of cards. They can improve it by buying better cards, with </tspan><tspan
+         id="tspan86254">Each player manages their own deck of cards. They can improve it by buying better cards, with </tspan><tspan
          x="16.462694"
          y="64.593852"
-         id="tspan43270">better &quot;Jobs&quot;, but they will also pick up &quot;Danger Cards&quot; at times.</tspan></text>
+         id="tspan86256">better &quot;Jobs&quot;, but they will also pick up &quot;Danger Cards&quot; at times.</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;white-space:pre;inline-size:191.913;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -450,7 +399,7 @@
        transform="translate(27.483698,17.784019)"><tspan
          x="16.462694"
          y="48.718864"
-         id="tspan43272">Setup is on the back of the mission cards, and will look something like this: </tspan></text>
+         id="tspan86258">Setup is on the back of the mission cards, and will look something like this: </tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -487,7 +436,7 @@
          y="153.84509"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">Jobs: <tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:sans-serif"
-   id="tspan19517">Are everywhere and like this: </tspan></tspan></text>
+   id="tspan19517">Are everywhere and look like this: </tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-decoration-color:#000000;white-space:pre;inline-size:95.0189;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -497,13 +446,13 @@
        transform="translate(-10.068893,-26.484901)"><tspan
          x="16.711754"
          y="188.76294"
-         id="tspan43274">                                   Players each take a </tspan><tspan
+         id="tspan86260">                                   Players each take a </tspan><tspan
          x="16.711754"
          y="194.05459"
-         id="tspan43276">&quot;character card&quot;, then collect the resources, and </tspan><tspan
+         id="tspan86262">&quot;character card&quot;, then collect the resources, and </tspan><tspan
          x="16.711754"
          y="199.34625"
-         id="tspan43278">&quot;start cards&quot; listed on the back</tspan></text>
+         id="tspan86264">&quot;start cards&quot; listed on the back</tspan></text>
     <g
        id="g48480"
        transform="translate(-0.37830071,-19.576293)">
@@ -1038,12 +987,12 @@
          transform="translate(-6.2823385,0.20831918)"><tspan
            x="39.728672"
            y="223.76596"
-           id="tspan43280">Character<tspan
+           id="tspan86266">Character<tspan
    y="223.76596"
-   id="tspan43282"> </tspan></tspan><tspan
+   id="tspan86268"> </tspan></tspan><tspan
            x="39.728672"
            y="229.05761"
-           id="tspan43284">specific Jobs</tspan></text>
+           id="tspan86270">specific Jobs</tspan></text>
       <path
          style="fill:#04d90b;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;stroke-dasharray:none;marker-end:url(#TriangleStart);paint-order:fill markers stroke;stop-color:#000000"
          d="m 43.553692,223.68149 4.868741,-6.59875"
@@ -1070,31 +1019,31 @@
        transform="translate(-6.6573156,37.022084)"><tspan
          x="122.61971"
          y="188.62314"
-         id="tspan43286">- On Item cards: Discard to use.
+         id="tspan86272">- On Item cards: Discard to use.
 </tspan><tspan
          x="122.61971"
          y="193.91479"
-         id="tspan43288">- On Danger cards: Complete to remove
+         id="tspan86274">- On Danger cards: Complete to remove
 </tspan><tspan
          x="122.61971"
          y="199.20645"
-         id="tspan43290">- On Tiles: Lie your meeple down to use
+         id="tspan86276">- On Tiles: Lie your meeple down to use
 </tspan><tspan
          x="122.61971"
          y="204.4981"
-         id="tspan43292">- On Character Cards: Tap / turn 90° to use
+         id="tspan86278">- On Character Cards: Tap / turn 90° to use
 </tspan><tspan
          x="122.61971"
          y="209.78976"
-         id="tspan43294">- On Mission Cards: Always available
+         id="tspan86280">- On Mission Cards: Always available
 </tspan><tspan
          x="122.61971"
          y="215.08142"
-         id="tspan43296">- At the top of Trade Row cards: 
+         id="tspan86282">- At the top of Trade Row cards: 
 </tspan><tspan
          x="122.61971"
          y="220.37307"
-         id="tspan43298">          Complete to buy the card 
+         id="tspan86284">          Complete to buy the card 
 </tspan></text>
     <text
        xml:space="preserve"
@@ -1105,20 +1054,20 @@
        transform="translate(-5.0576692,-19.971978)"><tspan
          x="13.504192"
          y="235.17525"
-         id="tspan43300">When a players draw pile is empty, and they need </tspan><tspan
+         id="tspan86286">When a player's draw pile is empty, and they </tspan><tspan
          x="13.504192"
          y="240.4669"
-         id="tspan43302">to draw more cards, they shuffle the discard pile </tspan><tspan
+         id="tspan86288">need to draw more cards, they shuffle the discard </tspan><tspan
          x="13.504192"
          y="245.75856"
-         id="tspan43304">into a new draw pile.
+         id="tspan86290">pile into a new draw pile.
 </tspan><tspan
          x="13.504192"
          y="251.05021"
-         id="tspan43306">This way, cards are used again, and &quot;Danger </tspan><tspan
+         id="tspan86292">This way, cards are used again, and &quot;Danger </tspan><tspan
          x="13.504192"
          y="256.34187"
-         id="tspan43308">Cards&quot; can come back to haunt you.</tspan></text>
+         id="tspan86294">Cards&quot; can come back to haunt you.</tspan></text>
     <g
        id="g14379"
        transform="translate(0,-7.4083337)">
@@ -6299,12 +6248,12 @@
          transform="translate(-0.0290599,4.302918)"><tspan
            x="85.275192"
            y="117.34798"
-           id="tspan43310">Danger<tspan
+           id="tspan86296">Danger<tspan
    y="117.34798"
-   id="tspan43312"> </tspan></tspan><tspan
+   id="tspan86298"> </tspan></tspan><tspan
            x="85.275192"
            y="122.63964"
-           id="tspan43314">Cards</tspan></text>
+           id="tspan86300">Cards</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;text-anchor:middle;white-space:pre;inline-size:20.2441;display:inline;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -6314,12 +6263,12 @@
          transform="translate(-4.9790122,52.946608)"><tspan
            x="39.879742"
            y="92.723656"
-           id="tspan43316">Random<tspan
+           id="tspan86302">Random<tspan
    y="92.723656"
-   id="tspan43318"> </tspan></tspan><tspan
+   id="tspan86304"> </tspan></tspan><tspan
            x="39.879742"
            y="98.015323"
-           id="tspan43320">tiles</tspan></text>
+           id="tspan86306">tiles</tspan></text>
       <path
          style="fill:#ff0000;stroke:#ff0000;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;marker-end:url(#marker52273);paint-order:fill markers stroke;stop-color:#000000"
          d="m 42.317019,143.77207 10.725859,-8.85406"
@@ -6333,12 +6282,12 @@
          transform="translate(-5.0907147,-14.662638)"><tspan
            x="29.800756"
            y="147.39647"
-           id="tspan43322">facedown<tspan
+           id="tspan86308">facedown<tspan
    y="147.39647"
-   id="tspan43324"> </tspan></tspan><tspan
+   id="tspan86310"> </tspan></tspan><tspan
            x="29.800756"
            y="152.68812"
-           id="tspan43326">tiles</tspan></text>
+           id="tspan86312">tiles</tspan></text>
       <path
          style="fill:#ff0000;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;marker-end:url(#TriangleStart);paint-order:fill markers stroke;stop-color:#000000"
          d="m 31.287624,135.81716 10.386767,-3.52537"
@@ -6387,16 +6336,16 @@
          transform="translate(3.5777863,-11.855461)"><tspan
            x="187.71313"
            y="135.99475"
-           id="tspan43328">Mission<tspan
+           id="tspan86314">Mission<tspan
    y="135.99475"
-   id="tspan43330"> </tspan></tspan><tspan
+   id="tspan86316"> </tspan></tspan><tspan
            x="187.71313"
            y="141.2864"
-           id="tspan43332">specific jobs
+           id="tspan86318">specific jobs
 </tspan><tspan
            x="187.71313"
            y="146.57806"
-           id="tspan43334">and scoring</tspan></text>
+           id="tspan86320">and scoring</tspan></text>
       <path
          style="fill:none;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;marker-end:url(#marker52273);paint-order:fill markers stroke;stop-color:#000000"
          d="m 181.27831,125.18825 -10.78375,0.97693"
@@ -6464,10 +6413,10 @@
          transform="translate(10.997293,-13.341429)"><tspan
            x="46.676704"
            y="98.54969"
-           id="tspan43336">Compass and </tspan><tspan
+           id="tspan86322">Compass and </tspan><tspan
            x="46.676704"
            y="103.84136"
-           id="tspan43338">Bandit Dice</tspan></text>
+           id="tspan86324">Bandit Dice</tspan></text>
       <path
          style="fill:#04d90b;fill-opacity:1;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:round;marker-end:url(#TriangleStart);paint-order:fill markers stroke;stop-color:#000000"
          d="m 80.879425,86.952382 5.132123,1.87275"
@@ -6525,15 +6474,15 @@
        transform="translate(101.31511,-7.2914994)"><tspan
          x="13.566311"
          y="271.5863"
-         id="tspan43340">                                  Have faces [0,0,1,1,1,2]. 
+         id="tspan86326">                                  Have faces [0,0,1,1,1,2]. 
 </tspan><tspan
          x="13.566311"
          y="276.87796"
-         id="tspan43342">To roll for 'n' resources, players roll 'n'
+         id="tspan86328">To roll for 'n' resources, players roll 'n'
 </tspan><tspan
          x="13.566311"
          y="282.16961"
-         id="tspan43344">dice and gain the total rolled.</tspan></text>
+         id="tspan86330">dice and gain the total rolled.</tspan></text>
     <g
        id="g19654">
       <g
@@ -6603,7 +6552,7 @@
          transform="translate(5.4157731,-102.69322)"><tspan
            x="136.72963"
            y="281.60608"
-           id="tspan43346">If in a forest, roll 2 dice for food</tspan></text>
+           id="tspan86332">If in a forest, roll 2 dice for food</tspan></text>
     </g>
     <g
        id="g19707"
@@ -6729,13 +6678,13 @@
          transform="translate(-2.5882342,-78.802483)"><tspan
            x="145.62706"
            y="264.53271"
-           id="tspan43348">Scrap this card, then for every </tspan><tspan
+           id="tspan86334">Scrap this card, then for every </tspan><tspan
            x="145.62706"
            y="269.82437"
-           id="tspan43350">danger card you scrap, draw a </tspan><tspan
+           id="tspan86336">danger card you scrap, draw a </tspan><tspan
            x="145.62706"
            y="275.11602"
-           id="tspan43352">card</tspan></text>
+           id="tspan86338">card</tspan></text>
     </g>
     <g
        id="g19747">
@@ -6821,10 +6770,10 @@
          transform="translate(-4.336078,-67.751969)"><tspan
            x="146.71703"
            y="279.77768"
-           id="tspan43354">Pay 1 wood for 2 dice defence </tspan><tspan
+           id="tspan86340">Pay 1 wood for 2 dice defence </tspan><tspan
            x="146.71703"
            y="285.06933"
-           id="tspan43356">and 4 dice attack (In battle)</tspan></text>
+           id="tspan86342">and 4 dice attack (In battle)</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -6846,13 +6795,13 @@
        transform="translate(0,-5.2916669)"><tspan
          x="7.6211586"
          y="53.686558"
-         id="tspan43358">                               During the &quot;Day&quot; phase, players draw to 6 cards, and then take turns to perform </tspan><tspan
+         id="tspan86344">                               During the &quot;Day&quot; phase, players draw to 6 cards, and then take turns to perform </tspan><tspan
          x="7.6211586"
          y="58.978221"
-         id="tspan43360">&quot;Jobs&quot; (more below), buy cards from the &quot;Trade Row&quot;, or Trade with each other. Doing jobs together </tspan><tspan
+         id="tspan86346">&quot;Jobs&quot; (more below), buy cards from the &quot;Trade Row&quot;, or Trade with each other. Doing jobs together </tspan><tspan
          x="7.6211586"
          y="64.269885"
-         id="tspan43362">gains a bonus.  At &quot;Night&quot;, Bandits attack, move, and appear. All players take a Danger card.</tspan></text>
+         id="tspan86348">gains a bonus.  At &quot;Night&quot;, Bandits attack, move, and appear. All players take a Danger card.</tspan></text>
     <g
        id="g19717"
        transform="translate(0,-0.45789199)">
@@ -6942,30 +6891,30 @@
        transform="translate(-0.26513892,-4.0289696)"><tspan
          x="9.2713966"
          y="248.71548"
-         id="tspan43364">                     On the same tile as players at night, </tspan><tspan
+         id="tspan86350">                     If on the same tile as players at night, </tspan><tspan
          x="9.2713966"
          y="254.00714"
-         id="tspan43366">will attack. Players respond with Attack and </tspan><tspan
+         id="tspan86352">will attack. Players respond with Attack and </tspan><tspan
          x="9.2713966"
          y="259.29879"
-         id="tspan43368">Defense Jobs.  Any hits they take are added to </tspan><tspan
+         id="tspan86354">Defense Jobs.  Any hits they take are added to </tspan><tspan
          x="9.2713966"
          y="264.59045"
-         id="tspan43370">their deck as Danger Cards.
+         id="tspan86356">their deck as Danger Cards.
 </tspan><tspan
          x="9.2713966"
          y="269.88211"
-         id="tspan43372">Bandits then move 1 space according to the </tspan><tspan
+         id="tspan86358">Bandits then move 1 space according to the </tspan><tspan
          x="9.2713966"
          y="275.17376"
-         id="tspan43374">Compass Dice [N,S,W,W,W,'+']. ('+' adds a bandit)
+         id="tspan86360">Compass Dice [N,S,W,W,W,'+']. ('+' adds a bandit)
 </tspan><tspan
          x="9.2713966"
          y="280.46542"
-         id="tspan43376">Bandits appear at the star points      matching the </tspan><tspan
+         id="tspan86362">Bandits appear at the star points      matching the </tspan><tspan
          x="9.2713966"
          y="285.75708"
-         id="tspan43378">players roll of a D20 (easier) or D12 (harder)  </tspan></text>
+         id="tspan86364">players roll of a D20 (easier) or D12 (harder)  </tspan></text>
     <g
        id="g34738"
        transform="matrix(0.52855851,0,0,0.52855851,10.078981,201.37192)">
@@ -6989,6 +6938,156 @@
          font-weight="bold"
          text-anchor="middle"
          id="text27748">n</text>
+    </g>
+    <g
+       id="g12074"
+       style="display:inline;fill:#006b0d;fill-opacity:1;stroke-width:1.50534"
+       transform="matrix(0.67007939,0,0,0.65857449,43.819821,128.13839)">
+      <g
+         id="g18697-9-9"
+         transform="matrix(1.4603192,0,0,1.559704,-101.73749,-193.21552)"
+         style="display:inline;fill:#006b0d;fill-opacity:1;stroke-width:0.997445">
+        <circle
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#d45500;stroke-width:0.814629;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+           id="path12051-1-7"
+           r="7.8614154"
+           cy="10.54619"
+           cx="157.73949" />
+        <path
+           style="display:inline;fill:none;fill-rule:evenodd;stroke:#d45500;stroke-width:0.962535;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow5-3-2)"
+           d="m 149.01767,10.547049 -1.46458,0.02204"
+           id="path15515-2-3"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#d45500;stroke-width:0.264323;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#EmptyTriangleIn-7-7)"
+           d="m 157.73981,2.4155002 -0.001,-0.7626539"
+           id="path18202-7-6"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#d45500;stroke-width:0.264323;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#EmptyTriangleIn-4-3-9)"
+           d="m 157.73688,18.703797 0.008,0.762619"
+           id="path18202-6-0-1"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#d45500;stroke-width:0.264323;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#EmptyTriangleIn-4-5-6-2)"
+           d="m 165.93761,10.548798 0.76262,-0.008"
+           id="path18202-6-9-9-2"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:28.2984px;line-height:1.25;font-family:sans-serif;display:inline;fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:1.11528;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="111.58858"
+         y="-164.42567"
+         id="text12494-1"><tspan
+           sodipodi:role="line"
+           id="tspan12492-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2984px;font-family:'Gargi-1.2b';-inkscape-font-specification:'Gargi-1.2b';fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:1.11528;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           x="111.58858"
+           y="-164.42567">W</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:25.4px;line-height:1.25;font-family:sans-serif;display:inline;fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:1.10277;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="141.89293"
+         y="-169.05353"
+         id="text12490-7"><tspan
+           sodipodi:role="line"
+           id="tspan12488-9"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:'Gargi-1.2b';-inkscape-font-specification:'Gargi-1.2b';fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:1.10277;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           x="141.89293"
+           y="-169.05353">est</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:25.4px;line-height:1.25;font-family:sans-serif;display:inline;fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:1.00105;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="30.047821"
+         y="-169.257"
+         id="text12482-5"><tspan
+           sodipodi:role="line"
+           id="tspan12480-6"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:'Gargi-1.2b';-inkscape-font-specification:'Gargi-1.2b';fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:1.00105;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           x="30.047821"
+           y="-169.257">eck</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:1.00105;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="5.5665364"
+         y="-164.31276"
+         id="text12482-5-2"><tspan
+           sodipodi:role="line"
+           id="tspan12480-6-0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Gargi-1.2b';-inkscape-font-specification:'Gargi-1.2b';fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:1.00105;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           x="5.5665364"
+           y="-164.31276">D</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:12.7px;line-height:1.25;font-family:sans-serif;display:inline;fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:1.00105;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="76.605652"
+         y="-169.58377"
+         id="text12486-2"><tspan
+           sodipodi:role="line"
+           id="tspan12484-9"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:'Gargi-1.2b';-inkscape-font-specification:'Gargi-1.2b';fill:#d45500;fill-opacity:1;stroke:#672900;stroke-width:1.00105;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           x="76.605652"
+           y="-169.58377">Goes</tspan></text>
+      <g
+         id="g27477-1"
+         style="display:inline;fill:#006b0d;fill-opacity:1;stroke-width:1.50534"
+         transform="translate(268.93974,41.644875)">
+        <path
+           style="fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.398288px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -166.53848,-207.72668 0.32896,-0.53965 c 1.78188,-0.1056 2.71299,0.20303 5.04874,-0.39818 1.64595,-0.42366 2.64965,0.59825 3.54533,1.02233 l -2.30345,0.45957 c 0.73043,0.24289 1.51253,0.38115 2.18845,0.73441 0,0 -2.22516,1.16862 -3.51167,0.67078 -1.68769,-0.65309 -4.89446,-0.31487 -4.89446,-0.31487 l -0.9219,-0.8122 0.20911,-1.36184 z"
+           id="path27150-2"
+           sodipodi:nodetypes="ccscccscccc" />
+        <path
+           style="display:inline;fill:none;fill-opacity:1;stroke:#672900;stroke-width:0.398288px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -160.41755,-205.77357 c -0.32875,-0.33728 -0.72568,-0.73979 -1.0079,-1.05984"
+           id="path27334-1-7"
+           sodipodi:nodetypes="cc" />
+        <g
+           id="path20067-0"
+           style="fill:#672900;fill-opacity:1;stroke-width:1.50534">
+          <path
+             style="color:#000000;fill:#672900;fill-opacity:1;fill-rule:evenodd;stroke-width:1.50534;-inkscape-stroke:none"
+             d="m -159.92187,-207.56445 c 0,0 -6.13295,-0.27268 -9.19337,-0.11114 -1.33139,0.0703 -2.64005,0.52476 -3.97213,0.46913 -0.79905,-0.0334 -1.55198,-0.44337 -2.35093,-0.47908 -0.70117,-0.0313 -1.39184,0.19329 -2.09249,0.23473 -7.13718,0.42217 -21.44851,0.13843 -21.44851,0.13843 l -1.16919,-0.95395 -2.46388,1.34543 2.48137,1.34542 1.1557,-0.97127 c 0,0 14.26679,0.27525 21.38233,-0.13906 0.7138,-0.0416 2.13212,-0.23509 2.13212,-0.23509 0.7304,-0.0805 1.54815,0.48418 2.28296,0.4794 1.63094,-0.0106 2.59994,-0.46042 4.23088,-0.47104 2.81028,-0.0183 6.2208,0.13005 9.03108,0.11177 0.5866,0.60215 0.57011,-1.36218 -0.006,-0.76368 z"
+             id="path27052-9"
+             sodipodi:nodetypes="csssscccccsssscc" />
+          <g
+             id="g27046-3"
+             style="fill:#672900;fill-opacity:1;stroke-width:1.50534">
+            <path
+               d="m -200.14849,-208.26633 3.70867,1.32138 -3.69118,1.36947 c 0.66762,-0.78808 0.66034,-1.90815 -0.0175,-2.69085 z"
+               style="fill:#672900;fill-opacity:1;fill-rule:evenodd;stroke-width:0.506342"
+               id="path27048-6" />
+          </g>
+        </g>
+        <path
+           style="display:inline;fill:none;fill-opacity:1;stroke:#672900;stroke-width:0.398288px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -159.77184,-205.79934 c -0.32875,-0.33728 -0.72568,-0.73979 -1.0079,-1.05984"
+           id="path27334-6-7-0"
+           sodipodi:nodetypes="cc" />
+        <path
+           id="rect27273-6"
+           style="fill:#d45500;fill-opacity:1;stroke:none;stroke-width:1.46091;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+           d="m -194.28801,-207.29851 h -4.32882 c -0.36197,0 -0.65286,0.18076 -0.65286,0.40566 0,0.22491 0.29089,0.40618 0.65286,0.40618 h 4.32799 z" />
+        <path
+           style="fill:none;stroke:#672900;stroke-width:0.398288px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -160.86705,-207.59223 c 0.32875,-0.33728 0.72568,-0.73979 1.0079,-1.05984"
+           id="path27334-2"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="display:inline;fill:none;fill-opacity:1;stroke:#672900;stroke-width:0.398288px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -161.51276,-207.618 c 0.32875,-0.33728 0.72568,-0.73979 1.0079,-1.05984"
+           id="path27334-6-6"
+           sodipodi:nodetypes="cc" />
+      </g>
     </g>
   </g>
 </svg>

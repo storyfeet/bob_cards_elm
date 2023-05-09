@@ -82,7 +82,7 @@ builders = {discovery
     | name = "Builders"
     , difficulty = 2
     , rules = []
-    , jobs = vsUtil ++ [[J.Discard J.TAny (N 3),pay Gold 1, pay Metal 1, pay Wood 1,J.BuildRail] , buildN 3 |> westMost 2,lootDrop Any (D 3)] 
+    , jobs = vsUtil ++ [buildRail 3 1 , buildN 3 |> westMost 2,lootDrop Any (D 3)] 
     }
 
 
@@ -189,10 +189,11 @@ areWeTheBaddies : Mission
 areWeTheBaddies = { preciousCargo
     | name = "Are We the Baddies"
     , setupPic = "coop_basic"
-    , setup = freeWeapon
+    , setup = standardSetup
     , rules = ["Only players who contributed to the bandit defeat get to roll for gold" ]
-    , jobs = coopUtil ++ [
-        [on J.OnDefeatBandits , gain VP 3, J.Gain Gold (D 3)]
+    , jobs = coopUtil ++ 
+        [ [ J.Discard J.TAny (N 2),J.attack 2,J.defend 1 ]
+        , [ on J.OnDefeatBandits , gain VP 3, J.Gain Gold (D 3)]
         ]
     }
 
@@ -212,7 +213,7 @@ stopThatWagon = { preciousCargo
 -------- SOLO Campaigns
 
 soloCampaigns : List Mission
-soloCampaigns = [newWorld,doubleTrouble]
+soloCampaigns = [newWorld,doubleTrouble,railwayMan]
 
 
 newWorld : Mission
@@ -237,6 +238,22 @@ doubleTrouble = { newWorld
     , setupPic = "wagon"
     }
 
+railwayMan : Mission
+railwayMan = { 
+    name = "Railway Man"
+    , difficulty = 2
+    , mode = Solo
+    , boards = ["A","B"]
+    , setup = standardSetup
+    , setupPic = "basic_vs"
+    , rules = []
+    , jobs =  soloUtil ++ 
+        [ buildRail 3 1
+        , [J.on J.OnReveal ,J.In J.WestMost,gain VP 1 ]
+        , [J.on J.OnBuild , gain VP 2, J.In J.WestMost, gain VP 3]
+        ]
+    , night = nightPhase Solo 4
+    }
 ------ SCORING -------
 
 
@@ -249,6 +266,10 @@ coopUtil = [goldForTrain 1 3]
 soloUtil : List Job
 soloUtil = [goldForTrain 1 4]
 
+
+buildRail : Int -> Int -> Job
+buildRail cards gold = 
+     [J.Discard J.TAny (N cards),pay Gold gold, pay Metal 1, pay Wood 1,J.BuildRail]   
 
 --cardsForFood : Int -> Int -> Job 
 --cardsForFood n f =
@@ -300,6 +321,7 @@ lootDrop r n =
 
 
 ----- RULES ---- 
+
 
 fedVillage : List String
 fedVillage =["When you feed a village, place a food token there to mark it as fed", "You cannot feed a fed village"]

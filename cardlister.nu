@@ -6,7 +6,7 @@ def as_name [name:string] {
 def named [l] {each {|x| as_name $x}}
 
 def as_elm_list [l] {
-    $l | str collect "\n    , " |  "[ " + $in + "\n    ]"
+    $l | str join "\n    , " |  "[ " + $in + "\n    ]"
 }
 
 let mod_head = "module HasPicList exposing (..)\n"
