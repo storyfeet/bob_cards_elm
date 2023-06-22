@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24.5mm"
+   height="27.5mm"
+   viewBox="0 0 24.5 27.5"
+   version="1.1"
+   id="svg17793"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="trade_x.svg"
+   inkscape:export-filename="../job_pngs/trade_x.png"
+   inkscape:export-xdpi="120"
+   inkscape:export-ydpi="120"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview17795"
+     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.1582636"
+     inkscape:cx="122.08888"
+     inkscape:cy="120.23554"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs17790" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-20.874302,-96.678741)">
+    <rect
+       x="21.653469"
+       y="110.98708"
+       width="22"
+       height="12"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       opacity="0.3"
+       rx="2"
+       ry="2"
+       id="rect16185" />
+    <image
+       x="22.653469"
+       y="111.98708"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/gold.svg"
+       id="image16187" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="32.653469"
+       y="114.98708"
+       fill="#ff0000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text16189">-x</text>
+    <image
+       x="32.653469"
+       y="111.98708"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/any.svg"
+       id="image16191" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="42.653469"
+       y="114.98708"
+       fill="#008000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text16193">+x</text>
+    <rect
+       x="21.653469"
+       y="97.987076"
+       width="22"
+       height="12"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       opacity="0.3"
+       rx="2"
+       ry="2"
+       id="rect16195" />
+    <image
+       x="22.653469"
+       y="98.987076"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/any.svg"
+       id="image16197" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="32.653469"
+       y="101.98708"
+       fill="#ff0000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text16199">-2x</text>
+    <image
+       x="32.653469"
+       y="98.987076"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/any.svg"
+       id="image16201" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="42.653469"
+       y="101.98708"
+       fill="#008000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text16203">+x</text>
+  </g>
+</svg>
