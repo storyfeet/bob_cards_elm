@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10.216911mm"
+   height="11.426828mm"
+   viewBox="0 0 10.216911 11.426828"
+   version="1.1"
+   id="svg4234"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="this_item_card.svg"
+   inkscape:export-filename="../job_pngs/this_item.png"
+   inkscape:export-xdpi="120"
+   inkscape:export-ydpi="120"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4236"
+     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.2104204"
+     inkscape:cx="113.32686"
+     inkscape:cy="-43.656855"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs4231" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-37.073152,-192.74759)">
+    <g
+       transform="rotate(30,-251.00474,184.04504)"
+       id="g2793">
+      <rect
+         x="7"
+         y="45"
+         width="6"
+         height="10"
+         fill="#008622"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         rx="1"
+         ry="1"
+         id="rect2789" />
+      <text
+         font-family="Arial"
+         font-size="7px"
+         x="10"
+         y="53"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text2791">!</text>
+    </g>
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="47.054516"
+       y="196.461"
+       fill="#ff0000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text2795">#</text>
+  </g>
+</svg>

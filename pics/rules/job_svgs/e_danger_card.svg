@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="9.9627266mm"
+   height="11.426828mm"
+   viewBox="0 0 9.9627263 11.426828"
+   version="1.1"
+   id="svg3685"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="e_danger_card.svg"
+   inkscape:export-filename="../job_pngs/e_danger_card.png"
+   inkscape:export-xdpi="120"
+   inkscape:export-ydpi="120"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3687"
+     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.1237502"
+     inkscape:cx="37.570137"
+     inkscape:cy="32.886068"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs3682" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-62.09789,-68.783231)">
+    <g
+       transform="rotate(30,17.086595,175.25966)"
+       id="g13970">
+      <rect
+         x="7"
+         y="58"
+         width="6"
+         height="10"
+         fill="#222222"
+         stroke="#000000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         rx="1"
+         ry="1"
+         id="rect13968" />
+    </g>
+    <text
+       font-family="Arial"
+       font-size="6px"
+       x="64.014328"
+       y="78.504875"
+       fill="#ff0000"
+       stroke="#ffffff"
+       stroke-width="0.5"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="middle"
+       id="text19884">E</text>
+  </g>
+</svg>

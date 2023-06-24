@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="22.5mm"
+   height="12.5mm"
+   viewBox="0 0 22.5 12.5"
+   version="1.1"
+   id="svg20420"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="leg_wound.svg"
+   inkscape:export-filename="../job_pngs/leg_wound.png"
+   inkscape:export-xdpi="120"
+   inkscape:export-ydpi="120"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview20422"
+     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.0643348"
+     inkscape:cx="68.545083"
+     inkscape:cy="37.057942"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs20417" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-103.19354,-148.30064)">
+    <rect
+       x="103.44354"
+       y="148.55064"
+       width="22"
+       height="12"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       opacity="0.3"
+       rx="2"
+       ry="2"
+       id="rect13989" />
+    <g
+       transform="rotate(30,-135.37238,287.83949)"
+       id="g13993">
+      <rect
+         x="7"
+         y="45"
+         width="6"
+         height="10"
+         fill="#306393"
+         stroke="#000000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         rx="1"
+         ry="1"
+         id="rect13991" />
+    </g>
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="114.44354"
+       y="152.55064"
+       fill="#ffa500"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text13995">-2</text>
+    <g
+       transform="rotate(30,-125.37238,287.83949)"
+       id="g14001">
+      <rect
+         x="17"
+         y="45"
+         width="6"
+         height="10"
+         fill="#222222"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         rx="1"
+         ry="1"
+         id="rect13997" />
+      <text
+         font-family="Arial"
+         font-size="7px"
+         x="20"
+         y="53"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text13999">!</text>
+    </g>
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="124.44354"
+       y="152.55064"
+       fill="#ff0000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text14005">#</text>
+  </g>
+</svg>
