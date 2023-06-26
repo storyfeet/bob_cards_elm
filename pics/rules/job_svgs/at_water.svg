@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10.069531mm"
+   height="10.092969mm"
+   viewBox="0 0 10.069531 10.092969"
+   version="1.1"
+   id="svg3772"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="at_water.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3774"
+     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.7652427"
+     inkscape:cx="-315.58615"
+     inkscape:cy="51.617611"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs3769" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-159.54265,-135.32837)">
+    <image
+       x="159.54265"
+       y="135.42134"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/water.svg"
+       id="image1933" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="169.54265"
+       y="138.42134"
+       fill="#0000ff"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text1935">?</text>
+  </g>
+</svg>
