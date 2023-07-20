@@ -28,8 +28,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.78570178"
-     inkscape:cx="494.46241"
-     inkscape:cy="237.36741"
+     inkscape:cx="386.27888"
+     inkscape:cy="238.64016"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -2103,14 +2103,14 @@
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
-       x="14.686532"
+       x="17.332365"
        y="19.861725"
        id="text26429-3"><tspan
          sodipodi:role="line"
          id="tspan26427-6"
          style="stroke-width:0.264583"
-         x="14.686532"
-         y="19.861725">Day Tracker</tspan></text>
+         x="17.332365"
+         y="19.861725">Day Track</tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
@@ -2125,14 +2125,14 @@
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
-       x="107.36195"
+       x="111.06612"
        y="19.861725"
        id="text26429-3-9"><tspan
          sodipodi:role="line"
          id="tspan26427-6-4"
          style="stroke-width:0.264583"
-         x="107.36195"
-         y="19.861725">Bandit Level</tspan></text>
+         x="111.06612"
+         y="19.861725">Bandit Risk</tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
@@ -2157,7 +2157,7 @@
          y="19.861725">Player Score Track</tspan></text>
     <path
        style="fill:#ff0000;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#Arrow1);paint-order:stroke fill markers;stop-color:#000000"
-       d="M 65.940193,23.762774 28.593726,35.217376"
+       d="m 47.725106,25.521574 -19.13138,9.695802"
        id="path26485-2-6"
        sodipodi:nodetypes="cc" />
     <path
@@ -2167,12 +2167,12 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#ff0000;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#Arrow1-0);paint-order:stroke fill markers;stop-color:#000000"
-       d="M 154.82879,19.25592 137.46218,45.848097"
+       d="m 137.08711,24.508263 0.37507,24.47664"
        id="path26485-2-6-6"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#ff0000;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#Arrow1-1);paint-order:stroke fill markers;stop-color:#000000"
-       d="m 263.53637,19.902949 3.63333,46.938557"
+       d="M 255.66925,23.955792 267.1697,66.841506"
        id="path26485-2-6-63"
        sodipodi:nodetypes="cc" />
     <path
