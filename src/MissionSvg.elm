@@ -41,9 +41,10 @@ back cam =
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] (cam.name ++ " - setup")
         , rect 45 9 66 59 [flNoStk "white"]
-        , text "Arial" 4 [xy 15 15] "Dice"
-        , text "Arial" 4 [xy 7 30, txCenter,rotate -90 7 30]  "Board"
-        , namedCheckGrid 8 20 ["d20","d12"] cam.boards 
+        , text "Arial" 5 [xy 8 15, bold] "Options"
+        , text "Arial" 4 [xy 15 25] "Score Board"
+        , text "Arial" 4 [xy 8 40, txCenter,rotate -90 8 40]  "Dice"
+        , namedCheckGrid 10 30 cam.boards ["d20","d12","Both"] 
         , setupPic cam.setupPic
         , cam.setup |> ruleWrap 40 |> textLines 112 15 6 [font "Arial" 4,txSpaces] 
         , text "Arial" 4 [xy 4.5 68,flNoStk "black",opacity 0.6] Config.version

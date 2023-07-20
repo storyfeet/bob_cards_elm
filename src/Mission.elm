@@ -370,6 +370,6 @@ wagonSetup : List String
 wagonSetup = ["Add the Wagon to the map with the meeples"]
 
 coopSetup : List String
-coopSetup = ["For every player above 2: Move the Bandit Tracker 1 space."]
+coopSetup = ["For every player above 2: Move the Day Tracker 1 space."]
 
 
