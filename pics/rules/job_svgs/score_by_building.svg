@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="42.5mm"
+   height="12.5mm"
+   viewBox="0 0 42.5 12.5"
+   version="1.1"
+   id="svg6680"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="score_by_building.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview6682"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.7585136"
+     inkscape:cx="40.943671"
+     inkscape:cy="45.208637"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs6677" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-93.539291,-128.93858)">
+    <rect
+       x="93.789291"
+       y="129.18858"
+       width="42"
+       height="12"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       opacity="0.3"
+       rx="2"
+       ry="2"
+       id="rect2008" />
+    <image
+       x="94.789291"
+       y="130.18858"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/on_build.svg"
+       id="image2010" />
+    <image
+       x="104.78929"
+       y="130.18858"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/vp.svg"
+       id="image2012" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="114.78929"
+       y="133.18858"
+       fill="#008000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text2014">+3</text>
+    <image
+       x="114.78929"
+       y="130.18858"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/westmost.svg"
+       id="image2016" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="124.78929"
+       y="133.18858"
+       fill="#0000ff"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text2018">?</text>
+    <image
+       x="124.78929"
+       y="130.18858"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/vp.svg"
+       id="image2020" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="134.78929"
+       y="133.18858"
+       fill="#008000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text2022">+2</text>
+  </g>
+</svg>

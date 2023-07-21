@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="33.449986mm"
+   height="12.5mm"
+   viewBox="0 0 33.449986 12.5"
+   version="1.1"
+   id="svg3485"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="feed_village.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3487"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.1844268"
+     inkscape:cx="99.143071"
+     inkscape:cy="49.667978"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs3482" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-44.974682,-107.15629)">
+    <rect
+       x="45.224682"
+       y="107.40629"
+       width="32.949986"
+       height="12"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       opacity="0.3"
+       rx="2"
+       ry="2"
+       id="rect1832" />
+    <image
+       x="46.224682"
+       y="108.40629"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/village.svg"
+       id="image1834" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="56.224682"
+       y="111.40629"
+       fill="#0000ff"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text1836">?</text>
+    <image
+       x="56.224682"
+       y="108.40629"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/food.svg"
+       id="image1838" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="66.224678"
+       y="111.40629"
+       fill="#ff0000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text1840">-2</text>
+    <image
+       x="66.699669"
+       y="108.40629"
+       width="10"
+       height="10"
+       xlink:href="../../jobs/vp.svg"
+       id="image1846" />
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="76.699669"
+       y="111.40629"
+       fill="#008000"
+       stroke="#ffffff"
+       stroke-width="0.6"
+       style="paint-order:stroke"
+       font-weight="bold"
+       text-anchor="end"
+       id="text1848">+2</text>
+  </g>
+</svg>
