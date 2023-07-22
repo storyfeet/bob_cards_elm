@@ -2,22 +2,22 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="11mm"
-   height="11mm"
-   viewBox="0 0 11 11"
+   width="20mm"
+   height="20mm"
+   viewBox="0 0 20 20"
    version="1.1"
-   id="svg1665"
+   id="svg135"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="movement_normal_1.svg"
-   inkscape:export-filename="gifs/movement_normal_1.png"
-   inkscape:export-xdpi="120"
-   inkscape:export-ydpi="120"
+   inkscape:export-filename="../job_pngs/movement_normal.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview1667"
+     id="namedview137"
      pagecolor="#ffffff"
      bordercolor="#eeeeee"
      borderopacity="1"
@@ -27,9 +27,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="19.988068"
-     inkscape:cx="18.536058"
-     inkscape:cy="20.787402"
+     inkscape:zoom="11.478727"
+     inkscape:cx="33.670981"
+     inkscape:cy="33.148275"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -37,28 +37,58 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs1662" />
+     id="defs132" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-60.247299,-116.22449)">
+     id="layer1">
+    <path
+       style="fill:#aa4400;stroke:#000000;stroke-width:0.396875;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 2.4996007,0.86958483 2.1717708,13.652 17.863239,14.293227 C 21.188176,5.4692114 13.434447,8.0801449 7.9361601,8.2953104 l 1.925977,-7.48471497 z"
+       id="path13307"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 9.8010157,7.7530612 9.4081473,9.5825155"
+       id="path13309"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 12.269392,7.5349851 12.048291,9.2212493"
+       id="path13311"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 15.129281,7.3968391 14.989573,9.0867993"
+       id="path13313"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 6.3491873,5.8321314 9.1806513,5.5247835"
+       id="path13317"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 6.817448,3.2018355 9.9792121,2.9551537"
+       id="path13319"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#008000;stroke:#000000;stroke-width:0.396875;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#000000;stroke-dasharray:none"
+       d="m 1.2189142,15.814519 0.00879,2.427758 13.8930358,-0.606939 -1.016791,1.213879 5.212028,-1.820819 -5.212028,-1.820818 1.016791,1.213879 z"
+       id="path538"
+       sodipodi:nodetypes="cccccccc" />
     <text
        font-family="Arial"
-       font-size="5px"
-       x="68.481842"
-       y="120.35097"
+       font-size="6.81867px"
+       x="16.365461"
+       y="5.1800365"
        fill="#0000ff"
        stroke="#ffffff"
        stroke-width="0.5"
        style="paint-order:stroke"
        font-weight="bold"
        text-anchor="middle"
-       id="text1556-6">1</text>
-    <path
-       style="fill:#aa4400;stroke:#000000;stroke-width:0.156087px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 61.099915,116.80201 -0.196049,9.45781 9.383805,0.47445 c 1.988378,-6.52896 -2.945545,-4.36391 -6.233629,-4.20471 l 1.448814,-5.7712 z"
-       id="path13307"
-       sodipodi:nodetypes="cccccc" />
+       id="text1556-6"
+       transform="scale(1.0023886,0.99761711)">1</text>
   </g>
 </svg>

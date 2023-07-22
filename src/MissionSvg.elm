@@ -42,7 +42,7 @@ back cam =
     ] (cam.name ++ " - setup")
         , rect 45 9 66 59 [flNoStk "white"]
         , text "Arial" 5 [xy 8 15, bold] "Options"
-        , text "Arial" 4 [xy 15 25] "Score Board"
+        , text "Arial" 4 [xy 15 25] "Scoreboard"
         , text "Arial" 4 [xy 8 40, txCenter,rotate -90 8 40]  "Dice"
         , namedCheckGrid 10 30 cam.boards ["d20","d12","Both"] 
         , setupPic cam.setupPic
