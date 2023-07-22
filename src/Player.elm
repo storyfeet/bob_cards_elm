@@ -64,7 +64,7 @@ jakeWilder =
     Player "Jake Wilder" 1 6
         standardRes
         [ [ discard, Move (N 1) ]
-        , [ Scrap TAny (N 1) ]
+        , [ Scrap TAny (N 1),Reveal (N 1) ]
         , [ Discard (TDanger DAny) (N 2) ]
         ]
         (DS.coreMinPlus [pan] [(bigPan,1)] )
