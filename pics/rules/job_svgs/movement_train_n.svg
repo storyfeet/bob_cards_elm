@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="10.188672mm"
-   height="10.051953mm"
-   viewBox="0 0 10.188672 10.051953"
+   width="10.051953mm"
+   height="10mm"
+   viewBox="0 0 10.051953 10"
    version="1.1"
-   id="svg11867"
+   id="svg15147"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
-   sodipodi:docname="movement_sailing_1.svg"
-   inkscape:export-filename="../job_pngs/movement_sailing_1.png"
+   sodipodi:docname="movement_train_n.svg"
+   inkscape:export-filename="../job_pngs/movement_train_n.png"
    inkscape:export-xdpi="150"
    inkscape:export-ydpi="150"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -18,7 +18,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview11869"
+     id="namedview15149"
      pagecolor="#505050"
      bordercolor="#eeeeee"
      borderopacity="1"
@@ -28,9 +28,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="7.5137601"
-     inkscape:cx="30.677051"
-     inkscape:cy="37.730776"
+     inkscape:zoom="10.280412"
+     inkscape:cx="33.121241"
+     inkscape:cy="19.211293"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -38,30 +38,30 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs11864" />
+     id="defs15144" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-51.954559,-179.60498)">
+     transform="translate(-85.146645,-119.49629)">
     <image
-       x="51.954559"
-       y="179.65694"
+       x="85.146645"
+       y="119.49629"
        width="10"
        height="10"
-       xlink:href="../../jobs/sail.svg"
-       id="image10284" />
+       xlink:href="../../jobs/ride_train.svg"
+       id="image13484" />
     <text
        font-family="Arial"
        font-size="4px"
-       x="61.954559"
-       y="182.65694"
+       x="95.146645"
+       y="122.49629"
        fill="#0000ff"
        stroke="#ffffff"
        stroke-width="0.6"
        style="paint-order:stroke"
        font-weight="bold"
        text-anchor="end"
-       id="text10286">1</text>
+       id="text13486">n</text>
   </g>
 </svg>
