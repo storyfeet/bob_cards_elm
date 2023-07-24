@@ -9,9 +9,9 @@
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="jobs_everywhere.svg"
-   inkscape:export-filename="gifs/jobs_everywhere.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
+   inkscape:export-filename="../setup_pngs/jobs_everywhere.png"
+   inkscape:export-xdpi="140"
+   inkscape:export-ydpi="140"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -28,9 +28,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.7652427"
-     inkscape:cx="322.12003"
-     inkscape:cy="523.36337"
+     inkscape:zoom="1.1439897"
+     inkscape:cx="431.385"
+     inkscape:cy="381.55938"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -124,7 +124,7 @@
          y="10"
          width="10"
          height="10"
-         xlink:href="../jobs/gold.svg"
+         xlink:href="../../jobs/gold.svg"
          id="image8400" />
       <text
          font-family="Arial"
@@ -143,7 +143,7 @@
          y="10"
          width="10"
          height="10"
-         xlink:href="../jobs/ride_train.svg"
+         xlink:href="../../jobs/ride_train.svg"
          id="image8404" />
       <text
          font-family="Arial"
@@ -174,14 +174,14 @@
          y="22"
          width="10"
          height="10"
-         xlink:href="../jobs/on_reveal.svg"
+         xlink:href="../../jobs/on_reveal.svg"
          id="image8410" />
       <image
          x="90"
          y="22"
          width="10"
          height="10"
-         xlink:href="../jobs/westmost.svg"
+         xlink:href="../../jobs/westmost.svg"
          id="image8412" />
       <text
          font-family="Arial"
@@ -200,7 +200,7 @@
          y="22"
          width="10"
          height="10"
-         xlink:href="../jobs/vp.svg"
+         xlink:href="../../jobs/vp.svg"
          id="image8416" />
       <text
          font-family="Arial"
@@ -231,14 +231,14 @@
          y="34"
          width="10"
          height="10"
-         xlink:href="../jobs/on_defeat_bandits.svg"
+         xlink:href="../../jobs/on_defeat_bandits.svg"
          id="image8422" />
       <image
          x="90"
          y="34"
          width="10"
          height="10"
-         xlink:href="../jobs/any.svg"
+         xlink:href="../../jobs/any.svg"
          id="image8424" />
       <text
          font-family="Arial"
@@ -257,7 +257,7 @@
          y="10"
          width="10"
          height="10"
-         xlink:href="../jobs/difficulty.svg"
+         xlink:href="../../jobs/difficulty.svg"
          id="image8428" />
       <text
          font-family="Arial"
@@ -397,14 +397,9 @@
          xml:space="preserve"
          id="text8466">Bandits Appear</text>
     </g>
-    <text
-       xml:space="preserve"
-       transform="scale(0.26458333)"
-       id="text268"
-       style="font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;white-space:pre;shape-inside:url(#rect270);display:inline;fill:#000000;stroke-width:0.999999;-inkscape-stroke:none;stop-color:#000000" />
     <g
-       transform="rotate(13.39685,-225.2248,123.52585)"
-       id="g25040">
+       transform="rotate(13.957712,-219.39769,121.91414)"
+       id="g7060">
       <rect
          x="0"
          y="0"
@@ -415,7 +410,7 @@
          stroke-width="1"
          rx="2"
          ry="2"
-         id="rect24978" />
+         id="rect6994" />
       <rect
          x="0"
          y="0"
@@ -427,7 +422,7 @@
          opacity="0.5"
          rx="2"
          ry="2"
-         id="rect24980" />
+         id="rect6996" />
       <rect
          x="4"
          y="9"
@@ -437,7 +432,7 @@
          stroke="none"
          stroke-width="0"
          opacity="0.4"
-         id="rect24982" />
+         id="rect6998" />
       <text
          font-family="Arial"
          font-size="5px"
@@ -448,14 +443,14 @@
          stroke-width="0.8"
          font-weight="bold"
          style="paint-order:stroke"
-         id="text24984">Jake Wilder</text>
+         id="text7000">Jake Wilder</text>
       <image
          x="4"
          y="9"
          width="92"
          height="23"
-         xlink:href="../characters/jake%20wilder.png"
-         id="image24986" />
+         xlink:href="../../characters/jake%20wilder.png"
+         id="image7002" />
       <text
          font-family="Arial"
          font-size="4px"
@@ -467,7 +462,7 @@
          stroke="#ffffff"
          stroke-width="0.5"
          style="paint-order:stroke"
-         id="text24988">Draw</text>
+         id="text7004">Draw</text>
       <text
          font-family="Arial"
          font-size="4px"
@@ -479,7 +474,7 @@
          stroke="#ffffff"
          stroke-width="0.5"
          style="paint-order:stroke"
-         id="text24990">Discard</text>
+         id="text7006">Discard</text>
       <rect
          x="8"
          y="73"
@@ -491,10 +486,10 @@
          opacity="0.3"
          rx="2"
          ry="2"
-         id="rect24992" />
+         id="rect7008" />
       <g
          transform="rotate(30,14,79)"
-         id="g24996">
+         id="g7012">
         <rect
            x="11"
            y="74"
@@ -506,7 +501,7 @@
            style="paint-order:stroke"
            rx="1"
            ry="1"
-           id="rect24994" />
+           id="rect7010" />
       </g>
       <text
          font-family="Arial"
@@ -519,14 +514,14 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text24998">-1</text>
+         id="text7014">-1</text>
       <image
          x="19"
          y="74"
          width="10"
          height="10"
-         xlink:href="../jobs/move.svg"
-         id="image25000" />
+         xlink:href="../../jobs/move.svg"
+         id="image7016" />
       <text
          font-family="Arial"
          font-size="4px"
@@ -538,11 +533,11 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text25002">1</text>
+         id="text7018">1</text>
       <rect
          x="8"
          y="60"
-         width="12"
+         width="22"
          height="12"
          fill="#ffffff"
          stroke="#000000"
@@ -550,10 +545,10 @@
          opacity="0.3"
          rx="2"
          ry="2"
-         id="rect25004" />
+         id="rect7020" />
       <g
          transform="rotate(30,14,66)"
-         id="g25008">
+         id="g7024">
         <rect
            x="11"
            y="61"
@@ -565,7 +560,7 @@
            style="paint-order:stroke"
            rx="1"
            ry="1"
-           id="rect25006" />
+           id="rect7022" />
       </g>
       <text
          font-family="Arial"
@@ -578,7 +573,26 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text25010">#1</text>
+         id="text7026">#1</text>
+      <image
+         x="19"
+         y="61"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/reveal.svg"
+         id="image7028" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="29"
+         y="64"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text7030">1</text>
       <rect
          x="8"
          y="47"
@@ -590,10 +604,10 @@
          opacity="0.3"
          rx="2"
          ry="2"
-         id="rect25012" />
+         id="rect7032" />
       <g
          transform="rotate(30,14,53)"
-         id="g25016">
+         id="g7036">
         <rect
            x="11"
            y="48"
@@ -605,7 +619,7 @@
            style="paint-order:stroke"
            rx="1"
            ry="1"
-           id="rect25014" />
+           id="rect7034" />
       </g>
       <text
          font-family="Arial"
@@ -618,7 +632,7 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="middle"
-         id="text25018" />
+         id="text7038" />
       <text
          font-family="Arial"
          font-size="4px"
@@ -630,14 +644,14 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text25020">-2</text>
+         id="text7040">-2</text>
       <image
          x="75"
          y="2"
          width="10"
          height="10"
-         xlink:href="../jobs/difficulty.svg"
-         id="image25022" />
+         xlink:href="../../jobs/difficulty.svg"
+         id="image7042" />
       <text
          font-family="Arial"
          font-size="5px"
@@ -648,14 +662,14 @@
          stroke-width="0.5"
          style="paint-order:stroke"
          font-weight="bold"
-         id="text25024">1</text>
+         id="text7044">1</text>
       <image
          x="85"
          y="2"
          width="10"
          height="10"
-         xlink:href="../jobs/hand_size.svg"
-         id="image25026" />
+         xlink:href="../../jobs/hand_size.svg"
+         id="image7046" />
       <text
          font-family="Arial"
          font-size="5px"
@@ -666,39 +680,44 @@
          stroke-width="0.5"
          style="paint-order:stroke"
          font-weight="bold"
-         id="text25028">6</text>
+         id="text7048">6</text>
       <text
          font-family="Arial"
          font-size="4px"
          x="50"
          y="54"
          font-weight="bold"
-         id="text25030">Day Phase</text>
+         id="text7050">Day Phase</text>
       <text
          x="50"
          y="60"
          font-family="Arial"
          font-size="4px"
-         id="text25032">Untap this card</text>
+         id="text7052">Untap this card</text>
       <text
          x="50"
          y="66"
          font-family="Arial"
          font-size="4px"
-         id="text25034">Draw to 6 Cards</text>
+         id="text7054">Draw to 6 Cards</text>
       <text
          x="50"
          y="72"
          font-family="Arial"
          font-size="4px"
-         id="text25036">Play Cards / Trade</text>
+         id="text7056">Play Cards / Trade</text>
       <text
          x="50"
          y="78"
          font-family="Arial"
          font-size="4px"
-         id="text25038">May discard Item Cards</text>
+         id="text7058">May discard Item Cards</text>
     </g>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text268"
+       style="font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;white-space:pre;shape-inside:url(#rect270);display:inline;fill:#000000;stroke-width:0.999999;-inkscape-stroke:none;stop-color:#000000" />
     <g
        transform="rotate(-8.9010477,651.94277,-393.08897)"
        id="g16081">
@@ -742,7 +761,7 @@
          y="7"
          width="27"
          height="27"
-         xlink:href="../cards/cow.svg"
+         xlink:href="../../cards/cow.svg"
          id="image16027" />
       <rect
          x="37"
@@ -761,7 +780,7 @@
          y="2"
          width="10"
          height="10"
-         xlink:href="../jobs/prairie.svg"
+         xlink:href="../../jobs/prairie.svg"
          id="image16031" />
       <text
          font-family="Arial"
@@ -780,7 +799,7 @@
          y="12"
          width="10"
          height="10"
-         xlink:href="../jobs/food.svg"
+         xlink:href="../../jobs/food.svg"
          id="image16035" />
       <text
          font-family="Arial"
@@ -811,7 +830,7 @@
          y="25"
          width="10"
          height="10"
-         xlink:href="../jobs/village.svg"
+         xlink:href="../../jobs/village.svg"
          id="image16041" />
       <text
          font-family="Arial"
@@ -830,7 +849,7 @@
          y="35"
          width="10"
          height="10"
-         xlink:href="../jobs/gold.svg"
+         xlink:href="../../jobs/gold.svg"
          id="image16045" />
       <text
          font-family="Arial"
@@ -861,7 +880,7 @@
          y="58"
          width="10"
          height="10"
-         xlink:href="../jobs/food.svg"
+         xlink:href="../../jobs/food.svg"
          id="image16051" />
       <text
          font-family="Arial"
@@ -892,7 +911,7 @@
          y="45"
          width="10"
          height="10"
-         xlink:href="../jobs/river.svg"
+         xlink:href="../../jobs/river.svg"
          id="image16057" />
       <text
          font-family="Arial"
@@ -911,7 +930,7 @@
          y="45"
          width="10"
          height="10"
-         xlink:href="../jobs/food.svg"
+         xlink:href="../../jobs/food.svg"
          id="image16061" />
       <text
          font-family="Arial"
@@ -982,7 +1001,7 @@
          y="32"
          width="10"
          height="10"
-         xlink:href="../jobs/food.svg"
+         xlink:href="../../jobs/food.svg"
          id="image16075" />
       <text
          font-family="Arial"
@@ -1051,7 +1070,7 @@
          y="7"
          width="27"
          height="27"
-         xlink:href="../cards/hunger.svg"
+         xlink:href="../../cards/hunger.svg"
          id="image23042" />
       <polygon
          points="42,5 43,2 44,5 48,5 44.5,8 46,12 43,10 40,12 41.5,8 38,5 "
@@ -1089,7 +1108,7 @@
          y="58"
          width="10"
          height="10"
-         xlink:href="../jobs/any.svg"
+         xlink:href="../../jobs/any.svg"
          id="image23050" />
       <text
          font-family="Arial"
@@ -1172,7 +1191,7 @@
          y="45"
          width="10"
          height="10"
-         xlink:href="../jobs/food.svg"
+         xlink:href="../../jobs/food.svg"
          id="image23066" />
       <text
          font-family="Arial"
@@ -1286,7 +1305,7 @@
          y="0"
          width="45"
          height="45"
-         xlink:href="../tiles/village.svg"
+         xlink:href="../../tiles/village.svg"
          id="image27758" />
       <rect
          x="11.5"
@@ -1305,7 +1324,7 @@
          y="32"
          width="10"
          height="10"
-         xlink:href="../jobs/gold.svg"
+         xlink:href="../../jobs/gold.svg"
          id="image27762" />
       <text
          font-family="Arial"
@@ -1356,7 +1375,7 @@
          y="0"
          width="45"
          height="45"
-         xlink:href="../tiles/bandit_camp.svg"
+         xlink:href="../../tiles/bandit_camp.svg"
          id="image27864" />
       <rect
          x="11.5"
@@ -1403,7 +1422,7 @@
          y="32"
          width="10"
          height="10"
-         xlink:href="../jobs/gold.svg"
+         xlink:href="../../jobs/gold.svg"
          id="image27874" />
       <text
          font-family="Arial"
