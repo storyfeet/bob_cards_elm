@@ -36,6 +36,7 @@ back p =
         , job 41 5 15.5 p.startItems 
         , text "Arial" 4 [xy 5 30,flStk "Black" "none" 0,bold] "Start Cards"
         , p.startCards 
+        |> List.sortWith startOrder
         |> List.map (\(c, n) -> String.fromInt n ++ " * " ++ c.name)
         |> textLines 5 36 6 [font "Arial" 4]
         , text "Arial" 4 [xy 95 85 ,flNoStk "black",opacity 0.6,txRight] Config.version
@@ -61,3 +62,12 @@ facePic x y w h cname =
     case  facePicFile cname of
         Just f -> img x y w h f []
         Nothing -> "" --Debug.log "Couldn't find thing" cname 
+
+startOrder: (Cards.Card,Int) -> (Cards.Card,Int) -> Order
+startOrder (ac,an) (bc,bn) = 
+    case compare an bn of
+        GT -> LT
+        LT -> GT
+        EQ -> compare ac.name bc.name
+
+

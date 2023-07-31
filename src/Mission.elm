@@ -340,8 +340,8 @@ freeWeapon = ["Players may all take 1 weapon (Red Card) from the trade row draw 
 nightPhase : Mode -> Int -> List String
 nightPhase md d = 
     let
-        head = [ "Move Trade row"
-            , "Move Bandit Tracker"
+        head = [ "Move the Trade Row"
+            , "Move the Day Tracker"
             , "Take an 'E' Danger"
             , "Bandits attack"
             , "Bandits move"
@@ -349,8 +349,8 @@ nightPhase md d =
         rm = if d == 0 then 
                 [] 
             else 
-                [ "Remove tiles"
-                , " (>" ++ String.fromInt d ++ " east of all players)"
+                [ "Remove tiles > " ++ String.fromInt d ++ " East" 
+                , "    of all players"
                 ]
         p1t = case md of
             Versus -> ["Pass the P1 token"]
