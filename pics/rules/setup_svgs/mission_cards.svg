@@ -9,7 +9,7 @@
    id="svg9511"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="mission_cards.svg"
-   inkscape:export-filename="setup_pngs/mission_cards.png"
+   inkscape:export-filename="../setup_pngs/mission_cards.png"
    inkscape:export-xdpi="150"
    inkscape:export-ydpi="150"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,9 +28,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.8173407"
-     inkscape:cx="226.42975"
-     inkscape:cy="218.72618"
+     inkscape:zoom="0.94653096"
+     inkscape:cx="392.48584"
+     inkscape:cy="392.48584"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -384,7 +384,7 @@
          y="10"
          width="66"
          height="54"
-         xlink:href="../setups/basic_vs.svg"
+         xlink:href="../../setups/basic_vs.svg"
          id="image18627" />
       <text
          x="112"
@@ -1030,14 +1030,27 @@
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
-       x="21.980223"
+       x="43.676075"
        y="172.17123"
        id="text26429-35"><tspan
          sodipodi:role="line"
          id="tspan26427-62"
          style="stroke-width:0.264583"
-         x="21.980223"
+         x="43.676075"
          y="172.17123">Mission Rules</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="11.313039"
+       y="128.7668"
+       id="text26429-35-3"
+       inkscape:transform-center-x="12.218749"
+       inkscape:transform-center-y="0.41707131"><tspan
+         sodipodi:role="line"
+         id="tspan26427-62-6"
+         style="stroke-width:0.264583"
+         x="11.313039"
+         y="128.7668">Back (setup)</tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
@@ -1098,7 +1111,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#ff0000;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#Arrow1-5);paint-order:stroke fill markers;stop-color:#000000"
-       d="M 58.86242,162.8361 82.958252,132.54905"
+       d="M 69.925603,163.11398 82.958252,132.54905"
        id="path26485-2-3-28"
        sodipodi:nodetypes="cc" />
     <path
@@ -1111,5 +1124,23 @@
        d="M 234.0271,165.02516 229.50606,147.7397"
        id="path26485-2-3-9"
        sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="41.865238"
+       y="149.02454"
+       id="text26429-35-3-7"
+       inkscape:transform-center-x="12.218749"
+       inkscape:transform-center-y="0.41707131"><tspan
+         sodipodi:role="line"
+         id="tspan26427-62-6-5"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="41.865238"
+         y="149.02454">Front</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="41.865238"
+         y="157.84398"
+         id="tspan9658">(Gameplay)</tspan></text>
   </g>
 </svg>
