@@ -6,16 +6,19 @@
    height="12.5mm"
    viewBox="0 0 22.5 12.5"
    version="1.1"
-   id="svg12919"
+   id="svg6435"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="boot_move.svg"
+   inkscape:export-filename="../job_pngs/boot_move.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview12921"
+     id="namedview6437"
      pagecolor="#505050"
      bordercolor="#eeeeee"
      borderopacity="1"
@@ -26,8 +29,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.7652427"
-     inkscape:cx="25.482112"
-     inkscape:cy="51.617611"
+     inkscape:cx="-195.36286"
+     inkscape:cy="76.446335"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -35,15 +38,15 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs12916" />
+     id="defs6432" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-69.309952,-135.16211)">
+     transform="translate(-111.14581,-128.59283)">
     <rect
-       x="69.559952"
-       y="135.41211"
+       x="111.39581"
+       y="128.84283"
        width="22"
        height="12"
        fill="#ffffff"
@@ -52,44 +55,44 @@
        opacity="0.3"
        rx="2"
        ry="2"
-       id="rect37542" />
+       id="rect5307" />
     <image
-       x="70.559952"
-       y="136.41211"
+       x="112.39581"
+       y="129.84283"
        width="10"
        height="10"
        xlink:href="../../jobs/food.svg"
-       id="image37544" />
+       id="image5309" />
     <text
        font-family="Arial"
        font-size="4px"
-       x="80.559952"
-       y="139.41211"
+       x="122.39581"
+       y="132.84283"
        fill="#ff0000"
        stroke="#ffffff"
        stroke-width="0.6"
        style="paint-order:stroke"
        font-weight="bold"
        text-anchor="end"
-       id="text37546">-1</text>
+       id="text5311">-1</text>
     <image
-       x="80.559952"
-       y="136.41211"
+       x="122.39581"
+       y="129.84283"
        width="10"
        height="10"
        xlink:href="../../jobs/move.svg"
-       id="image37548" />
+       id="image5313" />
     <text
        font-family="Arial"
        font-size="4px"
-       x="90.559952"
-       y="139.41211"
+       x="132.39581"
+       y="132.84283"
        fill="#0000ff"
        stroke="#ffffff"
        stroke-width="0.6"
        style="paint-order:stroke"
        font-weight="bold"
        text-anchor="end"
-       id="text37550">1</text>
+       id="text5315">1</text>
   </g>
 </svg>
