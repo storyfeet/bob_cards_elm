@@ -250,3 +250,32 @@ Thursday
 .board : D
 .players : [Me, Toby, Jacob]
 .learned : ["Coop would still be fine with powered up railways"]
+
+"Oscar"
+.blind : true
+.version: 0.3.1
+.mode : "New World"
+.dice : "20"
+.board : A
+.players : [Oscar]
+.learned : ["reorganise rules into pages","Add more diagrams"]
+
+"Adrian"
+.blind : true
+.date : "10/7/2023"
+.mode : "New World"
+.dice : "20"
+.board : A 
+.players : [Adrian]
+.learned : ["make fronts and backs clearer", "help players work out which missions to choose better","give tips page for getting started"]
+
+"Connor Pinder"
+.blind : true
+.date : "30/7/2023"
+.mode : "New World"
+.dice : "20"
+.board : A
+.players [Connor]
+.learned ["clarify sorting cards"]
+
+
