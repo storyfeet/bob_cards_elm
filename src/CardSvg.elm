@@ -36,10 +36,11 @@ back  =
             
 costOrType : List J.Job -> J.CardType -> String
 costOrType j ct =
-    case (j,ct) of
-        (_,J.TDanger _) -> cardType ct
-        ([],_) -> cost 2 38 2 [J.Starter] 
-        _ -> (costList j 38 2) 
+    cardType ct (not (List.isEmpty j)) ++ costList j 38 14
+--    case (j,ct) of
+--        (_,J.TDanger _) -> cardType ct
+--        ([],_) -> cost 2 38 2 [J.Starter] 
+--        _ -> cost 2 38 2 [J.Starter] ++ (costList j 38 14) 
 
 
 
@@ -65,15 +66,26 @@ cost top x y c =
 --        J.Or::t -> cost (top+2) (x - 12) (top + 2 ) t
         h::t -> JSV.action x y h ++ cost top x (y+10 ) t
 
-cardType : J.CardType -> String
-cardType ct = 
-    case ct of
-        J.TDanger d ->  
+cardType : J.CardType -> Bool -> String
+cardType ct hasJobs = 
+    case (ct,hasJobs) of
+        (J.TDanger d,_) ->  
             String.join "\n" 
                 [ JSV.qStar 38 2 "black" "white"
                 , JSV.idText 43 10 "red" (J.dangerType d)
             ]
-        _ -> JSV.qStar 38 2 (CC.cTypeColor ct) "black"
+        (_, True) ->
+            String.join "\n" 
+                [ JSV.qStar 38 2 "yellow" "black"
+                , JSV.idText 43 10 "red" "T"
+            ]
+        (_, False) ->
+            String.join "\n" 
+                [ JSV.qStar 38 2 "yellow" "black"
+                , JSV.idText 43 10 "red" "S"
+            ]
+
+
 
 
 

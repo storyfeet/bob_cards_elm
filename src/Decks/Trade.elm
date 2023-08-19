@@ -52,9 +52,9 @@ horse = Card "Horse" TMove
 stalion:Card
 stalion = Card "Stalion" TMove 
     [[In Prairie ,pay Food 4],[In Village ,pay Gold 2]]
-    [[ Pay Food (X 2), Move (X 3)]
-    , [scrapThis (TMove),Move (N 3),gain Food 2]
+    [ [scrapThis (TMove),Move (N 3),gain Food 2]
     , scrapFor TMove Food 6
+    , [ Pay Food (X 2), Move (X 3)]
     ]
 
 cow: Card
