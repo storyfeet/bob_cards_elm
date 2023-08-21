@@ -72,17 +72,17 @@ cardType ct hasJobs =
         (J.TDanger d,_) ->  
             String.join "\n" 
                 [ JSV.qStar 38 2 "black" "white"
-                , JSV.idText 43 10 "red" (J.dangerType d)
+                , JSV.idText 43 10 "red" "white" (J.dangerType d)
             ]
         (_, True) ->
             String.join "\n" 
                 [ JSV.qStar 38 2 "yellow" "black"
-                , JSV.idText 43 10 "red" "T"
+                , JSV.idText 43 10 "red" "yellow" "T"
             ]
         (_, False) ->
             String.join "\n" 
                 [ JSV.qStar 38 2 "yellow" "black"
-                , JSV.idText 43 10 "red" "S"
+                , JSV.idText 43 10 "red" "yellow" "S"
             ]
 
 
@@ -99,7 +99,7 @@ dangerStar : Float -> Float -> String -> String -> J.JobNum -> String
 dangerStar x y col tx n =
     String.join "\n"
         [ polygon (JSV.starPoints x y 10 10) [narrowStk col "black" ]
-        , JSV.idText (x+ 2.5) ( y+7) "grey" (tx)
+        , JSV.idText (x+ 2.5) ( y+7) "grey" "white" (tx)
         , case n of 
             J.None -> ""
             _ -> JSV.gainText (x + 10) (y + 3 ) "Green" ("+" ++ J.jnum n)

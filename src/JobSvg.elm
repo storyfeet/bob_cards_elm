@@ -219,9 +219,10 @@ jobTextn x y tx n =
 jobText : Float -> Float -> String -> String
 jobText x y str = text "Arial" 4 [xy x y,bold,txCenter,flStk "white" "black" 0.4,strokeFirst ] str
 
-idText : Float -> Float -> String -> String -> String
-idText x y col tx =
-        text "Arial" 6 [xy x y ,flStk col "white" 0.5, strokeFirst,bold,txCenter] (tx )
+
+idText : Float -> Float -> String -> String -> String -> String
+idText x y col stroke tx =
+        text "Arial" 7 [xy x y ,flStk col stroke 0.5, strokeFirst,bold,txCenter] (tx )
 
 gainText : Float -> Float -> String -> String -> String
 gainText x y col tx =
@@ -253,7 +254,7 @@ jobCard x y ct tx tcol n =
 cardLetter : Float -> Float -> J.CardType -> String
 cardLetter x y ct =
     case ct of
-        J.TDanger d -> idText (x+1) y "red" (J.dangerType d)
+        J.TDanger d -> idText (x+1) y "red" "white" (J.dangerType d)
         _ -> ""
 
 jobArrow : Float -> Float -> String 

@@ -62,7 +62,7 @@ tileJob t =
 banditPos : Int -> Int -> (Float, Float)
 banditPos n from = 
     case (n , from )of
-        (_,1) -> (30,3)
+        (_,1) -> (17.5,17.5)
         (0,_) -> (32,15)
         (1,_) -> (3,15)
         (2,_) -> (10,3)
