@@ -69,8 +69,9 @@ buildBandits g t =
                     (g2 , a)  = gnext g1 12 
                     (g3 , b)  = gnext g2 12 
                     (g4 , c)  = gnext g3 12
+                    (g5 , d)  = gnext g4 12
                 in
-                    (g4,[a + 1 ,b + 1 ,c + 1],back + 1)
+                    (g5,[a + 1 ,b + 1 ,c + 1,d + 1],back + 1)
             Village _ -> (g1,[],back + 1)
             _ -> 
                 let 

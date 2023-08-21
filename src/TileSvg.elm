@@ -44,7 +44,7 @@ back : Tile -> String
 back t =
     String.join "\n" [
         img -1 -1 47 47 (tilePath ++ "back.svg") []
-        , bStar 17.5 30 t.backBandits
+        , bStar 17.5 17.5 t.backBandits
         , text "Arial" 4 [xy 4 40,flNoStk "white",fprop "opacity" 0.7] Config.version
     ]
 
@@ -54,28 +54,30 @@ tileJob t =
         Village j -> job j
         BanditCamp j -> String.join "\n" 
             [ job j
-            , placeBandits 0 t.bandits |> String.join "\n" 
+            , placeBandits 0 4 t.bandits |> String.join "\n" 
             ]
-        _ -> placeBandits 0 t.bandits |> String.join "\n" 
+        _ -> placeBandits 0 1 t.bandits |> String.join "\n" 
 
 
-banditPos : Int -> (Float, Float)
-banditPos n = 
-    case n of
-        0 -> (30,6)
-        1 -> (5,6)
-        2 -> (17.5,3)
-        v -> (toFloat v , 15)
+banditPos : Int -> Int -> (Float, Float)
+banditPos n from = 
+    case (n , from )of
+        (_,1) -> (30,3)
+        (0,_) -> (32,15)
+        (1,_) -> (3,15)
+        (2,_) -> (10,3)
+        (3,_) -> (25,3)
+        (v,_) -> (toFloat v , 15)
 
-placeBandits : Int -> List Int -> List String
-placeBandits n l = 
+placeBandits : Int -> Int -> List Int -> List String
+placeBandits n from l = 
     case l of 
         [] -> []
         h :: t -> 
             let 
-                (x ,y) = banditPos n
+                (x ,y) = banditPos n from
             in 
-                (bStar x y h)  :: (placeBandits (n + 1) t)
+                (bStar x y h) :: (placeBandits (n + 1) from t)
 
 
 
@@ -85,8 +87,8 @@ rotBy r n =
 
 bStar : Float -> Float -> Int -> String
 bStar x y n = String.join "\n" 
-            [ JSV.qStar x y "red" "black"
-            , text "Arial" 6.5 [xy (x + 5) (y + 7) ,flStk "white" "black" 0.5, strokeFirst,bold,txCenter] (String.fromInt n)
+            [ JSV.jobPic x y "bandits" 
+            , text "Arial" 6.5 [xy (x + 5) (y + 7) ,flStk "white" "red" 0.5, strokeFirst,bold,txCenter] (String.fromInt n)
             ]
 
     
