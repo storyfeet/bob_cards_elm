@@ -7,9 +7,9 @@
    viewBox="0 0 278.35598 172"
    version="1.1"
    id="svg24951"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="land_tiles.svg"
-   inkscape:export-filename="setup_pngs/land_tiles.png"
+   inkscape:export-filename="../setup_pngs/land_tiles.png"
    inkscape:export-xdpi="120"
    inkscape:export-ydpi="120"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,9 +28,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.99023874"
-     inkscape:cx="555.92655"
-     inkscape:cy="361.02405"
+     inkscape:zoom="0.90088878"
+     inkscape:cx="475.6414"
+     inkscape:cy="269.73363"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -52,7 +52,7 @@
          y="-1"
          width="47"
          height="47"
-         xlink:href="../tiles/back.svg"
+         xlink:href="../../tiles/back.svg"
          id="image8726" />
       <polygon
          points="23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 17.5,33 21.5,33 22.5,30 "
@@ -92,7 +92,7 @@
          y="-1"
          width="47"
          height="47"
-         xlink:href="../tiles/back.svg"
+         xlink:href="../../tiles/back.svg"
          id="image8736" />
       <polygon
          points="17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 "
@@ -132,7 +132,7 @@
          y="-1"
          width="47"
          height="47"
-         xlink:href="../tiles/back.svg"
+         xlink:href="../../tiles/back.svg"
          id="image8746" />
       <polygon
          points="22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 17.5,33 21.5,33 "
@@ -172,7 +172,7 @@
          y="-1"
          width="47"
          height="47"
-         xlink:href="../tiles/back.svg"
+         xlink:href="../../tiles/back.svg"
          id="image8756" />
       <polygon
          points="17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 "
@@ -212,7 +212,7 @@
          y="-1"
          width="47"
          height="47"
-         xlink:href="../tiles/back.svg"
+         xlink:href="../../tiles/back.svg"
          id="image8756-6" />
       <polygon
          points="25.5,40 22.5,38 19.5,40 21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 "
@@ -252,7 +252,7 @@
          y="-1"
          width="47"
          height="47"
-         xlink:href="../tiles/back.svg"
+         xlink:href="../../tiles/back.svg"
          id="image8756-62" />
       <polygon
          points="22.5,38 19.5,40 21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 "
@@ -292,7 +292,7 @@
          y="-1"
          width="47"
          height="47"
-         xlink:href="../tiles/back.svg"
+         xlink:href="../../tiles/back.svg"
          id="image8766" />
       <polygon
          points="25.5,40 22.5,38 19.5,40 21,36 17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 "
@@ -332,7 +332,7 @@
          y="-1"
          width="47"
          height="47"
-         xlink:href="../tiles/back.svg"
+         xlink:href="../../tiles/back.svg"
          id="image8776" />
       <polygon
          points="17.5,33 21.5,33 22.5,30 23.5,33 27.5,33 24,36 25.5,40 22.5,38 19.5,40 21,36 "
@@ -515,7 +515,7 @@
          y="0"
          width="45"
          height="45"
-         xlink:href="../tiles/village.svg"
+         xlink:href="../../tiles/village.svg"
          id="image24137" />
       <rect
          x="11.5"
@@ -562,7 +562,7 @@
          y="32"
          width="10"
          height="10"
-         xlink:href="../jobs/gold.svg"
+         xlink:href="../../jobs/gold.svg"
          id="image24147" />
       <text
          font-family="Arial"
@@ -578,133 +578,6 @@
          id="text24149">+1</text>
     </g>
     <g
-       transform="translate(71.305707,64.871863)"
-       id="g24281">
-      <image
-         x="0"
-         y="0"
-         width="45"
-         height="45"
-         xlink:href="../tiles/bandit_camp.svg"
-         id="image24255" />
-      <rect
-         x="11.5"
-         y="31"
-         width="22"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect24257" />
-      <g
-         transform="rotate(30,17.5,37)"
-         id="g24261">
-        <rect
-           x="14.5"
-           y="32"
-           width="6"
-           height="10"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           rx="1"
-           ry="1"
-           id="rect24259" />
-      </g>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="22.5"
-         y="35"
-         fill="#ffa500"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text24263">-x</text>
-      <image
-         x="22.5"
-         y="32"
-         width="10"
-         height="10"
-         xlink:href="../jobs/any.svg"
-         id="image24265" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="32.5"
-         y="35"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text24267">+3x</text>
-      <polygon
-         points="40,9 36.5,12 38,16 35,14 32,16 33.5,12 30,9 34,9 35,6 36,9 "
-         fill="#ff0000"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="polygon24269" />
-      <text
-         font-family="Arial"
-         font-size="6.5px"
-         x="35"
-         y="13"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text24271">4</text>
-      <polygon
-         points="15,9 11.5,12 13,16 10,14 7,16 8.5,12 5,9 9,9 10,6 11,9 "
-         fill="#ff0000"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="polygon24273" />
-      <text
-         font-family="Arial"
-         font-size="6.5px"
-         x="10"
-         y="13"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text24275">3</text>
-      <polygon
-         points="27.5,6 24,9 25.5,13 22.5,11 19.5,13 21,9 17.5,6 21.5,6 22.5,3 23.5,6 "
-         fill="#ff0000"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="polygon24277" />
-      <text
-         font-family="Arial"
-         font-size="6.5px"
-         x="22.5"
-         y="10"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text24279">6</text>
-    </g>
-    <g
        transform="translate(71.305707,130.55817)"
        id="g24379">
       <image
@@ -712,7 +585,7 @@
          y="0"
          width="45"
          height="45"
-         xlink:href="../tiles/forest_wet.svg"
+         xlink:href="../../tiles/forest_wet.svg"
          id="image24373" />
       <polygon
          points="36.5,12 38,16 35,14 32,16 33.5,12 30,9 34,9 35,6 36,9 40,9 "
@@ -742,7 +615,7 @@
          y="0"
          width="45"
          height="45"
-         xlink:href="../tiles/forest.svg"
+         xlink:href="../../tiles/forest.svg"
          id="image24381" />
     </g>
     <g
@@ -753,7 +626,7 @@
          y="0"
          width="45"
          height="45"
-         xlink:href="../tiles/mountain.svg"
+         xlink:href="../../tiles/mountain.svg"
          id="image24389" />
       <polygon
          points="35,6 36,9 40,9 36.5,12 38,16 35,14 32,16 33.5,12 30,9 34,9 "
@@ -783,7 +656,7 @@
          y="0"
          width="45"
          height="45"
-         xlink:href="../tiles/water.svg"
+         xlink:href="../../tiles/water.svg"
          id="image24401" />
     </g>
     <g
@@ -794,7 +667,7 @@
          y="0"
          width="45"
          height="45"
-         xlink:href="../tiles/prarie_wet.svg"
+         xlink:href="../../tiles/prarie_wet.svg"
          id="image24409" />
     </g>
     <g
@@ -805,8 +678,154 @@
          y="0"
          width="45"
          height="45"
-         xlink:href="../tiles/prarie.svg"
+         xlink:href="../../tiles/prarie.svg"
          id="image24417" />
+    </g>
+    <g
+       transform="translate(71.305705,64.871863)"
+       id="g44">
+      <image
+         x="0"
+         y="0"
+         width="45"
+         height="45"
+         xlink:href="../../tiles/bandit_camp.svg"
+         id="image38" />
+      <rect
+         x="11.5"
+         y="31"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect38" />
+      <g
+         transform="rotate(30,17.5,37)"
+         id="g39">
+        <rect
+           x="14.5"
+           y="32"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           id="rect39" />
+      </g>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="22.5"
+         y="35"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text39">#1</text>
+      <image
+         x="22.5"
+         y="32"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/gold.svg"
+         id="image39" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="32.5"
+         y="35"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text40">+6</text>
+      <image
+         x="32"
+         y="15"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image40" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="37"
+         y="22"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text41">5</text>
+      <image
+         x="3"
+         y="15"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image41" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="8"
+         y="22"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text42">6</text>
+      <image
+         x="10"
+         y="3"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image42" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="15"
+         y="10"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text43">8</text>
+      <image
+         x="25"
+         y="3"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image43" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="30"
+         y="10"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text44">11</text>
     </g>
   </g>
 </svg>

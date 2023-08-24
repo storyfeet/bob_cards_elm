@@ -22,8 +22,8 @@ modeStr : Mode -> String
 modeStr m =
     case m of
         Solo -> "Solo"
-        Coop -> "Co-op"
-        Versus -> "VS"
+        Coop -> "Cooperative"
+        Versus -> "Versus"
 
 
 allCampaigns : List Mission
@@ -54,7 +54,7 @@ discovery = { name = "Discovery"
 theRace:Mission
 theRace = {discovery 
     | name = "The Race"
-    , difficulty = 2
+    , difficulty = 3
     , jobs = 
         vsUtil ++ [ [on J.OnReveal,J.In J.MovingWest, gain VP 2 ]
         , [on J.OnReveal, J.In J.WestMost , gain VP 1 ]
@@ -80,7 +80,7 @@ villageHero = {discovery
 builders: Mission
 builders = {discovery
     | name = "Builders"
-    , difficulty = 2
+    , difficulty = 3
     , rules = []
     , jobs = vsUtil ++ [buildRail 3 1 , buildN 3 |> westMost 2,lootDrop Any (D 3)] 
     }
@@ -89,7 +89,7 @@ builders = {discovery
 theFeast: Mission
 theFeast = { preciousCargo
     | name = "The Feast"
-    , difficulty = 2 
+    , difficulty = 3 
     , setupPic = "coop_basic"
     , rules = fedVillage 
     , setup = coopSetup
@@ -116,7 +116,7 @@ buildingTogether = {
     name = "Building Together"
     , mode = Coop
     , boards = ["C","D"]
-    , difficulty = 2
+    , difficulty = 3
     , setupPic = "coop_basic"
     , rules = []
     , setup = coopSetup
@@ -128,7 +128,7 @@ preciousCargo : Mission
 preciousCargo = {
     name = "Precious Cargo"
     , mode = Coop
-    , difficulty = 1
+    , difficulty = 2
     , setupPic = "wagon"
     , boards = ["C","D"]
     , setup = coopSetup ++ ["- Add a Wagon token to the central start tile" ]
@@ -188,6 +188,7 @@ thereAndBackAgain = {preciousCargo
 areWeTheBaddies : Mission
 areWeTheBaddies = { preciousCargo
     | name = "Are We the Baddies"
+    , difficulty = 3
     , setupPic = "coop_basic"
     , setup = standardSetup
     , rules = ["Only players who contributed to the bandit defeat get to roll for gold" ]
@@ -232,6 +233,7 @@ newWorld = {
 doubleTrouble : Mission
 doubleTrouble = { newWorld 
     | name = "Double Trouble"
+    , difficulty = 2
     , setup = "Add 2 Meeples to the board for 1 player" :: wagonSetup
     , rules  = ["You can do any job with either meeple, but not both"]
     , jobs = soloUtil ++ [[J.On J.OnWagonWest,gain VP 3 ]]
@@ -241,7 +243,7 @@ doubleTrouble = { newWorld
 railwayMan : Mission
 railwayMan = { 
     name = "Railway Man"
-    , difficulty = 2
+    , difficulty = 3
     , mode = Solo
     , boards = ["A","B"]
     , setup = standardSetup

@@ -23,7 +23,7 @@ front cam =
             , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ] cam.name
             , text "Arial" 5 [xy 196 7,flStk "Black" "white" 0.8,bold,strokeFirst
-        ,txRight] (MS.modeStr cam.mode)
+        ,txRight] ((difficultyStr cam.difficulty) ++ " Mission - " ++ (MS.modeStr cam.mode))
             , JSV.jobsSquish 80 10 70 62 cam.jobs
             , JSV.picItem 186 10 "difficulty" cam.difficulty "red"
             , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
@@ -56,6 +56,14 @@ setupPic fname =
         "" -> ""
         s -> img 45 10 66 54 ("../pics/setups/" ++ s ++ ".svg") []
 
+difficultyStr : Int -> String
+difficultyStr n =
+    case n of
+        1 -> "Beginner"
+        2 -> "Tricky"
+        3 -> "Hard"
+        4 -> "Very Hard"
+        _ -> "Level " ++ (String.fromInt n)
 
 namedCheckGrid : Float -> Float -> List String -> List String -> String
 namedCheckGrid x y ac dw =
