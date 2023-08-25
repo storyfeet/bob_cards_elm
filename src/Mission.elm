@@ -359,7 +359,7 @@ nightPhase md d =
             _ -> []
 
 
-        tail = ["Bandits Appear"]
+        tail = ["Bandits Appear","Full Hand check"]
     in
         head ++ rm ++ tail ++ p1t
 

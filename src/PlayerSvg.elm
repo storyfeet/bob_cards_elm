@@ -48,7 +48,7 @@ playerPhase : Int ->  List String
 playerPhase hSize = 
     [ "Untap this card"
     , "Draw to "++ (String.fromInt hSize ) ++ " Cards"
-    , "Play Cards / Trade"
+    , "Play Actions/Jobs"
     , "May discard Item Cards"
     ]
 

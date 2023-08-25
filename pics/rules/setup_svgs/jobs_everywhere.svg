@@ -7,7 +7,7 @@
    viewBox="0 0 210 175"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="jobs_everywhere.svg"
    inkscape:export-filename="../setup_pngs/jobs_everywhere.png"
    inkscape:export-xdpi="140"
@@ -29,8 +29,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.1439897"
-     inkscape:cx="431.385"
-     inkscape:cy="381.55938"
+     inkscape:cx="365.38791"
+     inkscape:cy="352.2759"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -398,6 +398,152 @@
          id="text8466">Bandits Appear</text>
     </g>
     <g
+       transform="rotate(-18.323105,124.44351,-459.16354)"
+       id="g44">
+      <image
+         x="0"
+         y="0"
+         width="45"
+         height="45"
+         xlink:href="../../tiles/bandit_camp.svg"
+         id="image38" />
+      <rect
+         x="11.5"
+         y="31"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect38" />
+      <g
+         transform="rotate(30,17.5,37)"
+         id="g39">
+        <rect
+           x="14.5"
+           y="32"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           id="rect39" />
+      </g>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="22.5"
+         y="35"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text39">#1</text>
+      <image
+         x="22.5"
+         y="32"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/gold.svg"
+         id="image39" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="32.5"
+         y="35"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text40">+6</text>
+      <image
+         x="32"
+         y="15"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image40" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="37"
+         y="22"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text41">5</text>
+      <image
+         x="3"
+         y="15"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image41" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="8"
+         y="22"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text42">6</text>
+      <image
+         x="10"
+         y="3"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image42" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="15"
+         y="10"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text43">8</text>
+      <image
+         x="25"
+         y="3"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image43" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="30"
+         y="10"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text44">11</text>
+    </g>
+    <g
        transform="rotate(13.957712,-219.39769,121.91414)"
        id="g7060">
       <rect
@@ -718,315 +864,6 @@
        transform="scale(0.26458333)"
        id="text268"
        style="font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration-color:#000000;white-space:pre;shape-inside:url(#rect270);display:inline;fill:#000000;stroke-width:0.999999;-inkscape-stroke:none;stop-color:#000000" />
-    <g
-       transform="rotate(-8.9010477,651.94277,-393.08897)"
-       id="g16081">
-      <rect
-         x="0"
-         y="0"
-         width="50"
-         height="70"
-         fill="#008622"
-         stroke="#ffffff"
-         stroke-width="0.5"
-         rx="2"
-         ry="2"
-         id="rect16021" />
-      <rect
-         x="0"
-         y="0"
-         width="50"
-         height="70"
-         fill="#ffffff"
-         stroke="none"
-         stroke-width="0"
-         opacity="0.5"
-         rx="2"
-         ry="2"
-         id="rect16023" />
-      <rect
-         x="3"
-         y="8"
-         width="44"
-         height="59"
-         fill="#ffffff"
-         stroke="none"
-         stroke-width="0"
-         opacity="0.4"
-         rx="1"
-         ry="1"
-         id="rect16025" />
-      <image
-         x="4"
-         y="7"
-         width="27"
-         height="27"
-         xlink:href="../../cards/cow.svg"
-         id="image16027" />
-      <rect
-         x="37"
-         y="1"
-         width="12"
-         height="22"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect16029" />
-      <image
-         x="38"
-         y="2"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/prairie.svg"
-         id="image16031" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="48"
-         y="5"
-         fill="#0000ff"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text16033">?</text>
-      <image
-         x="38"
-         y="12"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/food.svg"
-         id="image16035" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="48"
-         y="15"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text16037">-2</text>
-      <rect
-         x="37"
-         y="24"
-         width="12"
-         height="22"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect16039" />
-      <image
-         x="38"
-         y="25"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/village.svg"
-         id="image16041" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="48"
-         y="28"
-         fill="#0000ff"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text16043">?</text>
-      <image
-         x="38"
-         y="35"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/gold.svg"
-         id="image16045" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="48"
-         y="38"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text16047">-1</text>
-      <rect
-         x="4"
-         y="57"
-         width="12"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect16049" />
-      <image
-         x="5"
-         y="58"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/food.svg"
-         id="image16051" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="15"
-         y="61"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text16053">+2</text>
-      <rect
-         x="4"
-         y="44"
-         width="22"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect16055" />
-      <image
-         x="5"
-         y="45"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/river.svg"
-         id="image16057" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="15"
-         y="48"
-         fill="#0000ff"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text16059">?</text>
-      <image
-         x="15"
-         y="45"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/food.svg"
-         id="image16061" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="25"
-         y="48"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text16063">+3</text>
-      <rect
-         x="4"
-         y="31"
-         width="22"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect16065" />
-      <g
-         transform="rotate(30,10,37)"
-         id="g16071">
-        <rect
-           x="7"
-           y="32"
-           width="6"
-           height="10"
-           fill="#008622"
-           stroke="#ff0000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           rx="1"
-           ry="1"
-           id="rect16067" />
-        <text
-           font-family="Arial"
-           font-size="7px"
-           x="10"
-           y="40"
-           fill="#ff0000"
-           stroke="#ffffff"
-           stroke-width="0.6"
-           style="paint-order:stroke"
-           font-weight="bold"
-           text-anchor="middle"
-           id="text16069">!</text>
-      </g>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="15"
-         y="35"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text16073">#</text>
-      <image
-         x="15"
-         y="32"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/food.svg"
-         id="image16075" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="25"
-         y="35"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text16077">+5</text>
-      <text
-         font-family="Arial"
-         font-size="5px"
-         x="2"
-         y="6"
-         fill="#000000"
-         stroke="#ffffff"
-         stroke-width="0.8"
-         font-weight="bold"
-         style="paint-order:stroke"
-         id="text16079">Cow</text>
-    </g>
     <g
        transform="rotate(10.385919,-412.99253,861.07951)"
        id="g23088">
@@ -1367,18 +1204,273 @@
          text-anchor="end"
          id="text27770">+4</text>
     </g>
+    <path
+       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000;stroke-opacity:1"
+       d="m 142.44703,163.2399 c 22.31202,12.91728 84.85213,-20.18811 16.39383,-34.17586 -50.10329,-10.23736 -13.08181,41.8251 6.09287,38.75873"
+       id="path31078"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000;stroke-opacity:1"
+       d="M 81.901278,57.985516 C 89.869618,71.309979 135.21811,48.723277 118.42359,22.99505 112.2623,13.556317 83.253231,9.1602282 76.303569,20.558291 59.351125,48.361805 102.57211,73.90547 110.36182,59.293341"
+       id="path31158"
+       sodipodi:nodetypes="cssc" />
+    <path
+       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000;stroke-opacity:1"
+       d="m 163.35462,38.634873 c -4.15364,7.136867 15.96896,26.48022 31.2007,14.54207 6.9564,-5.452205 8.20502,-14.979289 0.83832,-21.524459 -16.31438,-14.495008 -45.31654,16.017765 -26.7048,23.097685"
+       id="path31160"
+       sodipodi:nodetypes="cssc" />
+    <path
+       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000;stroke-opacity:1"
+       d="m 152.39045,85.953848 c 15.35012,0.93868 -5.05451,-37.781705 -26.29318,-34.601782 -9.11857,1.365262 -10.37683,20.728833 -3.98336,27.372309 13.83606,14.377086 45.95101,3.14727 36.20709,-10.624769"
+       id="path31162"
+       sodipodi:nodetypes="cssc" />
     <g
-       transform="rotate(-14.297918,132.35483,-593.69685)"
-       id="g27890">
-      <image
+       transform="rotate(-12.512792,479.23729,-250.5025)"
+       id="g84">
+      <rect
          x="0"
          y="0"
-         width="45"
-         height="45"
-         xlink:href="../../tiles/bandit_camp.svg"
-         id="image27864" />
+         width="50"
+         height="70"
+         fill="#008622"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         rx="2"
+         ry="2"
+         id="rect71" />
       <rect
-         x="11.5"
+         x="0"
+         y="0"
+         width="50"
+         height="70"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.5"
+         rx="2"
+         ry="2"
+         id="rect72" />
+      <rect
+         x="3"
+         y="8"
+         width="44"
+         height="59"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.4"
+         rx="1"
+         ry="1"
+         id="rect73" />
+      <image
+         x="4"
+         y="7"
+         width="27"
+         height="27"
+         xlink:href="../../cards/cow.svg"
+         id="image73" />
+      <polygon
+         points="42,5 43,2 44,5 48,5 44.5,8 46,12 43,10 40,12 41.5,8 38,5 "
+         fill="#ffff00"
+         stroke="#000000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         id="polygon73" />
+      <text
+         font-family="Arial"
+         font-size="7px"
+         x="43"
+         y="10"
+         fill="#ff0000"
+         stroke="#ffff00"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text73">T</text>
+      <rect
+         x="37"
+         y="13"
+         width="12"
+         height="22"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect74" />
+      <image
+         x="38"
+         y="14"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/prairie.svg"
+         id="image74" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="48"
+         y="17"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text74">?</text>
+      <image
+         x="38"
+         y="24"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/food.svg"
+         id="image75" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="48"
+         y="27"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text75">-2</text>
+      <rect
+         x="37"
+         y="36"
+         width="12"
+         height="22"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect75" />
+      <image
+         x="38"
+         y="37"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/village.svg"
+         id="image76" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="48"
+         y="40"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text76">?</text>
+      <image
+         x="38"
+         y="47"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/gold.svg"
+         id="image77" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="48"
+         y="50"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text77">-1</text>
+      <rect
+         x="4"
+         y="57"
+         width="12"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect77" />
+      <image
+         x="5"
+         y="58"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/food.svg"
+         id="image78" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="15"
+         y="61"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text78">+2</text>
+      <rect
+         x="4"
+         y="44"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect78" />
+      <image
+         x="5"
+         y="45"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/river.svg"
+         id="image79" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="15"
+         y="48"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text79">?</text>
+      <image
+         x="15"
+         y="45"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/food.svg"
+         id="image80" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="25"
+         y="48"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text80">+3</text>
+      <rect
+         x="4"
          y="31"
          width="22"
          height="12"
@@ -1388,27 +1480,39 @@
          opacity="0.3"
          rx="2"
          ry="2"
-         id="rect27866" />
+         id="rect80" />
       <g
-         transform="rotate(30,17.5,37)"
-         id="g27870">
+         transform="rotate(30,10,37)"
+         id="g81">
         <rect
-           x="14.5"
+           x="7"
            y="32"
            width="6"
            height="10"
-           fill="#ffffff"
-           stroke="#000000"
+           fill="#008622"
+           stroke="#ff0000"
            stroke-width="0.5"
            style="paint-order:stroke"
            rx="1"
            ry="1"
-           id="rect27868" />
+           id="rect81" />
+        <text
+           font-family="Arial"
+           font-size="7px"
+           x="10"
+           y="40"
+           fill="#ff0000"
+           stroke="#ffffff"
+           stroke-width="0.6"
+           style="paint-order:stroke"
+           font-weight="bold"
+           text-anchor="middle"
+           id="text81">!</text>
       </g>
       <text
          font-family="Arial"
          font-size="4px"
-         x="22.5"
+         x="15"
          y="35"
          fill="#ff0000"
          stroke="#ffffff"
@@ -1416,18 +1520,18 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text27872">#1</text>
+         id="text82">#</text>
       <image
-         x="22.5"
+         x="15"
          y="32"
          width="10"
          height="10"
-         xlink:href="../../jobs/gold.svg"
-         id="image27874" />
+         xlink:href="../../jobs/food.svg"
+         id="image82" />
       <text
          font-family="Arial"
          font-size="4px"
-         x="32.5"
+         x="25"
          y="35"
          fill="#008000"
          stroke="#ffffff"
@@ -1435,98 +1539,32 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text27876">+6</text>
-      <polygon
-         points="32,16 33.5,12 30,9 34,9 35,6 36,9 40,9 36.5,12 38,16 35,14 "
-         fill="#ff0000"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="polygon27878" />
+         id="text83">+5</text>
       <text
          font-family="Arial"
-         font-size="6.5px"
-         x="35"
-         y="13"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
+         font-size="5px"
+         x="2"
+         y="6"
+         fill="#000000"
+         stroke="#ffffff"
+         stroke-width="0.8"
          font-weight="bold"
-         text-anchor="middle"
-         id="text27880">1</text>
-      <polygon
-         points="7,16 8.5,12 5,9 9,9 10,6 11,9 15,9 11.5,12 13,16 10,14 "
-         fill="#ff0000"
-         stroke="#000000"
-         stroke-width="0.5"
          style="paint-order:stroke"
-         id="polygon27882" />
-      <text
-         font-family="Arial"
-         font-size="6.5px"
-         x="10"
-         y="13"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text27884">9</text>
-      <polygon
-         points="19.5,13 21,9 17.5,6 21.5,6 22.5,3 23.5,6 27.5,6 24,9 25.5,13 22.5,11 "
-         fill="#ff0000"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="polygon27886" />
-      <text
-         font-family="Arial"
-         font-size="6.5px"
-         x="22.5"
-         y="10"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text27888">8</text>
+         id="text84">Cow</text>
     </g>
     <path
-       style="fill:none;stroke:#ff0000;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
-       d="m 142.44703,163.2399 c 22.31202,12.91728 84.85213,-20.18811 16.39383,-34.17586 -50.10329,-10.23736 -13.08181,41.8251 6.09287,38.75873"
-       id="path31078"
-       sodipodi:nodetypes="csc" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
-       d="M 81.901278,57.985516 C 89.869618,71.309979 135.21811,48.723277 118.42359,22.99505 112.2623,13.556317 83.253231,9.1602282 76.303569,20.558291 59.351125,48.361805 102.57211,73.90547 110.36182,59.293341"
-       id="path31158"
-       sodipodi:nodetypes="cssc" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
-       d="m 163.35462,38.634873 c -4.15364,7.136867 15.96896,26.48022 31.2007,14.54207 6.9564,-5.452205 8.20502,-14.979289 0.83832,-21.524459 -16.31438,-14.495008 -45.31654,16.017765 -26.7048,23.097685"
-       id="path31160"
-       sodipodi:nodetypes="cssc" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
-       d="m 152.39045,85.953848 c 15.35012,0.93868 -5.05451,-37.781705 -26.29318,-34.601782 -9.11857,1.365262 -10.37683,20.728833 -3.98336,27.372309 13.83606,14.377086 45.95101,3.14727 36.20709,-10.624769"
-       id="path31162"
-       sodipodi:nodetypes="cssc" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
-       d="m 109.72124,135.02919 c 21.66409,-0.0986 28.00724,-31.00068 11.07618,-52.826984 -7.72952,-9.964348 -14.74149,-4.19459 -20.78626,3.007677 -11.899662,14.17831 7.65663,59.093027 26.83465,46.692867"
+       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+       d="m 112.8822,152.2309 c 18.43833,-0.0909 23.83699,-28.57642 9.42694,-48.69591 -6.5786,-9.185137 -12.54649,-3.866575 -17.6912,2.77247 -10.127821,13.06957 6.51656,54.47195 22.839,43.04149"
        id="path31164"
        sodipodi:nodetypes="cssc" />
     <path
-       style="fill:none;stroke:#ff0000;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
+       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000;stroke-opacity:1"
        d="M 33.588777,147.36297 C -1.1440467,160.22326 -1.2674831,117.03608 13.443903,101.74279 22.351608,92.482741 38.31653,99.846058 42.869772,111.8612 59.524644,155.81024 10.017554,159.20922 3.5390822,145.91394"
        id="path31166"
        sodipodi:nodetypes="cssc" />
     <path
-       style="fill:none;stroke:#ff0000;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
-       d="m 76.526123,120.55132 c 14.089368,-11.77686 43.717227,14.30006 33.442587,33.47067 -5.89934,11.00709 -21.712724,20.24614 -30.384642,11.25969 -16.520476,-17.11967 0.479735,-59.52992 21.319472,-47.8809"
+       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+       d="m 74.313014,119.52288 c 14.089368,-11.77686 43.717226,14.30006 33.442586,33.47067 -5.89934,11.00709 -21.712723,20.24614 -30.384641,11.25969 -16.520476,-17.11967 0.479735,-59.52992 21.319472,-47.8809"
        id="path34538"
        sodipodi:nodetypes="cssc" />
   </g>
