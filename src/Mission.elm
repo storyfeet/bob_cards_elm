@@ -95,7 +95,7 @@ theFeast = { preciousCargo
     , setup = coopSetup
     , jobs =
         coopUtil ++ [ [J.In J.Village, J.pay Food 5 , J.gain VP 5]
-        , [on J.OnDefeatBandits, J.gain Food 2]
+        , [on J.OnDefeatBandits, J.gain Food 3, J.gain VP 1]
         ]
     }
 

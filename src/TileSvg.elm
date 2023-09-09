@@ -11,6 +11,7 @@ type CanMove
     | Walk
     | Walk2
     | Climb
+    | BoatBootFromWater
 
 miniPic : Float -> Float -> String -> String
 miniPic x y fname =
@@ -23,11 +24,12 @@ movRect x y w =
 drawMovement : Float -> Float -> CanMove -> String
 drawMovement x y m =
     case m of
-        BoatFromWater -> (movRect x y 2 ) ++ (miniPic x y "from_water")  ++ (miniPic (x + 6) y "sail" ) ++ (miniPic (x + 3) y "from_arrow" )
+        BoatFromWater -> (movRect x y 2 ) ++ (miniPic x y "from_water")  ++ (miniPic (x + 6) y "sail" ) ++ (miniPic (x + 2) y "from_arrow" )
         Boat -> (movRect x y 1) ++ miniPic x y "sail"
         Walk -> (movRect x y 1) ++ miniPic x y "move"
         Walk2 -> (movRect x y 2) ++ (miniPic x y "move") ++ (miniPic (x + 6) y "move" )
         Climb -> (movRect x y 1) ++ miniPic x y "climb"
+        BoatBootFromWater -> (movRect x y 3) ++ (miniPic x y "from_water")  ++ (miniPic (x + 6) y "sail" ) ++ (miniPic (x + 2) y "from_arrow" ) ++ (miniPic (x + 12) y "move")
 
 
 
@@ -35,7 +37,7 @@ tileMovement : LType -> List CanMove
 tileMovement t =
     case t of
         Water -> [Boat]
-        Mountain -> [Walk2,Climb]
+        Mountain -> [BoatBootFromWater,Walk2,Climb]
         Forest True -> [Boat,Climb,Walk]
         Prairie True -> [Boat,Climb,Walk]
         _ -> [BoatFromWater,Climb,Walk]
@@ -87,7 +89,7 @@ back : Tile -> String
 back t =
     String.join "\n" [
         img -1 -1 47 47 (tilePath ++ "back.svg") []
-        , bStar 17.5 17.5 t.backBandits
+        , bStar 17.5 8 t.backBandits
         , text "Arial" 4 [xy 4 40,flNoStk "white",fprop "opacity" 0.7] Config.version
     ]
 
@@ -105,7 +107,7 @@ tileJob t =
 banditPos : Int -> Int -> (Float, Float)
 banditPos n from = 
     case (n , from )of
-        (_,1) -> (17.5,17.5)
+        (_,1) -> (17.5,8)
         (0,_) -> (34,18)
         (1,_) -> (3,12)
         (2,_) -> (12,3)
