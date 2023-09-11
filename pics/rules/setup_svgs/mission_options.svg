@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="37.559387mm"
+   height="59mm"
+   viewBox="0 0 37.559387 59"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="mission_options.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.1429071"
+     inkscape:cx="238.86456"
+     inkscape:cy="237.9896"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-22.8016,-65.424568)">
+    <rect
+       x="22.702"
+       y="65.425003"
+       width="37.558998"
+       height="59"
+       fill="#008622"
+       stroke="none"
+       stroke-width="0"
+       id="rect1" />
+    <rect
+       x="22.802"
+       y="65.425003"
+       width="37.558998"
+       height="59"
+       fill="#ffffff"
+       stroke="none"
+       stroke-width="0"
+       opacity="0.5"
+       id="rect2" />
+    <rect
+       x="22.8016"
+       y="65.424568"
+       width="37.559387"
+       height="59"
+       fill="#ffffff"
+       stroke="none"
+       stroke-width="0"
+       opacity="0.5"
+       id="rect3" />
+    <text
+       font-family="Arial"
+       font-size="5px"
+       x="26.8016"
+       y="71.424568"
+       font-weight="bold"
+       id="text4">Options</text>
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="33.801601"
+       y="81.424568"
+       id="text5">Scoreboard</text>
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="-96.424568"
+       y="26.8016"
+       text-anchor="middle"
+       transform="rotate(-90)"
+       id="text6">Dice</text>
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="40.301601"
+       y="86.424568"
+       text-anchor="middle"
+       id="text7">A</text>
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="49.301601"
+       y="86.424568"
+       text-anchor="middle"
+       id="text8">B</text>
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="35.801601"
+       y="92.424568"
+       text-anchor="end"
+       id="text9">d20</text>
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="35.801601"
+       y="101.42457"
+       text-anchor="end"
+       id="text10">d12</text>
+    <text
+       font-family="Arial"
+       font-size="4px"
+       x="35.801601"
+       y="110.42457"
+       text-anchor="end"
+       id="text11">Both</text>
+    <rect
+       x="36.801601"
+       y="87.424568"
+       width="7.1999998"
+       height="7.1999998"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       rx="0.1"
+       ry="0.1"
+       id="rect11" />
+    <rect
+       x="45.801601"
+       y="87.424568"
+       width="7.1999998"
+       height="7.1999998"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       rx="0.1"
+       ry="0.1"
+       id="rect12" />
+    <rect
+       x="36.801601"
+       y="96.424568"
+       width="7.1999998"
+       height="7.1999998"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       rx="0.1"
+       ry="0.1"
+       id="rect13" />
+    <rect
+       x="45.801601"
+       y="96.424568"
+       width="7.1999998"
+       height="7.1999998"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       rx="0.1"
+       ry="0.1"
+       id="rect14" />
+    <rect
+       x="36.801601"
+       y="105.42457"
+       width="7.1999998"
+       height="7.1999998"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       rx="0.1"
+       ry="0.1"
+       id="rect15" />
+    <rect
+       x="45.801601"
+       y="105.42457"
+       width="7.1999998"
+       height="7.1999998"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="0.5"
+       rx="0.1"
+       ry="0.1"
+       id="rect16" />
+  </g>
+</svg>
