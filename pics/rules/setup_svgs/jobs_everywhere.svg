@@ -10,8 +10,8 @@
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="jobs_everywhere.svg"
    inkscape:export-filename="../setup_pngs/jobs_everywhere.png"
-   inkscape:export-xdpi="140"
-   inkscape:export-ydpi="140"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -396,152 +396,6 @@
          font-size="4px"
          xml:space="preserve"
          id="text8466">Bandits Appear</text>
-    </g>
-    <g
-       transform="rotate(-18.323105,124.44351,-459.16354)"
-       id="g44">
-      <image
-         x="0"
-         y="0"
-         width="45"
-         height="45"
-         xlink:href="../../tiles/bandit_camp.svg"
-         id="image38" />
-      <rect
-         x="11.5"
-         y="31"
-         width="22"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect38" />
-      <g
-         transform="rotate(30,17.5,37)"
-         id="g39">
-        <rect
-           x="14.5"
-           y="32"
-           width="6"
-           height="10"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           rx="1"
-           ry="1"
-           id="rect39" />
-      </g>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="22.5"
-         y="35"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text39">#1</text>
-      <image
-         x="22.5"
-         y="32"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/gold.svg"
-         id="image39" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="32.5"
-         y="35"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text40">+6</text>
-      <image
-         x="32"
-         y="15"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/bandits.svg"
-         id="image40" />
-      <text
-         font-family="Arial"
-         font-size="6.5px"
-         x="37"
-         y="22"
-         fill="#ffffff"
-         stroke="#ff0000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text41">5</text>
-      <image
-         x="3"
-         y="15"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/bandits.svg"
-         id="image41" />
-      <text
-         font-family="Arial"
-         font-size="6.5px"
-         x="8"
-         y="22"
-         fill="#ffffff"
-         stroke="#ff0000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text42">6</text>
-      <image
-         x="10"
-         y="3"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/bandits.svg"
-         id="image42" />
-      <text
-         font-family="Arial"
-         font-size="6.5px"
-         x="15"
-         y="10"
-         fill="#ffffff"
-         stroke="#ff0000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text43">8</text>
-      <image
-         x="25"
-         y="3"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/bandits.svg"
-         id="image43" />
-      <text
-         font-family="Arial"
-         font-size="6.5px"
-         x="30"
-         y="10"
-         fill="#ffffff"
-         stroke="#ff0000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text44">11</text>
     </g>
     <g
        transform="rotate(13.957712,-219.39769,121.91414)"
@@ -1134,76 +988,6 @@
          style="paint-order:stroke"
          id="text23086">Hunger</text>
     </g>
-    <g
-       transform="rotate(22.168549,-2.7398566,349.05725)"
-       id="g27772">
-      <image
-         x="0"
-         y="0"
-         width="45"
-         height="45"
-         xlink:href="../../tiles/village.svg"
-         id="image27758" />
-      <rect
-         x="11.5"
-         y="31"
-         width="22"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect27760" />
-      <image
-         x="12.5"
-         y="32"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/gold.svg"
-         id="image27762" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="22.5"
-         y="35"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text27764">-2</text>
-      <g
-         transform="rotate(30,27.5,37)"
-         id="g27768">
-        <rect
-           x="24.5"
-           y="32"
-           width="6"
-           height="10"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           rx="1"
-           ry="1"
-           id="rect27766" />
-      </g>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="32.5"
-         y="35"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text27770">+4</text>
-    </g>
     <path
        style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000;stroke-opacity:1"
        d="m 142.44703,163.2399 c 22.31202,12.91728 84.85213,-20.18811 16.39383,-34.17586 -50.10329,-10.23736 -13.08181,41.8251 6.09287,38.75873"
@@ -1213,16 +997,6 @@
        style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000;stroke-opacity:1"
        d="M 81.901278,57.985516 C 89.869618,71.309979 135.21811,48.723277 118.42359,22.99505 112.2623,13.556317 83.253231,9.1602282 76.303569,20.558291 59.351125,48.361805 102.57211,73.90547 110.36182,59.293341"
        id="path31158"
-       sodipodi:nodetypes="cssc" />
-    <path
-       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000;stroke-opacity:1"
-       d="m 163.35462,38.634873 c -4.15364,7.136867 15.96896,26.48022 31.2007,14.54207 6.9564,-5.452205 8.20502,-14.979289 0.83832,-21.524459 -16.31438,-14.495008 -45.31654,16.017765 -26.7048,23.097685"
-       id="path31160"
-       sodipodi:nodetypes="cssc" />
-    <path
-       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000;stroke-opacity:1"
-       d="m 152.39045,85.953848 c 15.35012,0.93868 -5.05451,-37.781705 -26.29318,-34.601782 -9.11857,1.365262 -10.37683,20.728833 -3.98336,27.372309 13.83606,14.377086 45.95101,3.14727 36.20709,-10.624769"
-       id="path31162"
        sodipodi:nodetypes="cssc" />
     <g
        transform="rotate(-12.512792,479.23729,-250.5025)"
@@ -1566,6 +1340,362 @@
        style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
        d="m 74.313014,119.52288 c 14.089368,-11.77686 43.717226,14.30006 33.442586,33.47067 -5.89934,11.00709 -21.712723,20.24614 -30.384641,11.25969 -16.520476,-17.11967 0.479735,-59.52992 21.319472,-47.8809"
        id="path34538"
+       sodipodi:nodetypes="cssc" />
+    <g
+       transform="rotate(19.784717,-10.742269,380.96124)"
+       id="g50">
+      <image
+         x="0"
+         y="0"
+         width="45"
+         height="45"
+         xlink:href="../../tiles/village.svg"
+         id="image44" />
+      <rect
+         x="19"
+         y="31"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect44" />
+      <g
+         transform="rotate(30,25,37)"
+         id="g45">
+        <rect
+           x="22"
+           y="32"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           id="rect45" />
+      </g>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="30"
+         y="35"
+         fill="#ffa500"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text45">-2x</text>
+      <image
+         x="30"
+         y="32"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/food.svg"
+         id="image45" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="40"
+         y="35"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text46">+3x</text>
+      <rect
+         x="0.60000002"
+         y="38"
+         width="14"
+         height="5"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.4"
+         id="rect46" />
+      <image
+         x="2"
+         y="38"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/from_water.svg"
+         id="image46" />
+      <image
+         x="8"
+         y="38"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/sail.svg"
+         id="image47" />
+      <image
+         x="4"
+         y="38"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/from_arrow.svg"
+         id="image48" />
+      <rect
+         x="0.60000002"
+         y="32"
+         width="8"
+         height="5"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.4"
+         id="rect48" />
+      <image
+         x="2"
+         y="32"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/climb.svg"
+         id="image49" />
+      <rect
+         x="0.60000002"
+         y="26"
+         width="8"
+         height="5"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.4"
+         id="rect49" />
+      <image
+         x="2"
+         y="26"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/move.svg"
+         id="image50" />
+    </g>
+    <g
+       transform="rotate(-16.865887,153.54263,-477.02911)"
+       id="g103">
+      <image
+         x="0"
+         y="0"
+         width="45"
+         height="45"
+         xlink:href="../../tiles/bandit_camp.svg"
+         id="image93" />
+      <rect
+         x="19"
+         y="31"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect93" />
+      <g
+         transform="rotate(30,25,37)"
+         id="g94">
+        <rect
+           x="22"
+           y="32"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           id="rect94" />
+      </g>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="30"
+         y="35"
+         fill="#ff0000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text94">#1</text>
+      <image
+         x="30"
+         y="32"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/gold.svg"
+         id="image94" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="40"
+         y="35"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text95">+6</text>
+      <image
+         x="34"
+         y="18"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image95" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="39"
+         y="25"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text96">5</text>
+      <image
+         x="3"
+         y="12"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image96" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="8"
+         y="19"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text97">6</text>
+      <image
+         x="12"
+         y="3"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image97" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="17"
+         y="10"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text98">8</text>
+      <image
+         x="26"
+         y="5"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/bandits.svg"
+         id="image98" />
+      <text
+         font-family="Arial"
+         font-size="6.5px"
+         x="31"
+         y="12"
+         fill="#ffffff"
+         stroke="#ff0000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text99">11</text>
+      <rect
+         x="0.60000002"
+         y="38"
+         width="14"
+         height="5"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.4"
+         id="rect99" />
+      <image
+         x="2"
+         y="38"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/from_water.svg"
+         id="image99" />
+      <image
+         x="8"
+         y="38"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/sail.svg"
+         id="image100" />
+      <image
+         x="4"
+         y="38"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/from_arrow.svg"
+         id="image101" />
+      <rect
+         x="0.60000002"
+         y="32"
+         width="8"
+         height="5"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.4"
+         id="rect101" />
+      <image
+         x="2"
+         y="32"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/climb.svg"
+         id="image102" />
+      <rect
+         x="0.60000002"
+         y="26"
+         width="8"
+         height="5"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.4"
+         id="rect102" />
+      <image
+         x="2"
+         y="26"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/move.svg"
+         id="image103" />
+    </g>
+    <path
+       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+       d="m 160.76233,88.392613 c 15.35012,0.93868 -5.05451,-37.781705 -26.29318,-34.601782 -9.11857,1.365262 -10.37683,20.728833 -3.98336,27.372309 13.83606,14.377086 45.95101,3.14727 36.20709,-10.624769"
+       id="path31162"
+       sodipodi:nodetypes="cssc" />
+    <path
+       style="fill:none;stroke:#4b63fc;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+       d="m 165.15752,47.269488 c -4.15364,7.136867 15.96896,26.48022 31.2007,14.54207 6.9564,-5.452205 8.20502,-14.979289 0.83832,-21.524459 C 180.88216,25.792091 151.88,56.304864 170.49174,63.384784"
+       id="path31160"
        sodipodi:nodetypes="cssc" />
   </g>
 </svg>
