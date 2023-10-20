@@ -207,7 +207,12 @@ jobS x y fname s =
         ]
 
 jobN : Float -> Float -> String -> J.JobNum -> String
-jobN x y fname n = jobS x y fname (J.jnum n)
+jobN x y fname n = 
+    String.join "\n"
+        [ jobPic x y fname 
+        , gainText (x+10) (y + 3) "blue" (J.jnum n)
+        , dice x y n
+        ]
 
 jobTextn : Float -> Float -> String ->J.JobNum -> String
 jobTextn x y tx n = 
@@ -310,6 +315,7 @@ resource x y r tcol sym n =
     String.join "\n" 
         [ jobPic x y (resPic r) 
         , gainText (x + 10) (y + 3) tcol (sym ++ J.jnum n)
+        , dice x y n
         ]
 jobCornerArrowPath : Float -> Float -> Float -> Float -> List String
 jobCornerArrowPath x y w h =
@@ -326,3 +332,15 @@ jobCornerArrowPath x y w h =
         , "L", xx 7, yy 8
         , "Q", xx 0, yy 8 , xx 0 , yy 0 --finish
         ]
+
+
+dice : Float -> Float -> J.JobNum -> String
+dice x y n =
+    case n of 
+        J.D _  -> dicePic x y
+        J.XD _ -> dicePic x y
+        _ -> ""
+
+dicePic : Float -> Float -> String
+dicePic x y =
+    img (x + 6) (y + 6) 6 6  ("../pics/jobs/dice.svg")[]
