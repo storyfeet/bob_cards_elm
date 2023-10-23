@@ -2,13 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="20mm"
-   height="20mm"
-   viewBox="0 0 20 20"
+   width="17.161263mm"
+   height="16.346249mm"
+   viewBox="0 0 17.161263 16.346249"
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="dice.svg"
+   inkscape:export-filename="../rules/job_pngs/dice.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,8 +27,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="6.1976141"
-     inkscape:cx="25.897062"
-     inkscape:cy="21.459871"
+     inkscape:cx="20.41108"
+     inkscape:cy="15.489832"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -37,7 +40,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-1.435341,-1.5783492)">
     <path
        style="fill:#a0892c;stroke:#1a1a1a;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
        d="M 2.7069271,3.5302928 1.9353391,11.362111 7.1847484,17.427975 16.890683,15.094144 18.096607,6.60531 12.395397,2.0783465 Z"

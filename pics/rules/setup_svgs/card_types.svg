@@ -29,8 +29,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.1053443"
-     inkscape:cx="527.88982"
-     inkscape:cy="195.41423"
+     inkscape:cx="489.89261"
+     inkscape:cy="339.26081"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -599,246 +599,6 @@
          style="stroke-width:0.264583"
          x="182.28548"
          y="39.632156">Exhaustion</tspan></text>
-    <g
-       transform="translate(9.9674669,70.854356)"
-       id="g53">
-      <rect
-         x="0"
-         y="0"
-         width="50"
-         height="70"
-         fill="#ff7100"
-         stroke="#ffffff"
-         stroke-width="0.5"
-         rx="2"
-         ry="2"
-         id="rect44" />
-      <rect
-         x="0"
-         y="0"
-         width="50"
-         height="70"
-         fill="#ffffff"
-         stroke="none"
-         stroke-width="0"
-         opacity="0.5"
-         rx="2"
-         ry="2"
-         id="rect45" />
-      <rect
-         x="3"
-         y="8"
-         width="44"
-         height="59"
-         fill="#ffffff"
-         stroke="none"
-         stroke-width="0"
-         opacity="0.4"
-         rx="1"
-         ry="1"
-         id="rect46" />
-      <image
-         x="4"
-         y="7"
-         width="27"
-         height="27"
-         xlink:href="../../cards/hunting%20knife.svg"
-         id="image46" />
-      <polygon
-         points="38,5 42,5 43,2 44,5 48,5 44.5,8 46,12 43,10 40,12 41.5,8 "
-         fill="#ffff00"
-         stroke="#000000"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         id="polygon46" />
-      <text
-         font-family="Arial"
-         font-size="7px"
-         x="43"
-         y="10"
-         fill="#ff0000"
-         stroke="#ffff00"
-         stroke-width="0.5"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="middle"
-         id="text46">S</text>
-      <rect
-         x="4"
-         y="57"
-         width="22"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect47" />
-      <image
-         x="5"
-         y="58"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/defend.svg"
-         id="image47" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="15"
-         y="61"
-         fill="#0000ff"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text47">⬢</text>
-      <image
-         x="15"
-         y="58"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/attack.svg"
-         id="image48" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="25"
-         y="61"
-         fill="#0000ff"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text48">2⬢</text>
-      <rect
-         x="4"
-         y="44"
-         width="22"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect48" />
-      <image
-         x="5"
-         y="45"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/forest.svg"
-         id="image49" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="15"
-         y="48"
-         fill="#0000ff"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text49">?</text>
-      <image
-         x="15"
-         y="45"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/food.svg"
-         id="image50" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="25"
-         y="48"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text50">+4⬢</text>
-      <rect
-         x="4"
-         y="31"
-         width="22"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect50" />
-      <g
-         transform="rotate(30,10,37)"
-         id="g51">
-        <rect
-           x="7"
-           y="32"
-           width="6"
-           height="10"
-           fill="#ffffff"
-           stroke="#000000"
-           stroke-width="0.5"
-           style="paint-order:stroke"
-           rx="1"
-           ry="1"
-           id="rect51" />
-      </g>
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="15"
-         y="35"
-         fill="#ffa500"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text51">-1</text>
-      <image
-         x="15"
-         y="32"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/food.svg"
-         id="image51" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="25"
-         y="35"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text52">+2⬢</text>
-      <text
-         font-family="Arial"
-         font-size="5px"
-         x="2"
-         y="6"
-         fill="#000000"
-         stroke="#ffffff"
-         stroke-width="0.8"
-         font-weight="bold"
-         style="paint-order:stroke"
-         id="text53">Hunting Knife</text>
-    </g>
-    <path
-       style="fill:#ff0000;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#Arrow1);paint-order:stroke fill markers;stop-color:#000000"
-       d="M 40.442788,37.96972 53.075169,73.02643"
-       id="path26485"
-       sodipodi:nodetypes="cc" />
     <g
        transform="translate(124.67428,70.854356)"
        id="g255">
@@ -1489,6 +1249,274 @@
        style="fill:#ff0000;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#Arrow1);paint-order:stroke fill markers;stop-color:#000000"
        d="m 224.24898,38.48016 -0.2635,33.091515"
        id="path26485-2-6"
+       sodipodi:nodetypes="cc" />
+    <g
+       transform="translate(11.05922,70.854356)"
+       id="g56">
+      <rect
+         x="0"
+         y="0"
+         width="50"
+         height="70"
+         fill="#ff7100"
+         stroke="#ffffff"
+         stroke-width="0.5"
+         rx="2"
+         ry="2"
+         id="rect44" />
+      <rect
+         x="0"
+         y="0"
+         width="50"
+         height="70"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.5"
+         rx="2"
+         ry="2"
+         id="rect45" />
+      <rect
+         x="3"
+         y="8"
+         width="44"
+         height="59"
+         fill="#ffffff"
+         stroke="none"
+         stroke-width="0"
+         opacity="0.4"
+         rx="1"
+         ry="1"
+         id="rect46" />
+      <image
+         x="4"
+         y="7"
+         width="27"
+         height="27"
+         xlink:href="../../cards/hunting%20knife.svg"
+         id="image46" />
+      <polygon
+         points="43,2 44,5 48,5 44.5,8 46,12 43,10 40,12 41.5,8 38,5 42,5 "
+         fill="#ffff00"
+         stroke="#000000"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         id="polygon46" />
+      <text
+         font-family="Arial"
+         font-size="7px"
+         x="43"
+         y="10"
+         fill="#ff0000"
+         stroke="#ffff00"
+         stroke-width="0.5"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="middle"
+         id="text46">S</text>
+      <rect
+         x="4"
+         y="57"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect47" />
+      <image
+         x="5"
+         y="58"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/defend.svg"
+         id="image47" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="15"
+         y="61"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text47">1</text>
+      <image
+         x="11"
+         y="64"
+         width="6"
+         height="6"
+         xlink:href="../../jobs/dice.svg"
+         id="image48" />
+      <image
+         x="15"
+         y="58"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/attack.svg"
+         id="image49" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="25"
+         y="61"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text49">2</text>
+      <image
+         x="21"
+         y="64"
+         width="6"
+         height="6"
+         xlink:href="../../jobs/dice.svg"
+         id="image50" />
+      <rect
+         x="4"
+         y="44"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect50" />
+      <image
+         x="5"
+         y="45"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/forest.svg"
+         id="image51" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="15"
+         y="48"
+         fill="#0000ff"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text51">?</text>
+      <image
+         x="15"
+         y="45"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/food.svg"
+         id="image52-6" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="25"
+         y="48"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text52">+4</text>
+      <image
+         x="21"
+         y="51"
+         width="6"
+         height="6"
+         xlink:href="../../jobs/dice.svg"
+         id="image53-0" />
+      <rect
+         x="4"
+         y="31"
+         width="22"
+         height="12"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="0.5"
+         opacity="0.3"
+         rx="2"
+         ry="2"
+         id="rect53" />
+      <g
+         transform="rotate(30,10,37)"
+         id="g54">
+        <rect
+           x="7"
+           y="32"
+           width="6"
+           height="10"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="0.5"
+           style="paint-order:stroke"
+           rx="1"
+           ry="1"
+           id="rect54-6" />
+      </g>
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="15"
+         y="35"
+         fill="#ffa500"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text54-2">-1</text>
+      <image
+         x="15"
+         y="32"
+         width="10"
+         height="10"
+         xlink:href="../../jobs/food.svg"
+         id="image54-6" />
+      <text
+         font-family="Arial"
+         font-size="4px"
+         x="25"
+         y="35"
+         fill="#008000"
+         stroke="#ffffff"
+         stroke-width="0.6"
+         style="paint-order:stroke"
+         font-weight="bold"
+         text-anchor="end"
+         id="text55-1">+2</text>
+      <image
+         x="21"
+         y="38"
+         width="6"
+         height="6"
+         xlink:href="../../jobs/dice.svg"
+         id="image55" />
+      <text
+         font-family="Arial"
+         font-size="5px"
+         x="2"
+         y="6"
+         fill="#000000"
+         stroke="#ffffff"
+         stroke-width="0.8"
+         font-weight="bold"
+         style="paint-order:stroke"
+         id="text56-8">Hunting Knife</text>
+    </g>
+    <path
+       style="fill:#ff0000;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#Arrow1);paint-order:stroke fill markers;stop-color:#000000"
+       d="M 40.442788,37.96972 53.075169,73.02643"
+       id="path26485"
        sodipodi:nodetypes="cc" />
   </g>
 </svg>
