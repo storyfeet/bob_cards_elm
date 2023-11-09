@@ -29,13 +29,13 @@ explorerDeck =
     ]
 
 whiskey :  Card
-whiskey = Card "Whiskey" THealth [[pay Food 1]]
+whiskey = Card "Whiskey" THealth [[pay Food 1],[scrap TAny 1]]
     [[Discard (TDanger DAny) (X 1)]
     , [Scrap THealth This ,Scrap (TDanger DAny) (X 1)]
     ]
 
 elixer : Card
-elixer = Card "Elixer" THealth [payEq 1 [Food,Wood] ]
+elixer = Card "Elixer" THealth [payEq 1 [Food,Wood] , [In Village, pay Any 1 ]]
     [ [Scrap (TDanger DAny) (N 1), Draw (N 1) ]
     , [Scrap THealth This,Scrap (TDanger DAny) (X 1),Draw (X 1) ]
     ]
@@ -68,52 +68,52 @@ cow = Card "Cow" THealth
 
 wagon:Card
 wagon = Card "Wagon" THealth
-    [[pay Wood 3,pay Food 2]  ]
+    [[pay Wood 3,pay Food 2],[In Village, pay Gold 2]  ]
     [ [scrapThis THealth ,gain Wood 2,gain Food 2,draw 2]
     , [gain Wood 1, gain Food 1, draw 1]
     ]
 
 canoe: Card
 canoe = Card "Canoe" TMove
-    [[pay Wood 2]]
+    [[pay Wood 2],[In Village, pay Gold 1]]
     [ [pay Food 1 ,WaterMove (N 1)]
     ]
 
 sailboat: Card
 sailboat = Card "Sailboat" TMove
-    [[pay Wood 3, pay Any 1]]
+    [[pay Wood 3, pay Any 1],[In Village, pay Gold 2, Discard TAny (N 1)]]
     [[WaterMove (N 2)]]
 
 climbingBoots: Card 
 climbingBoots = Card "Climbing Boots" TMove
-    [[pay Metal 1]]
+    [[pay Metal 1],[pay Any 1,Discard TAny (N 2)]]
     [ [pay Food 1,discard ,Move (N 1)]
     , [pay Food 1, MountainMove (N 1)]
     ]
 
 binoculars: Card
 binoculars = Card "Binoculars" TMove
-    [[pay Metal 1]]
+    [[pay Metal 1],[In Village, pay Any 2]]
     [ [Reveal (N 1)]
     , [scrapThis TMove, Reveal (N 2)]
     ]
 
 telescope: Card
 telescope = Card "Telescope" TMove
-    [[pay Metal 1,pay Wood 1]]
+    [[pay Metal 1,pay Wood 1],[scrap TMove 1]]
     [ [ Reveal (N 2) ]
     , [scrapThis TMove, Reveal (N 3)]
     ]
 
 fishingRod : Card
 fishingRod = Card "Fishing Rod" TGather
-    [[pay Wood 1]]
+    [[pay Wood 1,Discard TAny (N 2)]]
     [ [In River,gather Food 1]
     , [In Water,gather Food 3]]
 
 net: Card
 net = Card "Net" TGather
-    [[pay Wood 2]]
+    [[pay Wood 2],[In River,scrap TAny 1,discard ]]
     [ [In Water, gather Food 5]
     , [In River, gather Food 2]
     , [discard,gather Food 1]
@@ -121,7 +121,7 @@ net = Card "Net" TGather
 
 huntingKnife : Card
 huntingKnife = Card "Hunting Knife" TGather
-    [[pay Wood 1, pay Metal 1]]
+    [[pay Wood 1, pay Metal 1],[In Village, pay Gold 1]]
     [ [defend 1, attack 2]
     , [In Forest, gather Food 4]
     , [discard, gather Food 2]
@@ -147,18 +147,18 @@ bigPan = Card "Big Pan" TGather [[In Village,pay Gold 1],[ discard,pay Wood 1]]
     [riverGather Gold 3]
 
 axe : Card 
-axe = Card "Axe" TGather [[pay Wood 1,pay Metal 1]]
+axe = Card "Axe" TGather [[pay Wood 1,pay Metal 1],[In Village, pay Gold 1]]
     [ [In Forest,pay Food 1,gain Wood 3 ]
     , [attack 2,defend 2]
     ]
 
 twoManSaw : Card
-twoManSaw = Card "Two Man Saw" TGather [[pay Metal 2]]
+twoManSaw = Card "Two Man Saw" TGather [[pay Metal 2],[scrap TGather 1,pay Any 2]]
     [ [In Forest,Discard TAny (N 2), gather Wood 5]
     ]
 
 drill : Card
-drill = Card "Drill" TGather [[In Village, pay Metal 2,pay Gold 1 ]]
+drill = Card "Drill" TGather [[In Village, pay Metal 1,pay Gold 1],[pay Metal 2,pay Any 1 ]]
     [[In Mountain, discard , gather Metal 5]]
 
 lumpHammer : Card 

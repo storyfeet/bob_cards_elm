@@ -16,7 +16,7 @@ front card =
         , rect 3 8 44 59 [flNoStk "White" , opacity 0.4, rxy 1 1]
         , cardPic 4 7 card.name
         , costOrType card.cost card.ctype
-        , JSV.jobs 41 5 69 card.jobs
+        , JSV.jobs 41 3 67 card.jobs
         , text "Arial" 5 [
                 xy 2 6,flStk "Black" "white" 0.8,bold,strokeFirst
             ] card.name
