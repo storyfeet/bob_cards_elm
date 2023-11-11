@@ -163,13 +163,11 @@ drill = Card "Drill" TGather [[In Village, pay Metal 1,pay Gold 1],[pay Metal 2,
 
 lumpHammer : Card 
 lumpHammer = Card "Lump Hammer" TMake [[pay Metal 2],[In Village,pay Gold 1]]
-    [[pay Metal 1, pay Wood 1,discard ,BuildRail] 
-    ,[pay Metal 2, pay Wood 1,discard ,BuildBridge] ]
+    [[pay Metal 1, pay Wood 1,discard ,BuildRail] ]
 
 sledgeHammer : Card
 sledgeHammer = Card "Sledgehammer" TMake [[scrap TGather 1,pay Wood 2],[In Village ,pay Gold 2]]
     [ [pay Metal 1, pay Wood 2,BuildRail]
-    , [pay Metal 2, pay Wood 2,BuildBridge]
     , [In Mountain,Discard TAny (X 1),Gain Metal (XD 1)]
     ]
 
