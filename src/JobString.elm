@@ -66,6 +66,8 @@ actionStr a =
         MountainMove n -> "climb " ++ pluralJ "space" "spaces" n
         Scrap t n -> "scrap " ++ jNumToString n ++ " " ++ cTypeToString t 
         BuildRail -> "build a railway"
+        Attack n -> "deal " ++ jNumToString n ++ "hits in battle."
+        Defend n -> "defend against " ++ jNumToString n ++ " hit"
         _ -> "-- UNDEFINED actionStr--"
 
 
