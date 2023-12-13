@@ -25,7 +25,7 @@ front cam =
             , text "Arial" 5 [xy 196 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ,txRight] ((difficultyStr cam.difficulty) ++ " Mission - " ++ (MS.modeStr cam.mode))
             , JSV.jobsSquish 80 10 70 62 cam.jobs
-            --, JSV.picItem 186 10 "difficulty" cam.difficulty "red"
+            , JSV.picItem 186 10 "difficulty" cam.difficulty "red"
             , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
             , textLines 5 (14 + 4.6 * (List.length crules|> toFloat )) 3.5 [font "Arial" 3,txSpaces] jrules
             , text "Arial" 5 [xy 147 14,bold] "Night Phase"
@@ -43,7 +43,7 @@ back cam =
         , rect 45 9 66 59 [flNoStk "white"]
         , text "Arial" 5 [xy 8 15, bold] "Options"
         , text "Arial" 4 [xy 15 25] "Scoreboard"
-        , text "Arial" 4 [xy 8 40, txCenter,rotate -90 8 40]  "Dice"
+        , text "Arial" 4 [xy 8 40, txCenter,rotate -90 8 40]  "Bandit Dice"
         , namedCheckGrid 10 30 cam.boards ["d20","d12","Both"] 
         , setupPic cam.setupPic
         , cam.setup |> ruleWrap 40 |> textLines 112 15 6 [font "Arial" 4,txSpaces] 
