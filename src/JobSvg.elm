@@ -127,7 +127,7 @@ action x y c =
         J.Discard ct n -> jobCard x y ct "-" "orange" n 
         J.Draw n -> jobCard x y J.TAny "+" "green" n
         J.Scrap ct n -> case n of 
-            J.This -> (jobCard x y ct "-" "red" n ) ++ scrapPic x y 
+            J.This -> scrapThis x y ct
             _ -> (jobCard x y ct "-" "red" n ) ++ scrapPic x y 
         J.Take ct n -> jobCard x y ct "^" "blue" n
         J.Starter -> qStar x y "yellow" "black" --jobStar x y "yellow"  n
@@ -241,25 +241,31 @@ cardIconText x y tcol tx  =
 
 jobCard : Float -> Float -> J.CardType -> String -> String -> J.JobNum -> String
 jobCard x y ct tx tcol n =
+    String.join "\n" 
+        [ card x y ct tcol n 
+        , cardLetter (x + 1) (y + 9) ct
+        , gainText (x + 10) (y+3) tcol (tx ++ J.jnum n)
+        ]
+
+scrapThis : Float -> Float -> J.CardType -> String
+scrapThis x y ct =
+    String.join "\n" 
+    [ card x y ct "red" J.This
+    , scrapPic x y
+    ]
+
+card : Float -> Float -> J.CardType -> String -> J.JobNum  -> String
+card x y ct tcol n =
     let 
         stk = case n of 
             J.This -> narrowStk (cTypeColor ct) "red"
             _ -> narrowStk (cTypeColor ct) "black"
-        gt = case n of
-            J.This -> ""
-            _ -> gainText (x + 10) (y+3) tcol (tx ++ J.jnum n)
-
-    in 
-        String.join "\n" 
-            [ g [ rotate 30 (x + 5) (y + 5)]
-                [ rect (x+2) y 6 10 [ stk , rxy 1 1 ]        
-                , if n == J.This then 
-                    cardIconText (x + 5) (y + 8) tcol "!"
-                    else ""
-                ]
-            , cardLetter (x + 1) (y + 9) ct
-            , gt
-
+    in
+        g [ rotate 30 (x + 5) (y + 5)]
+            [ rect (x+2) y 6 10 [ stk , rxy 1 1 ]        
+            , if n == J.This then 
+                cardIconText (x + 5) (y + 8) tcol "!"
+                else ""
             ]
 
 
@@ -351,8 +357,8 @@ dice x y n =
 
 dicePic : Float -> Float -> String
 dicePic x y =
-    img (x + 6) (y + 6) 6 6  ("../pics/jobs/dice.svg")[]
+    img (x + 5) (y + 5) 6 6  ("../pics/jobs/dice.svg")[]
 
 scrapPic : Float -> Float -> String
 scrapPic x y =
-    img (x + 6) (y + 6) 5 5  ("../pics/jobs/scrap_bin.svg")[]
+    img (x + 5) (y + 5) 5 5  ("../pics/jobs/scrap_bin.svg")[]
