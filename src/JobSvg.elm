@@ -126,7 +126,9 @@ action x y c =
         J.Or -> jobPic x y "or"
         J.Discard ct n -> jobCard x y ct "-" "orange" n 
         J.Draw n -> jobCard x y J.TAny "+" "green" n
-        J.Scrap ct n -> jobCard x y ct "#" "red" n
+        J.Scrap ct n -> case n of 
+            J.This -> (jobCard x y ct "-" "red" n ) ++ scrapPic x y 
+            _ -> (jobCard x y ct "-" "red" n ) ++ scrapPic x y 
         J.Take ct n -> jobCard x y ct "^" "blue" n
         J.Starter -> qStar x y "yellow" "black" --jobStar x y "yellow"  n
         J.Move n -> jobN x y "move" n
@@ -243,6 +245,10 @@ jobCard x y ct tx tcol n =
         stk = case n of 
             J.This -> narrowStk (cTypeColor ct) "red"
             _ -> narrowStk (cTypeColor ct) "black"
+        gt = case n of
+            J.This -> ""
+            _ -> gainText (x + 10) (y+3) tcol (tx ++ J.jnum n)
+
     in 
         String.join "\n" 
             [ g [ rotate 30 (x + 5) (y + 5)]
@@ -252,9 +258,10 @@ jobCard x y ct tx tcol n =
                     else ""
                 ]
             , cardLetter (x + 1) (y + 9) ct
-            , gainText (x + 10) (y+3) tcol (tx ++ J.jnum n)
+            , gt
 
             ]
+
 
 cardLetter : Float -> Float -> J.CardType -> String
 cardLetter x y ct =
@@ -334,6 +341,7 @@ jobCornerArrowPath x y w h =
         ]
 
 
+
 dice : Float -> Float -> J.JobNum -> String
 dice x y n =
     case n of 
@@ -344,3 +352,7 @@ dice x y n =
 dicePic : Float -> Float -> String
 dicePic x y =
     img (x + 6) (y + 6) 6 6  ("../pics/jobs/dice.svg")[]
+
+scrapPic : Float -> Float -> String
+scrapPic x y =
+    img (x + 6) (y + 6) 5 5  ("../pics/jobs/scrap_bin.svg")[]
