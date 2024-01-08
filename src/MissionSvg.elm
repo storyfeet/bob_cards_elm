@@ -40,13 +40,13 @@ back cam =
         , rect 4 9 192 59 [flNoStk "White" , opacity 0.5 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] (cam.name ++ " - setup")
-        , rect 45 9 66 59 [flNoStk "white"]
+        , rect 38 9 66 59 [flNoStk "white"]
         , text "Arial" 5 [xy 8 15, bold] "Options"
         , text "Arial" 4 [xy 15 25] "Scoreboard"
         , text "Arial" 4 [xy 8 40, txCenter,rotate -90 8 40]  "Bandit Dice"
         , namedCheckGrid 10 30 cam.boards ["d20","d12","Both"] 
         , setupPic cam.setupPic
-        , cam.setup |> ruleWrap 40 |> textLines 112 15 6 [font "Arial" 4,txSpaces] 
+        , cam.setup |> ruleWrap 52 |> textLines 108 15 5.3 [font "Arial" 3.7,txSpaces] 
         , text "Arial" 4 [xy 4.5 68,flNoStk "black",opacity 0.6] Config.version
         ]
 
@@ -54,7 +54,7 @@ setupPic : String -> String
 setupPic fname =
     case fname of
         "" -> ""
-        s -> img 45 10 66 54 ("../pics/setups/" ++ s ++ ".svg") []
+        s -> img 38 10 66 54 ("../pics/setups/" ++ s ++ ".svg") []
 
 difficultyStr : Int -> String
 difficultyStr n =
