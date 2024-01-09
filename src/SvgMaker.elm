@@ -32,7 +32,7 @@ placePlayer: Pg.RowDirection -> Int -> String -> String
 placePlayer rd= placeCarder 3 0 210 297 100 90 rd
 
 placeMission : Int -> String -> String 
-placeMission = placeCarder 3 0 210 297 200 72 Pg.LtoR
+placeMission = placeCarder 3 0 210 297 200 90 Pg.LtoR
 
 
 
@@ -123,8 +123,8 @@ printables =
     , pager "tile_backs" 0 Land.fullDeck 24 TileSvg.back placeTile
     , pager "players" 0 PL.players 6 PLSvg.front (placePlayer Pg.LtoR)
     , pager "player_backs" 0 PL.players 6 PLSvg.back (placePlayer Pg.RtoL)
-    , pager "missions" 0 MS.allCampaigns  4 MissionSvg.front placeMission
-    , pager "mission_backs" 0 MS.allCampaigns 4 MissionSvg.back placeMission
+    , pager "missions" 0 MS.allCampaigns  3 MissionSvg.front placeMission
+    , pager "mission_backs" 0 MS.allCampaigns 3 MissionSvg.back placeMission
     ]
 
 

@@ -368,13 +368,13 @@ nightPhase md d =
 
 --------------Setups
 soloScore : List String
-soloScore = ["Add a meeple to the 0 on the score track"]
+soloScore = ["Add a meeple to the '0' on the score track"]
 
 coopScore : List String
-coopScore = ["Add one meeple of any colour to the 0 on the score track","Move that meeple forward one space for every player above 2"]
+coopScore = ["Add one meeple of any colour to the '0' on the score track","Move the Day Tracker forward one space for every player above 2"]
 
 vsScore : List String
-vsScore = ["Add a meeple to the 0 on the score track for each player"]
+vsScore = ["Add a meeple to the '0' on the score track for each player"]
 
 
 standardMap : List String

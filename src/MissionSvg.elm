@@ -17,14 +17,14 @@ front cam =
         crules = cam.rules |> ruleWrap 37
     in 
         String.join "\n"
-            [ rect 0 0 200 72 [flStk CC.orange "white" 1,rxy 2 2] 
-            , rect 0 0 200 72 [flNoStk "white", opacity 0.5] 
-            , rect 4 9 192 59 [flNoStk "White" , fprop "opacity" 0.4 ]
+            [ rect 0 0 200 90 [flStk CC.orange "white" 1,rxy 2 2] 
+            , rect 0 0 200 90 [flNoStk "white", opacity 0.5] 
+            , rect 4 9 192 78 [flNoStk "White" , fprop "opacity" 0.4 ]
             , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ] cam.name
             , text "Arial" 5 [xy 196 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ,txRight] ((difficultyStr cam.difficulty) ++ " Mission - " ++ (MS.modeStr cam.mode))
-            , JSV.jobsSquish 80 10 70 62 cam.jobs
+            , JSV.jobsSquish 80 10 70 72 cam.jobs
             , JSV.picItem 186 10 "difficulty" cam.difficulty "red"
             , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
             , textLines 5 (14 + 4.6 * (List.length crules|> toFloat )) 3.5 [font "Arial" 3,txSpaces] jrules
@@ -35,9 +35,9 @@ front cam =
 back : MS.Mission -> String
 back cam =  
     String.join "\n"
-        [ rect -2 -2 204 76 [flNoStk CC.emeraldGreen ] 
-        , rect -2 -2 204 76 [flNoStk "White" , opacity 0.5 ]
-        , rect 4 9 192 59 [flNoStk "White" , opacity 0.5 ]
+        [ rect -2 -2 204 94 [flNoStk CC.emeraldGreen ] 
+        , rect -2 -2 204 94 [flNoStk "White" , opacity 0.5 ]
+        , rect 4 9 192 78 [flNoStk "White" , opacity 0.5 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] (cam.name ++ " - setup")
         , rect 38 9 66 59 [flNoStk "white"]
@@ -47,7 +47,7 @@ back cam =
         , namedCheckGrid 10 30 cam.boards ["d20","d12","Both"] 
         , setupPic cam.setupPic
         , cam.setup |> ruleWrap 52 |> textLines 108 15 5.3 [font "Arial" 3.7,txSpaces] 
-        , text "Arial" 4 [xy 4.5 68,flNoStk "black",opacity 0.6] Config.version
+        , text "Arial" 4 [xy 4.5 85,flNoStk "black",opacity 0.6] Config.version
         ]
 
 setupPic : String -> String

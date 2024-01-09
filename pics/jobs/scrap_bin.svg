@@ -27,7 +27,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="6.1976141"
-     inkscape:cx="20.41108"
+     inkscape:cx="20.330404"
      inkscape:cy="46.630848"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
@@ -45,21 +45,24 @@
      transform="translate(-1.435341,-1.5783492)">
     <path
        style="fill:#cccccc;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
+       d="M 2.5466368,7.4529509 3.8179305,3.2689185 16.518564,3.2884498 17.492593,7.3811425"
+       id="path11"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#cccccc;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
        d="m 3.9318707,7.4250949 1.322499,9.4893231 8.9142003,0.181533 1.779463,-9.7585137"
        id="path8"
        sodipodi:nodetypes="cccc" />
     <path
        style="fill:#cccccc;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
-       d="M 6.9868139,9.0574868 7.9862731,15.266805"
-       id="path9" />
+       d="M 6.880013,8.0659375 7.9862731,15.266805"
+       id="path9"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:#cccccc;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
-       d="M 12.492633,8.9859479 11.378014,15.369375"
-       id="path10" />
-    <path
-       style="fill:#cccccc;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
-       d="M 2.1829568,6.6789287 3.8179305,3.2689185 16.850973,3.2419296 17.601585,6.577688"
-       id="path11" />
+       d="M 12.539168,8.2183513 11.378014,15.369375"
+       id="path10"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:#cccccc;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
        id="path12"
