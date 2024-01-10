@@ -1,4 +1,5 @@
 module MissionSvg exposing (..)
+import MissionSetup as MP
 import PageSvg exposing (..)
 import JobSvg as JSV
 import Mission as MS
@@ -23,7 +24,7 @@ front cam =
             , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ] cam.name
             , text "Arial" 5 [xy 196 7,flStk "Black" "white" 0.8,bold,strokeFirst
-        ,txRight] ((difficultyStr cam.difficulty) ++ " Mission - " ++ (MS.modeStr cam.mode))
+        ,txRight] ((difficultyStr cam.difficulty) ++ " Mission - " ++ (MP.modeStr cam.mode))
             , JSV.jobsSquish 80 10 70 72 cam.jobs
             , JSV.picItem 186 10 "difficulty" cam.difficulty "red"
             , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
@@ -46,7 +47,7 @@ back cam =
         , text "Arial" 4 [xy 8 40, txCenter,rotate -90 8 40]  "Bandit Dice"
         , namedCheckGrid 10 30 cam.boards ["d20","d12","Both"] 
         , setupPic cam.setupPic
-        , cam.setup |> ruleWrap 52 |> textLines 108 15 5.3 [font "Arial" 3.7,txSpaces] 
+        , (MP.Score cam.mode):: cam.setup |>List.map MP.setupStr |>  ruleWrap 52 |> textLines 108 15 5.3 [font "Arial" 3.7,txSpaces] 
         , text "Arial" 4 [xy 4.5 85,flNoStk "black",opacity 0.6] Config.version
         ]
 

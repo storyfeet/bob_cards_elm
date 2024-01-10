@@ -1,29 +1,19 @@
-module Mission exposing (Mission,modeStr,allCampaigns)
+module Mission exposing (Mission,allCampaigns)
 import Job as J exposing (on,Job,gain,pay,Resource(..),JobNum (..))
+import MissionSetup as MP
 
 type alias Mission =
     { name : String 
     , difficulty : Int
-    , mode : Mode
+    , mode : MP.Mode
     , boards : List String
     , setupPic : String
-    , setup : List String
+    , setup : List MP.Setup
     , rules : List String
     , jobs : List Job
     , night : List String
     }
 
-type Mode =
-    Solo
-    | Coop
-    | Versus
-
-modeStr : Mode -> String
-modeStr m =
-    case m of
-        Solo -> "Solo"
-        Coop -> "Cooperative"
-        Versus -> "Versus"
 
 
 allCampaigns : List Mission
@@ -42,13 +32,13 @@ vsCampaigns = [ discovery
 discovery : Mission
 discovery = { name = "Discovery"
     , difficulty = 1
-    , mode = Versus
+    , mode = MP.Versus
     , boards = ["A","B"]
-    , setup = vsScore ++ standardMap
+    , setup = [MP.Grid 2,MP.ThreeMeeples]
     , setupPic = "basic_vs"
     , rules = ["- For players who want a fair but close game -"]
     , jobs =  vsUtil  ++ basicVsScoring
-    , night = nightPhase Versus 3
+    , night = nightPhase MP.Versus 3
     }
 
 theRace: Mission
@@ -60,7 +50,7 @@ theRace = {discovery
         , [on J.OnReveal, J.In J.WestMost , gain VP 1 ]
         , [on J.OnDefeatBandits, gain Gold 1,gain Wood 1,gain Metal 1,gain Food 1]
         ]
-    , setup = vsScore ++ standardMap ++ ["Players may scrap their Mallets"]
+    , setup = [MP.Grid 2,MP.ThreeMeeples,MP.Scrap "Mallets" ]
     , rules = ["- For advanced players who are happy to leave a man behind -","Train Rides may go from Village to Village if there are no bandits on either"]
     }
 
@@ -69,7 +59,7 @@ villageHero = {discovery
     | name = "Village Hero"
     , difficulty = 2
     , rules = "- For players who like hunting and gathering -"::fedVillage
-    , setup = vsScore ++ standardMap
+    , setup = [MP.Grid 2,MP.ThreeMeeples]
     , jobs = 
         vsUtil ++ [ [J.In J.Village, pay Food 2, J.Pay Food (X 1),gain VP 2,J.Gain VP (X 1)]
         , [on J.OnBuild, gain VP 1,J.In J.Village, gain VP 1 ]
@@ -81,7 +71,7 @@ builders: Mission
 builders = {discovery
     | name = "Builders"
     , difficulty = 3
-    , setup = vsScore ++ standardMap
+    , setup = [MP.Grid 2,MP.ThreeMeeples]
     , rules = ["- For players who want a hard challenge -"]
     , jobs = vsUtil ++ [buildRail 3 1 , buildN 3 |> westMost 2,lootDrop Any (D 3)] 
     }
@@ -106,7 +96,7 @@ theFeast = { preciousCargo
     , difficulty = 3 
     , setupPic = "coop_basic"
     , rules = "- For players who want to work together to give -"::fedVillage 
-    , setup = coopScore ++ standardMap
+    , setup = [MP.Grid 2,MP.ThreeMeeples]
     , jobs =
         coopUtil ++ [ [J.In J.Village, J.pay Food 5 , J.gain VP 5]
         , [on J.OnDefeatBandits, J.gain Food 3, J.gain VP 1]
@@ -116,24 +106,24 @@ theFeast = { preciousCargo
 buildingTogether : Mission
 buildingTogether = { 
     name = "Building Together"
-    , mode = Coop
+    , mode = MP.Coop
     , boards = ["C","D"]
     , difficulty = 3
     , setupPic = "coop_basic"
     , rules = ["- For players who can take a challenge together -"]
-    , setup = coopScore ++ standardMap
+    , setup = [MP.Grid 2,MP.ThreeMeeples]
     , jobs = coopUtil ++ [buildN 2 |> westMost 2, lootDrop Any (D 3)]
-    , night = nightPhase Coop 3
+    , night = nightPhase MP.Coop 3
     }
 
 preciousCargo : Mission
 preciousCargo = {
     name = "Precious Cargo"
-    , mode = Coop
+    , mode = MP.Coop
     , difficulty = 2
     , setupPic = "wagon"
     , boards = ["C","D"]
-    , setup = coopScore ++ standardMap ++ wagonSetup
+    , setup = [MP.Grid 2,MP.ThreeMeeples,MP.Wagon 0]
     , rules = "- For players who love escort missions -"::moveWagon ++ wagonDamage
     , jobs = 
         coopUtil ++ [ buildN 2 |> westMost 0
@@ -141,7 +131,7 @@ preciousCargo = {
         , [J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
         , vpDrop 2
         ]
-    , night = nightPhase Coop 3
+    , night = nightPhase MP.Coop 3
     
     }
 
@@ -151,7 +141,7 @@ dreamWork = {preciousCargo
     , setupPic = "wagon"
     , difficulty = 2
     , rules = ["- For team players -","The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
-    , setup = coopScore ++ standardMap ++ wagonSetup
+    , setup = [MP.Grid 2,MP.ThreeMeeples,MP.Wagon 0]
     ,jobs = coopUtil ++ [
         buildN 1 |> westMost 1
         , [on J.OnWagonWest, gain VP 2]
@@ -165,7 +155,7 @@ speedOfTheSlowest = { preciousCargo
     , setupPic = "wagon"
     , difficulty = 1
     , rules = ["- For players who won't leave a man behind -","The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
-    , setup = coopScore ++ standardMap ++ wagonSetup 
+    , setup = [MP.Grid 2, MP.ThreeMeeples,MP.Wagon 0]
     ,jobs = coopUtil ++ [
         [on J.OnWagonWest, gain VP 3]
         , lootDrop Gold (D 2)
@@ -178,13 +168,13 @@ thereAndBackAgain = {preciousCargo
     | name = "There and Back Again"
     , difficulty = 2
     , setupPic = "coop_basic"
-    , setup = coopScore ++ standardMap ++ wagonSetup
+    , setup = [MP.Grid 2,MP.ThreeMeeples,MP.Wagon 0] 
     , jobs = coopUtil ++ [
         [on J.OnReveal, J.In J.WestMost, gain VP 3]
         , [ on J.OnDefeatBandits, J.Gain Any (D 3)]
         ]
-    , rules = ["- For team players who want a challenge -","Do not remove any tiles from play","The Wagon does not move", "You may not reveal more than 4 tiles North to South on a row.", "To win you need:","- To complete the score track","- All players on the starting with the wagon" ]
-    , night = nightPhase Coop 0
+    , rules = ["- For team players who want a challenge -","Do not remove any tiles from play","The Wagon does not move, and cannot be attacked", "You may not reveal more than 4 tiles North to South on a row.", "To win you need:","- To complete the score track","- All players on the starting tile with the wagon" ]
+    , night = nightPhase MP.Coop 0 
     }
 
 areWeTheBaddies : Mission
@@ -192,7 +182,7 @@ areWeTheBaddies = { preciousCargo
     | name = "Are We the Baddies"
     , difficulty = 3
     , setupPic = "coop_basic"
-    , setup = coopScore ++ standardMap
+    , setup = [MP.Grid 2,MP.ThreeMeeples]
     , rules = ["- For players who want a fight -","Only players who contributed to the bandit defeat get to roll for gold" ]
     , jobs = coopUtil ++ 
         [ [ J.Discard J.TAny (N 2),J.attack 2,J.defend 1 ]
@@ -205,7 +195,7 @@ stopThatWagon = { preciousCargo
     | name = "Stop That Wagon"
     , boards = ["A","B"]
     , setupPic = "wagon_chase"
-    , setup = coopScore ++ chaseMap
+    , setup = [MP.Grid 3,MP.ThreeMeeples, MP.Wagon 2, MP.Bandits [1,2]]
     , rules = ["- For players who want a fight -","Players may attack the wagon", "At the end of the Night phase" , " - Move the Wagon 1 space West revealing tiles as needed"," - Add a bandit to the Wagon's Tile"]
     , jobs = 
         coopUtil ++ [ [J.On (J.OnWagonDamage (X 1)), J.Gain VP (X 2) ]
@@ -223,21 +213,21 @@ newWorld : Mission
 newWorld = { 
     name = "New World"
     , difficulty = 1
-    , mode = Solo
+    , mode = MP.Solo
     , boards = ["A","B"]
-    , setup = soloScore ++ standardMap
+    , setup = [MP.Grid 2, MP.OneMeeple]
     , setupPic = "basic_vs"
     , rules = ["- The straight forward beginner mission -"]
     , jobs =  soloUtil ++ basicVsScoring
-    , night = nightPhase Solo 4
+    , night = nightPhase MP.Solo 4
     }
 
 doubleTrouble : Mission
 doubleTrouble = { newWorld 
     | name = "Double Trouble"
     , difficulty = 2
-    , setup = soloScore ++ doubleMap ++ wagonSetup
-    , rules  = ["- For a player who want to shake up the experience -","You can do any job with either meeple, but not both"]
+    , setup = [MP.Grid 2, MP.TwoMeeples, MP.Wagon 0]
+    , rules  = ["- For a player who wants to shake up the experience -","You can do any job with either meeple, but not both","Move the Wagon by having one of your meeples on the same tile, then move it as you would yourself", "The wagon may not be attacked by bandits"]
     , jobs = soloUtil ++ [[J.On J.OnWagonWest,gain VP 3 ]]
     , setupPic = "wagon"
     }
@@ -246,9 +236,9 @@ railwayMan : Mission
 railwayMan = { 
     name = "Railway Man"
     , difficulty = 3
-    , mode = Solo
+    , mode = MP.Solo
     , boards = ["A","B"]
-    , setup = soloScore ++ standardMap
+    , setup = [MP.Grid 2,MP.OneMeeple]
     , setupPic = "basic_vs"
     , rules = ["- For a player who know's what he's doing and is up for the challenge -"]
     , jobs =  soloUtil ++ 
@@ -256,7 +246,7 @@ railwayMan = {
         , [J.on J.OnReveal ,J.In J.WestMost,gain VP 1 ]
         , [J.on J.OnBuild , gain VP 2, J.In J.WestMost, gain VP 3]
         ]
-    , night = nightPhase Solo 4
+    , night = nightPhase MP.Solo 4
     }
 ------ SCORING -------
 
@@ -341,7 +331,7 @@ freeWeapon = ["Players may all take 1 weapon (Red Card) from the trade row draw 
 
 ---------Bandit Phase
 
-nightPhase : Mode -> Int -> List String
+nightPhase : MP.Mode -> Int -> List String
 nightPhase md d = 
     let
         head = [ "Move the Trade Row"
@@ -357,49 +347,12 @@ nightPhase md d =
                 , "    of all players"
                 ]
         p1t = case md of
-            Versus -> ["Pass the P1 token"]
+            MP.Versus -> ["Pass the P1 token"]
             _ -> []
 
 
         tail = ["Bandits Appear","Bandits Split at 7","Full Hand check"]
     in
         head ++ rm ++ tail ++ p1t
-
-
---------------Setups
-soloScore : List String
-soloScore = ["Add a meeple to the '0' on the score track"]
-
-coopScore : List String
-coopScore = ["Add one meeple of any colour to the '0' on the score track","Move the Day Tracker forward one space for every player above 2"]
-
-vsScore : List String
-vsScore = ["Add a meeple to the '0' on the score track for each player"]
-
-
-standardMap : List String
-standardMap = ["Layout 6 random tiles face up in a 2x3 grid"
-                ,"Place tiles face down around the outside of the tiles, to the North, West and South. (no diagonals)"
-                , "Place a Meeple for each Player in the central eastmost tile"
-                ]
-
-doubleMap : List String
-doubleMap = ["Layout 6 random tiles face up in a 2x3 grid"
-                ,"Place tiles face down around the outside of the tiles, to the North, West and South. (no diagonals)"
-                , "Place 2 Meeples in the central eastmost tile"
-                ]
-
-chaseMap = ["Layout 9 random tiles face up in a 3x3 grid"
-                ,"Place tiles face down around the outside of the tiles, to the North, West and South. (no diagonals)"
-                , "Place a Meeple for each Player in the central eastmost tile"
-                , "add one bandit to the tiles 1, and 2 spaces West of the player's meeples"
-                , "Place the wagon 2 spaces west of the player's meeples"
-            ]
-
-
-
-wagonSetup : List String
-wagonSetup = ["Add the Wagon to the map with the meeples"]
-
 
 
