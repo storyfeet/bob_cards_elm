@@ -44,18 +44,41 @@ back cam =
         , rect 38 9 66 59 [flNoStk "white"]
         , text "Arial" 5 [xy 8 15, bold] "Options"
         , text "Arial" 4 [xy 15 25] "Scoreboard"
-        , text "Arial" 4 [xy 8 40, txCenter,rotate -90 8 40]  "Bandit Dice"
+        , text "Arial" 4 [xy 8 40, txCenter,rotate -90 8 40] "Bandit Dice"
         , namedCheckGrid 10 30 cam.boards ["d20","d12","Both"] 
-        , setupPic cam.setupPic
+        , setupPic 50 15 50 50 "base"
+        , cam.setup |> List.map setupToPic |> String.join "\n"
         , (MP.Score cam.mode):: cam.setup |>List.map MP.setupStr |>  ruleWrap 52 |> textLines 108 15 5.3 [font "Arial" 3.7,txSpaces] 
         , text "Arial" 4 [xy 4.5 85,flNoStk "black",opacity 0.6] Config.version
         ]
 
-setupPic : String -> String
-setupPic fname =
+
+setupPic : Float -> Float -> Float -> Float ->  String -> String
+setupPic x y w h fname =
     case fname of
         "" -> ""
-        s -> img 38 10 66 54 ("../pics/setups/" ++ s ++ ".svg") []
+        s -> img x y w h ("../pics/setups/" ++ s ++ ".svg") []
+
+setupToPic : MP.Setup -> String
+setupToPic sp =
+    case sp of
+        MP.Grid n -> 
+            let 
+                w  = 7 * toFloat n + 2
+                s = "grid_" ++ String.fromInt n ++ "x3"
+            in 
+                setupPic (65 - w) 19 w 35 s 
+        --Wagon n -> img x
+        _ -> ""
+--        | Score Mode
+--        | Bandits (List Int)
+--        | OneMeeple
+--        | TwoMeeples
+--        | ThreeMeeples
+--        | DayForward
+--        | Scrap String
+        
+
 
 difficultyStr : Int -> String
 difficultyStr n =

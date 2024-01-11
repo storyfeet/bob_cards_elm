@@ -7,7 +7,6 @@ type alias Mission =
     , difficulty : Int
     , mode : MP.Mode
     , boards : List String
-    , setupPic : String
     , setup : List MP.Setup
     , rules : List String
     , jobs : List Job
@@ -35,7 +34,6 @@ discovery = { name = "Discovery"
     , mode = MP.Versus
     , boards = ["A","B"]
     , setup = [MP.Grid 2,MP.ThreeMeeples]
-    , setupPic = "basic_vs"
     , rules = ["- For players who want a fair but close game -"]
     , jobs =  vsUtil  ++ basicVsScoring
     , night = nightPhase MP.Versus 3
@@ -94,7 +92,6 @@ theFeast: Mission
 theFeast = { preciousCargo
     | name = "The Feast"
     , difficulty = 3 
-    , setupPic = "coop_basic"
     , rules = "- For players who want to work together to give -"::fedVillage 
     , setup = [MP.Grid 2,MP.ThreeMeeples]
     , jobs =
@@ -109,7 +106,6 @@ buildingTogether = {
     , mode = MP.Coop
     , boards = ["C","D"]
     , difficulty = 3
-    , setupPic = "coop_basic"
     , rules = ["- For players who can take a challenge together -"]
     , setup = [MP.Grid 2,MP.ThreeMeeples]
     , jobs = coopUtil ++ [buildN 2 |> westMost 2, lootDrop Any (D 3)]
@@ -121,7 +117,6 @@ preciousCargo = {
     name = "Precious Cargo"
     , mode = MP.Coop
     , difficulty = 2
-    , setupPic = "wagon"
     , boards = ["C","D"]
     , setup = [MP.Grid 2,MP.ThreeMeeples,MP.Wagon 0]
     , rules = "- For players who love escort missions -"::moveWagon ++ wagonDamage
@@ -138,7 +133,6 @@ preciousCargo = {
 dreamWork : Mission
 dreamWork = {preciousCargo 
     | name = "Make the Dream Work"
-    , setupPic = "wagon"
     , difficulty = 2
     , rules = ["- For team players -","The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
     , setup = [MP.Grid 2,MP.ThreeMeeples,MP.Wagon 0]
@@ -152,7 +146,6 @@ dreamWork = {preciousCargo
 speedOfTheSlowest : Mission
 speedOfTheSlowest = { preciousCargo 
     | name = "Speed of the Slowest"
-    , setupPic = "wagon"
     , difficulty = 1
     , rules = ["- For players who won't leave a man behind -","The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
     , setup = [MP.Grid 2, MP.ThreeMeeples,MP.Wagon 0]
@@ -167,7 +160,6 @@ thereAndBackAgain : Mission
 thereAndBackAgain = {preciousCargo 
     | name = "There and Back Again"
     , difficulty = 2
-    , setupPic = "coop_basic"
     , setup = [MP.Grid 2,MP.ThreeMeeples,MP.Wagon 0] 
     , jobs = coopUtil ++ [
         [on J.OnReveal, J.In J.WestMost, gain VP 3]
@@ -181,7 +173,6 @@ areWeTheBaddies : Mission
 areWeTheBaddies = { preciousCargo
     | name = "Are We the Baddies"
     , difficulty = 3
-    , setupPic = "coop_basic"
     , setup = [MP.Grid 2,MP.ThreeMeeples]
     , rules = ["- For players who want a fight -","Only players who contributed to the bandit defeat get to roll for gold" ]
     , jobs = coopUtil ++ 
@@ -194,7 +185,6 @@ stopThatWagon : Mission
 stopThatWagon = { preciousCargo
     | name = "Stop That Wagon"
     , boards = ["A","B"]
-    , setupPic = "wagon_chase"
     , setup = [MP.Grid 3,MP.ThreeMeeples, MP.Wagon 2, MP.Bandits [1,2]]
     , rules = ["- For players who want a fight -","Players may attack the wagon", "At the end of the Night phase" , " - Move the Wagon 1 space West revealing tiles as needed"," - Add a bandit to the Wagon's Tile"]
     , jobs = 
@@ -216,7 +206,6 @@ newWorld = {
     , mode = MP.Solo
     , boards = ["A","B"]
     , setup = [MP.Grid 2, MP.OneMeeple]
-    , setupPic = "basic_vs"
     , rules = ["- The straight forward beginner mission -"]
     , jobs =  soloUtil ++ basicVsScoring
     , night = nightPhase MP.Solo 4
@@ -229,7 +218,6 @@ doubleTrouble = { newWorld
     , setup = [MP.Grid 2, MP.TwoMeeples, MP.Wagon 0]
     , rules  = ["- For a player who wants to shake up the experience -","You can do any job with either meeple, but not both","Move the Wagon by having one of your meeples on the same tile, then move it as you would yourself", "The wagon may not be attacked by bandits"]
     , jobs = soloUtil ++ [[J.On J.OnWagonWest,gain VP 3 ]]
-    , setupPic = "wagon"
     }
 
 railwayMan : Mission
@@ -239,7 +227,6 @@ railwayMan = {
     , mode = MP.Solo
     , boards = ["A","B"]
     , setup = [MP.Grid 2,MP.OneMeeple]
-    , setupPic = "basic_vs"
     , rules = ["- For a player who know's what he's doing and is up for the challenge -"]
     , jobs =  soloUtil ++ 
         [ buildRail 3 1
