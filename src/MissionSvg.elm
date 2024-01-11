@@ -35,6 +35,13 @@ front cam =
 
 back : MS.Mission -> String
 back cam =  
+    let 
+        df = if cam.mode == MP.Coop then
+                [MP.Score cam.mode,MP.DayForward]
+            else
+                [MP.Score cam.mode]
+        sup = df ++ cam.setup 
+    in
     String.join "\n"
         [ rect -2 -2 204 94 [flNoStk CC.emeraldGreen ] 
         , rect -2 -2 204 94 [flNoStk "White" , opacity 0.5 ]
@@ -47,8 +54,8 @@ back cam =
         , text "Arial" 4 [xy 8 40, txCenter,rotate -90 8 40] "Bandit Dice"
         , namedCheckGrid 10 30 cam.boards ["d20","d12","Both"] 
         , setupPic 50 15 50 50 "base"
-        , cam.setup |> List.map setupToPic |> String.join "\n"
-        , (MP.Score cam.mode):: cam.setup |>List.map MP.setupStr |>  ruleWrap 52 |> textLines 108 15 5.3 [font "Arial" 3.7,txSpaces] 
+        , sup |> List.map setupToPic |> String.join "\n"
+        , sup |>List.map MP.setupStr |>  ruleWrap 52 |> textLines 108 15 5.3 [font "Arial" 3.7,txSpaces] 
         , text "Arial" 4 [xy 4.5 85,flNoStk "black",opacity 0.6] Config.version
         ]
 
@@ -68,15 +75,19 @@ setupToPic sp =
                 s = "grid_" ++ String.fromInt n ++ "x3"
             in 
                 setupPic (65 - w) 19 w 35 s 
-        --Wagon n -> img x
+        MP.Wagon n -> 
+            let
+                d  = 6 * toFloat n  
+            in 
+                setupPic (61 - d) 36 4 3 "wagon_counter"
+        MP.OneMeeple -> setupPic 60 33 5 4 "meeple_1"
+        MP.TwoMeeples -> setupPic 60 33 5 4 "meeple_2"
+        MP.ThreeMeeples -> setupPic 60 33 5 4 "meeple_3"
+        MP.Score MP.Versus -> setupPic 80 15 5 4 "meeple_3"
+        MP.Score _ -> setupPic 80 15 5 4 "meeple_white"
+        MP.Bandits l -> l |> List.map (\x -> setupPic (61 - 6*(toFloat x)) 34 2.5 2.5 "bandit")   |> String.join "\n"
+        MP.DayForward -> setupPic 88 19 3 6 "day_forward" 
         _ -> ""
---        | Score Mode
---        | Bandits (List Int)
---        | OneMeeple
---        | TwoMeeples
---        | ThreeMeeples
---        | DayForward
---        | Scrap String
         
 
 
