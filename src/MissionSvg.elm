@@ -48,14 +48,16 @@ back cam =
         , rect 4 9 192 78 [flNoStk "White" , opacity 0.5 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] (cam.name ++ " - setup")
-        , rect 38 9 66 59 [flNoStk "white"]
-        , text "Arial" 5 [xy 8 15, bold] "Options"
-        , text "Arial" 4 [xy 15 25] "Scoreboard"
-        , text "Arial" 4 [xy 8 40, txCenter,rotate -90 8 40] "Bandit Dice"
-        , namedCheckGrid 10 30 cam.boards ["d20","d12","Both"] 
-        , setupPic 50 15 50 50 "base"
-        , sup |> List.map setupToPic |> String.join "\n"
-        , sup |>List.map MP.setupStr |>  ruleWrap 52 |> textLines 108 15 5.3 [font "Arial" 3.7,txSpaces] 
+        , g [translate 162 0] [ -- Options Section
+            text "Arial" 5 [xy 0 15, bold] "Options"
+            , text "Arial" 4 [xy 7 25] "Scoreboard"
+            , text "Arial" 4 [xy 0 40, txCenter,rotate -90 0 40] "Bandit Dice"
+            , namedCheckGrid 2 30 cam.boards ["d20","d12","Both"] 
+        ]
+        , rect 93 9 64 78 [flNoStk "white"]
+        , setupPic 104 20 50 50 "base"
+        , sup |> List.map setupToPic |> g [translate 90 15] 
+        , sup |>List.map MP.setupStr |>  ruleWrap 52 |> textLines 8 15 5.3 [font "Arial" 3.7,txSpaces] 
         , text "Arial" 4 [xy 4.5 85,flNoStk "black",opacity 0.6] Config.version
         ]
 
@@ -74,19 +76,19 @@ setupToPic sp =
                 w  = 7 * toFloat n + 2
                 s = "grid_" ++ String.fromInt n ++ "x3"
             in 
-                setupPic (65 - w) 19 w 35 s 
+                setupPic (29 - w) 9 w 35 s 
         MP.Wagon n -> 
             let
                 d  = 6 * toFloat n  
             in 
-                setupPic (61 - d) 36 4 3 "wagon_counter"
-        MP.OneMeeple -> setupPic 60 33 5 4 "meeple_1"
-        MP.TwoMeeples -> setupPic 60 33 5 4 "meeple_2"
-        MP.ThreeMeeples -> setupPic 60 33 5 4 "meeple_3"
-        MP.Score MP.Versus -> setupPic 80 15 5 4 "meeple_3"
-        MP.Score _ -> setupPic 80 15 5 4 "meeple_white"
-        MP.Bandits l -> l |> List.map (\x -> setupPic (61 - 6*(toFloat x)) 34 2.5 2.5 "bandit")   |> String.join "\n"
-        MP.DayForward -> setupPic 88 19 3 6 "day_forward" 
+                setupPic (25 - d) 26 4 3 "wagon_counter"
+        MP.OneMeeple -> setupPic 24 23 5 4 "meeple_1"
+        MP.TwoMeeples -> setupPic 24 23 5 4 "meeple_2"
+        MP.ThreeMeeples -> setupPic 24 23 5 4 "meeple_3"
+        MP.Score MP.Versus -> setupPic 44 5 5 4 "meeple_3"
+        MP.Score _ -> setupPic 44 5 5 4 "meeple_white"
+        MP.Bandits l -> l |> List.map (\x -> setupPic (26 - 6*(toFloat x)) 24 2.5 2.5 "bandit")   |> String.join "\n"
+        MP.DayForward -> setupPic 52 9 3 6 "day_forward" 
         _ -> ""
         
 

@@ -125,6 +125,12 @@ flStk f s w =
     , fprop "stroke-width" w
     ]
 
+translate : Float -> Float -> String
+translate x y = prop "transform" ("translate("++ String.fromFloat x ++ "," ++ String.fromFloat y ++")") 
+
+translateInt : Int -> Int -> String
+translateInt x y = prop "transform" ("translate("++ String.fromInt x ++ "," ++ String.fromInt y ++")") 
+
 strokeFirst : String
 strokeFirst = prop "style" "paint-order:stroke"
 
@@ -204,12 +210,4 @@ placeCardF nwide fx fy n theCard=
         x = modBy nwide n
         y = n // nwide
     in
-        String.join "" [
-            """<g transform="translate("""
-            , x |> fx |> String.fromFloat 
-            , "," 
-            , y |> fy |> String.fromFloat
-            , """)">""" 
-            , theCard 
-            , "</g>"
-        ]
+        g [translate (fx x) (fy y)] [theCard]
