@@ -69,6 +69,11 @@ mergeIfSmaller n a b =
     then if a == [] then b else a
     else a ++ b
     
+ruleWrap : Int -> List String -> List String
+ruleWrap n l =
+    l |> List.map (capFirst)
+        |> List.map (wordWrap "    " n )
+        |> List.concat
 
 wordWrap : String -> Int -> String -> List String
 wordWrap sub n s =

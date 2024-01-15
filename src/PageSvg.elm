@@ -27,6 +27,13 @@ g : List String -> List String -> String
 g = 
     tag "g"
 
+gTrans: List String -> List String -> String
+gTrans t = g [transform t] 
+
+gShift : Float -> Float -> List String -> String
+gShift x y = 
+    gTrans [translate [x, y]]
+
 rect: Float -> Float -> Float -> Float -> List String -> String
 rect x y w h pps =
     etag "rect" ((xywh x y w h)::pps)
@@ -125,11 +132,32 @@ flStk f s w =
     , fprop "stroke-width" w
     ]
 
-translate : Float -> Float -> String
-translate x y = prop "transform" ("translate("++ String.fromFloat x ++ "," ++ String.fromFloat y ++")") 
 
-translateInt : Int -> Int -> String
-translateInt x y = prop "transform" ("translate("++ String.fromInt x ++ "," ++ String.fromInt y ++")") 
+transform : List String -> String
+transform l = 
+    "transform=\"" ++ String.join " " l ++ "\""
+
+trans : (b -> String) -> String -> List b  -> String
+trans f nm params =
+    let 
+        p = params |> List.map f |> String.join ","
+    in 
+        nm ++ "(" ++ p ++ ")"
+
+transF : String -> List Float -> String
+transF = trans (String.fromFloat)
+
+transI: String -> List Int -> String
+transI = trans (String.fromInt)
+
+translate : List Float -> String
+translate = transF "translate" 
+
+translateInt : List Int -> String
+translateInt = transI "translate" 
+
+scale : List Float -> String
+scale = transF "scale" 
 
 strokeFirst : String
 strokeFirst = prop "style" "paint-order:stroke"
@@ -210,4 +238,4 @@ placeCardF nwide fx fy n theCard=
         x = modBy nwide n
         y = n // nwide
     in
-        g [translate (fx x) (fy y)] [theCard]
+        gTrans [translate [(fx x) ,(fy y)]] [theCard]

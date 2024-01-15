@@ -122,7 +122,8 @@ preciousCargo = {
     , rules = "- For players who love escort missions -"::moveWagon ++ wagonDamage
     , jobs = 
         coopUtil ++ [ buildN 2 |> westMost 0
-        , wagonEastWest 2 
+        , wagonWest 2
+        , wagonEast 2 
         , [J.On (J.OnWagonDamage (X 1)),J.Pay VP (X 1)]
         , vpDrop 2
         ]
@@ -269,8 +270,11 @@ goldForTrain n d =
     [pay Gold n, J.RideTrain (N d) ]
 
 
-wagonEastWest : Int -> Job
-wagonEastWest n = [on J.OnWagonWest, gain VP n, J.Or, on J.OnWagonEast, J.pay VP n]
+wagonEast: Int -> Job
+wagonEast n = [on J.OnWagonEast, pay VP n]
+
+wagonWest: Int -> Job
+wagonWest n = [on J.OnWagonWest,gain VP n]
 
 basicVsScoring : List Job
 basicVsScoring =
@@ -330,8 +334,7 @@ nightPhase md d =
         rm = if d == 0 then 
                 [] 
             else 
-                [ "Remove tiles > " ++ String.fromInt d ++ " East" 
-                , "    of all players"
+                [ "Remove tiles > " ++ String.fromInt d ++ " East of all players"
                 ]
         p1t = case md of
             MP.Versus -> ["Pass the P1 token"]

@@ -3,7 +3,7 @@ import MissionSetup as MP
 import PageSvg exposing (..)
 import JobSvg as JSV
 import Mission as MS
-import MLists
+import MLists as ML
 import JobString as JString
 import ColorCodes as CC
 import Config
@@ -13,9 +13,9 @@ front cam =
     let 
         jrules = cam.jobs 
             |> List.map (JString.jobToString)
-            |> ruleWrap 50 
+            |> ML.ruleWrap 50 
         --rules = MLists.mergeIfSmaller 7 cam.rules jrules
-        crules = cam.rules |> ruleWrap 37
+        crules = cam.rules |> ML.ruleWrap 34
     in 
         String.join "\n"
             [ rect 0 0 200 90 [flStk CC.orange "white" 1,rxy 2 2] 
@@ -23,14 +23,19 @@ front cam =
             , rect 4 9 192 78 [flNoStk "White" , fprop "opacity" 0.4 ]
             , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ] cam.name
-            , text "Arial" 5 [xy 196 7,flStk "Black" "white" 0.8,bold,strokeFirst
+            , text "Arial" 5 [xy 185 7,flStk "Black" "white" 0.8,bold,strokeFirst
         ,txRight] ((difficultyStr cam.difficulty) ++ " Mission - " ++ (MP.modeStr cam.mode))
-            , JSV.jobsSquish 80 10 70 72 cam.jobs
-            , JSV.picItem 186 10 "difficulty" cam.difficulty "red"
-            , textLines 5 14 4.6 [font "Arial" 4 ,txSpaces] crules
+            , JSV.jobsSquish 75 10 70 72 cam.jobs
+            , JSV.picItem 186 2 "difficulty" cam.difficulty "red"
+            , textLines 5 14 4.5 [font "Arial" 4 ,txSpaces] crules
             , textLines 5 (14 + 4.6 * (List.length crules|> toFloat )) 3.5 [font "Arial" 3,txSpaces] jrules
-            , text "Arial" 5 [xy 147 14,bold] "Night Phase"
-            , textLines 147 20 4.6 [font "Arial" 4 ,txSpaces] cam.night
+            , gShift 131 14 [ -- Day and Night Phases
+                text "Arial" 4.5 [xy 0 0,bold] "Day Phase"
+                , dayPhase cam.mode |> ML.ruleWrap 34   |> textLines 2 5 4.3 [font "Arial" 3.8 ,txSpaces] 
+                , text "Arial" 4.5 [xy 0 27.4,bold] "Night Phase"
+                , textLines 2 32 4.3 [font "Arial" 3.8 ,txSpaces] cam.night
+            ]
+
             ]
 
 back : MS.Mission -> String
@@ -48,16 +53,17 @@ back cam =
         , rect 4 9 192 78 [flNoStk "White" , opacity 0.5 ]
         , text "Arial" 5 [xy 4 7,flStk "Black" "white" 0.8,bold,strokeFirst
     ] (cam.name ++ " - setup")
-        , g [translate 162 0] [ -- Options Section
+        , gShift 162 0 [ -- Options Section
             text "Arial" 5 [xy 0 15, bold] "Options"
-            , text "Arial" 4 [xy 7 25] "Scoreboard"
-            , text "Arial" 4 [xy 0 40, txCenter,rotate -90 0 40] "Bandit Dice"
-            , namedCheckGrid 2 30 cam.boards ["d20","d12","Both"] 
+            , text "Arial" 4 [xy 9 25] "Scoreboard"
+            , text "Arial" 4 [xy 0 44, txCenter,rotate -90 0 44] "Bandit Dice"
+            , namedCheckGrid 4 30 cam.boards ["d20","d12","Both"] 
         ]
         , rect 93 9 64 78 [flNoStk "white"]
         , setupPic 104 20 50 50 "base"
-        , sup |> List.map setupToPic |> g [translate 90 15] 
-        , sup |>List.map MP.setupStr |>  ruleWrap 52 |> textLines 8 15 5.3 [font "Arial" 3.7,txSpaces] 
+        , sup |> List.map setupToPic |> gShift 90 15 
+        , sup |>List.map MP.setupStr |>  ML.ruleWrap 52 |> textLines 8 15 5.3 [font "Arial" 3.7,txSpaces] 
+        , gTrans [translate [113,58], scale [0.151,0.151]] [(front cam)]
         , text "Arial" 4 [xy 4.5 85,flNoStk "black",opacity 0.6] Config.version
         ]
 
@@ -122,8 +128,22 @@ checkRow x y sz l =
     l |> List.indexedMap (\i _ -> rect (x + (toFloat i) * sz) y (sz * 0.8) (sz * 0.8)  [flStk "white" "black" 0.5,rxy 0.1 0.1])
     |> String.join "\n"
 
-ruleWrap : Int -> List String -> List String
-ruleWrap n l =
-    l |> List.map (MLists.capFirst)
-        |> List.map (MLists.wordWrap "    " n )
-        |> List.concat
+
+dayPhase : MP.Mode -> List String 
+dayPhase m = 
+    let 
+        utap = "Untap all Character Cards" 
+        hlimit = "Players draw cards to Hand Limit"
+        vturns = "Players take turns to perform jobs/actions" 
+        cturns = "Players perform jobs/actions in any order"
+        mdiscard = "Players may discard Item Cards"
+    in
+        case m of
+            MP.Solo -> [
+                "Untap Character Card"
+                , "Draw to Hand limit"
+                , "Perform jobs/actions"
+                , "May discard Item Cards"
+                ]
+            MP.Coop -> [utap,hlimit,cturns,mdiscard]
+            MP.Versus -> [utap,hlimit,vturns,mdiscard]

@@ -3,6 +3,7 @@ import Player as PL
 import PageSvg exposing (..)
 import JobSvg as JSV exposing (job)
 import HasPicList as PicLists
+import MLists as ML
 import Cards 
 import ColorCodes as CC
 import Config
@@ -18,11 +19,11 @@ front p =
         , facePic 4 9 92 23 p.name
         , text "Arial" 4.5 [xy 7 50 , txCenter , rotate -90 7 50,narrowStk "black" "white" ] "⮝ Draw ⮝"
         , text "Arial" 4.5 [xy 93 50 , txCenter , rotate 90 93 50,narrowStk "black" "white" ] "⮝ Discard ⮝"
-        , JSV.jobs 41 12 85 p.jobs
+        , JSV.jobs 41 11 85 p.jobs
         , JSV.picItem 75 2 "difficulty" p.difficulty "red"
         , JSV.picItem 85 2 "hand_size" p.handSize "Blue"
-        , text "Arial" 4 [xy 50 44, bold] "Day Phase"
-        , playerPhase p.handSize |> textLines 50 50 6 [font "Arial" 4]
+        , text "Arial" 4 [xy 50 44,txCenter, bold] "Character Abilities"
+        , cardAbilities |> ML.ruleWrap 26 |> textLines 45 50 6 [font "Arial" 4,txSpaces]
         ]
 
 back : PL.Player -> String
@@ -44,14 +45,12 @@ back p =
         ]
 
 
-playerPhase : Int ->  List String
-playerPhase hSize = 
-    [ "Untap this card"
-    , "Draw to "++ (String.fromInt hSize ) ++ " Cards"
-    , "Play Actions/Jobs"
-    , "May discard Item Cards"
-    ]
 
+cardAbilities : List String
+cardAbilities =
+    [ "Rotate Character 90° to use one ability once per day as an action" 
+    , "Character will reset at the start of each new day"
+    ]
 
 facePicFile: String -> Maybe String
 facePicFile = Cards.imageFile PicLists.cList ".png" "../pics/characters/"
