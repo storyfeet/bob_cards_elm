@@ -61,7 +61,7 @@ actionStr a =
         Pay r n -> "pay " ++ (jNumToString n) ++  " " ++ resourceToString r
         Or -> "or"
         Discard c n -> "discard " ++ (jNumToString n) ++ " " ++ (cTypeToString c) ++ " cards"
-        RideTrain n -> "ride the train up to " ++ (jNumToString n) ++ " tiles"
+        RideTrain n -> "ride the train (move from one Railway Tile to another within " ++ (jNumToString n) ++ " tiles)"
         Move n -> "move " ++ pluralJ "space" "spaces" n
         MountainMove n -> "climb " ++ pluralJ "space" "spaces" n
         Scrap t n -> "scrap " ++ jNumToString n ++ " " ++ cTypeToString t 

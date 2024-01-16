@@ -7,6 +7,7 @@ import MLists as ML
 import JobString as JString
 import ColorCodes as CC
 import Config
+import MLists exposing (ruleWrap)
 
 front : MS.Mission -> String
 front cam = 
@@ -46,6 +47,10 @@ back cam =
             else
                 [MP.Score cam.mode]
         sup = df ++ cam.setup 
+        fboard = case cam.boards of
+            h::_ ->h
+            [] -> "0"
+
     in
     String.join "\n"
         [ rect -2 -2 204 94 [flNoStk CC.emeraldGreen ] 
@@ -55,9 +60,10 @@ back cam =
     ] (cam.name ++ " - setup")
         , gShift 162 0 [ -- Options Section
             text "Arial" 5 [xy 0 15, bold] "Options"
-            , text "Arial" 4 [xy 9 25] "Scoreboard"
-            , text "Arial" 4 [xy 0 44, txCenter,rotate -90 0 44] "Bandit Dice"
-            , namedCheckGrid 4 30 cam.boards ["d20","d12","Both"] 
+            , text "Arial" 4 [xy 9 20] "Scoreboard"
+            , text "Arial" 4 [xy 0 39, txCenter,rotate -90 0 39] "Bandit Dice"
+            , namedCheckGrid 4 25 cam.boards ["d20","d12","Both"] 
+            , [firstTimeOptions fboard] |> ML.ruleWrap 30 |> textLines 14 55 3.9 [font "Arial" 3,prop "font-style" "italic",txCenter] 
         ]
         , rect 93 9 64 78 [flNoStk "white"]
         , setupPic 104 20 50 50 "base"
@@ -147,3 +153,8 @@ dayPhase m =
                 ]
             MP.Coop -> [utap,hlimit,cturns,mdiscard]
             MP.Versus -> [utap,hlimit,vturns,mdiscard]
+
+firstTimeOptions : String -> String
+firstTimeOptions n =  "If this is your first time, use Scoreboard '" ++ n ++ "', and a d20 bandit dice for an easier shorter game"
+
+
