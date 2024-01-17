@@ -66,7 +66,7 @@ back cam =
             , [firstTimeOptions fboard] |> ML.ruleWrap 30 |> textLines 14 55 3.9 [font "Arial" 3,prop "font-style" "italic",txCenter] 
         ]
         , rect 93 9 64 78 [flNoStk "white"]
-        , setupPic 104 20 50 50 "base"
+        , setupPic 119 14.5 34 43 "base"
         , sup |> List.map setupToPic |> gShift 90 15 
         , sup |>List.map MP.setupStr |>  ML.ruleWrap 52 |> textLines 8 15 5.3 [font "Arial" 3.7,txSpaces] 
         , gTrans [translate [113,58], scale [0.151,0.151]] [(front cam)]
