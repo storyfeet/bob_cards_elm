@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="202.189mm"
+   width="194.189mm"
    height="116.533mm"
-   viewBox="0 0 202.18899 116.533"
+   viewBox="0 0 194.18899 116.533"
    version="1.1"
    id="svg2893"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    sodipodi:docname="character_card.svg"
    inkscape:export-filename="../setup_pngs/character_card.png"
    inkscape:export-xdpi="140"
@@ -28,9 +28,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.4201912"
-     inkscape:cx="369.31647"
-     inkscape:cy="171.45579"
+     inkscape:zoom="1.2142057"
+     inkscape:cx="433.20501"
+     inkscape:cy="275.90053"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -320,9 +320,20 @@
            id="text31588">0.3.1</text>
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+       x="135.72858"
+       y="20.269163"
+       id="text32310"><tspan
+         sodipodi:role="line"
+         id="tspan32308"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="135.72858"
+         y="20.269163">Difficulty</tspan></text>
     <g
-       transform="translate(85.488471,28.945143)"
-       id="g7280">
+       transform="translate(83.612061,30.788037)"
+       id="g80">
       <rect
          x="0"
          y="0"
@@ -333,7 +344,7 @@
          stroke-width="1"
          rx="2"
          ry="2"
-         id="rect7210" />
+         id="rect60" />
       <rect
          x="0"
          y="0"
@@ -345,7 +356,7 @@
          opacity="0.5"
          rx="2"
          ry="2"
-         id="rect7212" />
+         id="rect61" />
       <rect
          x="4"
          y="9"
@@ -355,7 +366,7 @@
          stroke="none"
          stroke-width="0"
          opacity="0.4"
-         id="rect7214" />
+         id="rect62" />
       <text
          font-family="Arial"
          font-size="5px"
@@ -366,17 +377,17 @@
          stroke-width="0.8"
          font-weight="bold"
          style="paint-order:stroke"
-         id="text7216">Sam Boater</text>
+         id="text62">Sam Boater</text>
       <image
          x="4"
          y="9"
          width="92"
          height="23"
          xlink:href="../../characters/sam%20boater.png"
-         id="image7218" />
+         id="image62" />
       <text
          font-family="Arial"
-         font-size="4px"
+         font-size="4.5px"
          x="7"
          y="50"
          text-anchor="middle"
@@ -385,10 +396,10 @@
          stroke="#ffffff"
          stroke-width="0.5"
          style="paint-order:stroke"
-         id="text7220">Draw</text>
+         id="text63">⮝ Draw ⮝</text>
       <text
          font-family="Arial"
-         font-size="4px"
+         font-size="4.5px"
          x="93"
          y="50"
          text-anchor="middle"
@@ -397,9 +408,9 @@
          stroke="#ffffff"
          stroke-width="0.5"
          style="paint-order:stroke"
-         id="text7222">Discard</text>
+         id="text64">⮝ Discard ⮝</text>
       <rect
-         x="8"
+         x="10"
          y="73"
          width="22"
          height="12"
@@ -409,12 +420,12 @@
          opacity="0.3"
          rx="2"
          ry="2"
-         id="rect7224" />
+         id="rect64" />
       <g
-         transform="rotate(30,14,79)"
-         id="g7228">
+         transform="rotate(30,16,79)"
+         id="g65">
         <rect
-           x="11"
+           x="13"
            y="74"
            width="6"
            height="10"
@@ -424,12 +435,12 @@
            style="paint-order:stroke"
            rx="1"
            ry="1"
-           id="rect7226" />
+           id="rect65" />
       </g>
       <text
          font-family="Arial"
          font-size="4px"
-         x="19"
+         x="21"
          y="77"
          fill="#008000"
          stroke="#ffffff"
@@ -437,12 +448,12 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text7230">+1</text>
+         id="text65">+1</text>
       <g
-         transform="rotate(30,24,79)"
-         id="g7234">
+         transform="rotate(30,26,79)"
+         id="g66">
         <rect
-           x="21"
+           x="23"
            y="74"
            width="6"
            height="10"
@@ -452,12 +463,12 @@
            style="paint-order:stroke"
            rx="1"
            ry="1"
-           id="rect7232" />
+           id="rect66" />
       </g>
       <text
          font-family="Arial"
          font-size="4px"
-         x="29"
+         x="31"
          y="77"
          fill="#ff0000"
          stroke="#ffffff"
@@ -465,9 +476,16 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text7236">#1</text>
+         id="text66">-1</text>
+      <image
+         x="26"
+         y="79"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/scrap_bin.svg"
+         id="image66" />
       <rect
-         x="8"
+         x="10"
          y="60"
          width="22"
          height="12"
@@ -477,18 +495,18 @@
          opacity="0.3"
          rx="2"
          ry="2"
-         id="rect7238" />
+         id="rect67" />
       <image
-         x="9"
+         x="11"
          y="61"
          width="10"
          height="10"
          xlink:href="../../jobs/water.svg"
-         id="image7240" />
+         id="image67" />
       <text
          font-family="Arial"
          font-size="4px"
-         x="19"
+         x="21"
          y="64"
          fill="#0000ff"
          stroke="#ffffff"
@@ -496,12 +514,12 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text7242">?</text>
+         id="text67">?</text>
       <g
-         transform="rotate(30,24,66)"
-         id="g7246">
+         transform="rotate(30,26,66)"
+         id="g68">
         <rect
-           x="21"
+           x="23"
            y="61"
            width="6"
            height="10"
@@ -511,12 +529,12 @@
            style="paint-order:stroke"
            rx="1"
            ry="1"
-           id="rect7244" />
+           id="rect68" />
       </g>
       <text
          font-family="Arial"
-         font-size="6px"
-         x="21"
+         font-size="7px"
+         x="23"
          y="70"
          fill="#ff0000"
          stroke="#ffffff"
@@ -524,11 +542,11 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="middle"
-         id="text7248" />
+         id="text68" />
       <text
          font-family="Arial"
          font-size="4px"
-         x="29"
+         x="31"
          y="64"
          fill="#ff0000"
          stroke="#ffffff"
@@ -536,9 +554,16 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text7250">#x</text>
+         id="text69">-x</text>
+      <image
+         x="26"
+         y="66"
+         width="5"
+         height="5"
+         xlink:href="../../jobs/scrap_bin.svg"
+         id="image69" />
       <rect
-         x="8"
+         x="10"
          y="47"
          width="22"
          height="12"
@@ -548,18 +573,18 @@
          opacity="0.3"
          rx="2"
          ry="2"
-         id="rect7252" />
+         id="rect69" />
       <image
-         x="9"
+         x="11"
          y="48"
          width="10"
          height="10"
          xlink:href="../../jobs/any.svg"
-         id="image7254" />
+         id="image70" />
       <text
          font-family="Arial"
          font-size="4px"
-         x="19"
+         x="21"
          y="51"
          fill="#ff0000"
          stroke="#ffffff"
@@ -567,18 +592,18 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text7256">-1</text>
+         id="text70">-1</text>
       <image
-         x="19"
+         x="21"
          y="48"
          width="10"
          height="10"
          xlink:href="../../jobs/sail.svg"
-         id="image7258" />
+         id="image71" />
       <text
          font-family="Arial"
          font-size="4px"
-         x="29"
+         x="31"
          y="51"
          fill="#0000ff"
          stroke="#ffffff"
@@ -586,14 +611,14 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text7260">1</text>
+         id="text71">1</text>
       <image
          x="75"
          y="2"
          width="10"
          height="10"
          xlink:href="../../jobs/difficulty.svg"
-         id="image7262" />
+         id="image72" />
       <text
          font-family="Arial"
          font-size="5px"
@@ -604,14 +629,14 @@
          stroke-width="0.5"
          style="paint-order:stroke"
          font-weight="bold"
-         id="text7264">1</text>
+         id="text72">1</text>
       <image
          x="85"
          y="2"
          width="10"
          height="10"
          xlink:href="../../jobs/hand_size.svg"
-         id="image7266" />
+         id="image73" />
       <text
          font-family="Arial"
          font-size="5px"
@@ -622,76 +647,84 @@
          stroke-width="0.5"
          style="paint-order:stroke"
          font-weight="bold"
-         id="text7268">6</text>
+         id="text73">6</text>
       <text
          font-family="Arial"
          font-size="4px"
          x="50"
-         y="54"
+         y="44"
+         text-anchor="middle"
          font-weight="bold"
-         id="text7270">Day Phase</text>
+         id="text74">Character Abilities</text>
       <text
-         x="50"
-         y="60"
+         x="45"
+         y="50"
          font-family="Arial"
          font-size="4px"
-         id="text7272">Untap this card</text>
+         xml:space="preserve"
+         id="text75">Rotate Character 90° to</text>
       <text
-         x="50"
-         y="66"
+         x="45"
+         y="56"
          font-family="Arial"
          font-size="4px"
-         id="text7274">Draw to 6 Cards</text>
+         xml:space="preserve"
+         id="text76">    use one ability once</text>
       <text
-         x="50"
-         y="72"
+         x="45"
+         y="62"
          font-family="Arial"
          font-size="4px"
-         id="text7276">Play Cards / Trade</text>
+         xml:space="preserve"
+         id="text77">    per day as an action</text>
       <text
-         x="50"
-         y="78"
+         x="45"
+         y="68"
          font-family="Arial"
          font-size="4px"
-         id="text7278">May discard Item Cards</text>
+         xml:space="preserve"
+         id="text78">Character will reset at</text>
+      <text
+         x="45"
+         y="74"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text79">    the start of each new</text>
+      <text
+         x="45"
+         y="80"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text80">    day</text>
     </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-       x="143.60262"
-       y="19.701317"
-       id="text32310"><tspan
-         sodipodi:role="line"
-         id="tspan32308"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
-         x="143.60262"
-         y="19.701317">Difficulty</tspan></text>
     <path
        style="fill:#ffffff;stroke:#ff0000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#Arrow3);paint-order:stroke fill markers;stop-color:#000000"
-       d="m 156.10728,21.24466 3.46167,11.1573"
+       d="M 147.02947,22.162117 159.56895,32.40196"
        id="path32368"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#ffffff;stroke:#ff0000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#Arrow3-7);paint-order:stroke fill markers;stop-color:#000000"
-       d="M 70.015309,114.29953 91.331111,96.043615"
+       d="M 72.515427,110.72217 93.953426,92.833246"
        id="path32368-3"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#ffffff;stroke:#ff0000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#Arrow3-9);paint-order:stroke fill markers;stop-color:#000000"
-       d="m 184.19431,24.187089 -3.46167,11.1573"
+       d="M 187.39153,22.585862 178.2528,34.423577"
        id="path32368-2"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-       x="185.90727"
-       y="22.109566"
+       x="176.28024"
+       y="20.496367"
        id="text32310-7"><tspan
          sodipodi:role="line"
          id="tspan32308-0"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
-         x="185.90727"
-         y="22.109566">Hand Size</tspan></text>
+         x="176.28024"
+         y="20.496367">Hand Limit</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
@@ -702,6 +735,6 @@
          id="tspan32308-6"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
          x="42.475048"
-         y="115.78521">Character Skills (Jobs)</tspan></text>
+         y="115.78521">Character Abilities (Jobs)</tspan></text>
   </g>
 </svg>

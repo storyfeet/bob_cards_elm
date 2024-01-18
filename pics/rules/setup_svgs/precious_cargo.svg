@@ -3,13 +3,13 @@
 
 <svg
    width="201mm"
-   height="73mm"
-   viewBox="0 0 201 73"
+   height="91mm"
+   viewBox="0 0 201 91"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    sodipodi:docname="precious_cargo.svg"
-   inkscape:export-filename="../setup_pngs/precious_cargo.png"
+   inkscape:export-filename="../setup_pngs/mission_card_front.png"
    inkscape:export-xdpi="150"
    inkscape:export-ydpi="150"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,8 +28,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.73406285"
-     inkscape:cx="294.25273"
-     inkscape:cy="213.87814"
+     inkscape:cx="296.9773"
+     inkscape:cy="211.15358"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -42,41 +42,41 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-26.9875,-91.810416)">
+     transform="translate(-26.157085,-92.374071)">
     <g
-       transform="translate(27.4875,92.310416)"
-       id="g67">
+       transform="translate(26.657085,92.874071)"
+       id="g93">
       <rect
          x="0"
          y="0"
          width="200"
-         height="72"
+         height="90"
          fill="#ff7100"
          stroke="#ffffff"
          stroke-width="1"
          rx="2"
          ry="2"
-         id="rect27" />
+         id="rect54" />
       <rect
          x="0"
          y="0"
          width="200"
-         height="72"
+         height="90"
          fill="#ffffff"
          stroke="none"
          stroke-width="0"
          opacity="0.5"
-         id="rect28" />
+         id="rect55" />
       <rect
          x="4"
          y="9"
          width="192"
-         height="59"
+         height="78"
          fill="#ffffff"
          stroke="none"
          stroke-width="0"
          opacity="0.4"
-         id="rect29" />
+         id="rect56" />
       <text
          font-family="Arial"
          font-size="5px"
@@ -87,11 +87,11 @@
          stroke-width="0.8"
          font-weight="bold"
          style="paint-order:stroke"
-         id="text29">Precious Cargo</text>
+         id="text56-1">Speed of the Slowest</text>
       <text
          font-family="Arial"
          font-size="5px"
-         x="196"
+         x="185"
          y="7"
          fill="#000000"
          stroke="#ffffff"
@@ -99,9 +99,9 @@
          font-weight="bold"
          style="paint-order:stroke"
          text-anchor="end"
-         id="text30">Tricky Mission - Cooperative</text>
+         id="text57-7">Beginner Mission - Cooperative</text>
       <rect
-         x="79"
+         x="74"
          y="9"
          width="22"
          height="12"
@@ -111,18 +111,18 @@
          opacity="0.3"
          rx="2"
          ry="2"
-         id="rect30" />
+         id="rect57" />
       <image
-         x="80"
+         x="75"
          y="10"
          width="10"
          height="10"
          xlink:href="../../jobs/gold.svg"
-         id="image30" />
+         id="image57" />
       <text
          font-family="Arial"
          font-size="4px"
-         x="90"
+         x="85"
          y="13"
          fill="#ff0000"
          stroke="#ffffff"
@@ -130,18 +130,18 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text31">-1</text>
+         id="text58-7">-1</text>
       <image
-         x="90"
+         x="85"
          y="10"
          width="10"
          height="10"
          xlink:href="../../jobs/ride_train.svg"
-         id="image31" />
+         id="image58" />
       <text
          font-family="Arial"
          font-size="4px"
-         x="100"
+         x="95"
          y="13"
          fill="#0000ff"
          stroke="#ffffff"
@@ -149,11 +149,11 @@
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text32">3</text>
+         id="text59-1">3</text>
       <rect
-         x="79"
+         x="74"
          y="21"
-         width="42"
+         width="22"
          height="12"
          fill="#ffffff"
          stroke="#000000"
@@ -161,145 +161,36 @@
          opacity="0.3"
          rx="2"
          ry="2"
-         id="rect32" />
+         id="rect59" />
       <image
-         x="80"
+         x="75"
          y="22"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/on_build.svg"
-         id="image32" />
-      <image
-         x="90"
-         y="22"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/vp.svg"
-         id="image33" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="100"
-         y="25"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text33">+2</text>
-      <image
-         x="100"
-         y="22"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/westmost.svg"
-         id="image34" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="110"
-         y="25"
-         fill="#0000ff"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text34">?</text>
-      <image
-         x="110"
-         y="22"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/vp.svg"
-         id="image35" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="120"
-         y="25"
-         fill="#008000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text35">+0</text>
-      <rect
-         x="79"
-         y="33"
-         width="52"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect35" />
-      <image
-         x="80"
-         y="34"
          width="10"
          height="10"
          xlink:href="../../jobs/on_wagon_west.svg"
-         id="image36" />
+         id="image59" />
       <image
-         x="90"
-         y="34"
+         x="85"
+         y="22"
          width="10"
          height="10"
          xlink:href="../../jobs/vp.svg"
-         id="image37" />
+         id="image60" />
       <text
          font-family="Arial"
          font-size="4px"
-         x="100"
-         y="37"
+         x="95"
+         y="25"
          fill="#008000"
          stroke="#ffffff"
          stroke-width="0.6"
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text37">+2</text>
-      <image
-         x="100"
-         y="34"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/or.svg"
-         id="image38" />
-      <image
-         x="110"
-         y="34"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/on_wagon_east.svg"
-         id="image39" />
-      <image
-         x="120"
-         y="34"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/vp.svg"
-         id="image40" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="130"
-         y="37"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text40">-2</text>
+         id="text60-1">+3</text>
       <rect
-         x="79"
-         y="45"
+         x="74"
+         y="33"
          width="22"
          height="12"
          fill="#ffffff"
@@ -308,255 +199,258 @@
          opacity="0.3"
          rx="2"
          ry="2"
-         id="rect40" />
+         id="rect60" />
       <image
-         x="80"
-         y="46"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/on_wagon_damage.svg"
-         id="image41" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="90"
-         y="49"
-         fill="#0000ff"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text41">x</text>
-      <image
-         x="90"
-         y="46"
-         width="10"
-         height="10"
-         xlink:href="../../jobs/vp.svg"
-         id="image42" />
-      <text
-         font-family="Arial"
-         font-size="4px"
-         x="100"
-         y="49"
-         fill="#ff0000"
-         stroke="#ffffff"
-         stroke-width="0.6"
-         style="paint-order:stroke"
-         font-weight="bold"
-         text-anchor="end"
-         id="text42">-x</text>
-      <rect
-         x="79"
-         y="57"
-         width="22"
-         height="12"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="0.5"
-         opacity="0.3"
-         rx="2"
-         ry="2"
-         id="rect42" />
-      <image
-         x="80"
-         y="58"
+         x="75"
+         y="34"
          width="10"
          height="10"
          xlink:href="../../jobs/on_defeat_bandits.svg"
-         id="image43" />
+         id="image61" />
       <image
-         x="90"
-         y="58"
+         x="85"
+         y="34"
          width="10"
          height="10"
-         xlink:href="../../jobs/vp.svg"
-         id="image44" />
+         xlink:href="../../jobs/gold.svg"
+         id="image62" />
       <text
          font-family="Arial"
          font-size="4px"
-         x="100"
-         y="61"
+         x="95"
+         y="37"
          fill="#008000"
          stroke="#ffffff"
          stroke-width="0.6"
          style="paint-order:stroke"
          font-weight="bold"
          text-anchor="end"
-         id="text44">+2</text>
+         id="text62-5">+2</text>
+      <image
+         x="90"
+         y="39"
+         width="6"
+         height="6"
+         xlink:href="../../jobs/dice.svg"
+         id="image63" />
       <image
          x="186"
-         y="10"
+         y="2"
          width="10"
          height="10"
          xlink:href="../../jobs/difficulty.svg"
-         id="image45" />
+         id="image64" />
       <text
          font-family="Arial"
          font-size="5px"
          x="191"
-         y="14"
+         y="6"
          fill="#ff0000"
          stroke="#ffffff"
          stroke-width="0.5"
          style="paint-order:stroke"
          font-weight="bold"
-         id="text45">2</text>
+         id="text64-9">1</text>
       <text
          x="5"
          y="14"
          font-family="Arial"
          font-size="4px"
          xml:space="preserve"
-         id="text46">To move the Wagon a player must:</text>
+         id="text65-7">- For players who won't leave a</text>
       <text
          x="5"
-         y="18.6"
+         y="18.5"
          font-family="Arial"
          font-size="4px"
          xml:space="preserve"
-         id="text47">- Be on the same square as the wagon</text>
+         id="text66-7">    man behind -</text>
       <text
          x="5"
-         y="23.200001"
+         y="23"
          font-family="Arial"
          font-size="4px"
          xml:space="preserve"
-         id="text48">- Use their own movement actions</text>
+         id="text67-6">The Wagon moves West when all</text>
       <text
          x="5"
-         y="27.799999"
+         y="27.5"
          font-family="Arial"
          font-size="4px"
          xml:space="preserve"
-         id="text49">The wagon takes 1 damage leaving</text>
+         id="text68">    players are at least 1 tile</text>
       <text
          x="5"
-         y="32.400002"
+         y="32"
          font-family="Arial"
          font-size="4px"
          xml:space="preserve"
-         id="text50">    bandits and may be attacked by</text>
+         id="text69">    west of it</text>
       <text
          x="5"
-         y="37"
+         y="36.5"
          font-family="Arial"
          font-size="4px"
          xml:space="preserve"
-         id="text51">    bandits</text>
+         id="text70">It cannot be attakced, and does</text>
       <text
          x="5"
-         y="41.599998"
+         y="41"
+         font-family="Arial"
+         font-size="4px"
+         xml:space="preserve"
+         id="text71">    not take damage</text>
+      <text
+         x="5"
+         y="46.200001"
          font-family="Arial"
          font-size="3px"
          xml:space="preserve"
-         id="text52">* Pay 1 gold, ride the train up to 3 tiles.</text>
+         id="text72">* Pay 1 gold, ride the train (move from one</text>
       <text
          x="5"
-         y="45.099998"
+         y="49.700001"
          font-family="Arial"
          font-size="3px"
          xml:space="preserve"
-         id="text53">* When you build, gain 2 VP. If you are doing this</text>
+         id="text73">    Railway Tile to another within 3 tiles).</text>
       <text
          x="5"
-         y="48.599998"
+         y="53.200001"
          font-family="Arial"
          font-size="3px"
          xml:space="preserve"
-         id="text54">    the furthest West yet, also gain 0 VP.</text>
+         id="text74">* When the wagon moves West, gain 3 VP.</text>
       <text
          x="5"
-         y="52.099998"
+         y="56.700001"
          font-family="Arial"
          font-size="3px"
          xml:space="preserve"
-         id="text55">* When the wagon moves West, gain 2 VP, or, when</text>
+         id="text75">* When you clear a tile of bandits, gain 2 dice's</text>
       <text
          x="5"
-         y="55.599998"
+         y="60.200001"
          font-family="Arial"
          font-size="3px"
          xml:space="preserve"
-         id="text56">    the wagon moves East, lose 2 VP.</text>
-      <text
-         x="5"
-         y="59.099998"
-         font-family="Arial"
-         font-size="3px"
-         xml:space="preserve"
-         id="text57">* When the wagon takes x damage, lose x VP.</text>
-      <text
-         x="5"
-         y="62.599998"
-         font-family="Arial"
-         font-size="3px"
-         xml:space="preserve"
-         id="text58">* When you clear a tile of bandits, gain 2 VP.</text>
-      <text
-         font-family="Arial"
-         font-size="5px"
-         x="147"
-         y="14"
-         font-weight="bold"
-         id="text59">Night Phase</text>
-      <text
-         x="147"
-         y="20"
-         font-family="Arial"
-         font-size="4px"
-         xml:space="preserve"
-         id="text60">Move the Trade Row</text>
-      <text
-         x="147"
-         y="24.6"
-         font-family="Arial"
-         font-size="4px"
-         xml:space="preserve"
-         id="text61">Move the Day Tracker</text>
-      <text
-         x="147"
-         y="29.200001"
-         font-family="Arial"
-         font-size="4px"
-         xml:space="preserve"
-         id="text62">Take an 'E' Danger</text>
-      <text
-         x="147"
-         y="33.799999"
-         font-family="Arial"
-         font-size="4px"
-         xml:space="preserve"
-         id="text63">Bandits attack</text>
-      <text
-         x="147"
-         y="38.400002"
-         font-family="Arial"
-         font-size="4px"
-         xml:space="preserve"
-         id="text64">Bandits move</text>
-      <text
-         x="147"
-         y="43"
-         font-family="Arial"
-         font-size="4px"
-         xml:space="preserve"
-         id="text65">Remove tiles &gt; 3 East</text>
-      <text
-         x="147"
-         y="47.599998"
-         font-family="Arial"
-         font-size="4px"
-         xml:space="preserve"
-         id="text66">    of all players</text>
-      <text
-         x="147"
-         y="52.200001"
-         font-family="Arial"
-         font-size="4px"
-         xml:space="preserve"
-         id="text67">Bandits Appear</text>
+         id="text76">    worth of gold.</text>
+      <g
+         transform="translate(131,14)"
+         id="g92">
+        <text
+           font-family="Arial"
+           font-size="4.5px"
+           x="0"
+           y="0"
+           font-weight="bold"
+           id="text77">Day Phase</text>
+        <text
+           x="2"
+           y="5"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text78">Untap all Character Cards</text>
+        <text
+           x="2"
+           y="9.3000002"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text79">Players draw cards to Hand Limit</text>
+        <text
+           x="2"
+           y="13.6"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text80">Players perform jobs/actions in</text>
+        <text
+           x="2"
+           y="17.9"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text81">    any order</text>
+        <text
+           x="2"
+           y="22.200001"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text82">Players may discard Item Cards</text>
+        <text
+           font-family="Arial"
+           font-size="4.5px"
+           x="0"
+           y="27.4"
+           font-weight="bold"
+           id="text83">Night Phase</text>
+        <text
+           x="2"
+           y="32"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text84">Move the Trade Row</text>
+        <text
+           x="2"
+           y="36.299999"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text85">Move the Day Tracker</text>
+        <text
+           x="2"
+           y="40.599998"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text86">Take an 'E' Danger</text>
+        <text
+           x="2"
+           y="44.900002"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text87">Bandits attack</text>
+        <text
+           x="2"
+           y="49.200001"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text88">Bandits move</text>
+        <text
+           x="2"
+           y="53.5"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text89">Remove tiles &gt; 3 East of all players</text>
+        <text
+           x="2"
+           y="57.799999"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text90">Bandits Appear</text>
+        <text
+           x="2"
+           y="62.099998"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text91">Bandits Split at 7</text>
+        <text
+           x="2"
+           y="66.400002"
+           font-family="Arial"
+           font-size="3.8px"
+           xml:space="preserve"
+           id="text92">Full Hand check</text>
+      </g>
     </g>
   </g>
 </svg>
