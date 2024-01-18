@@ -135,7 +135,7 @@ dreamWork : Mission
 dreamWork = {preciousCargo 
     | name = "Make the Dream Work"
     , difficulty = 2
-    , rules = ["- For team players -","The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
+    , rules = ["- For team players -","The Wagon moves west when all players are at least 1 tile west of it", "It cannot be attacked, and does not take damage"]
     , setup = [MP.Grid 2,MP.ThreeMeeples,MP.Wagon 0]
     ,jobs = coopUtil ++ [
         buildN 1 |> westMost 1
@@ -148,7 +148,7 @@ speedOfTheSlowest : Mission
 speedOfTheSlowest = { preciousCargo 
     | name = "Speed of the Slowest"
     , difficulty = 1
-    , rules = ["- For players who won't leave a man behind -","The Wagon moves west when all players are at least 1 tile west of it", "It does not take damage"]
+    , rules = ["- For players who won't leave a man behind -","The Wagon moves West when all players are at least 1 tile west of it", "It cannot be attakced, and does not take damage"]
     , setup = [MP.Grid 2, MP.ThreeMeeples,MP.Wagon 0]
     ,jobs = coopUtil ++ [
         [on J.OnWagonWest, gain VP 3]
@@ -166,7 +166,7 @@ thereAndBackAgain = {preciousCargo
         [on J.OnReveal, J.In J.WestMost, gain VP 3]
         , [ on J.OnDefeatBandits, J.Gain Any (D 3)]
         ]
-    , rules = ["- For team players who want a challenge -","Do not remove any tiles from play","The Wagon does not move, and cannot be attacked", "You may not reveal more than 4 tiles North to South on a row.", "To win you need:","- To complete the score track","- All players on the starting tile with the wagon" ]
+    , rules = ["- For team players who want a challenge -","Do not remove any tiles from play","The Wagon does not move, and cannot be attacked", "You may not reveal more than 4 tiles North to South on a row.", "To win you need:","- To complete the score track","- All players back on the starting tile with the wagon" ]
     , night = nightPhase MP.Coop 0 
     }
 
@@ -187,7 +187,7 @@ stopThatWagon = { preciousCargo
     | name = "Stop That Wagon"
     , boards = ["A","B"]
     , setup = [MP.Grid 3,MP.ThreeMeeples, MP.Wagon 2, MP.Bandits [1,2]]
-    , rules = ["- For players who want a fight -","Players may attack the wagon", "At the end of the Night phase" , " - Move the Wagon 1 space West revealing tiles as needed"," - Add a bandit to the Wagon's Tile"]
+    , rules = ["- For players who want a fight -","Players may attack the Wagon directly if there are no bandits on the Tile","Or, the Wagon takes remaining damage after all bandits on the tile are removed" , "At the end of the Night phase" , " - Move the Wagon 1 space West revealing tiles as needed"," - Add a bandit to the Wagon's Tile"]
     , jobs = 
         coopUtil ++ [ [J.On (J.OnWagonDamage (X 1)), J.Gain VP (X 2) ]
         , [J.On J.OnDefeatBandits,gain VP 1]
