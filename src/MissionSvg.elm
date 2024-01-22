@@ -138,7 +138,7 @@ checkRow x y sz l =
 dayPhase : MP.Mode -> List String 
 dayPhase m = 
     let 
-        utap = "Untap all Character Cards" 
+        refresh = "Refresh all Character Cards" 
         hlimit = "Players draw cards to Hand Limit"
         vturns = "Players take turns to perform jobs/actions" 
         cturns = "Players perform jobs/actions in any order"
@@ -146,13 +146,13 @@ dayPhase m =
     in
         case m of
             MP.Solo -> [
-                "Untap Character Card"
+                "Refresh Character Card"
                 , "Draw to Hand limit"
                 , "Perform jobs/actions"
                 , "May discard Item Cards"
                 ]
-            MP.Coop -> [utap,hlimit,cturns,mdiscard]
-            MP.Versus -> [utap,hlimit,vturns,mdiscard]
+            MP.Coop -> [refresh,hlimit,cturns,mdiscard]
+            MP.Versus -> [refresh,hlimit,vturns,mdiscard]
 
 firstTimeOptions : String -> String
 firstTimeOptions n =  "If this is your first time, use Scoreboard '" ++ n ++ "', and a d20 bandit dice for an easier shorter game"

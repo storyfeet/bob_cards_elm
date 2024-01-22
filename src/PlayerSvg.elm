@@ -49,7 +49,7 @@ back p =
 cardAbilities : List String
 cardAbilities =
     [ "Rotate Character 90° to use one ability once per day as an action" 
-    , "Character will reset at the start of each new day"
+    , "Character will refresh at the start of each new day"
     ]
 
 facePicFile: String -> Maybe String
