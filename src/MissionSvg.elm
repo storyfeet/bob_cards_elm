@@ -31,9 +31,9 @@ front cam =
             , textLines 5 14 4.5 [font "Arial" 4 ,txSpaces] crules
             , textLines 5 (14 + 4.6 * (List.length crules|> toFloat )) 3.5 [font "Arial" 3,txSpaces] jrules
             , gShift 131 14 [ -- Day and Night Phases
-                text "Arial" 4.5 [xy 0 0,bold] "Day Phase"
+                text "Arial" 4.5 [xy 0 0,bold] "Day Phase (4.1)"
                 , dayPhase cam.mode |> ML.ruleWrap 34   |> textLines 2 5 4.3 [font "Arial" 3.8 ,txSpaces] 
-                , text "Arial" 4.5 [xy 0 27.4,bold] "Night Phase"
+                , text "Arial" 4.5 [xy 0 27.4,bold] "Night Phase (4.3)"
                 , textLines 2 32 4.3 [font "Arial" 3.8 ,txSpaces] cam.night
             ]
 
